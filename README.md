@@ -10,7 +10,7 @@ A choose-your-own-adventure game for the web, themed on *Back to the Future*. At
 - **Three difficulty levels** that set how much time you start with and how many choices you can undo (Easy: unlimited, Medium: 2, Hard: none).
 - **Built for phones.** Progress saves in the browser, and an endings gallery tracks which endings you've found.
 
-> *Back to the Future* characters and names are used for a personal, non-commercial project.
+> Unofficial, non-commercial fan project. It is not affiliated with or endorsed by the owners of *Back to the Future*. See [Licence](#licence).
 
 ## Running it
 
@@ -92,3 +92,7 @@ To add or replace an image:
 3. Run `npm run images`. This needs `cwebp`, which you can install with `brew install webp`.
 
 The game picks up `images/<PAGE_ID>.webp` automatically. Pages without an image show a drawn placeholder.
+
+## Licence
+
+The engine, reader and tooling are available under the [MIT License](LICENSE), so you're welcome to build your own games with them. The *Back to the Future* story pack (`stories/stopped-clocks/`), the story outline and the art references are **not** licensed. *Back to the Future* and its characters belong to their respective owners, and this project isn't affiliated with or endorsed by them. See [LICENSE](LICENSE) for the details, including third-party font licences.
