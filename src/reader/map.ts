@@ -1,6 +1,7 @@
 import { checkStory } from '../engine/check';
 import { getPage, imagePrompt } from '../engine/engine';
-import type { Cond, Effects, Page, Story } from '../engine/types';
+import { describeCond as cond, describeEffects as effects } from '../engine/describe';
+import type { Page, Story } from '../engine/types';
 import { saveRun } from './storage';
 import { esc } from './text';
 
@@ -111,18 +112,3 @@ export function startMap(root: HTMLElement, story: Story) {
   });
 }
 
-function cond(c: Cond): string {
-  if ('all' in c) return c.all.map(cond).join(' and ');
-  if ('any' in c) return `(${c.any.map(cond).join(' or ')})`;
-  if ('not' in c) return `not(${cond(c.not)})`;
-  if ('gte' in c) return `${c.flag} ≥ ${c.gte}`;
-  if ('lte' in c) return `${c.flag} ≤ ${c.lte}`;
-  return c.is === undefined || c.is === true ? c.flag : `${c.flag} = ${c.is}`;
-}
-
-function effects(e: Effects): string {
-  return [
-    ...Object.entries(e.set ?? {}).map(([k, v]) => `${k} = ${v}`),
-    ...Object.entries(e.add ?? {}).map(([k, v]) => `${k} ${v >= 0 ? '+' : '−'} ${Math.abs(v)}`),
-  ].join(', ');
-}

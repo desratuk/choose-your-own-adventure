@@ -9,7 +9,9 @@
     "typecheck": "tsc --noEmit",
     "check-story": "tsx scripts/check-story.ts",
     "check": "npm run typecheck && npm run check-story",
-    "prompts": "tsx scripts/export-prompts.ts"
+    "prompts": "tsx scripts/export-prompts.ts",
+    "story-dump": "tsx scripts/dump-story.ts",
+    "story-gate": "node scripts/story-review-gate.mjs"
   },
   "devDependencies": {
     "@types/node": "^26.6.3",

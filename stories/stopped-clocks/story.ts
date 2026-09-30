@@ -92,16 +92,16 @@ const story: Story = {
       id: 'S03',
       title: 'Second Thoughts',
       era: '1985',
-      time: 'NOV 12 1985 10:00 PM',
+      time: 'NOV 12 1985 09:55 PM',
       cast: ['player'],
       imagePrompt: `A 1980s teenager’s bedroom at night, lit by a desk lamp. The player lies on the bed with Walkman headphones on, staring at a yellowed letter on the desk. A digital clock radio glows 10:00. Posters on the walls, a window showing a distant clock tower.`,
       text: [
         `You walk home the long way, past the diner and the dark windows of the car dealership, with the letter in your jacket pocket. Home is a small house on a quiet street on the other side of downtown. Dinner. Homework. A rerun on TV. Up in your room, the letter sits on your desk and you try not to look at it.`,
         `It has to be a prank, maybe somebody from school who’s seen you hanging around the clock tower with a clipboard. The old paper is a nice touch, though. So is the handwriting. And the Western Union man really didn’t seem to be in on any joke.`,
-        `At 10:00 PM you’re lying on your bed with your headphones on. The square is a ten-minute walk away, or seven if you run.`,
+        `At 9:55 PM you’re lying on your bed with your headphones on. The square is a ten-minute walk away, or seven if you run.`,
       ],
       choices: [
-        { text: `Grab your jacket and run`, to: 'S02', set: { ranLate: true } },
+        { text: `Grab the letter and your jacket and run`, to: 'S02', set: { ranLate: true } },
         { text: `Stay put. It’s a prank.`, to: 'E01' },
       ],
     },
@@ -267,7 +267,7 @@ const story: Story = {
         `He taps the green screen. It shows a number, counting down: 5:59:58. 5:59:57.`,
         `“That’s how long until the clamp sets,” Doc says. “Six hours of our time, meaning time inside our fields. When it reaches zero, the freeze becomes permanent. Hill Valley stops at 10:04 PM on November 12th, 1985. Forever.”`,
         `“Can’t you just take it off?” you ask.`,
-        `“Not by force,” Doc says. “It has to be released gently, with a Temporal Stabilizer.” He’s already sketching on the back of your letter. “Three parts. First, a flux-field regulator. I have one in my lab, right here in 1985. Second, a chronometric reference: a piece of this very clock from before any time traveler ever touched this town. That means 1885, before the clock was installed. Third, power. More than the train can spare, and more than anything in 1985 can produce. For that we’ll have to go forward. A century should do it.”`,
+        `“Not by force,” Doc says. “It has to be released gently, with a Temporal Stabilizer.” He’s already sketching on the back of your letter. “Three parts. First, a flux-field regulator. I have one in my lab, right here in 1985. Second, a chronometric reference: a piece of this very clock from before it was ever installed in the tower, before the lightning or anything else could leave a mark on it. That means 1885. Third, power. More than the train can spare, and more than anything in 1985 can produce. For that we’ll have to go forward. A century should do it.”`,
         `He synchronizes his wristwatch with the clamp’s screen.`,
         `A floorboard creaks on the stairs below you.`,
       ],
@@ -613,12 +613,12 @@ const story: Story = {
       id: 'S26b',
       title: 'The Swap',
       era: '1885',
-      time: 'AUG 28 1885 11:40 PM',
+      time: 'AUG 29 1885 12:30 AM',
       onEnter: { set: { escapement: 'spare', lastEra: '1885' }, add: { delays: 1, minutes: -20 } },
       cast: ['player'],
       imagePrompt: `Night at the 1885 depot: the player, their hands visibly translucent and fading, fits a brass wheel back into the clock mechanism in the straw-filled crate by moonlight, a velvet box open beside them.`,
       text: [
-        `Doc takes the train back to the ravine an hour after you first left it, in case your earlier self is still wandering around.`,
+        `Doc takes the train back to the ravine a while after you first left it, in case your earlier self is still wandering around.`,
         `You run to the depot in the dark. The stationmaster’s lamp is out. The crate is exactly as you left it. You pry up the lid, fit the mounted wheel back into place with fingers that are slowly turning see-through, and take the spare from its velvet box instead.`,
         `The moment the mounted wheel clicks home, the feeling comes back into your hands.`,
         `Back at the train, Doc fits the spare into the stabilizer and checks his watch. “Twenty minutes. Expensive, but cheaper than never having existed.”`,
@@ -703,7 +703,11 @@ const story: Story = {
         `Behind it is a control room humming with screens. Most of them show the Frozen Moment’s exhibits. One whole wall is a rack of chrono-cells, dozens of them, powering the attraction.`,
         `On the main console, a log is open:`,
         `UNREGISTERED JUMP · R. TANNEN<br>DESTINATION: HILL VALLEY, NOV 12 1985, 09:51 PM<br>PAYLOAD: CHRONO-CLAMP (EXPERIMENTAL)<br>STATUS: SUCCESS · PROJECTED ANNUAL REVENUE: 40,000,000 CR`,
-        `Rex Tannen didn’t discover the Frozen Moment. He made it.`,
+        {
+          if: is('sawExhibit'),
+          text: `Rex Tannen didn’t discover the Frozen Moment. He made it.`,
+          else: `Whoever R. Tannen is, the Frozen Moment was no accident. He made it.`,
+        },
         `The console has a slot that will spit out a data chip if you press the button marked EXPORT. Through the window, right across the plaza, you can see a sign: TEMPORAL AUTHORITY · HILL VALLEY BRANCH.`,
       ],
       choices: [
@@ -746,7 +750,11 @@ const story: Story = {
           text: `Your hand is on a cell when the alarms go off. The door locks. Two security robots glide in and escort you into an elevator…`,
         },
         `…and up to an office at the very top of the building, under a glass dome. Through the glass you can see the spire of the clock tower.`,
-        `Behind a desk sits the man from the portrait, silver jumpsuit and all.`,
+        {
+          if: is('sawExhibit'),
+          text: `Behind a desk sits the man from the portrait, silver jumpsuit and all.`,
+          else: `Behind a desk sits a man in a silver jumpsuit. The nameplate in front of him reads REX TANNEN · FOUNDER.`,
+        },
         `“You,” says Rex Tannen. “The kid on the stairs.”`,
         { if: is('hasKeycard'), text: `He spots the keycard clipped to your jacket and snatches it back. “And I’ll take that.”` },
         `He leans back. “You and that old man have been a real headache. Do you know what that frozen town is worth? Every school on the planet sends its kids to see it. It’s the only genuine frozen moment in history, and I’m the only one who knows how it got there.”`,
@@ -781,7 +789,7 @@ const story: Story = {
       cast: ['train', 'doc', 'player', 'rex'],
       imagePrompt: `Explosive action: the time train bursts through a glass-domed penthouse ceiling in a shower of glittering shards and steam, wheels spinning. Doc Brown leans out of the cab, arm outstretched, as the player leaps for his hand clutching a glowing blue cylinder. Rex Tannen dives behind his desk.`,
       text: [
-        `“DOC!” you yell. “TOP OF THE TOWER! GLASS ROOF!”`,
+        `“DOC!” you yell. “TANNEN’S OFFICE! THE GLASS DOME ON TOP!”`,
         `Tannen lunges for the walkie-talkie. He’s too slow, and the train is faster.`,
         `It comes through the dome in a shower of glass and steam, whistle screaming, and hangs over the desk with its wheels spinning. Doc leans out of the cab and holds out his hand.`,
         `You snatch a chrono-cell from the charging rack, then grab Doc’s hand, and he hauls you into the cab as Tannen shouts something that’s lost in the steam.`,
@@ -875,7 +883,7 @@ const story: Story = {
       ],
       choices: [
         { text: `Go back to 1885 right now and put that wheel back`, to: 'S26b', if: is('escapement', 'original') },
-        { text: `There’s no time. Build the stabilizer anyway.`, to: 'E05', if: is('escapement', 'original') },
+        { text: `There’s no time. Leave the wheel for later.`, to: 'E05', if: is('escapement', 'original') },
         { text: `Set the circuits for 1885`, to: 'S20', if: is('escapement', 'none') },
         { text: `Set the circuits for 2085`, to: 'S30', if: all(is('escapement', 'spare'), not(is('hasCell'))) },
         { text: `Build the stabilizer and climb the tower`, to: 'S41', if: complete },
@@ -889,7 +897,11 @@ const story: Story = {
       cast: ['doc', 'player', 'train'],
       imagePrompt: `In the frozen night square, Doc Brown and the player fade away like breath on a mirror, their bodies translucent, the brass stabilizer slipping through the player’s ghostly fingers. Behind them the clock tower shows a blank, empty face.`,
       text: [
-        `“We’ll install the stabilizer first,” you say, “and fix the wheel afterwards.”`,
+        {
+          if: is('hasCell'),
+          text: `“We’ll install the stabilizer first,” you say, “and fix the wheel afterwards.”`,
+          else: `“We’ll get the power cell first,” you say, “and fix the wheel afterwards.”`,
+        },
         `Doc opens his mouth to argue, and you can see the back of the cab through it.`,
         `It happens faster than you expected. The stabilizer slips through your fingers, because your fingers aren’t really there any more. The train fades around you like breath on a mirror. The last thing you see is the blank face of the clock tower. The last thing you hear is Doc’s voice, very small and far away: “Great Scott…”`,
         `In a Hill Valley that never had a working clock, a letter waits in a Western Union vault. Nobody ever comes to collect it.`,
@@ -903,19 +915,21 @@ const story: Story = {
       cast: ['doc', 'player', 'stabilizer'],
       imagePrompt: `Doc Brown and the player carry the glowing brass Temporal Stabilizer between them up a narrow spiral staircase inside the clock tower, lit by its blue glow, faces tense and determined.`,
       text: [
-        `Doc spreads his tools across the workbench in the train’s cab, parked in the frozen square, and sets to work. It takes him seventy-nine minutes to assemble the Temporal Stabilizer. You hold the lamp, pass him tools, and watch the minutes drain off his watch.`,
-        `When it’s done, it’s a brass cage about the size of a birdcage: the regulator coiled at its heart, the spare escapement wheel in its socket, and the chrono-cell glowing blue beneath.`,
-        `You carry it up the clock tower stairs between you.`,
+        `Doc spreads his tools across the workbench in the train’s cab, parked in the frozen square, and sets to work. Assembling the Temporal Stabilizer takes seventy-nine minutes. You hold the lamp, pass him tools, and watch the minutes drain off his watch.`,
+        {
+          if: { flag: 'delays', lte: 1 },
+          text: `When it’s done, it’s a brass cage about the size of a birdcage: the regulator coiled at its heart, the spare escapement wheel in its socket, and the chrono-cell glowing blue beneath. You carry it up the clock tower stairs between you.`,
+        },
         { if: { flag: 'delays', is: 0 }, text: `At the top, the clamp’s screen reads 0:21:00. That’s enough time. Just.` },
         { if: { flag: 'delays', is: 1 }, text: `At the top, the clamp’s screen reads 0:01:00. Sixty seconds.` },
         {
           if: { flag: 'delays', gte: 2 },
-          text: `You’re three steps from the top when you hear it: a soft, final chime from the clock room. Then the ticking stops.`,
+          text: `Doc is still wiring the regulator into the cage when his watch gives a small, flat beep. It reads 0:00. From the top of the tower, faint through the frozen air, comes a soft, final chime. Then the ticking stops.`,
         },
       ],
       choices: [
         { text: `Step into the clock room`, to: 'S42', if: { flag: 'delays', lte: 1 } },
-        { text: `Keep climbing`, to: 'E07', if: { flag: 'delays', gte: 2 } },
+        { text: `Continue`, to: 'E07', if: { flag: 'delays', gte: 2 } },
       ],
     },
     {
@@ -924,15 +938,15 @@ const story: Story = {
       era: '1985',
       ending: { kind: 'bad' },
       cast: ['doc', 'player', 'stabilizer', 'clamp'],
-      imagePrompt: `The clock room bathed in cold blue stillness: Doc Brown and the player frozen mid-stride at the top of the stairs, holding the brass stabilizer between them, the chrono-clamp’s screen dark. Dust motes hang motionless in the moonlight.`,
+      imagePrompt: `The lamp-lit cab of the time train, bathed in cold blue stillness: Doc Brown frozen mid-turn of a screwdriver over a half-built brass cage on the workbench, the player frozen beside him holding up a lamp. Through the cab window, the clock tower looms over the frozen square.`,
       text: [
-        `You and Doc reach the clock room together, just in time to watch the clamp’s screen tick from 0:00:01 to 0:00:00.`,
+        `Doc’s screwdriver stops halfway through a turn.`,
         `There’s no bang and no flash. The green light simply goes out, and the air goes perfectly, permanently still. You feel your bracelet stop humming. You see Doc turn toward you, very slowly, as if through honey, and then not at all.`,
         `Hill Valley stops at 10:04 PM on November 12th, 1985, forever.`,
         {
           if: is('sawExhibit'),
-          text: `A hundred years later, in a museum you’ve already visited, a school group files past a new exhibit at the top of the clock tower: a white-haired man and a teenager holding a brass cage between them.`,
-          else: `A hundred years later, in a museum called The Frozen Moment, a school group files past an exhibit at the top of the clock tower: a white-haired man and a teenager holding a brass cage between them.`,
+          text: `A hundred years later, in a museum you’ve already visited, a school group files past a new exhibit in the cab of a steam train: a white-haired man and a teenager bent over a half-built brass cage.`,
+          else: `A hundred years later, in a museum called The Frozen Moment, a school group files past an exhibit in the cab of a steam train: a white-haired man and a teenager bent over a half-built brass cage.`,
         },
         `“Nobody knows who they were,” says the guide, “or what they were trying to do.”`,
       ],
@@ -947,9 +961,21 @@ const story: Story = {
         {
           if: is('tannenKnows'),
           text: `Someone is already there. Rex Tannen is leaning against the great iron gears in his silver jumpsuit, holding a device like a flashlight made of glass. “You didn’t think I’d let you walk out of my office and then just sit around in 2085 waiting for you, did you?”`,
-          else: `The clock room is empty. Doc sets the stabilizer down next to the clamp and starts connecting cables with quick, careful hands. Then the air crackles blue, and Rex Tannen steps out of nowhere: silver jumpsuit, helmet under one arm, and in his other hand a device like a flashlight made of glass. “The clamp called me,” he says. “It doesn’t like being tampered with. Neither do I.”`,
+          else: `The clock room is empty. Doc sets the stabilizer down next to the clamp and starts connecting cables with quick, careful hands. Then the air crackles blue, and a man steps out of nowhere: silver jumpsuit, helmet under one arm, and in his other hand a device like a flashlight made of glass.`,
         },
-        `He points the glass device at the stabilizer. “Put it down. Slowly.”`,
+        {
+          if: all(not(is('tannenKnows')), is('sawExhibit')),
+          text: `It’s Rex Tannen, the man from the museum portrait. “The clamp called me,” he says. “It doesn’t like being tampered with. Neither do I.”`,
+        },
+        {
+          if: all(not(is('tannenKnows')), not(is('sawExhibit'))),
+          text: `“Rex Tannen,” he says. “Tannen Temporal Tours. That’s my clamp you’re fiddling with, and it called me the moment you touched it. It doesn’t like being tampered with. Neither do I.”`,
+        },
+        {
+          if: is('tannenKnows'),
+          text: `He points the glass device at the stabilizer. “Put it down. Slowly.” Doc sets it down beside the clamp, very slowly. Rex doesn’t notice that Doc’s fingers keep moving, feeling for the cables.`,
+          else: `He points the glass device at Doc. “Step away from it. Slowly.” Doc raises his hands, but his fingers stay close to the cables.`,
+        },
         {
           if: is('authorityAlerted'),
           text: `Before anyone can move, the air crackles again, three times, four, and suddenly the clock room is very crowded. Four officers in grey uniforms, wearing the hourglass badge of the Temporal Authority, step out of the blue light. The officer from the Hill Valley branch is at the front.`,
@@ -973,7 +999,7 @@ const story: Story = {
       cast: ['rex'],
       imagePrompt: `A gaudy futuristic theme park at night built around a historic clock tower, glowing with holographic banners of a smug man’s grinning face. Crowds of tourists stream through the gates; a giant brochure-style billboard shows a frozen teenager and a white-haired man as star attractions.`,
       text: [
-        `You set the stabilizer down and slide it across the floor to him. Doc says your name once, quietly.`,
+        `You unhook the stabilizer from the clamp and slide it across the floor to him. Doc says your name once, quietly.`,
         `Rex picks it up, turns it over, and drops it out of the open maintenance hatch in the clock face. You watch it fall out of your field, slow down, and stop, hanging in the air twenty feet below the window, frozen like everything else.`,
         `“Thank you,” he says, and points the glass flashlight at the two of you.`,
         `The Frozen Moment opens its new wing that spring. It is the most popular exhibit in the history of Tannen Temporal Tours. Rex opens a second attraction the year after, then a third, and then a Tannen Temporal Tours theme park where the old high school used to be.`,
@@ -1024,10 +1050,10 @@ const story: Story = {
       cast: ['doc', 'player'],
       imagePrompt: `Doc Brown and the player sit exhausted but smiling on the courthouse steps at night, Doc reading an old yellowed letter. Behind them the town has come back to life: a couple walking, a newspaper blowing down the street, the clock tower glowing overhead.`,
       text: [
-        `Outside, Hill Valley starts again as if nothing had happened. Red finishes his snore. The couple finish their step. The newspaper blows away down the street. A car honks. Nobody in town will ever know that, for them, the last six hours took no time at all.`,
+        `You and Doc climb down the tower stairs and out into the square as Hill Valley starts again, as if nothing had happened. Red finishes his snore. The couple finish their step. A car honks. Nobody in town will ever know that, for them, the last six hours took no time at all.`,
         `You and Doc sit on the courthouse steps, exhausted. The letter is still in your pocket, creased and soft. You take it out and hand it to him.`,
         `Doc reads it again, the way he did at the start, and this time he smiles.`,
-        `“I understand it now,” he says. “I have to write this. I’ll write it in 1885, when I get home, and give it to Western Union with very specific instructions.” He taps the P.S. “And I mustn’t forget this bit.”`,
+        `“I understand it now,” he says. “I have to write this. I’ll write it in 1885 and give it to Western Union with very specific instructions.” He taps the P.S. “And I mustn’t forget this bit.”`,
       ],
       choices: [
         { text: `Continue`, to: 'E10', if: { flag: 'delays', is: 0 } },

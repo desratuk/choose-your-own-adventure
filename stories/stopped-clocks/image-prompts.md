@@ -513,7 +513,7 @@ THE TEMPORAL STABILIZER: a brass cage the size of a birdcage, a copper-and-glass
 
 THE CHRONO-CLAMP: a toaster-sized brushed-silver device bolted around the spindle of giant clock hands, cables running into iron gears, a small glowing green countdown screen, the air around it rippling like heat haze.
 
-The clock room bathed in cold blue stillness: Doc Brown and the player frozen mid-stride at the top of the stairs, holding the brass stabilizer between them, the chrono-clamp’s screen dark. Dust motes hang motionless in the moonlight.
+The lamp-lit cab of the time train, bathed in cold blue stillness: Doc Brown frozen mid-turn of a screwdriver over a half-built brass cage on the workbench, the player frozen beside him holding up a lamp. Through the cab window, the clock tower looms over the frozen square.
 ```
 
 ## S42

@@ -14,6 +14,8 @@ export interface CheckReport {
   };
   /** One reachable state per page, for the story map's "play from here". */
   samples: Record<string, State>;
+  /** Every value each flag can have on arriving at each page. */
+  arrivals: Record<string, Record<string, Value[]>>;
 }
 
 const MAX_STATES = 200_000;
@@ -27,7 +29,8 @@ export function checkStory(story: Story): CheckReport {
 
   const stats = { pages: story.pages.length, endings: 0, endingsReached: 0, states: 0, paths: null as number | null };
   const samples: Record<string, State> = {};
-  if (errors.length) return { errors, warnings, stats, samples };
+  const arrivals: Record<string, Record<string, Value[]>> = {};
+  if (errors.length) return { errors, warnings, stats, samples, arrivals };
 
   // Exhaustive walk over (page, state).
   const nodes = new Map<string, { pageId: string; state: State; next: string[] }>();
@@ -52,6 +55,11 @@ export function checkStory(story: Story): CheckReport {
     const node = nodes.get(queue.shift()!)!;
     const page = getPage(story, node.pageId);
     samples[page.id] ??= node.state;
+    const seen = (arrivals[page.id] ??= {});
+    for (const [flag, value] of Object.entries(node.state)) {
+      const values = (seen[flag] ??= []);
+      if (!values.includes(value)) values.push(value);
+    }
 
     page.text.forEach((p, i) => {
       if (typeof p !== 'string') passageSeen.add(`${page.id}#${i}:${evaluate(p.if, node.state)}`);
@@ -111,7 +119,7 @@ export function checkStory(story: Story): CheckReport {
   }
 
   stats.paths = countPaths(nodes, key(story.start, startState(story)));
-  return { errors, warnings, stats, samples };
+  return { errors, warnings, stats, samples, arrivals };
 }
 
 function countPaths(nodes: Map<string, { next: string[] }>, start: string): number | null {

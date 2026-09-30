@@ -45,6 +45,20 @@ This is a web-based choose-your-own-adventure game themed on *Back to the Future
 - `npm run build`: runs `check`, then builds the static site into `dist/`.
 - `npm run prompts`: regenerates `stories/<id>/image-prompts.md` from the story data.
 
+## Story change gate (two layers)
+
+Every change to `stories/*/story.ts` must pass both of these:
+1. **`npm run check`**: the structural checker (reachability, dead ends, flags, clock).
+2. **The `story-continuity-reviewer` agent** (`.claude/agents/story-continuity-reviewer.md`), an LLM review for problems a program can't see:
+   - text that assumes one path, or contradicts what's already happened
+   - missing scene-setting or transitions
+   - unclear speakers, or assumed film knowledge
+   - prose that disagrees with the clock arithmetic
+
+   It works from `npm run story-dump -- <id>`, which shows every page with its routes in and the flag values possible on arrival. When it finds nothing, it stamps `stories/<id>/.continuity-review` with the file's hash.
+
+A Stop hook (`.claude/settings.json` → `scripts/story-review-gate.mjs`) blocks a Claude Code turn from finishing while any story's hash doesn't match its stamp. Fix whatever the reviewer reports and re-run it until it passes. Never stamp by hand. Commit the stamp file along with the story change.
+
 ## Layout
 
 - `src/engine/`: the story format (`types.ts`), the runtime (`engine.ts`) and the exhaustive checker (`check.ts`). These know nothing about any particular story.
