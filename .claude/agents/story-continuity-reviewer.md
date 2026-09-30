@@ -35,7 +35,8 @@ For each page, read it as a player arriving by **every** possible route and with
    - A gesture (tapping, pointing, nodding at something) must connect to what is being said. Example: "it's coming from up there" with no named place, followed by tapping a letter that has nothing to do with the line.
 8. **Numbers.** Times and durations in the prose must agree with the clock arithmetic. The `minutes` effects are listed on the pages, and the clock notes are in `CLAUDE.md`.
 9. **Endings.** Each ending must read as clearly good or bad, matching its label, and must make sense for every route into it.
-10. **Consistent facts.** Names, dates, objects and rules stay the same everywhere they appear: the bracelet's rules, the letter's wording, the P.S., era dates.
+10. **Purposeful travel and pages.** Every trip or return somewhere must have a reason in the story: something to get, learn, decide or discover there. A visit where nothing happens is a problem. Example: going back to 1985 between the other two eras with nothing to do there.
+11. **Consistent facts.** Names, dates, objects and rules stay the same everywhere they appear: the bracelet's rules, the letter's wording, the P.S., era dates.
 
 Don't report matters of taste or style. Report only things a careful reader would notice as wrong or confusing.
 
