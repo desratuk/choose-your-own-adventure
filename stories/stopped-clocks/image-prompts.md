@@ -281,7 +281,7 @@ DOC BROWN: tall, lanky scientist in his late sixties, wild shock of white hair, 
 
 THE PLAYER: a 16-year-old in a teal-and-white 1980s varsity jacket with cream sleeves, faded jeans and white high-top sneakers. Shown from behind or over the shoulder with the face mostly hidden, gender-neutral. Always the same teal-and-white varsity jacket, never a windbreaker. From the moment Doc arrives, a leather wrist bracelet with a small humming metal box on it.
 
-Chaos in an 1885 saloon filled with thick white smoke: chairs toppling, outlaws coughing and flailing. Doc Brown, in a crooked false beard and a huge hat, cuts the player free from a post with a pocketknife. A smoking metal canister rolls across the floor. Night: it is dark outside the swinging doors.
+A comic, slapstick escape in an 1885 saloon filled with thick, harmless white theatrical smoke. Cowboys at the card tables blink and fan the air in confusion; a chair tips over. Doc Brown, in a crooked false beard and a huge hat, pulls a loose length of already-cut rope away from the player at a wooden post and beckons toward the back door. A small hissing smoke canister sits on the floor. No weapons anywhere. Night: it is dark outside the swinging doors.
 ```
 
 ## E04

@@ -525,7 +525,7 @@ const story: Story = {
       time: 'AUG 28 1885 10:25 PM',
       onEnter: { set: { rescued: true }, add: { minutes: -15 } },
       cast: ['doc', 'player'],
-      imagePrompt: `Chaos in an 1885 saloon filled with thick white smoke: chairs toppling, outlaws coughing and flailing. Doc Brown, in a crooked false beard and a huge hat, cuts the player free from a post with a pocketknife. A smoking metal canister rolls across the floor. Night: it is dark outside the swinging doors.`,
+      imagePrompt: `A comic, slapstick escape in an 1885 saloon filled with thick, harmless white theatrical smoke. Cowboys at the card tables blink and fan the air in confusion; a chair tips over. Doc Brown, in a crooked false beard and a huge hat, pulls a loose length of already-cut rope away from the player at a wooden post and beckons toward the back door. A small hissing smoke canister sits on the floor. No weapons anywhere. Night: it is dark outside the swinging doors.`,
       text: [
         `It takes forever to twist one hand free, and forever again to hook the walkie-talkie off the table with your foot while the gang argues over cards. You whisper into it and hope.`,
         `Fifteen long minutes later, the saloon doors swing open, and something the size of a cannonball rolls across the floor, hissing.`,
