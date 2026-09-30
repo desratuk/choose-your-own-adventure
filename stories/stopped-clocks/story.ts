@@ -58,7 +58,7 @@ const story: Story = {
     stylePrefix: `Graphic-novel illustration: bold black ink linework and cross-hatching over rich painted color, cinematic lighting and composition, 3:2 landscape. No text, lettering or captions anywhere in the image. Never show a DeLorean or any other famous film car, never a red puffer vest, and no likeness of any real person. Only the characters listed for the scene appear; Doc Brown appears only if he is described below. Mild California climate: never snow. Mood: 1980s adventure film. Night scenes use wet reflections, sodium-orange streetlights and neon glow. 1885 scenes are warm, dusty amber. 2085 scenes are cool blue and violet with neon accents.`,
     cast: {
       doc: `DOC BROWN: tall, lanky scientist in his late sixties, wild shock of white hair, wide intense eyes, expressive eyebrows, long dark-brown duster coat over a white shirt, brass goggles pushed up on his forehead, a chunky wristwatch.`,
-      player: `THE PLAYER: a 16-year-old in a teal-and-white 1980s bomber jacket, faded jeans and white high-top sneakers. Shown from behind or over the shoulder with the face mostly hidden, gender-neutral. Always the same teal-and-white varsity jacket, never a windbreaker. From the moment Doc arrives, a leather wrist bracelet with a small humming metal box on it.`,
+      player: `THE PLAYER: a 16-year-old in a teal-and-white 1980s varsity jacket with cream sleeves, faded jeans and white high-top sneakers. Shown from behind or over the shoulder with the face mostly hidden, gender-neutral. Always the same teal-and-white varsity jacket, never a windbreaker. From the moment Doc arrives, a leather wrist bracelet with a small humming metal box on it.`,
       rex: `REX TANNEN: a man in his forties from 2085, slicked-back hair, smug grin, fitted silver jumpsuit, a chunky wrist device glowing electric blue.`,
       madDog: `MAD DOG TANNEN: an 1885 outlaw, unshaven, sneering, long dusty duster coat, battered black hat pulled low, gun belt.`,
       train: `THE TIME TRAIN: a black 19th-century steam locomotive heavily modified with chrome time-travel hardware, glowing blue coils along the boiler, hover-conversion wheels, a big brass headlamp and a wooden cab.`,
@@ -481,7 +481,7 @@ const story: Story = {
       title: 'Mad Dog',
       era: '1885',
       cast: ['madDog', 'player'],
-      imagePrompt: `Mad Dog Tannen, spurs jingling, swaggers across a lamplit wooden platform toward the player, sneering down at their sneakers and bomber jacket. His gang watches from their horses. Tense western standoff framing.`,
+      imagePrompt: `Mad Dog Tannen, spurs jingling, swaggers across a lamplit wooden platform toward the player, sneering down at their sneakers and varsity jacket. His gang watches from their horses. Tense western standoff framing.`,
       text: [
         `“Leave him alone,” you hear yourself say.`,
         `Four heads turn. Mad Dog Tannen looks at your sneakers, your jeans and your jacket, and grins a grin with a lot of gaps in it.`,
@@ -705,12 +705,12 @@ const story: Story = {
       era: '2085',
       onEnter: { set: { sawExhibit: true }, add: { minutes: -10 } },
       cast: ['player'],
-      imagePrompt: `Inside a dim, eerie museum: a perfect full-scale replica of a 1985 town square at night, with frozen figures mid-step. Futuristic tourists in shiny clothes take pictures. In the foreground, the player stands stunned before an exhibit of a steam locomotive with two frozen figures beside it: a white-haired man in a long coat and a teenager in a bomber jacket.`,
+      imagePrompt: `Inside a dim, eerie museum: a perfect full-scale replica of a 1985 town square at night, with frozen figures mid-step. Futuristic tourists in shiny clothes take pictures. In the foreground, the player stands stunned before an exhibit of a steam locomotive with two frozen figures beside it: a white-haired man in a long coat and a teenager in a teal-and-white varsity jacket.`,
       text: [
         `You join a line of tourists at the entrance. A turnstile scans you and waves you through under a sign reading FIRST VISIT FREE · GIFT SHOP AT EXIT. Inside, it’s cold and dim and uncanny. It’s Courthouse Square in 1985, exactly as you left it at 10:04, reproduced down to the last detail: the couple in mid-step, Red on his bench. A soft voice explains that you’re walking through a perfect scan of the real thing, taken by the very device that froze it, and that the real Hill Valley is still out there in 1985, stopped forever.`,
         `Tourists in shiny clothes wander through, taking pictures.`,
         `Then you turn a corner and stop dead.`,
-        `There’s a steam locomotive in the middle of the square. Standing beside it, frozen in place, are a white-haired man in a long coat and a teenager in a bomber jacket with a walkie-talkie. The teenager is you. The plaque reads: MYSTERY VISITORS. Scanned at the moment the freeze became permanent. Identity unknown.`,
+        `There’s a steam locomotive in the middle of the square. Standing beside it, frozen in place, are a white-haired man in a long coat and a teenager in a teal-and-white varsity jacket with a walkie-talkie. The teenager is you. The plaque reads: MYSTERY VISITORS. Scanned at the moment the freeze became permanent. Identity unknown.`,
         `Your walkie-talkie crackles. “Everything all right?” Doc asks. “You’ve gone very quiet.”`,
         `You tell him. There’s a long pause.`,
         `“That’s the future as it stands right now,” he says at last. “It isn’t written yet. Every choice we make changes it.”`,
