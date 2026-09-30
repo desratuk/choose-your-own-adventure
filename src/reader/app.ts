@@ -15,9 +15,9 @@ import {
 } from './storage';
 
 const DIFFICULTIES: { id: Difficulty; name: string; note: string }[] = [
-  { id: 'easy', name: 'Easy', note: 'Undo as many choices as you like.' },
+  { id: 'easy', name: 'Easy', note: 'More time on the clock, and undo as many choices as you like.' },
   { id: 'medium', name: 'Medium', note: 'Undo up to your last two choices.' },
-  { id: 'hard', name: 'Hard', note: 'No undo. Every choice is final.' },
+  { id: 'hard', name: 'Hard', note: 'Less time on the clock, and no undo. Every choice is final.' },
 ];
 
 const reducedMotion = () => matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -30,9 +30,9 @@ export function startReader(root: HTMLElement, story: Story) {
 
   const endings = story.pages.filter((p) => p.ending);
 
-  function firstSnapshot(): Snapshot {
+  function firstSnapshot(difficulty: Difficulty): Snapshot {
     const page = getPage(story, story.start);
-    return { pageId: page.id, state: startState(story), era: page.era, time: page.time ?? '', lastDeparted: null };
+    return { pageId: page.id, state: startState(story, difficulty), era: page.era, time: page.time ?? '', lastDeparted: null };
   }
 
   // ── Title screen ────────────────────────────────────────────
@@ -67,7 +67,7 @@ export function startReader(root: HTMLElement, story: Story) {
     root.querySelector('[data-act="continue"]')?.addEventListener('click', () => showPage());
     root.querySelector('[data-act="new"]')!.addEventListener('click', () => {
       const difficulty = (root.querySelector('input[name="difficulty"]:checked') as HTMLInputElement).value as Difficulty;
-      run = { difficulty, current: firstSnapshot(), history: [] };
+      run = { difficulty, current: firstSnapshot(difficulty), history: [] };
       saveRun(story.id, run);
       showPage();
     });
@@ -122,7 +122,7 @@ export function startReader(root: HTMLElement, story: Story) {
     on('endings', showEndings);
     on('title', showTitle);
     on('restart', () => {
-      run = { difficulty: run!.difficulty, current: firstSnapshot(), history: [] };
+      run = { difficulty: run!.difficulty, current: firstSnapshot(run!.difficulty), history: [] };
       saveRun(story.id, run);
       showPage();
     });
@@ -138,7 +138,7 @@ export function startReader(root: HTMLElement, story: Story) {
     document.documentElement.dataset.era = page.era;
     if (page.ending) recordEnding(story.id, page.id);
 
-    const paragraphs = renderText(page, snap.state).map((t) => `<p>${formatText(t)}</p>`).join('');
+    const paragraphs = renderText(story, page, snap.state).map((t) => `<p>${formatText(t)}</p>`).join('');
     const choices = visibleChoices(page, snap.state);
     const clock = story.clock && evaluate(story.clock.visibleWhen, snap.state) ? story.clock : null;
     const undoLeft = Math.min(run!.history.length, UNDO_LIMIT[run!.difficulty]);

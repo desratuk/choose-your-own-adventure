@@ -2,6 +2,8 @@
 // reader and checker stay theme-agnostic.
 
 export type Value = boolean | number | string;
+export type Difficulty = 'easy' | 'medium' | 'hard';
+export const DIFFICULTIES: Difficulty[] = ['easy', 'medium', 'hard'];
 export type State = Record<string, Value>;
 
 export type Cond =
@@ -17,7 +19,10 @@ export interface Effects {
   add?: Record<string, number>;
 }
 
-/** A paragraph. Conditional paragraphs show `text` when `if` holds, otherwise `else` (if any). */
+/**
+ * A paragraph. Conditional paragraphs show `text` when `if` holds, otherwise `else` (if any).
+ * `{{clock}}` renders the story clock as H:MM; `{{flag}}` renders a flag's value.
+ */
 export type Passage = string | { if: Cond; text: string; else?: string };
 
 export interface Choice extends Effects {
@@ -60,6 +65,8 @@ export interface Story {
   start: string;
   eras: Record<string, { label: string }>;
   flags: Record<string, FlagDef>;
+  /** Effects applied to the initial state for each difficulty (e.g. more or less time). */
+  difficulties?: Partial<Record<Difficulty, Effects>>;
   /** Optional visible countdown driven by a numeric flag. */
   clock?: {
     flag: string;

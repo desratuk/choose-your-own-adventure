@@ -1,4 +1,4 @@
-import type { Choice, Cond, Effects, Page, Passage, State, Story } from './types';
+import type { Choice, Cond, Difficulty, Effects, Page, Passage, State, Story } from './types';
 
 const pageIndex = new WeakMap<Story, Map<string, Page>>();
 
@@ -34,9 +34,24 @@ export function initialState(story: Story): State {
   return Object.fromEntries(Object.entries(story.flags).map(([k, def]) => [k, def.default]));
 }
 
-/** State on arriving at the story's first page. */
-export function startState(story: Story): State {
-  return applyEffects(initialState(story), getPage(story, story.start).onEnter);
+/** State on arriving at the story's first page, for the chosen difficulty. */
+export function startState(story: Story, difficulty: Difficulty = 'medium'): State {
+  const base = applyEffects(initialState(story), story.difficulties?.[difficulty]);
+  return applyEffects(base, getPage(story, story.start).onEnter);
+}
+
+export function formatClock(minutes: number): string {
+  const m = Math.max(0, minutes);
+  return `${Math.floor(m / 60)}:${String(m % 60).padStart(2, '0')}`;
+}
+
+/** Placeholders used in a piece of text: {{clock}} or {{flagName}}. */
+export const placeholders = (text: string) => [...text.matchAll(/\{\{(\w+)\}\}/g)].map((m) => m[1]);
+
+function interpolate(story: Story, text: string, state: State): string {
+  return text.replace(/\{\{(\w+)\}\}/g, (_, name: string) =>
+    name === 'clock' && story.clock ? formatClock(state[story.clock.flag] as number) : String(state[name]),
+  );
 }
 
 export function visibleChoices(page: Page, state: State): Choice[] {
@@ -54,8 +69,11 @@ export function passageText(passage: Passage, state: State): string | null {
   return passage.else ?? null;
 }
 
-export function renderText(page: Page, state: State): string[] {
-  return page.text.map((p) => passageText(p, state)).filter((t): t is string => t !== null);
+export function renderText(story: Story, page: Page, state: State): string[] {
+  return page.text
+    .map((p) => passageText(p, state))
+    .filter((t): t is string => t !== null)
+    .map((t) => interpolate(story, t, state));
 }
 
 export function imagePrompt(story: Story, page: Page): string {

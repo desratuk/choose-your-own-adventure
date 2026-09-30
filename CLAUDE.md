@@ -70,7 +70,8 @@ A Stop hook (`.claude/settings.json` → `scripts/story-review-gate.mjs`) blocks
 
 - Flags are declared with defaults in `flags`. Conditions and effects may only use declared flags; the checker enforces this.
 - A page's `time` sets the time-circuit reading. Pages without a `time` keep the previous one.
-- Clock (deadline) values in the prose must match `minutes` arithmetic. At the hub with both parts, the remaining time is always 100 − 20 × `delays`, and assembly (S41) costs 79.
+- The clock (`minutes`) starts at a different value for each difficulty (`difficulties` in `story.ts`): Easy 390, Medium 360, Hard 345. The costs are: fixed travel 225 in total; assembly (S41) 79; optional detours 10 each (the chase S11, the kiosk S30k, the museum S31); mistakes 15 each (S13x, S29, S26b, and the extra in S37). With 20 or more minutes left after assembly the clean endings are possible, 1–19 gives E11, and 0 or less gives E07. Medium allows one slip on the best route and Hard none. Use `{{clock}}` in prose; don't hard-code the numbers.
+- Text placeholders: `{{clock}}` (H:MM) and `{{flagName}}`. The checker rejects unknown ones.
 
 ## Status and next steps
 - Done: engine, checker, all 51 pages, reader UI (time circuits, era themes, time-travel animation, difficulty-based undo, save/resume, endings gallery), story map, image prompts.

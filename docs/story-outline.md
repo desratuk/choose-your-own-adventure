@@ -12,7 +12,7 @@ Someone has fixed a **chrono-clamp** to the clock tower's hands. Tearing it off 
 | Escapement wheel | 1885 | Doc needs a piece of the tower clock that has never been through a time disturbance, so it has to come from before the clock was first installed. |
 | Chrono-cell (power) | 2085 | The stabilizer needs a power source that doesn't exist yet. |
 
-The clamp **sets permanently** after about six hours on Doc's watch (time only passes for people inside a time field).
+The clamp **sets permanently** when its countdown runs out: 5h45 to 6h30 depending on difficulty (§3a). Time only passes for people inside a time field.
 
 ### The mystery and its answers
 1. **Who sent you the letter?** That afternoon Western Union delivers a letter to you. It is dated 1885, written in Doc's hand and signed by Doc, and it tells you to be at the courthouse square at 10:03 PM. Present-day Doc has never written it. **Answer:** he writes it after the adventure, from 1885, in every good ending. The loop closes.
@@ -32,7 +32,7 @@ The clamp **sets permanently** after about six hours on Doc's watch (time only p
 
 ## 3. State
 
-All of these flags are hidden except the deadline. The deadline is **shown**: Doc's watch in the header counts down the six hours. It drops by a fixed amount for each era trip and by an extra amount for each `delays` step. The exact numbers will be set during implementation, but they must be consistent on every path. At `delays` 0 the clamp is released cleanly, at 1 it takes one minute with it, and at 2 or more you are too late.
+All of these flags are hidden except the deadline. The deadline (`minutes`) is **shown**: the clamp's countdown, in the header. It drops by fixed amounts for travel, by 10 for each optional detour and by 15 for each mistake (§3a). After the 79-minute assembly: 20 or more minutes left means the clamp is released cleanly, 1–19 means it takes a minute of Hill Valley with it (E11), and 0 or less means you are too late (E07).
 
 | Flag | Values | Set by |
 |---|---|---|
@@ -42,7 +42,9 @@ All of these flags are hidden except the deadline. The deadline is **shown**: Do
 | `hasCell` | bool | 2085 |
 | `authorityAlerted` | bool | Reporting Rex in 2085 (S38) |
 | `tannenKnows` | bool | Rex has captured you in 2085 |
-| `delays` | 0–2+ | Costly choices. 0 = clean, 1 = one minute lost, 2 or more = too late |
+| `minutes` | number | The clamp countdown. Its start depends on difficulty |
+| `difficulty` | easy / medium / hard | Set at the start of a run |
+| `knowsTA` | bool | Read the 2085 information kiosk (S30k) |
 
 **Coherence guarantee:** an automated checker plays through **every reachable combination of path and state**. It fails the build if any of these is true:
 - a page is a dead end, or a page or ending can't be reached
@@ -52,7 +54,13 @@ All of these flags are hidden except the deadline. The deadline is **shown**: Do
 
 Any page whose text depends on the past uses conditional passages, so its text always matches what actually happened.
 
-## 4. Scene outline (51 pages: 40 scenes and 11 endings)
+## 3a. Difficulty and time (added after playtesting: the best ending was too easy)
+- The clamp's countdown starts at 6h30 (Easy), 6h00 (Medium) or 5h45 (Hard) and is shown in the header.
+- Optional detours cost 10 minutes and mistakes cost 15. The best ending needs 20 or more minutes left after the 79-minute assembly. That allows several slips on Easy, one on Medium and none on Hard.
+- The best ending needs three clues connected: the letter's P.S. (take the spare wheel), Doc's early remark about "the day it all began" (the safe combination, 5 Nov 1955), and the 2085 information kiosk (S30k). The kiosk reveals that the Temporal Authority is the place to report unlicensed jumps and that Hill Valley's police are Tannen's own security. None of these is flagged when it matters.
+- Choices avoid signposting. Traps get plausible reasons: Rex offers a deal, taking the evidence to the police, and offering Tannen the train.
+
+## 4. Scene outline (52 pages: 41 scenes and 11 endings)
 
 ### Act 1: The frozen town (1985)
 - **S01 Letter.** Afternoon. You take off your Walkman. A Western Union man hands you a letter held "since 1885". → Go to the square (S02) / Ignore it (S03)
@@ -67,7 +75,7 @@ Any page whose text depends on the past uses conditional passages, so its text a
 - **S10 The figure.** Someone in silver runs down the stairs. → Chase (S11) / Let them go and head to the lab (S13)
 - **S11 Chase.** They vanish in a blue flash and drop a keycard: "TANNEN TEMPORAL TOURS – R. TANNEN". `hasKeycard` → S13
 - **S13 Doc's lab.** The regulator is in a safe, and Doc has forgotten the combination. → "The day I invented time travel" (S14) / "The day Marty left" (S13x)
-- **S13x Jammed safe.** Doc forces it open with a crowbar. `delays+1` → S14
+- **S13x Jammed safe.** Doc forces it open with a crowbar. Costs 15 minutes → S14
 - **S14 Plan.** Doc builds the stabilizer frame and gives you a walkie-talkie. → 1885 (S20) / 2085 (S30)
 
 ### Act 2a: 1885
@@ -76,33 +84,34 @@ Any page whose text depends on the past uses conditional passages, so its text a
 - **S21 Depot.** The clock crate, guarded by a sleepy stationmaster. → Sneak round the back (S23) / Talk your way in (S24)
 - **S24 Riders.** Mad Dog Tannen's gang turn up. → Hide and slip round the back (S23) / Step forward (S27)
 - **S27 Tannen.** → Tell him about gold on tomorrow's eastbound train. He rides off (S23) / Talk back (S28)
-- **S28 Tied up in the saloon.** → Radio Doc and wait (S29, `delays+1`) / Offer Tannen the "iron horse" in the ravine (**E04**)
+- **S28 Tied up in the saloon.** → Radio Doc and wait (S29, costs 15) / Offer Tannen the "iron horse" in the ravine (**E04**)
 - **S29 Rescue.** Doc uses a smoke bomb. → S23
 - **S23 The crate.** It holds two escapement wheels: one mounted and one boxed and labelled SPARE. → Take the mounted one (S25) / Take the spare (S26)
 - **S25 / S26 Departure.** Sets `escapement` to `original` or `spare`. → straight on to 2085 (S30), or home to S40 if the cell is already aboard
 
 ### Act 2b: 2085
-- **S30 Hill Valley 2085.** The courthouse is now the "Frozen Moment" attraction. Doc stays with the train because a traffic drone is already interested in it. → Attraction (S31) / Power shop (S32) / [if keycard] Staff door (S33)
+- **S30 Hill Valley 2085.** The courthouse is now the "Frozen Moment" attraction. Doc stays with the train because a traffic drone is already interested in it. → Attraction (S31, costs 10) / Power shop (S32) / [if keycard] Staff door (S33) / Info kiosk (S30k)
+- **S30k Information kiosk** (costs 10). `knowsTA`: the Temporal Authority handles unlicensed jumps, and the police are Tannen Temporal Security. → Attraction / Shop / [keycard] Staff door
 - **S31 Attraction.** There is an exhibit of *a steam train and two frozen figures*, which is you and Doc. There is also a portrait of the founder, Rex Tannen, in silver. → Shop (S32) / Sneak into the control room (S34) / [if keycard] Staff door (S33)
 - **S32 Wilson's Power Plus** (founded by a descendant of Goldie Wilson). → Sell your Walkman, a priceless antique (S35) / Steal a cell (S36)
-- **S33 Control room.** Rex's unregistered jump log for 12 Nov 1985. → Take the log to the Temporal Authority (S38) / Grab a cell from the rack (S36)
+- **S33 Control room.** Rex's unregistered jump log for 12 Nov 1985. → Take the log to the police (S36: they're Tannen's) / [if `knowsTA`] Take it to the Temporal Authority (S38) / Grab a cell from the rack (S36)
 - **S34 Sneaking.** A security bot catches you. → S36
 - **S36 Captured.** Rex explains his plan and means to add you to the exhibit. `tannenKnows` → Radio Doc (S37) / Bluff that the Temporal Authority is coming (**E06**)
-- **S37 Escape.** The train crashes through the skylight and you grab a cell. `hasCell`, `delays+1` → 1885 (S20) if the wheel is still missing, else S40
+- **S37 Escape.** The train crashes through the skylight and you grab a cell. `hasCell`, costs an extra 15 → 1885 (S20) if the wheel is still missing, else S40
 - **S35 Bought.** `hasCell` → 1885 (S20) if the wheel is still missing, else S40
 - **S38 Temporal Authority.** They will arrest Rex on his next jump and give you a cell. `hasCell`, `authorityAlerted` → 1885 (S20) if the wheel is still missing, else S40
 
 ### Hub and finale (1985)
 - **S40 Back in the frozen square.** You only arrive here once you have both parts, travelling directly between 1885 and 2085, so there's no pointless stop in between. Doc's watch shows how late you are.
-  - If `escapement = original`, the clock face is blank and your hands are fading. Without the clock running, Marty could never have got back in 1955. History takes a little while to catch up, which is why 2085 looked normal. → Go back and swap (S26b, `delays+1`, → S40) / Ignore it (**E05**)
+  - If `escapement = original`, the clock face is blank and your hands are fading. Without the clock running, Marty could never have got back in 1955. History takes a little while to catch up, which is why 2085 looked normal. → Go back and swap (S26b, costs 15, → S40) / Ignore it (**E05**)
   - Otherwise → Climb the tower (S41)
-- **S41 The climb.** If `delays ≥ 2` → **E07**, otherwise → S42
+- **S41 Assembly and the climb** (79 minutes). If 0 or fewer minutes are left → **E07** (the clamp sets during assembly), otherwise → S42
 - **S42 Rex.** He waits at the top if `tannenKnows` and arrives if not.
   - If `authorityAlerted`, agents flash in → S44
   - Otherwise → Hand over the stabilizer (**E08**) / Stall him while Doc fits it (S43)
-- **S43 Stabilizer fires.** Rex escapes in a blue flash. → `delays = 1`: **E11**, otherwise **E09**
+- **S43 Stabilizer fires.** Rex escapes in a blue flash. → 1–19 minutes left: **E11**, 20 or more: **E09**
 - **S44 Arrest.** → S45
-- **S45 10:05 PM.** The clock ticks. Doc realises he has to write the letter. → `delays = 1`: **E11**, otherwise **E10**
+- **S45 10:05 PM.** The clock ticks. Doc realises he has to write the letter. → 1–19 minutes left: **E11**, 20 or more: **E10**
 
 ### Endings
 The type below is shown to the player on the ending screen and in the endings gallery.

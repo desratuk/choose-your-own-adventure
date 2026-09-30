@@ -1,6 +1,6 @@
-import type { State } from '../engine/types';
+import type { Difficulty, State } from '../engine/types';
 
-export type Difficulty = 'easy' | 'medium' | 'hard';
+export type { Difficulty };
 
 /** How many choices a player can step back through. */
 export const UNDO_LIMIT: Record<Difficulty, number> = { easy: Infinity, medium: 2, hard: 0 };

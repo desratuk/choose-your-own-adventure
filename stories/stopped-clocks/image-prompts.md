@@ -356,6 +356,16 @@ THE TIME TRAIN: a black 19th-century steam locomotive heavily modified with chro
 The time train flies through a neon 2085 skyline of glass towers and glowing lanes of flying cars. Below, a historic clock tower is enclosed in a sweeping building of curved glass and light topped by a giant glowing hologram of a frozen clock face. A police drone with blinking lights flies alongside the cab. Doc Brown leans out of the cab, aghast.
 ```
 
+## S30k
+
+```
+Graphic-novel illustration: bold black ink linework and cross-hatching over rich painted color, cinematic lighting and composition, 3:2 landscape. No text, lettering or captions anywhere in the image. Mood: 1980s adventure film. Night scenes use wet reflections, sodium-orange streetlights and neon glow. 1885 scenes are warm, dusty amber. 2085 scenes are cool blue and violet with neon accents.
+
+THE PLAYER: a 16-year-old in a teal-and-white 1980s bomber jacket, faded jeans and white high-top sneakers. Shown from behind or over the shoulder with the face mostly hidden, gender-neutral. From the moment Doc arrives, a leather wrist bracelet with a small humming metal box on it.
+
+A futuristic city plaza at night: the player stands before a glowing public information pillar with a cheerful animated face, a promotional video playing across it. Across the plaza stands a sober grey government building with an hourglass emblem, and beside it a glossy Tannen-branded security booth.
+```
+
 ## S31
 
 ```

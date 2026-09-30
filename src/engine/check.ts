@@ -1,5 +1,5 @@
-import { choose, evaluate, getPage, initialState, startState, visibleChoices } from './engine';
-import type { Cond, Effects, State, Story, Value } from './types';
+import { choose, evaluate, getPage, initialState, placeholders, startState, visibleChoices } from './engine';
+import { DIFFICULTIES, type Cond, type Effects, type State, type Story, type Value } from './types';
 
 export interface CheckReport {
   errors: string[];
@@ -18,7 +18,7 @@ export interface CheckReport {
   arrivals: Record<string, Record<string, Value[]>>;
 }
 
-const MAX_STATES = 200_000;
+const MAX_STATES = 3_000_000;
 
 const key = (pageId: string, state: State) => pageId + '|' + JSON.stringify(state);
 
@@ -45,14 +45,15 @@ export function checkStory(story: Story): CheckReport {
     }
     return k;
   };
-  add(story.start, startState(story));
+  // Explore from every difficulty's starting state (they differ only if the story says so).
+  const starts = [...new Set((story.difficulties ? DIFFICULTIES : (['medium'] as const)).map((d) => add(story.start, startState(story, d))))];
 
-  while (queue.length) {
+  for (let head = 0; head < queue.length; head++) {
     if (nodes.size > MAX_STATES) {
       errors.push(`State space exceeds ${MAX_STATES}; a flag is probably growing without bound.`);
       break;
     }
-    const node = nodes.get(queue.shift()!)!;
+    const node = nodes.get(queue[head])!;
     const page = getPage(story, node.pageId);
     samples[page.id] ??= node.state;
     const seen = (arrivals[page.id] ??= {});
@@ -102,15 +103,17 @@ export function checkStory(story: Story): CheckReport {
   }
 
   // Every reachable state must be able to reach an ending.
+  // Walk backwards from every ending state.
+  const prev = new Map<string, string[]>();
+  for (const [k, n] of nodes) for (const x of n.next) (prev.get(x) ?? prev.set(x, []).get(x)!).push(k);
   const canFinish = new Set<string>();
-  let changed = true;
-  while (changed) {
-    changed = false;
-    for (const [k, n] of nodes) {
-      if (canFinish.has(k)) continue;
-      if (getPage(story, n.pageId).ending || n.next.some((x) => canFinish.has(x))) {
-        canFinish.add(k);
-        changed = true;
+  const back: string[] = [];
+  for (const [k, n] of nodes) if (getPage(story, n.pageId).ending) canFinish.add(k) && back.push(k);
+  while (back.length) {
+    for (const p of prev.get(back.pop()!) ?? []) {
+      if (!canFinish.has(p)) {
+        canFinish.add(p);
+        back.push(p);
       }
     }
   }
@@ -118,7 +121,8 @@ export function checkStory(story: Story): CheckReport {
     if (!canFinish.has(k)) errors.push(`Trapped: ${n.pageId} with ${fmt(n.state)} can never reach an ending`);
   }
 
-  stats.paths = countPaths(nodes, key(story.start, startState(story)));
+  const counts = starts.map((k) => countPaths(nodes, k));
+  stats.paths = counts.includes(null) ? null : counts.reduce((a, b) => a! + b!, 0);
   return { errors, warnings, stats, samples, arrivals };
 }
 
@@ -175,6 +179,7 @@ function checkStatic(story: Story, errors: string[]) {
   for (const [flag, def] of Object.entries(story.flags)) {
     if (def.values && !def.values.includes(def.default as string)) errors.push(`Flag ${flag}: default not in values`);
   }
+  for (const [d, effects] of Object.entries(story.difficulties ?? {})) checkEffects(`difficulty ${d}`, effects);
   if (story.clock) {
     checkFlag('clock', story.clock.flag, 0);
     checkCond('clock', story.clock.visibleWhen);
@@ -186,7 +191,13 @@ function checkStatic(story: Story, errors: string[]) {
     if (!page.imagePrompt.trim()) errors.push(`${at}: missing imagePrompt`);
     for (const c of page.cast ?? []) if (!story.art.cast[c]) errors.push(`${at}: unknown cast "${c}"`);
     checkEffects(at, page.onEnter);
-    page.text.forEach((p) => typeof p !== 'string' && checkCond(at, p.if));
+    page.text.forEach((p) => {
+      if (typeof p !== 'string') checkCond(at, p.if);
+      const texts = typeof p === 'string' ? [p] : [p.text, p.else ?? ''];
+      for (const name of texts.flatMap(placeholders)) {
+        if (name === 'clock' ? !story.clock : !story.flags[name]) errors.push(`${at}: unknown placeholder {{${name}}}`);
+      }
+    });
     if (page.ending && page.choices?.length) errors.push(`${at}: endings cannot have choices`);
     if (!page.ending && !page.choices?.length) errors.push(`${at}: has no choices and is not an ending`);
     for (const c of page.choices ?? []) {
