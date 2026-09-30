@@ -11,7 +11,8 @@
     "check": "npm run typecheck && npm run check-story",
     "prompts": "tsx scripts/export-prompts.ts",
     "story-dump": "tsx scripts/dump-story.ts",
-    "story-gate": "node scripts/story-review-gate.mjs"
+    "story-gate": "node scripts/story-review-gate.mjs",
+    "images": "node scripts/convert-images.mjs"
   },
   "devDependencies": {
     "@types/node": "^26.6.3",

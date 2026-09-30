@@ -1,6 +1,6 @@
 # Image prompts: The Stopped Clocks
 
-Save each image as `stories/stopped-clocks/images/<PAGE_ID>.webp` (or .png/.jpg). 3:2 landscape, no text in the image.
+Save each image as `stories/stopped-clocks/art-src/<PAGE_ID>.png`, then run `npm run images` to create the game's WebP copy in `images/`. 3:2 landscape, no text in the image.
 
 ## S01
 

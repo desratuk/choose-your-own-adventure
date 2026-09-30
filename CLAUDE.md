@@ -64,7 +64,7 @@ A Stop hook (`.claude/settings.json` → `scripts/story-review-gate.mjs`) blocks
 - `src/engine/`: the story format (`types.ts`), the runtime (`engine.ts`) and the exhaustive checker (`check.ts`). These know nothing about any particular story.
 - `src/reader/`: the browser UI: the game, time circuits, storage, and the story map.
 - `stories/<id>/`: a story pack. `story.ts` holds all the pages, flags, clock and art direction. `theme.css` holds the era colours, scoped by `data-story`. Illustrations go in `images/`. Register each pack in `stories/index.ts`; `?story=<id>` selects one.
-- **Illustrations:** save each one as `stories/<id>/images/<PAGE_ID>.webp` (or `.png`/`.jpg`) and the reader picks it up automatically. Pages without an image show a drawn placeholder.
+- **Illustrations:** save the full-size original as `stories/<id>/art-src/<PAGE_ID>.png` (git ignores this folder), then run `npm run images`. That writes `stories/<id>/images/<PAGE_ID>.webp` (1200×800, quality 75, needs `cwebp`), which the reader picks up automatically. Commit only the WebP. Pages without an image show a drawn placeholder.
 
 ## Story format notes
 

@@ -1,3 +1,6 @@
 .DS_Store
 node_modules/
 dist/
+
+# Original full-size illustration PNGs (the game uses the WebP copies in images/)
+stories/*/art-src/
