@@ -79,7 +79,7 @@ Any page whose text depends on the past uses conditional passages, so its text a
 - **S28 Tied up in the saloon.** → Radio Doc and wait (S29, `delays+1`) / Offer Tannen the "iron horse" in the ravine (**E04**)
 - **S29 Rescue.** Doc uses a smoke bomb. → S23
 - **S23 The crate.** It holds two escapement wheels: one mounted and one boxed and labelled SPARE. → Take the mounted one (S25) / Take the spare (S26)
-- **S25 / S26 Departure.** Sets `escapement` to `original` or `spare`. → Hub (S40)
+- **S25 / S26 Departure.** Sets `escapement` to `original` or `spare`. → straight on to 2085 (S30), or home to S40 if the cell is already aboard
 
 ### Act 2b: 2085
 - **S30 Hill Valley 2085.** The courthouse is now the "Frozen Moment" attraction. Doc stays with the train because a traffic drone is already interested in it. → Attraction (S31) / Power shop (S32) / [if keycard] Staff door (S33)
@@ -88,15 +88,14 @@ Any page whose text depends on the past uses conditional passages, so its text a
 - **S33 Control room.** Rex's unregistered jump log for 12 Nov 1985. → Take the log to the Temporal Authority (S38) / Grab a cell from the rack (S36)
 - **S34 Sneaking.** A security bot catches you. → S36
 - **S36 Captured.** Rex explains his plan and means to add you to the exhibit. `tannenKnows` → Radio Doc (S37) / Bluff that the Temporal Authority is coming (**E06**)
-- **S37 Escape.** The train crashes through the skylight and you grab a cell. `hasCell`, `delays+1` → Hub
-- **S35 Bought.** `hasCell` → Hub
-- **S38 Temporal Authority.** They will arrest Rex on his next jump and give you a cell. `hasCell`, `authorityAlerted` → Hub
+- **S37 Escape.** The train crashes through the skylight and you grab a cell. `hasCell`, `delays+1` → 1885 (S20) if the wheel is still missing, else S40
+- **S35 Bought.** `hasCell` → 1885 (S20) if the wheel is still missing, else S40
+- **S38 Temporal Authority.** They will arrest Rex on his next jump and give you a cell. `hasCell`, `authorityAlerted` → 1885 (S20) if the wheel is still missing, else S40
 
 ### Hub and finale (1985)
-- **S40 Back in the frozen square.** Doc's watch shows how late you are.
-  - If `escapement = original`, the clock face is blank and your hands are fading. Without the clock running, Marty could never have got back in 1955. → Go back and swap (S26b, `delays+1`, → Hub) / Ignore it (**E05**)
-  - If a part is still missing → go to the remaining era
-  - If you have both parts → Climb the tower (S41)
+- **S40 Back in the frozen square.** You only arrive here once you have both parts, travelling directly between 1885 and 2085, so there's no pointless stop in between. Doc's watch shows how late you are.
+  - If `escapement = original`, the clock face is blank and your hands are fading. Without the clock running, Marty could never have got back in 1955. History takes a little while to catch up, which is why 2085 looked normal. → Go back and swap (S26b, `delays+1`, → S40) / Ignore it (**E05**)
+  - Otherwise → Climb the tower (S41)
 - **S41 The climb.** If `delays ≥ 2` → **E07**, otherwise → S42
 - **S42 Rex.** He waits at the top if `tannenKnows` and arrives if not.
   - If `authorityAlerted`, agents flash in → S44

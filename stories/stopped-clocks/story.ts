@@ -38,6 +38,7 @@ const story: Story = {
     tannenKnows: { default: false },
     hasCell: { default: false },
     authorityAlerted: { default: false },
+    swapped: { default: false },
   },
   clock: {
     flag: 'minutes',
@@ -585,10 +586,17 @@ const story: Story = {
           if: is('fooledTannen'),
           text: `You tell him about Tannen and the eastbound freight. He snorts. “Tannen robs somebody every other week. One wasted ride won’t make the history books.”`,
         },
-        { if: is('visited2085'), text: `“That’s the last part,” he says.`, else: `“Next stop, 2085,” he says. “By way of home.”` },
-        `He throws the train into gear. The walls of the ravine streak past, and the numbers on the display roll forward a hundred years.`,
+        { if: is('visited2085'), text: `“That’s the last part,” he says.`, else: `“Next stop, 2085,” he says.` },
+        {
+          if: is('visited2085'),
+          text: `He throws the train into gear. The walls of the ravine streak past, and the numbers on the display roll forward a hundred years, back to the frozen square.`,
+          else: `He throws the train into gear. The walls of the ravine streak past, and the numbers on the display roll forward two hundred years.`,
+        },
       ],
-      choices: [{ text: `Continue`, to: 'S40' }],
+      choices: [
+        { text: `Home to 1985`, to: 'S40', if: is('hasCell') },
+        { text: `On to 2085`, to: 'S30', if: not(is('hasCell')) },
+      ],
     },
     {
       id: 'S26',
@@ -605,17 +613,24 @@ const story: Story = {
           if: is('fooledTannen'),
           text: `You tell him about Tannen and the eastbound freight. He snorts. “Tannen robs somebody every other week. One wasted ride won’t make the history books.”`,
         },
-        { if: is('visited2085'), text: `He fits the wheel into its socket. “That’s the last part.”`, else: `He fits the wheel into its socket. “Next stop, 2085. By way of home.”` },
-        `He throws the train into gear. The walls of the ravine streak past, and the numbers on the display roll forward a hundred years.`,
+        { if: is('visited2085'), text: `He fits the wheel into its socket. “That’s the last part.”`, else: `He fits the wheel into its socket. “Next stop, 2085.”` },
+        {
+          if: is('visited2085'),
+          text: `He throws the train into gear. The walls of the ravine streak past, and the numbers on the display roll forward a hundred years, back to the frozen square.`,
+          else: `He throws the train into gear. The walls of the ravine streak past, and the numbers on the display roll forward two hundred years.`,
+        },
       ],
-      choices: [{ text: `Continue`, to: 'S40' }],
+      choices: [
+        { text: `Home to 1985`, to: 'S40', if: is('hasCell') },
+        { text: `On to 2085`, to: 'S30', if: not(is('hasCell')) },
+      ],
     },
     {
       id: 'S26b',
       title: 'The Swap',
       era: '1885',
       time: 'AUG 29 1885 12:30 AM',
-      onEnter: { set: { escapement: 'spare', lastEra: '1885' }, add: { delays: 1, minutes: -20 } },
+      onEnter: { set: { escapement: 'spare', lastEra: '1885', swapped: true }, add: { delays: 1, minutes: -20 } },
       cast: ['player'],
       imagePrompt: `Night at the 1885 depot: the player, their hands visibly translucent and fading, fits a brass wheel back into the clock mechanism in the straw-filled crate by moonlight, a velvet box open beside them.`,
       text: [
@@ -660,7 +675,7 @@ const story: Story = {
       cast: ['player'],
       imagePrompt: `Inside a dim, eerie museum: a perfect full-scale replica of a 1985 town square at night, with frozen figures mid-step. Futuristic tourists in shiny clothes take pictures. In the foreground, the player stands stunned before an exhibit of a steam locomotive with two frozen figures beside it: a white-haired man in a long coat and a teenager in a bomber jacket.`,
       text: [
-        `You join a line of tourists at the entrance. A turnstile scans you and waves you through under a sign reading FIRST VISIT FREE · GIFT SHOP AT EXIT. Inside, it’s cold and dim and uncanny. It’s Courthouse Square, the one you just left, reproduced down to the last detail: the couple in mid-step, Red on his bench. A soft voice explains that you’re walking through a perfect scan of the real thing, taken by the very device that froze it, and that the real Hill Valley is still out there in 1985, stopped forever.`,
+        `You join a line of tourists at the entrance. A turnstile scans you and waves you through under a sign reading FIRST VISIT FREE · GIFT SHOP AT EXIT. Inside, it’s cold and dim and uncanny. It’s Courthouse Square in 1985, exactly as you left it at 10:04, reproduced down to the last detail: the couple in mid-step, Red on his bench. A soft voice explains that you’re walking through a perfect scan of the real thing, taken by the very device that froze it, and that the real Hill Valley is still out there in 1985, stopped forever.`,
         `Tourists in shiny clothes wander through, taking pictures.`,
         `Then you turn a corner and stop dead.`,
         `There’s a steam locomotive in the middle of the square. Standing beside it, frozen in place, are a white-haired man in a long coat and a teenager in a bomber jacket with a walkie-talkie. The teenager is you. The plaque reads: MYSTERY VISITORS. Scanned at the moment the freeze became permanent. Identity unknown.`,
@@ -797,7 +812,10 @@ const story: Story = {
         `“A class-seven chrono-cell!” Doc says as the city drops away beneath you. “Well done! Although I’m fairly sure we’ve made an enemy.”`,
         `He slots the cell into the stabilizer. His watch beeps. The chase has cost you twenty minutes you didn’t have.`,
       ],
-      choices: [{ text: `Back to 1985`, to: 'S40' }],
+      choices: [
+        { text: `Home to 1985`, to: 'S40', if: not(is('escapement', 'none')) },
+        { text: `On to 1885`, to: 'S20', if: is('escapement', 'none') },
+      ],
     },
     {
       id: 'S35',
@@ -811,9 +829,12 @@ const story: Story = {
         `“Nobody has seen one of these working in fifty years,” she says. “You have no idea what you’ve done for me.”`,
         `You call Doc. The train swoops down to the landing platform outside, and Doc gazes at the cell exactly the way she gazed at the Walkman.`,
         `“A class-seven chrono-cell,” he breathes. “More power in the palm of your hand than a hundred bolts of lightning!” He slots it into the stabilizer, where it glows steadily.`,
-        { if: is('visited1885'), text: `“That’s the last part,” he says.`, else: `“Next stop, 1885,” he says. “By way of home.”` },
+        { if: is('visited1885'), text: `“That’s the last part,” he says.`, else: `“Next stop, 1885,” he says.` },
       ],
-      choices: [{ text: `Back to 1985`, to: 'S40' }],
+      choices: [
+        { text: `Home to 1985`, to: 'S40', if: not(is('escapement', 'none')) },
+        { text: `On to 1885`, to: 'S20', if: is('escapement', 'none') },
+      ],
     },
     {
       id: 'S38',
@@ -831,7 +852,10 @@ const story: Story = {
         `Her eyes flick over your jacket, your jeans, your walkie-talkie. “And I’m not going to ask how *you* got here,” she says. “Go.”`,
         `Doc picks you up at the plaza and slots the cell into the stabilizer, grinning. “Allies! In the future! How refreshing.”`,
       ],
-      choices: [{ text: `Back to 1985`, to: 'S40' }],
+      choices: [
+        { text: `Home to 1985`, to: 'S40', if: not(is('escapement', 'none')) },
+        { text: `On to 1885`, to: 'S20', if: is('escapement', 'none') },
+      ],
     },
 
     // ── HUB AND FINALE: 1985 ────────────────────────────────────
@@ -848,18 +872,22 @@ const story: Story = {
           text: `The desert and the stars vanish, and the train drops into Courthouse Square, where it is still 10:04 PM and nothing has moved.`,
           else: `The towers of 2085 vanish, and the train drops into Courthouse Square, where it is still 10:04 PM and nothing has moved.`,
         },
-        `It’s exactly as you left it. The couple still has one foot in the air. Red is still halfway through his snore. The moth still hangs in the lamplight by your lamppost.`,
+        {
+          if: is('swapped'),
+          text: `You look up first. The clock face is back: numbers, hands and all, stuck at 10:04 the way it should be. The rest of the square is exactly as you left it.`,
+          else: `It’s exactly as you left it.`,
+        },
+        `The couple still has one foot in the air. Red is still halfway through his snore. The moth still hangs in the lamplight by your lamppost.`,
         { if: not(is('escapement', 'original')), text: `Above it all, the clamp’s faint green glow shows through the clock face.` },
         { if: is('escapement', 'spare'), text: `In the cab, the stabilizer’s gear-shaped socket holds the spare escapement wheel from 1885.` },
-        { if: is('escapement', 'none'), text: `The stabilizer’s gear-shaped socket is still empty. That part is waiting in 1885.` },
-        { if: is('hasCell'), text: `The chrono-cell from 2085 glows steadily in its slot.`, else: `The power slot is still dark. That part is waiting in 2085.` },
+        `The chrono-cell from 2085 glows steadily in its slot.`,
         {
           if: is('escapement', 'original'),
           text: `You climb down from the cab, look up at the clock tower, and your stomach drops. The clock face is blank. No numbers, no hands, just a pale, empty circle, as if there had never been a clock there at all.`,
         },
         {
           if: is('escapement', 'original'),
-          text: `Doc’s face is grey. “The clock never ran,” he says. “Without that wheel it never ticked once, not in 1885 and not in 1955. And if it was never running, it never stopped at 10:04 when the lightning hit. That stopped clock is how we knew, to the second, when the lightning would strike. Without it, Marty never made it home from 1955. I never built the train. We never came here. None of this…” He looks down at his hands. So do you. You can see the cobblestones through your fingers.`,
+          text: `Doc’s face is grey. “The clock never ran,” he says. “Without that wheel it never ticked once, not in 1885 and not in 1955. And if it was never running, it never stopped at 10:04 when the lightning hit. That stopped clock is how we knew, to the second, when the lightning would strike. Without it, Marty never made it home from 1955. I never built the train. We never came here. None of this…” He looks down at his hands. So do you. You can see the cobblestones through your fingers. “History takes a little while to catch up with a change,” he whispers. “It just has.”`,
         },
         {
           if: all(complete, { flag: 'delays', is: 0 }),
@@ -873,20 +901,10 @@ const story: Story = {
           if: all(complete, { flag: 'delays', gte: 2 }),
           text: `Doc looks at his watch for a long time. “Assembly takes seventy-nine minutes,” he says quietly. “I’ve done the arithmetic. We have less than that.” He doesn’t say anything else. He doesn’t need to.`,
         },
-        {
-          if: all(not(complete), not(is('escapement', 'original')), { flag: 'delays', is: 0 }),
-          text: `Doc checks his watch. “Right on schedule. Let’s keep it that way.”`,
-        },
-        {
-          if: all(not(complete), not(is('escapement', 'original')), { flag: 'delays', gte: 1 }),
-          text: `Doc checks his watch and frowns. “We’re behind. No more detours.”`,
-        },
       ],
       choices: [
         { text: `Go back to 1885 right now and put that wheel back`, to: 'S26b', if: is('escapement', 'original') },
         { text: `There’s no time. Leave the wheel for later.`, to: 'E05', if: is('escapement', 'original') },
-        { text: `Set the circuits for 1885`, to: 'S20', if: is('escapement', 'none') },
-        { text: `Set the circuits for 2085`, to: 'S30', if: all(is('escapement', 'spare'), not(is('hasCell'))) },
         { text: `Build the stabilizer and climb the tower`, to: 'S41', if: complete },
       ],
     },
@@ -898,11 +916,7 @@ const story: Story = {
       cast: ['doc', 'player', 'train'],
       imagePrompt: `In the frozen night square, Doc Brown and the player fade away like breath on a mirror, their bodies translucent, the brass stabilizer slipping through the player’s ghostly fingers. Behind them the clock tower shows a blank, empty face.`,
       text: [
-        {
-          if: is('hasCell'),
-          text: `“We’ll install the stabilizer first,” you say, “and fix the wheel afterwards.”`,
-          else: `“We’ll get the power cell first,” you say, “and fix the wheel afterwards.”`,
-        },
+        `“We’ll install the stabilizer first,” you say, “and fix the wheel afterwards.”`,
         `Doc opens his mouth to argue. He’s fading too: you can see the train’s cab through his chest.`,
         `It happens faster than you expected. You reach up into the cab for the stabilizer, and it slips through your fingers, because your fingers aren’t really there any more. The train fades beside you like breath on a mirror. The last thing you see is the blank face of the clock tower. The last thing you hear is Doc’s voice, very small and far away: “Great Scott…”`,
         `In a Hill Valley that never had a working clock, a letter waits in a Western Union vault. Nobody ever comes to collect it.`,
