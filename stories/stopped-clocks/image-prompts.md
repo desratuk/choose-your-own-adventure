@@ -551,7 +551,7 @@ Graphic-novel illustration: bold black ink linework and cross-hatching over rich
 
 REX TANNEN: a man in his forties from 2085, slicked-back hair, smug grin, fitted silver jumpsuit, a chunky wrist device glowing electric blue.
 
-A gaudy futuristic theme park at night built around a historic clock tower, glowing with holographic banners of a smug man’s grinning face. Crowds of tourists stream through the gates; a giant billboard shows the star attractions: a teenager in a teal-and-white varsity jacket and a white-haired man in a long coat, standing frozen inside a column of blue light. No cars on the billboard.
+A gaudy futuristic theme park at night on the site of an old high school, with a historic clock tower visible in the distance, glowing with holographic banners of a smug man’s grinning face. Crowds of tourists stream through the gates; a giant billboard shows the star attractions: a teenager in a teal-and-white varsity jacket and a white-haired man in a long coat, standing frozen inside a column of blue light. The teenager and the white-haired man appear only on the billboard, never in person in the scene; the only people in the scene are tourists, and Rex appears only in the banners. No cars on the billboard.
 ```
 
 ## S43
