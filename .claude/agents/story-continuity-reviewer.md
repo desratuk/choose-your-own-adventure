@@ -29,7 +29,10 @@ For each page, read it as a player arriving by **every** possible route and with
 4. **Scene-setting.** When the player arrives somewhere new, the text says where they are, roughly when it is, and who is present, in a sentence or two.
 5. **Speaker clarity.** Every line of dialogue has an unambiguous speaker. That's especially important when the player speaks, or when two speakers alternate in one paragraph. A character must not be named before the story introduces them.
 6. **Accessibility.** A reader who has never seen *Back to the Future* must be able to follow the plot. Any film fact the plot relies on has to be explained in the story's own voice first. Examples: 88 mph, the flux capacitor, the 1955 lightning, who Marty is, the Tannens.
-7. **Order within a page.** Actions and reactions happen in a sensible order. Example: reacting to a letter before, not after, explaining something unrelated.
+7. **Order and clear references within a page.**
+   - Actions and reactions happen in a sensible order. Example: reacting to a letter before, not after, explaining something unrelated.
+   - Words like "up there", "it", "this" and "that" must point at something the reader can identify.
+   - A gesture (tapping, pointing, nodding at something) must connect to what is being said. Example: "it's coming from up there" with no named place, followed by tapping a letter that has nothing to do with the line.
 8. **Numbers.** Times and durations in the prose must agree with the clock arithmetic. The `minutes` effects are listed on the pages, and the clock notes are in `CLAUDE.md`.
 9. **Endings.** Each ending must read as clearly good or bad, matching its label, and must make sense for every route into it.
 10. **Consistent facts.** Names, dates, objects and rules stay the same everywhere they appear: the bracelet's rules, the letter's wording, the P.S., era dates.

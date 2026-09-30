@@ -161,7 +161,8 @@ const story: Story = {
         `“Great Scott,” he whispers. “That’s my handwriting. That’s my signature. But I’ve never written this letter in my life!” He looks at you over the top of the page. “Yet.”`,
         `Then he sees how you’re looking at the locomotive. “You’d better know now,” he says, “because it’s about to matter. That’s a time machine.” He jerks a thumb at the locomotive. “I built my first one out of a car. This one I built out of a train, in 1885. I’ve spent the last few weeks traveling in time with my family, and tonight my instruments picked up something very wrong with Hill Valley.”`,
         `He fastens a leather band with a small humming metal box on it around your wrist. “Chrono-field bracelet. You were standing inside the train’s field when time stopped. That’s the only reason you’re still moving. As long as you wear this, you stay in normal time, and anything you pick up will move for you. Don’t take it off. And don’t touch anyone. If you pull a frozen person into your field, they’ll wake up inside a moment that won’t let them out.”`,
-        `He points at the clock tower. “At exactly 10:04, every clock in this town stopped, and time stopped with them. My instruments say it’s coming from up there.” He taps the letter. “And apparently we’re in this together.”`,
+        `He points across the square at the clock tower, where the old hands still stand at 10:04. “At exactly 10:04 tonight, every clock in this town stopped, and time stopped with them. According to my instruments, it’s coming from the top of that tower, right behind those hands.”`,
+        `Then he looks down at the letter again, and back at you. “Somebody wanted you standing on that exact spot when this happened. From the look of this letter, that somebody was me. So it seems we’re in this together.”`,
       ],
       choices: [
         { text: `Take a look around the square first`, to: 'S05' },
@@ -739,7 +740,7 @@ const story: Story = {
       text: [
         {
           if: is('caughtAt', 'shop'),
-          text: `The shopkeeper’s security drone is faster than you. Two minutes later, officers from Tannen Temporal Security (which, it turns out, is Hill Valley’s official security contractor) march you across the plaza, into an elevator…`,
+          text: `The shopkeeper’s security drone is faster than you. Two minutes later, officers from Tannen Temporal Security (which, it turns out, is Hill Valley’s official security contractor) march you across the plaza, into the Frozen Moment building and into an elevator…`,
         },
         {
           if: is('caughtAt', 'corridor'),
@@ -749,14 +750,14 @@ const story: Story = {
           if: is('caughtAt', 'rack'),
           text: `Your hand is on a cell when the alarms go off. The door locks. Two security robots glide in and escort you into an elevator…`,
         },
-        `…and up to an office at the very top of the building, under a glass dome. Through the glass you can see the spire of the clock tower.`,
+        `…and up to an office at the very top of the Frozen Moment building, under a glass dome. Through the glass you can see the spire of the clock tower.`,
         {
           if: is('sawExhibit'),
           text: `Behind a desk sits the man from the portrait, silver jumpsuit and all.`,
           else: `Behind a desk sits a man in a silver jumpsuit. The nameplate in front of him reads REX TANNEN · FOUNDER.`,
         },
         `“You,” says Rex Tannen. “The kid on the stairs.”`,
-        { if: is('hasKeycard'), text: `He spots the keycard clipped to your jacket and snatches it back. “And I’ll take that.”` },
+        { if: is('hasKeycard'), text: `He spots the keycard sticking out of your jacket pocket and snatches it back. “And I’ll take that.”` },
         `He leans back. “You and that old man have been a real headache. Do you know what that frozen town is worth? Every school on the planet sends its kids to see it. It’s the only genuine frozen moment in history, and I’m the only one who knows how it got there.”`,
         `He smiles. “So I’m going to put you in it. In the new wing. A living exhibit: ‘Time Traveler, Circa 1985.’ You’ll be a sensation.”`,
         `On his desk, in a charging rack, sit six chrono-cells. Your walkie-talkie is still clipped to your belt.`,
@@ -789,7 +790,7 @@ const story: Story = {
       cast: ['train', 'doc', 'player', 'rex'],
       imagePrompt: `Explosive action: the time train bursts through a glass-domed penthouse ceiling in a shower of glittering shards and steam, wheels spinning. Doc Brown leans out of the cab, arm outstretched, as the player leaps for his hand clutching a glowing blue cylinder. Rex Tannen dives behind his desk.`,
       text: [
-        `“DOC!” you yell. “TANNEN’S OFFICE! THE GLASS DOME ON TOP!”`,
+        `“DOC!” you yell. “TANNEN’S OFFICE! THE GLASS DOME ON TOP OF THE FROZEN MOMENT!”`,
         `Tannen lunges for the walkie-talkie. He’s too slow, and the train is faster.`,
         `It comes through the dome in a shower of glass and steam, whistle screaming, and hangs over the desk with its wheels spinning. Doc leans out of the cab and holds out his hand.`,
         `You snatch a chrono-cell from the charging rack, then grab Doc’s hand, and he hauls you into the cab as Tannen shouts something that’s lost in the steam.`,
@@ -902,8 +903,8 @@ const story: Story = {
           text: `“We’ll install the stabilizer first,” you say, “and fix the wheel afterwards.”`,
           else: `“We’ll get the power cell first,” you say, “and fix the wheel afterwards.”`,
         },
-        `Doc opens his mouth to argue, and you can see the back of the cab through it.`,
-        `It happens faster than you expected. The stabilizer slips through your fingers, because your fingers aren’t really there any more. The train fades around you like breath on a mirror. The last thing you see is the blank face of the clock tower. The last thing you hear is Doc’s voice, very small and far away: “Great Scott…”`,
+        `Doc opens his mouth to argue. He’s fading too: you can see the train’s cab through his chest.`,
+        `It happens faster than you expected. You reach up into the cab for the stabilizer, and it slips through your fingers, because your fingers aren’t really there any more. The train fades beside you like breath on a mirror. The last thing you see is the blank face of the clock tower. The last thing you hear is Doc’s voice, very small and far away: “Great Scott…”`,
         `In a Hill Valley that never had a working clock, a letter waits in a Western Union vault. Nobody ever comes to collect it.`,
       ],
     },
@@ -941,7 +942,7 @@ const story: Story = {
       imagePrompt: `The lamp-lit cab of the time train, bathed in cold blue stillness: Doc Brown frozen mid-turn of a screwdriver over a half-built brass cage on the workbench, the player frozen beside him holding up a lamp. Through the cab window, the clock tower looms over the frozen square.`,
       text: [
         `Doc’s screwdriver stops halfway through a turn.`,
-        `There’s no bang and no flash. The green light simply goes out, and the air goes perfectly, permanently still. You feel your bracelet stop humming. You see Doc turn toward you, very slowly, as if through honey, and then not at all.`,
+        `There’s no bang and no flash. Up in the clock face, the clamp’s faint green glow simply goes out, and the air goes perfectly, permanently still. You feel your bracelet stop humming. You see Doc turn toward you, very slowly, as if through honey, and then not at all.`,
         `Hill Valley stops at 10:04 PM on November 12th, 1985, forever.`,
         {
           if: is('sawExhibit'),
@@ -1106,7 +1107,7 @@ const story: Story = {
           if: not(is('authorityAlerted')),
           text: `You and Doc carry the stabilizer back down the tower stairs and out into the square just as Hill Valley starts again, as if nothing had happened. Red finishes his snore. The couple finish their step. Rex Tannen is still out there somewhere, a hundred years from now, but Doc doesn’t seem worried. Before he leaves, he reads your letter one last time. “I’ll write it in 1885,” he says, and taps the P.S. “Including this bit.”`,
         },
-        `There’s just one thing. When the clamp let go, it kept hold of one last minute, the minute that was still on its screen when the stabilizer fired, and it took that minute with it.`,
+        `There’s just one thing. The clamp still had a few seconds left on its screen when the stabilizer fired. When it let go, it kept hold of that last scrap of time, and it took a whole minute with it.`,
         `From that night on, every clock in Hill Valley runs exactly sixty seconds slow: watches, ovens, VCRs, church bells. You can set them right and they drift back. Nobody can explain it. The Hill Valley Telegraph runs a series of articles about it.`,
         `“It’s harmless,” Doc says, turning his watch over in his hand. “Mostly harmless. Just a little reminder.”`,
         `Every November 12th, you go down to the square and look up at the clock tower. It always shows the wrong time by exactly one minute, and it always keeps ticking.`,
