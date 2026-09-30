@@ -24,6 +24,7 @@ This is a web-based choose-your-own-adventure game themed on *Back to the Future
 - **The deadline is visible:** Doc's watch in the header shows how much time is left.
 - It uses real *Back to the Future* names and characters. This is acceptable only because the project is for personal use.
 - The present is 1985 Hill Valley. The past is 1885 and the future is 2085, one century either side.
+- **The story must make sense to someone who has never seen a Back to the Future film.** Explain any film knowledge the plot depends on (who Doc and Marty are, the 1955 lightning strike, 88 mph, the flux capacitor, the Tannens, why Doc lived in 1885) briefly and in the story's own voice. Nods to the films are fine as long as understanding the plot doesn't depend on them.
 - The player is a new Hill Valley teen, not Marty. They have no name and their gender is never stated.
 
 ### Reader and UI
