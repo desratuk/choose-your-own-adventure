@@ -55,10 +55,10 @@ const story: Story = {
     allowExpiredOn: ['S41'],
   },
   art: {
-    stylePrefix: `Graphic-novel illustration: bold black ink linework and cross-hatching over rich painted color, cinematic lighting and composition, 3:2 landscape. No text, lettering or captions anywhere in the image. Mood: 1980s adventure film. Night scenes use wet reflections, sodium-orange streetlights and neon glow. 1885 scenes are warm, dusty amber. 2085 scenes are cool blue and violet with neon accents.`,
+    stylePrefix: `Graphic-novel illustration: bold black ink linework and cross-hatching over rich painted color, cinematic lighting and composition, 3:2 landscape. No text, lettering or captions anywhere in the image. Never show a DeLorean or any other famous film car, never a red puffer vest, and no likeness of any real person. Only the characters listed for the scene appear; Doc Brown appears only if he is described below. Mild California climate: never snow. Mood: 1980s adventure film. Night scenes use wet reflections, sodium-orange streetlights and neon glow. 1885 scenes are warm, dusty amber. 2085 scenes are cool blue and violet with neon accents.`,
     cast: {
       doc: `DOC BROWN: tall, lanky scientist in his late sixties, wild shock of white hair, wide intense eyes, expressive eyebrows, long dark-brown duster coat over a white shirt, brass goggles pushed up on his forehead, a chunky wristwatch.`,
-      player: `THE PLAYER: a 16-year-old in a teal-and-white 1980s bomber jacket, faded jeans and white high-top sneakers. Shown from behind or over the shoulder with the face mostly hidden, gender-neutral. From the moment Doc arrives, a leather wrist bracelet with a small humming metal box on it.`,
+      player: `THE PLAYER: a 16-year-old in a teal-and-white 1980s bomber jacket, faded jeans and white high-top sneakers. Shown from behind or over the shoulder with the face mostly hidden, gender-neutral. Always the same teal-and-white varsity jacket, never a windbreaker. From the moment Doc arrives, a leather wrist bracelet with a small humming metal box on it.`,
       rex: `REX TANNEN: a man in his forties from 2085, slicked-back hair, smug grin, fitted silver jumpsuit, a chunky wrist device glowing electric blue.`,
       madDog: `MAD DOG TANNEN: an 1885 outlaw, unshaven, sneering, long dusty duster coat, battered black hat pulled low, gun belt.`,
       train: `THE TIME TRAIN: a black 19th-century steam locomotive heavily modified with chrome time-travel hardware, glowing blue coils along the boiler, hover-conversion wheels, a big brass headlamp and a wooden cab.`,
@@ -158,7 +158,7 @@ const story: Story = {
       era: '1985',
       time: 'NOV 12 1985 10:04 PM',
       cast: ['doc', 'player', 'train'],
-      imagePrompt: `Doc Brown, goggles pushed up, holds a yellowed letter up to the headlamp of the steaming time train and stares at it in astonishment. The player stands beside him. Around them the square is frozen: a couple caught mid-step with one foot off the ground, a moth hanging motionless in the lamplight.`,
+      imagePrompt: `Doc Brown, goggles pushed up, holds a yellowed letter up to the headlamp of the steaming time train and stares at it in astonishment. The player stands beside him. Around them the square is frozen: a middle-aged couple in long coats caught mid-step with one foot off the ground, perfectly still, a moth hanging motionless in the lamplight.`,
       text: [
         `A door in the side of the locomotive slides open, and a man in a long coat and goggles jumps down, waving a handheld device covered in blinking lights.`,
         `“Nobody move!” the man shouts. “Stay inside the field!”`,
@@ -184,7 +184,7 @@ const story: Story = {
       era: '1985',
       onEnter: { set: { sawTracks: true } },
       cast: ['doc', 'player'],
-      imagePrompt: `Doc Brown crouches to peer at a string of water droplets frozen in mid-air under a gutter. A newspaper hangs mid-tumble over the road and a cat is frozen in mid-leap between trash cans. In the silvery frost on the grass, a line of glowing footprints leads toward the courthouse door.`,
+      imagePrompt: `Doc Brown crouches to peer at a string of water droplets frozen in mid-air under a gutter. A newspaper hangs mid-tumble over the road and a cat is frozen in mid-leap between trash cans. In the silvery frost on the grass, a line of glowing blue human boot prints leads toward the courthouse door.`,
       text: [
         `You walk into the square, and the square doesn’t notice.`,
         `Water from a leaking gutter hangs in a string of glassy beads. A newspaper that was blowing across the road is stuck in mid-tumble, headline up: COUNCIL DEBATES CLOCK TOWER’S FUTURE. A stray cat is frozen in mid-leap between two trash cans with a look of total commitment.`,
@@ -288,7 +288,7 @@ const story: Story = {
       title: 'The Figure on the Stairs',
       era: '1985',
       cast: ['rex'],
-      imagePrompt: `Looking down a narrow spiral wooden staircase inside a clock tower: halfway down, caught in a shaft of moonlight from a slit window, a figure in a silver jumpsuit and a dark-visored helmet looks up, a chunky wrist device glowing electric blue. Tense, noir framing.`,
+      imagePrompt: `Looking down a narrow spiral wooden staircase inside a clock tower: halfway down, caught in a shaft of moonlight from a slit window, a figure in a silver jumpsuit looks up, the face completely hidden behind an opaque dark helmet visor, a chunky wrist device glowing electric blue. Tense, noir framing.`,
       text: [
         `You both freeze, which in this town is saying something.`,
         `Halfway down the stairs, caught in the moonlight from a narrow window, is a figure in a silver jumpsuit. It wears a helmet with a dark visor and has a chunky device strapped to its wrist that glows blue. It is not frozen, and it is looking straight at you.`,
@@ -306,7 +306,7 @@ const story: Story = {
       era: '1985',
       onEnter: { set: { hasKeycard: true }, add: { minutes: -10 } },
       cast: ['player'],
-      imagePrompt: `A frozen town square at night: the player sprints and lunges, fingers closing on empty air where a crackling burst of blue light is fading. A plastic keycard with a holographic clock-tower logo falls toward the wet pavement. A couple stands frozen mid-step in the background.`,
+      imagePrompt: `A frozen town square at night: the player sprints and lunges, fingers closing on empty air where a crackling burst of blue light is fading. A plastic keycard with a holographic clock-tower logo falls toward the wet, frosty pavement (no snow). A middle-aged couple in long coats stands frozen mid-step in the background.`,
       text: [
         `You take the stairs so fast your feet barely touch them. Behind you, Doc is shouting something about not touching anyone.`,
         `The figure bursts through the courthouse door and out across the frozen square, weaving past the couple frozen in mid-step. You’re gaining on them. Ten feet. Five. You lunge, and your fingers close on a silver sleeve—`,
@@ -325,7 +325,7 @@ const story: Story = {
       title: 'Doc’s Lab',
       era: '1985',
       cast: ['doc', 'player'],
-      imagePrompt: `A cluttered garage laboratory at night: a wall covered in dozens of clocks, all stopped at 10:04; workbenches piled with gadgets under dust sheets. Doc Brown kneels at a squat iron safe beneath a workbench, hand on the dial, frowning, while the player holds a flashlight.`,
+      imagePrompt: `Inside a cluttered garage laboratory at night, garage door closed, no vehicles: a wall covered in dozens of clocks, all stopped at 10:04; workbenches piled with gadgets under dust sheets. Doc Brown kneels at a squat iron safe beneath a workbench, hand on the dial, frowning, while the player holds a flashlight.`,
       text: [
         `The train carries you across town, low over the rooftops. Below you, Hill Valley looks like a model village: cars stopped at green lights, a dog frozen mid-bark in a front yard, lit windows with families frozen in front of their TVs. Doc sets down in the alley behind a garage on Riverside Drive.`,
         `Doc’s garage smells of engine oil and old solder. Dust sheets cover the workbenches. One wall is covered in clocks, dozens of them, and every one says 10:04.`,
@@ -346,7 +346,7 @@ const story: Story = {
       era: '1985',
       onEnter: { set: { safeJammed: true }, add: { minutes: -15 } },
       cast: ['doc', 'player'],
-      imagePrompt: `Doc Brown levers at a stubborn iron safe with a crowbar, sweat on his brow, while the player holds a flashlight and a small fire extinguisher. A thin curl of smoke rises from the safe’s hinge. Clocks line the wall behind them.`,
+      imagePrompt: `In the same cluttered garage laboratory, garage door closed: Doc Brown levers at a stubborn squat iron safe under a workbench with a crowbar, sweat on his brow, while the player holds a flashlight and a small fire extinguisher. A thin curl of smoke rises from the safe’s hinge. Clocks line the wall behind them.`,
       text: [
         `You spin the dial: 10, 26, 85. The handle doesn’t budge. Doc tries it again, harder. Something inside the lock goes *clunk*, and the dial spins loose in his fingers.`,
         `“Blast. The anti-tamper bolt.” He’s already reaching for a crowbar. “Hold the light.”`,
@@ -361,7 +361,7 @@ const story: Story = {
       era: '1985',
       onEnter: { add: { minutes: -45 } },
       cast: ['doc', 'player', 'stabilizer'],
-      imagePrompt: `Inside the wooden cab of the time train, lit by glowing instrument panels: Doc Brown bolts a copper-and-glass coil into an empty brass cage with two vacant sockets, one gear-shaped and one round. He hands the player a chunky 1980s walkie-talkie. Three rows of glowing time-circuit numbers shine above the controls.`,
+      imagePrompt: `Inside the wooden cab of the time train, lit by glowing instrument panels: Doc Brown bolts a copper-and-glass coil into an empty brass cage with two vacant sockets, one gear-shaped and one round. He hands the player a chunky 1980s walkie-talkie. Three rows of glowing time-circuit numbers shine above the controls. Through the cab windows: a dark 1980s suburban alley.`,
       text: [
         {
           if: not(is('safeJammed')),
@@ -389,7 +389,7 @@ const story: Story = {
       time: 'AUG 28 1885 09:12 PM',
       onEnter: { set: { visited1885: true }, add: { minutes: -20 } },
       cast: ['doc', 'player', 'train'],
-      imagePrompt: `A moonlit desert ravine in 1885: the time train rests on the rocky floor, steam curling from it, hidden between tall canyon walls. Doc Brown stands by the cab holding a ridiculous false beard and a wide-brimmed hat, looking hopeful. The player looks toward the distant lamp-lights of a small frontier town.`,
+      imagePrompt: `A moonlit desert ravine in 1885: the time train rests on the rocky floor, steam curling from it, hidden between tall canyon walls. Doc Brown stands by the cab holding a ridiculous false beard and a wide-brimmed hat, looking hopeful. The player looks toward the faint lamp-lights of a small frontier town a couple of miles away across the desert. No courthouse or clock tower in view.`,
       text: [
         `The train hits eighty-eight miles an hour and the night explodes into light.`,
         `When your eyes clear, the stars are brighter than you’ve ever seen them, and there’s no town below you. There’s only desert, silver in the moonlight, and a black gash in the ground ahead: a ravine, a couple of miles outside town. Doc brings the train down onto its floor, out of sight of anyone, with a hiss of steam.`,
@@ -463,7 +463,7 @@ const story: Story = {
       era: '1885',
       onEnter: { set: { metTannen: true } },
       cast: ['madDog', 'player'],
-      imagePrompt: `Four menacing outlaws on horseback rein in at a lamplit 1885 depot platform, the leader Mad Dog Tannen leaning down from his saddle. A terrified stationmaster cowers in the doorway. Behind them a wanted poster is nailed to the wall. The player stands half in shadow at the platform’s end.`,
+      imagePrompt: `Four menacing outlaws on horseback rein in at a lamplit 1885 depot platform, the leader Mad Dog Tannen leaning down from his saddle. A terrified stationmaster cowers in the doorway. Behind them a wanted poster is nailed to the wall. The player stands half in shadow at the platform’s end. No courthouse or clock tower in view.`,
       text: [
         `You knock. The stationmaster wakes with a snort, blinks at your clothes, and is halfway through saying “What in tarnation—” when hooves thunder up to the platform.`,
         `There are four riders. The one in front wears a long duster and a hat pulled low, and he has exactly the kind of face you’d expect to see on a wanted poster. In fact, it *is* on a wanted poster, nailed to the depot wall behind him.`,
@@ -525,7 +525,7 @@ const story: Story = {
       time: 'AUG 28 1885 10:25 PM',
       onEnter: { set: { rescued: true }, add: { minutes: -15 } },
       cast: ['doc', 'player'],
-      imagePrompt: `Chaos in an 1885 saloon filled with thick white smoke: chairs toppling, outlaws coughing and flailing. Doc Brown, in a crooked false beard and a huge hat, cuts the player free from a post with a pocketknife. A smoking metal canister rolls across the floor.`,
+      imagePrompt: `Chaos in an 1885 saloon filled with thick white smoke: chairs toppling, outlaws coughing and flailing. Doc Brown, in a crooked false beard and a huge hat, cuts the player free from a post with a pocketknife. A smoking metal canister rolls across the floor. Night: it is dark outside the swinging doors.`,
       text: [
         `It takes forever to twist one hand free, and forever again to hook the walkie-talkie off the table with your foot while the gang argues over cards. You whisper into it and hope.`,
         `Fifteen long minutes later, the saloon doors swing open, and something the size of a cannonball rolls across the floor, hissing.`,
@@ -555,7 +555,7 @@ const story: Story = {
       title: 'The Crate',
       era: '1885',
       cast: ['player'],
-      imagePrompt: `By lantern light, the player kneels inside an opened wooden crate packed with straw, where a gleaming new brass clock mechanism rests. In one hand they hold a small velvet-lined wooden box containing a toothed brass wheel. An identical wheel is mounted inside the mechanism, with a paper tag tied to it.`,
+      imagePrompt: `At night on an 1885 railway depot platform, alone (Doc Brown is not here), by lantern light, the player kneels at an opened wooden crate packed with straw, where a gleaming new brass clock mechanism rests. In one hand they hold a small velvet-lined wooden box containing a toothed brass wheel. An identical wheel is mounted inside the mechanism, with a paper tag tied to it.`,
       text: [
         { if: is('rescued'), text: `Behind you, the saloon is still coughing. You reach the depot unseen.` },
         {
@@ -639,7 +639,7 @@ const story: Story = {
       time: 'AUG 29 1885 12:30 AM',
       onEnter: { set: { escapement: 'spare', lastEra: '1885', swapped: true }, add: { minutes: -15 } },
       cast: ['player'],
-      imagePrompt: `Night at the 1885 depot: the player, their hands visibly translucent and fading, fits a brass wheel back into the clock mechanism in the straw-filled crate by moonlight, a velvet box open beside them.`,
+      imagePrompt: `Night on the 1885 railway depot platform, alone (Doc Brown is not here), no courthouse in view: the player, their hands visibly translucent and fading, fits a brass wheel back into the clock mechanism in the straw-filled crate by moonlight, a velvet box open beside them.`,
       text: [
         `Doc takes the train back to the ravine a while after you first left it, in case your earlier self is still wandering around.`,
         `You run to the depot in the dark. The stationmaster’s lamp is out. The crate is exactly as you left it. You pry up the lid, fit the mounted wheel back into place with fingers that are slowly turning see-through, and take the spare from its velvet box instead.`,
@@ -728,7 +728,7 @@ const story: Story = {
       title: 'Wilson’s Power Plus',
       era: '2085',
       cast: ['player'],
-      imagePrompt: `A narrow, cluttered futuristic shop crammed with glowing gadgets; shelves of palm-sized cylinders pulsing soft blue. Behind the counter an elderly shopkeeper with a magnifying visor stares in awe at the Walkman with orange-foam headphones hanging around the player’s neck. A framed vintage photo of a smiling 1980s politician hangs on the wall.`,
+      imagePrompt: `A narrow, cluttered futuristic shop crammed with glowing gadgets; shelves of palm-sized cylinders pulsing soft blue. Behind the counter an elderly woman shopkeeper with a magnifying visor stares in awe at the Walkman with orange-foam headphones hanging around the player’s neck. A framed vintage photo of a smiling fictional town mayor, a Black man in a 1980s suit, hangs on the wall.`,
       text: [
         `You find it on a side street off the plaza: a narrow shop squeezed between two towers, crammed with glowing things. A sign reads WILSON’S POWER PLUS · POWERING HILL VALLEY SINCE 2031. Beneath it hangs a framed photo of a smiling man in a 1980s suit, captioned OUR FOUNDER’S GREAT-GRANDFATHER, MAYOR GOLDIE WILSON.`,
         `Behind the counter are chrono-cells: palm-sized cylinders that pulse blue like slow heartbeats. The price tag on the smallest one says 4,000 credits.`,
@@ -746,7 +746,7 @@ const story: Story = {
       title: 'Staff Only',
       era: '2085',
       cast: ['player'],
-      imagePrompt: `A futuristic control room humming with holographic screens showing museum exhibits; one wall is a rack of dozens of glowing blue cylinders. The player stands at the main console reading a glowing log display with a shocked expression, a keycard in hand. Through a window, across a plaza, a sober government office glows.`,
+      imagePrompt: `A futuristic control room, the player alone (Doc Brown is not here), humming with holographic screens showing views of a frozen 1980s town square at night; one wall is a rack of dozens of glowing blue cylinders. The player stands at the main console reading a glowing log display with a shocked expression, a keycard in hand.`,
       text: [
         `Around the side of the Frozen Moment building, past the gift shop windows, is a smooth grey door marked STAFF. You hold the keycard up to it, and it blinks green. Somebody hasn’t reported a lost card.`,
         `Behind it is a control room humming with screens. Most of them show the Frozen Moment’s exhibits. One whole wall is a rack of chrono-cells, dozens of them, powering the attraction.`,
@@ -1004,7 +1004,7 @@ const story: Story = {
       era: '1985',
       ending: { kind: 'bad' },
       cast: ['doc', 'player', 'stabilizer', 'clamp'],
-      imagePrompt: `The lamp-lit cab of the time train, bathed in cold blue stillness: Doc Brown frozen mid-turn of a screwdriver over a half-built brass cage on the workbench, the player frozen beside him holding up a lamp. Through the cab window, the clock tower looms over the frozen square.`,
+      imagePrompt: `The cab of the time train, drained of warmth: everything is desaturated, icy blue and utterly still, like a photograph. The lamp flame is frozen solid and dust motes hang motionless. Doc Brown frozen mid-turn of a screwdriver over a half-built brass cage on the workbench, the player frozen beside him holding up a lamp. Through the cab window, the clock tower looms over the frozen square.`,
       text: [
         `Doc’s screwdriver stops halfway through a turn.`,
         `There’s no bang and no flash. Up in the clock face, the clamp’s faint green glow simply goes out, and the air goes perfectly, permanently still. You feel your bracelet stop humming. You see Doc turn toward you, very slowly, as if through honey, and then not at all.`,
@@ -1067,7 +1067,7 @@ const story: Story = {
       era: '1985',
       ending: { kind: 'bad' },
       cast: ['rex'],
-      imagePrompt: `A gaudy futuristic theme park at night built around a historic clock tower, glowing with holographic banners of a smug man’s grinning face. Crowds of tourists stream through the gates; a giant brochure-style billboard shows a frozen teenager and a white-haired man as star attractions.`,
+      imagePrompt: `A gaudy futuristic theme park at night built around a historic clock tower, glowing with holographic banners of a smug man’s grinning face. Crowds of tourists stream through the gates; a giant billboard shows the star attractions: a teenager in a teal-and-white varsity jacket and a white-haired man in a long coat, standing frozen inside a column of blue light. No cars on the billboard.`,
       text: [
         `You unhook the stabilizer from the clamp and slide it across the floor to him. Doc says your name once, quietly.`,
         `Rex picks it up, turns it over, and drops it out of the open maintenance hatch in the clock face. You watch it fall out of your field, slow down, and stop, hanging in the air twenty feet below the window, frozen like everything else.`,
