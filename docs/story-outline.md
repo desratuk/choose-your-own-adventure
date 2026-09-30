@@ -30,7 +30,9 @@ The clamp **sets permanently** after about six hours on Doc's watch (time only p
 - 2085 is the future **in which the freeze was never fixed**. That is why the Frozen Moment attraction exists there. When you fix the freeze, that future goes away.
 - The player is a 16-year-old Hill Valley High student who volunteers for the Preservation Society ("Save the clock tower!"). You have no name and your gender is never stated. You own a Walkman, which matters in 2085.
 
-## 3. Hidden state (never shown to the player)
+## 3. State
+
+All of these flags are hidden except the deadline. The deadline is **shown**: Doc's watch in the header counts down the six hours. It drops by a fixed amount for each era trip and by an extra amount for each `delays` step. The exact numbers will be set during implementation, but they must be consistent on every path. At `delays` 0 the clamp is released cleanly, at 1 it takes one minute with it, and at 2 or more you are too late.
 
 | Flag | Values | Set by |
 |---|---|---|
@@ -104,6 +106,8 @@ Any page whose text depends on the past uses conditional passages, so its text a
 - **S45 10:05 PM.** The clock ticks. Doc realises he has to write the letter. → `delays = 1`: **E11**, otherwise **E10**
 
 ### Endings
+The type below is shown to the player on the ending screen and in the endings gallery.
+
 | # | Title | Type |
 |---|---|---|
 | E01 | Grounded in Time: you're frozen on the couch, a 2085 exhibit | Bad (early) |
