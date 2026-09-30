@@ -1,0 +1,740 @@
+/* Core reader styles. Era colors come from the story pack's theme.css via these tokens. */
+:root {
+  --bg: #16142b;
+  --surface: #221f40;
+  --ink: #efe9dc;
+  --muted: #a9a3c4;
+  --accent: #f2a33a;
+  --accent-2: #3fc7c1;
+  --rule: rgb(255 255 255 / 0.12);
+
+  --tc-plate: #1d1f23;
+  --tc-red: #ff3b2f;
+  --tc-green: #3cf06a;
+  --tc-amber: #ffb020;
+
+  --display: 'Big Shoulders Display', 'Arial Narrow', sans-serif;
+  --body: 'Literata', Georgia, serif;
+  --seg14: 'DSEG14', ui-monospace, monospace;
+  --seg7: 'DSEG7', ui-monospace, monospace;
+
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  transition: background-color 0.6s;
+}
+
+body {
+  font: 400 1.0625rem/1.65 var(--body);
+  -webkit-font-smoothing: antialiased;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+}
+
+:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.muted {
+  color: var(--muted);
+}
+.small {
+  font-size: 0.875rem;
+}
+
+/* ── Buttons ─────────────────────────────────────────────────── */
+.btn {
+  display: block;
+  width: 100%;
+  padding: 0.8rem 1rem;
+  margin: 0.5rem 0;
+  border: 2px solid var(--rule);
+  border-radius: 10px;
+  background: var(--surface);
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: 1.15rem;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+}
+.btn:hover:not(:disabled) {
+  border-color: var(--accent);
+}
+.btn.primary {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--bg);
+}
+.btn.ghost {
+  background: transparent;
+}
+.btn.danger:hover {
+  border-color: var(--tc-red);
+}
+.btn.small {
+  width: auto;
+  display: inline-block;
+  margin: 0;
+  padding: 0.45rem 0.9rem;
+  font-size: 1rem;
+}
+.btn:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+
+/* ── Time circuits ───────────────────────────────────────────── */
+.circuits {
+  background: linear-gradient(#2a2d33, var(--tc-plate));
+  border: 1px solid #000;
+  border-radius: 12px;
+  padding: 0.5rem 0.5rem 0.35rem;
+  box-shadow:
+    inset 0 1px 0 rgb(255 255 255 / 0.12),
+    0 10px 30px rgb(0 0 0 / 0.45);
+}
+.tc-row {
+  --c: var(--tc-red);
+  margin-bottom: 0.35rem;
+}
+.tc-row.present {
+  --c: var(--tc-green);
+}
+.tc-row.last {
+  --c: var(--tc-amber);
+}
+.tc-cells {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.3rem;
+  padding: 0.3rem 0.4rem 0.15rem;
+  background: #07080a;
+  border-radius: 6px;
+  box-shadow: inset 0 2px 6px #000;
+}
+.tc-cell {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.tc-cell small {
+  font: 700 0.5rem/1.4 var(--display);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #8b8f98;
+}
+.seg {
+  position: relative;
+  font: 700 clamp(0.9rem, 4.6vw, 1.55rem) / 1.15 var(--seg14);
+  color: var(--c);
+  white-space: pre;
+}
+.seg i {
+  font-style: normal;
+  opacity: 0.1;
+}
+.seg b {
+  position: absolute;
+  inset: 0 0 auto auto;
+  font-weight: inherit;
+  text-shadow:
+    0 0 6px var(--c),
+    0 0 18px color-mix(in srgb, var(--c) 50%, transparent);
+}
+.tc-row.off .seg b {
+  display: none;
+}
+.ampm {
+  display: grid;
+  grid-template-columns: auto auto;
+  align-items: center;
+  column-gap: 0.25rem;
+  row-gap: 0.1rem;
+  align-self: center;
+}
+.lamp {
+  width: 0.45rem;
+  height: 0.45rem;
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--c) 18%, #000);
+}
+.lamp.on {
+  background: var(--c);
+  box-shadow: 0 0 8px var(--c);
+}
+.tc-plate {
+  margin-top: 0.2rem;
+  padding: 0.05rem 0.5rem;
+  background: var(--c);
+  color: #111;
+  border-radius: 3px;
+  font: 900 0.62rem/1.5 var(--display);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  text-align: center;
+}
+.tc-row.off .tc-plate {
+  background: color-mix(in srgb, var(--c) 45%, #222);
+}
+
+.clock {
+  --c: var(--tc-amber);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 0.5rem;
+  padding: 0.35rem 0.75rem;
+  background: #07080a;
+  border: 1px solid #000;
+  border-radius: 8px;
+}
+.clock.urgent {
+  --c: var(--tc-red);
+  animation: pulse 1s steps(2) infinite;
+}
+.clock-label {
+  font: 900 0.8rem var(--display);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--c);
+}
+@keyframes pulse {
+  50% {
+    border-color: var(--tc-red);
+  }
+}
+
+/* ── Title screen ────────────────────────────────────────────── */
+.title-screen {
+  max-width: 34rem;
+  margin: 0 auto;
+  padding: max(1rem, env(safe-area-inset-top)) 1rem 3rem;
+}
+.title-body {
+  padding-top: 2.5rem;
+}
+.title-mark {
+  margin: 0;
+  font: 900 clamp(3.2rem, 17vw, 5.5rem) / 0.86 var(--display);
+  text-transform: uppercase;
+  letter-spacing: -0.01em;
+  background: linear-gradient(180deg, #fff6d5 0%, #ffc244 45%, #ff5a1f 55%, #b3200e 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  filter: drop-shadow(0 3px 0 #000);
+}
+.title-sub {
+  margin: 0.8rem 0 1.4rem;
+  font: 700 1.1rem var(--display);
+  letter-spacing: 0.08em;
+  color: var(--accent-2);
+}
+.title-blurb {
+  margin: 0 0 1.8rem;
+}
+.difficulty {
+  margin: 1.5rem 0 0.5rem;
+  padding: 0;
+  border: 0;
+}
+.difficulty legend {
+  font: 700 1.1rem var(--display);
+  margin-bottom: 0.4rem;
+}
+.diff {
+  display: flex;
+  gap: 0.7rem;
+  align-items: baseline;
+  padding: 0.55rem 0.8rem;
+  margin: 0.35rem 0;
+  border: 2px solid var(--rule);
+  border-radius: 10px;
+  cursor: pointer;
+}
+.diff:has(input:checked) {
+  border-color: var(--accent);
+  background: var(--surface);
+}
+.diff input {
+  accent-color: var(--accent);
+}
+.diff strong {
+  font-family: var(--display);
+  font-size: 1.15rem;
+  margin-right: 0.3rem;
+}
+
+/* ── Reader ──────────────────────────────────────────────────── */
+.reader {
+  max-width: 76rem;
+  margin: 0 auto;
+  padding: max(0.75rem, env(safe-area-inset-top)) 0.75rem 5.5rem;
+}
+.dash {
+  margin-bottom: 0.9rem;
+}
+.art {
+  margin: 0 -0.75rem;
+  aspect-ratio: 3 / 2;
+  overflow: hidden;
+  background: var(--surface);
+}
+.art img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.placeholder {
+  height: 100%;
+  display: grid;
+  place-items: center;
+  align-content: center;
+  gap: 0.6rem;
+  background:
+    radial-gradient(ellipse at 50% 120%, color-mix(in srgb, var(--accent) 40%, transparent), transparent 60%),
+    linear-gradient(180deg, color-mix(in srgb, var(--accent-2) 22%, var(--bg)), var(--bg));
+}
+.placeholder svg {
+  width: 32%;
+  max-width: 10rem;
+  fill: none;
+  stroke: color-mix(in srgb, var(--ink) 55%, transparent);
+  stroke-width: 2;
+}
+.placeholder .hand {
+  stroke: var(--accent);
+  stroke-width: 3;
+  stroke-linecap: round;
+}
+.placeholder span {
+  font: 700 1rem var(--display);
+  letter-spacing: 0.1em;
+  color: var(--muted);
+}
+
+.story {
+  max-width: 38rem;
+  padding-top: 1.2rem;
+}
+.page-title {
+  margin: 0 0 0.9rem;
+  font: 900 clamp(2.2rem, 9vw, 3.4rem) / 0.95 var(--display);
+  text-transform: uppercase;
+  color: var(--accent);
+  outline: none;
+}
+.story p {
+  margin: 0 0 1em;
+}
+.story em {
+  color: color-mix(in srgb, var(--ink) 80%, var(--accent));
+}
+
+.choices {
+  margin-top: 1.6rem;
+  display: grid;
+  gap: 0.7rem;
+}
+.choice {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  width: 100%;
+  padding: 0.95rem 1.1rem;
+  text-align: left;
+  background: var(--surface);
+  border: 2px solid color-mix(in srgb, var(--accent) 35%, transparent);
+  border-left: 6px solid var(--accent);
+  border-radius: 10px;
+  font: 600 1.02rem/1.35 var(--body);
+  cursor: pointer;
+  transition:
+    border-color 0.15s,
+    transform 0.15s;
+}
+.choice:hover {
+  border-color: var(--accent);
+  transform: translateX(3px);
+}
+.choice.travel {
+  --c: var(--tc-red);
+  border-color: color-mix(in srgb, var(--c) 45%, transparent);
+  border-left-color: var(--c);
+  box-shadow: 0 0 22px color-mix(in srgb, var(--c) 18%, transparent);
+}
+.choice .to-era {
+  flex: none;
+  padding: 0.25rem 0.4rem;
+  background: #07080a;
+  border-radius: 5px;
+  font: 700 0.95rem var(--seg14);
+  color: var(--c);
+  text-shadow: 0 0 6px var(--c);
+}
+
+.ending-card {
+  --c: var(--tc-red);
+  margin-top: 2rem;
+  padding: 1.4rem 1.2rem;
+  border: 2px solid var(--c);
+  border-radius: 14px;
+  background: color-mix(in srgb, var(--c) 8%, var(--surface));
+  text-align: center;
+}
+.ending-card.good {
+  --c: var(--tc-green);
+}
+.ending-card.best {
+  --c: var(--tc-amber);
+}
+.stamp {
+  display: inline-block;
+  margin: 0 0 0.3rem !important;
+  padding: 0.2rem 1rem;
+  border: 4px double var(--c);
+  border-radius: 6px;
+  transform: rotate(-4deg);
+  font: 900 2rem var(--display);
+  text-transform: uppercase;
+  color: var(--c);
+  text-shadow: 0 0 14px color-mix(in srgb, var(--c) 45%, transparent);
+}
+.the-end {
+  font: 700 1.1rem var(--display);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin: 0.4rem 0 0.2rem !important;
+}
+
+.bar {
+  position: fixed;
+  inset: auto 0 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.6rem max(0.9rem, env(safe-area-inset-left)) max(0.6rem, env(safe-area-inset-bottom));
+  background: color-mix(in srgb, var(--bg) 88%, transparent);
+  backdrop-filter: blur(10px);
+  border-top: 1px solid var(--rule);
+  z-index: 5;
+}
+
+@media (min-width: 900px) {
+  .reader {
+    display: grid;
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+    column-gap: 2.5rem;
+    padding: 1.5rem 1.5rem 5.5rem;
+  }
+  .dash {
+    grid-column: 1;
+  }
+  .page {
+    display: contents;
+  }
+  .art {
+    grid-column: 1;
+    grid-row: 2;
+    margin: 0;
+    border-radius: 14px;
+    position: sticky;
+    top: 1.5rem;
+    align-self: start;
+  }
+  .story {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+    padding-top: 0.2rem;
+  }
+}
+
+/* ── Sheets (menu, endings) ──────────────────────────────────── */
+.sheet {
+  width: min(32rem, calc(100% - 2rem));
+  max-height: calc(100% - 2rem);
+  padding: 1.3rem;
+  border: 1px solid var(--rule);
+  border-radius: 16px;
+  background: var(--surface);
+  color: var(--ink);
+}
+.sheet::backdrop {
+  background: rgb(0 0 0 / 0.65);
+  backdrop-filter: blur(4px);
+}
+.sheet h2 {
+  margin: 0 0 0.8rem;
+  font: 900 1.9rem var(--display);
+  text-transform: uppercase;
+  color: var(--accent);
+}
+.gallery {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1rem;
+  display: grid;
+  gap: 0.5rem;
+}
+.gallery li {
+  --c: var(--tc-red);
+  display: flex;
+  gap: 0.8rem;
+  align-items: center;
+  padding: 0.4rem;
+  border-radius: 10px;
+  border: 1px solid var(--rule);
+}
+.gallery li.good {
+  --c: var(--tc-green);
+}
+.gallery li.locked {
+  color: var(--muted);
+  font-style: italic;
+}
+.gallery .thumb {
+  flex: none;
+  width: 4.5rem;
+  aspect-ratio: 3 / 2;
+  border-radius: 6px;
+  overflow: hidden;
+  background: #07080a;
+  border: 2px solid color-mix(in srgb, var(--c) 60%, transparent);
+}
+.gallery .locked .thumb {
+  border-color: var(--rule);
+}
+.gallery .thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.gallery strong {
+  display: block;
+  font-family: var(--display);
+  font-size: 1.15rem;
+}
+.gallery em {
+  font-style: normal;
+  font-size: 0.85rem;
+  color: var(--c);
+}
+
+/* ── Time travel ─────────────────────────────────────────────── */
+.warp {
+  position: fixed;
+  inset: 0;
+  z-index: 20;
+  display: grid;
+  place-items: center;
+  background: radial-gradient(circle at 50% 55%, #1b2a6b 0%, #05060d 70%);
+  animation: fade-in 0.25s;
+  overflow: hidden;
+}
+.speedo {
+  --c: #ff5a1f;
+  text-align: center;
+}
+.speedo .seg7 {
+  position: relative;
+  font: 700 clamp(5rem, 30vw, 11rem) / 1 var(--seg7);
+  color: var(--c);
+}
+.speedo .seg7 i {
+  font-style: normal;
+  opacity: 0.1;
+}
+.speedo .seg7 b {
+  position: absolute;
+  right: 0;
+  top: 0;
+  text-shadow:
+    0 0 12px var(--c),
+    0 0 40px var(--c);
+}
+.speedo small {
+  display: block;
+  font: 900 1.4rem var(--display);
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--c);
+}
+.trail {
+  position: absolute;
+  bottom: 18%;
+  left: 0;
+  height: 10px;
+  width: 0;
+  border-radius: 10px;
+  background: linear-gradient(90deg, transparent, #ff6a00 30%, #ffd84a);
+  filter: blur(2px) drop-shadow(0 0 12px #ff6a00);
+}
+.trail.two {
+  bottom: 13%;
+}
+.flash {
+  position: absolute;
+  inset: 0;
+  background: #fff;
+  opacity: 0;
+}
+.warp.boom .trail {
+  animation: trail 0.5s ease-in forwards;
+}
+.warp.boom .flash {
+  animation: flash 0.7s ease-out forwards;
+}
+.warp.out {
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+@keyframes trail {
+  to {
+    width: 100%;
+  }
+}
+@keyframes flash {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.85;
+  }
+}
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+/* ── Story map (author view) ─────────────────────────────────── */
+.map {
+  font-size: 0.9rem;
+}
+.map-head {
+  padding: 1rem 1.2rem 0.5rem;
+}
+.map-head h1 {
+  margin: 0 0 0.3rem;
+  font: 900 1.8rem var(--display);
+  color: var(--accent);
+}
+.map-head a {
+  color: var(--accent-2);
+}
+.map .good {
+  color: var(--tc-green);
+}
+.map .bad {
+  color: var(--tc-red);
+}
+.issues {
+  max-height: 10rem;
+  overflow: auto;
+  font-family: ui-monospace, monospace;
+  font-size: 0.75rem;
+}
+.map-body {
+  display: grid;
+  grid-template-columns: 1fr minmax(18rem, 28rem);
+  height: calc(100vh - 7rem);
+}
+.map-canvas {
+  overflow: auto;
+  border-top: 1px solid var(--rule);
+}
+.map-canvas path {
+  fill: none;
+  stroke: color-mix(in srgb, var(--ink) 35%, transparent);
+  stroke-width: 1.2;
+}
+.map-canvas path.cond {
+  stroke-dasharray: 4 3;
+}
+.map-canvas path.back {
+  stroke: color-mix(in srgb, var(--accent-2) 60%, transparent);
+}
+.node {
+  cursor: pointer;
+}
+.node rect {
+  fill: var(--surface);
+  stroke: var(--rule);
+  stroke-width: 1.5;
+}
+.node[data-era='1885'] rect {
+  fill: #3a2718;
+}
+.node[data-era='2085'] rect {
+  fill: #221c55;
+}
+.node.ending.good rect {
+  stroke: var(--tc-green);
+  stroke-width: 2.5;
+}
+.node.ending.bad rect {
+  stroke: var(--tc-red);
+  stroke-width: 2.5;
+}
+.node.selected rect {
+  stroke: var(--accent);
+  stroke-width: 3;
+}
+.node text {
+  fill: var(--ink);
+  font: 600 12px var(--body);
+}
+.node text.id {
+  font: 700 11px ui-monospace, monospace;
+  fill: var(--muted);
+}
+.map-detail {
+  overflow: auto;
+  padding: 0 1.2rem 2rem;
+  border-top: 1px solid var(--rule);
+  border-left: 1px solid var(--rule);
+}
+.map-detail h2 {
+  font: 900 1.4rem var(--display);
+  color: var(--accent);
+}
+.map-detail h3 {
+  font: 700 1rem var(--display);
+  letter-spacing: 0.08em;
+  margin: 1.2rem 0 0.4rem;
+}
+.map-detail code,
+.map-detail pre {
+  font-size: 0.75rem;
+  color: var(--accent-2);
+  white-space: pre-wrap;
+}
+.map-detail a {
+  color: var(--accent);
+}

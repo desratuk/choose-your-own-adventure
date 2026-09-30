@@ -1,6 +1,6 @@
 # Choose-your-own-adventure: "The Stopped Clocks"
 
-This is a web-based choose-your-own-adventure game themed on *Back to the Future*: Doc Brown recruits the player to solve a time mystery. As of 2026-09-30 **nothing has been implemented**. The design is done and the next step is implementation.
+This is a web-based choose-your-own-adventure game themed on *Back to the Future*: Doc Brown recruits the player to solve a time mystery. The engine, checker, full story and reader are built. The illustrations are still to come.
 
 ## Working with the user
 
@@ -37,8 +37,26 @@ This is a web-based choose-your-own-adventure game themed on *Back to the Future
 ### Illustrations
 - Every page has an image slot and an image prompt so a separate image model can generate the art later. The style and prompt format are in §5 of the outline. Until the art exists, pages show era-themed placeholders.
 
-## Implementation order (suggested)
-1. Engine and story-pack format, plus the exhaustive path/state checker (`npm run check-story`).
-2. Write all pages into the story pack and get the checker passing.
-3. Reader UI: time-circuit header, era themes, time-travel transition, difficulty/undo, save, endings gallery, story map.
-4. Image prompts for every page, and a style-prefix and character-sheet file.
+## Commands
+
+- `npm run dev`: start the dev server. The game is at `/`, and the author story map is at `/?map` (it contains spoilers).
+- `npm run check`: runs the type check plus the story checker. **Run this after any story edit.** It must print "OK: every path is coherent".
+- `npm run build`: runs `check`, then builds the static site into `dist/`.
+- `npm run prompts`: regenerates `stories/<id>/image-prompts.md` from the story data.
+
+## Layout
+
+- `src/engine/`: the story format (`types.ts`), the runtime (`engine.ts`) and the exhaustive checker (`check.ts`). These know nothing about any particular story.
+- `src/reader/`: the browser UI: the game, time circuits, storage, and the story map.
+- `stories/<id>/`: a story pack. `story.ts` holds all the pages, flags, clock and art direction. `theme.css` holds the era colours, scoped by `data-story`. Illustrations go in `images/`. Register each pack in `stories/index.ts`; `?story=<id>` selects one.
+- **Illustrations:** save each one as `stories/<id>/images/<PAGE_ID>.webp` (or `.png`/`.jpg`) and the reader picks it up automatically. Pages without an image show a drawn placeholder.
+
+## Story format notes
+
+- Flags are declared with defaults in `flags`. Conditions and effects may only use declared flags; the checker enforces this.
+- A page's `time` sets the time-circuit reading. Pages without a `time` keep the previous one.
+- Clock (deadline) values in the prose must match `minutes` arithmetic. At the hub with both parts, the remaining time is always 100 − 20 × `delays`, and assembly (S41) costs 79.
+
+## Status and next steps
+- Done: engine, checker, all 51 pages, reader UI (time circuits, era themes, time-travel animation, difficulty-based undo, save/resume, endings gallery), story map, image prompts.
+- Next: generate the illustrations from `image-prompts.md`, then playtest on a phone.

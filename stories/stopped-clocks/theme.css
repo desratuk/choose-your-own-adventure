@@ -1,0 +1,27 @@
+/* Era palettes for The Stopped Clocks. Scoped to this story; the reader sets data-era on <html>. */
+[data-story='stopped-clocks'][data-era='1985'] {
+  --bg: #16142b; /* sodium-lit night */
+  --surface: #221f40;
+  --ink: #efe9dc;
+  --muted: #a9a3c4;
+  --accent: #f2a33a; /* streetlight orange */
+  --accent-2: #3fc7c1; /* bomber-jacket teal */
+}
+
+[data-story='stopped-clocks'][data-era='1885'] {
+  --bg: #231710; /* desert dusk */
+  --surface: #33241a;
+  --ink: #f3e6c9;
+  --muted: #c8b08a;
+  --accent: #dca048; /* brass */
+  --accent-2: #c0613f; /* rust */
+}
+
+[data-story='stopped-clocks'][data-era='2085'] {
+  --bg: #110d2c; /* violet skyline */
+  --surface: #1d1850;
+  --ink: #eaf3ff;
+  --muted: #a1a9d8;
+  --accent: #5ce1e6; /* hologram cyan */
+  --accent-2: #c46cff;
+}
