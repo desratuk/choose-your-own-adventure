@@ -130,7 +130,7 @@ const story: Story = {
       text: [
         {
           if: is('ranLate'),
-          text: `You run the whole way through dark, empty streets and make it with a stitch in your side and about thirty seconds to spare.`,
+          text: `You run the whole way through dark, empty streets and make it with a stitch in your side and about a minute to spare.`,
           else: `You spend the evening watching the clock on your bedroom wall. At a quarter to ten you tell your family you’re going for a walk, pull on your jacket and head back downtown. The shops are shut, the streetlights are on, and your breath smokes in the cold November air. You get there with a few minutes to spare.`,
         },
         `Courthouse Square is nearly empty. Red is asleep on his bench by the bus stop, same as always. A couple strolls arm in arm toward the parking lot. Above everything, the clock tower’s hands point where they’ve pointed for thirty years: 10:04.`,
@@ -924,7 +924,7 @@ const story: Story = {
         { if: { flag: 'delays', is: 1 }, text: `At the top, the clamp’s screen reads 0:01:00. Sixty seconds.` },
         {
           if: { flag: 'delays', gte: 2 },
-          text: `Doc is still wiring the regulator into the cage when his watch gives a small, flat beep. It reads 0:00. From the top of the tower, faint through the frozen air, comes a soft, final chime. Then the ticking stops.`,
+          text: `Doc is still wiring the cage together when his watch gives a small, flat beep. It reads 0:00. From the top of the tower, faint through the frozen air, comes a soft, final chime. Then the ticking stops.`,
         },
       ],
       choices: [
