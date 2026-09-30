@@ -147,14 +147,16 @@ export function startReader(root: HTMLElement, story: Story) {
     window.scrollTo(0, 0);
     root.innerHTML = `
       <div class="reader">
-        <header class="dash">
-          ${circuits({ destination: null, present: snap.time, last: snap.lastDeparted })}
-          ${clock ? clockReadout(clock.label, snap.state[clock.flag] as number) : ''}
-        </header>
-        <main class="page" id="page">
+        <div class="side">
+          <header class="dash">
+            ${circuits({ destination: null, present: snap.time, last: snap.lastDeparted })}
+            ${clock ? clockReadout(clock.label, snap.state[clock.flag] as number) : ''}
+          </header>
           <figure class="art" data-era="${page.era}">
             ${img ? `<img src="${img}" alt="" />` : placeholder(page)}
           </figure>
+        </div>
+        <main class="page" id="page">
           <article class="story">
             <h1 class="page-title" tabindex="-1">${esc(page.title)}</h1>
             ${paragraphs}
