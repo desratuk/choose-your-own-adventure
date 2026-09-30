@@ -148,7 +148,9 @@ const story: Story = {
       imagePrompt: `Doc Brown, goggles pushed up, holds a yellowed letter up to the headlamp of the steaming time train and stares at it in astonishment. The player stands beside him. Around them the square is frozen: a couple caught mid-step with one foot off the ground, a moth hanging motionless in the lamplight.`,
       text: [
         `A door in the side of the locomotive slides open, and a man in a long coat and goggles jumps down, waving a handheld device covered in blinking lights.`,
-        `“Nobody move! Stay inside the field!” He stops and stares at you. You stare back. “Who are you? And why aren’t you frozen?”`,
+        `“Nobody move!” the man shouts. “Stay inside the field!”`,
+        `Then he sees you. He stops dead and stares at you, and you stare back.`,
+        `“Who are you?” he asks. “And why aren’t you frozen?”`,
         `You look around. The couple are frozen in mid-step, one foot off the ground. A moth hangs in the lamplight as if it’s been pinned there. Red’s snore has stopped halfway through. Nothing moves except you, the man, and a thin curl of steam from the locomotive’s stack.`,
         `Without a word, you hold out the letter.`,
         `He pushes up his goggles. It’s Doc Brown. You’ve seen him around town for years, usually running. He reads the letter once, then again, then holds it up to the headlamp.`,
@@ -259,9 +261,9 @@ const story: Story = {
         `“It’s a chrono-clamp,” he says. “Technology from a long way past my time. It has pinned the tower’s hands at 10:04.”`,
         `He sees your face and explains. “Thirty years ago tonight, lightning struck this tower. My friend Marty was stranded in 1955 in my time machine, and that bolt was the only thing powerful enough to send him home. We ran a cable from this tower to the car and caught the lightning at 10:04 exactly. It worked. But it left a scar in time, right here. This tower is a weak point, and tonight is the thirtieth anniversary to the minute. Pin the tower and you pin the whole town.”`,
         `He taps the green screen. It shows a number, counting down: 5:59:58. 5:59:57.`,
-        `“That’s how long until the clamp sets. Six hours of our time, meaning time inside our fields. When it reaches zero, the freeze becomes permanent. Hill Valley stops at 10:04 PM on November 12th, 1985. Forever.”`,
-        `“Can’t you just take it off?”`,
-        `“Not by force. It has to be released gently, with a Temporal Stabilizer.” He’s already sketching on the back of your letter. “Three parts. First, a flux-field regulator. I have one in my lab, right here in 1985. Second, a chronometric reference: a piece of this very clock from before any time traveler ever touched this town. That means 1885, before the clock was installed. Third, power. More than the train can spare, and more than anything in 1985 can produce. For that we’ll have to go forward. A century should do it.”`,
+        `“That’s how long until the clamp sets,” Doc says. “Six hours of our time, meaning time inside our fields. When it reaches zero, the freeze becomes permanent. Hill Valley stops at 10:04 PM on November 12th, 1985. Forever.”`,
+        `“Can’t you just take it off?” you ask.`,
+        `“Not by force,” Doc says. “It has to be released gently, with a Temporal Stabilizer.” He’s already sketching on the back of your letter. “Three parts. First, a flux-field regulator. I have one in my lab, right here in 1985. Second, a chronometric reference: a piece of this very clock from before any time traveler ever touched this town. That means 1885, before the clock was installed. Third, power. More than the train can spare, and more than anything in 1985 can produce. For that we’ll have to go forward. A century should do it.”`,
         `He synchronizes his wristwatch with the clamp’s screen.`,
         `A floorboard creaks on the stairs below you.`,
       ],
@@ -314,7 +316,7 @@ const story: Story = {
         `Doc’s garage on Riverside Drive smells of engine oil and old solder. Dust sheets cover the workbenches. One wall is covered in clocks, dozens of them, and every one says 10:04.`,
         `“I left in a hurry a few weeks ago,” Doc says, not quite looking at you. “Things were… eventful.” He glances out of the window, toward the far side of town. “Marty’s out there somewhere, frozen in the middle of his evening. He helped me through every one of my time-travel disasters. Let’s not keep him waiting.”`,
         `He kneels by a squat iron safe under the workbench and puts his hand on the dial. Then he stops.`,
-        `“The regulator’s in here. Before I left, I changed the combination to the most important date of my life.” He frowns. “The trouble is, I have two of those.”`,
+        `“The regulator’s in here,” he says. “Before I left, I changed the combination to the most important date of my life.” He frowns. “The trouble is, I have two of those.”`,
         `He holds up one finger. “November 5th, 1955: the day I slipped, hit my head, and dreamed up the flux capacitor, the part that makes time travel possible.” A second finger. “October 26th, 1985: the night of the first time-travel test, in the parking lot of the mall.”`,
         `He looks up at you. “You pick. I’ve been staring at this dial too long.”`,
       ],
@@ -379,8 +381,8 @@ const story: Story = {
         { if: is('visited2085'), text: `“After 2085,” Doc says, “I find this very relaxing.”` },
         `“August 28th, 1885,” Doc says, reading the display. “The courthouse clock came in by rail this afternoon. It’s in a crate at the depot, waiting for next week’s festival, when they’ll unveil it.”`,
         `He pulls off his goggles. “And I can’t go into town.”`,
-        `“Why not?”`,
-        `“Because I already live there. A while back, by my own calendar, an accident stranded me in 1885 for most of a year, so I set up shop as the town blacksmith. Right now, as we speak, that slightly younger me is working in the blacksmith’s shop on Main Street. If he sees me, or anybody sees the two of us together… the consequences could be catastrophic.” He pauses and produces a false beard from his coat. “Of course, I could wear a disguise.”`,
+        `“Why not?” you ask.`,
+        `“Because I already live there,” Doc says. “A while back, by my own calendar, an accident stranded me in 1885 for most of a year, so I set up shop as the town blacksmith. Right now, as we speak, that slightly younger me is working in the blacksmith’s shop on Main Street. If he sees me, or anybody sees the two of us together… the consequences could be catastrophic.” He pauses and produces a false beard from his coat. “Of course, I could wear a disguise.”`,
       ],
       choices: [
         { text: `Go into town alone`, to: 'S21' },
@@ -470,7 +472,7 @@ const story: Story = {
         `Four heads turn. Mad Dog Tannen looks at your sneakers, your jeans and your jacket, and grins a grin with a lot of gaps in it.`,
         `“Well, lookee here. What in the Sam Hill are you s’posed to be?”`,
         `He swings down from his horse and walks toward you, spurs jingling. The stationmaster takes the chance to dive under his desk.`,
-        `“I asked you a question, runt.”`,
+        `Tannen stops right in front of you. “I asked you a question, runt.”`,
       ],
       choices: [
         {
@@ -592,7 +594,7 @@ const story: Story = {
       text: [
         `You close the little box and tuck the spare wheel inside your jacket. You leave the clock itself exactly as you found it and nail the crate shut again.`,
         `Back at the ravine, Doc holds the wheel up to the lantern and beams.`,
-        `“The spare! Brilliant. It’s part of the same clock, cut by the same hands from the same brass, and it has never been used. The mounted one has to be in that clock when they unveil it next week. If it weren’t…” He shudders. “Let’s not think about that.”`,
+        `“The spare!” he says. “Brilliant. It’s part of the same clock, cut by the same hands from the same brass, and it has never been used. The mounted one has to be in that clock when they unveil it next week. If it weren’t…” He shudders. “Let’s not think about that.”`,
         {
           if: is('fooledTannen'),
           text: `You tell him about Tannen and the eastbound freight. He snorts. “Tannen robs somebody every other week. One wasted ride won’t make the history books.”`,
@@ -678,7 +680,7 @@ const story: Story = {
         `Behind the counter are chrono-cells: palm-sized cylinders that pulse blue like slow heartbeats. The price tag on the smallest one says 4,000 credits.`,
         `You don’t have any credits. You have a dollar forty in change, a house key and your Walkman.`,
         `The shopkeeper is an old woman in a magnifying visor, and she’s staring at your Walkman as if it were a crown jewel.`,
-        `“Is that… a genuine 1980s portable cassette player? With the orange foam headphones?” She takes a shaky breath. “Does it *work*?”`,
+        `“Is that… a genuine 1980s portable cassette player?” she asks. “With the orange foam headphones?” She takes a shaky breath. “Does it *work*?”`,
       ],
       choices: [
         { text: `Offer her the Walkman for a chrono-cell`, to: 'S35' },
