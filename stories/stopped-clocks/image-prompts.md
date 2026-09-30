@@ -383,7 +383,7 @@ Graphic-novel illustration: bold black ink linework and cross-hatching over rich
 
 THE PLAYER: a 16-year-old in a teal-and-white 1980s varsity jacket with cream sleeves, faded jeans and white high-top sneakers. Shown from behind or over the shoulder with the face mostly hidden, gender-neutral. Always the same teal-and-white varsity jacket, never a windbreaker. From the moment Doc arrives, a leather wrist bracelet with a small humming metal box on it.
 
-A narrow, cluttered futuristic shop crammed with glowing gadgets; shelves of palm-sized cylinders pulsing soft blue. Behind the counter an elderly woman shopkeeper with a magnifying visor stares in awe at the Walkman with orange-foam headphones hanging around the player’s neck. A framed vintage photo of a smiling fictional town mayor, a Black man in a 1980s suit, hangs on the wall.
+A narrow, cluttered futuristic shop crammed with glowing gadgets; shelves of palm-sized cylinders pulsing soft blue. Behind the counter a small elderly woman shopkeeper (neat silver hair in a bun, a cardigan with glowing trim, a slim magnifying visor pushed up on her forehead; she looks nothing like Doc Brown) stares in awe at the Walkman with orange-foam headphones hanging around the player’s neck. A framed vintage photo of a smiling fictional town mayor, a Black man in a 1980s suit, hangs on the wall.
 ```
 
 ## S33

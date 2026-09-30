@@ -728,7 +728,7 @@ const story: Story = {
       title: 'Wilson’s Power Plus',
       era: '2085',
       cast: ['player'],
-      imagePrompt: `A narrow, cluttered futuristic shop crammed with glowing gadgets; shelves of palm-sized cylinders pulsing soft blue. Behind the counter an elderly woman shopkeeper with a magnifying visor stares in awe at the Walkman with orange-foam headphones hanging around the player’s neck. A framed vintage photo of a smiling fictional town mayor, a Black man in a 1980s suit, hangs on the wall.`,
+      imagePrompt: `A narrow, cluttered futuristic shop crammed with glowing gadgets; shelves of palm-sized cylinders pulsing soft blue. Behind the counter a small elderly woman shopkeeper (neat silver hair in a bun, a cardigan with glowing trim, a slim magnifying visor pushed up on her forehead; she looks nothing like Doc Brown) stares in awe at the Walkman with orange-foam headphones hanging around the player’s neck. A framed vintage photo of a smiling fictional town mayor, a Black man in a 1980s suit, hangs on the wall.`,
       text: [
         `You find it on a side street off the plaza: a narrow shop squeezed between two towers, crammed with glowing things. A sign reads WILSON’S POWER PLUS · POWERING HILL VALLEY SINCE 2031. Beneath it hangs a framed photo of a smiling man in a 1980s suit, captioned OUR FOUNDER’S GREAT-GRANDFATHER, MAYOR GOLDIE WILSON.`,
         `Behind the counter are chrono-cells: palm-sized cylinders that pulse blue like slow heartbeats. The price tag on the smallest one says 4,000 credits.`,
