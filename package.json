@@ -1,0 +1,26 @@
+{
+  "name": "choose-your-own-adventure",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "npm run check && vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit",
+    "check-story": "tsx scripts/check-story.ts",
+    "check": "npm run typecheck && npm run check-story",
+    "prompts": "tsx scripts/export-prompts.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.3",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.1"
+  },
+  "allowScripts": {
+    "esbuild@0.28.2": true
+  },
+  "dependencies": {
+    "dseg": "^0.46.0"
+  }
+}

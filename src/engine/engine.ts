@@ -1,0 +1,64 @@
+import type { Choice, Cond, Effects, Page, Passage, State, Story } from './types';
+
+const pageIndex = new WeakMap<Story, Map<string, Page>>();
+
+export function getPage(story: Story, id: string): Page {
+  let index = pageIndex.get(story);
+  if (!index) {
+    index = new Map(story.pages.map((p) => [p.id, p]));
+    pageIndex.set(story, index);
+  }
+  const page = index.get(id);
+  if (!page) throw new Error(`Unknown page "${id}" in story "${story.id}"`);
+  return page;
+}
+
+export function evaluate(cond: Cond, state: State): boolean {
+  if ('all' in cond) return cond.all.every((c) => evaluate(c, state));
+  if ('any' in cond) return cond.any.some((c) => evaluate(c, state));
+  if ('not' in cond) return !evaluate(cond.not, state);
+  const value = state[cond.flag];
+  if ('gte' in cond) return (value as number) >= cond.gte;
+  if ('lte' in cond) return (value as number) <= cond.lte;
+  return value === (cond.is ?? true);
+}
+
+export function applyEffects(state: State, effects: Effects | undefined): State {
+  if (!effects || (!effects.set && !effects.add)) return state;
+  const next = { ...state, ...effects.set };
+  for (const [flag, n] of Object.entries(effects.add ?? {})) next[flag] = (next[flag] as number) + n;
+  return next;
+}
+
+export function initialState(story: Story): State {
+  return Object.fromEntries(Object.entries(story.flags).map(([k, def]) => [k, def.default]));
+}
+
+/** State on arriving at the story's first page. */
+export function startState(story: Story): State {
+  return applyEffects(initialState(story), getPage(story, story.start).onEnter);
+}
+
+export function visibleChoices(page: Page, state: State): Choice[] {
+  return (page.choices ?? []).filter((c) => !c.if || evaluate(c.if, state));
+}
+
+/** Apply a choice: its own effects, then the target page's onEnter effects. */
+export function choose(story: Story, state: State, choice: Choice): State {
+  return applyEffects(applyEffects(state, choice), getPage(story, choice.to).onEnter);
+}
+
+export function passageText(passage: Passage, state: State): string | null {
+  if (typeof passage === 'string') return passage;
+  if (evaluate(passage.if, state)) return passage.text;
+  return passage.else ?? null;
+}
+
+export function renderText(page: Page, state: State): string[] {
+  return page.text.map((p) => passageText(p, state)).filter((t): t is string => t !== null);
+}
+
+export function imagePrompt(story: Story, page: Page): string {
+  const cast = (page.cast ?? []).map((k) => story.art.cast[k]);
+  return [story.art.stylePrefix, ...cast, page.imagePrompt].join('\n\n');
+}
