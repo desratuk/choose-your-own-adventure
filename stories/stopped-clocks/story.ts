@@ -96,7 +96,7 @@ const story: Story = {
       cast: ['player'],
       imagePrompt: `A 1980s teenager’s bedroom at night, lit by a desk lamp. The player lies on the bed with Walkman headphones on, staring at a yellowed letter on the desk. A digital clock radio glows 10:00. Posters on the walls, a window showing a distant clock tower.`,
       text: [
-        `Dinner. Homework. A rerun on TV. The letter sits on your desk and you try not to look at it.`,
+        `You walk home the long way, past the diner and the dark windows of the car dealership, with the letter in your jacket pocket. Home is a small house on a quiet street on the other side of downtown. Dinner. Homework. A rerun on TV. Up in your room, the letter sits on your desk and you try not to look at it.`,
         `It has to be a prank, maybe somebody from school who’s seen you hanging around the clock tower with a clipboard. The old paper is a nice touch, though. So is the handwriting. And the Western Union man really didn’t seem to be in on any joke.`,
         `At 10:00 PM you’re lying on your bed with your headphones on. The square is a ten-minute walk away, or seven if you run.`,
       ],
@@ -128,7 +128,11 @@ const story: Story = {
       cast: ['player', 'train'],
       imagePrompt: `Night in a small-town courthouse square: the player clings to an old iron lamppost as blue electric sparks crawl across wet pavement. Out of a ring of fire in the air, a flying steam locomotive descends toward the road with its wheels spinning on nothing and its headlamp sweeping the square. The clock tower looms behind.`,
       text: [
-        { if: is('ranLate'), text: `You make it with a stitch in your side and about thirty seconds to spare.` },
+        {
+          if: is('ranLate'),
+          text: `You run the whole way through dark, empty streets and make it with a stitch in your side and about thirty seconds to spare.`,
+          else: `You spend the evening watching the clock on your bedroom wall. At a quarter to ten you tell your family you’re going for a walk, pull on your jacket and head back downtown. The shops are shut, the streetlights are on, and your breath smokes in the cold November air. You get there with a few minutes to spare.`,
+        },
         `Courthouse Square is nearly empty. Red is asleep on his bench by the bus stop, same as always. A couple strolls arm in arm toward the parking lot. Above everything, the clock tower’s hands point where they’ve pointed for thirty years: 10:04.`,
         `You find the lamppost on the corner and stand next to it, feeling ridiculous.`,
         `Then the air starts to hum.`,
@@ -154,8 +158,8 @@ const story: Story = {
         `You look around. The couple are frozen in mid-step, one foot off the ground. A moth hangs in the lamplight as if it’s been pinned there. Red’s snore has stopped halfway through. Nothing moves except you, the man, and a thin curl of steam from the locomotive’s stack.`,
         `Without a word, you hold out the letter.`,
         `He pushes up his goggles. It’s Doc Brown. You’ve seen him around town for years, usually running. He reads the letter once, then again, then holds it up to the headlamp.`,
-        `“You’d better know now,” he says, “because it’s about to matter. That’s a time machine.” He jerks a thumb at the locomotive. “I built my first one out of a car. This one I built out of a train, in 1885. I’ve spent the last few weeks traveling in time with my family, and tonight my instruments picked up something very wrong with Hill Valley.”`,
         `“Great Scott,” he whispers. “That’s my handwriting. That’s my signature. But I’ve never written this letter in my life!” He looks at you over the top of the page. “Yet.”`,
+        `Then he sees how you’re looking at the locomotive. “You’d better know now,” he says, “because it’s about to matter. That’s a time machine.” He jerks a thumb at the locomotive. “I built my first one out of a car. This one I built out of a train, in 1885. I’ve spent the last few weeks traveling in time with my family, and tonight my instruments picked up something very wrong with Hill Valley.”`,
         `He fastens a leather band with a small humming metal box on it around your wrist. “Chrono-field bracelet. You were standing inside the train’s field when time stopped. That’s the only reason you’re still moving. As long as you wear this, you stay in normal time, and anything you pick up will move for you. Don’t take it off. And don’t touch anyone. If you pull a frozen person into your field, they’ll wake up inside a moment that won’t let them out.”`,
         `He points at the clock tower. “At exactly 10:04, every clock in this town stopped, and time stopped with them. My instruments say it’s coming from up there.” He taps the letter. “And apparently we’re in this together.”`,
       ],
@@ -313,7 +317,8 @@ const story: Story = {
       cast: ['doc', 'player'],
       imagePrompt: `A cluttered garage laboratory at night: a wall covered in dozens of clocks, all stopped at 10:04; workbenches piled with gadgets under dust sheets. Doc Brown kneels at a squat iron safe beneath a workbench, hand on the dial, frowning, while the player holds a flashlight.`,
       text: [
-        `Doc’s garage on Riverside Drive smells of engine oil and old solder. Dust sheets cover the workbenches. One wall is covered in clocks, dozens of them, and every one says 10:04.`,
+        `The train carries you across town, low over the rooftops. Below you, Hill Valley looks like a model village: cars stopped at green lights, a dog frozen mid-bark in a front yard, lit windows with families frozen in front of their TVs. Doc sets down in the alley behind a garage on Riverside Drive.`,
+        `Doc’s garage smells of engine oil and old solder. Dust sheets cover the workbenches. One wall is covered in clocks, dozens of them, and every one says 10:04.`,
         `“I left in a hurry a few weeks ago,” Doc says, not quite looking at you. “Things were… eventful.” He glances out of the window, toward the far side of town. “Marty’s out there somewhere, frozen in the middle of his evening. He helped me through every one of my time-travel disasters. Let’s not keep him waiting.”`,
         `He kneels by a squat iron safe under the workbench and puts his hand on the dial. Then he stops.`,
         `“The regulator’s in here,” he says. “Before I left, I changed the combination to the most important date of my life.” He frowns. “The trouble is, I have two of those.”`,
@@ -353,7 +358,7 @@ const story: Story = {
           text: `The dial clicks, the handle turns and the safe swings open. “The flux capacitor,” Doc says. “Of course. What was I thinking?”`,
         },
         `Inside the safe, wrapped in an oily cloth, is a coil of copper and glass the size of a soup can: the flux-field regulator.`,
-        `Back at the train, Doc works fast. He bolts the regulator into a frame of brass and wire on the cab’s workbench, and the frame starts to look like a machine: a cage with two empty sockets. One is shaped like a gear. The other is a round slot that glows faintly, waiting for power.`,
+        `Back in the train’s cab, Doc works fast. He bolts the regulator into a frame of brass and wire on the cab’s workbench, and the frame starts to look like a machine: a cage with two empty sockets. One is shaped like a gear. The other is a round slot that glows faintly, waiting for power.`,
         `“The chronometric reference goes here,” he says, tapping the gear-shaped socket. “The power source goes here.”`,
         `He hands you a walkie-talkie. “Wherever we go, keep this switched on. If we get separated, call me.”`,
         `Then he sets the time circuits: three rows of glowing numbers over the controls, showing where you’re going, where you are, and where you last left.`,
@@ -377,7 +382,7 @@ const story: Story = {
       imagePrompt: `A moonlit desert ravine in 1885: the time train rests on the rocky floor, steam curling from it, hidden between tall canyon walls. Doc Brown stands by the cab holding a ridiculous false beard and a wide-brimmed hat, looking hopeful. The player looks toward the distant lamp-lights of a small frontier town.`,
       text: [
         `The train hits eighty-eight miles an hour and the night explodes into light.`,
-        `When your eyes clear, the stars are brighter than you’ve ever seen them, and there’s no town below you. There’s only desert, silver in the moonlight, and a black gash in the ground ahead: a ravine. Doc brings the train down onto its floor, out of sight of anyone, with a hiss of steam.`,
+        `When your eyes clear, the stars are brighter than you’ve ever seen them, and there’s no town below you. There’s only desert, silver in the moonlight, and a black gash in the ground ahead: a ravine, a couple of miles outside town. Doc brings the train down onto its floor, out of sight of anyone, with a hiss of steam.`,
         { if: is('visited2085'), text: `“After 2085,” Doc says, “I find this very relaxing.”` },
         `“August 28th, 1885,” Doc says, reading the display. “The courthouse clock came in by rail this afternoon. It’s in a crate at the depot, waiting for next week’s festival, when they’ll unveil it.”`,
         `He pulls off his goggles. “And I can’t go into town.”`,
@@ -431,9 +436,9 @@ const story: Story = {
         {
           if: is('docTurnedBack'),
           text: `Past the blacksmith’s, Doc stops, pulls off the beard and shakes his head. “This is madness. If he’d looked up… I’ll wait at the train. Call me if you need me.” He melts back into the dark.`,
-          else: `Doc wishes you luck and stays with the train. “Call me if you need me,” he says, tapping your walkie-talkie.`,
+          else: `Doc wishes you luck and stays with the train. “Call me if you need me,” he says, tapping your walkie-talkie. You climb out of the ravine and follow the railroad tracks toward the lights. Hill Valley in 1885 is one dusty main street lit by oil lamps. Piano music spills out of a saloon, and horses doze at a hitching rail. At the end of the street is the courthouse, still being built, wrapped in wooden scaffolding. There’s a square hole at the top where a clock is meant to go.`,
         },
-        `The railway depot is a long wooden platform at the edge of town. A lamp burns in the stationmaster’s window, and inside, the stationmaster is asleep in his chair with his boots on the desk.`,
+        `The railway depot is a long wooden platform where the tracks meet the edge of town. A lamp burns in the stationmaster’s window, and inside, the stationmaster is asleep in his chair with his boots on the desk.`,
         `At the end of the platform, under a tarpaulin, is a crate as tall as you are. Stenciled on its side: FRAGILE · CLOCK MECHANISM · HILL VALLEY COURTHOUSE.`,
         `You could creep round the back of the platform and get to the crate without waking anyone. Or you could knock and talk your way in. A stationmaster who opens the crate for you won’t be shouting “thief” later.`,
       ],
@@ -632,7 +637,7 @@ const story: Story = {
       imagePrompt: `The time train flies through a neon 2085 skyline of glass towers and glowing lanes of flying cars. Below, a historic clock tower is enclosed in a sweeping building of curved glass and light topped by a giant glowing hologram of a frozen clock face. A police drone with blinking lights flies alongside the cab. Doc Brown leans out of the cab, aghast.`,
       text: [
         `The train breaks through into the future at eighty-eight miles an hour and keeps flying, because in 2085 there’s traffic up here.`,
-        `Flying cars stream past in glowing lanes. Glass towers rise where the old neighborhoods used to be.`,
+        `“November 12th, 2085,” Doc reads off the display. “A hundred years to the night.” Flying cars stream past in glowing lanes. Glass towers rise where the old neighborhoods used to be.`,
         { if: is('visited1885'), text: `After the dust of 1885, it’s like being dropped into a pinball machine.` },
         `In the middle of it all, right where it belongs, is the courthouse. The clock tower is still standing. But it has been wrapped inside a building of curved glass and light, under a sign a hundred feet tall:`,
         `**TANNEN TEMPORAL TOURS PRESENTS: THE FROZEN MOMENT**<br>Walk through Hill Valley, frozen forever at 10:04 PM, Nov. 12, 1985!`,
@@ -654,7 +659,7 @@ const story: Story = {
       cast: ['player'],
       imagePrompt: `Inside a dim, eerie museum: a perfect full-scale replica of a 1985 town square at night, with frozen figures mid-step. Futuristic tourists in shiny clothes take pictures. In the foreground, the player stands stunned before an exhibit of a steam locomotive with two frozen figures beside it: a white-haired man in a long coat and a teenager in a bomber jacket.`,
       text: [
-        `Inside, it’s cold and dim and uncanny. It’s Courthouse Square, the one you just left, reproduced down to the last detail: the couple in mid-step, Red on his bench. A soft voice explains that you’re walking through a perfect scan of the real thing, taken by the very device that froze it, and that the real Hill Valley is still out there in 1985, stopped forever.`,
+        `You join a line of tourists at the entrance. A turnstile scans you and waves you through under a sign reading FIRST VISIT FREE · GIFT SHOP AT EXIT. Inside, it’s cold and dim and uncanny. It’s Courthouse Square, the one you just left, reproduced down to the last detail: the couple in mid-step, Red on his bench. A soft voice explains that you’re walking through a perfect scan of the real thing, taken by the very device that froze it, and that the real Hill Valley is still out there in 1985, stopped forever.`,
         `Tourists in shiny clothes wander through, taking pictures.`,
         `Then you turn a corner and stop dead.`,
         `There’s a steam locomotive in the middle of the square. Standing beside it, frozen in place, are a white-haired man in a long coat and a teenager in a bomber jacket with a walkie-talkie. The teenager is you. The plaque reads: MYSTERY VISITORS. Scanned at the moment the freeze became permanent. Identity unknown.`,
@@ -676,7 +681,7 @@ const story: Story = {
       cast: ['player'],
       imagePrompt: `A narrow, cluttered futuristic shop crammed with glowing gadgets; shelves of palm-sized cylinders pulsing soft blue. Behind the counter an elderly shopkeeper with a magnifying visor stares in awe at the Walkman with orange-foam headphones hanging around the player’s neck. A framed vintage photo of a smiling 1980s politician hangs on the wall.`,
       text: [
-        `The shop is a narrow slot between two towers, crammed with glowing things. A sign reads WILSON’S POWER PLUS · POWERING HILL VALLEY SINCE 2031. Beneath it hangs a framed photo of a smiling man in a 1980s suit, captioned OUR FOUNDER’S GREAT-GRANDFATHER, MAYOR GOLDIE WILSON.`,
+        `You find it on a side street off the plaza: a narrow shop squeezed between two towers, crammed with glowing things. A sign reads WILSON’S POWER PLUS · POWERING HILL VALLEY SINCE 2031. Beneath it hangs a framed photo of a smiling man in a 1980s suit, captioned OUR FOUNDER’S GREAT-GRANDFATHER, MAYOR GOLDIE WILSON.`,
         `Behind the counter are chrono-cells: palm-sized cylinders that pulse blue like slow heartbeats. The price tag on the smallest one says 4,000 credits.`,
         `You don’t have any credits. You have a dollar forty in change, a house key and your Walkman.`,
         `The shopkeeper is an old woman in a magnifying visor, and she’s staring at your Walkman as if it were a crown jewel.`,
@@ -694,7 +699,7 @@ const story: Story = {
       cast: ['player'],
       imagePrompt: `A futuristic control room humming with holographic screens showing museum exhibits; one wall is a rack of dozens of glowing blue cylinders. The player stands at the main console reading a glowing log display with a shocked expression, a keycard in hand. Through a window, across a plaza, a sober government office glows.`,
       text: [
-        `The staff door is a smooth panel beside the gift shop. You hold the keycard up to it, and it blinks green. Somebody hasn’t reported a lost card.`,
+        `Around the side of the Frozen Moment building, past the gift shop windows, is a smooth grey door marked STAFF. You hold the keycard up to it, and it blinks green. Somebody hasn’t reported a lost card.`,
         `Behind it is a control room humming with screens. Most of them show the Frozen Moment’s exhibits. One whole wall is a rack of chrono-cells, dozens of them, powering the attraction.`,
         `On the main console, a log is open:`,
         `UNREGISTERED JUMP · R. TANNEN<br>DESTINATION: HILL VALLEY, NOV 12 1985, 09:51 PM<br>PAYLOAD: CHRONO-CLAMP (EXPERIMENTAL)<br>STATUS: SUCCESS · PROJECTED ANNUAL REVENUE: 40,000,000 CR`,
@@ -795,7 +800,7 @@ const story: Story = {
       text: [
         `She gives you a chrono-cell, the biggest one in the shop, and throws in a carry case. She holds your Walkman in both hands as if it were a baby bird.`,
         `“Nobody has seen one of these working in fifty years,” she says. “You have no idea what you’ve done for me.”`,
-        `You call Doc. The train swoops down to the platform, and Doc gazes at the cell exactly the way she gazed at the Walkman.`,
+        `You call Doc. The train swoops down to the landing platform outside, and Doc gazes at the cell exactly the way she gazed at the Walkman.`,
         `“A class-seven chrono-cell,” he breathes. “More power in the palm of your hand than a hundred bolts of lightning!” He slots it into the stabilizer, where it glows steadily.`,
         { if: is('visited1885'), text: `“That’s the last part,” he says.`, else: `“Next stop, 1885,” he says. “By way of home.”` },
       ],
@@ -834,6 +839,8 @@ const story: Story = {
           text: `The desert and the stars vanish, and the train drops into Courthouse Square, where it is still 10:04 PM and nothing has moved.`,
           else: `The towers of 2085 vanish, and the train drops into Courthouse Square, where it is still 10:04 PM and nothing has moved.`,
         },
+        `It’s exactly as you left it. The couple still has one foot in the air. Red is still halfway through his snore. The moth still hangs in the lamplight by your lamppost.`,
+        { if: not(is('escapement', 'original')), text: `Above it all, the clamp’s faint green glow shows through the clock face.` },
         { if: is('escapement', 'spare'), text: `In the cab, the stabilizer’s gear-shaped socket holds the spare escapement wheel from 1885.` },
         { if: is('escapement', 'none'), text: `The stabilizer’s gear-shaped socket is still empty. That part is waiting in 1885.` },
         { if: is('hasCell'), text: `The chrono-cell from 2085 glows steadily in its slot.`, else: `The power slot is still dark. That part is waiting in 2085.` },
@@ -896,7 +903,7 @@ const story: Story = {
       cast: ['doc', 'player', 'stabilizer'],
       imagePrompt: `Doc Brown and the player carry the glowing brass Temporal Stabilizer between them up a narrow spiral staircase inside the clock tower, lit by its blue glow, faces tense and determined.`,
       text: [
-        `It takes Doc seventy-nine minutes to assemble the Temporal Stabilizer. You hold the lamp, pass him tools, and watch the minutes drain off his watch.`,
+        `Doc spreads his tools across the workbench in the train’s cab, parked in the frozen square, and sets to work. It takes him seventy-nine minutes to assemble the Temporal Stabilizer. You hold the lamp, pass him tools, and watch the minutes drain off his watch.`,
         `When it’s done, it’s a brass cage about the size of a birdcage: the regulator coiled at its heart, the spare escapement wheel in its socket, and the chrono-cell glowing blue beneath.`,
         `You carry it up the clock tower stairs between you.`,
         { if: { flag: 'delays', is: 0 }, text: `At the top, the clamp’s screen reads 0:21:00. That’s enough time. Just.` },
@@ -1036,7 +1043,7 @@ const story: Story = {
       cast: ['player', 'train'],
       imagePrompt: `The time train lifts off into the night sky above the revived courthouse square, trailing twin tracks of fire. The player watches from the courthouse steps, a set of old iron keys in hand, the clock tower ticking above.`,
       text: [
-        `Hill Valley starts again as if nothing had happened. Red finishes his snore. The couple finish their step. Nobody will ever know that, for them, the last six hours took no time at all.`,
+        `You and Doc carry the stabilizer back down the tower stairs and out into the square just as Hill Valley starts again, as if nothing had happened. Red finishes his snore. The couple finish their step. Nobody will ever know that, for them, the last six hours took no time at all.`,
         `Rex Tannen is still out there somewhere, a hundred years from now, with a grudge and a time machine. Doc doesn’t seem worried. “Let him try,” he says. “This tower has a keeper now.”`,
         `He means you. On Monday, the Preservation Society receives an anonymous donation, large enough to restore the clock tower, with one condition: the young volunteer with the clipboard gets the keys.`,
         `Before he leaves, Doc reads your letter one last time. “I’ll write it in 1885,” he says, “and leave it with Western Union.” He taps the P.S. “Including this bit.”`,
@@ -1071,7 +1078,7 @@ const story: Story = {
       text: [
         {
           if: not(is('authorityAlerted')),
-          text: `Hill Valley starts again as if nothing had happened. Red finishes his snore. The couple finish their step. Rex Tannen is still out there somewhere, a hundred years from now, but Doc doesn’t seem worried. Before he leaves, he reads your letter one last time. “I’ll write it in 1885,” he says, and taps the P.S. “Including this bit.”`,
+          text: `You and Doc carry the stabilizer back down the tower stairs and out into the square just as Hill Valley starts again, as if nothing had happened. Red finishes his snore. The couple finish their step. Rex Tannen is still out there somewhere, a hundred years from now, but Doc doesn’t seem worried. Before he leaves, he reads your letter one last time. “I’ll write it in 1885,” he says, and taps the P.S. “Including this bit.”`,
         },
         `There’s just one thing. When the clamp let go, it kept hold of one last minute, the minute that was still on its screen when the stabilizer fired, and it took that minute with it.`,
         `From that night on, every clock in Hill Valley runs exactly sixty seconds slow: watches, ovens, VCRs, church bells. You can set them right and they drift back. Nobody can explain it. The Hill Valley Telegraph runs a series of articles about it.`,
