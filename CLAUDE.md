@@ -93,7 +93,7 @@ A Stop hook (`.claude/settings.json` → `scripts/story-review-gate.mjs`) blocks
 - A page's optional `time` is the when/where reading the header shows. Pages without one keep the previous reading.
 - `ui` (all optional):
   - `header`: `'basic'` (default) or `'time-circuits'`.
-  - `transition`, played when a choice changes era: `'none'` (default), `'fade'` or `'eighty-eight'`.
+  - `transition`, played when a choice changes era: `'none'` (default), `'fade'`, `'eighty-eight'` or `'vhs'`.
   - `eraBadges`: show the destination era on choices.
 
   New headers or transitions go in `src/reader/chrome.ts`, with the existing behaviour as the default.

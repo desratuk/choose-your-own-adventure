@@ -1,9 +1,3 @@
-# Brief: build a second story for the choose-your-own-adventure engine
-
-Paste everything below the line into a new Claude Code session opened in this repository.
-
----
-
 You're building a **second story pack** for an existing web choose-your-own-adventure engine. The repo already contains a finished, illustrated 52-page story, *The Stopped Clocks* (a *Back to the Future* story, in `stories/stopped-clocks/`). Your story sits alongside it as `stories/<new-id>/`. **The existing story must keep working and look and play exactly as it does now.**
 
 The user is a huge 1980s fan. They haven't picked the universe yet; helping them choose it is your first job.
@@ -53,7 +47,7 @@ The reader already supports several stories, so you shouldn't need to change sha
 - **Story picker:** the front page shows a picker once there are two stories. Each story keeps its own saves, endings, images and theme, keyed by its id.
 - **Presentation:** set it in `story.ui`:
   - `header`: `'basic'` (default) or `'time-circuits'`
-  - `transition` between eras: `'none'`, `'fade'` or `'eighty-eight'`
+  - `transition` between eras: `'none'`, `'fade'`, `'eighty-eight'` or `'vhs'`
   - `eraBadges`
 - **Meter:** `clock` can show time (H:MM) or a number with a unit, such as `%`.
 - **Difficulty:** `difficulties` and `difficultyNotes` let you tune each level and describe it on the title screen.
