@@ -685,6 +685,61 @@ button {
   transition: opacity 0.45s;
 }
 
+/* ── VHS transition between settings ────────────────────────── */
+.vhs {
+  position: fixed;
+  inset: 0;
+  z-index: 20;
+  background: #0b0b0f;
+  overflow: hidden;
+  animation: fade-in 0.1s;
+}
+.vhs-noise {
+  position: absolute;
+  inset: 0;
+  background:
+    repeating-linear-gradient(0deg, rgb(255 255 255 / 0.08) 0 2px, transparent 2px 4px),
+    repeating-linear-gradient(90deg, rgb(255 0 80 / 0.12) 0 3px, rgb(0 220 255 / 0.12) 3px 6px);
+  animation: vhs-jitter 0.12s steps(2) infinite;
+}
+.vhs-tear {
+  position: absolute;
+  left: -5%;
+  right: -5%;
+  height: 18%;
+  background: linear-gradient(rgb(255 255 255 / 0.55), rgb(255 255 255 / 0.1));
+  filter: blur(1px);
+  animation: vhs-roll 0.65s linear forwards;
+}
+.vhs-osd {
+  position: absolute;
+  left: 1.2rem;
+  top: 1.2rem;
+  font: 400 clamp(1.4rem, 6vw, 2.2rem) / 1 ui-monospace, 'Courier New', monospace;
+  letter-spacing: 0.12em;
+  color: #fff;
+  text-shadow:
+    2px 0 #ff2a6d,
+    -2px 0 #05d9e8;
+}
+.vhs.out {
+  opacity: 0;
+  transition: opacity 0.35s;
+}
+@keyframes vhs-jitter {
+  50% {
+    transform: translateX(6px);
+  }
+}
+@keyframes vhs-roll {
+  from {
+    top: -20%;
+  }
+  to {
+    top: 110%;
+  }
+}
+
 /* ── Story picker (shown when several stories are installed) ── */
 .picker {
   max-width: 46rem;

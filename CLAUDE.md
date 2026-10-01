@@ -5,6 +5,7 @@ A web choose-your-own-adventure engine with swappable **story packs**. Each stor
 | Story | Id | Status |
 |---|---|---|
 | *The Stopped Clocks* (Back to the Future) | `stopped-clocks` | Complete and illustrated |
+| *The Fratelli Run* (The Goonies) | `fratelli-run` | Written and reviewed; image prompts ready, no illustrations yet |
 
 When more than one story is installed, the front page shows a story picker.
 
@@ -133,3 +134,23 @@ A Stop hook (`.claude/settings.json` → `scripts/story-review-gate.mjs`) blocks
 
   After assembly, 20 or more minutes left makes the clean endings possible, 1–19 gives E11, and 0 or less gives E07. Medium allows one slip on the best route and Hard none.
 - **Status:** 52 pages, 11 endings, all illustrated.
+
+---
+
+## Story: *The Fratelli Run* (`fratelli-run`)
+
+- **Bible:** `docs/fratelli-run/story-outline.md`.
+- Themed on *The Goonies*, with real names (acceptable only because the project is for personal use). It never mentions pirates or treasure: the Fratellis have escaped, and the key sewn into the player's thrift-shop overcoat opens a locker holding their counterfeiting plates.
+- The setting is Halloween 1985 in Astoria, Oregon. The settings (`era`) are the Goon Docks, Downtown, Underground and Waterfront.
+- **Explanations for newcomers:** who the Goonies and Fratellis are, what counterfeiting plates are, who Sloth is.
+- **UI:** the default `basic` header, `transition: 'vhs'` (a videotape tracking glitch, in `src/reader/chrome.ts`) and a theme per setting.
+- **Meter:** `lead`, shown as FRATELLI LEAD (H:MM) once `running`. Easy starts at 135, Medium 105, Hard 90. The costs:
+  - detours, 10 each: Data (rope), Sloth, library, police station
+  - wrong guesses, 15 each: bus depot, old hideout
+  - fixed: Lowline 10, waiting for low tide 15 (25 without the library map), final dash 20
+  - mistakes, 15 each: the library chase (T03), the wrong fork (U03), wading the sump, squeezing the grate
+
+  The best route costs 75 and the best ending needs 15 left after the dash, so Medium allows one slip and Hard none.
+- **Guard rule:** pages that spend `lead` get their choices guarded (`lead >= 1`) and a "Keep running" choice to E06, added in code by `story.ts`. If the checker reports a guard that never applies, add the page to `unguarded`.
+- **Clue chain:** the key tag (`7 · LOW WATER`), the poster and radio (low tide 9:41 PM, the bonfire at the foot of Seventh Street, deputies guarding it), and the radio's description of the laundry van that "Deputy Dunmore" arrives in.
+- **Status:** 45 pages, 11 endings (7 bad, 4 good, one best). Written and reviewed. Illustrations are not made yet. `npm run prompts` generates the prompts.

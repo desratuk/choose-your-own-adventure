@@ -97,8 +97,8 @@ export interface StoryUI {
    * 'time-circuits': the Back to the Future dashboard (expects times like "NOV 12 1985 10:04 PM").
    */
   header?: 'basic' | 'time-circuits';
-  /** Played when a choice moves to a different era/setting. 'none' (default), 'fade', or 'eighty-eight' (88 mph time jump). */
-  transition?: 'none' | 'fade' | 'eighty-eight';
+  /** Played when a choice moves to a different era/setting. 'none' (default), 'fade', 'eighty-eight' (88 mph time jump) or 'vhs' (videotape tracking glitch). */
+  transition?: 'none' | 'fade' | 'eighty-eight' | 'vhs';
   /** Show a badge with the destination's era id on choices that change setting. */
   eraBadges?: boolean;
 }

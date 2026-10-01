@@ -24,6 +24,9 @@ granted for them:
   - stories/stopped-clocks/  (story text, characters, dialogue, image prompts,
                               illustrations, theme and all other files in it)
   - docs/stopped-clocks/     (story bible and outline)
+  - stories/fratelli-run/    (story text, characters, dialogue, image prompts,
+                              illustrations, theme and all other files in it)
+  - docs/fratelli-run/       (story bible and outline)
   - reference/               (art reference images)
 
 "Back to the Future", its characters (including Doc Brown, Marty McFly and the
@@ -36,8 +39,13 @@ non-commercial use. It may not be redistributed or used commercially. The
 illustrations were generated with third-party AI image tools and are provided
 without any rights or warranties.
 
+"The Goonies", its characters (including Mikey, Data, Chunk, Mouth, Sloth and
+the Fratelli family), names, places and related marks are the property of their
+respective owners, including Warner Bros. and Amblin Entertainment. The same
+terms apply to the material from that film.
+
 To build something of your own, replace everything in stories/stopped-clocks/
-with your own original story pack.
+and stories/fratelli-run/ with your own original story packs.
 
 3. Third-party components
 -------------------------

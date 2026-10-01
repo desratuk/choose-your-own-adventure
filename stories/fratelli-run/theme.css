@@ -1,0 +1,36 @@
+/* Setting palettes for The Fratelli Run. Scoped to this story; the reader sets data-era on <html>. */
+[data-story='fratelli-run'][data-era='docks'] {
+  --bg: #14202e; /* dusk over the Goon Docks */
+  --surface: #1e2f42;
+  --ink: #f0e8d8;
+  --muted: #a6b4c4;
+  --accent: #f2a93b; /* porch-light amber */
+  --accent-2: #4fb3a9;
+}
+
+[data-story='fratelli-run'][data-era='town'] {
+  --bg: #1d1620; /* wet downtown streets */
+  --surface: #2b2030;
+  --ink: #f4eadf;
+  --muted: #b7a8bd;
+  --accent: #ff8c42; /* sodium streetlight */
+  --accent-2: #e04f7a;
+}
+
+[data-story='fratelli-run'][data-era='under'] {
+  --bg: #0f1a18; /* storm drains */
+  --surface: #172a26;
+  --ink: #e6f0e4;
+  --muted: #94b0a6;
+  --accent: #e8d44d; /* torch yellow */
+  --accent-2: #5fcf9a;
+}
+
+[data-story='fratelli-run'][data-era='pier'] {
+  --bg: #0e1030; /* fog and river at night */
+  --surface: #1a1c4a;
+  --ink: #f1eaff;
+  --muted: #a9a9d8;
+  --accent: #ff7a2f; /* bonfire */
+  --accent-2: #6fb7ff;
+}

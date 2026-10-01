@@ -51,6 +51,7 @@ export async function playTransition(story: Story, root: HTMLElement, destinatio
   previewDestination(story, root, destinationTime);
   if (reducedMotion()) return;
   if (kind === 'fade') return fade();
+  if (kind === 'vhs') return vhs();
   return eightyEight();
 }
 
@@ -65,6 +66,17 @@ async function fade() {
   await wait(450);
   overlay.classList.add('out');
   setTimeout(() => overlay.remove(), 500);
+}
+
+// Videotape tracking glitch: noise bars and a rolling tear, a PLAY label, then the picture settles.
+async function vhs() {
+  const overlay = document.createElement('div');
+  overlay.className = 'vhs';
+  overlay.innerHTML = `<div class="vhs-noise"></div><div class="vhs-tear"></div><div class="vhs-osd"><span>&#9654;</span> PLAY</div>`;
+  document.body.append(overlay);
+  await wait(650);
+  overlay.classList.add('out');
+  setTimeout(() => overlay.remove(), 400);
 }
 
 // Back to the Future: speedometer climbs to 88 mph, then a flash and fire trails.

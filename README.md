@@ -18,6 +18,17 @@ A *Back to the Future* adventure. At 10:04 PM every clock in Hill Valley stops a
 
 > Unofficial, non-commercial fan project. It is not affiliated with or endorsed by the owners of *Back to the Future*. See [Licence](#licence).
 
+### The Fratelli Run
+
+A *Goonies* adventure. It's Halloween in Astoria, Oregon, and the Fratellis have escaped from custody. The key sewn into your thrift-shop overcoat opens something they want badly, and you have a few hours and the tide to work out where it belongs.
+
+- **45 pages** with **11 endings** (7 bad, 4 good, one best), each clearly labelled.
+- **No need to have seen the film.**
+- **A visible head start on the Fratellis,** spent by detours and wrong turns. A tide table, a bonfire poster and a radio bulletin hold the clues.
+- **A VHS tracking-glitch transition** between the Goon Docks, downtown, the tunnels and the waterfront.
+
+> Unofficial, non-commercial fan project. It is not affiliated with or endorsed by the owners of *The Goonies*. See [Licence](#licence).
+
 ## Running it
 
 Requires Node 20.19+ or 22.12+ (use nvm to switch).
@@ -72,7 +83,7 @@ Flags are declared up front with defaults. A story can also define:
 - **placeholders:** `{{clock}}` in the prose always shows the meter's real value.
 - **presentation (`ui`):**
   - a header: `basic` (default) or `time-circuits`
-  - a transition between settings: `none` (default), `fade` or `eighty-eight`
+  - a transition between settings: `none` (default), `fade`, `eighty-eight` or `vhs`
   - optional destination badges on choices
 
 ## Adding a story
@@ -117,4 +128,4 @@ The game picks up `images/<PAGE_ID>.webp` automatically. Pages without an image 
 
 ## Licence
 
-The engine, reader and tooling are available under the [MIT License](LICENSE), so you're welcome to build your own games with them. The *Back to the Future* story pack (`stories/stopped-clocks/`), its bible (`docs/stopped-clocks/`) and the art references are **not** licensed. *Back to the Future* and its characters belong to their respective owners, and this project isn't affiliated with or endorsed by them. See [LICENSE](LICENSE) for the details, including third-party font licences.
+The engine, reader and tooling are available under the [MIT License](LICENSE), so you're welcome to build your own games with them. The *Back to the Future* and *Goonies* story packs (`stories/stopped-clocks/`, `stories/fratelli-run/`), their bibles (`docs/stopped-clocks/`, `docs/fratelli-run/`) and the art references are **not** licensed. *Back to the Future* and *The Goonies* and their characters belong to their respective owners, and this project isn't affiliated with or endorsed by them. See [LICENSE](LICENSE) for the details, including third-party font licences.
