@@ -1,6 +1,12 @@
-# The Stopped Clocks
+# Choose your adventure
 
-A choose-your-own-adventure game for the web, themed on *Back to the Future*. At 10:04 PM every clock in Hill Valley stops and the whole town freezes. Only you and Doc Brown can still move, and you have a few hours and three eras (1885, 1985 and 2085) to find out who did it.
+A web engine for illustrated choose-your-own-adventure stories, with swappable story packs. With more than one story installed, the front page lets you pick which to play.
+
+## Stories
+
+### The Stopped Clocks
+
+A *Back to the Future* adventure. At 10:04 PM every clock in Hill Valley stops and the whole town freezes. Only you and Doc Brown can still move, and you have a few hours and three eras (1885, 1985 and 2085) to find out who did it.
 
 - **52 illustrated pages** with **11 endings**, each clearly labelled good or bad.
 - **A story you never need to have seen the films to follow.**
@@ -26,31 +32,31 @@ Open http://localhost:5173.
 | Command | What it does |
 |---|---|
 | `npm run dev` | Starts the dev server. |
-| `npm run check` | Runs the type check plus the story coherence checker. Run it after every story edit. |
+| `npm run check` | Runs the type check, checks that story ids are unique and themes are scoped, and runs the coherence checker for every story. Run it after every story edit. |
 | `npm run build` | Runs `check`, then builds a static site into `dist/`, which can be hosted anywhere (GitHub Pages, Netlify and so on). |
 | `npm run prompts` | Regenerates the image-generation prompts for each page. |
 | `npm run images` | Converts new or updated illustrations to the WebP files the game uses. |
 | `npm run story-dump -- <id>` | Prints a story as plain text with its branching logic, for review. |
 
-**Author tools (contain spoilers):**
-- `/?map` shows the whole story as a map, with the checker's report, each page's logic, and "play from here".
-- `?story=<id>` loads a different story pack.
+- `?story=<id>` opens a specific story, skipping the picker.
+- **Author tool (contains spoilers):** `?story=<id>&map` shows the whole story as a map, with the checker's report, each page's logic, and "play from here". With only one story installed, `/?map` works too.
 
 ## How it fits together
 
 ```
 src/engine/     Story format, runtime and exhaustive checker. Knows nothing about any particular story.
-src/reader/     Browser UI: the game, time circuits, save/undo, endings gallery, story map.
+src/reader/     Browser UI: story picker, the game, per-story headers and transitions,
+                save/undo, endings gallery, story map.
 stories/<id>/   A story pack:
-  story.ts            pages, choices, flags, clock and art direction
-  theme.css           era colours, scoped to this story
+  story.ts            pages, choices, flags, meter, UI choices and art direction
+  theme.css           colours; every selector scoped to [data-story='<id>']
   images/             <PAGE_ID>.webp illustrations used by the game
   art-src/            full-size originals (not committed)
   image-prompts.md    generated prompts, one per page
-docs/           Story bible and design outline
+docs/<id>/      Each story's bible and design outline
 ```
 
-It's plain TypeScript and Vite with no UI framework. Stories are data, so a new variant with a different story, theme or art is a new folder in `stories/`, registered in `stories/index.ts`.
+It's plain TypeScript and Vite with no UI framework. Stories are data, and each one keeps its own saves, endings, images and theme, keyed by its id.
 
 ### Story format, briefly
 
@@ -60,11 +66,27 @@ Each page has:
 - optionally an ending, labelled good or bad
 
 Flags are declared up front with defaults. A story can also define:
-- a visible clock
-- different starting values for each difficulty
-- `{{clock}}` placeholders, so the prose always shows the real time left
+- **eras:** the major settings it moves between (time periods, worlds, places), or just one.
+- **a visible meter:** a countdown shown as H:MM, or a number with a unit such as `%`.
+- **different starting values per difficulty,** and its own difficulty descriptions.
+- **placeholders:** `{{clock}}` in the prose always shows the meter's real value.
+- **presentation (`ui`):**
+  - a header: `basic` (default) or `time-circuits`
+  - a transition between settings: `none` (default), `fade` or `eighty-eight`
+  - optional destination badges on choices
 
-## Keeping the story consistent
+## Adding a story
+
+1. Create `stories/<id>/story.ts`, using a lowercase id with hyphens. Copy the shape of an existing pack.
+2. Add `stories/<id>/theme.css` with every selector starting `[data-story='<id>']`.
+3. Register it in `stories/index.ts`.
+4. Write its bible in `docs/<id>/story-outline.md`.
+5. Run `npm run check` until every story passes, then get a continuity review.
+6. Need a new header or transition? Add it in `src/reader/chrome.ts`, with existing behaviour as the default, so other stories are unaffected.
+
+`docs/prompts/second-story-brief.md` is a ready-made brief for a Claude Code agent to create a new story.
+
+## Keeping stories consistent
 
 Every story change has to pass two checks:
 
@@ -72,13 +94,13 @@ Every story change has to pass two checks:
    - dead ends and unreachable pages or endings
    - choices that are never available and text that never shows
    - unknown flags or placeholders
-   - the clock running out anywhere it shouldn't
+   - the meter running out anywhere it shouldn't
    - states from which no ending can be reached
 2. **Continuity review.** A Claude Code agent (`.claude/agents/story-continuity-reviewer.md`) reads the story along every route, looking for problems a program can't see:
    - text that assumes a particular path, or contradicts earlier events
    - missing scene-setting, unclear speakers or vague references
-   - reliance on knowledge of the films
-   - prose that disagrees with the clock
+   - reliance on knowledge of the source material
+   - prose that disagrees with the meter
 
    When a story passes, the agent records it by stamping `stories/<id>/.continuity-review`. A Stop hook in `.claude/settings.json` stops a Claude Code session from finishing while a story has changed without a passing review.
 
@@ -95,4 +117,4 @@ The game picks up `images/<PAGE_ID>.webp` automatically. Pages without an image 
 
 ## Licence
 
-The engine, reader and tooling are available under the [MIT License](LICENSE), so you're welcome to build your own games with them. The *Back to the Future* story pack (`stories/stopped-clocks/`), the story outline and the art references are **not** licensed. *Back to the Future* and its characters belong to their respective owners, and this project isn't affiliated with or endorsed by them. See [LICENSE](LICENSE) for the details, including third-party font licences.
+The engine, reader and tooling are available under the [MIT License](LICENSE), so you're welcome to build your own games with them. The *Back to the Future* story pack (`stories/stopped-clocks/`), its bible (`docs/stopped-clocks/`) and the art references are **not** licensed. *Back to the Future* and its characters belong to their respective owners, and this project isn't affiliated with or endorsed by them. See [LICENSE](LICENSE) for the details, including third-party font licences.

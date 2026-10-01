@@ -69,7 +69,7 @@ export function startMap(root: HTMLElement, story: Story) {
           stats.paths?.toLocaleString() ?? 'cyclic'
         } playthroughs.
         ${report.errors.length ? `<strong class="bad">${report.errors.length} errors</strong>` : '<strong class="good">Checker: every path is coherent.</strong>'}
-        Dashed links are conditional. <a href="?${story.id !== 'stopped-clocks' ? `story=${story.id}` : ''}">Back to the game</a></p>
+        Dashed links are conditional. <a href="?story=${encodeURIComponent(story.id)}">Back to the game</a></p>
         ${report.errors.length || report.warnings.length ? `<ul class="issues">${[...report.errors, ...report.warnings].slice(0, 50).map((e) => `<li>${esc(e)}</li>`).join('')}</ul>` : ''}
       </header>
       <div class="map-body">
@@ -103,7 +103,7 @@ export function startMap(root: HTMLElement, story: Story) {
         current: { pageId: id, state: report.samples[id], era: page.era, time: page.time ?? '', lastDeparted: null },
         history: [],
       });
-      location.href = location.pathname + (story.id !== 'stopped-clocks' ? `?story=${story.id}` : '');
+      location.href = `${location.pathname}?story=${encodeURIComponent(story.id)}`;
     });
   };
   root.querySelectorAll<SVGGElement>('.node').forEach((n) => {

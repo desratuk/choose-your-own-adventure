@@ -39,8 +39,9 @@ export interface Ending {
 export interface Page {
   id: string;
   title: string;
+  /** Which of the story's major settings (eras, worlds, locations…) this page is in. Drives theming and transitions. */
   era: string;
-  /** Time-circuit reading on arrival. Pages without one keep the previous reading. */
+  /** Optional when/where reading shown by the header on arrival. Pages without one keep the previous reading. */
   time?: string;
   text: Passage[];
   choices?: Choice[];
@@ -63,18 +64,41 @@ export interface Story {
   subtitle: string;
   blurb: string;
   start: string;
+  /** The story's major settings. A story with a single setting just has one. */
   eras: Record<string, { label: string }>;
   flags: Record<string, FlagDef>;
   /** Effects applied to the initial state for each difficulty (e.g. more or less time). */
   difficulties?: Partial<Record<Difficulty, Effects>>;
-  /** Optional visible countdown driven by a numeric flag. */
+  /** Overrides for the difficulty descriptions on the title screen (defaults describe undo only). */
+  difficultyNotes?: Partial<Record<Difficulty, string>>;
+  /** Reader presentation. Everything is optional; defaults suit any story. */
+  ui?: StoryUI;
+  /**
+   * Optional visible meter driven by a numeric flag: a countdown, a charge level, a trace…
+   * Despite the name it need not be a clock; set `format` to 'number' for plain values.
+   */
   clock?: {
     flag: string;
     label: string;
+    /** 'time' shows H:MM (the default); 'number' shows the value with an optional unit, e.g. "72%". */
+    format?: 'time' | 'number';
+    unit?: string;
     visibleWhen: Cond;
     /** Non-ending pages where the clock may legitimately be at or below zero. */
     allowExpiredOn: string[];
   };
   art: { stylePrefix: string; cast: Record<string, string> };
   pages: Page[];
+}
+
+export interface StoryUI {
+  /**
+   * 'basic' (default): setting name, optional time reading and the meter.
+   * 'time-circuits': the Back to the Future dashboard (expects times like "NOV 12 1985 10:04 PM").
+   */
+  header?: 'basic' | 'time-circuits';
+  /** Played when a choice moves to a different era/setting. 'none' (default), 'fade', or 'eighty-eight' (88 mph time jump). */
+  transition?: 'none' | 'fade' | 'eighty-eight';
+  /** Show a badge with the destination's era id on choices that change setting. */
+  eraBadges?: boolean;
 }

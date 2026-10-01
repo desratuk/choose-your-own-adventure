@@ -1,5 +1,6 @@
-/* Core reader styles. Era colors come from the story pack's theme.css via these tokens. */
-:root {
+/* Core reader styles. Era colors come from the story pack's theme.css via these tokens.
+   :where() keeps these defaults at zero specificity so any story theme overrides them. */
+:where(:root) {
   --bg: #16142b;
   --surface: #221f40;
   --ink: #efe9dc;
@@ -628,6 +629,133 @@ button {
   *::after {
     animation: none !important;
     transition: none !important;
+  }
+}
+
+/* ── Basic header (stories without a custom one) ──────────────── */
+.basic-dash {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.6rem 0.9rem;
+  border: 2px solid var(--rule);
+  border-radius: 12px;
+  background: var(--surface);
+  font: 900 1.2rem var(--display);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+.bd-time {
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+.meter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 0.5rem;
+  padding: 0.4rem 0.9rem;
+  border-radius: 10px;
+  background: var(--surface);
+  border: 2px solid color-mix(in srgb, var(--accent) 45%, transparent);
+}
+.meter-label {
+  font: 900 0.8rem var(--display);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.meter-value {
+  font: 900 1.5rem var(--display);
+  color: var(--accent);
+}
+
+/* ── Fade transition between settings ───────────────────────── */
+.fade-out {
+  position: fixed;
+  inset: 0;
+  z-index: 20;
+  background: var(--bg);
+  animation: fade-in 0.35s;
+}
+.fade-out.out {
+  opacity: 0;
+  transition: opacity 0.45s;
+}
+
+/* ── Story picker (shown when several stories are installed) ── */
+.picker {
+  max-width: 46rem;
+  margin: 0 auto;
+  padding: max(1.5rem, env(safe-area-inset-top)) 1rem 3rem;
+}
+.picker-title {
+  margin: 0 0 1.2rem;
+  font: 900 clamp(2.4rem, 11vw, 4rem) / 0.9 var(--display);
+  text-transform: uppercase;
+  color: var(--accent);
+}
+.picker-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 1rem;
+}
+.story-card {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
+  gap: 1rem;
+  width: 100%;
+  padding: 0.8rem;
+  text-align: left;
+  border: 2px solid var(--rule);
+  border-radius: 14px;
+  background: var(--surface);
+  color: var(--ink);
+  cursor: pointer;
+}
+.story-card:hover {
+  border-color: var(--accent);
+}
+.story-cover {
+  aspect-ratio: 3 / 2;
+  border-radius: 8px;
+  overflow: hidden;
+  background: var(--bg);
+}
+.story-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.story-info {
+  display: grid;
+  align-content: start;
+  gap: 0.3rem;
+}
+.story-info strong {
+  font: 900 1.6rem / 1 var(--display);
+  text-transform: uppercase;
+  color: var(--accent);
+}
+.story-info em {
+  font: 700 1rem var(--display);
+  font-style: normal;
+  color: var(--accent-2);
+}
+.story-info span {
+  font-size: 0.95rem;
+}
+.story-info small {
+  color: var(--muted);
+}
+@media (max-width: 560px) {
+  .story-card {
+    grid-template-columns: 1fr;
   }
 }
 

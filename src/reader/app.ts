@@ -1,6 +1,6 @@
 import { choose, evaluate, getPage, renderText, startState, visibleChoices } from '../engine/engine';
 import type { Choice, Page, Story } from '../engine/types';
-import { circuits, clockReadout } from './circuits';
+import { pageHeader, playTransition, previewDestination, titleHeader } from './chrome';
 import { imageFor } from './images';
 import { formatText, esc } from './text';
 import {
@@ -15,14 +15,20 @@ import {
 } from './storage';
 
 const DIFFICULTIES: { id: Difficulty; name: string; note: string }[] = [
-  { id: 'easy', name: 'Easy', note: 'More time on the clock, and undo as many choices as you like.' },
+  { id: 'easy', name: 'Easy', note: 'Undo as many choices as you like.' },
   { id: 'medium', name: 'Medium', note: 'Undo up to your last two choices.' },
-  { id: 'hard', name: 'Hard', note: 'Less time on the clock, and no undo. Every choice is final.' },
+  { id: 'hard', name: 'Hard', note: 'No undo. Every choice is final.' },
 ];
 
-const reducedMotion = () => matchMedia('(prefers-reduced-motion: reduce)').matches;
+/** Sync the browser's theme colour (mobile address bar) with the current era's background. */
+function syncThemeColor() {
+  const bg = getComputedStyle(document.documentElement).getPropertyValue('--bg').trim();
+  if (bg) document.querySelector('meta[name="theme-color"]')?.setAttribute('content', bg);
+}
 
-export function startReader(root: HTMLElement, story: Story) {
+/** `chooseAnother` is set when other stories exist; it returns to the story picker. */
+export function startReader(root: HTMLElement, story: Story, chooseAnother?: () => void) {
+  const difficulties = DIFFICULTIES.map((d) => ({ ...d, note: story.difficultyNotes?.[d.id] ?? d.note }));
   let run: Run | null = loadRun(story.id);
   // A save from an older version of the story may point at a page that no longer exists.
   if (run && !story.pages.some((p) => p.id === run!.current.pageId)) run = null;
@@ -39,12 +45,13 @@ export function startReader(root: HTMLElement, story: Story) {
   function showTitle() {
     delete root.dataset.era;
     document.documentElement.dataset.era = getPage(story, story.start).era;
+    syncThemeColor();
     const found = loadEndings(story.id).length;
     const startPage = getPage(story, story.start);
     window.scrollTo(0, 0);
     root.innerHTML = `
       <div class="title-screen">
-        ${circuits({ destination: startPage.time ?? null, present: null, last: null })}
+        ${titleHeader(story, startPage.time)}
         <div class="title-body">
           <h1 class="title-mark">${esc(story.title)}</h1>
           <p class="title-sub">${esc(story.subtitle)}</p>
@@ -52,7 +59,7 @@ export function startReader(root: HTMLElement, story: Story) {
           ${run ? `<button class="btn primary" data-act="continue">Continue your adventure</button>` : ''}
           <fieldset class="difficulty">
             <legend>${run ? 'Or start again' : 'Choose a difficulty'}</legend>
-            ${DIFFICULTIES.map(
+            ${difficulties.map(
               (d, i) => `
               <label class="diff">
                 <input type="radio" name="difficulty" value="${d.id}" ${i === 1 ? 'checked' : ''} />
@@ -62,8 +69,10 @@ export function startReader(root: HTMLElement, story: Story) {
           </fieldset>
           <button class="btn ${run ? '' : 'primary'}" data-act="new">Start a new adventure</button>
           <button class="btn ghost" data-act="endings">Endings found: ${found} of ${endings.length}</button>
+          ${chooseAnother ? `<button class="btn ghost" data-act="stories">Choose another story</button>` : ''}
         </div>
       </div>`;
+    root.querySelector('[data-act="stories"]')?.addEventListener('click', () => chooseAnother!());
     root.querySelector('[data-act="continue"]')?.addEventListener('click', () => showPage());
     root.querySelector('[data-act="new"]')!.addEventListener('click', () => {
       const difficulty = (root.querySelector('input[name="difficulty"]:checked') as HTMLInputElement).value as Difficulty;
@@ -104,7 +113,7 @@ export function startReader(root: HTMLElement, story: Story) {
   function showMenu() {
     const dialog = document.createElement('dialog');
     dialog.className = 'sheet';
-    const diff = DIFFICULTIES.find((d) => d.id === run!.difficulty)!;
+    const diff = difficulties.find((d) => d.id === run!.difficulty)!;
     dialog.innerHTML = `
       <h2>Paused</h2>
       <p class="muted">Difficulty: <strong>${diff.name}</strong>. ${diff.note} Your progress saves automatically.</p>
@@ -136,6 +145,7 @@ export function startReader(root: HTMLElement, story: Story) {
     const page = getPage(story, snap.pageId);
     root.dataset.era = page.era;
     document.documentElement.dataset.era = page.era;
+    syncThemeColor();
     if (page.ending) recordEnding(story.id, page.id);
 
     const paragraphs = renderText(story, page, snap.state).map((t) => `<p>${formatText(t)}</p>`).join('');
@@ -149,8 +159,7 @@ export function startReader(root: HTMLElement, story: Story) {
       <div class="reader">
         <div class="side">
           <header class="dash">
-            ${circuits({ destination: null, present: snap.time, last: snap.lastDeparted })}
-            ${clock ? clockReadout(clock.label, snap.state[clock.flag] as number) : ''}
+            ${pageHeader(story, snap, clock ? (snap.state[clock.flag] as number) : null)}
           </header>
           <figure class="art" data-era="${page.era}">
             ${img ? `<img src="${img}" alt="" />` : placeholder(page)}
@@ -179,11 +188,12 @@ export function startReader(root: HTMLElement, story: Story) {
       const choice = choices[i];
       const target = getPage(story, choice.to);
       if (target.era !== snap.era) {
-        const preview = () => setDestination(target.time ?? null);
+        const preview = () => previewDestination(story, root, target.time ?? null);
+        const clear = () => previewDestination(story, root, null);
         btn.addEventListener('pointerenter', preview);
         btn.addEventListener('focus', preview);
-        btn.addEventListener('pointerleave', () => setDestination(null));
-        btn.addEventListener('blur', () => setDestination(null));
+        btn.addEventListener('pointerleave', clear);
+        btn.addEventListener('blur', clear);
       }
       btn.addEventListener('click', () => pick(choice));
     });
@@ -195,11 +205,6 @@ export function startReader(root: HTMLElement, story: Story) {
       showTitle();
     });
     root.querySelector('[data-act="gallery"]')?.addEventListener('click', showEndings);
-  }
-
-  function setDestination(time: string | null) {
-    const row = root.querySelector('.tc-row.destination');
-    if (row) row.outerHTML = circuits({ destination: time, present: null, last: null, only: 'destination' });
   }
 
   async function pick(choice: Choice) {
@@ -219,7 +224,7 @@ export function startReader(root: HTMLElement, story: Story) {
     run!.history = [...run!.history, prev].slice(-Math.min(UNDO_LIMIT[run!.difficulty], 500));
     run!.current = next;
     saveRun(story.id, run);
-    if (travelling) await timeTravel(time);
+    if (travelling) await playTransition(story, root, time);
     busy = false;
     showPage();
     root.querySelector<HTMLElement>('.page-title')?.focus({ preventScroll: true });
@@ -233,40 +238,13 @@ export function startReader(root: HTMLElement, story: Story) {
     showPage();
   }
 
-  async function timeTravel(destination: string) {
-    setDestination(destination);
-    if (reducedMotion()) return;
-    const overlay = document.createElement('div');
-    overlay.className = 'warp';
-    overlay.innerHTML = `
-      <div class="speedo"><span class="seg7"><i>88</i><b>0</b></span><small>mph</small></div>
-      <div class="trail one"></div><div class="trail two"></div>
-      <div class="flash"></div>`;
-    document.body.append(overlay);
-    const readout = overlay.querySelector('b')!;
-    const start = performance.now();
-    await new Promise<void>((done) => {
-      const tick = (now: number) => {
-        const t = Math.min(1, (now - start) / 1100);
-        readout.textContent = String(Math.round(88 * t * t));
-        if (t < 1) requestAnimationFrame(tick);
-        else done();
-      };
-      requestAnimationFrame(tick);
-    });
-    overlay.classList.add('boom');
-    await new Promise((r) => setTimeout(r, 700));
-    overlay.classList.add('out');
-    setTimeout(() => overlay.remove(), 600);
-  }
-
   function choiceList(_page: Page, choices: Choice[], era: string) {
     return `<div class="choices">${choices
       .map((c) => {
         const target = getPage(story, c.to);
         const travel = target.era !== era;
         return `<button class="choice${travel ? ' travel' : ''}">
-          ${travel ? `<span class="to-era">${esc(target.era)}</span>` : ''}
+          ${travel && story.ui?.eraBadges ? `<span class="to-era">${esc(target.era)}</span>` : ''}
           <span>${esc(c.text)}</span>
         </button>`;
       })
@@ -295,16 +273,12 @@ function endingLabel(page: Page) {
 }
 
 function placeholder(page: Page) {
-  // Drawn stand-in until real art lands in stories/<id>/images/<PAGE_ID>.*
+  // Drawn stand-in until real art lands in stories/<id>/images/<PAGE_ID>.webp
   return `<div class="placeholder" role="img" aria-label="Illustration to come">
-    <svg viewBox="0 0 120 120" aria-hidden="true">
-      <circle cx="60" cy="60" r="50" />
-      ${Array.from({ length: 12 }, (_, i) => {
-        const a = (i / 12) * Math.PI * 2;
-        return `<line x1="${60 + Math.sin(a) * 42}" y1="${60 - Math.cos(a) * 42}" x2="${60 + Math.sin(a) * 48}" y2="${60 - Math.cos(a) * 48}" />`;
-      }).join('')}
-      <line class="hand" x1="60" y1="60" x2="${60 + Math.sin((10.07 / 12) * Math.PI * 2) * 26}" y2="${60 - Math.cos((10.07 / 12) * Math.PI * 2) * 26}" />
-      <line class="hand" x1="60" y1="60" x2="${60 + Math.sin((4 / 60) * Math.PI * 2) * 38}" y2="${60 - Math.cos((4 / 60) * Math.PI * 2) * 38}" />
+    <svg viewBox="0 0 120 90" aria-hidden="true">
+      <rect x="6" y="6" width="108" height="78" rx="6" />
+      <circle class="hand" cx="84" cy="30" r="9" />
+      <path d="M14 76 L44 42 L62 62 L76 50 L106 76" />
     </svg>
     <span>${esc(page.title)}</span>
   </div>`;

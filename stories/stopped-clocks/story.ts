@@ -41,6 +41,11 @@ const story: Story = {
     authorityAlerted: { default: false },
     swapped: { default: false },
   },
+  ui: { header: 'time-circuits', transition: 'eighty-eight', eraBadges: true },
+  difficultyNotes: {
+    easy: 'More time on the clock, and undo as many choices as you like.',
+    hard: 'Less time on the clock, and no undo. Every choice is final.',
+  },
   // The clamp's countdown (field time) differs by difficulty. Budget: fixed travel costs 225, assembly 79;
   // detours cost 10 and mistakes 15. The best ending needs 20+ minutes left after assembly.
   difficulties: {

@@ -1,5 +1,3 @@
-import { formatClock } from '../engine/engine';
-
 // The time-circuit display: three rows of segment readouts, like the dashboard prop.
 
 type RowName = 'destination' | 'present' | 'last';
@@ -42,10 +40,8 @@ export function circuits(times: { destination: string | null; present: string | 
   return times.only ? rows.join('') : `<div class="circuits">${rows.join('')}</div>`;
 }
 
-export function clockReadout(label: string, minutes: number) {
-  const m = Math.max(0, minutes);
-  const text = formatClock(m);
-  return `<div class="clock${m <= 30 ? ' urgent' : ''}" role="timer" aria-label="${label} ${text}">
+export function clockReadout(label: string, text: string, urgent: boolean) {
+  return `<div class="clock${urgent ? ' urgent' : ''}" role="timer" aria-label="${label} ${text}">
     <span class="clock-label">${label}</span>${seg(text, '~:~~')}
   </div>`;
 }

@@ -45,12 +45,18 @@ export function formatClock(minutes: number): string {
   return `${Math.floor(m / 60)}:${String(m % 60).padStart(2, '0')}`;
 }
 
-/** Placeholders used in a piece of text: {{clock}} or {{flagName}}. */
+/** The story's meter value as shown to the player: H:MM for time meters, otherwise the number plus unit. */
+export function formatMeter(story: Story, value: number): string {
+  if (story.clock?.format === 'number') return `${Math.max(0, value)}${story.clock.unit ?? ''}`;
+  return formatClock(value);
+}
+
+/** Placeholders used in a piece of text: {{clock}} (the formatted meter) or {{flagName}}. */
 export const placeholders = (text: string) => [...text.matchAll(/\{\{(\w+)\}\}/g)].map((m) => m[1]);
 
 function interpolate(story: Story, text: string, state: State): string {
   return text.replace(/\{\{(\w+)\}\}/g, (_, name: string) =>
-    name === 'clock' && story.clock ? formatClock(state[story.clock.flag] as number) : String(state[name]),
+    name === 'clock' && story.clock ? formatMeter(story, state[story.clock.flag] as number) : String(state[name]),
   );
 }
 
