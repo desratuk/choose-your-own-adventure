@@ -14,8 +14,12 @@ function meter(story: Story, value: number) {
   if (headerKind(story) === 'time-circuits') {
     return clockReadout(c.label, formatMeter(story, value), (c.format ?? 'time') === 'time' && value <= 30);
   }
-  return `<div class="meter" role="status" aria-label="${esc(c.label)} ${esc(formatMeter(story, value))}">
-    <span class="meter-label">${esc(c.label)}</span><span class="meter-value">${esc(formatMeter(story, value))}</span>
+  const bar =
+    c.risesFrom === undefined
+      ? ''
+      : `<span class="meter-bar"><i style="width:${Math.min(100, Math.max(0, ((c.risesFrom - value) / c.risesFrom) * 100))}%"></i></span>`;
+  return `<div class="meter${bar ? ' rising' : ''}" role="status" aria-label="${esc(c.label)} ${esc(formatMeter(story, value))}">
+    <span class="meter-label">${esc(c.label)}</span><span class="meter-value">${esc(formatMeter(story, value))}</span>${bar}
   </div>`;
 }
 
@@ -52,6 +56,7 @@ export async function playTransition(story: Story, root: HTMLElement, destinatio
   if (reducedMotion()) return;
   if (kind === 'fade') return fade();
   if (kind === 'vhs') return vhs();
+  if (kind === 'slime') return slime();
   return eightyEight();
 }
 
@@ -66,6 +71,17 @@ async function fade() {
   await wait(450);
   overlay.classList.add('out');
   setTimeout(() => overlay.remove(), 500);
+}
+
+// Ghostbusters: green ooze drops over the page, then drains away.
+async function slime() {
+  const overlay = document.createElement('div');
+  overlay.className = 'slime';
+  overlay.innerHTML = `<div class="slime-wall"></div><div class="slime-blob b1"></div><div class="slime-blob b2"></div><div class="slime-blob b3"></div>`;
+  document.body.append(overlay);
+  await wait(650);
+  overlay.classList.add('out');
+  setTimeout(() => overlay.remove(), 600);
 }
 
 // Videotape tracking glitch: noise bars and a rolling tear, a PLAY label, then the picture settles.

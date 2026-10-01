@@ -47,7 +47,10 @@ export function formatClock(minutes: number): string {
 
 /** The story's meter value as shown to the player: H:MM for time meters, otherwise the number plus unit. */
 export function formatMeter(story: Story, value: number): string {
-  if (story.clock?.format === 'number') return `${Math.max(0, value)}${story.clock.unit ?? ''}`;
+  if (story.clock?.format === 'number') {
+    const shown = story.clock.risesFrom === undefined ? value : story.clock.risesFrom - value;
+    return `${Math.min(story.clock.risesFrom ?? Infinity, Math.max(0, shown))}${story.clock.unit ?? ''}`;
+  }
   return formatClock(value);
 }
 

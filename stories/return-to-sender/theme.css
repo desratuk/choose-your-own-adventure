@@ -1,0 +1,36 @@
+/* Setting palettes for Return to Sender. Scoped to this story; the reader sets data-era on <html>. */
+[data-story='return-to-sender'][data-era='streets'] {
+  --bg: #121a28; /* rainy downtown night */
+  --surface: #1c2a3f;
+  --ink: #eef1f6;
+  --muted: #9fb0c6;
+  --accent: #ff9a3c; /* sodium streetlight */
+  --accent-2: #5fd0ff;
+}
+
+[data-story='return-to-sender'][data-era='firehouse'] {
+  --bg: #2a1210; /* brick and lamplight */
+  --surface: #3d1c18;
+  --ink: #fbeee2;
+  --muted: #cfa99a;
+  --accent: #ffcf4a; /* warm lamp */
+  --accent-2: #ff6a4a;
+}
+
+[data-story='return-to-sender'][data-era='hotel'] {
+  --bg: #21101a; /* burgundy and brass */
+  --surface: #351a28;
+  --ink: #f8ecd6;
+  --muted: #c6a9a0;
+  --accent: #e6b84a; /* hotel gold */
+  --accent-2: #d46a7a;
+}
+
+[data-story='return-to-sender'][data-era='under'] {
+  --bg: #0b1612; /* dark brick, green glow */
+  --surface: #14281f;
+  --ink: #e4f6e8;
+  --muted: #8fb8a0;
+  --accent: #7dff3a; /* ectoplasm */
+  --accent-2: #3fe0b0;
+}

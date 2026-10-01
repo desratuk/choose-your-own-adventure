@@ -6,6 +6,7 @@ A web choose-your-own-adventure engine with swappable **story packs**. Each stor
 |---|---|---|
 | *The Stopped Clocks* (Back to the Future) | `stopped-clocks` | Complete and illustrated |
 | *The Fratelli Run* (The Goonies) | `fratelli-run` | Written and reviewed; image prompts ready, no illustrations yet |
+| *Return to Sender* (Ghostbusters) | `return-to-sender` | Written; image prompts ready, no illustrations yet |
 
 When more than one story is installed, the front page shows a story picker.
 
@@ -93,7 +94,7 @@ A Stop hook (`.claude/settings.json` → `scripts/story-review-gate.mjs`) blocks
 - A page's optional `time` is the when/where reading the header shows. Pages without one keep the previous reading.
 - `ui` (all optional):
   - `header`: `'basic'` (default) or `'time-circuits'`.
-  - `transition`, played when a choice changes era: `'none'` (default), `'fade'`, `'eighty-eight'` or `'vhs'`.
+  - `transition`, played when a choice changes era: `'none'` (default), `'fade'`, `'eighty-eight'`, `'vhs'` or `'slime'`.
   - `eraBadges`: show the destination era on choices.
 
   New headers or transitions go in `src/reader/chrome.ts`, with the existing behaviour as the default.
@@ -154,3 +155,24 @@ A Stop hook (`.claude/settings.json` → `scripts/story-review-gate.mjs`) blocks
 - **Guard rule:** pages that spend `lead` get their choices guarded (`lead >= 1`) and a "Keep running" choice to E06, added in code by `story.ts`. If the checker reports a guard that never applies, add the page to `unguarded`.
 - **Clue chain:** the key tag (`7 · LOW WATER`), the poster and radio (low tide 9:41 PM, the bonfire at the foot of Seventh Street, deputies guarding it), and the radio's description of the laundry van that "Deputy Dunmore" arrives in.
 - **Status:** 45 pages, 11 endings (7 bad, 4 good, one best). Written and reviewed. Illustrations are not made yet. `npm run prompts` generates the prompts.
+
+---
+
+## Story: *Return to Sender* (`return-to-sender`)
+
+- **Bible:** `docs/return-to-sender/story-outline.md`.
+- Themed on *Ghostbusters*, with real names (acceptable only because the project is for personal use). The player is a 17-year-old bicycle courier carrying a haunted 1898 pneumatic-mail canister from a Tribeca stamp shop to the firehouse, and the story is set on Friday 15 November 1985. The canister belongs in the old Station 9 tube room under the Sedgewick Hotel at 11:20 PM, in the tube marked UP.
+- The settings (`era`) are Lower Manhattan, the Firehouse, Park Row and Underground.
+- **Explanations for newcomers:** who the Ghostbusters are, proton packs, traps and the containment grid, who Slimer is, and what the pneumatic mail was.
+- **UI:** the default `basic` header, `transition: 'slime'` (green ooze, in `src/reader/chrome.ts`) and a theme per setting. The meter is a rising load shown with a segmented bar.
+- **Meter:** the flag is `margin` (hidden headroom), and `clock.risesFrom: 100` shows `100 - margin` as GRID LOAD (%). Easy starts at 20% load (`margin` 80), Medium 35% (65) and Hard 50% (50). The costs:
+  - forced: the first incident 5, the ride to Park Row 10, delivery 5
+  - detours: firehouse 10 (trap, Slimer), diner 5 (coal-chute tip)
+  - wrong guesses, 10 each: post office, Engine 9
+  - mistakes, 10 each: the Sorting Room (T03), the blockade, forcing the door, waiting without the trap, the DOWN tube
+  - the lobby route (Voss) 10, Pell's cellar tunnel 10 + the blockade 10, waiting at the firehouse 15
+
+  The best route costs 35 and the best ending needs `margin` 15 left, so Medium allows one slip and Hard none.
+- **Guard rule:** pages that spend `margin` get their choices guarded (`margin >= 1`) and a "Keep running" choice to E06, added in code by `story.ts`. If the checker reports a guard that never applies, add the page to `unguarded`.
+- **Clue chain:** the plate (`ST. 9 · 11:20 UP`), Mr. Pell's wall map (Station 9 is the Park Row Annex, with a hotel over it now), and the plaque and bronze door at the hotel. The decoys are the post office and Engine 9, both "stations".
+- **Status:** 42 pages, 11 endings (7 bad, 4 good, one best). Written and reviewed. Illustrations are not made yet. `npm run prompts` generates the prompts.

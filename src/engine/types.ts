@@ -83,6 +83,8 @@ export interface Story {
     /** 'time' shows H:MM (the default); 'number' shows the value with an optional unit, e.g. "72%". */
     format?: 'time' | 'number';
     unit?: string;
+    /** For a rising meter (a load that fails at its maximum): the flag holds the headroom left, and the meter shows `risesFrom` minus the flag. Needs format 'number'. */
+    risesFrom?: number;
     visibleWhen: Cond;
     /** Non-ending pages where the clock may legitimately be at or below zero. */
     allowExpiredOn: string[];
@@ -97,8 +99,8 @@ export interface StoryUI {
    * 'time-circuits': the Back to the Future dashboard (expects times like "NOV 12 1985 10:04 PM").
    */
   header?: 'basic' | 'time-circuits';
-  /** Played when a choice moves to a different era/setting. 'none' (default), 'fade', 'eighty-eight' (88 mph time jump) or 'vhs' (videotape tracking glitch). */
-  transition?: 'none' | 'fade' | 'eighty-eight' | 'vhs';
+  /** Played when a choice moves to a different era/setting. 'none' (default), 'fade', 'eighty-eight' (88 mph time jump), 'vhs' (videotape tracking glitch) or 'slime' (green ooze wipe). */
+  transition?: 'none' | 'fade' | 'eighty-eight' | 'vhs' | 'slime';
   /** Show a badge with the destination's era id on choices that change setting. */
   eraBadges?: boolean;
 }

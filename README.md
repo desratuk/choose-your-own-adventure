@@ -29,6 +29,17 @@ A *Goonies* adventure. It's Halloween in Astoria, Oregon, and the Fratellis have
 
 > Unofficial, non-commercial fan project. It is not affiliated with or endorsed by the owners of *The Goonies*. See [Licence](#licence).
 
+### Return to Sender
+
+A *Ghostbusters* adventure. You're a bicycle courier with one last job on a rainy Friday night: a brass pneumatic-mail canister that has been haunting a stamp shop, addressed to the Ghostbusters' firehouse. The Ghostbusters are out, and the ghosts aren't. The canister draws ghosts into the firehouse's containment grid, and the grid can only hold so much.
+
+- **42 pages** with **11 endings** (7 bad, 4 good, one best), each clearly labelled.
+- **No need to have seen the film.**
+- **A visible grid-load meter** that rises as detours and mistakes pile ghosts onto the grid. A stamp-shop map, a brass plate and a hotel plaque hold the clues.
+- **A slime transition** between Lower Manhattan, the firehouse, Park Row and the tunnels.
+
+> Unofficial, non-commercial fan project. It is not affiliated with or endorsed by the owners of *Ghostbusters*. See [Licence](#licence).
+
 ## Running it
 
 Requires Node 20.19+ or 22.12+ (use nvm to switch).
@@ -78,12 +89,12 @@ Each page has:
 
 Flags are declared up front with defaults. A story can also define:
 - **eras:** the major settings it moves between (time periods, worlds, places), or just one.
-- **a visible meter:** a countdown shown as H:MM, or a number with a unit such as `%`.
+- **a visible meter:** a countdown shown as H:MM, or a number with a unit such as `%`. A number meter can also rise toward a limit (`risesFrom`), like a load.
 - **different starting values per difficulty,** and its own difficulty descriptions.
 - **placeholders:** `{{clock}}` in the prose always shows the meter's real value.
 - **presentation (`ui`):**
   - a header: `basic` (default) or `time-circuits`
-  - a transition between settings: `none` (default), `fade`, `eighty-eight` or `vhs`
+  - a transition between settings: `none` (default), `fade`, `eighty-eight`, `vhs` or `slime`
   - optional destination badges on choices
 
 ## Adding a story

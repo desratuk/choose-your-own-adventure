@@ -1,0 +1,777 @@
+import type { Cond, Effects, Page, Story } from '../../src/engine/types';
+
+const is = (flag: string, value: string | boolean = true): Cond => ({ flag, is: value });
+const not = (cond: Cond): Cond => ({ not: cond });
+const all = (...conds: Cond[]): Cond => ({ all: conds });
+const ge = (n: number): Cond => ({ flag: 'margin', gte: n });
+const le = (n: number): Cond => ({ flag: 'margin', lte: n });
+const cost = (n: number): Effects => ({ add: { margin: -n } });
+
+const raw: Page[] = [
+  // ── LOWER MANHATTAN ──────────────────────────────────────────
+  {
+    id: 'R01',
+    title: 'Last Job of the Night',
+    era: 'streets',
+    time: 'FRI NOV 15 · 7:10 PM',
+    cast: ['player', 'dolores'],
+    imagePrompt: `A cramped dispatch office above a bagel shop on a rainy night: a city map on the wall, a CB radio and a dirty coffee machine on a cluttered desk. Dolores, phone in one hand, holds out a yellow job slip to the player, who is seen from behind in the silver helmet, mustard-yellow windbreaker and messenger bag, dripping on the mat. Rain streaks the window.`,
+    text: [
+      `Lower Manhattan, Friday, November 15th, 1985, ten past seven at night. It has been raining since lunch, a thin cold rain that gets inside your collar however you zip up. You’re seventeen and you work as a bicycle courier for Quickfoot Couriers. That means you spend your days riding a battered ten-speed through traffic with a black messenger bag across your back, carrying envelopes, contracts and film reels from one building to another. You wear a dented silver helmet, a mustard-yellow nylon windbreaker with a reflective stripe and orange high-top sneakers, so that drivers have a fair chance of seeing you.`,
+      `You’ve just come in from your last drop. Quickfoot’s dispatch office is a cramped room above a bagel shop on Greenwich Street, in the neighborhood called Tribeca. It has a map of the city on one wall, a CB radio on the desk and a coffee machine nobody has ever cleaned. You lock your bike to the railing outside and drip onto the mat. Dolores Vance, the dispatcher, is on the phone with her feet on the desk. She hangs up when she sees you.`,
+      `“Don’t take your jacket off,” says Dolores. “I’ve got one more, and it’s the weird kind. Pell & Sons, the stamp shop on Staple Street. Mr. Pell found something in his cellar last week and it’s been giving him trouble. It goes to number fourteen North Moore Street. The firehouse.”`,
+      `You know the firehouse. Everyone in New York does, since last year. It’s the headquarters of the Ghostbusters: four scientists, Peter Venkman, Ray Stantz, Egon Spengler and Winston Zeddemore, who wear backpacks called proton packs and catch ghosts for a fee. A caught ghost is shut in a ghost trap, a flat box with doors that snap closed, and the trap is emptied into the containment grid, an electrical vault in the firehouse basement that holds every ghost they’ve ever caught. The grid is the one thing the Ghostbusters can’t do without, and it can only hold so much. If it’s overloaded, everything inside it gets out.`,
+      `“Janine called it in herself,” says Dolores. Janine Melnitz is the Ghostbusters’ receptionist, and she has been phoning Quickfoot every few days for a year. “She says the team is out on jobs until late tonight, so Mr. Pell is stuck with the thing. One of them, Egon Spengler, says it’s low risk, and he sent over a tag for it. The tag’s at Pell’s already. Hazard pay, double time.” She holds out the slip. “Cold, wet and haunted. Well?”`,
+    ],
+    choices: [
+      { text: `Take the job and ride to Staple Street`, to: 'R02' },
+      { text: `Tell Dolores you’re finished for the night and go home`, to: 'E01' },
+    ],
+  },
+  {
+    id: 'R02',
+    title: 'Pell & Sons',
+    era: 'streets',
+    time: 'FRI NOV 15 · 7:35 PM',
+    cast: ['player', 'pell', 'canister'],
+    onEnter: { set: { running: true } },
+    imagePrompt: `Inside a narrow old stamp shop at night: glass cases of tiny framed stamps and a big yellowed engraved map on the wall behind the counter. Mr. Pell, in his cardigan and half-moon glasses, holds out a brass canister with a round dial tag taped to its side. The player, seen from behind in the silver helmet and mustard-yellow windbreaker, stands at the counter. Rain on the shop window.`,
+    text: [
+      `Staple Street is a short, crooked lane between old warehouses, and Pell & Sons Fine Stamps is a narrow shop with a bell on the door and a window full of tiny framed rectangles. It’s twenty-five to eight. Mr. Alden Pell, a stooped man in a cardigan and half-moon glasses, has been waiting inside with every light on. He lets you in and locks the door behind you.`,
+      `“Thank goodness,” he says. “Forty years I’ve sold stamps here, and I’ve never had to ask a courier to take away my cellar.” He lifts a dish towel off the counter. Under it is a brass cylinder about the size of a thermos, with grey felt rings at both ends. A small brass plate on its side is stamped THE PNEUMATIC MAIL CO., and under that, in worn capitals: ST. 9 · 11:20 UP. A round metal tag the size of a coaster has been taped on beside it. The tag has a glass window with a needle behind it, over a scale from 0 to 100 marked GRID LOAD. The needle sits at {{clock}}.`,
+      `“Last week a wall in my cellar came down,” says Mr. Pell. “Behind it was a brass pipe, a dead one, running off under the street, and this was jammed in its mouth. It’s a carrier from the old pneumatic mail, the tubes that used to shoot letters around the city in canisters. Eighty-odd years old. Since I pulled it out, the cellar’s been freezing, and last night a man in a green eyeshade walked through my shop, nodded to me and went out through the wall.”`,
+      `He taps the tag. “Egon Spengler, of the Ghostbusters, sent that over this afternoon. Anything ghostly that gets near the canister is pulled straight into the containment grid at the firehouse, so it can’t get at you. But the grid can only hold so much. The needle shows how full it is, and at a hundred, he says, the grid fails. The team is out until late and can’t come, so I’m to send it to the firehouse and they’ll deal with it.”`,
+      `On the wall behind the counter, among the stamps, hangs one large yellowed map: an engraving titled PNEUMATIC MAIL COMPANY · LOWER MANHATTAN · 1897. Thin lines run out from a central building to twelve numbered stations. Mr. Pell, hunting for a pen, sees you looking. “My other hobby,” he says. “The key down the side lists them. One, General Post Office. Two, Wall Street. Three, Produce Exchange. Four, Staple Street, which is here. Five, Fulton Market. Six, City Hall. Seven, Cortlandt Street. Eight, Chambers Street. Nine, Park Row Annex. Ten, Washington Market. Eleven, Broad Street. Twelve, Brooklyn Bridge. The whole system shut down in the fifties, and the Annex was pulled down long before that. There’s a hotel over it now, I think. Not that it matters.” The only hotel on Park Row, you know from your rounds, is the Sedgewick, which fills a whole block.`,
+      `“The pipe runs off east under the street,” he adds, “with a narrow service passage beside it. I’m not going down there again.” He settles the canister in your messenger bag with the tag facing out. “North Moore Street. Tonight, please.”`,
+    ],
+    choices: [{ text: `Ride out onto Staple Street`, to: 'R03' }],
+  },
+  {
+    id: 'R03',
+    title: 'The Cold Spot',
+    era: 'streets',
+    onEnter: cost(5),
+    cast: ['player', 'clerks'],
+    imagePrompt: `A narrow wet cobbled lane at night between old brick warehouses. The player, seen from behind on a bicycle in the silver helmet and mustard-yellow windbreaker, has stopped. Three pale see-through ghost clerks in grey vests, sleeve garters and green eyeshades stand in a line across the street, pointing at the player’s messenger bag. A flickering streetlamp and falling rain. Alone (no Ghostbusters here).`,
+    text: [
+      `You’ve gone twenty yards down Staple Street when the streetlights begin to flicker, one by one, the length of the block, and the air around your bike goes cold enough to show your breath. In your bag the canister starts to hum. Behind you, the shop’s lit window goes dark.`,
+      `Three figures step out of the brick wall of the warehouse on your left. They’re pale and see-through, in grey vests, sleeve garters and green eyeshades, each with a leather satchel. They don’t attack. They line up across the street and point at your bag together, like a crowd at a ticket window. The nearest makes a very polite “give it here” gesture.`,
+      `The tag jerks on the side of your bag. There’s a thump from inside it and a flash, and all three clerks are gone, sucked sideways into the air with a sound like a zipper. A scatter of paper scraps drifts down in the rain. The needle jumps to {{clock}}.`,
+      `So that’s what the tag does. It keeps you safe, and it puts load on the grid every time. The needle doesn’t come back down.`,
+    ],
+    choices: [{ text: `Stop at the corner to think`, to: 'R04' }],
+  },
+  {
+    id: 'R04',
+    title: 'Staple Street Corner',
+    era: 'streets',
+    time: 'FRI NOV 15 · EVENING',
+    cast: ['player'],
+    imagePrompt: `A rainy Tribeca street corner at night under the awning of a shuttered dry cleaner. The player, seen from behind in the silver helmet and mustard-yellow windbreaker with the messenger bag, stands with a bicycle and looks out at the wet street, where a sodium streetlamp glows orange. Alone, nobody else is here.`,
+    text: [
+      `You stop at the corner of Staple Street, under the awning of a shuttered dry cleaner, and push the rain off your helmet. The canister hums in your bag. The needle reads {{clock}}.`,
+      { if: is('hasTrap'), text: `Winston’s spare trap is strapped to the back of your messenger bag.` },
+      { if: is('slimerPlan'), text: `Slimer has promised to be waiting for you in the Sedgewick’s cellar.` },
+      { if: is('knowsChute'), text: `Mr. Hollis’s napkin is in your pocket, with the coal chute on Ann Street marked on it.` },
+      `Dolores and Mr. Pell both said the firehouse, five minutes from here. You have to decide where the canister really goes, and every stop between here and there will cost you some load.`,
+    ],
+    choices: [
+      { text: `Ride to the firehouse on North Moore Street, as Dolores said`, to: 'F01', if: not(is('visitedFirehouse')) },
+      { text: `Duck into the diner across the street, where the lights are on`, to: 'R07', if: not(is('visitedDiner')) },
+      { text: `Try the Church Street post office, a few blocks over`, to: 'R05', if: not(is('visitedPost')) },
+      { text: `Ride to Engine Company 9, the fire station on Great Jones Street`, to: 'R06', if: not(is('visitedEngine')) },
+      { text: `Ride up to the Sedgewick Hotel on Park Row`, to: 'S01' },
+      { text: `Go back into Pell’s shop and down his cellar to the old pipe`, to: 'T01', if: not(is('visitedTunnel')) },
+    ],
+  },
+  {
+    id: 'R05',
+    title: 'Church Street Station',
+    era: 'streets',
+    onEnter: { set: { visitedPost: true }, ...cost(10) },
+    cast: ['player', 'clerks'],
+    imagePrompt: `The brightly lit lobby of a neighborhood post office at night: a high ceiling, a long counter and a brass night-drop slot under a wall clock. A sleepy clerk in a blue postal sweater with half a sandwich in his hand looks at a brass canister on the counter. The player, seen from behind in the silver helmet and mustard-yellow windbreaker, stands in front of the counter. Two pale grey ghost clerks peek out of the sorting-room wall behind him.`,
+    text: [
+      `Church Street Station is the neighborhood post office, a tall brick building with a flag out front, open late on Fridays. Inside, a few people wait in the line under a high ceiling, and the brass night-drop slot under the wall clock says MAIL ANYTIME. You carry the canister to the counter and show the clerk the plate. He’s a sleepy man in a blue postal sweater, with half a sandwich in one hand.`,
+      `“Station Nine?” he says. “This is Station Three-One-Five, kid. There’s no Station Nine. Never heard of it.” He turns the canister over, finds nothing that looks like an address and hands it back. Behind him, a pair of grey clerks lean out of the sorting-room wall to look at it with open longing, and the tag takes them with a zip. The clerk hears the zip and looks round, but there’s nothing there. The needle jumps to {{clock}}.`,
+      `“If it’s mail,” he says, with his mouth full, “drop it in the slot and we’ll route it. Sorting’s the sorting room’s problem.”`,
+    ],
+    choices: [
+      { text: `Drop it in the night slot and let the Postal Service sort it out`, to: 'E04' },
+      { text: `Take it back and leave`, to: 'R04' },
+    ],
+  },
+  {
+    id: 'R06',
+    title: 'Engine Company 9',
+    era: 'streets',
+    onEnter: { set: { visitedEngine: true }, ...cost(10) },
+    cast: ['player'],
+    imagePrompt: `A red-brick city fire station at night with its big doors open and a gleaming red fire engine inside. A broad, mustached firefighter lieutenant in a navy uniform, interrupted in the middle of a card game, studies a brass canister held by the player, who is seen from behind in the silver helmet and mustard-yellow windbreaker. A second firefighter at the card table looks on. Rain outside.`,
+    text: [
+      `Engine Company 9 is a red-brick firehouse on Great Jones Street, about a mile north, with its big doors open and its fire engine gleaming under the lights. Two firefighters are playing cards at a table by the door. You ride the whole way with grey clerks stepping out of walls to look at you and being taken by the tag, and the needle reads {{clock}} by the time you stop.`,
+      `“Station Nine?” says Lieutenant Gallo, a broad, mustached man who stops mid-deal to study the plate on the canister. “Sure, that’s us. Engine Nine. But I never ordered anything in a brass can. Our alarms come by wire.” He sniffs. “Is that humming coming from your bag?”`,
+      `“It’s for the Ghostbusters,” you say.`,
+      `“Then take it to the Ghostbusters,” says Gallo, with the relief of a man handing off a problem. “Fire, we’re good at. This isn’t that.”`,
+    ],
+    choices: [{ text: `Ride back downtown`, to: 'R04' }],
+  },
+  {
+    id: 'R07',
+    title: 'The Blue Plate Diner',
+    era: 'streets',
+    onEnter: { set: { visitedDiner: true }, ...cost(5) },
+    cast: ['player', 'hollis', 'clerks'],
+    imagePrompt: `A small fogged-up diner at night with a counter, ten stools and a glass pie case. A lean elderly man in a navy cap and grey raincoat sits at the counter with a coffee mug and smiles at the player, who is seen from behind in the silver helmet and mustard-yellow windbreaker on the next stool. Two pale ghost clerks peer wistfully out of the pie case. Rain on the window.`,
+    text: [
+      `The Blue Plate Diner across Staple Street is one of the last places open on a Friday night: ten stools, a counter, a pie case and a window fogged with rain. You lean your bike on the glass outside and take the stool next to the only other customer, a lean man in his seventies, in a navy cap and a grey raincoat, nursing a coffee. The canister hums in your bag. Before you can say anything, two grey clerks lean out of the pie case, look wistfully at the cherry pie and are pulled away by the tag. The needle jumps to {{clock}}. Nobody else in the diner notices.`,
+      `“Don’t mind me, I’m only a retired mailman,” says the man in the cap. His name is Mr. Hollis, he carried mail in Lower Manhattan for forty years, and he has the cap to prove it. He looks at your bag. “That hum. My first week on the job, back in ’41, the old pneumatic tubes were still running under the streets. You’d hear them clatter in the walls at night. The old hands said the clerks who worked them never really went home.” He winks. “That’s only talk.” He turns his cup. “What have you got there?”`,
+    ],
+    choices: [
+      { text: `Ask him whether there’s a quiet way into the Sedgewick Hotel`, to: 'R08' },
+      { text: `Thank him and go back out`, to: 'R04' },
+    ],
+  },
+  {
+    id: 'R08',
+    title: 'The Napkin',
+    era: 'streets',
+    onEnter: { set: { knowsChute: true } },
+    cast: ['player', 'hollis'],
+    imagePrompt: `The diner counter. Mr. Hollis, the lean elderly man in the navy cap and grey raincoat, draws a map on a paper napkin with a pencil stub. The player, seen from behind in the silver helmet and mustard-yellow windbreaker, leans over to watch. Alone with Mr. Hollis (no ghosts here).`,
+    text: [
+      `You tell Mr. Hollis you’re headed for the Sedgewick, and that you’d rather not walk through the lobby with this. He thinks about it for a long time, then draws on a napkin with a pencil stub. “Round the side, on Ann Street,” he says. “There’s a steel plate set in the pavement, about halfway down. That’s the old coal chute. It goes straight into the cellar, and they never bricked it up. The padlock rusted open in the sixties.” He hands you the napkin. “Don’t tell them where you heard it. I still buy my paper from the stand outside that hotel.”`,
+      `You fold the napkin into your pocket and go back out into the rain.`,
+    ],
+    choices: [{ text: `Go back to the corner`, to: 'R04' }],
+  },
+
+  // ── FIREHOUSE ────────────────────────────────────────────────
+  {
+    id: 'F01',
+    title: '14 North Moore Street',
+    era: 'firehouse',
+    time: 'FRI NOV 15 · EVENING',
+    onEnter: { set: { visitedFirehouse: true }, ...cost(10) },
+    cast: ['player', 'janine', 'slimer'],
+    imagePrompt: `The front office of an old brick firehouse at night: a cluttered reception desk, a hand-lettered sign, a brass pole in the ceiling. Janine, red curly hair and huge glasses, a carton of chow mein in one hand, holds out the other hand for the canister. A squat round bright-green ghost with a huge mouth floats behind her with a hot dog. The player, seen from behind in the silver helmet and mustard-yellow windbreaker, stands at the desk.`,
+    text: [
+      `Fourteen North Moore Street is a squat red-brick firehouse with a wide arched garage door and a small side door under a lit sign. The big door is shut and the parking space in front of it is empty. You lock your bike to a lamppost and go in by the side door. The moment you carry the canister over the threshold, three grey clerks come through the front wall at once, and the tag pulls all three into the grid before you’ve taken your helmet off. The needle jumps to {{clock}}.`,
+      `Janine Melnitz is at the front desk: a woman in her twenties with red curly hair, enormous glasses and a Brooklyn accent, eating chow mein out of a carton. “That’s the Pell canister,” she says. “Nobody’s here but me. The team called from a pay phone an hour ago. Four jobs, a traffic jam and Peter lost a shoe. They’ll be back around eleven if the traffic gives out, midnight if it doesn’t.”`,
+      `Behind her, something green and round, the size of a beanbag chair, floats out of the kitchen with a hot dog in its enormous mouth. “That’s Slimer,” says Janine, without turning around. “The team caught him last year and he never left. He’s a ghost, but the grid ignores him because Egon told it to. Don’t give him your jacket, he’ll lick it.” She holds out a hand. “Give me the canister. I’ll lock it in the supply closet until they’re back, and you can go home to your night.”`,
+    ],
+    choices: [
+      { text: `Hand the canister to Janine to keep safe until the team is back`, to: 'E02' },
+      { text: `Ask Janine whether the Ghostbusters have anything that could help you out there`, to: 'F02' },
+      { text: `Sit down and wait for the team to get back`, to: 'F04' },
+      { text: `Leave with the canister`, to: 'R04' },
+    ],
+  },
+  {
+    id: 'F02',
+    title: 'Winston’s Spare',
+    era: 'firehouse',
+    onEnter: { set: { hasTrap: true } },
+    cast: ['player', 'janine', 'slimer', 'trap'],
+    imagePrompt: `A long concrete engine bay inside a firehouse with a brass pole, an empty parking space and a tall steel equipment shelf. Janine hands a flat grey box with two hinged doors, a pedal on a cord and hazard stripes to the player, who is seen from behind in the silver helmet and mustard-yellow windbreaker. Slimer floats in the kitchen doorway with mustard on his face.`,
+    text: [
+      `Janine considers you for a second, then gets up and leads you through a door into the engine bay: a long concrete room with a brass pole in the ceiling, an empty space where the team’s car usually parks and a tall steel shelf of equipment. She takes a flat grey box off the bottom shelf. It has two hinged doors on top, a pedal on a cord and hazard stripes along the sides.`,
+      `“Winston’s spare trap,” she says. “It’s his emergency one, so if anyone asks, you didn’t get it from me. You put it on the floor and stamp the pedal, and the doors open. The ghosts go in and the doors shut. It holds one batch, no more.”`,
+      `“Here’s the thing about the tag,” she adds. “It grabs anything that gets close to the canister and sends it down the line to the grid in the basement. That’s Egon’s safety setting. But the grid only holds so much, and a ghost that’s in a trap isn’t in the grid. So when it gets crowded, use the trap.”`,
+      `You strap the trap to the back of your messenger bag. Behind you, Slimer has floated out of the kitchen to see what’s going on, with mustard on his face.`,
+    ],
+    choices: [
+      { text: `Ask Slimer whether he knows the Sedgewick Hotel`, to: 'F03' },
+      { text: `Thank Janine and go back out`, to: 'R04' },
+    ],
+  },
+  {
+    id: 'F03',
+    title: 'Slimer',
+    era: 'firehouse',
+    onEnter: { set: { slimerPlan: true } },
+    cast: ['player', 'janine', 'slimer'],
+    imagePrompt: `The firehouse engine bay. Slimer, the squat bright-green ghost with the huge mouth, does a delighted midair loop with his tiny arms spread wide. Janine shakes her head beside him, holding a hot dog. The player, seen from behind in the silver helmet and mustard-yellow windbreaker, grins.`,
+    text: [
+      `You ask Slimer whether he knows the Sedgewick Hotel, and he goes off like a firework. He does a full loop of the engine bay, drools on the shelf and says, “Sed-gwick! Sed-gwick!”`,
+      `“That’s where the team caught him,” says Janine. “He lived in the kitchen. He’s been homesick for the room service ever since.” Slimer hovers in front of you, thinking so hard that his whole face wobbles. “Cellar,” he says at last. “Door. Big door. Slimer open.”`,
+      `“He says there’s a big old bronze door in the hotel’s cellar that’s been shut for years,” says Janine, “and he can go through the wall and open it from the inside. If you can get into the cellar, he’ll meet you by it.” Slimer nods hard, and then spots Janine’s chow mein.`,
+      `“When he says he’ll be somewhere, he’s there,” says Janine, holding the carton over her head. “Unless there’s a hot dog involved. Good luck.”`,
+    ],
+    choices: [{ text: `Go back out to the corner of Staple Street`, to: 'R04' }],
+  },
+  {
+    id: 'F04',
+    title: 'The Long Wait',
+    era: 'firehouse',
+    onEnter: cost(15),
+    cast: ['player', 'janine', 'slimer'],
+    imagePrompt: `The firehouse front office late at night. The player, seen from behind in the silver helmet and mustard-yellow windbreaker, sits on a wooden bench with a towel round the shoulders and a cold carton of chow mein, the brass canister in a messenger bag on the floor. Janine bats a rolled-up newspaper at Slimer, who is trying to eat a felt ring on the canister. A radio plays on the desk.`,
+    text: [
+      `You sit down on the bench in the front office to wait. Janine gives you a towel and a carton of cold chow mein. Her radio plays on the desk, and every few minutes something grey steps through the wall toward your bag and the tag takes it. Janine glances at the needle each time. At first she says “oh, that’s fine.” After a while she stops saying anything.`,
+      `The hours go slowly. Slimer drifts in and out, and once he tries to eat one of the felt rings on the canister until Janine bats him away with a rolled-up newspaper. The needle climbs to {{clock}}. Somewhere under your feet the grid makes a noise like a refrigerator trying to sing.`,
+      `At five past eleven the wide garage door rattles up, and four wet, tired people come in out of the rain.`,
+    ],
+    choices: [{ text: `Stand up`, to: 'F05' }],
+  },
+  {
+    id: 'F05',
+    title: 'Back from the Job',
+    era: 'firehouse',
+    time: 'FRI NOV 15 · 11:05 PM',
+    cast: ['player', 'peter', 'ray', 'egon', 'winston', 'janine'],
+    imagePrompt: `The firehouse engine bay at night. Four wet people in khaki jumpsuits with heavy grey backpacks come in through the big garage door: Peter, sardonic, tries to pull a squelching shoe off; Ray, big and cheerful, holds a half-eaten sandwich and peers at a brass canister; Egon, tall and thin with round glasses, reads the dial on a tag; Winston drops into a chair. Janine stands beside them. The player, seen from behind in the silver helmet and mustard-yellow windbreaker, holds the canister.`,
+    text: [
+      `The four Ghostbusters come in shaking rain off their khaki jumpsuits, each with a heavy grey backpack. Janine introduces them as they pass. Dr. Peter Venkman, tall, dark-haired and smirking, is trying to pull a squelching shoe off one foot. Dr. Ray Stantz, big and cheerful with a boyish face, is holding half a sandwich. Dr. Egon Spengler, tall, thin and pale, with round glasses and swept-up hair, is already looking at the dial on your bag. And Winston Zeddemore, the calm one, drops into a chair with a long sigh.`,
+      `“That’s the Pell canister,” says Egon. He reads the dial. “The load is {{clock}} and rising. Hand it to me. I’ll seal it in the containment unit and we’ll deal with it at a proper hour.”`,
+      `“Don’t mind him,” says Peter. “He’s been like that since dinner. Which we didn’t have.”`,
+      `Ray has gone straight to the plate on the side of the canister and is turning it in his hands. “An 1898 carrier,” he says. “Do you know how long I’ve wanted to hold one of these?”`,
+    ],
+    choices: [
+      { text: `Give the canister to Egon`, to: 'E07' },
+      { text: `Ask them to hear you out before they seal it`, to: 'F06' },
+    ],
+  },
+  {
+    id: 'F06',
+    title: 'Eleven Minutes',
+    era: 'hotel',
+    time: 'FRI NOV 15 · 11:09 PM',
+    cast: ['player', 'peter', 'ray', 'egon', 'winston', 'ernie', 'voss'],
+    imagePrompt: `The grand marble lobby of an old hotel at night. A small neat night manager in a black suit stands with his arms folded in front of the Ghostbusters in khaki jumpsuits and backpacks, while a skinny bellhop in a maroon uniform waves them toward a staff door. The player, seen from behind in the silver helmet and mustard-yellow windbreaker with the messenger bag, follows. Wet footprints on the marble.`,
+    text: [
+      `You tell them quickly, with Egon checking his watch. The plate on the canister says ST. 9 · 11:20 UP. The map on Mr. Pell’s wall lists Station 9 as the Park Row Annex, and Mr. Pell said there’s a hotel over it now. On Park Row, the building that fits is the Sedgewick, which fills the whole block. If the plate means what you think it does, the canister has to be at Station 9 at 11:20. That’s eleven minutes from now.`,
+      `Peter looks at Ray. Ray looks at Egon. “It’s not unreasonable,” says Egon, which is the highest praise he gives. “Winston, the car.”`,
+      `You ride in the back of the team’s old white Cadillac ambulance with the siren going. Your bike stays chained to the lamppost outside the firehouse. It takes six minutes. The Sedgewick is a huge dark granite hotel with a copper roof, and in its marble lobby the night manager, Mr. Voss, a small neat man in a black suit, meets you with his arms folded. “Not you four again,” he says. Peter holds up a card that doesn’t say anything official and says, “City business.”`,
+      `A skinny young bellhop in a maroon uniform peels away from his luggage cart. His badge says ERNIE. Ray asks him the way down to the cellar. “I’ll take you,” says Ernie. “The bell down there rings at eleven-twenty every night, and I never go near it.” He leads you through a staff door and down two flights of back stairs, then along a brick corridor under the lobby. It’s 11:17 when you reach a round-topped bronze door with a wheel in the middle.`,
+    ],
+    choices: [{ text: `Stand back while Winston takes the wheel`, to: 'E09' }],
+  },
+
+  // ── PARK ROW ─────────────────────────────────────────────────
+  {
+    id: 'S01',
+    title: 'Park Row',
+    era: 'hotel',
+    time: 'FRI NOV 15 · NIGHT',
+    onEnter: cost(10),
+    cast: ['player', 'clerks'],
+    imagePrompt: `A wide wet street at night in front of a vast dark granite hotel with a green copper roof, a golden revolving door and a dripping awning. The player, seen from behind in the silver helmet and mustard-yellow windbreaker, chains a bicycle to the railing by the entrance. A narrow shadowy lane runs along the side of the hotel. Alone, nobody else is here.`,
+    text: [
+      `You ride east to Broadway and down past City Hall Park to Park Row, hunched over the handlebars in the rain. Four times along the way a grey figure steps out of a doorway into the road ahead of you, and four times the tag pulls it into the grid with a sound like a zipper. The needle reads {{clock}} by the time you stop.`,
+      `The Sedgewick Hotel takes up a whole block: a vast, dark pile of granite with a green copper roof, a revolving door lit in gold and an awning that drips onto the sidewalk. A narrow lane called Ann Street runs along its side. You chain your bike to the railing by the entrance.`,
+      { if: is('knowsChute'), text: `Mr. Hollis said the old coal chute is on the Ann Street side, about halfway down.` },
+    ],
+    choices: [
+      { text: `Go in through the revolving door`, to: 'H01' },
+      { text: `Go round to Ann Street and find the coal chute`, to: 'H04', if: is('knowsChute') },
+    ],
+  },
+  {
+    id: 'H01',
+    title: 'The Lobby',
+    era: 'hotel',
+    cast: ['player', 'voss', 'ernie'],
+    imagePrompt: `A vast marble hotel lobby at night with brass lamps, a ceiling painted with pink clouds and a front desk like a pulpit. A small neat night manager in a black suit writes in a ledger behind it. A skinny bellhop in a maroon uniform leans on a luggage cart. A brass plaque is on the wall by the revolving door. The player, seen from behind in the silver helmet and mustard-yellow windbreaker with the messenger bag, stands just inside the door. A damp green stain on the carpet.`,
+    text: [
+      `The lobby of the Sedgewick is enormous: marble floors, brass lamps, a ceiling painted with pink clouds and a front desk the size of a pulpit. A few guests sit in armchairs reading newspapers and trying not to look nervous. It’s warm after the rain and smells of floor polish and, faintly, of something burnt.`,
+      `Beside the revolving door a brass plaque says THE SEDGEWICK HOTEL · BUILT 1899 ON THE SITE OF THE PARK ROW POST OFFICE ANNEX. Behind the desk, a small neat man in a black suit is writing in a ledger. His nameplate says MR. VOSS, NIGHT MANAGER. A skinny young bellhop in a maroon uniform leans on a luggage cart nearby and stares at the ceiling. By the elevators, a damp green stain about the size of a pillow is drying on the carpet.`,
+      `A door behind the desk is marked STAFF ONLY · CELLAR. To reach it you have to get past Mr. Voss.`,
+    ],
+    choices: [{ text: `Walk up to the desk and ask Mr. Voss about the cellar`, to: 'H02' }],
+  },
+  {
+    id: 'H02',
+    title: 'The Night Manager',
+    era: 'hotel',
+    onEnter: cost(10),
+    cast: ['player', 'voss', 'clerks'],
+    imagePrompt: `The hotel lobby. The small neat night manager in a black suit has gone pale and points a shaking finger at a green eyeshade lying alone on the marble floor. The player, seen from behind in the silver helmet and mustard-yellow windbreaker, stands at the desk with the humming messenger bag. A guest in an armchair has dropped a newspaper. A faint trail of paper scraps drifts down.`,
+    text: [
+      `“The cellar is for staff,” says Mr. Voss, before you’ve finished the sentence. “Guests who ask for the cellar want a refund. Is that a delivery? Deliveries go to the loading dock on Ann Street, and the dock closed at six.”`,
+      `While he’s talking, a pale grey clerk in an eyeshade rises out of the marble floor behind him, looks straight at your bag and bows. The tag zips him away. The needle jumps to {{clock}}, and the clerk’s green eyeshade drops to the carpet by itself. In an armchair, a guest lets go of her newspaper. Mr. Voss hasn’t seen the clerk, only the eyeshade. He goes the color of paper. “Is there a ghost in my lobby?” he whispers.`,
+      `“Whatever is in that bag,” he says, “take it out of my hotel.”`,
+    ],
+    choices: [
+      { text: `Tell him you’re delivering it for the Ghostbusters and the haunting will stop if you can get it to the cellar`, to: 'H03' },
+      { text: `Run for the staff door while he’s shaken`, to: 'E05' },
+    ],
+  },
+  {
+    id: 'H03',
+    title: 'The Back Stairs',
+    era: 'hotel',
+    onEnter: { set: { route: 'lobby' } },
+    cast: ['player', 'voss', 'ernie'],
+    imagePrompt: `A narrow back staircase in an old hotel, with bare bulbs and peeling green paint. A skinny young bellhop in a maroon uniform leads the way down with a flashlight and looks back over his shoulder at the player, who is seen from behind in the silver helmet and mustard-yellow windbreaker with the humming messenger bag.`,
+    text: [
+      `Mr. Voss goes an even paler shade at the word “Ghostbusters.” “Those four took my ballroom apart last year,” he says. He closes his eyes. “Ernie! Take this person down to the cellar. And if the basement floods, you’re paying.”`,
+      `Ernie, the skinny young bellhop, leads you through the staff door and down two flights of back stairs with a flashlight. “The bell down there rings at eleven-twenty every night,” he tells you, almost in a whisper. “On its own. I’ve worked here three years and never been near it.” At the bottom of the stairs, where a brick corridor begins, he stops and holds out the flashlight. “It’s that way,” he says, and goes back up a good deal faster than he came down.`,
+    ],
+    choices: [{ text: `Go along the corridor`, to: 'C01' }],
+  },
+  {
+    id: 'H04',
+    title: 'The Coal Chute',
+    era: 'hotel',
+    onEnter: { set: { route: 'chute' } },
+    cast: ['player'],
+    imagePrompt: `A narrow dark lane at night behind a big hotel. The player, seen from behind in the silver helmet and mustard-yellow windbreaker, kneels in the rain and heaves up a rusty square steel plate set in the pavement, revealing a black metal chute. A faint orange glow from a distant streetlamp. Alone, nobody else is here.`,
+    text: [
+      `Ann Street is a dark, narrow lane along the side of the hotel, lined with delivery doors and overflowing bins. Halfway along, set into the pavement, you find a square steel plate rusted red, with a padlock rusted open and hanging from its hasp. You heave it up, and a black metal chute slopes down into the cold.`,
+      `You hug the canister to your chest, sit on the edge and let go.`,
+    ],
+    choices: [{ text: `Slide down`, to: 'C01' }],
+  },
+
+  // ── UNDERGROUND ──────────────────────────────────────────────
+  {
+    id: 'T01',
+    title: 'Pell’s Cellar',
+    era: 'under',
+    time: 'FRI NOV 15 · EVENING',
+    onEnter: { set: { visitedTunnel: true }, ...cost(10) },
+    cast: ['player', 'pell', 'clerks'],
+    imagePrompt: `A steep stair down into an old brick cellar at night. A stooped old man in a brown dressing gown and half-moon glasses holds a lantern at the top of the steps. At the bottom, a collapsed wall is propped with timber, and behind it a thick brass tube runs away into the dark beside a narrow passage with a rusty ladder. The player, seen from behind in the silver helmet and mustard-yellow windbreaker, stands at the foot of the stairs.`,
+    text: [
+      `You ride back down Staple Street to Pell’s and knock on the shop door. Mr. Pell opens it in a brown dressing gown. He hasn’t gone to bed. “You’ve brought it back?” he says. “No,” you say. “I need to follow the pipe.” He looks at you for a long moment, then wheels your bike into the back room.`,
+      `The cellar stairs are steep, and at the bottom the air is cold enough to show your breath. The wall that fell has been propped up with timber. Behind it, a brass tube as thick as a drainpipe runs away into the dark, and beside it is a narrow service passage. “If you see a man in a green eyeshade,” says Mr. Pell from the top of the stairs, “tell him we’re closed.”`,
+      `The passage is low and brick, and the pipe runs along its right-hand wall. You hear faint sounds ahead: a clatter like a ticker tape and a bell, far off. Twice, grey figures lean out of the wall to look at your bag, and twice the tag takes them. By the time you reach the end of the first stretch the needle reads {{clock}}.`,
+    ],
+    choices: [{ text: `Follow the pipe`, to: 'T02' }],
+  },
+  {
+    id: 'T02',
+    title: 'The Tube Gallery',
+    era: 'under',
+    cast: ['player'],
+    imagePrompt: `A long vaulted brick gallery underground. Six brass tubes run side by side along the right-hand wall and vanish together into a low, narrow passage at the far end. On the left, behind a rusted open iron gate, a wide passage glows with warm yellow light. The player, seen from behind in the silver helmet and mustard-yellow windbreaker with the messenger bag, stands in the middle with a flashlight. Alone, nobody else is here.`,
+    text: [
+      { if: is('visitedSorting'), text: `You’re back in the long brick gallery, with the six brass tubes along the right-hand wall and the dial glowing faintly in the dark.`, else: `After a few hundred yards the passage opens into a long brick gallery with a vaulted ceiling. Six brass tubes run side by side along the right-hand wall, each stamped with a number, and they vanish together into a low, narrow passage at the far end. The dial glows faintly in the dark.` },
+      `The gallery has two other ways on. On the left, behind a rusted iron gate that hangs open, a wide passage runs off toward a warm yellow light and a steady clatter of machinery. At the end of the tubes, the right-hand passage is narrow, wet and smells of river water.`,
+    ],
+    choices: [
+      { text: `Take the wide passage on the left toward the light`, to: 'T03', if: not(is('visitedSorting')) },
+      { text: `Follow the tubes into the narrow passage`, to: 'T04' },
+    ],
+  },
+  {
+    id: 'T03',
+    title: 'The Sorting Room',
+    era: 'under',
+    onEnter: { set: { visitedSorting: true }, ...cost(10) },
+    cast: ['player', 'clerks'],
+    imagePrompt: `A long underground hall lit by rows of green-shaded desk lamps. A hundred pale see-through ghost clerks in grey vests, sleeve garters and green eyeshades sort phantom letters into wooden pigeonholes at long desks, and every head has turned toward the doorway. The player, seen from behind in the silver helmet and mustard-yellow windbreaker, stands frozen in it with the humming messenger bag.`,
+    text: [
+      `The yellow light is a row of green-shaded lamps over long desks in a vaulted hall, and at the desks sit a hundred grey clerks, sorting letters you can’t see into pigeonholes you can. When you step in, every head lifts. The canister’s hum rises to a whine. The whole room stands up.`,
+      `The tag works through them as fast as it can with a sound like a dozen zippers, and the needle runs up to {{clock}}. You back out through the gate with the survivors drifting after you into the gallery, where they lose interest, one by one, and wander off into the walls. You’ve found out what the left-hand passage is, and it isn’t the way to anywhere.`,
+    ],
+    choices: [{ text: `Go back to the gallery`, to: 'T02' }],
+  },
+  {
+    id: 'T04',
+    title: 'The Blockade',
+    era: 'under',
+    cast: ['player', 'clerks'],
+    imagePrompt: `A narrow wet brick passage with six brass tubes running along one wall. Five rows of silent pale ghost clerks in grey vests and green eyeshades stand shoulder to shoulder across it, arms folded, facing the player, who is seen from behind in the silver helmet and mustard-yellow windbreaker with a flashlight. The brass canister glows through the messenger bag.`,
+    text: [
+      `The narrow passage runs along beside the tubes, wet underfoot, and the brick gets older with every step. Halfway along, the way is blocked. Grey clerks stand shoulder to shoulder across the passage, five rows deep, facing you with their arms folded. They don’t move. The canister’s hum grows heavier. Behind them, far off, something that might be the rungs of a ladder catches the light.`,
+      { if: is('hasTrap'), text: `Winston’s spare trap is heavy on your back.` },
+    ],
+    choices: [
+      { text: `Push through while the tag works on them`, to: 'C01', set: { route: 'tunnel' }, ...cost(10) },
+      { text: `Back out the way you came`, to: 'T05', ...cost(5) },
+    ],
+  },
+  {
+    id: 'T05',
+    title: 'Back Up the Stairs',
+    era: 'streets',
+    cast: ['player', 'pell', 'clerks'],
+    imagePrompt: `A narrow old stamp shop at night. The player, seen from behind in the silver helmet and mustard-yellow windbreaker, wheels a bicycle out through the shop door into the rain while Mr. Pell, a stooped old man in a brown dressing gown and half-moon glasses, holds the door. A faint grey ghost clerk drifts after them near the ceiling.`,
+    text: [
+      `You back away from the clerks and retrace your steps along the passage, with the tag taking a few more of them on the way. You climb the cellar stairs into the shop, where Mr. Pell is still waiting up, and he wheels your bike out to the street for you without asking anything. The needle reads {{clock}}.`,
+    ],
+    choices: [{ text: `Go back to the corner`, to: 'R04' }],
+  },
+  {
+    id: 'C01',
+    title: 'The Hotel Cellar',
+    era: 'under',
+    time: 'FRI NOV 15 · NIGHT',
+    cast: ['player', 'slimer'],
+    imagePrompt: `A long low brick cellar corridor with pipes along the ceiling, a ticking boiler in an alcove and laundry carts against one wall. At the far end, set into dark old stone, is a round-topped bronze door with a spoked wheel, green with age. The player, seen from behind in the silver helmet and mustard-yellow windbreaker with the humming messenger bag, stands at the near end with a flashlight. Soft light, a slight green haze.`,
+    text: [
+      { if: is('route', 'lobby'), text: `Ernie’s footsteps fade away up the back stairs. You’re alone at the bottom of them, at one end of a long brick corridor.` },
+      { if: is('route', 'chute'), text: `You slide down the coal chute on your back, bump over a heap of old coal and land in the hotel cellar with the canister hugged to your chest. You’re at one end of a long brick corridor.` },
+      { if: is('route', 'tunnel'), text: `The tag takes the front rows one after another with its zipper noise, the rest part for you at the last moment, and the passage ends at a shaft with an iron ladder. You climb it with the canister humming against your back and push up a wooden hatch into a long brick corridor. By the laundry carts and the smell of soap, you’re in a hotel cellar, and the only hotel this pipe could reach is the Sedgewick.` },
+      `Pipes run along the ceiling, and a boiler ticks in an alcove. Laundry carts stand against one wall, and the air smells of soap and coal. At the far end, set into a wall of much older, darker stone than the rest of the cellar, is a round-topped bronze door with a spoked wheel in the middle. The letters over it are green with age: STA. 9 · TUBE ROOM. The wheel is rusted solid.`,
+      { if: is('slimerPlan'), text: `A green shape is sitting cross-legged on a laundry cart beside the door, eating a dinner roll. It sees you, drops the roll and waves both arms. “Slimer here!” says Slimer.` },
+    ],
+    choices: [
+      { text: `Ask Slimer to open the door`, to: 'C02', if: is('slimerPlan'), set: { slimerWith: true } },
+      { text: `Put your shoulder to the wheel until it gives`, to: 'C02', if: not(is('slimerPlan')), ...cost(10) },
+    ],
+  },
+  {
+    id: 'C02',
+    title: 'Station 9',
+    era: 'under',
+    cast: ['player', 'slimer', 'trap'],
+    imagePrompt: `A cold vaulted round brick chamber like a church apse, lit by a thin grey light from a street grating high in the ceiling. Two banks of brass tubes come out of the wall: the left bank stenciled UP in worn white letters with a small brass bell on a bracket above it, the right bank stenciled DOWN. A big round wall clock with no hands hangs on the far wall. The player, seen from behind in the silver helmet and mustard-yellow windbreaker with the messenger bag, stands in the open bronze doorway.`,
+    text: [
+      { if: is('slimerWith'), text: `Slimer disappears into the door, and a moment later the wheel spins by itself and the bronze door swings inward with a groan. Slimer is hanging off the wheel from the inside, grinning, and looking very pleased with himself.`, else: `You heave and the wheel screeches round, a few inches at a time. The noise brings clerks out of the walls, and the tag takes them one after another, until the bronze door finally swings inward with a groan.` },
+      `Behind the door is a vaulted brick chamber, round as a church’s apse, lit by a thin grey light that comes down from a street grating high in the ceiling. Two banks of brass tubes come out of the wall, one on each side. The left bank is stenciled UP in worn white letters, and a small brass bell hangs from a bracket above it. The right bank is stenciled DOWN. A big round clock on the far wall has lost both its hands.`,
+      `The room is bitterly cold. As you step in, the canister’s hum settles into something steadier, and the tag’s needle reads {{clock}}. By your watch it’s not yet eleven.`,
+      { if: is('slimerWith'), text: `Slimer floats in after you and perches on top of the UP bank, nibbling the last of his dinner roll.` },
+    ],
+    choices: [
+      { text: `Push the canister into the UP tube and get out of there`, to: 'E03' },
+      { text: `Sit down in the doorway with the canister and wait`, to: 'C03', ...cost(10) },
+      { text: `Set Winston’s trap in the doorway, then sit down with the canister and wait`, to: 'C03', if: is('hasTrap'), set: { hasTrap: false, trapSet: true } },
+    ],
+  },
+  {
+    id: 'C03',
+    title: 'The Wait',
+    era: 'under',
+    cast: ['player', 'clerks', 'trap'],
+    imagePrompt: `The cold round brick tube room at night. The player, seen from behind in the silver helmet and mustard-yellow windbreaker, sits cross-legged in the open bronze doorway with the brass canister in their lap, the glowing tag dial facing out. A flat grey box with two open hinged doors sits on the floor in front of the doorway, and a faint grey clerk leans out of the brick wall toward it. Dim grey light from a ceiling grating.`,
+    text: [
+      { if: is('trapSet'), text: `You set Winston’s trap on the floor in front of the door, stamp the pedal so its doors fly open, and sit down in the doorway with the canister in your lap.`, else: `You sit down in the doorway with the canister in your lap.` },
+      `The minutes go by slowly, in cold and damp, and the only sounds are the hum of the canister and your own teeth chattering. Every few minutes a grey clerk steps out of the brick toward your bag.`,
+      {
+        if: is('trapSet'),
+        text: `Each time a clerk comes near, the trap draws him in with a flicker of light, and the doors stay open until it is full. The needle holds where it is, at {{clock}}.`,
+        else: `Each time, the tag takes him down the line with its zipper noise, and the needle creeps up a point at a time until it reads {{clock}}.`,
+      },
+      `You stop looking at your watch. Some time later, the bell above the UP bank gives a single shiver.`,
+    ],
+    choices: [{ text: `Stand up and face the tubes`, to: 'C04' }],
+  },
+  {
+    id: 'C04',
+    title: 'Eleven-Twenty',
+    era: 'under',
+    time: 'FRI NOV 15 · 11:20 PM',
+    cast: ['player', 'tull', 'clerks', 'trap'],
+    imagePrompt: `The cold round brick tube room. Forty or fifty pale see-through ghost clerks in grey vests, sleeve garters and green eyeshades stand in a quiet orderly line in front of the left-hand bank of brass tubes stenciled UP, under a small brass bell. At the head of the line stands Mr. Tull, a gaunt old man with silver side-whiskers and an eyeshade pushed back, bowing slightly. The player, seen from behind in the silver helmet and mustard-yellow windbreaker, holds the brass canister out in front of them. Cold light, a faint green haze.`,
+    text: [
+      { if: not(is('triedDown')), text: `The bell above the UP bank rings once, clear and loud, and the clock on the wall, which has no hands, begins to tick. The tubes on the left rattle. The tubes on the right start to hum, low and warm, and the canister in your hands tugs toward them like a compass needle toward north.` },
+      { if: not(is('triedDown')), text: `The room fills with grey figures: forty or fifty clerks in vests, sleeve garters and green eyeshades, with leather satchels, standing in a quiet line in front of the UP bank. The needle doesn’t move. These clerks aren’t hunting the canister any longer. They’re waiting for it.`, else: `Mr. Tull waits with his hands folded, and the canister is back in yours. The line of clerks hasn’t moved.` },
+      { if: is('trapSet'), text: `Winston’s trap in the doorway has shut and gone silent. It caught as many as it could hold, and these are the rest.` },
+      { if: not(is('triedDown')), text: `At the head of the line stands a gaunt old man in a grey vest and shirtsleeves, with silver side-whiskers and a green eyeshade pushed back on his forehead. He bows slightly. “Ambrose Tull, night clerk of Station Nine,” he says. “The eleven-twenty up-run is late. It has been late for eighty-seven years. Young person, I don’t suppose you have the mail?”` },
+      `The two banks of tubes are in front of you.`,
+    ],
+    choices: [
+      { text: `Put the canister in the UP tube`, to: 'C06' },
+      { text: `Put the canister in the DOWN tube, where it’s pulling`, to: 'C05' },
+      { text: `Stamp on Winston’s trap and catch the whole line`, to: 'E08', if: is('hasTrap') },
+    ],
+  },
+  {
+    id: 'C05',
+    title: 'The Down Tube',
+    era: 'under',
+    onEnter: { set: { triedDown: true }, ...cost(10) },
+    cast: ['player', 'tull', 'clerks'],
+    imagePrompt: `The cold round brick tube room. Mr. Tull, the gaunt old ghost clerk with silver side-whiskers and an eyeshade, politely hands the brass canister back to the player, who is seen from behind in the silver helmet and mustard-yellow windbreaker. Behind them the line of grey ghost clerks sags in dismay, and a few at the back drift anxiously toward the glowing dial on the player’s bag.`,
+    text: [
+      `You feed the canister into the right-hand tube, the one marked DOWN. It whistles away into the dark with a sound like a distant train. A few seconds later there’s a clang, and the canister shoots back out of the tube’s mouth, hits the floor and rolls to a stop at Mr. Tull’s feet.`,
+      `A groan runs along the line of clerks. “Down is outgoing,” says Mr. Tull gently, picking it up and handing it back. “This is an up-run. Mind the regulations, young person.” Some clerks at the back are so upset that they drift toward the canister in your hands, and the tag takes them, one after another. The needle jumps to {{clock}}.`,
+    ],
+    choices: [{ text: `Turn back to the tubes`, to: 'C04' }],
+  },
+  {
+    id: 'C06',
+    title: 'The Up Tube',
+    era: 'under',
+    onEnter: cost(5),
+    cast: ['player', 'tull', 'clerks'],
+    imagePrompt: `The cold round brick tube room. Mr. Tull, the gaunt old ghost clerk with silver side-whiskers and a green eyeshade, lifts the brass canister gently out of a wire tray under the left-hand UP bank, as if it were a baby. Behind him forty ghost clerks in grey vests hold their breath. The player, seen from behind in the silver helmet and mustard-yellow windbreaker, watches. The small brass bell above the bank is swinging.`,
+    text: [
+      `You push the canister into the left-hand tube, the one stenciled UP. It slides away from you up the brass with the felt rings whispering against the sides, and the whole room holds its breath. Far overhead, something thumps. The bell above the bank rings twice, a brass flap on the tube drops open and the canister rolls into a wire tray with a clatter. Mr. Tull lifts it out as though it were a baby.`,
+      `“Received,” he says. “Eleven-twenty-one.” His hands are not quite steady as he unscrews the cap.`,
+    ],
+    choices: [{ text: `Watch him open it`, to: 'C07' }],
+  },
+  {
+    id: 'C07',
+    title: 'The Notice',
+    era: 'under',
+    cast: ['player', 'tull', 'clerks', 'slimer'],
+    imagePrompt: `The cold round brick tube room. Mr. Tull, the gaunt old ghost clerk with silver side-whiskers, reads aloud from a single sheet of paper with a red seal while forty ghost clerks in grey vests slowly take off their green eyeshades. Some are already fading like breath on glass. The player, seen from behind in the silver helmet and mustard-yellow windbreaker, stands at the edge of the room. Soft light, quiet.`,
+    text: [
+      `Inside the canister is a single sheet of paper, folded in three, with a red seal. Mr. Tull reads it aloud in a steady voice. “By order of the Pneumatic Mail Company: Station Nine closes at midnight tonight, the fifteenth of November, 1898. All clerks are released from duty, with the Company’s thanks. Go home.”`,
+      `Nobody speaks. “We were to have gone home eighty-seven years ago,” says Mr. Tull at last. “The notice must have come up the line and stuck in a pipe, and none of us was allowed to leave until the mail came through.” He folds the paper again and puts it back in the canister. “We are obliged to you.”`,
+      `One by one the clerks take off their eyeshades and lay them down on the floor. They begin to thin, like breath on a window. Mr. Tull is the last. He bows, and says, “The mail has gone through.” The bell rings twice, and the hum that has filled the room all night stops.`,
+      { if: is('slimerWith'), text: `Slimer, who has watched all of this without eating anything, wipes his eyes on his tiny arm.` },
+      `The needle on the tag stops at {{clock}} and doesn’t move again. In the quiet, you hear water dripping and the boiler ticking somewhere far down the corridor.`,
+      { if: is('slimerWith'), text: `Only you and Slimer are left in the tube room, with a brass canister in a wire tray.`, else: `There’s only you in the tube room, and a brass canister in a wire tray.` },
+    ],
+    choices: [
+      { text: `Pick up the canister and go`, to: 'E11', if: ge(15) },
+      { text: `Pick up the canister and go`, to: 'E10', if: all(ge(1), le(14)) },
+    ],
+  },
+
+  // ── ENDINGS ──────────────────────────────────────────────────
+  {
+    id: 'E01',
+    title: 'Clocked Out',
+    era: 'streets',
+    ending: { kind: 'bad' },
+    cast: ['player', 'dolores'],
+    imagePrompt: `A cramped dispatch office above a bagel shop on a rainy night. Dolores, phone in hand, crumples a yellow job slip in a fist. The player, seen from behind in the silver helmet and mustard-yellow windbreaker, walks out of the door into the rain. Alone with Dolores (no other couriers shown).`,
+    text: [
+      `“It’s past seven on a Friday and I’m soaked,” you tell Dolores. “Find someone else.” She shrugs, crumples the slip and reaches for the radio. The only other courier on shift is out on Long Island until midnight. You ride home through the rain.`,
+      `You hear the rest over the next few weeks. Nobody took the job. The canister sat on Mr. Pell’s counter all weekend, humming, while the clerks came through his walls in twos and threes. By Saturday he had locked the shop and gone to his sister’s in New Jersey. By Sunday, the whole of Staple Street had followed. The Ghostbusters couldn’t reach the street until Monday, and it took them three days to clear. Pell & Sons has reopened in a smaller shop on Greenwich Street, and Mr. Pell is polite to you but never sells you a stamp.`,
+    ],
+  },
+  {
+    id: 'E02',
+    title: 'Safe Keeping',
+    era: 'firehouse',
+    ending: { kind: 'bad' },
+    cast: ['player', 'janine', 'slimer', 'clerks'],
+    imagePrompt: `A firehouse engine bay at night, full of polite grey ghost clerks in a long line queuing along the wall. Janine, red curly hair and huge glasses, stands on a wooden chair holding a radio. A green ghost, Slimer, hides under a desk. The supply closet door in the background is bulging and rattling on its hinges.`,
+    text: [
+      `You hand over the canister. “Smart,” says Janine. “It’ll be nice and safe.” She puts it in the supply closet, between the mops and a box of spare backpack batteries, and locks the door.`,
+      `It isn’t nice and safe for long. Soon the closet door is rattling. Then every clerk in the neighborhood is queuing in the engine bay, and the tag, still taped to the canister, is pulling them into the grid as fast as it can, so fast that the needle creeps toward the top of the dial. Later, with the whole basement humming and Slimer hiding under a desk, Janine calls the team on the radio and tells them to hurry.`,
+      `The Ghostbusters get back to a firehouse full of polite grey clerks asking for their mail. It takes four hours, a lot of trap work and an emergency order of pizza to clear them. The grid survives, just. Egon writes a note to Quickfoot about handling hazardous parcels, and Dolores pins it above her desk where you’ll see it every morning.`,
+    ],
+  },
+  {
+    id: 'E03',
+    title: 'Wrong Hour',
+    era: 'under',
+    ending: { kind: 'bad' },
+    cast: ['player', 'tull', 'clerks'],
+    imagePrompt: `The cold round brick tube room. The player, seen from behind in the silver helmet and mustard-yellow windbreaker, stands with empty hands in front of the brass tubes, looking at an empty tube mouth. Behind them a long line of pale ghost clerks stands in orderly rows, heads tilted, bewildered and sad. The wall clock has no hands. Dim grey light from the grating.`,
+    text: [
+      `You push the canister into the UP tube and let go. It slides away up the brass with a long sigh, as though it had been waiting for you, and the tag goes with it. You wait for something to happen. Nothing does. The bell stays silent. After a quarter of an hour you give up and go home, with a lighter bag.`,
+      { if: is('slimerWith'), text: `Slimer gives up with you, and floats off toward the hotel kitchen.` },
+      `You hear the rest from Ernie, the hotel’s bellhop, a week later, and then from the newspapers. At twenty past eleven the bell rang and the clerks came to receive the up-run, and nothing arrived, because the canister was lost somewhere in miles of dead pipework, sent at the wrong hour. They stood in the cellar in rows, polite and bewildered, until midnight. After that they started looking again.`,
+      `The Sedgewick is haunted from the cellar to the roof for years afterwards, by very polite ghosts who ask guests for the mail. The Ghostbusters take the contract eventually, and they do it properly. It’s a dull win for them. The clerks, who only wanted to go home, end up in the grid.`,
+    ],
+  },
+  {
+    id: 'E04',
+    title: 'Postage Due',
+    era: 'streets',
+    ending: { kind: 'bad' },
+    cast: ['player', 'clerks'],
+    imagePrompt: `A huge brightly lit post office sorting floor at night, with long conveyor belts, mail bins and pigeonholes. Hundreds of pale see-through grey ghost clerks in vests and green eyeshades are sorting letters at triple speed, and letters swirl through the air like snow. A bewildered night supervisor in a blue sweater holds a clipboard. Nobody else is shown.`,
+    text: [
+      `You drop the canister through the brass slot, under the sign that says MAIL ANYTIME. It lands in the bin with a thump. “Hey,” says the clerk, “you can’t post that, it hasn’t got a…” But you’re already out of the door, and your bag is lighter.`,
+      `At midnight the night shift empties the bin and, as the regulations say, sends everything on to the sorting center. The canister arrives at two in the morning. By three, the sorting floor has several hundred grey clerks on it, sorting every letter in the building into the wrong pigeonhole, at triple speed, in perfect silence. The tag pulls in clerks until the needle nears the top of the dial, and the rest simply outnumber it.`,
+      `By Monday morning, forty thousand letters have been delivered to the wrong addresses, the night supervisor has resigned and the Ghostbusters have sent the Postal Service a very large invoice. Dolores tells you the Postal Service sends their regards.`,
+    ],
+  },
+  {
+    id: 'E05',
+    title: 'Please Leave the Premises',
+    era: 'hotel',
+    ending: { kind: 'bad' },
+    cast: ['player', 'voss'],
+    imagePrompt: `The golden revolving door of a grand hotel at night in the rain. A burly hotel security guard in a blazer carries the player, seen from behind in the silver helmet and mustard-yellow windbreaker with the humming messenger bag, out through it by the back of the jacket. A small neat night manager in a black suit watches from behind with folded arms.`,
+    text: [
+      `You run for the staff door while Mr. Voss is still holding his chest. You get it open and take three steps down the stairs before a very large man in a hotel blazer catches you by the back of your windbreaker. “Night security,” he says, quite politely. “Mr. Voss would like you to leave.”`,
+      `He carries you through the lobby and out through the revolving door, past the doorman, and sets you down on Park Row in the rain, with your bag. The revolving door locks behind you. For the next two hours you try every door round the block, ringing bells and banging on glass, and the security man follows you the whole way with his arms folded. Nobody lets you in.`,
+      `By midnight the canister has drawn so many clerks to the street outside that the tag can’t keep up, and the Sedgewick has to close for the weekend. The Ghostbusters collect the canister at dawn. Mr. Voss says he is writing to the mayor.`,
+    ],
+  },
+  {
+    id: 'E06',
+    title: 'Overload',
+    era: 'firehouse',
+    ending: { kind: 'bad' },
+    cast: ['player', 'clerks'],
+    imagePrompt: `A side street at night in front of an old brick firehouse. Green light blazes out under the big garage door, which is bulging outward. Hundreds of pale see-through ghosts pour out of the side door and windows and float up into the night in a long cloud over the rooftops. A few neighbors in dressing gowns look out of upstairs windows. Rain falling.`,
+    text: [
+      `In the basement of the firehouse on North Moore Street, the grid’s hum rises to a scream.`,
+      `Green light floods the firehouse first, then the street outside, and every ghost the Ghostbusters have caught since 1984 comes out at once. They aren’t dangerous, exactly. They’re just loud, and there are about four hundred of them, and it’s Friday night in Tribeca.`,
+      `The Ghostbusters spend the weekend and most of the following week putting them back. They’re very polite about it, but a week later Quickfoot loses the Ghostbusters account, and Dolores explains why to you at some length.`,
+    ],
+  },
+  {
+    id: 'E07',
+    title: 'Total Containment',
+    era: 'firehouse',
+    ending: { kind: 'bad' },
+    cast: ['player', 'egon', 'peter', 'ray', 'winston'],
+    imagePrompt: `A firehouse engine bay at night with the big garage door lifted off its track by blazing green light from below. Egon, tall and thin with round glasses, stares at a dial in astonishment. Peter, Ray and Winston in khaki jumpsuits stand frozen in the doorway with backpacks half-on. A long polite line of pale grey ghost clerks floats out into the street. The player, seen from behind in the silver helmet and mustard-yellow windbreaker, stands at the desk.`,
+    text: [
+      `You give Egon the canister. He carries it down to the basement and seals it in the containment unit, and for the next quarter of an hour everything is fine. Peter asks whether anyone has a sandwich.`,
+      `At eleven-twenty exactly, every clerk in the city starts walking toward the firehouse, because the canister that has been missing for eighty-seven years is in the firehouse basement. The grid, doing what it was built to do, pulls them in, all of them, as fast as they arrive. Egon says, “That’s not possible,” and then, “That’s very interesting,” and then the needle goes through the end of the dial.`,
+      `A green flash lifts the garage door off its track. The ghosts come out into the street in a long, polite grey queue, and the Ghostbusters spend the rest of the night, and most of the winter, putting them back. Nobody blames you out loud. Egon doesn’t need to.`,
+    ],
+  },
+  {
+    id: 'E08',
+    title: 'A Full Trap',
+    era: 'under',
+    ending: { kind: 'good' },
+    cast: ['player', 'tull', 'clerks', 'trap', 'ray'],
+    imagePrompt: `The cold round brick tube room. The player, seen from behind in the silver helmet and mustard-yellow windbreaker, stands with one foot on the pedal of a flat grey trap with open hinged doors while a river of pale grey ghost clerks streams into it in a bright white-blue glow. Mr. Tull, the gaunt old clerk with silver side-whiskers, is the last in the line and looks back with a faint, disappointed smile. Dim brick walls.`,
+    text: [
+      `You unstrap the trap, drop it on the floor in front of the line and stamp on the pedal. Its doors fly open and a white-blue light fills the room, and the whole line of clerks is pulled toward it with a long, soft sigh, like a crowd breathing out. Mr. Tull is the last. He looks at you with something like disappointment, bows, and goes.`,
+      { if: is('slimerWith'), text: `Slimer dives behind the UP bank with both arms over his face and stays there until the doors snap shut.` },
+      `The doors snap shut. The room is quiet and for the first time in hours, it’s warm. The hum stops, and the needle on the tag stops at {{clock}} and stays there.`,
+      `You carry the trap and the canister back to the firehouse that night. Winston takes the trap off you at the door and passes it to Ray, who carries it down to the basement as carefully as a sleeping cat. The borough is quiet. The haunting is over, and nobody was hurt. A week later, Ray opens the canister, reads the notice inside and goes very still. He asks Egon how you deliver a letter to forty-seven ghosts in a box. Egon says he’ll think about it.`,
+    ],
+  },
+  {
+    id: 'E09',
+    title: 'The Whole Team',
+    era: 'under',
+    ending: { kind: 'good' },
+    cast: ['player', 'peter', 'ray', 'egon', 'winston', 'tull', 'clerks'],
+    imagePrompt: `The cold round brick tube room at night. Ray, big and cheerful in a khaki jumpsuit, pushes the brass canister into the left-hand tube stenciled UP while Peter, Egon and Winston stand behind him with their backpacks off. Mr. Tull, a gaunt old ghost clerk with silver side-whiskers, bows toward them in front of forty pale ghost clerks. The player, seen from behind in the silver helmet and mustard-yellow windbreaker, points at the stenciled word UP.`,
+    text: [
+      `Winston puts his shoulder to the wheel and heaves, and it screeches round a few inches at a time, until the bronze door swings inward with a groan.`,
+      `Behind it is a cold, vaulted brick room, round as a church’s apse. Two banks of brass tubes come out of the wall, one on the left marked UP, with a small brass bell hanging over it, and one on the right marked DOWN, humming low and warm. It’s 11:19. Egon turns a dial on his backpack and says, “Forty seconds.”`,
+      `At exactly 11:20 the bell rings, and the room fills with grey clerks, forty or fifty of them, who line up in front of the UP bank. A gaunt old man with silver side-whiskers bows to the whole team. “Ambrose Tull, night clerk of Station Nine,” he says. “The eleven-twenty up-run is late. Young person, I don’t suppose you have the mail?”`,
+      `“We could just trap them,” says Peter. “It’d take two seconds.” “They haven’t done anything,” says Ray. The canister in your hands tugs toward the humming bank on the right. You point at the plate on its side and say, “It says UP.” Ray looks at it, and at you, and takes the canister gently from your hands.`,
+      `He pushes it into the UP tube. The bell rings twice and the canister rolls into the tray, and Mr. Tull opens it and reads the notice aloud, and by the time he has finished, the clerks have laid down their eyeshades. Ray is crying openly. Winston hands him a handkerchief. When the last grey figure has faded, Egon looks at his dial and says, “Load is holding.”`,
+      `The Ghostbusters take the credit, which Peter says is only fair, since they have a contract. But on Monday, when you deliver the canister to the firehouse after all, Ray makes sure everyone knows who worked out where it went.`,
+    ],
+  },
+  {
+    id: 'E10',
+    title: 'Cutting It Fine',
+    era: 'firehouse',
+    ending: { kind: 'good' },
+    cast: ['player', 'janine', 'egon', 'peter'],
+    imagePrompt: `The firehouse front office on a Monday morning in pale sunlight. Egon, tall and thin with round glasses, holds the brass canister with a round dial tag on its side up to the light and frowns at the needle. Peter leans back in a chair, grinning. Janine slides a signature clipboard across the desk to the player, who is seen from behind in the silver helmet and mustard-yellow windbreaker. Slimer eats a doughnut in the corner.`,
+    text: [
+      `The needle sits at {{clock}}, far closer to a hundred than anyone would like. But the clerks are gone, and the tube room is quiet.`,
+      `You deliver the canister to the firehouse on Monday morning, the way the job said. By then the Ghostbusters have already pieced most of it together. Egon looks at the dial for a long time and says the grid held “within tolerance, narrowly.” Peter calls it a nail-biter. Ray reads the notice from the canister aloud twice. Janine signs the delivery slip for fourteen North Moore Street without looking up from her chow mein.`,
+      { if: is('slimerWith'), text: `Slimer gets a medal made of a hot dog.` },
+      `Dolores gives you a bonus, a small one. “You rode a haunted canister through half of Manhattan and the grid held,” she says. “Don’t push it.”`,
+    ],
+  },
+  {
+    id: 'E11',
+    title: 'The Mail Goes Through',
+    era: 'firehouse',
+    ending: { kind: 'good', best: true },
+    cast: ['player', 'janine', 'peter', 'ray', 'egon', 'winston', 'slimer'],
+    imagePrompt: `The firehouse front office on a Monday morning in bright sunlight. The four Ghostbusters in khaki jumpsuits crowd round the desk, Ray holding up a brass canister with a round dial tag on it, Peter applauding, Winston grinning, Egon nodding with a rare smile. Janine hands the player, seen from behind in the silver helmet and mustard-yellow windbreaker, a signed delivery slip. Slimer hovers overhead with a doughnut.`,
+    text: [
+      `The needle sits at {{clock}} and the canister has stopped humming. The clerks are gone, and the cellar is warm.`,
+      `On Monday morning you take the canister to fourteen North Moore Street, the way the job said. Janine signs the slip. By then the whole firehouse has heard, because Mr. Pell has phoned, and so, somehow, has Mr. Voss, the Sedgewick’s night manager, who is furious that his ballroom has never been more peaceful. Egon says the grid never went above {{clock}}, which he calls “the most efficient haunting resolution on record.”`,
+      { if: is('knowsChute'), text: `Mr. Hollis phones too, and asks only whether the old coal chute is still unlocked.` },
+      { if: is('hasTrap'), text: `Winston wants to know where his spare trap is. You hand it back, unused. Winston inspects it and says, “You’re hired. Not formally.”` },
+      { if: is('trapSet'), text: `Winston wants to know where his spare trap is. You hand it back, full and faintly humming. Winston looks at it and says, “You’re hired. Not formally.” Ray says he’ll read the notice to it.` },
+      { if: is('slimerWith'), text: `Slimer gets a hot dog, and then a second hot dog, and then a standing ovation.` },
+      `Ray reads the notice aloud for the third time and asks to keep the canister, “for the museum.” Dolores gives you a bonus. A real one. “Delivered,” she says. “Eventually.”`,
+    ],
+  },
+];
+
+// Pages that spend margin can leave it at 0 or below. On those pages every choice needs margin >= 1,
+// and a generated "Keep running" choice sends the player to E06 instead.
+const caught = `The needle slams against the end of the scale and the tag goes dead in your hand. Whatever you meant to do next, the grid has failed.`;
+const spends = (e?: Effects) => (e?.add?.margin ?? 0) < 0;
+const costly = new Set<string>();
+for (const p of raw) {
+  if (spends(p.onEnter)) costly.add(p.id);
+  for (const c of p.choices ?? []) if (spends(c)) costly.add(c.to);
+}
+// Pages where the margin can never reach 0. If the checker reports a guard that never applies,
+// add the page here.
+const unguarded = new Set<string>(['R03']);
+const guarded = new Set([...costly].filter((id) => !unguarded.has(id)));
+
+const pages: Page[] = raw.map((p) =>
+  !guarded.has(p.id) || p.ending
+    ? p
+    : {
+        ...p,
+        text: [...p.text, { if: le(0), text: caught }],
+        choices: [
+          ...p.choices!.map((c) => ({ ...c, if: c.if ? all(c.if, ge(1)) : ge(1) })),
+          { text: `Keep running`, to: 'E06', if: le(0) },
+        ],
+      },
+);
+
+const story: Story = {
+  id: 'return-to-sender',
+  title: 'Return to Sender',
+  subtitle: 'A Ghostbusters adventure',
+  blurb: `You’re a bicycle courier with one last job on a rainy Friday night: a brass canister that has been haunting a stamp shop, addressed to the Ghostbusters’ firehouse. The Ghostbusters are out. The ghosts aren’t. Every ghost the canister stirs up is pulled into the firehouse’s containment grid, and the grid can only hold so much.`,
+  start: 'R01',
+  eras: {
+    streets: { label: 'Lower Manhattan' },
+    firehouse: { label: 'Firehouse' },
+    hotel: { label: 'Park Row' },
+    under: { label: 'Underground' },
+  },
+  flags: {
+    margin: { default: 65 },
+    difficulty: { default: 'medium', values: ['easy', 'medium', 'hard'] },
+    running: { default: false },
+    visitedFirehouse: { default: false },
+    visitedDiner: { default: false },
+    visitedPost: { default: false },
+    visitedEngine: { default: false },
+    hasTrap: { default: false },
+    trapSet: { default: false },
+    slimerPlan: { default: false },
+    slimerWith: { default: false },
+    knowsChute: { default: false },
+    visitedTunnel: { default: false },
+    visitedSorting: { default: false },
+    triedDown: { default: false },
+    route: { default: 'none', values: ['none', 'lobby', 'chute', 'tunnel'] },
+  },
+  ui: { transition: 'slime' },
+  difficultyNotes: {
+    easy: 'The grid starts at 20% load, and you can undo as many choices as you like.',
+    medium: 'The grid starts at 35% load, and you can undo your last 2 choices.',
+    hard: 'The grid starts at 50% load, and there is no undo. Every choice is final.',
+  },
+  // `margin` is the grid’s headroom, and the meter shows 100 minus it as GRID LOAD. Budget on the best
+  // route: first incident 5, firehouse 10 (trap and Slimer), diner 5, ride to Park Row 10, delivery 5 = 35.
+  // The best ending needs 15 headroom left, so Hard allows no slips, Medium one and Easy three.
+  difficulties: {
+    easy: { set: { difficulty: 'easy', margin: 80 } },
+    medium: { set: { difficulty: 'medium', margin: 65 } },
+    hard: { set: { difficulty: 'hard', margin: 50 } },
+  },
+  clock: {
+    flag: 'margin',
+    label: 'GRID LOAD',
+    format: 'number',
+    unit: '%',
+    risesFrom: 100,
+    visibleWhen: is('running'),
+    allowExpiredOn: [...guarded],
+  },
+  art: {
+    stylePrefix: `Bright 1980s animated-film illustration: bold ink outlines, saturated colour, expressive faces, cinematic lighting, 3:2 landscape. No text, lettering or captions anywhere in the image, except where a stenciled word is described. The setting is Manhattan on a rainy November night in 1985: wet streets, steaming manholes, no snow. Streets are steel blue with sodium-orange light. The firehouse is brick red with warm lamp yellow. The hotel is gold and burgundy. Underground scenes are dark brick with ectoplasm-green glow. Ghosts are pale, see-through and friendly rather than scary, never gory. Only the characters listed for the scene appear; the Ghostbusters, Slimer, the clerks and the hotel staff appear only if described. No cars or other famous vehicles, no company logos, and no likeness of any real person. Family-friendly and slightly comic: nobody is hurt.`,
+    cast: {
+      player: `THE PLAYER: a 17-year-old bicycle courier in a dented silver bike helmet, a mustard-yellow nylon windbreaker with a silver reflective stripe, faded jeans and orange high-top sneakers, with a black canvas messenger bag across the back. Shown from behind or over the shoulder with the face hidden, gender-neutral. Always the same helmet and mustard-yellow windbreaker.`,
+      dolores: `DOLORES VANCE: a brisk woman in her fifties with grey-streaked black hair in a bun, cat-eye glasses, a green cardigan and a telephone headset.`,
+      pell: `MR. ALDEN PELL: a stooped elderly man with white hair, half-moon glasses and a brown cardigan (a brown dressing gown late at night).`,
+      hollis: `MR. HOLLIS: a lean man in his seventies in a navy postal-style cap and a grey raincoat, with a coffee mug and a twinkle.`,
+      janine: `JANINE MELNITZ: a woman in her twenties with red curly hair, enormous round glasses and a mustard cardigan, brisk and sarcastic, often holding a carton of chow mein.`,
+      peter: `PETER VENKMAN: a tall man in his forties with tousled dark hair and a permanent smirk, in a khaki jumpsuit with a round shoulder patch and a heavy grey backpack-sized machine with a wand on a cable.`,
+      ray: `RAY STANTZ: a big, cheerful man in his thirties with a boyish face and wavy hair, in a khaki jumpsuit with a round shoulder patch and a heavy grey backpack-sized machine.`,
+      egon: `EGON SPENGLER: a tall, thin, pale man with round glasses and swept-up hair, in a khaki jumpsuit with a round shoulder patch and a heavy grey backpack-sized machine. Serious and precise.`,
+      winston: `WINSTON ZEDDEMORE: a calm, strong man in his thirties with a patient smile, in a khaki jumpsuit with a round shoulder patch and a heavy grey backpack-sized machine.`,
+      slimer: `SLIMER: a squat, round, bright-green ghost the size of a beanbag chair with a huge grinning mouth, tiny arms and no legs, trailing a little green goo. Comic, never scary.`,
+      voss: `MR. VOSS: a small, neat night hotel manager in a black suit, with a thin mustache and a tight smile.`,
+      ernie: `ERNIE: a skinny young hotel bellhop in a maroon uniform and a small round cap, with a luggage cart.`,
+      tull: `MR. AMBROSE TULL: a gaunt, dignified old ghost in a grey vest and shirtsleeves with silver side-whiskers and a green eyeshade pushed back on his forehead. Pale and see-through.`,
+      clerks: `THE NIGHT MAIL CLERKS: pale, see-through ghosts of old postal clerks in grey vests, sleeve garters and green eyeshades, each carrying a leather satchel. Polite, never scary.`,
+      canister: `THE CANISTER: a brass cylinder the size of a thermos with grey felt rings at both ends, a small brass plate on its side, and a round metal coaster-sized tag with a glass dial window taped on beside it.`,
+      trap: `THE TRAP: a flat grey metal box with two hinged doors on top, a pedal on a cord and black-and-yellow hazard stripes.`,
+    },
+  },
+  pages,
+};
+
+export default story;
