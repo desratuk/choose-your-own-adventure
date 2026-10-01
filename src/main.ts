@@ -27,7 +27,7 @@ const requested = stories.find((s) => s.id === params.get('story'));
 function open(story: Story) {
   document.documentElement.dataset.story = story.id;
   document.title = story.title;
-  if (params.has('map')) return startMap(root, story);
+  if (new URLSearchParams(location.search).has('map')) return startMap(root, story);
   // With several stories, the address records which one is open so reloads and "back" work.
   if (stories.length > 1 && params.get('story') !== story.id) history.pushState(null, '', `?story=${story.id}`);
   startReader(root, story, stories.length > 1 ? showPicker : undefined);
