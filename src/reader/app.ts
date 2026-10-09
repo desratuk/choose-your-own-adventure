@@ -30,11 +30,14 @@ function syncThemeColor() {
 export function startReader(root: HTMLElement, story: Story, chooseAnother?: () => void) {
   const difficulties = DIFFICULTIES.map((d) => ({ ...d, note: story.difficultyNotes?.[d.id] ?? d.note }));
   let run: Run | null = loadRun(story.id);
+  const outdatedRun = !!run && (run.revision ?? 1) !== (story.revision ?? 1);
   // A save from an older version of the story may point at a page that no longer exists.
-  if (run && !story.pages.some((p) => p.id === run!.current.pageId)) run = null;
+  if (outdatedRun || (run && !story.pages.some((p) => p.id === run!.current.pageId))) run = null;
   let busy = false;
 
   const endings = story.pages.filter((p) => p.ending);
+  // Keep historical records in storage, but count only endings in this revision.
+  const foundEndings = () => loadEndings(story.id).filter((id) => endings.some((p) => p.id === id));
 
   function firstSnapshot(difficulty: Difficulty): Snapshot {
     const page = getPage(story, story.start);
@@ -46,7 +49,7 @@ export function startReader(root: HTMLElement, story: Story, chooseAnother?: () 
     delete root.dataset.era;
     document.documentElement.dataset.era = getPage(story, story.start).era;
     syncThemeColor();
-    const found = loadEndings(story.id).length;
+    const found = foundEndings().length;
     const startPage = getPage(story, story.start);
     window.scrollTo(0, 0);
     root.innerHTML = `
@@ -56,6 +59,7 @@ export function startReader(root: HTMLElement, story: Story, chooseAnother?: () 
           <h1 class="title-mark">${esc(story.title)}</h1>
           <p class="title-sub">${esc(story.subtitle)}</p>
           <p class="title-blurb">${esc(story.blurb)}</p>
+          ${outdatedRun && !run ? '<p class="muted">This adventure has been revised. Start a new run to play the new story; your collected endings are still here.</p>' : ''}
           ${run ? `<button class="btn primary" data-act="continue">Continue your adventure</button>` : ''}
           <fieldset class="difficulty">
             <legend>${run ? 'Or start again' : 'Choose a difficulty'}</legend>
@@ -76,7 +80,7 @@ export function startReader(root: HTMLElement, story: Story, chooseAnother?: () 
     root.querySelector('[data-act="continue"]')?.addEventListener('click', () => showPage());
     root.querySelector('[data-act="new"]')!.addEventListener('click', () => {
       const difficulty = (root.querySelector('input[name="difficulty"]:checked') as HTMLInputElement).value as Difficulty;
-      run = { difficulty, current: firstSnapshot(difficulty), history: [] };
+      run = { revision: story.revision ?? 1, difficulty, current: firstSnapshot(difficulty), history: [] };
       saveRun(story.id, run);
       showPage();
     });
@@ -85,7 +89,7 @@ export function startReader(root: HTMLElement, story: Story, chooseAnother?: () 
 
   // ── Endings gallery ─────────────────────────────────────────
   function showEndings() {
-    const found = new Set(loadEndings(story.id));
+    const found = new Set(foundEndings());
     const dialog = document.createElement('dialog');
     dialog.className = 'sheet';
     dialog.innerHTML = `
@@ -118,7 +122,7 @@ export function startReader(root: HTMLElement, story: Story, chooseAnother?: () 
       <h2>Paused</h2>
       <p class="muted">Difficulty: <strong>${diff.name}</strong>. ${diff.note} Your progress saves automatically.</p>
       <button class="btn primary" data-act="resume">Keep playing</button>
-      <button class="btn" data-act="endings">Endings found: ${loadEndings(story.id).length} of ${endings.length}</button>
+      <button class="btn" data-act="endings">Endings found: ${foundEndings().length} of ${endings.length}</button>
       <button class="btn" data-act="title">Back to the title screen</button>
       <button class="btn danger" data-act="restart">Restart from the beginning</button>`;
     document.body.append(dialog);
@@ -131,7 +135,7 @@ export function startReader(root: HTMLElement, story: Story, chooseAnother?: () 
     on('endings', showEndings);
     on('title', showTitle);
     on('restart', () => {
-      run = { difficulty: run!.difficulty, current: firstSnapshot(run!.difficulty), history: [] };
+      run = { revision: story.revision ?? 1, difficulty: run!.difficulty, current: firstSnapshot(run!.difficulty), history: [] };
       saveRun(story.id, run);
       showPage();
     });
@@ -252,7 +256,7 @@ export function startReader(root: HTMLElement, story: Story, chooseAnother?: () 
   }
 
   function endingCard(page: Page) {
-    const found = loadEndings(story.id).length;
+    const found = foundEndings().length;
     return `
       <section class="ending-card ${page.ending!.kind}${page.ending!.best ? ' best' : ''}">
         <p class="stamp">${endingLabel(page)}</p>

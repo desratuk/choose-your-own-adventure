@@ -17,9 +17,11 @@ export function startPicker(root: HTMLElement, stories: Story[], open: (story: S
         ${stories
           .map((story, i) => {
             const cover = imageFor(story.id, story.start);
-            const endings = story.pages.filter((p) => p.ending).length;
-            const found = loadEndings(story.id).length;
+            const endings = story.pages.filter((p) => p.ending);
+            const found = loadEndings(story.id).filter((id) => endings.some((p) => p.id === id)).length;
             const saved = loadRun(story.id);
+            const canResume = saved && (saved.revision ?? 1) === (story.revision ?? 1)
+              && story.pages.some((p) => p.id === saved.current.pageId);
             return `<li>
               <button class="story-card" data-story="${esc(story.id)}" data-era="${esc(getPage(story, story.start).era)}" data-i="${i}">
                 <span class="story-cover">${cover ? `<img src="${cover}" alt="" />` : ''}</span>
@@ -27,7 +29,7 @@ export function startPicker(root: HTMLElement, stories: Story[], open: (story: S
                   <strong>${esc(story.title)}</strong>
                   <em>${esc(story.subtitle)}</em>
                   <span>${esc(story.blurb)}</span>
-                  <small>${saved ? 'Adventure in progress · ' : ''}Endings found: ${found} of ${endings}</small>
+                  <small>${canResume ? 'Adventure in progress · ' : ''}Endings found: ${found} of ${endings.length}</small>
                 </span>
               </button>
             </li>`;

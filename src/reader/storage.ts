@@ -14,6 +14,7 @@ export interface Snapshot {
 }
 
 export interface Run {
+  revision?: number;
   difficulty: Difficulty;
   current: Snapshot;
   history: Snapshot[];

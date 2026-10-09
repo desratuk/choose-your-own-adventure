@@ -1,154 +1,122 @@
-# The Stopped Clocks: story bible and outline (draft for approval)
+# The Stopped Clocks — story bible
 
-## 1. Premise
+## Premise and editorial intent
 
-Tuesday, 12 November 1985, 30 years to the minute after lightning struck the Hill Valley clock tower. At 10:04 PM every clock in Hill Valley stops and the town freezes. Only you and Doc Brown can still move. Doc arrives in his flying time train, because it carries its own time field.
+On 12 November 1985, a century-old letter puts an unnamed, gender-neutral sixteen-year-old Preservation Society volunteer beside Doc Brown's arriving time train. At 10:04 PM Hill Valley freezes. A future museum owner, Rex Tannen, is using a chrono-clamp on the clock tower to turn the town into a permanent commercial exhibit.
 
-Someone has fixed a **chrono-clamp** to the clock tower's hands. Tearing it off would shatter the timeline. To release it safely, Doc must build a **Temporal Stabilizer** from three parts:
+The player helps Doc build a stabilizer from a 1985 regulator, an unused 1885 clock wheel and a 2085 power cell. The central conflict is preservation for the people who live somewhere versus preservation that prevents them living. The player supplies mechanical patience, local knowledge and the decisive action at the clock; Doc supplies time-travel expertise.
 
-| Part | Era | Why that era |
+The familiar letter/train/clock framework supports a new museum investigation, not a film recap. Ordinary success saves the town. The best route also exposes and catches Rex by connecting separately acquired evidence and knowledge. A hurried success leaves the town with a permanent missing minute.
+
+## Fixed continuity
+
+- Present: Tuesday 12 November 1985. The 1955 lightning strike stopped the clock at 10:04. Knowing that exact second enabled Doc and Marty to send Marty home from 1955. Marty is frozen offstage in 1985.
+- Doc has a flying time train, not a DeLorean. His family is safe at home; its date/location is unspecified.
+- The letter is dated 1885. Doc writes it after every successful outcome and leaves it with Western Union. Its P.S. is **“Leave the past something to work with.”** It is a thematic clue, not an explicit spare-wheel instruction.
+- The player owns a Walkman and a personally recorded summer cassette. On the shop route they trade the machine but keep the tape.
+- Only after S04 does the player wear a chrono-field bracelet. It protects them and carried objects. Frozen people must not be touched.
+- The 1885 visit begins on 28 August, before the new courthouse clock is unveiled. Doc's younger self is the blacksmith; meeting him changes history.
+- Doc offers a concealed back-lane escort, not permission to meet himself. The player may instead choose to approach the blacksmith despite that separation.
+- Taking the installed clock wheel is detected immediately on returning to Doc in S25. Doc insists on repair; he never knowingly installs it. Repair occurs in 1885 before departing. No original-wheel arrival at the finale exists.
+- The 2085 museum contains a scan of the real frozen town, including the possible future failure of the player and Doc. It is not the actual 1985 square physically moved to 2085.
+- Rex falsely claims the residents donated their moments. His public live interview channel is demonstrated in S31. This fact has a concrete climax payoff.
+- The Authority gets a warrant from the stolen jump log but cannot pinpoint Rex inside his private field from the log alone. A live public broadcast reaching 2085 provides an entry point.
+- Rex's cuffed arrest, not simply having alerted the Authority, controls arrest-specific aftermath. Use `rexCaught` for those distinctions.
+- A static illustration must match every arrival state: notably S41 depicts assembly before success/failure diverges; S44 depicts the broadcast before optional officers arrive.
+
+## Decisions, clues and consequences
+
+### 1985 opening — S01–S14
+
+S01 establishes the volunteer, tower, cassette and letter in a compact opening. S03 allows second thoughts or the early failure E01. The train arrives at S02; Doc and the bracelet are introduced at S04.
+
+S05's optional observation establishes someone else is moving. S07 offers interference with the clamp; S08 allows backing out or the fracture ending E02. S09 explains the three required parts and starts the visible countdown. Chasing Rex through S10–S11 costs ten minutes and obtains his staff keycard.
+
+At S13 Doc knows his safe combination and retrieves the regulator. The lab also establishes the setting catch that holds clock hands while gears run. There is no amnesia/date quiz and no S13x. S14 installs the regulator and lets the player choose era order.
+
+### 1885 — S20–S29, S26b
+
+The player chooses to go alone or take Doc's concealed escort. Calling at the blacksmith's window creates E03; keeping Doc concealed reaches the depot.
+
+At the depot, stealth or a conversation leads to the same crate through different encounters. Protecting the stationmaster can succeed through a bluff, or lead to the saloon. A radio rescue is a recoverable fifteen-minute complication; offering the time train causes E04.
+
+The crate presents a certified, installed wheel and an untested boxed replacement. The latter preserves the clock's history. Doc tests it on return; it works.
+
+Taking the original reaches S25. Doc spots removal marks, identifies the danger and sends the player back. S26b costs fifteen minutes and restores history before S26. Refusing to repair reaches E05 in the ravine, not in 1985.
+
+S26 fits the spare and departs for 2085 or, if the cell is already aboard, 1985.
+
+### 2085 — S30–S38
+
+The plaza offers the museum, shop, kiosk and (with the keycard) staff door.
+
+- S30k costs ten minutes: the Temporal Authority handles unlicensed time travel; local security belongs to Tannen.
+- S31 costs ten minutes: the player sees their possible failure, the falsification of residents' consent and Rex's live interview demonstration. This enables the live-interview choice in the finale.
+- S33 requires the keycard. The jump log proves the clamp's origin. Exporting it to the Authority requires the kiosk knowledge; taking it to local police or stealing a rack cell leads to capture.
+- S32–S35 offers a legitimate trade: the Walkman for a cell, keeping the personal cassette.
+- S34/S36/S37 turn infiltration or theft into a recoverable capture/rescue, with a fifteen-minute penalty. A bluff instead leads to E06.
+- S38 provides a loaned cell, a warrant and the Authority's live-channel constraint. No automatic rescue is promised.
+
+Every cell-acquisition route goes to 1885 if the wheel is missing, otherwise to S40. Era order changes context, not arbitrary extra travel.
+
+### Finale — S40–S45
+
+S40 returns to the same frozen moment with both parts. S41 spends seventy minutes assembling/calibrating the stabilizer together. If the countdown expires, E07 occurs in the train cab.
+
+S42 places the player at the clock's setting catch while Doc connects the device and Rex intervenes. Three approaches:
+1. Trade the stabilizer for escape: E08.
+2. Turn Rex toward the people in the square and operate the catch: S43. The player saves Hill Valley; Rex escapes. E09 or E11.
+3. With museum knowledge, offer Rex a live interview: S44. The player exposes his false consent claim on air and operates the catch. Without the Authority he escapes under public scrutiny (E09/E11). With the Authority the live link allows arrest, setting `rexCaught`, then S45 and E10/E11.
+
+The best route requires museum knowledge, the keycard/log, independent-authority knowledge, the actual broadcast decision and sufficient time. Alerting the Authority but choosing S43 is an ordinary rescue, not an unexplained arrest.
+
+## State and balance
+
+The story data declares the definitive flags and effects. Important facts:
+- `escapement`: none/original/spare; original is confined to the 1885 error branch.
+- `hasKeycard`, `knowsTA`, `sawExhibit`, `authorityAlerted`: independent investigation discoveries.
+- `rexCaught`: set only after the broadcast actually enables arrest.
+- `visited1885`, `visited2085`, `lastEra`: bridge era order.
+- `swapped`: acknowledges the repaired wheel mistake.
+- `caughtAt`, `tannenKnows`, `metTannen`, `fooledTannen`, `rescued`: arrival-specific encounters.
+
+Countdown starts at Easy 390, Medium 360, Hard 345 minutes. It measures protected field time, not a continuously advancing date in the frozen square.
+
+| Cost | Minutes |
+|---|---:|
+| Lab/frame preparation, S14 | 45 |
+| Each era arrival, S20 and S30 | 20 each |
+| Each acquired part's return/preparation, S26 and S35/S38/S37 base | 70 each |
+| Assembly/calibration, S41 | 70 |
+| Chase, kiosk, museum | 10 each |
+| Saloon rescue, wheel repair, future rescue surcharge | 15 each |
+
+Core costs total 295. Full best-route investigation adds 30: Hard leaves exactly 20, Medium 35, Easy 65. Medium permits one fifteen-minute recovery while retaining the best ending. Below twenty after assembly, success becomes E11; zero or less fails at S41.
+
+## Endings
+
+| ID | Outcome | Label |
 |---|---|---|
-| Flux-field regulator | 1985 | It is in Doc's old garage lab, inside the frozen town. |
-| Escapement wheel | 1885 | Doc needs a piece of the tower clock that has never been through a time disturbance, so it has to come from before the clock was first installed. |
-| Chrono-cell (power) | 2085 | The stabilizer needs a power source that doesn't exist yet. |
+| E01 | Decline the letter; freeze at home | Bad |
+| E02 | Force the clamp and fracture time | Bad |
+| E03 | Reveal Doc to his younger self | Bad |
+| E04 | Lose the train and remain in 1885 | Bad, with a gentle epilogue |
+| E05 | Refuse to restore the original wheel; fade in 1885 | Bad |
+| E06 | Become Rex's exhibit | Bad |
+| E07 | Countdown expires during assembly | Bad |
+| E08 | Accept Rex's bargain | Bad |
+| E09 | Save Hill Valley; Rex escapes | Good |
+| E10 | Save Hill Valley and earn Rex's arrest through the broadcast | Best |
+| E11 | Save Hill Valley, but its clocks permanently lose a minute | Good, bittersweet |
 
-The clamp **sets permanently** when its countdown runs out: 5h45 to 6h30 depending on difficulty (§3a). Time only passes for people inside a time field.
+51 pages, eleven endings. Save revision 2 deliberately cannot resume an older in-progress story; collected endings remain.
 
-### The mystery and its answers
-1. **Who sent you the letter?** That afternoon Western Union delivers a letter to you. It is dated 1885, written in Doc's hand and signed by Doc, and it tells you to be at the courthouse square at 10:03 PM. Present-day Doc has never written it. **Answer:** he writes it after the adventure, from 1885, in every good ending. The loop closes.
-2. **Who clamped time, and why?** **Rex Tannen**, from 2085 (Biff's great-great-grandson), owns a failing history museum. He froze 1985 Hill Valley so that in 2085 he could sell tours through the "Frozen Moment": a whole real town frozen in time.
-3. **The letter's P.S.** reads *"When you find two, take the spare."* It pays off in 1885.
+## Validation and illustrations
 
-## 2. Canon and consistency rules
+After story edits: run `npm run check`, focused editorial regression tests, the independent continuity reviewer and the story gate. Check both era orders, repair before/after 2085, broadcast with/without the Authority, and Authority without broadcast. Verify best-route margins on every difficulty.
 
-- **Date:** Tue 12 Nov 1985. That is after *Part III* (27 Oct 1985), so the DeLorean has been destroyed and Doc has left in the time train. That is why he comes in the train.
-- Clara, Jules, Verne and Einstein are "safe at home", and Doc never says where or when home is.
-- Marty is frozen at home in Lyon Estates. He is mentioned but never seen, so none of the plot depends on him.
-- The 1885 visit is set in the last week of **August 1885**. The courthouse clock has arrived by rail and is crated at the depot. The festival where it is unveiled is on 5 Sept; Marty arrives on 2 Sept, so he is not in town yet. **Past Doc (the town blacksmith) is in town, and present Doc must never meet him.**
-- Frozen people and objects must not be moved. Doc says so the first time it matters.
-- Rex can move in the frozen town because he wears a wrist time-field device (silver jumpsuit, blue flash).
-- 2085 is the future **in which the freeze was never fixed**. That is why the Frozen Moment attraction exists there. When you fix the freeze, that future goes away.
-- The player is a 16-year-old Hill Valley High student who volunteers for the Preservation Society ("Save the clock tower!"). You have no name and your gender is never stated. You own a Walkman, which matters in 2085.
+The revision passes the exhaustive checker, persisted editorial regressions and independent continuity review. A complete Medium best-route browser playthrough reaches E10 with all scene images loaded. Legacy-save handling, fresh saves, reload, Undo and mobile opening layouts have also been checked.
 
-## 3. State
+The approved reference inventory remains the authority for faces, costume stripes, clock architecture and machinery. The setting catch has its own reviewed reference for S42–S44. Changed illustrations: S03 (bare wrists before acquisition, generic posters), S22 (rear yard), S25/S26 (optional cell entirely cropped out), E05 (1885 ravine), S41 (assembly, valid even when the timer expires), S42–S44 (same setting catch and player-led climax), E09 (no premature keys), E11 (no contradictory watch comparison). E10's following-week daytime presentation now matches its existing image. Preserve other images where their composition still matches.
 
-All of these flags are hidden except the deadline. The deadline (`minutes`) is **shown**: the clamp's countdown, in the header. It drops by fixed amounts for travel, by 10 for each optional detour and by 15 for each mistake (§3a). After the 79-minute assembly: 20 or more minutes left means the clamp is released cleanly, 1–19 means it takes a minute of Hill Valley with it (E11), and 0 or less means you are too late (E07).
-
-| Flag | Values | Set by |
-|---|---|---|
-| `ranLate` | bool | You ignored the letter and then ran to the square after all |
-| `hasKeycard` | bool | Chasing the figure (S11) |
-| `escapement` | none / `spare` / `original` | 1885 |
-| `hasCell` | bool | 2085 |
-| `authorityAlerted` | bool | Reporting Rex in 2085 (S38) |
-| `tannenKnows` | bool | Rex has captured you in 2085 |
-| `minutes` | number | The clamp countdown. Its start depends on difficulty |
-| `difficulty` | easy / medium / hard | Set at the start of a run |
-| `knowsTA` | bool | Read the 2085 information kiosk (S30k) |
-
-**Coherence guarantee:** an automated checker plays through **every reachable combination of path and state**. It fails the build if any of these is true:
-- a page is a dead end, or a page or ending can't be reached
-- a choice leads to a page that doesn't exist
-- in some state, a page shows no available choices
-- a conditional passage refers to a flag that can't be set on some path that reaches it
-
-Any page whose text depends on the past uses conditional passages, so its text always matches what actually happened.
-
-## 3a. Difficulty and time (added after playtesting: the best ending was too easy)
-- The clamp's countdown starts at 6h30 (Easy), 6h00 (Medium) or 5h45 (Hard) and is shown in the header.
-- Optional detours cost 10 minutes and mistakes cost 15. The best ending needs 20 or more minutes left after the 79-minute assembly. That allows several slips on Easy, one on Medium and none on Hard.
-- The best ending needs three clues connected: the letter's P.S. (take the spare wheel), Doc's early remark about "the day it all began" (the safe combination, 5 Nov 1955), and the 2085 information kiosk (S30k). The kiosk reveals that the Temporal Authority is the place to report unlicensed jumps and that Hill Valley's police are Tannen's own security. None of these is flagged when it matters.
-- Choices avoid signposting. Traps get plausible reasons: Rex offers a deal, taking the evidence to the police, and offering Tannen the train.
-
-## 4. Scene outline (52 pages: 41 scenes and 11 endings)
-
-### Act 1: The frozen town (1985)
-- **S01 Letter.** Afternoon. You take off your Walkman. A Western Union man hands you a letter held "since 1885". → Go to the square (S02) / Ignore it (S03)
-- **S03 Home.** It's 10:00 PM. → Run for it (S02, `ranLate`) / Stay in bed (**E01**)
-- **S02 The square, 10:03.** A lightning-like flash with no storm, and a steam whistle. The time train lands next to you and everything freezes. → S04
-- **S04 Doc.** "That's my handwriting… but I've never written it!" → Look around (S05) / Go straight to the tower (S06)
-- **S05 Frozen square.** Red the bum asleep, a pigeon hanging in mid-air, and fresh footprints that shouldn't be there. → S06
-- **S06 Tower door.** It is forced open. → S07
-- **S07 Clock room.** The clamp is on the hands, marked "T.T.T.", with a display counting down. → Pry it off (S08) / Let Doc look (S09)
-- **S08 Prying.** The world creaks like ice. → Keep pulling (**E02**) / Let go (S09)
-- **S09 Diagnosis.** Doc explains the clamp, the three parts and the six-hour deadline. → Footsteps below (S10)
-- **S10 The figure.** Someone in silver runs down the stairs. → Chase (S11) / Let them go and head to the lab (S13)
-- **S11 Chase.** They vanish in a blue flash and drop a keycard: "TANNEN TEMPORAL TOURS – R. TANNEN". `hasKeycard` → S13
-- **S13 Doc's lab.** The regulator is in a safe, and Doc has forgotten the combination. → "The day I invented time travel" (S14) / "The day Marty left" (S13x)
-- **S13x Jammed safe.** Doc forces it open with a crowbar. Costs 15 minutes → S14
-- **S14 Plan.** Doc builds the stabilizer frame and gives you a walkie-talkie. → 1885 (S20) / 2085 (S30)
-
-### Act 2a: 1885
-- **S20 Ravine.** The train lands in Shonash Ravine. Doc can't go into town because his past self lives there. → Go alone (S21) / Doc comes in a fake beard (S22)
-- **S22 Disguise.** You pass the lit blacksmith shop. → Peek in the window (**E03**) / Hurry on. Doc thinks better of it and goes back to the train (S21)
-- **S21 Depot.** The clock crate, guarded by a sleepy stationmaster. → Sneak round the back (S23) / Talk your way in (S24)
-- **S24 Riders.** Mad Dog Tannen's gang turn up. → Hide and slip round the back (S23) / Step forward (S27)
-- **S27 Tannen.** → Tell him about gold on tomorrow's eastbound train. He rides off (S23) / Talk back (S28)
-- **S28 Tied up in the saloon.** → Radio Doc and wait (S29, costs 15) / Offer Tannen the "iron horse" in the ravine (**E04**)
-- **S29 Rescue.** Doc uses a smoke bomb. → S23
-- **S23 The crate.** It holds two escapement wheels: one mounted and one boxed and labelled SPARE. → Take the mounted one (S25) / Take the spare (S26)
-- **S25 / S26 Departure.** Sets `escapement` to `original` or `spare`. → straight on to 2085 (S30), or home to S40 if the cell is already aboard
-
-### Act 2b: 2085
-- **S30 Hill Valley 2085.** The courthouse is now the "Frozen Moment" attraction. Doc stays with the train because a traffic drone is already interested in it. → Attraction (S31, costs 10) / Power shop (S32) / [if keycard] Staff door (S33) / Info kiosk (S30k)
-- **S30k Information kiosk** (costs 10). `knowsTA`: the Temporal Authority handles unlicensed jumps, and the police are Tannen Temporal Security. → Attraction / Shop / [keycard] Staff door
-- **S31 Attraction.** There is an exhibit of *a steam train and two frozen figures*, which is you and Doc. There is also a portrait of the founder, Rex Tannen, in silver. → Shop (S32) / Sneak into the control room (S34) / [if keycard] Staff door (S33)
-- **S32 Wilson's Power Plus** (founded by a descendant of Goldie Wilson). → Sell your Walkman, a priceless antique (S35) / Steal a cell (S36)
-- **S33 Control room.** Rex's unregistered jump log for 12 Nov 1985. → Take the log to the police (S36: they're Tannen's) / [if `knowsTA`] Take it to the Temporal Authority (S38) / Grab a cell from the rack (S36)
-- **S34 Sneaking.** A security bot catches you. → S36
-- **S36 Captured.** Rex explains his plan and means to add you to the exhibit. `tannenKnows` → Radio Doc (S37) / Bluff that the Temporal Authority is coming (**E06**)
-- **S37 Escape.** The train crashes through the skylight and you grab a cell. `hasCell`, costs an extra 15 → 1885 (S20) if the wheel is still missing, else S40
-- **S35 Bought.** `hasCell` → 1885 (S20) if the wheel is still missing, else S40
-- **S38 Temporal Authority.** They will arrest Rex on his next jump and give you a cell. `hasCell`, `authorityAlerted` → 1885 (S20) if the wheel is still missing, else S40
-
-### Hub and finale (1985)
-- **S40 Back in the frozen square.** You only arrive here once you have both parts, travelling directly between 1885 and 2085, so there's no pointless stop in between. Doc's watch shows how late you are.
-  - If `escapement = original`, the clock face is blank and your hands are fading. Without the clock running, Marty could never have got back in 1955. History takes a little while to catch up, which is why 2085 looked normal. → Go back and swap (S26b, costs 15, → S40) / Ignore it (**E05**)
-  - Otherwise → Climb the tower (S41)
-- **S41 Assembly and the climb** (79 minutes). If 0 or fewer minutes are left → **E07** (the clamp sets during assembly), otherwise → S42
-- **S42 Rex.** He waits at the top if `tannenKnows` and arrives if not.
-  - If `authorityAlerted`, agents flash in → S44
-  - Otherwise → Hand over the stabilizer (**E08**) / Stall him while Doc fits it (S43)
-- **S43 Stabilizer fires.** Rex escapes in a blue flash. → 1–19 minutes left: **E11**, 20 or more: **E09**
-- **S44 Arrest.** → S45
-- **S45 10:05 PM.** The clock ticks. Doc realises he has to write the letter. → 1–19 minutes left: **E11**, 20 or more: **E10**
-
-### Endings
-The type below is shown to the player on the ending screen and in the endings gallery.
-
-| # | Title | Type |
-|---|---|---|
-| E01 | Grounded in Time: you're frozen on the couch, a 2085 exhibit | Bad (early) |
-| E02 | Cracked: the moment shatters like glass | Bad |
-| E03 | Double Doc: two Docs faint, and the timeline doesn't recover | Bad |
-| E04 | Stuck in 1885: Tannen crashes the train into the ravine | Bittersweet |
-| E05 | Paradox: you fade like Marty's photo | Bad |
-| E06 | Exhibit A: frozen in Rex's museum | Bad |
-| E07 | Frozen Forever: the clamp sets as you reach the top | Bad |
-| E08 | Tannen Time: Hill Valley becomes a theme park | Bad |
-| E09 | Time Keeper: time is restored, Rex is still at large | Good |
-| E10 | Right on Time: Rex is arrested and Doc writes the letter, P.S. included | Best |
-| E11 | The Missing Minute: time is restored, but every clock in Hill Valley runs a minute slow | Bittersweet/good |
-
-## 5. Illustrations
-Each page gets an `image` slot and an `imagePrompt`. Until the art exists, the page shows an era-themed placeholder.
-
-**Style.** The reference is `reference/ChatGPT Image 30 Sept 2026, 14_30_31.png`, used for style only; its content is ignored. The style is a graphic-novel illustration: bold ink linework and cross-hatching over rich painted colour, with cinematic lighting. Night scenes use wet reflections and sodium or neon light. 1885 is warm and dusty, 2085 is cool blue and violet with neon accents. Framing is usually over the shoulder from behind the player, 3:2 landscape, with no text in the image.
-
-**Prompt format.** Every prompt is a shared style prefix, followed by the character sheet for whoever is in the scene, followed by the scene description. The character sheets cover Doc, the player (a distinct 80s teen, not Marty's look), Rex, the time train and the clamp.
-
-## 6. Build plan
-
-- **Stack:** Vite + TypeScript with no UI framework, output as a static site. The engine is independent of any theme.
-- **Story packs:** `stories/<id>/` holds `story.ts` (pages, choices, conditions, effects), `theme.css`, `images/` and `meta.ts` (title, eras, endings). Making a new variant means making a new folder.
-- **Reader:**
-  - The header is modelled on the time-circuit display (DESTINATION / PRESENT / LAST DEPARTED), and it animates when you change era.
-  - Each era has its own look: 1885 is sepia and wood, 1985 is neon and chrome, 2085 is holographic.
-  - Travelling in time plays a flash-and-fire-trail transition.
-  - The layout is designed for mobile first.
-- **Features:**
-  - Difficulty setting: Easy allows unlimited undo, Medium allows 2 steps, Hard allows none.
-  - Auto-save and resume.
-  - Endings gallery (for example "4 / 11").
-  - Author-only story map at `?map`.
-- **Checker:** `npm run check-story` runs the exhaustive path-and-state check in §3.
+All eleven changed illustrations have been generated from the approved references, visually reviewed and installed as 1200×800 WebPs. Sources and pre-rewrite backups remain in ignored `art-src/`; exported prompts are in `image-prompts.md`.

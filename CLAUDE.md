@@ -5,8 +5,8 @@ A web choose-your-own-adventure engine with swappable **story packs**. Each stor
 | Story | Id | Status |
 |---|---|---|
 | *The Stopped Clocks* (Back to the Future) | `stopped-clocks` | Complete and illustrated |
-| *The Fratelli Run* (The Goonies) | `fratelli-run` | Written and reviewed; image prompts ready, no illustrations yet |
-| *Return to Sender* (Ghostbusters) | `return-to-sender` | Written; image prompts ready, no illustrations yet |
+| *The Fratelli Run* (The Goonies) | `fratelli-run` | Complete and illustrated |
+| *Return to Sender* (Ghostbusters) | `return-to-sender` | Complete and illustrated |
 
 When more than one story is installed, the front page shows a story picker.
 
@@ -50,7 +50,10 @@ When more than one story is installed, the front page shows a story picker.
 - `npm run dev`: the dev server. With one story the game opens directly; with several, the story picker appears. `?story=<id>` opens a story and `?map` opens its story map (spoilers).
 - `npm run check`: type check, checks that story ids are unique and themes are scoped, and the story checker for every story. **Run this after any story edit.** It must print "OK: every path is coherent" for each story.
 - `npm run build`: runs `check`, then builds the static site into `dist/`.
-- `npm run prompts`: regenerates `stories/<id>/image-prompts.md`.
+- `npm run prompts -- --references`: exports the reference-art briefs before scene generation.
+- `npm run prompts`: regenerates scene prompts only after all reference sheets pass the review gate.
+- `npm run test:art`: checks reference coverage, review hashes and key continuity regressions.
+- `npm run test:story`: focused editorial route regressions, including clue gates and companion state.
 - `npm run images`: converts `stories/<id>/art-src/*.png` into the game's `images/*.webp`.
 - `npm run story-dump -- <id>`: prints a story as plain text with its logic, for review.
 
@@ -83,6 +86,9 @@ A Stop hook (`.claude/settings.json` → `scripts/story-review-gate.mjs`) blocks
   - `theme.css`: colours. Every selector must start with `[data-story='<id>']`; the checker enforces this.
   - `images/`: game WebPs.
   - `art-src/`: originals, ignored by git.
+  - `references/manifest.json`: reference inventory, generation briefs, subject/page mappings and reviewed WebP hashes.
+  - `references/*.webp`: tracked, approved character, costume, prop and landmark sheets; never game scenes.
+  - `reference-prompts.md`: generated first-phase reference briefs.
   - `image-prompts.md`: generated prompts.
 - `stories/index.ts`: registers packs; the first one listed is first in the picker.
 - `docs/<id>/story-outline.md`: each story's bible.
@@ -101,12 +107,17 @@ A Stop hook (`.claude/settings.json` → `scripts/story-review-gate.mjs`) blocks
 - `clock` is the optional visible meter, driven by a numeric flag. `format: 'time'` shows H:MM (the default); `format: 'number'` shows the value plus `unit` (e.g. `%`).
 - `difficulties` sets per-difficulty starting effects. `difficultyNotes` overrides the title screen's difficulty descriptions.
 - Text placeholders: `{{clock}}` is the formatted meter, and `{{flagName}}` is a flag's value. Never hard-code meter numbers in prose. The checker rejects unknown placeholders.
-- Saves from an older version of a story reset if their page no longer exists.
+- Bump a story's `revision` when changed routes or flags make existing progress incompatible. The reader then offers a new run with an explanation, retains collected endings, and leaves the old save untouched until the player starts again. Missing-page saves also cannot resume.
 
 ## Illustrations
 
 - Every page has an `imagePrompt`. `art.stylePrefix` and `art.cast` (recurring characters and props) are combined with it by `npm run prompts`.
-- **Workflow:** generate at 3:2 (1536×1024), save as `stories/<id>/art-src/<PAGE_ID>.png`, then run `npm run images`. This writes a 1200×800 WebP at quality 75 and needs `cwebp`. Commit only the WebP. Pages without an image show a neutral placeholder.
+- **Reference-first workflow (required, including small batches):**
+  1. Read the whole story and its arrival states. Inventory recurring characters, clothing, objects and landmarks in `references/manifest.json`. Include anything the model would otherwise invent repeatedly: faces, asymmetry, stripe order/colours, satchel straps/buckles, key geometry, prop scale and clock-tower architecture. Every `art.cast` subject needs coverage; map recurring scenery and props not in the cast to explicit page IDs. Separate costume, era, assembly and possession variants.
+  2. Run `npm run prompts -- --references`. Generate the reference sheets FIRST, using approved existing art only as identity/style anchors. Keep full-size originals in ignored `art-src/references/`. Inspect faces, hands, clothing and object geometry at full size; correct ambiguity before continuing. Convert approved boards with `cwebp -q 88` without resizing into tracked `references/<id>.webp`. Only after visual review, record each WebP’s `shasum -a 256` as `reviewedSha256` in the manifest. Never update a hash just to silence the gate.
+  3. Lock the reviewed design details in `art.cast` and the relevant scene prompts. List only subjects actually visible at that moment. A reference sheet does not establish possession, introduce a companion or imply completed assembly. For merged paths, choose an illustration valid on EVERY route (omit optional companions/props, or crop them out); never ask for “Sloth if present” in a single static image. Different variants require explicit separate assets and wiring.
+  4. Run `npm run prompts`; it blocks missing, changed or unreviewed sheets and uncovered cast. Attach each page’s listed reference files to every generation/edit call, not just their names. Generate scenes at 3:2 (1536×1024), saving `art-src/<PAGE_ID>.png`. Preserve approved anatomy and unrelated details during corrections; retain old originals in `art-src/corrections/`.
+  5. Review every result against all arrival paths and the reference boards: cast, knowledge, location/time, possession, costume, object state/shape/scale, duplicate people, hands and legs. Check both full-size details and cross-scene contact sheets. Only then run `npm run images` for 1200×800 quality-75 game WebPs. Commit game WebPs and reference WebPs, never `art-src/`. Run `npm run test:art`, the story change gate when applicable, and verify loaded images in the browser. Pages without an image show a neutral placeholder.
 - **Art guardrails,** learned from the first story. Put these in each story's `stylePrefix`:
   - Only the listed characters appear, and the main companion only when described.
   - No famous props or vehicles unless intended.
@@ -121,58 +132,41 @@ A Stop hook (`.claude/settings.json` → `scripts/story-review-gate.mjs`) blocks
 
 ## Story: *The Stopped Clocks* (`stopped-clocks`)
 
-- **Bible:** `docs/stopped-clocks/story-outline.md`.
-- **Art reference:** `reference/ChatGPT Image 30 Sept 2026, 14_30_31.png`. Use it for style only; the DeLorean, Twin Pines Mall and the Marty-style player in it are **not** part of the story.
-- Themed on *Back to the Future*: Doc Brown recruits the player to solve a time mystery. It uses the real names and characters, which is acceptable only because the project is for personal use (see `LICENSE`).
-- The eras are 1985 Hill Valley (the present), 1885 and 2085.
-- **Explanations for newcomers:** who Doc and Marty are, the 1955 lightning strike, 88 mph, the flux capacitor, the Tannens, and why Doc lived in 1885.
-- **UI:** `header: 'time-circuits'`, `transition: 'eighty-eight'`, `eraBadges: true`. The countdown is the clamp's timer.
-- **Clock:** `minutes` starts at Easy 390, Medium 360, Hard 345. The costs:
-  - fixed travel, 225 in total
-  - assembly (S41), 79
-  - optional detours, 10 each: the chase S11, the kiosk S30k, the museum S31
-  - mistakes, 15 each: S13x, S29, S26b, and the extra in S37
-
-  After assembly, 20 or more minutes left makes the clean endings possible, 1–19 gives E11, and 0 or less gives E07. Medium allows one slip on the best route and Hard none.
-- **Status:** 52 pages, 11 endings, all illustrated.
+- **Bible:** `docs/stopped-clocks/story-outline.md`. Consult its route and meter tables before changing this story.
+- Personal-use Back to the Future adventure: an original teen preservation volunteer and Doc investigate a frozen town across 1985, 1885 and 2085. Keep the approved premise, newcomer explanations and train (not DeLorean).
+- The player's local knowledge and mechanical work drive the climax. The museum visit establishes Rex's public live channel; the independent Authority can follow that channel only after receiving the jump-log evidence.
+- `authorityAlerted` is not an arrest. Only the broadcast/arrest route sets `rexCaught`. Finale prose and endings must distinguish them.
+- Doc knows his safe combination and detects removal of the original wheel immediately in 1885. Repair occurs there before era departure.
+- Letter P.S.: “Leave the past something to work with.” Preserve the letter loop and exact wording.
+- **Meter:** starts 390/360/345 on Easy/Medium/Hard. Core travel/preparation 225, assembly 70; chase/kiosk/museum 10 each; recoverable mistakes 15 each. Best needs all investigation, the broadcast choice, arrest and at least 20 remaining. Medium permits one recovery; Hard none.
+- **UI:** time-circuits header, eighty-eight transition, era badges. Save revision 2.
+- **Status:** 51 pages, eleven endings. Art follows the approved reference sheets; S41's assembly image must remain valid on timer-expired arrivals.
 
 ---
 
 ## Story: *The Fratelli Run* (`fratelli-run`)
 
-- **Bible:** `docs/fratelli-run/story-outline.md`.
-- Themed on *The Goonies*, with real names (acceptable only because the project is for personal use). It never mentions pirates or treasure: the Fratellis have escaped, and the key sewn into the player's thrift-shop overcoat opens a locker holding their counterfeiting plates.
-- The setting is Halloween 1985 in Astoria, Oregon. The settings (`era`) are the Goon Docks, Downtown, Underground and Waterfront.
-- **Explanations for newcomers:** who the Goonies and Fratellis are, what counterfeiting plates are, who Sloth is.
-- **UI:** the default `basic` header, `transition: 'vhs'` (a videotape tracking glitch, in `src/reader/chrome.ts`) and a theme per setting.
-- **Meter:** `lead`, shown as FRATELLI LEAD (H:MM) once `running`. Easy starts at 135, Medium 105, Hard 90. The costs:
-  - detours, 10 each: Data (rope), Sloth, library, police station
-  - wrong guesses, 15 each: bus depot, old hideout
-  - fixed: Lowline 10, waiting for low tide 15 (25 without the library map), final dash 20
-  - mistakes, 15 each: the library chase (T03), the wrong fork (U03), wading the sump, squeezing the grate
-
-  The best route costs 75 and the best ending needs 15 left after the dash, so Medium allows one slip and Hard none.
-- **Guard rule:** pages that spend `lead` get their choices guarded (`lead >= 1`) and a "Keep running" choice to E06, added in code by `story.ts`. If the checker reports a guard that never applies, add the page to `unguarded`.
-- **Clue chain:** the key tag (`7 · LOW WATER`), the poster and radio (low tide 9:41 PM, the bonfire at the foot of Seventh Street, deputies guarding it), and the radio's description of the laundry van that "Deputy Dunmore" arrives in.
-- **Status:** 45 pages, 11 endings (7 bad, 4 good, one best). Written and reviewed. Illustrations are not made yet. `npm run prompts` generates the prompts.
+- **Bible:** `docs/fratelli-run/story-outline.md`. Consult its route, signal and margin tables before editing.
+- Personal-use Goonies story: an unnamed fourteen-year-old finds a key in an auction overcoat. Halloween 1985, Astoria; escaped Fratellis seek counterfeit printing plates. No pirates or treasure.
+- The ensemble has distinct jobs. The player assigns support at the flats or station; Data offers the launcher before departure; Mouth relays discoveries; Mikey finds help.
+- Sloth chooses whether to join, sets a stop rule and can refuse to hold off his family. Never treat him as an acquired tool. He accompanies the player only after the Lowline grate, never on a street arrival. Honor departure at P05 and F02.
+- **Meter:** `lead` is PURSUIT MARGIN, a number, NOT elapsed minutes. Starts 135/105/90. The clean best route costs 70 and requires 20 remaining, flats support, a correctly timed signal, Sloth's freely chosen continued accompaniment and the coordinated handoff. Medium allows one 15-point slip; Hard none. Ordinary solo and street victories remain possible.
+- Clues: key tag and tide poster, radio van/shift facts, flash acknowledgement, map, inspection catch, depot van number. Mistaken detours can yield useful information.
+- **UI:** basic header, VHS transition, scoped setting themes. Revision 2. 45 pages, eleven endings (seven bad, four good, one best).
+- Static illustrations omit optional companions; only D07, D08 and E11 guarantee Sloth visibly present.
 
 ---
 
 ## Story: *Return to Sender* (`return-to-sender`)
 
-- **Bible:** `docs/return-to-sender/story-outline.md`.
-- Themed on *Ghostbusters*, with real names (acceptable only because the project is for personal use). The player is a 17-year-old bicycle courier carrying a haunted 1898 pneumatic-mail canister from a Tribeca stamp shop to the firehouse, and the story is set on Friday 15 November 1985. The canister belongs in the old Station 9 tube room under the Sedgewick Hotel at 11:20 PM, in the tube marked UP.
-- The settings (`era`) are Lower Manhattan, the Firehouse, Park Row and Underground.
-- **Explanations for newcomers:** who the Ghostbusters are, proton packs, traps and the containment grid, who Slimer is, and what the pneumatic mail was.
-- **UI:** the default `basic` header, `transition: 'slime'` (green ooze, in `src/reader/chrome.ts`) and a theme per setting. The meter is a rising load shown with a segmented bar.
-- **Meter:** the flag is `margin` (hidden headroom), and `clock.risesFrom: 100` shows `100 - margin` as GRID LOAD (%). Easy starts at 20% load (`margin` 80), Medium 35% (65) and Hard 50% (50). The costs:
-  - forced: the first incident 5, the ride to Park Row 10, delivery 5
-  - detours: firehouse 10 (trap, Slimer), diner 5 (coal-chute tip)
-  - wrong guesses, 10 each: post office, Engine 9
-  - mistakes, 10 each: the Sorting Room (T03), the blockade, forcing the door, waiting without the trap, the DOWN tube
-  - the lobby route (Voss) 10, Pell's cellar tunnel 10 + the blockade 10, waiting at the firehouse 15
-
-  The best route costs 35 and the best ending needs `margin` 15 left, so Medium allows one slip and Hard none.
-- **Guard rule:** pages that spend `margin` get their choices guarded (`margin >= 1`) and a "Keep running" choice to E06, added in code by `story.ts`. If the checker reports a guard that never applies, add the page to `unguarded`.
-- **Clue chain:** the plate (`ST. 9 · 11:20 UP`), Mr. Pell's wall map (Station 9 is the Park Row Annex, with a hotel over it now), and the plaque and bronze door at the hotel. The decoys are the post office and Engine 9, both "stations".
-- **Status:** 42 pages, 11 endings (7 bad, 4 good, one best). Written and reviewed. Illustrations are not made yet. `npm run prompts` generates the prompts.
+- **Bible:** `docs/return-to-sender/story-outline.md`. Consult its evidence, capture-accounting and route tables before editing.
+- Personal-use Ghostbusters story, rainy Manhattan, Friday 15 November 1985. An unnamed seventeen-year-old courier carries an undelivered 1898 closure notice from Pell's stamp shop to the firehouse, then may trace Station Nine beneath the Sedgewick.
+- The commissioned handover is a legitimate good ending. Further investigation is voluntary. The professionals revise an incomplete initial diagnosis when the courier reports new evidence; they are not negligent villains.
+- The tag ONLY reports grid load. It never captures or transports ghosts. Twelve postal clerks were already in the grid; 35 including Tull remain outside. The total shift is 47.
+- A portable trap catches one group: six at the blockade, three while waiting, OR the final assembled staff. Full traps remain separate from the grid and are explicitly handed over or discharged.
+- Slimer remains at the firehouse. His optional empty-chair scene is relationship, not an item-for-help exchange or mandatory best-ending flag.
+- Clue distribution: address/time/entrance from distinct investigations, copy procedure from post office or records room, full roster from the optional roll. The player performs the final deliveries while the team operates machinery.
+- Best requires the copy procedure, verified roll and at least ten headroom at C08. C09 releases only the named twelve; C10 accounts for trap cargo and returns to Tull. Ordinary success may leave named release work outstanding.
+- **Meter:** rising GRID LOAD = 100 minus `margin`. Starts at 20/35/50% on Easy/Medium/Hard. Clean solo, team and trap-assisted records routes cost 40 headroom; Medium leaves 15 beyond the ten-point discharge reserve, Hard none. The DOWN loop and rushed lobby access each cost ten and are recoverable.
+- **UI:** basic header, slime transition, scoped themes. Revision 2. 46 pages, ten endings (four bad, six good, one best); E05 is now a recovery scene, not an ending. Old ending records remain stored but only current endings count.
+- Merged illustrations crop optional team/trap presence. Approved sheets lock faces, wardrobe, courier satchel, canister, trap, paperwork, storage case and service hatch.

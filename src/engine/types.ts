@@ -60,6 +60,8 @@ export interface FlagDef {
 
 export interface Story {
   id: string;
+  /** Bump when rewritten paths make an existing in-progress save incompatible. */
+  revision?: number;
   title: string;
   subtitle: string;
   blurb: string;

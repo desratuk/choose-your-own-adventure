@@ -1,148 +1,162 @@
 # The Fratelli Run: story bible and outline
 
-Id: `fratelli-run`. A *Goonies* story using the real names (personal use only, as with *The Stopped Clocks*). It never mentions pirates, maps to treasure or gold.
+Story id: `fratelli-run`. Revision: **2**. A personal-use Goonies adventure set on Halloween, Thursday 31 October 1985, in Astoria, Oregon. **45 pages; 11 endings: seven bad, four good, one best.** The original unnamed, gender-neutral fourteen-year-old remains the viewpoint character. No pirates or treasure plot.
 
-## 1. Premise
+## Premise and personal arc
 
-Thursday 31 October 1985, Halloween, Astoria, Oregon. At dusk the radio announces that the **Fratellis** (Mama Fratelli and her sons Jake and Francis, the crooks the Goonies sent to jail last summer) have escaped from a prison transport. You live at the Goon Docks, a few doors from Mikey Walsh, and you are wearing a second-hand black overcoat as a private-eye costume. Chunk finds a brass key sewn into its hem. The coat came from the county's auction of the Fratellis' confiscated belongings (lot 12, two dollars). It was Papa Fratelli's overcoat.
+A salt-weathered brass key is sewn into the player's two-dollar auction overcoat, formerly Papa Fratelli's. Mama hid it there before her arrest; the county inadvertently sold it. Its tag reads **7 · LOW WATER**. It opens locker seven in the surviving ice house beneath Seventh Street Pier. The locker contains two engraved copper printing matrices for counterfeit twenty-dollar bills. A press is replaceable machinery; the plates make restarting the operation possible.
 
-The key opens **locker 7** in the old ice house under the Seventh Street Pier. The ice house sits in the pier's footing and can only be reached at **low water**. The locker holds the engraved **plates** Mama used to print fake twenty-dollar bills, which the police never found. Mama sewed the key into the coat so that nobody would think to look. The county then sold the coat.
+The escaped Mama, Jake and Francis want the key. Failing that, they have a cutting torch. Mama arrives aboard the *Rosalie* at 9:15. Low water exposes the ice-house door at 9:41, when the bonfire and fireworks on the adjacent flats cover their work. The boat grounds on the falling tide; escape endings use the laundry van, not a boat that inconsistently floats free.
 
-The Fratellis' plan is to cut open locker 7 with a torch tonight at low tide (9:41 PM), while the town's Halloween bonfire on the river flats and its fireworks cover the noise. Mama brings a boat in at 9:15. They also want the key, which is quieter and faster, so they are hunting the buyer of lot 12.
+The player begins as the neighbor who hears about Goonies adventures afterwards. Mikey returns the key and makes clear that the player decides, while different people can do different jobs. The arc is learning to ask, listen, delegate and credit others. The best ending makes belonging visible through friends listening to the player's story.
 
-Everything the player needs to know is explained in the story's own voice: who the Goonies and Fratellis are, what counterfeiting plates are, what the Goon Docks were.
+## Ensemble and Sloth
 
-### The mystery and its answers
-1. **What does the key open?** Locker 7 in the ice house under the Seventh Street Pier. The tag reads `7 · LOW WATER`.
-2. **When can you open it, and where is help?** Tonight's low tide is 9:41 PM (poster in the attic). The bonfire is lit at low tide on the flats at the foot of Seventh Street, and the sheriff's department guards it (radio, Mikey, sergeant). Both are next to the pier.
-3. **Who is the "deputy"?** Francis Fratelli in a Halloween deputy uniform. The radio said the escapees stole a white laundry van with a blue stripe, and the "deputy" drives one.
+- **Mikey** is the earnest thirteen-year-old organizer. He goes with his father to prepare the public bonfire area and locates Sheriff Pruitt after the nine o'clock shift change. The player chooses whether he arranges help at the flats or at the station.
+- **Data** demonstrates the rope launcher in the attic before departure, with an immediate take/decline choice. He explains how to inspect supports and catches, then keeps lookout from the public side of the flats. His light becomes a route marker after an acknowledged signal.
+- **Mouth** is the runner at the Lowline entrance throughout the detour phase. He takes map details and the depot's van number, leaves for the bonfire when the player commits to a route (or at nine if the player never returns), then clears the crowd and helps the player through. He passes on the player's last destination.
+- **Chunk** goes home to Sloth first. His parents return before eight; if Sloth stays home, Chunk remains until they arrive before joining the bonfire. If Sloth volunteers, Chunk waits at the garage hatch until Sloth calls up that the player arrived, or until nine if the rendezvous fails. He then joins the others at the bonfire. Sloth has a household to return to even while Chunk is at the fire.
+- **Sloth**, Mama's youngest son and Jake and Francis's brother, was kept hidden by his family. The Goonies helped him get free; he now lives with Chunk's family. He chooses the grate rendezvous, sets a stop rule and works its catch with the player. Hearing Mama's threat genuinely frightens him. At P05, being offered a shared escape lets him choose to continue; being asked to hold off his brothers makes him refuse and go home. Either choice is honored. His later “Sloth stay” is his decision, including in successful routes. His contribution includes local knowledge and choosing to stand with friends. Applause follows his freedom; it does not confer it.
 
-## 2. Canon and consistency rules
+Nobody waits overnight in a drain. No route puts Sloth physically with the player before U05→U06. Street arrivals omit him. F02 sends an accompanying Sloth home and clears `slothWith` on the choice to E09. E04 accounts for his rescue separately. Optional-companion merged illustrations exclude him; E11 guarantees him.
 
-- **Astoria** is real: the Columbia River, fog, a hillside town. The Goon Docks is the player's neighbourhood. "Last summer" the Goonies stopped developers from bulldozing it and the Fratellis went to jail (never explained further).
-- **Cast:** Mikey (leader, earnest), Data (inventor, gadgets in every pocket), Chunk (big-hearted, always eating), Mouth (fast talker). **Sloth** is the Fratellis' youngest brother, huge and gentle, kept hidden by them for years. The Goonies freed him and he now lives with Chunk's family.
-- Brand, Andy and Stef are not in the story.
-- Mikey's dad works at the history museum. He is taking the gang to the bonfire at nine. The gang is not allowed out alone tonight, so the player works alone. The gang are at the bonfire in the finale.
-- The player is a 14-year-old Goon Docks neighbour, original, no name and no stated gender. They wear the **black overcoat with a worn velvet collar, a brown fedora, red high-tops**, with a small flashlight on a lanyard.
-- Tide: high 3:22 PM, **low 9:41 PM**, high 3:47 AM.
-- The ice house door is under water until the tide falls. Chest-deep water with a current is dangerous (E04).
-- Francis disguises himself as a deputy. Jake and Francis are at the old hideout (a boarded-up restaurant on the waterfront road) in the early evening, collecting a cutting torch, and are at the pier by seven. Mama arrives by boat at 9:15.
-- The Lowline is the storm drain running from the head of the Goon Docks to the river outfall under the pier. A second entrance sits behind Chunk's garage; Sloth knows it.
-- Nothing graphic. The Fratellis are comic crooks. The worst they do is lock you in a closet or take the key.
+## Clues, knowledge and accountability
 
-## 3. State
+1. D01's key tag connects to D04's poster: the foot of Seventh Street, low water at **9:41**, bonfire and fireworks. The ice house is tide-locked, not an arbitrary numbered bus locker.
+2. D01's radio gives the **white laundry van with a blue stripe**, the **nine o'clock shift change**, and the guarded bonfire. T02's false deputy arrives in that van with a radio that can hear dispatch. His costume stays reference-locked, but the narration no longer announces the moustache is fake before the choice. The van and staffing facts are the fair clues.
+3. D04 establishes **two flashes out, one back**. P03's hidden wait includes overhearing the torch plan at nine. Signaling too soon at P03→P04 exposes the hiding place without a traversable approach. Waiting for the footing to dry and signaling at P06 lets the ensemble prepare a route through the crowd.
+4. T01's librarian explains the ice house and supplies a chart, reporting the location to dispatch. T05's mistaken depot visit yields a recorded van number and the inland escape direction, which Mouth relays and E09 pays off. It is a costly mistake with useful evidence.
+5. U03 costs 15, but the inspection latch teaches a cheaper solo grate solution. Its choice cannot be repeated. The right branch can be inferred from river air without the optional map.
+6. Adults receive reports rather than uniformly mocking children. D02 creates a record. T04 offers real safety, but E03 records the failure to check beneath the pier promptly. Olafsen acknowledges that failure. Good outcomes report events rather than celebrating secrecy. E09/E11 explicitly report Mama's threat as well as the plates.
 
-| Flag | Values | Meaning |
-|---|---|---|
-| `lead` | number | **Shown** as "FRATELLI LEAD" (H:MM) once `running`. Spent by detours and mistakes. When it hits 0 the Fratellis catch you (E06) |
-| `difficulty` | easy / medium / hard | starting `lead` |
-| `running` | bool | You've left HQ, so the meter shows |
-| `phoned` | bool | Called the police first |
-| `hasRope` | bool | Data's rope launcher |
-| `visitedSloth`, `slothPlan` | bool | Asked Sloth; he agreed to meet you at the grate |
-| `slothWith` | bool | He is with you (only when you go down the Lowline) |
-| `hasMap` | bool | The library chart |
-| `visitedPolice`, `visitedDepot`, `visitedHideout` | bool | Hub options already used |
-| `soaked` | bool | Waded through water |
-| `hasPlates` | bool | Opened locker 7 |
+Source knowledge is explained in dialogue or concrete action: Goonies, Goon Docks, Fratellis, plates, Sloth, ice house, and Lowline. The player has no gendered name or pronouns.
 
-**Guard rule.** Every page that spends `lead` can end with the lead at or below 0. On those pages the choices need `lead >= 1`, and a generated "Keep running" choice goes to E06. The story builds this in code (`finalize` in `story.ts`), so the checker never sees an expired meter on a page that can continue.
+## State and meter
 
-## 3a. Meter and difficulty
+`lead` remains the numeric engine flag; its visible label is **PURSUIT MARGIN**, `format: 'number'`. It measures scene-relative room to act before the search closes, **not minutes, a percentage, or a countdown to low tide**. D05 explains this. Calendar headers establish actual time. Hiding until nine has a fixed exposure/search cost.
 
-| Item | Cost |
+| Flag | Values / meaning |
 |---|---|
-| Detours: Data (rope), Sloth, library, police station | 10 each |
-| Wrong guesses: bus depot, old hideout | 15 each |
-| Chased by "Deputy" (T03) | 15 |
-| Lowline fixed cost | 10 |
-| Wrong fork (U03), wading the sump, squeezing the grate | 15 each |
-| Street route (Marine Drive and boatyard) | 20 + 15 |
-| Waiting for low tide: with the map | 15 |
-| Waiting for low tide: no map (you search the pilings) | 25 |
-| Retreating from the water (P02) | 10 |
-| Dash across the flats (F01) | 20 |
-| Long way back through the tunnels (F02) | 25 |
+| `lead`, `difficulty`, `running` | Margin; easy/medium/hard; meter shown from D04 |
+| `phoned` | D02 report made |
+| `teamPlan` | `flats` or `station`, chosen in D04 |
+| `hasRope` | D06 demonstration accepted; never requires a return trip |
+| `visitedSloth`, `slothPlan` | Garage visited; Sloth volunteered |
+| `slothWith` | Accompaniment begins only at U05→U06; cleared on refusal at P05 or F02→E09 |
+| `slothChoice` | At P05 the player shares the escape plan; Sloth chooses to accompany them |
+| `signal` | `none`, `ready`, `early`, `timed`; only ready+flats can become timed at P06 |
+| `hasMap` | Library chart acquired |
+| `visitedPolice`, `visitedDepot`, `visitedHideout`, `visitedCellar` | One-use detours / inspection-shaft discovery |
+| `soaked`, `viaLowline`, `foundDoor` | Water exposure; underground approach; door found by wading |
+| `hasPlates` | Set on P07 arrival |
 
-Best route: rope 10, Sloth 10, Lowline 10, wait 15 (the library costs 10 and saves 10, so it's neutral), dash 20 = **75**.
+Flags are finite or monotone decreasing within bounded routes. P02's retreat costs margin and eventually ends the run; U03 cannot loop. Guard generation protects every cost destination where expiration is reachable. Only E06 is available there at `lead <= 0`. Guaranteed-positive exceptions: D02, D05, D07, T01, T03, T04, T05, U01. Nonterminal expired destinations are listed in `clock.allowExpiredOn`.
 
-At the end of the dash, 15 or more leads to E11 (best) and 1–14 to E10 (good, close call). The start values (Easy 135, Medium 105, Hard 90) allow 3, 1 and 0 slips. Hard needs rope, Sloth and no mistakes.
+| Action | Margin cost |
+|---|---:|
+| Initial police call | 10 |
+| Learn and take Data's launcher, in attic | 5 |
+| Garage, library, police station | 10 each |
+| Bus depot, old hideout | 15 each |
+| Library chase | 15 |
+| Lowline approach | 10 |
+| Wrong fork / inspection shaft | 15 |
+| Sump: launcher / shelf / wade | 0 / 10 / 15 |
+| Grate: Sloth teamwork / rope or known latch / unaided catch / squeeze | 0 / 5 / 10 / 15 |
+| Street approach: Marine Drive + boatyard | 20 + 15 |
+| Hide and wait: known door / search for door | 10 / 20 |
+| Retreat from dangerous wading | 10 |
+| Premature light signal | 10 |
+| Timed signal and acknowledgment | 5 |
+| Dash to bonfire / return via tunnels | 20 / 25 |
 
-## 4. Clue chain (none is flagged when it matters)
+Starts: **Easy 135, Medium 105, Hard 90**. Clean best route costs **70**: rope 5 + garage 10 + Lowline 10 + search/wait 20 + timed signal 5 + dash 20. Library 10 saves 10 at the pier, so the map is optional and budget-neutral. Best requires **20 remaining**, `teamPlan=flats`, `signal=timed`, `slothChoice=true`, `slothWith=true`, and the coordinated handoff at F03. Hard has no spare margin on that route; Medium permits one 15-point mistake; Easy permits three. A no-rope shelf crossing costs five more than the launcher itinerary, leaving ordinary good endings available on Hard.
 
-1. **Key tag `7 · LOW WATER`** (D01) plus Mouth's remark that nobody has used the Seventh Street Pier since the storm (D03). The pier's ice house is the only tide-locked place. The bus depot lockers are the decoy.
-2. **Tide and bonfire.** The poster says low tide is 9:41 PM at the foot of Seventh Street. The radio says deputies guard the bonfire after the 9 PM shift change. Mikey says everyone is going at nine. Together: arrive at the pier at low water (wait, don't wade) and run toward the fire, where the sheriff and the town are.
-3. **The laundry van.** The radio names it in D01. A "deputy" in T02 arrives in one.
+Without rope, Sloth, map or detours, the careful solo Lowline route costs 70 to E10 (margin 20 on Hard), or 75 to E09 (15 on Hard). The street route costs 75 to E10 or 80 to E09. E08 and E07 remain available whenever P08 is reached alive. More margin alone cannot buy E11.
 
-## 5. Page map (45 pages: 34 scenes, 11 endings)
+## Page map
 
-### Goon Docks (era `docks`)
-- **D01 Two Dollars at the Auction** (porch, 5:20 PM). The coat, the radio, the key. → Mikey's attic (D03) / Call the police (D02) / Hide the key at home (**E01**)
-- **D02 Busy Signal.** The line is jammed with prank calls. 10 → D03
-- **D03 Headquarters** (attic). Who's who, the auction slip, what the plates are, why the Fratellis want the coat. → D04
-- **D04 What the Key Is** (attic). Data on the key, Mouth's bonfire poster, Mikey's dad's rules. Sets `running`. → D05
-- **D05 The Plan** (hub, head of the Lowline). Detours and routes: D06, D07, T01, T04, T05, T06, U01, T08
-- **D06 Data's Workshop** (10). `hasRope` → D05
-- **D07 Chunk's Garage** (10). Meet Sloth. → Ask him to meet you at the grate (D08) / Leave him (D05, `visitedSloth`)
-- **D08 Sloth's Answer.** He knows the second drain. `visitedSloth`, `slothPlan` → D05
+All original IDs remain; no nodes added or removed.
 
-### Downtown (era `town`)
-- **T01 The Library** (10). Mrs. Tilden, the chart. `hasMap`. She phones the sheriff and leaves a message. → T02
-- **T02 The Library Steps.** "Deputy Dunmore" with a laundry van. → Hand over the key (**E02**) / "I'll take it myself" (T03) / Slip out the side door (D05)
-- **T03 The Alley** (15). Francis drops the act and you lose him. → D05
-- **T04 Duane Street** (10). The sergeant. → Leave the key as evidence (**E03**) / Keep it and go (D05, `visitedPolice`)
-- **T05 The Bus Depot** (15). The key doesn't fit. `visitedDepot` → D05
-- **T06 The Old Hideout** (15). Jake and Francis, a cutting torch. `visitedHideout` → T07
-- **T07 The Cellar Trapdoor.** Escape into the old tunnels. → U02
-- **T08 Marine Drive** (20). Street route. Francis at the gate. → Boatyard (T09) / Bluster through (**E05**)
-- **T09 The Boatyard** (15). Slip under the pier. → P01
+- D01 porch/key → D02 call / D03 attic / E01 ignore.
+- D02 → D03. D03 stakes and agency → D04.
+- D04 assigns flats/station plan → D06. D06 takes/declines launcher before leaving → D05.
+- D05 Mouth's hub → D07 garage, T01 library, T04 police, T05 depot, T06 hideout, U01 Lowline, T08 streets. No Data-return option.
+- D07 → D08 volunteer / D05 family support. D08 rendezvous and stop rule → D05.
+- T01 chart/report → T02 false deputy → E02 surrender / T03 chase / D05 side exit. T03 → D05.
+- T04 report → E03 surrender key / D05 keep it. T05 van number → D05.
+- T06 torch sighting → T07 cellar escape → U02. T08 gate → E05 / T09 boatyard → P01.
+- U01 → U02 fork → U03 inspection shaft once → U02, or U04 sump.
+- U04 crossing → U05 grate. U05 applicable opening method → U06 outfall → P01.
+- P01 → P02 wade / P03 hidden wait / E05 deck. P02 → E04 dive / P01 retreat.
+- P03 wait/overheard plan → P05 ready/no signal, or P04 premature signal → P05.
+- P05 Mama arrives and threatens Sloth; accompaniment decision → P06.
+- P06 low water → P07 timed acknowledgment if eligible, or silent entry. P07 plates → P08.
+- P08 → F01 flats / F02 tunnels / E08 destruction / E07 bargain.
+- F01 → F03 crowd → E11 coordinated handoff when eligible / E10 release plates for safety. F02 → E09.
+- Reachable expiration at guarded pages → E06.
 
-### Underground (era `under`)
-- **U01 The Lowline.** Arrival (the choice that enters costs 10). If `slothPlan`, he's expected at the grate. → U02
-- **U02 The Fork.** Salt air on the right, cellar damp on the left. The map confirms. → Right (U04) / Left (U03)
-- **U03 Dead End** (15). → U02
-- **U04 The Sump.** A flooded dip. → Use the rope launcher, if `hasRope` (U05) / Wade (U05, 15, `soaked`)
-- **U05 The Grate.** If `slothPlan`, he's waiting and lifts it (`slothWith`). Otherwise squeeze through (15). → U06
-- **U06 The Outfall.** The end of the tunnel opens onto the catwalk. → P01
+## Endings and values
 
-### Waterfront (era `pier`)
-- **P01 Under the Pier.** The tide is high, Francis walks above. → Wade now (P02) / Wait among the pilings (P03: 15 with the map, a search at 25 without) / Climb to the deck (**E05**)
-- **P02 Chest-Deep.** → Dive for the door (**E04**) / Back out (P01, 10, `soaked`)
-- **P03 Waiting.** The long wait. → P04
-- **P04 Voices Overhead.** Jake and Francis explain their plan. → P05
-- **P05 The Boat Comes In** (9:15). Mama arrives. → P06
-- **P06 Low Water** (9:41). The bonfire is lit, the door appears. → P07
-- **P07 Locker Seven.** The plates, `hasPlates`. → P08
-- **P08 Company.** Jake and Francis come down. Mama calls from the boat. → Run across the flats (F01) / Back into the tunnel (F02) / Throw the plates into the channel (**E08**) / Hand them over (**E07**)
-
-### Finale
-- **F01 Across the Flats** (20). → F03
-- **F02 The Long Way** (25). → Continue (**E09**)
-- **F03 The Crowd.** Everyone thinks the Fratellis are in costume. The gang, the sheriff. 15 or more leads left → **E11**, 1–14 → **E10**
-
-### Endings
-
-| # | Title | Type |
+| ID | Ending | Type / consequence |
 |---|---|---|
-| E01 | Trick or Treat: the Fratellis ring your doorbell | Bad |
-| E02 | A Helpful Deputy: you hand the key to Francis | Bad |
-| E03 | The Evidence Drawer: the key sits in a drawer | Bad |
-| E04 | High Water: you dive for the door | Bad |
-| E05 | Caught on the Pier | Bad |
-| E06 | Out of Lead: the Fratellis catch up | Bad |
-| E07 | Just Asking Nicely: you hand Mama the plates | Bad |
-| E08 | Gone with the Tide: the plates sink, the Fratellis sail off | Good |
-| E09 | Chain of Evidence: the police wait at the ice house | Good |
-| E10 | Fire Night: a close call at the bonfire, the plates are lost | Good |
-| E11 | The Whole Town Watching: arrest, plates saved, Sloth cheered | Best |
+| E01 | Trick or Treat | Bad: ignoring key lets Fratellis recover it; statements follow |
+| E02 | A Helpful Deputy | Bad: false deputy takes key; librarian reports theft |
+| E03 | The Evidence Drawer | Bad: key safe, investigation fails, torch bypass; adult accountability |
+| E04 | High Water | Bad: river rescue, key lost, late search evaded; Sloth accounted for |
+| E05 | Caught on the Pier | Bad: shed confinement; friends and sheriff help after crooks leave |
+| E06 | No Room Left | Bad: exhausted margin, retrospective capture, key/plates taken; no location teleport |
+| E07 | Just Asking Nicely | Bad: Mama gets plates and leaves town; Sloth can still refuse her |
+| E08 | Gone with the Tide | Good: plates destroyed, crooks escape, loss reported; prevention without evidence |
+| E09 | Chain of Evidence | Good: intact plates delivered, later roadblock arrests; slow victory, missed fireworks |
+| E10 | Fire Night | Good: release plates to get safe, all three arrested, engraving ruined in fire |
+| E11 | The Whole Town Watching | Best: coordinated handoff, intact evidence, all arrested, Sloth and ensemble credited |
 
-## 6. Art direction
+## Focused regression examples
 
-- **Style:** warm 1980s adventure-film illustration with clean ink outlines and painted colour, cinematic, 3:2. Pacific Northwest in October: drizzle, fog, wet streets. No pirates, skulls, treasure maps, gold or ships' wheels.
-- **Palettes:** Goon Docks is dusky blue and amber. Downtown is streetlight orange. Underground is green-grey with torch yellow. Waterfront is indigo with bonfire orange.
-- **Cast sheets:** the player, Mikey, Data, Chunk, Mouth, Sloth, Mama, Jake, Francis, the key, the plates. Each is word-for-word the same everywhere.
-- **Guardrails:** only the listed characters, no famous props, no real likenesses, weather and time of day stated, "alone (X is not here)" where it matters, action scenes phrased as comic.
+Nineteen persisted tests in `scripts/fratelli-run-regressions.test.ts` use the real engine's starting states, visible choices, effects and rendered passages. They cover all three difficulties, best-ending gates, ordinary good endings, companion departure, detour payoffs and expiration. The street-plus-garage Hard route costs 90 and correctly expires; its Medium variant remains viable.
 
-## 7. Presentation
+| Route / distinguishing choices | Expected result |
+|---|---|
+| D01→D03→D04 flats→D06 take launcher→D05→D07→D08→D05→U01→U02 right→U04 launcher→U05 teamwork→U06→P01 search→P03 wait→P05 shared plan→P06 signal→P07→P08 flats→F01→F03 coordinated handoff | E11; Hard 20, Medium 35, Easy 65 |
+| Same, with T01→T02 side exit→D05 before Lowline | E11 on Hard, still 20: map cost/save neutral |
+| Same, with U02→U03→U02 wrong fork | E11 on Medium at 20; Hard reaches F03 at 5 with E11 unavailable |
+| No rope, no Sloth, no map; shelf and unaided catch; no timed signal | Hard E10 at 20, or E09 via F02 at 15 |
+| Prepared route, but P03→P04 early signal | Medium E10 at 30; no E11 despite surviving margin |
+| Prepared route, but ask Sloth to stay behind at P05 | Sloth refuses; Medium E10 at 35, no companion or E11 |
+| Prepared shared-plan route, then F02→E09 | Medium E09 at 30; Sloth goes home, final accompaniment false |
+| Prepared route, then P08 destruction / bargain | E08 / E07 at 55 on Medium; Sloth's choice retained |
+| Street route after arranging unused Sloth rendezvous | Medium E09 at 15; Hard F02 at 0 permits only E06; no Sloth in scene |
+| Direct street route, no optional detours | Hard E09 at 10 |
+| Depot then solo Lowline, shelf, catch, tunnel return | Medium E09 at 15; van number paid off |
+| Wrong fork without equipment, then known inspection latch and tunnel return | Hard E09 at 5 |
+| Hard initial phone + launcher + garage + library chase + police + depot + hideout | T06 expires at 0; only E06 |
 
-`header: 'basic'`, a new transition **`vhs`** (an 80s videotape tracking glitch with a PLAY ▶ label), and a theme per era in `theme.css`.
+Clean best: approximately **4,200 rendered words / 22 visited pages**; optional map route about **4,900 / 25**. Typical reading plus decisions targets 15–25 minutes; no timed human playtest is claimed. Opening pages are now D01 247 words, D03 at most 206, D04 210 (down from 543/391/419).
+
+## Illustration changes
+
+Existing character costumes, faces and key/plate geometry remain locked in `art.cast` and the approved reference sheets. The catch and shelf are local environmental details, not inventory items.
+
+**These 14 scene images were regenerated and reviewed:**
+
+| Pages | Reason |
+|---|---|
+| D05 | Mouth now present and keeping watch at the hub |
+| D06 | Launcher on bench before optional acceptance, not already strapped on |
+| D08 | Sloth chooses route; no player receiving chocolate as a lever for help |
+| T04 | Sergeant holds key/report with two hands, receivers in cradles |
+| T06 | Laundry van visible outside the yard through the doorway, never indoors |
+| U02 | Remove optional map from merged arrival |
+| U03 | Useful inspection catch replaces purely disappointed dead end |
+| U04 | Show viable maintenance shelf/handrail crossing |
+| U05 | Show catch/crossbar; framing excludes optional Sloth |
+| P06 | Player waits to choose signal or entry, not already running |
+| E04 | Rescue precedes bonfire; remove premature bonfire glow |
+| E06 | Later porch aftermath replaces street-only capture |
+| E10 | Warped plates, not a literal puddle of melted copper |
+| E11 | Guaranteed Sloth with Chunk, ensemble on ground, Mama included in cast |
+
+P02 and E02 prompt changes clarify cropping/companion absence without changing the event. T01 adds its already-visible key to cast; D04 removes Mouth from cast because the illustration crops him out. These do not themselves require new compositions. Preserve the deputy disguise reference; its prose introduction no longer telegraphs falseness.
+
+The independent continuity review passes. All fourteen installed WebPs were visually checked; a complete browser best-route playthrough reached E11 with every image loaded and no horizontal overflow. Original PNGs and replacement backups remain in ignored `art-src/`.

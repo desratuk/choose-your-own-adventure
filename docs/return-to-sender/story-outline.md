@@ -1,142 +1,199 @@
 # Return to Sender: story bible and outline
 
-Id: `return-to-sender`. A *Ghostbusters* story using the real names (personal use only, as with the other stories). Set in Manhattan on Friday 15 November 1985.
+Id: `return-to-sender`. Revision **2**. Personal-use Ghostbusters fiction, set in Manhattan on Friday 15 November 1985, with a Monday epilogue. **46 pages: 36 playable scenes and 10 endings** (4 bad, 6 good, one of the good endings best). E05 is now a recovery scene, not an ending. All original IDs remain; C08–C11 are new.
 
-## 1. Premise
+## Premise and dramatic contract
 
-You are a 17-year-old bicycle courier for Quickfoot Couriers in Tribeca. Your last job of the night is to take a brass **pneumatic-mail canister** from Pell & Sons, a stamp shop on Staple Street, to the Ghostbusters' firehouse at 14 North Moore Street. Mr. Pell found it jammed in a dead tube when a cellar wall fell. Since he moved it, ghosts have been drifting through his shop.
+The player is an unnamed, gender-neutral seventeen-year-old bicycle courier for Quickfoot. Dolores offers one final paid job: carry an intact brass pneumatic-mail carrier from Pell’s stamp shop to the Ghostbusters at fourteen North Moore Street. Its closure notice has been undelivered since 1898. The intended historical recipient is the night shift at Station Nine, beneath the Sedgewick Hotel.
 
-The Ghostbusters are out on jobs until late. Egon Spengler sent a **tag** to stick on the canister. Anything ghostly that comes near the canister is pulled straight into the **containment grid** in the firehouse basement. The tag's dial shows the strain on the grid (**GRID LOAD**, 0–100%). At 100% the grid fails and everything in it gets out.
+The commissioned handover is legitimate and safe. Janine accepts responsibility and signs in E02; the player receives the agreed pay. Continuing the investigation is voluntary. Egon’s original test was credible but incomplete: it measured the object at rest. Moving the carrier activates a network-wide call which makes already-captured postal ghosts try to return to duty. The player reports the new evidence in R03; the professionals update their diagnosis, isolate the postal section, arrange reserve cooling and protect neighbouring occupants. They do not knowingly create an automatic capture emergency or blame the courier for obeying instructions.
 
-### The mystery and its answers
-1. **What is the canister?** A carrier from the Pneumatic Mail Company's tube network (1897–1953), last used on 15 November 1898. Its plate reads `THE PNEUMATIC MAIL CO. · ST. 9 · 11:20 UP`.
-2. **Where does it go?** Station 9 was the Park Row Annex (Pell's wall map). The Annex was pulled down and the Sedgewick Hotel was built on the site (Pell; the lobby plaque). Its cellar still holds the old Station 9 tube room.
-3. **When and how?** The 11:20 up-run, put into the tube marked UP. The ghost clerks of the **Night Mail** stand in line at 11:20 every night waiting for it.
-4. **Why are the clerks haunting the borough?** On 15 November 1898 the Company closed Station 9 and sent the clerks a notice: "You are released from duty. Go home." The canister carrying it stuck in a pipe in Staple Street and never arrived. The clerks have waited 87 years for their last mail. Moving the canister stirred them up. The notice is what is inside it.
+Ordinary success can mean safe custody, informed containment, or delivering to the staff who are physically present. The best ending requires verified service to every member of the shift, including the twelve already in the grid and any clerks the player trapped. No one is released merely by being close to the tag.
 
-## 2. Canon and consistency rules
+The player’s useful skills are address tracing, checking a building’s previous use, handling loading-door catches, reading route diagrams, preserving paperwork, matching names to recipients and obtaining acknowledgements. The team operates dangerous machinery; the courier performs every final delivery. Slimer stays at the firehouse. His optional scene teaches attention to absent people through quiet companionship, and his later response is conditional on that meeting. He is not a door key or a rewarded mascot.
 
-- The Ghostbusters are explained in the story's own voice (R01): the four, proton packs, traps and the grid. Peter Venkman, Ray Stantz, Egon Spengler, Winston Zeddemore and Janine Melnitz (receptionist). **Slimer** is a green ghost who lives at the firehouse and eats; the grid ignores him.
-- Dana, Louis, Gozer, Walter Peck and the Stay Puft Marshmallow Man do not appear.
-- **Tag rule:** anything that gets close to the canister is pulled into the grid, which costs load. Clerks at the 11:20 gathering are waiting for the canister, not hunting it, so the tag does not take them.
-- **Trap rule:** Winston's spare trap catches ghosts before the grid does, so ghosts caught in it do not add load. It holds one batch, so it can be used once.
-- **Times:** R01 7:10 PM. The 11:20 bell is fixed. Pages before it show only the part of the evening they are in, because detours change the arrival time.
-- The Night Mail: grey vests, sleeve garters, green eyeshades, leather satchels. They are polite and never violent. **Ambrose Tull** is the night clerk of Station 9 and the only one who speaks.
-- The hotel is the **Sedgewick**, Park Row. Night manager **Mr. Voss**, who hates the Ghostbusters after last year. Bellhop **Ernie**.
-- The player is an original 17-year-old with no name and no stated gender: dented silver helmet, mustard-yellow nylon windbreaker with a reflective stripe, jeans, orange high-top sneakers and a black messenger bag.
-- Bike: locked outside the firehouse (F01) or the hotel (S01), or left in Pell's back room (T01).
+## Rules of this fiction
 
-## 3. State
+- The brass carrier contains an intact **closure notice**, dated 15 November 1898: Station Nine’s staff are released from duty and may go home. The seal’s soot is gradually cleaned or loosened; R02 gives the company, station number and date, not the whole solution.
+- The **tag is only a receiver** reporting containment-grid strain. It captures, transports, invites and exempts nobody. Removing it does not break the network’s call.
+- **Twelve postal clerks are already in the grid** at the start, captured on separate jobs that week. Other grid occupants are never released by this story’s successful procedure. Further street encounters do not capture anyone.
+- There are **47 Night Mail staff including supervisor Ambrose Tull**: 12 in the grid and 35 outside it. Six may be caught at T04, or three at C02; those uses are mutually exclusive.
+- A **portable trap** catches one local group when its pedal is pressed, then shuts. It cannot be used again in the field. A full trap is carried to the firehouse and docked to a supervised service chamber for release. There is no automatic transfer to the grid.
+- Station Nine’s **UP bank receives** carriers into its tray. **DOWN recirculates returns** and physically draws the carrier toward it. The old network’s routine opens at the nightly 11:20 bell. Both route diagrams and witnesses can establish the information; the final choice does not repeat an instruction from Tull.
+- Delivery of the original releases the staff who hear it at the desk. Tull stays while the station acknowledgement remains unsigned. The original receipt may be closed before the absent staff receive separate service, producing an ordinary good ending with unfinished release work.
+- The historical procedure permits **dated, certified copies bearing each absent recipient’s full name**. The player must have copied the procedure and verified the complete shift roll to execute this safely tonight. Janine certifies the copies; Egon and Winston operate the service hatch; the player reads each notice and obtains acknowledgement.
+- A controlled grid discharge needs **10 points of headroom**. Reaching 100% load trips protective breakers on the isolated postal section: its twelve ghosts escape, while the main vault stays shut. Recapture consumes the remaining opportunity. E06 distinguishes an undelivered original from exhaustion after the original has already released the present staff.
+- Nobody is hurt. Clerks are humane, comic and eerie. They can answer, work and react; Tull is their named spokesperson. Ghostbusters lore needed to understand a route is explained on that route.
 
-| Flag | Values | Meaning |
-|---|---|---|
-| `margin` | number | **Hidden headroom.** The meter shows `100 - margin` as GRID LOAD (%), a rising meter via `clock.risesFrom`. At 0 the grid fails (E06) |
-| `difficulty` | easy / medium / hard | starting `margin` |
-| `running` | bool | The tag is on the canister, so the meter shows |
-| `visitedFirehouse`, `visitedDiner`, `visitedPost`, `visitedEngine` | bool | Hub options already used |
-| `hasTrap` | bool | Carrying Winston's spare trap |
-| `trapSet` | bool | Trap set in the doorway, so it is spent |
-| `slimerPlan` | bool | Slimer will meet you in the Sedgewick cellar |
-| `slimerWith` | bool | Slimer opened the bronze door |
-| `knowsChute` | bool | Mr. Hollis told you about the coal chute |
-| `route` | none / lobby / chute / tunnel | How you reached the cellar |
+## Evidence distribution and meaningful alternatives
 
-**Guard rule.** Every page that spends `margin` gets its choices guarded (`margin >= 1`) and a "Keep running" choice to E06, added in code by `story.ts`.
-
-## 3a. Meter and difficulty
-
-Load starts at Easy 20%, Medium 35% and Hard 50% (`margin` 80, 65 and 50). Costs, in load points:
-
-| Item | Cost |
+| Source | Useful evidence or help |
 |---|---|
-| First incident on Staple Street (R03) | 5 |
-| Firehouse (gets the trap, and Slimer's offer) | 10 |
-| Diner (the coal-chute tip) | 5 |
-| Ride to Park Row | 10 |
-| Lobby route (Voss) | 10 |
-| Pell's cellar tunnel, then the blockade | 10 + 10 |
-| Wrong fork (T03) | 10 |
-| Post office, Engine 9 (wrong guesses) | 10 each |
-| Waiting at the firehouse | 15 |
-| Forcing the bronze door (no Slimer) | 10 |
-| Waiting for 11:20 without the trap | 10 |
-| The DOWN tube (C05) | 10 |
-| Delivery | 5 |
+| R02, Pell | Antique carrier, ST. 9, 1898 date, broken pipe and service passage; damaged survey does not identify the destination |
+| R03, street encounter and phone | Live evidence changes the diagnosis; twelve captives, receiver-only tag, legitimate handover still available |
+| R05, post office | Park Row/Sedgewick address; receiving/return diagram; certified individual-copy procedure |
+| R06, Engine Nine | Building inspection plan; destination; witnessed 11:20 bell; loading-door catch sketch |
+| R07–R08, diner | Destination and bell; staff-closure seal; remembered absent colleague; service stair beside coal chute |
+| F01–F03, firehouse | Intake evidence, paid handover, authorised single-use trap, discharge reserve, Slimer’s attention to missing staff |
+| F04–F06, team | Active evidence collation, survey, seal inspection, source-accessible equipment explanation, supported delivery |
+| T01, pipe route | Actual dispatch card with 11:20 time and receiving/return diagram |
+| T03, records | Alternative source of the certified-copy procedure; useful investigation, not a wrong-room punishment |
+| H01–H03, hotel | Old site confirmed by plaque; managed access; bell corroborated |
+| C02–C03, room and supervisor | Routing diagram; informed containment/release distinction before commitment; 47-person attendance book and missing twelve |
+| C11, optional roll | Full names and verified distribution; requires spending time rather than assuming Tull’s attendance is enough |
+| C07–C10, final service | Player chooses whether to close the original or keep it open, then applies evidence and serves every absent recipient |
 
-Best route: Staple Street 5, firehouse 10 (trap and Slimer), diner 5, ride 10, coal chute 0, door 0 (Slimer), wait 0 (trap), delivery 5 = **35**. The best ending needs 15 left after delivery, so Hard allows no slips, Medium one and Easy three. With no detours the cost is 50, which is exactly Medium's budget.
+R05, R06, R07, F01 and T01 are not arbitrary wrong destinations. Each earns its place with evidence, help or a legitimate resolution. R04 hides completed visits. The direct hotel option requires an identified address; following the physical pipe can independently reach the destination.
 
-## 4. Clue chain (none is flagged when it matters)
+## State and costs
 
-1. **The plate** (R02): `ST. 9 · 11:20 UP`.
-2. **Pell's map** (R02): Station 9 is the Park Row Annex. Pell: a hotel stands over it now. The lobby plaque (H01) and the door (C01) confirm it.
-3. **Hour and direction.** The plate says 11:20 and UP. Nothing in the tube room says when to act. The DOWN bank is the loud, tempting one.
+| Flag | Values / role |
+|---|---|
+| `margin` | Hidden numerical headroom; displayed load is `100 - margin` |
+| `difficulty` | easy / medium / hard |
+| `running` | Meter visible after collection; false at every ending |
+| `visitedFirehouse/Post/Engine/Diner/Tunnel/Sorting` | Six booleans; one-use visits, no repeat-cost farming |
+| `knowsSite` | Hotel address learned from post office, Engine Nine, diner or team survey |
+| `knowsChute` | R08 service-stair directions |
+| `copyRule` | R05 or T03 procedure copied |
+| `heardSlimer` | F03 relationship scene; affects later prose, not a mandatory best-ending key |
+| `roster` | C11 full roll verified |
+| `team` | F06 onward, team present until returns are narrated |
+| `triedDown` | C05 used; prevents repeated return-loop attempts |
+| `followup` | C08 attempted; distinguishes original delivery from later service and failure |
+| `trap` | none / empty / blockade (six) / watch (three) / final (35, terminal) |
+| `route` | none / lobby / chute / tunnel / team; lobby also marks E05’s hotel-to-firehouse handover |
 
-Decoys: `ST.` as a post-office station (Church Street, 315) or a fire station (Engine 9).
+The trap flag records how the loan was used. C10 discharges and returns it in prose; terminal E11 retains that history rather than introducing another equipment-state system.
 
-## 5. Page map (42 pages: 31 scenes, 11 endings)
+Starting headroom is **80 / 65 / 50** on Easy / Medium / Hard, displaying **20% / 35% / 50%** load.
 
-### Lower Manhattan (era `streets`)
-- **R01 Last Job of the Night** (Quickfoot). The Ghostbusters and the grid are explained. → R02 / go home (**E01**)
-- **R02 Pell & Sons.** The canister, the tag, the plate, the map. Sets `running`. → R03
-- **R03 The Cold Spot** (5). The first clerks and the first reading. → R04
-- **R04 Staple Street Corner** (hub). F01, R07, R05, R06, S01, T01
-- **R05 Church Street Station** (10). Post-office decoy. → drop it in the night slot (**E04**) / back
-- **R06 Engine Company 9** (10). Fire-station decoy. → R04
-- **R07 The Blue Plate Diner** (5). Mr. Hollis. → ask about the Sedgewick (R08) / back
-- **R08 The Napkin.** `knowsChute`. → R04
+| Action | Headroom spent |
+|---|---:|
+| First incident R03 | 5 |
+| Each optional visit R05, R06, R07, F01 | 5 |
+| Slimer conversation F03 | 5 |
+| Active team wait F04 | 5 |
+| Team journey F06 or bicycle ride S01 | 5 |
+| Reception negotiation H02 | 5 |
+| Pipe route T01 | 5 |
+| Records search T03 | 5 |
+| T04 negotiate through | 10 |
+| T04 use empty trap | 0; six captives, no later field catch |
+| T04 retreat to T05 | 5 |
+| C02 hold mechanism alone, arriving C03 | 5 |
+| C02 team steadies mechanism | 0 |
+| C02 catch three early arrivals | 0; trap spent |
+| C11 verify roll | 5 |
+| C05 wrong return circuit | 10, once |
+| E05 rushed hotel access | 10; recovery available |
+| C06 original delivery | 5 |
+| C08 return to serve absent staff | 5 |
+| C09–C10 controlled discharge and completion | 0; require at least 10 headroom entering C09 |
 
-### Firehouse (era `firehouse`)
-- **F01 14 North Moore Street** (10). Janine and Slimer. → hand it over (**E02**) / borrow gear (F02) / wait (F04) / leave
-- **F02 Winston's Spare.** `hasTrap`. → ask Slimer (F03) / leave
-- **F03 Slimer.** `slimerPlan`. → R04
-- **F04 The Long Wait** (15). → F05
-- **F05 Back from the Job.** The four return at 11:05. → give it to Egon (**E07**) / ask them to hear you out (F06)
-- **F06 Eleven Minutes** (hotel). You explain; the ride; the bronze door. → **E09**
+A direct solo postal/lobby completion costs **40**. A researched team completion costs **40**. A records/tunnel route using the trap at the blockade also costs **40**. All must retain 10 for controlled discharge: Hard has no spare on those routes; Medium has 15, allowing one 10-point mistake and a 5-point detour; Easy has 30. Extra time does not substitute for either evidence flag.
 
-### Park Row (era `hotel`)
-- **S01 Park Row** (10). → lobby (H01) / coal chute (H04, with `knowsChute`)
-- **H01 The Lobby.** The plaque. Voss. → H02
-- **H02 The Night Manager** (10). → tell him the truth (H03) / run for the staff door (**E05**)
-- **H03 The Back Stairs.** Ernie, and the bell at 11:20. `route = lobby`. → C01
-- **H04 The Coal Chute.** `route = chute`. → C01
+At C08, `copyRule && roster && margin >= 10` permits C09. Positive margin with missing evidence or insufficient discharge reserve leads to a qualified good ending, not an invented successful release. Zero or negative margin goes only to E06.
 
-### Underground (era `under`)
-- **T01 Pell's Cellar** (10). → T02
-- **T02 The Tube Gallery.** Left is wide and lit, right follows the tubes. → T03 / T04
-- **T03 The Sorting Room** (10). Dead end. → T02
-- **T04 The Blockade.** → push through (10, C01, `route = tunnel`) / back out (5, T05)
-- **T05 Back Up the Stairs.** → R04
-- **C01 The Hotel Cellar.** The bronze door. → Slimer opens it (C02) / force it (10, C02)
-- **C02 Station 9.** The tube room, before 11:20. → drop it in now (**E03**) / wait (10) / wait with the trap (free, C03)
-- **C03 The Wait.** → C04
-- **C04 Eleven-Twenty.** The Night Mail and Mr. Tull. → UP (C06) / DOWN (C05) / spring the trap (**E08**)
-- **C05 The Down Tube** (10). → C04
-- **C06 The Up Tube** (5). → C07
-- **C07 The Notice.** → 15 or more left **E11**, 1–14 **E10**
+Cost-bearing arrival pages receive positive-margin choice guards and an E06 fallback. Exhaustive analysis proves R03, R05, R06, R07, F01, F03, T01, T03 and T05 cannot expire; they are explicitly excluded from generated unreachable guards. All other costly arrivals allow expired readings only while routing the player to E06. No unbounded state or replay loop exists.
 
-### Endings
+## Page map
 
-| # | Title | Type |
+- **R01** job offer → R02 or E01.
+- **R02** collection → R03 new evidence → **R04** finite investigation hub.
+- **R05** post office → R04 or E04. **R06** Engine Nine → R04. **R07** diner → R08 or R04; **R08** service entrance → R04.
+- **F01** reception → E02 / F02 / F04 / R04. **F02** equipment → F03 / R04 / F04. **F03** Slimer → R04 / F04.
+- **F04** working wait → **F05** professional diagnosis → E07 or **F06** supported journey → C01.
+- **S01** hotel arrival → H01 or known H04. **H01** lobby → **H02** manager → H03 or E05.
+- **E05** recoverable setback → H03 apology, known H04 service stair, or E02 handover (explicit bicycle retrieval and ride).
+- **H03** escorted stairs / **H04** service stair → C01.
+- **T01** pipe entry → **T02** gallery → optional **T03** records → T02, or **T04** blockade.
+- **T04** negotiate or trap → C01; retreat → **T05** → R04.
+- **C01** cellar and loading-door catch → **C02** room and informed waiting decision → E03 or **C03** supervisor.
+- **C03** → optional **C11** verified roll → C04, or straight to **C04** final act.
+- **C04** receipt bank → C06; return bank → **C05** → C04 once; unused trap → E08.
+- **C06** carrier received → **C07** notice read and acknowledgement decision.
+- **C07** close receipt → E09 (team) / E10 (solo), or keep open → **C08** return and evidence check.
+- **C08** complete evidence plus reserve → **C09** grid’s twelve → **C10** carried group and Tull’s final acknowledgement → E11.
+- **C08** incomplete service, with positive reserve → E09 / E10; exhaustion → E06.
+
+## Endings and capture accounting
+
+| ID | Title | Kind / result |
 |---|---|---|
-| E01 | Clocked Out: you turn the job down | Bad |
-| E02 | Safe Keeping: Janine locks it in the closet | Bad |
-| E03 | Wrong Hour: the canister goes up the tube too early | Bad |
-| E04 | Postage Due: you mail it | Bad |
-| E05 | Please Leave the Premises | Bad |
-| E06 | Overload: the grid fails | Bad |
-| E07 | Total Containment: Egon seals it in the grid | Bad |
-| E08 | A Full Trap: the Night Mail is caught | Good |
-| E09 | The Whole Team: the Ghostbusters deliver it with you | Good |
-| E10 | Cutting It Fine: delivered, but the grid is nearly full | Good |
-| E11 | The Mail Goes Through | Best |
+| E01 | Clocked Out | Bad: unplayed mystery; legitimate refusal, no fabricated blame |
+| E02 | Signed For | Good: commissioned handover accepted, safe custody, release file open |
+| E03 | Left at the Desk | Bad: courier leaves without recipient acknowledgement; competent team subsequently delivers locally, missing staff still require release |
+| E04 | Tomorrow’s Mail | Bad: knowingly chooses delayed lost-mail tracing; parcel quarantined, staff confined |
+| E06 | The Reserve Gives Out | Bad: postal-section escape and recapture; main vault protected; earlier delivered notice is not undone |
+| E07 | A Case Kept Open | Good: informed professional isolation, all 47 confined, explicit release work outstanding |
+| E08 | A Full Trap | Good: remaining 35 trapped; original grid twelve still captive; public disturbance resolved, nobody declared free |
+| E09 | The Work Between You | Good: player delivered with team support; grid twelve and any watch-trap three remain explicitly assigned to release work |
+| E10 | The Next Delivery | Good: solo delivery; absent grid twelve and any trap cargo separately recorded; concrete follow-up |
+| E11 | Everybody Off the Clock | Best: original, grid and trap recipients all acknowledged; no Night Mail clerk remains captive |
 
-## 6. Art direction
+C11 counts **35 present + 12 grid**, **29 present + 6 trap + 12 grid**, or **32 present + 3 trap + 12 grid**. Tull is included in the present total. All final containment, partial delivery, emergency and early-abandonment paths explicitly account for carried captives or unused equipment. C09 releases only the named twelve; C10 handles the separate trap cargo before closing Tull’s original receipt.
 
-- **Style:** bright 1980s animated-film illustration with bold ink outlines and saturated colour, cinematic, 3:2. Rainy Manhattan night.
-- **Palettes:** the streets are steel-blue and sodium-orange, the firehouse is brick red and warm lamp yellow, the hotel is gold and burgundy, and underground is ectoplasm green on dark brick.
-- **Cast sheets:** the player, Dolores, Mr. Pell, Mr. Hollis, Janine, Peter, Ray, Egon, Winston, Slimer, Mr. Voss, Ernie, Mr. Tull, the clerks, the canister and the trap. Each is word-for-word the same everywhere.
-- **Guardrails:** only the listed characters, no cars or famous logos, weather and time of day stated, "alone (X is not here)" where it matters, and no violence.
+## Focused regression routes
 
-## 7. Presentation
+Route notation names page IDs, with an action where one destination has multiple choices. Persisted tests in `scripts/return-to-sender-regressions.test.ts` execute these cases through the real engine.
 
-`header: 'basic'`, a new transition **`slime`** (green ooze drops over the page and drains away) and a rising **GRID LOAD** meter with a segmented bar. Both are opt-in in shared code (`clock.risesFrom` and `ui.transition: 'slime'`). A theme per setting in `theme.css`.
+1. **Hard solo best, margin 10:** R01 R02 R03 R04 R05 R04 S01 H01 H02 H03 C01 C02 C03(hold) C11 C04 C06 C07 C08 C09 C10 E11.
+2. **Hard team best, margin 10:** R01 R02 R03 R04 R05 R04 F01 F04 F05 F06 C01 C02 C03(team) C11 C04 C06 C07 C08 C09 C10 E11.
+3. **Hard six-captive best, margin 10:** R01 R02 R03 R04 F01 F02 R04 T01 T02 T03 T02 T04 C01(trap) C02 C03(hold) C11 C04 C06 C07 C08 C09 C10 E11.
+4. **Hard three-captive best, margin 10:** R01 R02 R03 R04 F01 F02 R04 R05 R04 S01 H01 H02 H03 C01 C02 C03(trap) C11 C04 C06 C07 C08 C09 C10 E11.
+5. Add F03 after F02 in route 4 on **Medium**: E11 at margin 20 with the Slimer callbacks.
+6. Add C05 C04 before C06 in route 1 on **Medium**: E11 at margin 15. On **Hard**, choose E10 at C07: ordinary success, margin 5.
+7. Add E05 before H03 in route 1 on **Medium**: recover and reach E11 at margin 15.
+8. Replace R05 with R06 in route 1 on **Medium**: C08 → E10 at margin 25 because the copy procedure is absent.
+9. Skip C11 in route 1 on **Medium**: C08 → E10 at margin 30 because the verified roll is absent.
+10. R01 R02 R03 R04 F01 E02 on **Medium**: safe commissioned handover, margin 55.
+11. R01 R02 R03 R04 F01 F04 F05 E07 on **Medium**: professional isolation, margin 50.
+12. R01 R02 R03 R04 F01 F04 F05 F06 C01 C02 C03(team) C04 E08 on **Medium**: informed full-trap ending, margin 45.
+13. Route 2 stopping at C07 → E09 on **Hard**: qualified team success, margin 15.
+14. Route 3 stopping at C02 → E03 on **Medium**: all six carried captives explicitly handed over, margin 45.
+15. Route 1 plus C05 on **Hard**, attempting C08 rather than stopping at E10: E06 at margin 0; prose preserves the already-delivered original.
+16. Route 1 plus E05 and C05 on **Medium**: C08 → E10 at margin 5; no controlled discharge offered.
+17. E05 → E02 must show retrieval of the hotel-parked bike and ride to North Moore; direct F01 → E02 must not show that bridge.
+
+Complete tested routes contain roughly **3,700–4,600 rendered words**, supporting approximately **18–25 minutes** with decisions. Early handover/containment endings intentionally finish sooner. Timing is an estimate, not a timed player study.
+
+## Illustrations
+
+Preserve all approved character, costume, canister, receiver-dial, bag and trap designs. The rewrite adds no new recurring characters.
+
+**Regenerated existing pages (17):**
+
+- F03: quiet empty-chair conversation replaces comic loop.
+- F04: active notes/phone work replaces passive waiting and swatting.
+- T03: a few clerks in a records room, not a hundred-clerk capture.
+- T04: exactly six at the obstruction; no five-row blockade.
+- C03: Tull at the attendance desk; optional trap/team cropped out.
+- C04: neutral framing between two pipe mouths; cropped small group, no crowd pointing out the correct tube.
+- C06: cropped receipt-tray delivery, compatible with all attendance counts.
+- C07: Tull remains to hold the acknowledgement; only other clerks fade.
+- E02: competent signed handover and storage case.
+- E03: sealed carrier visibly on desk, outside receiving tray.
+- E04: quarantined pending mail, not massive sorting chaos.
+- E05: unrestrained recovery at reception.
+- E06: isolated postal-section failure, not main-vault explosion.
+- E07: deliberate isolation and case paperwork.
+- E09: courier/team working handoff; Ray does not perform delivery.
+- E10: quiet late-night receipt and unresolved case record.
+- E11: quiet Monday desk/empty-chair payoff; no standing ovation.
+
+**New images:** C08 (certifying paperwork), C09 (controlled service hatch), C10 (checking final column at intake), C11 (verified roll with Tull).
+
+All twenty-one changed or new scenes have been generated with the approved references, visually reviewed and installed as 1200×800 WebPs. Source PNGs and pre-rewrite backups remain in ignored `art-src/`; exported scene prompts are in `image-prompts.md`.
+
+R08 only needs prompt wording corrected to crop the off-frame ghosts; its existing counter composition remains usable. E08’s existing trap-capture composition remains valid. Other retained scenes preserve their existing composition; named visible recurring props were added to cast lists where necessary.
+
+**New approved references:** the firehouse’s isolated postal section and controlled service hatch (E06/C09; dock described in C10), the plain shielded carrier-storage case (E02/E07), and postal paperwork (the courier book, notice, certified copy and attendance ledger). These are ordinary equipment and stationery, not replacements for the approved portable trap or receiver. Their reviewed WebPs and hashes are recorded in `references/manifest.json` before scene generation.
+
+Merged illustrations exclude optional companions and optional carried equipment. In particular C01–C07 do not depict a team or trap that may not be present; the smaller cropped clerk groups fit every remaining count.
+
+## Validation
+
+- Final `npm run check`: type check plus all three exhaustive story checks passed without warnings; Return to Sender reached all 10 endings over 71,110 page/state combinations and 417,419 paths.
+- Twenty persisted regression tests pass, including both E02 arrivals, every reachable expired arrival, and zero-versus-low-reserve prose. Independent continuity review passes after corrections to reserve wording and the player's outstanding countersignature.
+- A complete Medium solo-best browser playthrough reaches E11 with 25 headroom, including C08–C11. All scene images load without placeholders or horizontal overflow. Legacy-save handling, preserved ending records, fresh saves, reload, Undo and mobile opening layouts have also been checked.
