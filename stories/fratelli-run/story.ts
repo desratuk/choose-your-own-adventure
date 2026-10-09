@@ -19,7 +19,7 @@ const raw: Page[] = [
     imagePrompt: `Dusk and drizzle on the front steps of a small hillside house in a fishing neighborhood. The player, seen from behind, sits on the steps in the black overcoat and fedora between Chunk (candy bag) and Mouth (plastic vampire fangs in his hand). Chunk holds up a small brass key on a paper tag. A transistor radio sits on the porch rail. Streetlights are just coming on.`,
     text: [
       `Halloween, 1985. Drizzle beads on the pumpkins outside your house in Astoria’s Goon Docks, halfway down the hill to the Columbia River. You’re fourteen, dressed as a private eye: brown fedora, red high-tops, flashlight on a lanyard, black overcoat with a worn velvet collar. The coat cost two dollars at the county auction. You’re hoping it makes you look less like the neighbor who gets told the adventure afterwards.`,
-      `Chunk sits beside you on the steps, eating tomorrow’s candy. Mouth is trying to fit vampire fangs over his braces. Their friends call themselves the Goonies, after the neighborhood they helped save last summer. You’ve lived three doors from their headquarters for years. You still knock.`,
+      `Chunk sits beside you on the steps, eating tomorrow’s candy. Mouth is trying to fit vampire fangs over his braces. They and their friends call themselves the Goonies, after the neighborhood they helped save last summer. You’ve lived three doors from their headquarters for years. You still knock.`,
       `The porch radio cuts off mid-chorus. “Mama Fratelli and her sons Jake and Francis have escaped from a prison transport. They are believed to be using a stolen white laundry van with a blue stripe. Roadblock deputies change shifts at nine. Tonight’s river-flats bonfire will go ahead under Sheriff Pruitt’s guard.”`,
       `Chunk stops chewing. The Fratellis printed fake money until the Goonies helped put them in jail. Now Chunk is staring at your coat. “The county sold their things. What lot was that?”`,
       `“Twelve. With a toaster.”`,
@@ -37,13 +37,14 @@ const raw: Page[] = [
     title: 'Busy Signal',
     era: 'docks',
     cast: ['player', 'chunk', 'mouth'],
-    onEnter: { set: { phoned: true }, ...cost(10) },
+    onEnter: { set: { phoned: true } },
     imagePrompt: `A cramped house hallway at dusk. The player, seen from behind in the black overcoat and fedora, holds a beige wall phone with a long curly cord to one ear. Chunk and Mouth watch from the doorway with worried faces.`,
     text: [
       `You take the phone in the hallway of your house, with Chunk and Mouth watching from the doorway, and dial the police.`,
       `The line is busy. You try again, and it’s busy again. On the fifth try it rings, and a tired voice picks up. “Astoria Police, Sergeant Olafsen. Make it quick, kid. I’ve had forty prank calls since lunch.”`,
-      `You explain about the auction and the key. Sergeant Olafsen asks for the lot number twice. “I’ll log it. Stay indoors. Don’t go looking for them.” Another phone rings; the line clicks before you can ask what happens next.`,
-      `Mouth writes LOT 12 on the back of a candy wrapper. “Now there’s a record,” he says. “That counts.” The retries have given the Fratellis more room to search. Chunk suggests Mikey’s attic, three doors away, where you can all stay together.`,
+      `You explain about the auction and the key. Sergeant Olafsen asks for the lot number twice. “I’ll log it. A patrol is checking the auction buyers’ addresses. Yours goes first. Stay indoors.” Another phone rings; the line clicks before you can ask what happens next.`,
+      `The retries have eaten into the evening, but a patrol car turns into your street before you put the phone down. A deputy stops to check the house number. Anyone hunting for the coat will have to keep clear of your block.`,
+      `Mouth writes LOT 12 on a candy wrapper. “Our first official document.” Chunk suggests Mikey’s attic, three doors away, where you can all stay together.`,
     ],
     choices: [{ text: `Go to Mikey’s attic`, to: 'D03' }],
   },
@@ -58,7 +59,7 @@ const raw: Page[] = [
       `By quarter to six you’re in Mikey Walsh’s attic with Chunk and Mouth. GOONIES ONLY says the sign on the door. You stop on the threshold until Mikey waves you in with his inhaler. He’s thirteen, earnest and stubborn; Data, the inventor at the workbench, is trying to solder a coffee can without setting his yellow rain jacket on fire.`,
       {
         if: is('phoned'),
-        text: `You tell Mikey about the call. He writes OLAFSEN beside LOT 12. “A name,” he says. “Better than just ‘the police.’”`,
+        text: `You tell Mikey about the call. He writes OLAFSEN beside LOT 12. “Dad can ask for him.” Outside, the patrol car stops at the next house on the auction list.`,
       },
       `Your receipt identifies the coat as the late Mr. Fratelli’s. Mama kept her husband’s things after he died. The county sold them after her arrest. Somebody missed a seam.`,
       `“The printing plates were never found,” Mikey says. “Copper sheets engraved with a twenty-dollar bill. Ink them, press paper on them: fake money. The police got the press. Mama could buy another.” He lifts the key by its tag. “Maybe this is where she kept the expensive part.”`,
@@ -79,9 +80,9 @@ const raw: Page[] = [
     text: [
       `At six, Data examines the key under the attic lamp. “Marine brass. Salt-proof.” Mouth taps his poster: BONFIRE, FOOT OF SEVENTH STREET. LOW TIDE, 9:41. FIREWORKS. Under COSTUME PRIZE he has written THIS MEANS ME.`,
       `“The old pier there is shut after the storm,” Mouth says. “But the Lowline drain comes out underneath.”`,
-      `Mikey’s father calls upstairs. He needs help setting out barriers for the bonfire. Mikey will go with him, find Sheriff Pruitt after the shift change, and explain the auction. Data can keep a lookout from the public side. Mouth volunteers to carry messages from the head of the drain until you leave town.`,
+      `Mikey’s father calls upstairs for help with the bonfire barriers. “I’ll go with Dad and find the sheriff after the shift change,” Mikey says. Data volunteers to keep lookout from the public side of the flats. Mouth will carry messages from the drain entrance until you choose a way down.`,
       `Chunk is going home to Sloth, Mama Fratelli’s youngest son. “They kept him hidden for years. We helped him get out. He lives with us now.” Chunk folds his candy bag shut. “He knows the drains. But hearing they’re loose—ask him, don’t just count on him.”`,
-      `You tell the others where you want help waiting. Mikey writes your plan down. “Two flashes from you, one back from us. That means we’ve seen you. We won’t come charging into the dark.”`,
+      `You tell the others where you want help waiting. Mikey writes your plan down. “Two flashes from you, one back from us. That means we’ve seen you.” Mouth traces the route from the public barrier across the flats. “Lovely shortcut. When it isn’t a river.”`,
       `For once you’re in the room while the plan is made. Data moves a chair aside so you can reach his workbench before leaving.`,
     ],
     choices: [
@@ -97,14 +98,22 @@ const raw: Page[] = [
     cast: ['player', 'mouth'],
     imagePrompt: `Early misty night at the bottom of a hillside street. The player, seen from behind in the black overcoat and fedora, stands with Mouth at a wide concrete storm-drain arch with an open barred gate, flashlight in hand. Mouth keeps watch uphill. No Sloth or other companions; no map or launcher visible.`,
     text: [
-      `At the bottom of your street, the Lowline opens in a concrete arch. Its storm drain runs under town to the old Seventh Street Pier. Mouth waits by the broken gate, keeping watch up the hill. Beyond him, house lights blur in the mist. He’ll stay until you commit to a way down, then join Mikey and Data at the public bonfire grounds. At nine he’ll leave anyway, taking your last known destination to Mikey if you haven’t come back.`,
+      {
+        if: { any: [is('visitedSloth'), is('hasMap'), is('visitedPolice'), is('visitedDepot')] },
+        text: `Back at the Lowline arch, Mouth comes out of the mist by the broken gate. “Still here,” he says. “Still not winning a costume prize.” He listens while you bring him up to date.`,
+        else: `At the bottom of your street, the Lowline opens in a concrete arch. Its storm drain runs under town to the old Seventh Street Pier. Mouth waits by the broken gate, keeping watch up the hill. He’ll stay until you choose a way down, then join the others at the bonfire. At nine he’ll leave anyway, taking your last known destination to Mikey.`,
+      },
       `The key is in the inside pocket of your overcoat, against your ribs.`,
       { if: is('hasRope'), text: `Data’s rope launcher hangs from your shoulder: a flattened coffee can with a spring and a hook in it, and thirty feet of braided line.` },
       { if: is('hasMap'), text: `Mrs. Tilden’s photocopied chart of the old waterfront is folded in your pocket.` },
-      { if: is('slothPlan'), text: `Sloth has offered to meet you at the grate. If you don’t arrive before the nine o’clock bell, he’ll go home with Chunk. You tell Mouth that part too.` },
+      { if: is('slothPlan'), text: `Mouth checks Sloth’s rendezvous with you: the grate, before nine. After that, home with Chunk.` },
       { if: is('visitedDepot'), text: `You pass on the depot clerk’s sighting. Mouth repeats the van’s number until he can say it without looking at your note. He’ll give it to Mikey’s father.` },
       { if: is('hasMap'), text: `Mouth listens while you explain the chart. “East footing,” he repeats. “I’ll get that to Mikey.” Saying it out loud makes the underground part feel less like vanishing.` },
-      `Your pursuit margin is {{clock}}. It measures how much room you have to act before the Fratellis box you in, not minutes on a watch. Exposed detours and mistakes use it up; a long wait hidden from their search costs less than a short chase. The tide keeps its own time.`,
+      {
+        if: { any: [is('visitedSloth'), is('hasMap'), is('visitedPolice'), is('visitedDepot')] },
+        text: `Your pursuit margin is {{clock}}. Mouth glances uphill, then back at you.`,
+        else: `Your pursuit margin is {{clock}}: room to act before the Fratellis box you in, not minutes on a watch. Exposed detours and mistakes use it up; hiding costs less than a chase. The tide keeps its own time.`,
+      },
     ],
     choices: [
       { text: `Ask Chunk whether Sloth can help`, to: 'D07', if: not(is('visitedSloth')) },
@@ -126,7 +135,7 @@ const raw: Page[] = [
       `Still in the attic, you lean over Data’s workbench. He sets down a flattened coffee can with a spring, steel hook and thirty feet of braided line. Mikey watches the street through the round window. Downstairs his father is looking for the car keys.`,
       `“Hook-a-Matic, Mark Three,” Data says. “It catches pipes and beams. Test the hook before you put your weight on it. Don’t point it at people. Or lamps. Mark Two had a disagreement with a lamp.”`,
       `He could strap it to you now, but checking the spring and showing you the release will cost a little of your head start. You can also travel light. Data doesn’t look offended by the possibility.`,
-      `“There’s usually another way,” he says. “Look at what’s holding a thing up. People forget that part.” He makes you repeat the light signal. Once you’ve chosen, he’ll leave with Mikey. You and Mouth will walk to the Lowline arch; Chunk has already headed home.`,
+      `“There’s usually another way,” Data says. “Look at what’s holding a thing up. People forget that part.” Mikey calls him from the stairs. Chunk has headed home; you and Mouth have the walk to the Lowline ahead.`,
     ],
     choices: [
       { text: `Stay for the demonstration and take the launcher`, to: 'D05', set: { hasRope: true }, ...cost(5) },
@@ -147,8 +156,8 @@ const raw: Page[] = [
       `You tell him about the key. At “Mama” his hands tighten. Chunk starts explaining the drain hatch behind the garage, then stops when Sloth raises a finger.`,
       `“Sloth hear,” Sloth says. He points to the radio. “Not go back.”`,
       `Chunk puts the plate down. “You don’t have to.” He tells you quietly that Sloth used the drains to get away from his brothers even before the Goonies found him. Sloth has already drawn the route in a patch of dust with one broad finger.`,
-      `You came hoping for someone strong enough to solve a problem. Looking at that map, you realize he has been solving his own for years.`,
-      `If Sloth would rather stay home, Chunk will keep him company until Chunk’s parents return before eight, then join the others at the bonfire. Sloth will have company either way.`,
+      `Chunk puts a finger beside Sloth’s route. “That bit smells terrible.” Sloth moves the finger to a different tunnel and grins. “That bit.” Chunk looks offended. “I only went once.”`,
+      `“If you stay here, I’ll wait till Mom and Dad get back,” Chunk tells Sloth. “Before eight, they said. Then I’ll go to the bonfire.”`,
     ],
     choices: [
       { text: `Show Sloth your plan and ask whether he wants a part in it`, to: 'D08' },
@@ -164,7 +173,7 @@ const raw: Page[] = [
     imagePrompt: `The converted garage bedroom at misty night, warm lamplight. Sloth points firmly to a simple route scratched in dust on a low tabletop; no legible markings. Chunk and the player listen at his level, the player seen from behind in the black overcoat and fedora. No gift or chocolate exchange.`,
     text: [
       `In the garage lamplight, Sloth studies the route you trace beside his. “Grate,” he says, pointing halfway down the Lowline. “Sloth meet.” His hatch joins the tunnel beyond the flooded dip.`,
-      `Chunk offers to wait at the hatch until Sloth either returns or calls up that you’ve arrived. At nine, if there’s no word, they’ll go home together. Nobody is spending the night waiting in a drain.`,
+      `Chunk offers to wait at the hatch until Sloth either returns or calls up that you’ve arrived. At nine, if there’s no word, they’ll go home together.`,
       `“You can come back before then too,” you tell Sloth.`,
       `Sloth holds up his palm. “Stop means stop.” He looks at you until you nod, then shakes your hand. His grip is careful. You try to be equally careful with the promise.`,
       `Chunk will join the others at the bonfire once Sloth is accounted for. He presses a chocolate bar into Sloth’s own hand for later, and walks him to the hatch. You take the streets back to Mouth at the Lowline arch.`,
@@ -183,7 +192,7 @@ const raw: Page[] = [
     text: [
       `Astoria’s public library is a squat brick building on a hill, and tonight it’s open until seven for Halloween story hour. When you push through the door, a circle of small children in witch hats and skeleton costumes is sitting on the carpet while a woman in a pointed hat reads aloud from a book about a haunted lighthouse. She’s Mrs. Tilden, the librarian. She taught you how to use the card catalog, and she’s never once let you leave without something to read.`,
       `You wait for the story to end. Then you show her the key and tell her all of it, as quietly as you can. Mrs. Tilden doesn’t laugh. She takes the key in both hands, holds the tag under the desk lamp and says, “Oh, my.”`,
-      `“This is an ice-house key,” she says. “Back when the fishermen kept their catch packed in ice, the canneries cut little storerooms into the footings of the piers, below the waterline, so they stayed cold. They were only dry when the tide went out. Fishermen rented numbered lockers in them.” She goes to a flat drawer, pulls out an old harbor chart and runs it through the photocopier. “Locker seven. And the only ice house still standing is the one under the Seventh Street Pier. Look: the door is here, in the east footing.” She taps the copy, folds it and presses it into your hand.`,
+      `“This is an ice-house key,” she says. “Fishermen rented numbered lockers beneath the piers to keep their catch cold. Only dry at low tide.” She copies an old harbor chart. “The Seventh Street ice house is the last one standing. Door in the east footing; this little line is the stone sill leading to it.” She taps the line, folds the chart and presses it into your hand.`,
       `Then she picks up the phone on her desk. “Someone ought to tell the sheriff’s office.” The dispatcher takes the address and says the patrols are tied up until the nine o’clock shift change. Mrs. Tilden leaves a message about the Seventh Street ice house. “Wait here, dear. I’ll make you cocoa.” Outside, a vehicle radio repeats the library address.`,
       `You thank her, but you don’t have time for cocoa. You’re halfway to the door when a white van pulls up at the curb outside.`,
     ],
@@ -237,7 +246,7 @@ const raw: Page[] = [
       },
       `You explain the coat and show him the key. He checks your receipt, then writes a report. “Roadblock crews change at nine. Pruitt will be at the bonfire after that. I can secure this now. Figuring out what it opens takes longer.”`,
       { if: is('hasMap'), text: `You unfold the ice-house chart. He adds the location and calls it through, but the radio answers with a traffic collision and a request to wait. You hear your warning join a queue.` },
-      `Olafsen offers to call your family and put the key in evidence. It is a real offer of safety. You look at the key’s tiny teeth and wonder what happens if a locked door isn’t enough to stop Mama.`,
+      `Olafsen offers to call your family and put the key in evidence. “You’ve brought me something I can follow up,” he says. He clips the report to the envelope instead of putting it on the pile. You can leave the investigation with him, or keep looking while he follows the official leads.`,
     ],
     choices: [
       { text: `Leave the key with him as evidence`, to: 'E03' },
@@ -370,7 +379,7 @@ const raw: Page[] = [
       `The left-hand tunnel runs on for a long way, getting lower and lower, until you’re walking with your head bowed. Then it ends at a wall of crumbled brick, with water seeping through the rubble and a rusted iron ladder leading up to a manhole cover that has been welded shut.`,
       `No way out. You rest your forehead against a cold rung, furious with yourself. Above the welded cover you hear a van door slam, then Jake complaining that Mama never takes the smaller bag. This shaft opens beside their waterfront road. You switch your light off until the footsteps go away.`,
       `In the dark your fingers find a small hinged inspection panel beside the ladder. Its latch lifts when you take its weight off the catch. You try it twice, feeling the council crest cast into the frame. Data said to look at what held a thing up.`,
-      `You return to the fork with a smaller margin and a useful idea. A wrong turn doesn’t have to become two wrong turns.`,
+      `You return to the fork, rubbing the rust from your thumb.`,
     ],
     choices: [{ text: `Go back to the fork`, to: 'U02' }],
   },
@@ -386,9 +395,9 @@ const raw: Page[] = [
       `For a moment you imagine describing this in Mikey’s attic: the leap, the splash, everybody listening. Then a drip hits the back of your neck. You’d settle for being able to tell it at all.`,
     ],
     choices: [
-      { text: `Fire Data’s rope launcher at the pipe and swing across`, to: 'U05', if: is('hasRope') },
-      { text: `Test the handrail and edge along the maintenance shelf`, to: 'U05', ...cost(10) },
-      { text: `Wade through the cold water`, to: 'U05', set: { soaked: true }, ...cost(15) },
+      { text: `Fire Data’s rope launcher at the pipe and swing across`, to: 'U05', if: is('hasRope'), set: { crossing: 'rope' } },
+      { text: `Test the handrail and edge along the maintenance shelf`, to: 'U05', set: { crossing: 'shelf' }, ...cost(10) },
+      { text: `Wade through the cold water`, to: 'U05', set: { soaked: true, crossing: 'water' }, ...cost(15) },
     ],
   },
   {
@@ -398,14 +407,16 @@ const raw: Page[] = [
     cast: ['player'],
     imagePrompt: `Night in a damp concrete tunnel. A closed heavy iron grate with wrist-thick vertical bars and a thick horizontal crossbar blocks the tunnel. Its frame has a sliding catch that can release the gate when its weight is lifted. A small person-sized gap shows where one lower corner has rusted away. The player, seen from behind in the black overcoat and fedora, shines a flashlight on the closed barrier. Tight near-side framing excludes the far side and all companions; no Sloth or optional equipment visible.`,
     text: [
-      { if: is('soaked'), text: `Beyond the sump, your clothes are heavy and freezing, and your teeth chatter.`, else: `Beyond the sump, you’re cold but still dry.` },
+      { if: is('crossing', 'rope'), text: `The hook snaps over the pipe above the sump. You pull hard twice; it holds. Then you push off. Your sneakers skim the black water before they strike the far ledge, and you land on one knee, clutching the line. You work the hook loose and coil it with shaking hands.` },
+      { if: is('crossing', 'shelf'), text: `You edge along the sump’s maintenance shelf, testing each bracket before moving your other hand. Halfway over, your coat catches on a bolt. You stand very still, ease the wool free and take the next sideways step. The far ledge feels enormous.` },
+      { if: is('crossing', 'water'), text: `The sump’s water climbs to your waist. Each step is a struggle between the dragging coat and your foot searching for concrete. You haul yourself onto the far ledge with clothes heavy and freezing, and your teeth chatter.` },
       `A hundred yards past the water, the tunnel is blocked by a heavy iron grate set in a frame, with bars as thick as your wrist from floor to ceiling. Beyond it, the tunnel carries on, and river air comes through the bars.`,
       {
         if: is('slothPlan'),
         text: `On the far side, Sloth sits with his knees drawn up. When your flashlight finds him, he stands. “You came.” He points back over your shoulder to the narrow passage from the garage hatch, then calls Chunk’s name through the bars. Chunk’s answering shout means he can leave the hatch now and join the others. Sloth points to the grate’s catch, then to you. “Together.”`,
         else: `There’s nobody beyond the bars. One corner of the frame has rusted away, leaving a gap just big enough for you. Higher up, a sliding catch carries most of the grate’s weight.`,
       },
-      `The grate doesn't need to come out of its frame. It needs to rise a few inches while someone lifts the catch. Alone, you could work from the lower gap, awkwardly. A rope around the crossbar would hold the weight for you.`,
+      `The grate doesn’t need to come out of its frame. It needs to rise a few inches while someone lifts the catch. Alone, you could work from the lower gap, awkwardly. A rope around the crossbar would hold the weight for you.`,
       { if: is('visitedCellar'), text: `The council crest matches the one on the inspection panel, and so does the latch. Lift, take the pressure off, then slide. You know exactly where to put your hand.` },
     ],
     choices: [
@@ -413,16 +424,20 @@ const raw: Page[] = [
       { text: `Use the rope to hold the crossbar while you release the catch`, to: 'U06', if: all(not(is('slothPlan')), is('hasRope')), ...cost(5) },
       { text: `Work the inspection latch from the lower gap`, to: 'U06', if: all(not(is('slothPlan')), not(is('hasRope')), is('visitedCellar')), ...cost(5) },
       { text: `Brace the crossbar with your shoulder and work the catch by feel`, to: 'U06', if: all(not(is('slothPlan')), not(is('hasRope')), not(is('visitedCellar'))), ...cost(10) },
-      { text: `Squeeze through the rusted gap`, to: 'U06', if: not(is('slothPlan')), ...cost(15) },
+      { text: `Squeeze through the rusted gap`, to: 'U06', if: not(is('slothPlan')), set: { squeezedGrate: true }, ...cost(15) },
     ],
   },
   {
     id: 'U06',
     title: 'The Outfall',
     era: 'under',
+    onEnter: { set: { crossing: 'none' } },
     cast: ['player'],
     imagePrompt: `The mouth of a concrete outfall tunnel opening onto the dark underside of a wooden pier: a drowned forest of black pilings in fog, with a narrow catwalk bolted to the posts above the water and orange lamplight leaking through the planks overhead. The player, seen from behind in the black overcoat and fedora, stands in the opening.`,
     text: [
+      { if: is('slothWith'), text: `At the grate, Sloth raises the crossbar just enough for the catch to move beneath your thumb. “Now,” you whisper. He holds it while you duck through, then the two of you lower it together. The last inch lands with a clang. You both freeze. Nothing answers.` },
+      { if: all(not(is('slothWith')), is('squeezedGrate')), text: `You feed one arm and then your shoulder through the grate’s rusted corner. A bar scrapes your coat. For a moment you’re stuck halfway, listening to your own breath; then you flatten the collar, turn your head and wriggle clear.` },
+      { if: all(not(is('slothWith')), not(is('squeezedGrate'))), text: `With the crossbar’s weight held clear, you slide the catch sideways. It grinds, moves, and suddenly the gap under the grate is big enough. You duck through and let the iron settle behind you, keeping your fingers clear.` },
       `The tunnel bends, climbs a little and ends in a round concrete mouth, the outfall, which opens straight onto the river. Cold wind blows in your face. Ahead is the dark, wet space under a wooden pier: a forest of black pilings going away into the fog, with a narrow catwalk bolted to the posts a few feet above the water. Above you, planks creak. You’re under the Seventh Street Pier.`,
       { if: is('slothWith'), text: `Sloth ducks to fit through the outfall behind you, his shoulders brushing the concrete, and straightens very slowly under the planks, as if he knows how loud he could be. He puts one huge finger to his lips.` },
       `You switch off your flashlight. A little orange light comes through the gaps overhead, from a lamp on the pier above, and with it come voices.`,
@@ -435,6 +450,7 @@ const raw: Page[] = [
     id: 'P01',
     title: 'Under the Pier',
     era: 'pier',
+    onEnter: { set: { squeezedGrate: false } },
     time: 'THU OCT 31 · EVENING',
     cast: ['player'],
     imagePrompt: `The underside of a long wooden pier in fog at high water: black pilings rising like a drowned forest, a narrow wet catwalk a few feet above slapping water, orange lamplight leaking through the planks. At the far end of the catwalk a rusty iron door in a stone footing is half under water. The player, seen from behind in the black overcoat and fedora, crouches on the catwalk.`,
@@ -449,15 +465,15 @@ const raw: Page[] = [
       `Overhead, the planks creak under boots. Two men are walking along the pier, and their voices carry down through the gaps. You can’t make out the words, but you can guess whose voices they are.`,
       {
         if: is('hasMap'),
-        text: `At the far end of the catwalk, the boards stop, and a rusty iron door stands in the stone footing of the pier, exactly where Mrs. Tilden’s chart put it. The bottom half of the door is under black water.`,
+        text: `At the far end of the catwalk, the boards stop beside a rusty iron door in the stone footing. Its lower half is underwater. Mrs. Tilden’s chart marks the narrow stone sill connecting it to the last piling: a way across once the tide exposes it.`,
       },
       {
         if: all(not(is('hasMap')), is('foundDoor')),
-        text: `At the far end of the catwalk, the boards stop at a wall of old stone footing. You know there’s an iron door in it, because you felt it under the black water, and the water still covers most of it.`,
+        text: `At the far end of the catwalk, the boards stop beside the iron door. You felt a narrow stone sill beneath your feet while wading there. Once the water drops, it should connect the last piling to the doorway.`,
       },
       {
         if: all(not(is('hasMap')), not(is('foundDoor'))),
-        text: `At the far end of the catwalk, the boards stop at a wall of old stone footing, furred with weed and barnacles. A lot of black water is moving against it.`,
+        text: `At the far end of the catwalk, the boards stop beside an iron door set into the old stone footing, its lower half underwater. You can see the door. What you can’t see is a way across the moving black water between the last board and its threshold.`,
       },
       { if: is('slothWith'), text: `Sloth crouches beside you. The catwalk is sagging under him, and he’s holding his breath, as if that might make him lighter.` },
       { if: all(is('slothPlan'), not(is('slothWith'))), text: `You took the street route, so Sloth won’t find you at the grate. You’re glad you agreed on a time for him to go home with Chunk.` },
@@ -466,8 +482,8 @@ const raw: Page[] = [
     choices: [
       { text: `Wade out into the water now`, to: 'P02' },
       { text: `Settle in among the pilings and keep out of sight`, to: 'P03', if: { any: [is('hasMap'), is('foundDoor')] }, ...cost(10) },
-      { text: `Feel along the pilings for whatever the key might open, keeping out of sight`, to: 'P03', if: all(not(is('hasMap')), not(is('foundDoor'))), ...cost(20) },
-      { text: `Climb the ladder to the pier deck and look for another way to whatever the key opens`, to: 'E05' },
+      { text: `Feel along the pilings for a way across, keeping out of sight`, to: 'P03', if: all(not(is('hasMap')), not(is('foundDoor'))), ...cost(20) },
+      { text: `Climb the ladder to the pier deck and look for another way down to the door`, to: 'E05' },
     ],
   },
   {
@@ -481,7 +497,7 @@ const raw: Page[] = [
       {
         if: is('hasMap'),
         text: `You wade along the stone footing with one arm against the wall to the iron door you can see: flat, slimy with weed, its top half just above the surface.`,
-        else: `You wade along the stone footing with one arm against the wall. A few yards on, your hand finds iron under the surface: a flat iron door, slimy with weed.`,
+        else: `You wade toward the iron door with one arm against the wall. Beneath your shoes, a narrow stone sill runs from the last piling to the doorway, slimy with weed.`,
       },
       `It has no lock to fight with, but the weight of the water holds it shut, and the handle is a long way down. To get it open, you’d have to put your whole head under, hold on to the door against the current and haul.`,
       `The water tugs harder. Your coat has begun to fill and drag.`,
@@ -501,21 +517,20 @@ const raw: Page[] = [
     text: [
       {
         if: { any: [is('hasMap'), is('foundDoor')] },
-        text: `You find a dry spot on a crossbeam between two pilings, well back from the catwalk where the lamp from the pier above can’t reach, and settle in to wait. You know where the door is. All you have to do is stay out of sight until you can reach it.`,
-        else: `You work your way along the pilings, hand over hand in the dark, looking for anything with a lock. The stone footing runs on for a long way, and you feel along all of it. You find barnacles, weed, a dead crab and a rusty hook. Then, at last, your fingers find a flat square of iron set into the stone, its lower half underwater. You back away and settle on a crossbeam to wait.`,
+        text: `You settle on a dry crossbeam between two pilings, well back from the catwalk where the lamp from the pier above can’t reach. You know which strip of stone will lead to the door. Now the water has to uncover it.`,
+        else: `You work along the pilings, lying flat to feel beneath the water with one hand. You find barnacles, weed, a dead crab and a rusty hook. Finally your fingers trace the edge of a narrow stone sill running from the last piling toward the door. You back away and settle on a crossbeam to watch it emerge.`,
       },
       `It’s a long, cold, dripping wait. The tide goes out so slowly you can only see it happen by fixing your eyes on a piling and counting. The wet line on the wood creeps down by a finger’s width, and then another. The water drops away from the stone, from the catwalk, from the iron of the door.`,
       { if: is('soaked'), text: `You’re shaking so hard your teeth rattle. You press your hands under your arms and clench your jaw.` },
       { if: is('slothWith'), text: `Sloth sits patiently beside you the whole time. Once, when a board creaks overhead, he holds his breath until it stops.` },
       `Across the flats, a church bell strikes nine. You can make out people setting the last barriers around the bonfire. A small figure in a yellow jacket stands well back from the water, scanning the pier. Data has kept his part of the plan.`,
-      `Above you, two men stop walking. “Mama’s boat at quarter past,” says the thin voice: Francis. “Low water at nine forty-one. Then we cut locker seven. Fireworks cover the noise.”`,
-      `“Or the kid brings the key,” Jake says. A boot scrapes directly over your head.`,
+      `Above you, two men stop walking. “I am not carrying those cylinders down a wet ladder,” Francis says. Jake tells him Mama’s boat is due at quarter past. “Then Mama can wait till nine forty-one,” Francis snaps. “Same as the fireworks. Same as everybody.”`,
+      `“Locker seven,” Jake says. “You hold the torch. I turn the gas.” A boot scrapes directly over your head. “Unless the kid brings the key.”`,
       `You grip your flashlight without switching it on. Across the flats, a brass band tries the first few notes of something cheerful. The sound reaches you after you see the conductor’s arms move. Data has his back to the music. He is still looking this way.`,
     ],
     choices: [
-      { text: `Keep the light covered until the footing is dry`, to: 'P05', set: { signal: 'ready' } },
-      { text: `Flash twice now; get the others moving`, to: 'P04', set: { signal: 'early' }, ...cost(10) },
-      { text: `Leave the others out of this part; keep your light off`, to: 'P05', set: { signal: 'none' } },
+      { text: `Keep watching from the crossbeam`, to: 'P05', set: { signal: 'ready' } },
+      { text: `Signal across the flats now`, to: 'P04', set: { signal: 'early' }, ...cost(10) },
     ],
   },
   {
@@ -545,12 +560,13 @@ const raw: Page[] = [
       `You hear her before you see her silhouette above the rail. “Boys,” says a voice, dry and level and very used to being obeyed. Mama Fratelli. “Anything?”`,
       `“No key, Mama,” says Jake. “The kid’s still out there somewhere.”`,
       `“Then we cut. Jake, get the torch. Francis, stay by the ladder.” Her heels click on the boards above you. “And when we’ve got my plates,” she says, “we’re going to collect Sloth. A family belongs together.”`,
-      { if: is('slothWith'), text: `Sloth presses his palms against his ears. His breathing is quick and shallow. When you touch his sleeve, he lowers one hand. “Stop,” he says. You stop. The drain is behind him; the footsteps overhead belong to people who used to decide where he was allowed to go.` },
+      { if: is('slothWith'), text: `Sloth presses his palms against his ears. His breathing is quick and shallow. When you touch his sleeve, he lowers one hand and closes it around yours, his thumb shaking against your knuckles. His eyes find the iron door between the pilings. The footsteps overhead belong to people who used to decide where he was allowed to go.` },
       { if: not(is('slothWith')), text: `You think of Sloth’s home with Chunk’s family. Getting the plates out will not, by itself, stop Mama trying to take a person back. You will have to tell someone what you heard.` },
-      `You used to think being a Goonie meant doing the frightening part without admitting it was frightening. Under the boards, listening to Mama make a plan for somebody else’s life, that seems a small idea of being brave.`,
+      `Your own hands are shaking. You stop pretending they aren’t.`,
     ],
     choices: [
-      { text: `Tell Sloth your escape plan, then leave the choice to him`, to: 'P06', if: is('slothWith'), set: { slothChoice: true } },
+      { text: `Whisper your plan and wait for his answer`, to: 'P06', if: is('slothWith'), set: { slothChoice: true } },
+      { text: `Ask whether Sloth would rather head home now`, to: 'P06', if: is('slothWith'), set: { slothChoice: true, slothWith: false } },
       { text: `Ask Sloth to stay behind and keep his brothers off you`, to: 'P06', if: is('slothWith'), set: { slothWith: false } },
       { text: `Stay hidden until the footing is clear`, to: 'P06', if: not(is('slothWith')) },
     ],
@@ -563,15 +579,16 @@ const raw: Page[] = [
     cast: ['player'],
     imagePrompt: `Low tide under the pier at foggy night: bare black pilings above wet sand and a rusty iron door in the stone footing completely clear of water. Across the flats an orange bonfire glow flares beneath a green-gold firework. The player, seen from behind in the black overcoat and fedora, waits on the catwalk with flashlight lowered. Crop out companions and optional equipment; no Sloth visible.`,
     text: [
-      { if: is('slothChoice'), text: `While the last water drains from the footing, you whisper your plan and wait. Sloth looks toward the tunnel, then back at you. “Sloth go with friend.” He is still trembling. You don’t tell him to stop.`, },
-      { if: all(is('slothPlan'), is('viaLowline'), not(is('slothWith'))), text: `Sloth shakes his head at the job you offered. “Not stay for Mama.” He takes the drain home. You let him go, remembering your promise in the garage. Whatever happens next, he has kept his freedom.` },
+      { if: all(is('slothChoice'), is('slothWith')), text: `While the last water drains from the footing, you whisper your plan and wait. Sloth looks toward the tunnel, then back at you. “Sloth go with friend.” He is still trembling. You wait until he is ready to move.`, },
+      { if: all(is('slothChoice'), not(is('slothWith'))), text: `Sloth looks toward the drain. “Home,” he says. You offer to walk back with him, but he shakes his head and points at the safe route he knows. “Tell Chunk.” You promise. His footsteps fade uphill while you return to the crossbeam.` },
+      { if: all(is('slothPlan'), is('viaLowline'), not(is('slothWith')), not(is('slothChoice'))), text: `Sloth shakes his head at the job you offered. “Not stay for Mama.” He takes the drain home. You let him go, remembering your promise in the garage.` },
       `At 9:41 PM, by your watch, the tide is as low as it will go. The pilings stand bare and black above a flat of wet sand, and the stone footing at the end of the catwalk is dry to its base. The iron door you’ve been watching stands completely clear of the water, streaming and rusty, with its padlock long gone.`,
       `A roar goes up from far across the flats: the bonfire has been lit. Light flickers orange along the underside of the fog, and a moment later the first firework thumps into the sky and bursts green and gold.`,
       `Overhead, boots pound the planks. “That’s it!” Jake shouts. “Tide’s out! Let’s go!” The Fratellis are about to come down.`,
       `You’re nearer the door than they are, and you have the key.`,
     ],
     choices: [
-      { text: `Send two low flashes across the flats, wait for one back, then open the door`, to: 'P07', if: all(is('teamPlan', 'flats'), is('signal', 'ready')), set: { signal: 'timed' }, ...cost(5) },
+      { text: `Signal across the flats before opening the door`, to: 'P07', if: is('teamPlan', 'flats'), set: { signal: 'timed' }, ...cost(5) },
       { text: `Use the noise to slip straight into the ice house`, to: 'P07' },
     ],
   },
@@ -583,11 +600,11 @@ const raw: Page[] = [
     cast: ['player', 'plates'],
     imagePrompt: `Inside a cold stone-arched ice house lined with rusty numbered metal lockers. The player, seen from behind in the black overcoat and fedora, lifts a cracked biscuit tin out of open locker 7 and unwraps a pillowcase to show two engraved copper plates glinting in the flashlight.`,
     text: [
+      { if: is('signal', 'timed'), text: `From the catwalk you send two low flashes across the bare sand. One comes back. Mouth turns to clear space by the barrier while Mikey runs to fetch the sheriff. Data keeps his light on the safe stretch of sand. You put your flashlight away.` },
       `The iron door scrapes open when you put your shoulder to it. You slip through.`,
-      { if: is('signal', 'timed'), text: `Before you left the catwalk, one small light answered yours. Through the fog you saw Mouth turn away from the water, clearing space by the barrier while Mikey ran toward a campaign hat. Data kept his light on the safe stretch of sand. Now you have to bring them something worth all that work.` },
       `Inside is a low stone room with an arched ceiling, cold as a refrigerator. The walls are lined with rusted metal lockers, each with a number painted on the door in faded white. You find 7 at once. The key turns with a screech of rust.`,
       `Inside the locker is a cracked biscuit tin, and inside the tin, wrapped in a pillowcase, are two flat plates of engraved copper, heavy and cold, covered in tiny lines. Held up to your flashlight, the pattern becomes a face, in mirror image: the portrait from a twenty-dollar bill. On the pillowcase, in marker, someone has written: MAMA’S. HANDS OFF.`,
-      { if: is('slothWith'), text: `Sloth stands just inside the doorway, keeping the way out clear. He watches the ladder, then you. “Together,” he says. He has not offered to be left here as a doorstop.` },
+      { if: is('slothWith'), text: `Sloth stands just inside the doorway, watching the ladder. “Together,” he says. He waits until you have the plates, then moves beside you toward the door.` },
       `You tuck the plates inside your overcoat. Outside, boots are pounding on the ladder.`,
     ],
     choices: [{ text: `Go back out`, to: 'P08' }],
@@ -622,7 +639,7 @@ const raw: Page[] = [
     imagePrompt: `A wide shot of the player, seen from behind in the black overcoat and fedora, sprinting across wet sand toward a distant orange glow in the fog, a firework bursting overhead. Behind them, Jake stumbles in the mud.`,
     text: [
       `You run. The wet sand sucks at your sneakers and the plates bang against your ribs. Behind you, boots slap the mud, and Jake roars at you to stop. Ahead, the glow of the fire grows, and the fog turns orange.`,
-      { if: is('slothWith'), text: `Sloth runs beside you, pointing out a firm rib of sand where your feet stop sinking. Behind you Mama calls his name. His stride falters. You slow enough to stay with him, and he starts again. Neither of you has to carry the other.` },
+      { if: is('slothWith'), text: `Sloth runs beside you, pointing out a firm rib of sand where your feet stop sinking. Behind you Mama calls his name. His stride falters. You slow enough to stay with him, and he starts again.` },
       { if: is('signal', 'timed'), text: `Data’s light holds steady beyond the flats. Each time fog hides it, you fix on the last place it shone. You cannot see Mikey or Mouth now. You have to trust that they are doing their part.` },
       `Halfway across, one of your high-tops sticks. You pull it free and keep running with the lace trailing. Somewhere behind you Jake has the same trouble, and blames Francis for inventing mud. It would be funnier if the footsteps weren’t so close.`,
       { if: ge(1), text: `Then the fog tears open and you burst into the light. Your margin is {{clock}}. You have reached people. Now you have to make them understand.` },
@@ -653,7 +670,11 @@ const raw: Page[] = [
         text: `A heavy iron grate blocks the tunnel. You squeeze through a gap in one corner, and when Francis tries to follow, his checked sport coat catches on a rusty bar. He stays stuck, swearing, until you’re out of earshot.`,
       },
       { if: all(is('slothWith'), ge(1)), text: `Sloth points to his side passage: “Home now.” You thank him, and he goes up toward Chunk’s garage. You continue alone.` },
-      `Above the grate, the sump has drained to a puddle. You splash through it, take the uphill passage at the fork and reach the Goon Docks arch. The detour leaves your lungs burning.`,
+      {
+        if: is('viaLowline'),
+        text: `Above the grate, the sump has drained to a puddle. You splash through it, take the uphill passage at the fork and reach the Goon Docks arch. The detour leaves your lungs burning.`,
+        else: `Beyond the grate, the floor dips into a long puddle. You splash through it, keep to the uphill branch where two tunnels meet, and climb until streetlights shine through the Goon Docks arch. Your lungs are burning.`,
+      },
       { if: ge(1), text: `You make it down the lit streets to Duane Street station. Behind the counter, Sergeant Olafsen looks up at the sight of you, muddy and out of breath, with an engraved copper plate in each hand.` },
     ],
     choices: [{ text: `Put the plates on the counter`, to: 'E09', set: { slothWith: false } }],
@@ -668,16 +689,19 @@ const raw: Page[] = [
       `The Halloween bonfire is a mountain of burning pallets and driftwood, throwing sparks up into the fog. Around it, hundreds of people in costumes are laughing and eating hot dogs: witches, ghosts, a very convincing hamburger. A brass band is playing. Fireworks are bursting overhead.`,
       `“Help!” you shout, holding up the plates. “The Fratellis! It’s the Fratellis!”`,
       `A man in a gorilla suit gives you a thumbs-up. “Great costume!” he says. A woman dressed as a cat tells her husband you’re the best one yet. Nobody believes a word.`,
-      `Mouth reaches you first. “Give me your sleeve.” He pulls you clear of a man dressed as a hamburger. Mikey, Data and Chunk are coming through behind him, with Mikey’s father calling for people to make room. Out of the fog come Jake and Francis.`,
+      `Mouth reaches you first, shouldering past the man dressed as a hamburger. Mikey, Data and Chunk are coming through behind him, with Mikey’s father calling for people to make room. Out of the fog come Jake and Francis.`,
       { if: is('slothWith'), text: `Chunk reaches Sloth and stops short of grabbing him. “Want to come through?” Sloth nods. Chunk takes his hand. People stare; Sloth looks at Chunk instead.` },
       { if: is('teamPlan', 'station'), text: `Mikey shouts that his father arranged for Olafsen to receive you at the station. They were watching the road for you, not this edge of the crowd. Now all four Goonies turn the plan around at once.` },
-      { if: all(is('teamPlan', 'flats'), not(is('signal', 'timed'))), text: `“We saw something,” Data says, “but we couldn’t tell when you were coming.” The barrier is still crowded. Mouth starts working people aside with both elbows and an astonishing stream of apologies.` },
+      { if: all(is('teamPlan', 'flats'), not(is('signal', 'timed'))), text: `“No arrival signal!” Data says. “That was the important bit!” The barrier is still crowded. Mouth works people aside with both elbows. “Sorry. Sorry. Extremely sorry. MOVE.”` },
       `A broad man in a tan uniform and campaign hat turns from the cider table: Sheriff Pruitt. “Let the child through,” he says. People are still laughing, still thinking this belongs to the costume contest. You lower the copper before somebody tries to applaud it.`,
       {
         if: coordinated,
         text: `Your answer from shore has become an open gap. Data holds the barrier aside, Mikey has the sheriff’s attention, and Mouth has your sleeve. Jake reaches for Sloth. Sloth steps out of his reach and says, clearly, “My friends.” For the moment his brother hesitates, the way to the sheriff is yours.`,
-        else: `Jake is almost on you. The Goonies have made enough space to get you safe, but not enough to pass two sharp-edged plates through without catching somebody. You can feel how easily the copper would pull you back into his reach.`,
       },
+      { if: all(not(coordinated), { any: [not(is('teamPlan', 'flats')), not(is('signal', 'timed'))] }), text: `The barrier still stands between you and the sheriff. Mouth gets your sleeve and starts hauling you around its end. In the few seconds it takes to turn, Jake catches the back of your coat.` },
+      { if: all(not(coordinated), is('teamPlan', 'flats'), is('signal', 'timed'), le(19)), text: `The gap is open, but you have brought the chase right into it. Before you reach the sheriff, Jake gets a fist into the back of your collar. Mouth catches your sleeve and braces against the barrier.` },
+      { if: all(not(coordinated), is('teamPlan', 'flats'), is('signal', 'timed'), ge(20)), text: `Data has opened the gap. Jake spots the sheriff and cuts across the last few yards while Francis keeps you from turning aside. Mouth catches your sleeve, but Jake gets the back of your coat before you can reach the sheriff.` },
+      { if: not(coordinated), text: `You stretch the copper toward the sheriff. He is still a few steps away; Jake’s free hand comes around for the plates. Beyond the barrier to your left, an empty strip of sand separates the crowd from the bonfire.` },
     ],
     choices: [
       { text: `Trust Mouth’s grip and carry the plates through the gap`, to: 'E11', if: coordinated },
@@ -715,20 +739,28 @@ const raw: Page[] = [
       `“The deputy,” you say.`,
       `She frowns. “But the sheriff’s office said they couldn’t send anyone before nine.”`,
       `You think about the white van with the blue stripe, and sit down on the wet steps. Mrs. Tilden calls again, this time to report the theft and the false uniform. She stays beside you while you explain.`,
-      `The warning goes out, but the van slips the roadblock. At low tide your key opens locker seven, and the hidden printing plates leave Astoria. In the months that follow, fake twenties keep turning up. You remember the radio bulletin each time, and the relief of thinking somebody official would take the problem away.`,
+      `The warning goes out, but the van slips the roadblock. At low tide your key opens locker seven, and the hidden printing plates leave Astoria.`,
+      `In the months that follow, fake twenties keep turning up. You remember the radio bulletin each time, and the relief of thinking somebody official would take the problem away.`,
     ],
   },
   {
     id: 'E03',
     title: 'The Evidence Drawer',
     era: 'town',
-    ending: { kind: 'bad' },
+    ending: { kind: 'good' },
     cast: ['player'],
     imagePrompt: `A police station front desk at night. A tired desk sergeant drops a small brown envelope marked EVIDENCE into a metal drawer and slides it shut. The player, seen from behind in the black overcoat and fedora, watches from the counter with a doubtful slump.`,
     text: [
-      `At Duane Street station, Olafsen seals the key in an evidence envelope and calls your family. You wait under the bright lights until someone comes for you. The coat feels warmer without the key inside it.`,
-      `That night a patrol checks the closed pier from the road. Below it, masked by fireworks, a cutting torch opens locker seven. By the time anyone looks under the deck, the printing plates are gone and the Fratellis have abandoned their boat for the laundry van.`,
-      `On Monday, Olafsen shows you the split locker catch. “You gave us the warning,” he says. “We should have checked properly.” He adds your statement to the case; nobody calls it a prank. You were right to ask for help. The help needed to arrive somewhere other than a drawer.`,
+      `At Duane Street station, Olafsen seals the key in an evidence envelope and calls your family. He keeps your report on the desk while you wait under the bright lights. The coat feels warmer without the key inside it.`,
+      { if: is('phoned'), text: `He finds your earlier call on the log. The patrol has checked every address on the auction list, including yours. He draws a line through the task. “That part’s done.”` },
+      {
+        if: is('hasMap'),
+        text: `Your chart goes straight to the harbor patrol. They reach the footings before low water and hold both approaches to the ice house. The Fratellis see the patrol lamps and retreat to their van. At nine forty-one, a deputy uses your key to open locker seven. The copper plates come out still wrapped in their pillowcase.`,
+        else: `Olafsen calls the library about the marine key. The librarian, Mrs. Tilden, finds the ice-house chart, and a harbor patrol goes to Seventh Street. They reach the footings just as the Fratellis have cut open locker seven. Caught between the patrol lamps and the river, Jake drops a biscuit tin to free his hands for the ladder. The patrol recovers two copper printing plates from the mud.`,
+      },
+      `The Fratellis escape inland in the laundry van before the roadblocks can close around them. They are still wanted, but their plates are in evidence. The counterfeit operation cannot start again with these.`,
+      `Olafsen phones your house with the news. Later the Goonies come round carrying cider in a thermos. Mouth describes the costume prize he ought to have won; Data asks how they found the room. “Library,” you say. He nods. “Good filing system.”`,
+      `You don’t have a tunnel adventure to tell. You have the number of a case you helped solve, and friends staying until the thermos is empty.`,
     ],
   },
   {
@@ -744,7 +776,8 @@ const raw: Page[] = [
       { if: is('slothWith'), text: `Sloth reaches for you from the catwalk and just misses. He runs along the pilings shouting for help in the biggest voice in Astoria, and it’s his shouting that brings the patrol boat.` },
       `A harbor patrolman on his evening round fishes you out downstream. He has a bedsheet ghost costume over his uniform, ready for the bonfire. He wraps you in a blanket and radios for an ambulance, listening while you gasp out “Seventh Street.” You spend the night being warmed up and checked over.`,
       { if: is('slothWith'), text: `The patrolman radios Sloth’s location too. A deputy brings him safely to Chunk’s family while you go to hospital.` },
-      `A patrol reaches the pier, but the Fratellis see it coming and move their equipment into the dark below. At low tide they cut the locker open. The key is lost in the river; the plates are lost to the people who made them. When the Goonies visit you, nobody brings a joke about swimming. Data brings dry socks.`,
+      `A patrol reaches the pier, but the Fratellis see it coming and move their equipment into the dark below. At low tide they cut the locker open. The key is lost in the river; the plates are lost to the people who made them.`,
+      `When the Goonies visit you, nobody brings a joke about swimming. Data brings dry socks.`,
     ],
   },
   {
@@ -759,7 +792,8 @@ const raw: Page[] = [
       { if: is('slothWith'), text: `Below you on the ladder, Sloth can’t get past to help. With Jake’s hand on your shoulder, there’s nothing for it but to climb the rest of the way, and Sloth comes up after you with his hands raised.` },
       `They take the key out of your pocket in two seconds. They lock you in the tool shed at the foot of the pier with the door wedged, and when the fireworks start hours later, you hear boots going down the ladder under the pier, and a rusty locker door squealing open.`,
       { if: is('slothWith'), text: `Sloth goes into the shed with you. He tries the door once, feels you flinch as the boards shake, and stops. “Window,” he says. You take turns calling through the little opening at the back.` },
-      `It’s eleven before people walking home from the bonfire hear you and fetch the sheriff. By then the Fratellis have abandoned their grounded boat and escaped in the van with the plates and key. Your friends help you give a statement under the pier lights. You’ve learned a few things, mainly about walking straight up to a Fratelli.`,
+      `It’s eleven before people walking home from the bonfire hear you and fetch the sheriff. By then the Fratellis have abandoned their grounded boat and escaped in the van with the plates and key. Your friends help you give a statement under the pier lights.`,
+      `You’ve learned a few things, mainly about walking straight up to a Fratelli.`,
     ],
   },
   {
@@ -792,7 +826,8 @@ const raw: Page[] = [
       `You walk across the mud to the foot of the pier ladder. Mama Fratelli climbs down it, with Jake steadying her, and you hand her the plates.`,
       `“There,” says Mama, patting your cheek. “That wasn’t so hard, was it? You’re a sensible child.” She puts the plates in her handbag. “And you’ll see I keep my word. We’ll be out of Astoria tonight.”`,
       { if: is('slothWith'), text: `Sloth is standing beside you. Mama holds out a hand to him. “Come along, baby,” she says. Sloth looks at the hand, and at you, and at his brothers. Then he takes a long step backward and says, quietly, “Sloth stay.” Mama’s smile twitches. “Suit yourself,” she says.` },
-      `The laundry van’s engine starts at the foot of the pier, and it slides off into the fog with its lights out, leaving the *Rosalie* stuck on the mud. By the time you’ve caught your breath and found anyone to tell, it’s long gone. Mama keeps her word about leaving Astoria. She never said anything about leaving the printing business. Over the next year, fake twenties turn up in every cash register from here to California, and the police can’t work out where they’re coming from.`,
+      `The laundry van’s engine starts at the foot of the pier, and it slides off into the fog with its lights out, leaving the *Rosalie* stuck on the mud. By the time you’ve caught your breath and found anyone to tell, it’s long gone.`,
+      `Mama keeps her word about leaving Astoria. She never said anything about leaving the printing business. Over the next year, fake twenties turn up in every cash register from here to California, and the police can’t work out where they’re coming from.`,
     ],
   },
   {
@@ -806,8 +841,8 @@ const raw: Page[] = [
       `You turn and run to the edge of the sand, where the mud drops away into the black, fast water of the river’s channel. Jake lunges. You throw the plates as far as you can.`,
       `They turn once in the light of the fireworks and vanish into the shipping channel. A small splash, then nothing. You have given up the proof to make certain Mama can’t use it.`,
       `Behind you, Mama screams from the rail of the pier. It’s a high, thin sound, like a kettle. Jake and Francis stand at the water’s edge, staring at the river, too stunned to move.`,
-      { if: is('slothWith'), text: `Sloth takes your hand and turns toward the bonfire. He doesn't look back when Mama calls. You keep pace with him across the firm sand.` },
-      `The Fratellis abandon the boat, which the tide has left on the mud, and flee inland in the laundry van while you reach the crowd. Mouth gets you through to Mikey and the sheriff. You tell them where the plates went. The river gives back nothing they can use.`,
+      { if: is('slothWith'), text: `Sloth takes your hand and turns toward the bonfire. He doesn’t look back when Mama calls. You keep pace with him across the firm sand.` },
+      `The Fratellis abandon the boat, which the tide has left on the mud, and flee inland in the laundry van while you reach the crowd. Mouth gets you through to Mikey and the sheriff. You tell them where the plates went, and repeat Mama’s threat to take Sloth. Pruitt sends a patrol to Chunk’s house and speaks to his family. The river gives back no printing evidence they can use, but nobody has to face that threat alone.`,
       `“You stopped them printing,” Mikey says later, beside the cider table. You nod. You wanted to bring back more than a story, but people in shops all over Oregon will never have to find out what you prevented. That is something, even if nobody can hold it up to the firelight.`,
     ],
   },
@@ -825,6 +860,7 @@ const raw: Page[] = [
       { if: is('visitedDepot'), text: `Mouth has passed on the number from the depot. The roadblock deputy reads it back over the radio. Your wrong guess has finally found the right destination.`, else: `The roadblock crews have the laundry van’s description. This time there is no doubt who is inside it.` },
       `Before midnight a roadblock reports three arrests. The plates remain on the counter between you and the sergeant until he has recorded every scratch and signed for them. It is a slow, unglamorous victory, and you watch every second.`,
       { if: is('slothChoice'), text: `Chunk phones from home later. Sloth made it back through the hatch and is asleep. “He said you listened,” Chunk tells you. You fold that sentence away more carefully than the receipt for the coat.` },
+      { if: all(is('slothPlan'), not(is('slothChoice'))), text: `Chunk’s family leaves word at the station: Sloth is home. They have a place waiting for him at the kitchen table.` },
       `You miss the last fireworks. When the Goonies come to collect you, Mouth claims they were terrible anyway. His face gives him away. You let him keep the lie.`,
     ],
   },
@@ -836,10 +872,12 @@ const raw: Page[] = [
     cast: ['player', 'plates', 'jake', 'francis'],
     imagePrompt: `The glowing edge of a bonfire on foggy river flats at night. A broad sheriff in a tan uniform and campaign hat clamps a hand on Jake’s shoulder; a deputy has Francis by the elbow. Two thin copper plates lie dark and warped among the embers. The player, seen from behind in the black overcoat and fedora, holds a hot dog. Crop out the Goonies and any optional Sloth.`,
     text: [
-      `You fling the plates clear of the crowd into the bonfire. Jake catches your collar as Mouth pulls you forward. For an instant the coat holds you between them. Then its old seam tears.`,
+      `You fling the plates clear of the crowd into the bonfire.`,
+      { if: coordinated, text: `Jake turns from Sloth and lunges, catching your collar just as Mouth pulls you forward.`, else: `Jake pulls at your collar as Mouth drags you forward.` },
+      `For an instant the coat holds you between them. Then its old seam tears.`,
       `Sheriff Pruitt is already moving. You’ve never seen a man move so fast. He lays a broad hand on Jake’s shoulder, a deputy takes Francis by the elbow, and the hand on your collar lets go. “Evening, Jake,” says the sheriff. “Quiet night?”`,
       `Mikey points out Mama before she can get from the grounded boat to the van. The deputies take all three escapees away. At dawn, the plates come out of the ashes warped and blistered, their fine engraving ruined. The sheriff can preserve the remains, but not the intact printing evidence you almost delivered.`,
-      `For now he gives you a hot dog while Data examines the torn seam. Mouth is shaking too hard to put his vampire fangs back in. You thank him for not letting go. “Obviously,” he says, which isn’t an answer until you think about it.`,
+      `For now the sheriff gives you a hot dog while Data examines the torn seam. Mouth is shaking too hard to put his vampire fangs back in. You thank him for not letting go. “Obviously,” he says, which isn’t an answer until you think about it.`,
       { if: is('slothWith'), text: `Chunk gives Sloth a second hot dog, and nobody in the crowd stares at him for more than a moment.` },
     ],
   },
@@ -855,8 +893,8 @@ const raw: Page[] = [
       `Then he turns around. “Jake Fratelli,” he says, in a voice that carries across the whole of the river flats, “and Francis Fratelli. Fancy seeing you here.” The band stops in the middle of a note. Every head in the crowd turns. A deputy takes each of the brothers by the elbow, and the ring of costumed faces around them goes from amusement to something like applause.`,
       `Down on the pier, Mama Fratelli tries to leave on the *Rosalie*. She discovers that the boat, left too long at the end of the pier, has settled on the mud with the falling tide. She sits in it with her handbag in her lap, furious, until a deputy helps her out.`,
       `Mikey’s father shakes your hand. You tell the sheriff who kept the light steady, who cleared the barrier, and who knew the way over the mud. Data starts explaining that the flashlight was technically more reliable than Mark Two of anything. Mouth claims this counts toward the costume prize.`,
-      `Chunk stands beside Sloth as the applause spreads. “Want to stay?” he asks. Sloth looks at all those faces, then at the space his friends have left for him. “Stay,” he says. He was free to leave before anybody clapped. That is the part you will remember.`,
-      `You repeat Mama’s threat to the sheriff. He listens to Sloth himself and makes sure Chunk’s family knows. The plates go into evidence intact. All three escaped Fratellis go back into custody. No part of the night has to be hidden to make it a happy ending.`,
+      `Chunk stands beside Sloth as the applause spreads. “Want to stay?” he asks. Sloth looks at all those faces, then at the space his friends have left for him. “Stay,” he says. He settles beside Chunk.`,
+      `You repeat Mama’s threat to the sheriff. He listens to Sloth himself and makes sure Chunk’s family knows. The plates go into evidence intact. All three escaped Fratellis go back into custody.`,
       `Later, Mikey brings cider for everyone. You start telling him what the tunnel was like, then stop: you’re talking too much. “Go on,” he says. The others move closer to hear.`,
       `For the first time, you aren’t trying to imagine how an adventure sounds from inside the Goonies. You’re cold, your shoes are full of mud, and your friends are listening.`,
     ],
@@ -868,7 +906,7 @@ const raw: Page[] = [
 const caught = `The search has closed around you. You can’t find another unwatched way onward; the room you had to act is gone.`;
 const caughtOn: Record<string, string> = {
   T08: `Francis looks up from his crate, straight at you, and a second flashlight snaps on behind you. Your room to act is gone.`,
-  F02: `At the uphill arch a flashlight sweeps the street. Jake has driven the van round while Francis chased you. You’ve run out of unwatched exits.`,
+  F02: `At the uphill arch a flashlight sweeps the street: Jake has driven the van round. Behind you, Francis has finally wriggled through the grate’s rusted corner and caught up while you climbed. His shout answers Jake’s. You’ve run out of unwatched exits.`,
 };
 const spends = (e?: Effects) => (e?.add?.lead ?? 0) < 0;
 const costly = new Set<string>();
@@ -878,33 +916,35 @@ for (const p of raw) {
 }
 // Pages where the lead can never reach 0 (D02 is before the meter shows; the others are cheap or early detours).
 // If the checker reports a guard that never applies, add the page here.
-const unguarded = new Set<string>(['D02', 'D05', 'D07', 'T01', 'T03', 'T04', 'T05', 'U01']);
+const unguarded = new Set<string>(['D02', 'D05', 'D07', 'T01', 'T03', 'T04', 'T05', 'T06', 'T08', 'U01']);
 const guarded = new Set([...costly].filter((id) => !unguarded.has(id)));
 
 const slothWaits: Passage = {
   if: all(is('slothPlan'), not(is('slothWith'))),
-  text: `Afterward, Chunk’s family makes sure you know Sloth is safely home. The promise made in the garage holds: he is free to turn back, and nobody leaves him waiting underground.`,
+  text: `Afterward, Chunk tells you Sloth got home through the garage hatch. Chunk’s parents had a place waiting at the kitchen table.`,
 };
-const waitEndings = new Set(['E02', 'E03', 'E04', 'E05', 'E06', 'E07', 'E08', 'E09', 'E10']);
+const waitEndings = new Set(['E02', 'E03', 'E04', 'E05', 'E06', 'E07', 'E08', 'E10']);
 
-const pages: Page[] = raw.map((p) =>
-  p.ending && waitEndings.has(p.id)
-    ? { ...p, text: [...p.text, slothWaits] }
-    : !guarded.has(p.id) || p.ending
-    ? p
-    : {
-        ...p,
-        text: [...p.text, { if: le(0), text: caughtOn[p.id] ?? caught }],
-        choices: [
-          ...p.choices!.map((c) => ({ ...c, if: c.if ? all(c.if, ge(1)) : ge(1) })),
-          { text: `Keep running`, to: 'E06', if: le(0) },
-        ],
-      },
-);
+const pages: Page[] = raw.map((p) => {
+  if (p.ending && waitEndings.has(p.id)) {
+    let closing = p.text.length - 1;
+    while (typeof p.text[closing] !== 'string') closing -= 1;
+    return { ...p, text: [...p.text.slice(0, closing), slothWaits, ...p.text.slice(closing)] };
+  }
+  if (!guarded.has(p.id) || p.ending) return p;
+  return {
+    ...p,
+    text: [...p.text, { if: le(0), text: caughtOn[p.id] ?? caught }],
+    choices: [
+      ...p.choices!.map((c) => ({ ...c, if: c.if ? all(c.if, ge(1)) : ge(1) })),
+      { text: `Keep running`, to: 'E06', if: le(0) },
+    ],
+  };
+});
 
 const story: Story = {
   id: 'fratelli-run',
-  revision: 2,
+  revision: 3,
   title: 'The Fratelli Run',
   subtitle: 'A Goonies adventure',
   blurb: `It’s Halloween in Astoria, and the Fratellis have escaped. The key sewn into your thrift-shop overcoat opens something they want very badly. You have a few hours, a head start and the tide to work out where it belongs before they catch you.`,
@@ -933,6 +973,8 @@ const story: Story = {
     visitedHideout: { default: false },
     visitedCellar: { default: false },
     soaked: { default: false },
+    crossing: { default: 'none', values: ['none', 'rope', 'shelf', 'water'] },
+    squeezedGrate: { default: false },
     viaLowline: { default: false },
     foundDoor: { default: false },
     hasPlates: { default: false },

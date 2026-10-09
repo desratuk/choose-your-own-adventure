@@ -12,7 +12,7 @@ When more than one story is installed, the front page shows a story picker.
 
 ## Working with the user
 
-- **Don't show the user story content.** They want to be surprised when they play. In chat, describe progress in terms of structure: page counts, endings, checker results, UI. Don't quote plot, scene text or ending text unless they ask. If a story decision needs their input, ask it without giving away the plot where possible.
+- **Spoilers are welcome in chat.** The user has read all three stories; discuss plot, choices and endings directly when reviewing or revising them.
 - For a new story, agree the universe, names and premise with the user first. They delegate everything after that. Each story's bible (`docs/<id>/story-outline.md`) is approved and is the source of truth: refine it where needed, but keep the story consistent with it.
 - Work on a feature branch. Commit and push at each milestone, and ask before merging into `main`.
 - **Never break an existing story.** Shared code changes must leave every installed story looking and playing exactly as before. Verify in the browser.
@@ -135,11 +135,11 @@ A Stop hook (`.claude/settings.json` → `scripts/story-review-gate.mjs`) blocks
 - **Bible:** `docs/stopped-clocks/story-outline.md`. Consult its route and meter tables before changing this story.
 - Personal-use Back to the Future adventure: an original teen preservation volunteer and Doc investigate a frozen town across 1985, 1885 and 2085. Keep the approved premise, newcomer explanations and train (not DeLorean).
 - The player's local knowledge and mechanical work drive the climax. The museum visit establishes Rex's public live channel; the independent Authority can follow that channel only after receiving the jump-log evidence.
-- `authorityAlerted` is not an arrest. Only the broadcast/arrest route sets `rexCaught`. Finale prose and endings must distinguish them.
+- `authorityAlerted` is not an arrest. S44 sets `rexExposed`; only the broadcast/arrest route sets `rexCaught`. Finale prose distinguishes alerting, public exposure and arrest.
 - Doc knows his safe combination and detects removal of the original wheel immediately in 1885. Repair occurs there before era departure.
 - Letter P.S.: “Leave the past something to work with.” Preserve the letter loop and exact wording.
-- **Meter:** starts 390/360/345 on Easy/Medium/Hard. Core travel/preparation 225, assembly 70; chase/kiosk/museum 10 each; recoverable mistakes 15 each. Best needs all investigation, the broadcast choice, arrest and at least 20 remaining. Medium permits one recovery; Hard none.
-- **UI:** time-circuits header, eighty-eight transition, era badges. Save revision 2.
+- **Meter:** starts 390/360/345 on Easy/Medium/Hard. Core travel/preparation 225, assembly 70; chase/kiosk/museum 10 each; recoverable mistakes 15 each. Best needs all investigation, the broadcast choice, arrest and at least 20 remaining. S09 establishes crushing damage below twenty and permanent freezing at zero. Medium permits one recovery; Hard none.
+- **UI:** time-circuits header, eighty-eight transition, era badges. Save revision 3.
 - **Status:** 51 pages, eleven endings. Art follows the approved reference sheets; S41's assembly image must remain valid on timer-expired arrivals.
 
 ---
@@ -150,9 +150,10 @@ A Stop hook (`.claude/settings.json` → `scripts/story-review-gate.mjs`) blocks
 - Personal-use Goonies story: an unnamed fourteen-year-old finds a key in an auction overcoat. Halloween 1985, Astoria; escaped Fratellis seek counterfeit printing plates. No pirates or treasure.
 - The ensemble has distinct jobs. The player assigns support at the flats or station; Data offers the launcher before departure; Mouth relays discoveries; Mikey finds help.
 - Sloth chooses whether to join, sets a stop rule and can refuse to hold off his family. Never treat him as an acquired tool. He accompanies the player only after the Lowline grate, never on a street arrival. Honor departure at P05 and F02.
-- **Meter:** `lead` is PURSUIT MARGIN, a number, NOT elapsed minutes. Starts 135/105/90. The clean best route costs 70 and requires 20 remaining, flats support, a correctly timed signal, Sloth's freely chosen continued accompaniment and the coordinated handoff. Medium allows one 15-point slip; Hard none. Ordinary solo and street victories remain possible.
-- Clues: key tag and tide poster, radio van/shift facts, flash acknowledgement, map, inspection catch, depot van number. Mistaken detours can yield useful information.
-- **UI:** basic header, VHS transition, scoped setting themes. Revision 2. 45 pages, eleven endings (seven bad, four good, one best).
+- **Meter:** `lead` is PURSUIT MARGIN, a number, NOT elapsed minutes. Starts 135/105/90. The clean best route costs 70 and requires 20 remaining, flats support, a correctly timed signal, Sloth's freely chosen continued accompaniment and the coordinated handoff. Medium allows one 15-point slip; Hard none. An early signal can be corrected at P06; this ten-point mistake still allows best on Medium, ordinary good on Hard. The first police call costs zero net margin because patrol protection offsets the delay. Ordinary solo and street victories remain possible.
+- Clues: key tag and tide poster, radio van/shift facts, flash acknowledgement, map, inspection catch, depot van number. Mistaken detours can yield useful information. The locker door is visible on all routes; `foundDoor` records safe access.
+- Local action flags: `crossing` renders the selected U04 crossing at U05 and resets at U06; `squeezedGrate` renders at U06 and resets at P01. `slothChoice` includes respecting his decision to go home; `slothWith` separately records continued accompaniment.
+- **UI:** basic header, VHS transition, scoped setting themes. Revision 3. 45 pages, eleven endings (six bad, five good, one best).
 - Static illustrations omit optional companions; only D07, D08 and E11 guarantee Sloth visibly present.
 
 ---
@@ -161,12 +162,12 @@ A Stop hook (`.claude/settings.json` → `scripts/story-review-gate.mjs`) blocks
 
 - **Bible:** `docs/return-to-sender/story-outline.md`. Consult its evidence, capture-accounting and route tables before editing.
 - Personal-use Ghostbusters story, rainy Manhattan, Friday 15 November 1985. An unnamed seventeen-year-old courier carries an undelivered 1898 closure notice from Pell's stamp shop to the firehouse, then may trace Station Nine beneath the Sedgewick.
-- The commissioned handover is a legitimate good ending. Further investigation is voluntary. The professionals revise an incomplete initial diagnosis when the courier reports new evidence; they are not negligent villains.
+- Declining the job and the commissioned handover are legitimate good endings. Further investigation is voluntary. The professionals revise an incomplete initial diagnosis when the courier reports new evidence; they are not negligent villains.
 - The tag ONLY reports grid load. It never captures or transports ghosts. Twelve postal clerks were already in the grid; 35 including Tull remain outside. The total shift is 47.
 - A portable trap catches one group: six at the blockade, three while waiting, OR the final assembled staff. Full traps remain separate from the grid and are explicitly handed over or discharged.
 - Slimer remains at the firehouse. His optional empty-chair scene is relationship, not an item-for-help exchange or mandatory best-ending flag.
 - Clue distribution: address/time/entrance from distinct investigations, copy procedure from post office or records room, full roster from the optional roll. The player performs the final deliveries while the team operates machinery.
-- Best requires the copy procedure, verified roll and at least ten headroom at C08. C09 releases only the named twelve; C10 accounts for trap cargo and returns to Tull. Ordinary success may leave named release work outstanding.
+- Best requires the copy procedure, verified roll and at least ten headroom at C08; R03 teaches the corresponding 90% maximum load before branching. C09 releases only the named twelve, including Edwin Vale; C10 accounts for trap cargo and returns to Tull. Ordinary success may leave named release work outstanding. Engine Nine's stamped inspection plan permits H01→H03 access without H02's negotiation cost.
 - **Meter:** rising GRID LOAD = 100 minus `margin`. Starts at 20/35/50% on Easy/Medium/Hard. Clean solo, team and trap-assisted records routes cost 40 headroom; Medium leaves 15 beyond the ten-point discharge reserve, Hard none. The DOWN loop and rushed lobby access each cost ten and are recoverable.
-- **UI:** basic header, slime transition, scoped themes. Revision 2. 46 pages, ten endings (four bad, six good, one best); E05 is now a recovery scene, not an ending. Old ending records remain stored but only current endings count.
+- **UI:** basic header, slime transition, scoped themes. Revision 3. 46 pages, ten endings (three bad, seven good, one best); E05 is a recovery scene, not an ending. Old ending records remain stored but only current endings count.
 - Merged illustrations crop optional team/trap presence. Approved sheets lock faces, wardrobe, courier satchel, canister, trap, paperwork, storage case and service hatch.

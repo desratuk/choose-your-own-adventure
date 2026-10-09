@@ -706,7 +706,7 @@ THE PLAYER: a 17-year-old bicycle courier in a dented silver bike helmet, a must
 
 DOLORES VANCE: a brisk woman in her fifties with grey-streaked black hair in a bun, cat-eye glasses, a green cardigan and a telephone headset.
 
-A cramped dispatch office above a bagel shop on a rainy night. Dolores, phone in hand, crumples a yellow job slip in a fist. The player, seen from behind in the silver helmet and mustard-yellow windbreaker, walks out of the door into the rain. Alone with Dolores (no other couriers shown).
+A cramped dispatch office above a bagel shop on a rainy night. Dolores, phone in one hand, calmly crosses a name off a flat yellow job slip on her desk with a pen in the other. Her expression is tired and matter-of-fact, with a faint kind smile; no anger or crumpled paper. The player, seen from behind in the silver helmet and mustard-yellow windbreaker, walks out of the door into the rain. Alone with Dolores (no other couriers shown).
 ```
 
 ## E02

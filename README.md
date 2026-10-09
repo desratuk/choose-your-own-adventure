@@ -8,9 +8,9 @@ A web engine for illustrated choose-your-own-adventure stories, with swappable s
 
 A *Back to the Future* adventure. At 10:04 PM every clock in Hill Valley stops and the whole town freezes. Only you and Doc Brown can still move, and you have a few hours and three eras (1885, 1985 and 2085) to find out who did it.
 
-- **52 illustrated pages** with **11 endings**, each clearly labelled good or bad.
+- **51 illustrated pages** with **11 endings**, each clearly labelled good or bad.
 - **A story you never need to have seen the films to follow.**
-- **A coherent story on every path:** a checker plays all ~146,000 possible playthroughs before every build.
+- **Every reachable page and state checked across all difficulties** before every build, alongside a separate narrative continuity review after story changes.
 - **A reader styled on the DeLorean's time-circuit display,** with a different look for each era and a time-travel animation.
 - **A visible countdown.** Detours and mistakes cost time.
 - **Three difficulty levels** that set how much time you start with and how many choices you can undo (Easy: unlimited, Medium: 2, Hard: none).
@@ -22,7 +22,7 @@ A *Back to the Future* adventure. At 10:04 PM every clock in Hill Valley stops a
 
 A *Goonies* adventure. It's Halloween in Astoria, Oregon, and the Fratellis have escaped from custody. The key sewn into your thrift-shop overcoat opens something they want badly, and you have a few hours and the tide to work out where it belongs.
 
-- **45 pages** with **11 endings** (7 bad, 4 good, one best), each clearly labelled.
+- **45 pages** with **11 endings** (6 bad, 5 good, one best), each clearly labelled.
 - **No need to have seen the film.**
 - **A visible head start on the Fratellis,** spent by detours and wrong turns. A tide table, a bonfire poster and a radio bulletin hold the clues.
 - **A VHS tracking-glitch transition** between the Goon Docks, downtown, the tunnels and the waterfront.
@@ -31,11 +31,11 @@ A *Goonies* adventure. It's Halloween in Astoria, Oregon, and the Fratellis have
 
 ### Return to Sender
 
-A *Ghostbusters* adventure. You're a bicycle courier with one last job on a rainy Friday night: a brass pneumatic-mail canister that has been haunting a stamp shop, addressed to the Ghostbusters' firehouse. The Ghostbusters are out, and the ghosts aren't. The canister draws ghosts into the firehouse's containment grid, and the grid can only hold so much.
+A *Ghostbusters* adventure. You're a bicycle courier with one last job on a rainy Friday night: a brass pneumatic-mail canister that has been haunting a stamp shop, addressed to the Ghostbusters' firehouse. Its movement wakes an old postal network, and twelve ghosts already in the containment grid are straining to answer. You can complete your commission or investigate who still needs the undelivered notice.
 
-- **42 pages** with **11 endings** (7 bad, 4 good, one best), each clearly labelled.
+- **46 pages** with **10 endings** (3 bad, 7 good, one best), each clearly labelled.
 - **No need to have seen the film.**
-- **A visible grid-load meter** that rises as detours and mistakes pile ghosts onto the grid. A stamp-shop map, a brass plate and a hotel plaque hold the clues.
+- **A visible grid-load meter** that rises as delay and dispatch mistakes increase strain from the twelve captive clerks. A stamp-shop map, a brass plate and a hotel plaque hold the clues.
 - **A slime transition** between Lower Manhattan, the firehouse, Park Row and the tunnels.
 
 > Unofficial, non-commercial fan project. It is not affiliated with or endorsed by the owners of *Ghostbusters*. See [Licence](#licence).

@@ -22,14 +22,15 @@ const past = ['S20', 'S21', 'S23', 'S26'];
 const investigation = ['S30', 'S30k', 'S31', 'S33', 'S38'];
 const finish = ['S40', 'S41', 'S42', 'S44', 'S45'];
 
-test('rewritten adventures mark their in-progress saves as revision 2', () => {
-  for (const story of stories) assert.equal(story.revision, 2, story.id);
+test('rewritten adventures mark their in-progress saves as revision 3', () => {
+  for (const story of stories) assert.equal(story.revision, 3, story.id);
 });
 
 test('BTTF: the full investigation earns the best ending in either era order', () => {
   for (const route of [[...past, ...investigation], [...investigation, ...past]]) {
     const result = walk(future, [...opening, ...route, ...finish, 'E10']);
     assert.equal(result.page.ending?.best, true);
+    assert.equal(result.state.rexExposed, true);
     assert.equal(result.state.rexCaught, true);
     assert.equal(result.state.minutes, 35);
   }
@@ -53,20 +54,38 @@ test('BTTF: the wheel mistake is repaired in 1885, before either departure order
   const hard = walk(future, [...opening, ...repair, ...investigation, ...finish, 'E11'], 'hard');
   assert.equal(hard.state.minutes, 5);
   assert.equal(hard.page.ending?.best, undefined);
+  assert.equal(hard.state.rexExposed, true);
+  assert.equal(hard.state.rexCaught, true);
+  assert.match(hard.text, /officers take him away/);
+  assert.doesNotMatch(hard.text, /Rex escaped|Rex Tannen is still out there/);
 });
 
 test('BTTF: asking the Authority without opening the broadcast does not arrest Rex', () => {
   const result = walk(future, [...opening, ...past, ...investigation, 'S40', 'S41', 'S42', 'S43', 'E09']);
   assert.equal(result.state.authorityAlerted, true);
+  assert.equal(result.state.rexExposed, false);
   assert.equal(result.state.rexCaught, false);
   assert.match(result.text, /Rex Tannen is still out there/);
+  assert.doesNotMatch(result.text, /his customers heard/);
 });
 
 test('BTTF: a broadcast without the Authority exposes Rex but cannot earn an arrest', () => {
   const result = walk(future, [...opening, ...past, 'S30', 'S31', 'S32', 'S35', 'S40', 'S41', 'S42', 'S44', 'E09']);
   assert.equal(result.state.authorityAlerted, false);
+  assert.equal(result.state.rexExposed, true);
   assert.equal(result.state.rexCaught, false);
   assert.equal(result.page.ending?.best, undefined);
+  assert.match(result.text, /his customers heard/);
+});
+
+test('BTTF: a late public exposure is acknowledged without inventing an arrest', () => {
+  const repair = ['S20', 'S21', 'S23', 'S25', 'S26b', 'S26'];
+  const result = walk(future, [...opening, ...repair, 'S30', 'S31', 'S32', 'S35', 'S40', 'S41', 'S42', 'S44', 'E11'], 'hard');
+  assert.equal(result.state.minutes, 15);
+  assert.equal(result.state.rexExposed, true);
+  assert.equal(result.state.rexCaught, false);
+  assert.match(result.text, /his customers heard/);
+  assert.doesNotMatch(result.text, /officers take him away/);
 });
 
 test('BTTF: missed museum knowledge cannot unlock the live-interview plan', () => {

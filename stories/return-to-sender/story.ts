@@ -21,7 +21,7 @@ const raw: Page[] = [
       "Fourteen North Moore is the Ghostbusters’ firehouse. They’re the people New York calls when something walks through a wall that ought to have used a door. Four people, a lot of electrical equipment, and a receptionist who knows your invoice numbers by heart.",
       "“Janine says it’s a sealed brass parcel,” Dolores continues. “Their scientist checked it at Pell’s this afternoon. Cold to the touch, safe to carry. Don’t open it. Don’t stick it in a sorting machine. Get a signature.”",
       "That last part is your job. Plenty of adults think a courier is a pair of legs with a bag. You know how much can go wrong in the distance between an address and the person who actually needs what you’re carrying.",
-      "Dolores puts a yellow slip beside the radio. Rain makes little clicking sounds on your dented silver helmet. One more job would buy a new rear brake cable."
+      "Dolores puts a yellow slip beside the radio. Rain clicks on your dented silver helmet. One more job would buy a new rear brake cable. You picture the signature, the ride home, the moment you can finally peel your socks off. Your hand is already on the slip."
     ],
     "choices": [
       {
@@ -78,11 +78,12 @@ const raw: Page[] = [
     "text": [
       "Twenty yards along Staple Street, three grey figures step out of a warehouse wall. They wear sleeve garters, green eyeshades and leather satchels. Their shoes stop an inch above the wet cobbles.",
       "The foremost clerk gestures at your bag. You lift your delivery slip. He looks at the empty signature box, pats every pocket, and turns helplessly to his colleagues. None has a pen that stays solid.",
-      "Nobody attacks. Nobody disappears. But all three begin tapping their heels in precisely the same rhythm. Inside your bag the brass carrier answers, and the dial climbs to {{clock}}.",
+      "All three begin tapping their heels in precisely the same rhythm. Inside your bag the brass carrier answers. The pay phone rings in its empty booth. The dial climbs to {{clock}}; the ringing stops before you reach it.",
       "You wheel the bike to the pay phone on the corner and call the firehouse. Janine Melnitz answers before the second ring. When you describe the tapping, she stops chewing.",
-      "“Twelve postal ghosts came in from separate jobs this week,” she says. “They’ve just started doing that inside our containment grid. That’s the electrical vault downstairs. Egon thought we had one haunted object. Apparently we have a conversation.”",
-      "She phones Egon at his current job and calls the booth back. The twelve captives are answering a call from the disturbed tube network; their repeated attempts to return to work are straining the grid. The dial only reports it. Taking it off won’t stop the call.",
-      "“The delivery offer stands,” Janine says. “I can take responsibility for it here. If you find an address or a name on your way, write it down. We need facts more than we need another full box.”"
+      "“Twelve postal ghosts came in from separate jobs this week,” she says. “They’ve just started doing that inside our containment grid. That’s the electrical vault downstairs. One of them wound a stopped pocket watch through three intake interviews. Eleven-twenty, every time.”",
+      "Janine phones Egon at his current job and calls the booth back. The disturbed tube network is calling the twelve captives to work. Their attempts to leave are straining the grid; the dial only reports the strain. “Egon thought we had one haunted object,” she says. “Apparently we have a conversation.”",
+      "“One equipment rule for your notes,” Janine adds. “A controlled release needs ten points of spare capacity. That means ninety percent load or less when we open the hatch. At a hundred, the protective breakers cut out. And keep checking the dial: getting here uses time too.” You write 90 beside her number before the rain can wash the ink away.",
+      "“The delivery offer stands,” Janine says. “I can take responsibility for it here. If you find an address or a name on your way, write it down. We need facts more than we need another full box.” When you hang up, the three clerks have drifted off into the rain."
     ],
     "choices": [
       {
@@ -105,7 +106,7 @@ const raw: Page[] = [
     ],
     "imagePrompt": "A rainy Tribeca street corner at night under the awning of a shuttered dry cleaner. The player, seen from behind in the silver helmet and mustard-yellow windbreaker with the messenger bag, stands with a bicycle and looks out at the wet street, where a sodium streetlamp glows orange. Alone, nobody else is here.",
     "text": [
-      "Under the dry cleaner’s awning on Staple Street, you check the parcel straps. The three clerks have drifted away into the rain. Your bike’s rear wheel ticks as it cools.",
+      "Under the dry cleaner’s awning on Staple Street, you check the parcel straps and shake rain from your sleeves. Your bicycle leans against the window beside a sign promising SAME-DAY SERVICE.",
       "The original address is still North Moore Street. But ST. 9 could also be an old postal station, and the fire crews keep records of buildings the city has forgotten. Across the street, the Blue Plate Diner has a late-shift mail carrier’s cap hanging above the counter. Pell’s pipe offers a more direct, less comfortable lead.",
       {
         "if": {
@@ -253,7 +254,7 @@ const raw: Page[] = [
       "“Not one of ours,” says Lieutenant Gallo. “But if there’s a brass pipe involved, we’ll have a drawing. We have drawings of pipes that were removed before my grandfather was born.”",
       "He brings out the fire-inspection plans. Station Nine’s surviving tube chamber is under the Sedgewick on Park Row. An old closure date is written beside it: November 1898. On a recent inspection, someone has added BELL SOUNDS 11:20 P.M.; NO LIVE AIR SUPPLY FOUND.",
       "Gallo puts your finger on a small latch beside the chamber’s wheel. “Couriers know loading doors, right? This works the same way. Take the weight off the catch before you turn it. Don’t wrench a hundred-year-old fitting.” You sketch it.",
-      "The trip and the search bring the dial to {{clock}}, but you leave with a current plan, an entrance instruction and a time somebody actually heard. Gallo holds the door while you turn the bike. “Tell the other firehouse we’d like our city back before breakfast.”"
+      "Gallo stamps the copy with his inspection reference and marks the hotel’s authorised cellar route. “Show the manager this. Saves him arguing with a hundred years of building plans.” The trip and search bring the dial to {{clock}}. Gallo holds the door while you turn the bike. “Tell the other firehouse we’d like our city back before breakfast.”"
     ],
     "choices": [
       {
@@ -322,7 +323,7 @@ const raw: Page[] = [
       "At the diner counter, Hollis rubs the soot with a corner of his napkin. Underneath appears CLOSURE — NOTICE TO ALL STAFF. He stops before the paper seal softens. Whatever is inside has stayed shut since 1898.",
       "“The hotel uses a service stair beside its old coal chute,” Hollis says. “I delivered there until last spring. Street hatch sticks, but the stair is sound.” He turns the napkin over and draws the Ann Street entrance. “Lift before you pull. Ring the kitchen bell when you’ve opened it so they know someone’s below.”",
       "You draw a small square beside his sketch: the courier’s mark for a checked entrance. Hollis watches you do it and nods.",
-      "The ghost by the pie case has gone back to staring at the empty stool. You leave it empty. For once, you don’t hurry somebody out of the way to pick up your bag.",
+      "The ghost by the pie case has gone back to staring at the empty stool. Your bag is beneath it. You wait until the ghost looks away, then reach down slowly for the strap.",
       "Outside, your saddle is wet again. You wipe it with your sleeve and fold the napkin inside your job book. There is now a way into the building that won’t involve explaining an antique postal emergency over the lobby carpet."
     ],
     "choices": [
@@ -351,9 +352,9 @@ const raw: Page[] = [
       "You lock your bike outside fourteen North Moore and enter a warm office smelling of printer ribbon and noodles. Janine Melnitz, red-haired and wearing enormous glasses, holds out her hand for the job slip. A round green ghost floats behind her with a hot dog.",
       "“Slimer,” Janine says. “Lives here. Eats here. Makes no financial contribution.” Slimer gives you a friendly, mustard-coloured wave.",
       "Janine compares your receiver with the panel behind her desk. Both read {{clock}}. “Good. The instrument works. Less good: the twelve downstairs still think they’re on duty.” She shows you their intake photographs: grey vests, eyeshades, each caught separately while disturbing an occupied building.",
-      "The team’s original test found a cold object and one clerk. The network only began calling the captives when the parcel left Pell’s pipe. Janine has cleared the neighbouring basement and arranged backup power. Nobody has mistaken the new readings for business as usual.",
+      "The team’s original test found a cold object and one clerk. The network began calling the captives when the parcel left Pell’s pipe. Janine has cleared the neighbouring basement; a reserve generator rattles in the yard. She puts down a telephone receiver, and it rings again before her hand leaves it.",
       "“I can sign for this,” she says. “We’ll keep the carrier shielded and contain the wandering clerks until we understand it. Your job will be done. Or I can give you equipment and a contact number if you want to trace the address. Egon says a delivered notice may settle this with fewer prisoners.”",
-      "She slides the slip back so you can read it. Hazard pay is already entered. Anything you choose beyond the original delivery is your decision."
+      "She slides the slip back. Hazard pay is already entered. “I put that in before our invoice expert, Dr. Venkman, saw it,” she says. “You’re welcome.”"
     ],
     "choices": [
       {
@@ -397,10 +398,10 @@ const raw: Page[] = [
     "text": [
       "Janine takes you into the firehouse engine bay and lifts a flat grey box from the equipment shelf. It has two hinged doors and a pedal on a cord. Slimer edges away from it, holding his hot dog with both hands.",
       "“Winston’s spare trap,” Janine says. “He authorised the loan. Lay it flat, get living feet clear, then press once. It catches the ghosts in the light and shuts. One batch. After that, leave it shut and bring it back.”",
-      "She demonstrates the pedal with the power disconnected, then makes you repeat the steps. A trap confines ghosts locally. It neither empties itself into the grid nor releases anybody’s obligations. Its cargo comes home with you.",
+      "She demonstrates the pedal with the power disconnected, then makes you repeat the steps. The closed trap keeps its ghosts inside; its cargo comes home with you.",
       "“It can clear a crowded passage,” she says. “Or keep the next gathering from becoming a panic. If you spend it early, you won’t have it later.”",
-      "On the intake desk you notice a discharge form. Janine explains that the grid’s service hatch can separate a named group for supervised release, but needs ten points of spare capacity to do it. Below that they can hold prisoners safely; they can’t open a controlled exit. Names matter because there are other ghosts in the vault.",
-      "You strap the closed trap behind your bag. Slimer is still watching the shelf where it stood."
+      "On the intake desk you notice a discharge form, with a line for each ghost’s name. “The service hatch can separate a group from the grid,” Janine says. “Provided we know who belongs in it. We have other tenants downstairs.”",
+      "You strap the closed trap behind your bag. Slimer puts his hot dog on the shelf where it stood, considers this, and takes it back."
     ],
     "choices": [
       {
@@ -437,9 +438,9 @@ const raw: Page[] = [
       "You sit. For a while the only noise is the basement machinery.",
       "When a thin tapping travels up through the floor, Slimer taps back against the chair leg. Three beats. A pause. Three beats. Downstairs, the rhythm changes.",
       "“He’s been doing that since the postal ghosts arrived,” Janine says quietly. “We thought he wanted their lunch.”",
-      "You take out your delivery slip and show Slimer the space for a signature. He pats the empty chair. Then he points down through the floor and pats it again. He is not asking you to take him somewhere. He is showing you somebody who is missing.",
+      "You take out your delivery slip and show Slimer the space for a signature. He pats the empty chair. Then he points down through the floor and pats it again. You start to say that nobody is sitting there. Slimer waits.",
       "You draw twelve little boxes in your notebook. Slimer touches one with the very tip of a finger, carefully avoiding the paper. For once he doesn’t lick anything.",
-      "The pause costs time; the dial is now {{clock}}. But when you stand, Slimer remains beside the empty chair, tapping an answer to the people below. You know someone is listening even while they’re out of sight."
+      "The dial is now {{clock}}. When you stand, Slimer stays beside the empty chair, tapping an answer to the people below. You put your notebook away without closing the twelve boxes."
     ],
     "choices": [
       {
@@ -472,9 +473,9 @@ const raw: Page[] = [
     "imagePrompt": "Firehouse front office late on a rainy night. Player sits at a wooden bench with towel round shoulders, writing on a job slip; bag closed at their feet, no external equipment visible. Janine works the desk telephone and reads notes. Slimer sits beside an empty chair holding a carton of noodles. Calm purposeful work; no ghost capture, no newspaper swatting.",
     "text": [
       "At the firehouse, Janine settles you at a bench with a towel and a carton of noodles. Your bicycle stays locked outside. Slimer occupies the next chair, keeping his food away from your notebook.",
-      "You don’t just sit watching the needle. Janine calls the team with every address you have found. You check Pell’s collection time against the first surge and write the sequence in order. The earlier account becomes clearer: the trapped clerks answered the carrier before any new ghost reached it.",
+      "You don’t just sit watching the needle. Janine calls the team with everything you have found. You check Pell’s collection time against the first surge and write the sequence in order. The earlier account becomes clearer: the trapped clerks answered the carrier before any new ghost reached it.",
       "Janine switches the grid onto its reserve cooling circuit. It slows the rise; it cannot stop people trying to get back to a job they think is unfinished. During the wait the dial reaches {{clock}}.",
-      "At ten fifty-five, the garage door rolls up. Four wet people come in carrying heavy grey packs. One has a sandwich protected under his collar. Another is trying to keep a notebook dry and failing.",
+      "At ten twenty-five, the garage door rolls up. Four wet people come in carrying heavy grey packs. One has a sandwich protected under his collar. Another is trying to keep a notebook dry and failing.",
       "Janine hands your page to the man with round glasses. “Here’s the part we didn’t know,” she says. “And here’s the person who saw it happen.”"
     ],
     "choices": [
@@ -483,7 +484,7 @@ const raw: Page[] = [
         "to": "F05"
       }
     ],
-    "time": "FRI NOV 15 · 10:55 PM",
+    "time": "FRI NOV 15 · 10:25 PM",
     "onEnter": {
       "add": {
         "margin": -5
@@ -506,11 +507,11 @@ const raw: Page[] = [
     "imagePrompt": "The firehouse engine bay at night. Four wet people in khaki jumpsuits with heavy grey backpacks come in through the big garage door: Peter, sardonic, tries to pull a squelching shoe off; Ray, big and cheerful, holds a half-eaten sandwich and peers at a brass canister; Egon, tall and thin with round glasses, reads the dial on a tag; Winston drops into a chair. Janine stands beside them. The player, seen from behind in the silver helmet and mustard-yellow windbreaker, holds the canister.",
     "text": [
       "In the engine bay, Janine introduces Peter Venkman, who has the wet shoe; Ray Stantz, who rescued the sandwich; Egon Spengler, who reads your notes twice; and Winston Zeddemore, who immediately finds you a dry chair.",
-      "Their packs make controlled energy beams that hold a ghost while a floor trap catches it. The packs are off. Egon wants a diagnosis before anyone points anything.",
-      "“My first test was incomplete,” he says. “I measured the carrier at rest. Moving it woke the route. You couldn’t have known that from my instructions.” He places your account beside the instrument readings. “Now we do.”",
-      "Ray has brought a building survey from the job van. It puts Station Nine beneath the Sedgewick. Egon gently cleans the remaining soot off the seal: a staff closure notice, dated eighty-seven years ago. Hotel maintenance confirms a nightly bell at eleven-twenty.",
+      "Their packs make controlled energy beams that hold a ghost while a floor trap catches it. Peter lowers his onto the bench with a thud. “I’d like to report a haunting in my left shoe.” Egon moves it off your notes without looking up.",
+      "“My first test was incomplete,” Egon says. “I measured the carrier at rest. Moving it woke the route. That wasn’t in your instructions.” He places your account beside the readings, finds the same surge on both pages and draws a line between them.",
+      "Ray unrolls a building survey from the job van. “An entire dispatch station under a hotel. They built right over it.” It puts Station Nine beneath the Sedgewick. While he phones maintenance about its eleven-twenty bell, Egon cleans the remaining soot off the seal: a staff closure notice, dated eighty-seven years ago.",
       "There are two workable plans. The team can isolate the carrier and collect the remaining wandering clerks in separate traps. That should make the borough safe tonight, but leave the staff captive while a release is researched. Or you can take the notice to its intended desk, with the team controlling the equipment.",
-      "“You know the route and the delivery paperwork,” Winston says. “We know the dangerous machinery. If we go, we each do our own job.”"
+      "“We can take the equipment,” Winston says to you. “Can you get us to the desk?” Peter raises a finger. “And through the lobby without buying them another chandelier?”"
     ],
     "choices": [
       {
@@ -522,7 +523,7 @@ const raw: Page[] = [
         "to": "F06"
       }
     ],
-    "time": "FRI NOV 15 · 11:00 PM",
+    "time": "FRI NOV 15 · 10:30 PM",
     "onEnter": {
       "set": {
         "knowsSite": true
@@ -544,10 +545,10 @@ const raw: Page[] = [
     ],
     "imagePrompt": "The grand marble lobby of an old hotel at night. A small neat night manager in a black suit stands with his arms folded in front of the Ghostbusters in khaki jumpsuits and backpacks, while a skinny bellhop in a maroon uniform waves them toward a staff door. The player, seen from behind in the silver helmet and mustard-yellow windbreaker with the messenger bag, follows. Wet footprints on the marble.",
     "text": [
-      "You spread your route notes over the firehouse desk. No time for a ceremonial convoy: the hotel’s goods entrance faces Ann Street, and its lobby staff need to know why five wet people are coming downstairs.",
+      "At quarter to eleven, you spread your route notes over the firehouse desk. No time for a ceremonial convoy: the hotel’s goods entrance faces Ann Street, and its lobby staff need to know why five wet people are coming downstairs.",
       "Janine calls ahead while you ride with the team through the rain. Your bicycle stays locked at the firehouse. The receiver reaches {{clock}} on the journey. Winston checks the one spare trap assigned to you: a flat grey box with hinged doors and a pedal on a cord. He shows you how to lay it clear of living feet and press once. It catches one group, shuts, and must then stay shut until it is docked safely at the firehouse.",
-      "At the Sedgewick, Mr. Voss, the small night manager in the immaculate black suit, has his incident book ready. Peter begins a speech. You give Voss the collection address, the historical destination and the name of the person who called ahead.",
-      "Voss draws a line in his book. “No beams in the lobby.”",
+      "By eleven, you are at the Sedgewick. Mr. Voss, the small night manager in the immaculate black suit, has his incident book ready. Peter begins a speech. You give Voss the collection address, the historical destination and the name of the person who called ahead.",
+      "Voss draws a line in his book. “No beams in the lobby.” “I was going to say good evening,” Peter tells him. “That was the beginning of it last time,” says Voss.",
       "“Agreed,” says Winston, before Peter can improve the arrangement.",
       "Ernie, a skinny bellhop in maroon, leads everyone down the back stairs. The team has brought the equipment. You still carry the parcel. At the bottom, Egon checks the reading against his own instrument and asks you to keep the final delivery slip dry."
     ],
@@ -557,7 +558,7 @@ const raw: Page[] = [
         "to": "C01"
       }
     ],
-    "time": "FRI NOV 15 · 11:15 PM",
+    "time": "FRI NOV 15 · 10:45 PM",
     "onEnter": {
       "set": {
         "team": true,
@@ -631,6 +632,14 @@ const raw: Page[] = [
       {
         "text": "Present the address and ask for cellar access",
         "to": "H02"
+      },
+      {
+        "text": "Show Voss the inspection plan and request its marked route",
+        "to": "H03",
+        "if": {
+          "flag": "visitedEngine",
+          "is": true
+        }
       }
     ]
   },
@@ -648,7 +657,7 @@ const raw: Page[] = [
       "A grey clerk rises through the floor behind him. The clerk tries to remove his eyeshade politely, loses his grip, and leaves it on the marble. When Voss turns, the ghost has sunk out of sight again. The eyeshade remains.",
       "Voss stares at it. The receiver reaches {{clock}} while you explain that the old tube room still exists beneath his building.",
       "“The Ghostbusters took my ballroom apart last year,” he says. “If they’re involved, I need a name and a telephone number. And someone from my staff goes down with you.”",
-      "You have Janine’s number on the delivery slip. You also have an opening: Voss is so busy looking at the eyeshade that the stair door is unguarded. A call takes time, but a manager who knows where you went might be useful when you need to come back."
+      "You have Janine’s number on the delivery slip. Voss reaches for the telephone. As he bends over the desk, his elbow holds the staff door open; beyond it, a bare stair runs down toward the tapping."
     ],
     "choices": [
       {
@@ -676,7 +685,7 @@ const raw: Page[] = [
     ],
     "imagePrompt": "A narrow back staircase in an old hotel, with bare bulbs and peeling green paint. A skinny young bellhop in a maroon uniform leads the way down with a flashlight and looks back over his shoulder at the player, who is seen from behind in the silver helmet and mustard-yellow windbreaker with the humming messenger bag.",
     "text": [
-      "After Voss checks the call, Ernie opens the staff door for you. “Eleven-twenty,” the bellhop says on the stairs. “That’s when the bell goes. Every night. I thought it was a timer nobody could find.”",
+      "Voss checks your paperwork and Janine’s number, then marks the cellar route in his incident book. Ernie opens the staff door. “Eleven-twenty,” the bellhop says on the stairs. “That’s when the bell goes. Every night. I thought it was a timer nobody could find.”",
       "You follow his flashlight down two flights. The carpets disappear first, then the plaster. By the bottom landing the hotel has become old brick and pipes.",
       "Ernie points along a corridor and keeps the flashlight trained on the floor while you step over a loose cable. He is frightened, but he doesn’t hurry you. “If anything happens, this door stays open,” he says.",
       "You show him the return number on your slip. It is a small thing to do. He looks relieved to have something ordinary to write down.",
@@ -935,7 +944,7 @@ const raw: Page[] = [
             }
           ]
         },
-        "text": "The trap’s doors close around the six clerks. You secure the full box, pass the fallen support and climb the ladder beyond. A hatch opens into the Sedgewick’s laundry corridor. Your bicycle remains in Pell’s back room."
+        "text": "You lay the trap on the passage floor, clear your feet and press the pedal. White-blue light flares between the six clerks; their satchels flap as they stream into it, and the doors snap shut. You secure the full box, pass the fallen support and climb the ladder beyond. A hatch opens into the Sedgewick’s laundry corridor. Your bicycle remains in Pell’s back room."
       },
       {
         "if": {
@@ -962,7 +971,14 @@ const raw: Page[] = [
         "text": "Ernie returns upstairs from the cellar landing. The four Ghostbusters follow you along the Sedgewick’s brick corridor, their equipment silent."
       },
       "Boiler lamps pick out a round-topped bronze door. STA. 9 — TUBE ROOM, say the green letters above it. The wheel resists your first touch.",
-      "You look before pulling harder. It’s a loading-door catch: the little lever beside the wheel carries the door’s weight. You brace the bag, lift the lever and turn. An old fitting moves without breaking.",
+      {
+        "if": {
+          "flag": "visitedEngine",
+          "is": true
+        },
+        "text": "You unfold Gallo’s sketch against the brick. There is the little lever, almost hidden by a pipe bracket. You lift it before turning the wheel; the weight comes off the catch exactly as he said it would.",
+        "else": "You look before pulling harder. It’s a loading-door catch: the little lever beside the wheel carries the door’s weight. You brace the bag, lift the lever and turn. The door moves."
+      },
       "A colder draught comes through the opening. You push the door onto its stop, leaving your return route clear."
     ],
     "choices": [
@@ -983,8 +999,8 @@ const raw: Page[] = [
     "imagePrompt": "A cold vaulted round brick chamber like a church apse, lit by a thin grey light from a street grating high in the ceiling. Two banks of brass tubes come out of the wall: the left bank stenciled UP in worn white letters with a small brass bell on a bracket above it, the right bank stenciled DOWN. A big round wall clock with no hands hangs on the far wall. The player, seen from behind in the silver helmet and mustard-yellow windbreaker with the messenger bag, stands in the open bronze doorway.",
     "text": [
       "Station Nine is a round brick chamber under the hotel. Grey street light comes through a high grating. On the left is a narrow brass mouth marked UP, with a wire receipt tray beneath it. On the right, DOWN widens into a flared opening. A wall clock has lost its hands.",
-      "Beside the tubes, a simple routing diagram shows the left bank ending at the clerk’s desk. The right joins a ring of pipe and comes around again. Air is already moving through the right-hand mouth; the left is still.",
-      "The soot has loosened from the carrier during the journey. You can now read the whole seal: CLOSURE — NOTICE TO ALL STAFF, 15 NOV 1898. This is what the waiting people have never been told. Receiving it may end the work that holds them here. Capturing them would stop the disturbance without delivering that release.",
+      "Beside the tubes, a simple routing diagram shows the left bank ending at the clerk’s desk. The right joins a ring of pipe and comes around again. Air is already moving through the right-hand mouth; the left is still. Near the doorway, a pressure-control handwheel shivers on a connecting pipe.",
+      "The soot has loosened from the carrier during the journey. You can now read the whole seal: CLOSURE — NOTICE TO ALL STAFF, 15 NOV 1898. Beneath it, your thumb rests on an unbroken strip of paper. This is what the waiting people have never been told.",
       "The small bell hasn’t rung. On the desk lies an attendance book, its pages lifting in the draught. You keep the original closed; a courier can inspect an address without opening somebody else’s letter.",
       {
         "if": {
@@ -1000,7 +1016,23 @@ const raw: Page[] = [
         },
         "text": "Six of the clerks are in the box on your strap. It is already full for this journey."
       },
-      "A few early arrivals are beginning to gather in the doorway. You can hold the wheel to keep the carrier’s hum steady, or use an empty trap to stop their restless circling."
+      "A few early arrivals are beginning to gather in the doorway, circling whenever the handwheel rattles and the carrier’s hum rises.",
+      {
+        "if": {
+          "not": {
+            "flag": "team",
+            "is": true
+          }
+        },
+        "text": "You rest a hand on the pressure wheel. Holding it steady quiets the hum."
+      },
+      {
+        "if": {
+          "flag": "trap",
+          "is": "empty"
+        },
+        "text": "The empty trap on your strap could stop the clerks’ circling."
+      }
     ],
     "choices": [
       {
@@ -1057,7 +1089,7 @@ const raw: Page[] = [
           "flag": "trap",
           "is": "watch"
         },
-        "text": "Your trap has shut around the three early arrivals. You set the full box beside your bag. Tull looks at it for a long moment, then opens his attendance book."
+        "text": "You set the trap across the three early arrivals’ path, clear your feet and press the pedal. Light fans up the brickwork; the clerks whirl into the box with a flutter of coat-tails. Its doors clap shut. You set the full box beside your bag. Tull looks at it for a long moment, then opens his attendance book."
       },
       {
         "if": {
@@ -1088,11 +1120,11 @@ const raw: Page[] = [
       "Forty-seven names fill the last shift’s page. Twelve have been missing from the streets for days. You tell Tull where they are: the firehouse grid. He puts his hand flat on the page.",
       "“I sent them to find the mail,” he says. “I thought they might have gone home without us. I rather hoped they had.”",
       "You explain what a trap does. It can confine the remaining staff and quiet the machinery, but it cannot tell them their shift is over. Tull nods. “I understand why the hotel would prefer that. We’ve been a considerable inconvenience.”",
-      "He begins assembling the staff for the bell. The book is still open. You have enough time to compare the names with the faces in the room, though the receiver will keep climbing while you do it."
+      "Tull calls the clerks toward the desk. A page of names lifts in the draught and falls back onto the attendance book. He catches it with his palm before it turns; the receiver clicks against your bag."
     ],
     "choices": [
       {
-        "text": "Check every name, including the absent staff",
+        "text": "Work through the attendance book with Tull",
         "to": "C11"
       },
       {
@@ -1112,7 +1144,7 @@ const raw: Page[] = [
     "imagePrompt": "Cold brick Station Nine desk at night. Close over the player's helmeted shoulder: Tull guides a pencil supported by the player's hand across a ruled courier sheet beside the old attendance ledger. Paper marks are not legible. Only player and Tull visible. Omit optional trap, team and background crowd.",
     "text": [
       "At Tull’s desk, you turn your delivery slip over and rule three columns: here, firehouse, carried. A courier’s round sheet usually counts envelopes. Tonight it counts people.",
-      "Tull reads all forty-seven names. You ask him to spell the ones you can’t catch. He stops apologising for the length of the job when he sees that you aren’t skipping anyone.",
+      "Tull reads all forty-seven names. Your pencil runs ahead of him at first. Then he says “Edwin Vale” and you lose your place. “The pocket watch,” Tull adds. “He sets it by the station clock. Is he still doing that?” You remember the clerk Janine described and ask Tull to spell the surname. This time, you wait for every letter.",
       {
         "if": {
           "flag": "trap",
@@ -1199,7 +1231,7 @@ const raw: Page[] = [
           "flag": "team",
           "is": true
         },
-        "text": "Behind you, the team holds position. Nobody reaches for your parcel or tells you which pipe to use. Winston watches the machinery, ready to contain a failure."
+        "text": "Behind you, Winston braces a trembling pipe joint. Egon holds the pressure steady while Ray keeps a spring from jumping out of its housing. Peter has both hands on the wheel. “Whenever you’re ready,” he says, a little higher than usual."
       },
       "You put one hand under the carrier’s felt ring and keep the other on your delivery book. Getting an object out of your bag and into the right hands has never felt less like the same thing."
     ],
@@ -1277,7 +1309,7 @@ const raw: Page[] = [
       "You lift the carrier into the narrow left-hand tube. For a moment there is no suction at all. Then the felt rings catch a rising breath of air and the brass slides out of your hands.",
       "Something thumps above the desk. The bell rings twice. A flap drops open and the carrier rolls into the wire receipt tray.",
       "Tull checks the station number against his book before lifting it out. You recognise the gesture: an address checked even when everyone in the room knows what it says.",
-      "The shift leans forward. Downstairs at the firehouse, the absent clerks feel the dispatch arrive and try once more to get to their desk. The receiver reaches {{clock}}. No one here is being captured; distance is the problem.",
+      "The shift leans forward. Downstairs at the firehouse, the absent clerks feel the dispatch arrive and try once more to get to their desk. The receiver reaches {{clock}}; its glass cover trembles on the carrier in Tull’s hands.",
       "“Received at the counter,” Tull says. “Not yet acknowledged by staff.” His fingers rest on the seal. You place your job book beside the tray so he has a flat surface when he is ready to sign."
     ],
     "choices": [
@@ -1314,7 +1346,7 @@ const raw: Page[] = [
         },
         "text": "Ray takes out a handkerchief without pretending he needs to polish anything. Egon watches the receiver; the strain has eased, but the twelve in the grid are still there."
       },
-      "At the bottom of the notice is the station’s acknowledgement. Tull has signed his own name. Your countersignature will close the original delivery. Until then, he can keep the receipt open.",
+      "At the bottom of the notice is the station’s acknowledgement. Tull has signed his own name. Below it is a blank line marked COURIER. He smooths a crease in his shirtsleeve. The station clock keeps ticking.",
       "You set your pen against the paper. On the other side of your job book is everything you chose to write down tonight."
     ],
     "choices": [
@@ -1337,7 +1369,7 @@ const raw: Page[] = [
         }
       },
       {
-        "text": "Keep the receipt open; take named copies to the staff who are elsewhere",
+        "text": "Leave the receipt open and return to the firehouse",
         "to": "C08"
       }
     ]
@@ -1353,7 +1385,7 @@ const raw: Page[] = [
     ],
     "imagePrompt": "Warm firehouse reception late on rainy November night. Player spreads original folded notice, job slips and brass canister on Janine's desk. Janine compares sheets under her lamp. Only player and Janine visible; no trap, no ghosts, no optional companions. Old wall telephone and paperwork, no new magical device.",
     "text": [
-      "You leave your countersignature blank beneath Tull’s name. He stays at his desk while you pack the original notice into its carrier and take responsibility for getting the remaining copies served.",
+      "You leave your countersignature blank beneath Tull’s name. He stays at his desk while you pack the original notice into its carrier and promise to find a way for the absent staff to hear it.",
       {
         "if": {
           "flag": "team",
@@ -1443,7 +1475,7 @@ const raw: Page[] = [
         },
         "text": "The copied procedure and Tull’s verified roll agree. Janine dates and certifies a separate notice for each missing employee. The grid has the ten points of capacity Egon needs to separate this group from its other occupants."
       },
-      "Nobody tears up the incomplete paperwork. A delivery can still be worth finishing after the night on which you started it."
+      "Peter puts down the telephone. “The Sedgewick’s night manager is keeping the cellar door open for us. He would like to know if we validate parking.” Janine slides the next form across to you."
     ],
     "choices": [
       {
@@ -1554,8 +1586,8 @@ const raw: Page[] = [
     "text": [
       "In the firehouse basement, Egon explains the service hatch before he touches it. It is a shielded opening used to transfer a named group into a separate chamber. The rest of the containment grid will remain closed.",
       "Winston checks the outer door. You check the names against Tull’s list. Egon operates the controls. Each of you can see what the other two are doing.",
-      "One at a time, twelve postal clerks appear behind the hatch’s thick window. You hold each certified notice against the glass and read it aloud. When a clerk acknowledges it, Winston records the name. Only then does Egon open the small outer chamber.",
-      "A person hears that their duty has ended, steps clear of the machine and quietly disappears.",
+      "The first clerk behind the thick window is winding a pocket watch. “Edwin Vale?” you ask. His hand stops. You hold his certified notice against the glass and read it aloud. He checks the date, then nods. Winston records the acknowledgement and Egon opens the small outer chamber.",
+      "Vale steps clear. He starts to lift the watch again, changes his mind, and puts it in his pocket. He disappears with his hand still resting there. You find the next name. Eleven more notices pass against the glass; you wait for each answer before Winston marks the roll and Egon opens the chamber.",
       "The green resident ghost, Slimer, sits on the bottom stair. When the last clerk taps on the window, Slimer taps back.",
       {
         "if": {
@@ -1590,7 +1622,7 @@ const raw: Page[] = [
           "flag": "trap",
           "is": "blockade"
         },
-        "text": "Six names belong to the clerks you caught at the fallen support. Winston docks the full trap to the same shielded service chamber. Each gets a separate certified notice, acknowledges it and leaves. You wait for all six; the earlier shortcut does not make them somebody else’s problem."
+        "text": "Six names belong to the clerks you caught at the fallen support. Winston docks the full trap to the same shielded service chamber. Each gets a separate certified notice, acknowledges it and leaves. The last clerk pauses to straighten a twisted satchel strap. You keep the exit clear until it is done."
       },
       {
         "if": {
@@ -1611,7 +1643,7 @@ const raw: Page[] = [
           "flag": "trap",
           "is": "none"
         },
-        "text": "You never carried a trap. The carried column is empty, and no captured clerk has been left outside your count."
+        "text": "You never carried a trap. Janine rules a line through the empty carried column."
       },
       "You phone the hotel. Its bellhop, Ernie, carries your message to Tull at the open desk: every absent employee has acknowledged the notice. Your countersignature is the last thing missing; Tull is waiting to witness it.",
       "When you return to Station Nine with the completed roll, he checks all forty-seven names, including his own. You countersign beneath him. He sets down his pencil and removes his eyeshade.",
@@ -1633,7 +1665,7 @@ const raw: Page[] = [
       "player",
       "dolores"
     ],
-    "imagePrompt": "A cramped dispatch office above a bagel shop on a rainy night. Dolores, phone in hand, crumples a yellow job slip in a fist. The player, seen from behind in the silver helmet and mustard-yellow windbreaker, walks out of the door into the rain. Alone with Dolores (no other couriers shown).",
+    "imagePrompt": "A cramped dispatch office above a bagel shop on a rainy night. Dolores, phone in one hand, calmly crosses a name off a flat yellow job slip on her desk with a pen in the other. Her expression is tired and matter-of-fact, with a faint kind smile; no anger or crumpled paper. The player, seen from behind in the silver helmet and mustard-yellow windbreaker, walks out of the door into the rain. Alone with Dolores (no other couriers shown).",
     "text": [
       "You tell Dolores you’re finished for the night. She crosses your name off the slip and reaches for the telephone. “Fair enough. Get those brakes fixed.”",
       "You ride home through the rain. In the morning, the paper mentions a disturbance in a stamp shop and a long queue of people who didn’t show up in the photographer’s pictures.",
@@ -1641,7 +1673,7 @@ const raw: Page[] = [
       "You never learn what was in the parcel. Months later, riding through Tribeca, you still sometimes hear a bell from under the road and wonder what it was asking for."
     ],
     "ending": {
-      "kind": "bad"
+      "kind": "good"
     },
     "onEnter": {
       "set": {
@@ -1698,13 +1730,13 @@ const raw: Page[] = [
     ],
     "imagePrompt": "Cold Station Nine tube room at night after the courier's departure. Brass canister with dial rests sealed on desk, outside the empty receipt tray. Tull and three ordinary grey clerks study it uncertainly. No player or optional team visible; tightly framed desk scene. No capture effect.",
     "text": [
-      "You set the carrier on the receipt desk before the bell, mark the parcel left at destination and walk back out. Nobody has signed for it. For a moment, the lighter bag feels like the end of the job.",
+      "You set the carrier on the receipt desk before the bell, mark it delivered and walk back out. Nobody has signed for it. For a moment, the lighter bag feels like the end of the job.",
       {
         "if": {
           "flag": "team",
           "is": true
         },
-        "text": "At the doorway, Winston asks whether you want the team to take custody instead. You tell him you’re closing your round. He stays with the others to secure the room; they won’t leave a hazardous parcel unattended."
+        "text": "At the doorway, you tell Winston where you have left the carrier. He stays with the others to secure the room. Your delivery slip goes back into your bag with its signature box empty."
       },
       {
         "if": {
@@ -1717,7 +1749,7 @@ const raw: Page[] = [
       },
       "At eleven-twenty, the clerks assemble around a carrier which has never passed through their receiving tray. Their night supervisor, Ambrose Tull, can see the closure label. The old routine still treats the parcel as unreceived, and he cannot bring himself to break its seal.",
       "The team works out the receiving mechanism and puts the notice through it. The clerks in the room are finally released. But the absent twelve still wait in the grid, and your job comes back to Dolores marked NO RECIPIENT ACKNOWLEDGEMENT. The team’s incident record has to stand in for the delivery you left unfinished.",
-      "You got the parcel to its address. Other people finished getting it to its recipients. When Dolores asks why your signature box is empty, you can explain what happened, but you can’t point to the moment you thought the job was done.",
+      "Dolores lays your unsigned slip beside the team’s incident record. You cross out DELIVERED and write LEFT FOR COLLECTION. It fits in the same small box. You wish you had written it before leaving the hotel.",
       {
         "if": {
           "flag": "trap",
@@ -1754,8 +1786,15 @@ const raw: Page[] = [
     "text": [
       "You take the post office’s lost-mail receipt and let the counter worker lock the carrier in a pending bin. It is a real receipt with a real number. It says tracing begins on the next working day.",
       "The night supervisor calls the Ghostbusters when the sorting-room clocks all stop at eleven-twenty. Janine has the carrier quarantined before it can reach a conveyor. The storage grid is stabilised and no ordinary letters are lost.",
-      "On Monday, your case number leads to another desk and another waiting list. The old clerks are now divided between the grid and the team’s portable traps. Their message has become an item requiring historical verification.",
-      "The postal worker did exactly what the service promised. You chose its timetable. Somewhere on that timetable, an eighty-seven-year-old notice is still waiting to become urgent enough."
+      {
+        "if": {
+          "flag": "trap",
+          "is": "empty"
+        },
+        "text": "Later that night, you take Winston’s unused trap back to the firehouse. Janine checks it onto his shelf and closes the equipment loan."
+      },
+      "On Monday, Dolores lays your lost-mail receipt beside the original job slip. The two name different recipients. The carrier is still in the post office’s quarantined bin, and you must collect it for the delivery to Janine that you accepted on Friday. You spend the morning arranging its release from the counter supervisor. The clerks remain divided between the grid and the team’s portable traps.",
+      "You phone the post office again from Quickfoot. The recorded voice says your call is important. Your first ordinary delivery of the morning goes to someone else."
     ],
     "ending": {
       "kind": "bad"
@@ -1776,11 +1815,11 @@ const raw: Page[] = [
     ],
     "imagePrompt": "Golden Sedgewick lobby on rainy night. Player stands on entrance mat facing Mr Voss at reception; Voss lays yellow delivery slip on desk with restrained irritation. Only player and Voss shown. No physical restraint, no carrying courier, no crowd or optional equipment visible.",
     "text": [
-      "You make it two steps down the staff stair before a security guard opens the door from the other side. He blocks the landing with one hand on the rail. Nobody grabs or carries you.",
+      "You make it two steps down the staff stair before a security guard opens the door from the other side. He blocks the landing with one hand on the rail and waits for you to turn around.",
       "Back in the lobby, Voss moves your wet footprints into the same mental category as last year’s damaged ballroom. “I asked for a telephone number,” he says. “Not a demonstration.”",
       "You lose time while security checks your bag against the delivery slip. The receiver reaches {{clock}}. The carrier stays with you.",
       "Voss sets the slip on the desk. “We can begin again. You apologise, I make the call, Ernie escorts you. Or you leave.”",
-      "Ann Street is still open, and you can take the parcel away if you choose. But earning back this entrance will cost you the small discomfort of admitting you made Voss’s job harder."
+      "Through the revolving door, you can see rain running toward Ann Street. Voss draws the telephone closer, but leaves his hand resting beside it."
     ],
     "onEnter": {
       "add": {
@@ -1884,7 +1923,7 @@ const raw: Page[] = [
         "text": "Your unused loan trap goes back to Winston. He marks its return before assigning the team’s equipment."
       },
       "Ray writes forty-seven at the top of the release file, and circles it. “That’s the number we owe an answer.”",
-      "You sign as the person who brought in the evidence. You have chosen a slower, controlled response to a problem nobody fully understood at seven o’clock. It keeps the city safe. It does not pretend that a shelf of quiet traps is the same as people going home."
+      "You sign beside Ray’s count. He pins the release file above his workbench instead of putting it in the cabinet. By the time you wheel your bicycle out, he has begun the first page."
     ],
     "ending": {
       "kind": "good"
@@ -1926,7 +1965,7 @@ const raw: Page[] = [
         },
         "text": "You carry the full trap and the original parcel to the firehouse. Winston Zeddemore, the Ghostbuster who owns the spare, checks your handover and takes responsibility for both."
       },
-      "The borough is quiet and the machinery holds. The trap stays separate from the twelve postal clerks already in the grid. Nobody calls confinement a release.",
+      "The borough is quiet and the machinery holds. The trap stays separate from the twelve postal clerks already in the grid. A faint tapping reaches you through its closed doors.",
       "Ray Stantz, another of the Ghostbusters, reads the label on the unopened carrier: a closure notice for all staff. He begins a new file for getting it to them. The city is safe tonight. All forty-seven clerks remain confined."
     ],
     "ending": {
@@ -1975,8 +2014,15 @@ const raw: Page[] = [
         },
         "text": "The three early arrivals in your borrowed trap are entered separately. Winston accepts the full box; Ray adds all three to the release file. Their silence does not count as acknowledgement."
       },
+      {
+        "if": {
+          "flag": "trap",
+          "is": "empty"
+        },
+        "text": "You hand the unused trap back to Winston. He checks its closed doors, then returns it to the equipment shelf."
+      },
       "Peter asks what to put on the invoice. “Delivery assistance,” you say. Winston laughs once and tells him to write it exactly that way.",
-      "Ray gives you a copy of the unfinished case list. You are not expected to fix their machinery. They are not entitled to lose track of your recipients. It is a workable arrangement between people who have learned what the others know."
+      "Ray gives you a copy of the unfinished case list. You fold it into your round book, leaving its numbered edge sticking out. Winston circles the firehouse telephone number on the cover. “Ask for us,” he says. “Not the invoice department.” Peter looks up. “That’s also us.”"
     ],
     "ending": {
       "kind": "good"
@@ -2055,7 +2101,7 @@ const raw: Page[] = [
         },
         "text": "You return the unused trap, still shut."
       },
-      "On Monday, you ask for the release file’s number before you leave. Janine gives it to you without a joke. The most difficult part of this job turns out to be deciding that “delivered” can be true without meaning that everything is finished."
+      "On Monday, you ask for the release file’s number before you leave. Janine gives it to you without a joke. You write it beneath Friday’s completed delivery and leave a fresh line underneath."
     ],
     "ending": {
       "kind": "good"
@@ -2079,9 +2125,9 @@ const raw: Page[] = [
     "imagePrompt": "Quiet Monday morning at firehouse reception in pale sunlight. Janine returns a black courier job book to player across desk. Slimer sits on one wooden chair eating a hot dog; an ordinary empty chair stands beside him. Only these three characters. No applause, medal, ghost crowd, canister or trap.",
     "text": [
       "On Monday morning, the firehouse sounds like an ordinary badly organised workplace. A telephone rings. Somebody upstairs cannot find a sock. Nothing taps in answer from under the floor.",
-      "Janine returns your delivery book. Inside is the completed forty-seven-name roll, with the station receipt countersigned beneath it. The grid’s twelve captives, every clerk carried in a trap, and everyone at the receiving desk have all acknowledged the notice. No Night Mail clerk remains in confinement.",
+      "Janine returns your delivery book. Inside is the completed forty-seven-name roll, with the station receipt countersigned beneath it. You find Vale’s name. Beside it, Winston has drawn a tiny watch with no hands. No Night Mail clerk remains in confinement.",
       "Egon has kept the separation record so another shift will not need to invent the procedure in an emergency. Ray has filed the original closure notice under DELIVERED, a category he says they should use more often.",
-      "There is no presentation. Janine pays the amended invoice and asks whether Friday nights are usually this complicated.",
+      "Janine pays the amended invoice and asks whether Friday nights are usually this complicated. You tell her the birthday cake was worse. “I’ll put that in the file,” she says.",
       {
         "if": {
           "flag": "heardSlimer",
@@ -2090,7 +2136,7 @@ const raw: Page[] = [
         "text": "Slimer is on the chair beside the desk, eating a hot dog. The other chair is empty. This time he doesn’t point at it.",
         "else": "Slimer is on the chair beside the desk, eating a hot dog. When you pass, he lifts one tiny hand from the bun. You lift yours from the handlebar."
       },
-      "You tighten your helmet strap and put your book away. Outside, a van is blocking your bicycle. You find its driver, show the registration you wrote down and get him to move it.",
+      "You tighten your helmet strap and put your book away. At the bicycle shop round the corner, you spend part of the payment on having the rear brake cable replaced. The wheel stops cleanly when you test it. At the next crossing, you wait for an elderly man to reach the pavement before you push off.",
       "There are still things in New York that only a courier can get done."
     ],
     "ending": {
@@ -2132,7 +2178,7 @@ const pages: Page[] = raw.map((page) =>
 
 const story: Story = {
   id: 'return-to-sender',
-  revision: 2,
+  revision: 3,
   title: 'Return to Sender',
   subtitle: 'A Ghostbusters adventure',
   blurb: 'One last bicycle delivery on a rainy Friday: an unopened brass carrier, eighty-seven years late. The Ghostbusters can keep it safe. Finding out who still needs it will take a courier.',

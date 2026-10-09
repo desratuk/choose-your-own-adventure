@@ -38,6 +38,48 @@ const tunnel: Step[] = [...opening, 'F01', 'F02', 'R04', 'T01', 'T02', 'T03', 'T
 const watch: Step[] = [...opening, 'F01', 'F02', 'R04', 'R05', 'R04', ...hotel];
 const wrongTube: Step[] = [...solo.slice(0, -2), 'C05', 'C04', 'C06', 'C07'];
 const recovery: Step[] = solo.flatMap((step) => step === 'H03' ? ['E05', 'H03'] : [step]);
+const inspected: Step[] = [...opening, 'R05', 'R04', 'R06', 'R04', 'S01', 'H01', 'H03', 'C01', 'C02', ['C03', 0], 'C11', 'C04', 'C06', 'C07'];
+
+test('RTS: declining the voluntary commission is a completed good ending', () => {
+  const result = walk(['E01']);
+  assert.equal(result.page.ending?.kind, 'good');
+  assert.equal(result.page.ending?.best, undefined);
+  assert.equal(result.state.running, false);
+  assert.equal(result.state.margin, 65);
+});
+
+test('RTS: every successful approach learns the discharge reserve before committing to follow-up', () => {
+  for (const route of [solo, team, [...tunnel, ['C03', 0], 'C11', 'C04', 'C06', 'C07'], inspected] as const) {
+    const result = walk(route, 'hard');
+    assert.match(result.texts.get('R03')!, /ten points of spare capacity/);
+    assert.match(result.texts.get('R03')!, /ninety percent load or less/);
+    assert.equal(result.state.followup, false);
+    const followup = visibleChoices(result.page, result.state).find((choice) => choice.to === 'C08');
+    assert.ok(followup);
+    assert.match(followup.text, /return to the firehouse/);
+    assert.doesNotMatch(followup.text, /named|copies/);
+  }
+});
+
+test('RTS: the inspection plan earns faster escorted access without replacing the delivery procedure', () => {
+  const lobby = [...opening, 'R06', 'R04', 'S01', 'H01'];
+  const withPlan = walk(lobby);
+  const withoutPlan = walk([...opening, 'R05', 'R04', 'S01', 'H01']);
+  assert.ok(visibleChoices(withPlan.page, withPlan.state).some((choice) => choice.to === 'H03'));
+  assert.ok(!visibleChoices(withoutPlan.page, withoutPlan.state).some((choice) => choice.to === 'H03'));
+  const direct = walk([...lobby, 'H03']);
+  const negotiated = walk([...lobby, 'H02', 'H03']);
+  assert.equal(direct.state.route, 'lobby');
+  assert.equal(Number(direct.state.margin) - Number(negotiated.state.margin), 5);
+  assert.equal(walk([...inspected, ...finish], 'hard').state.margin, 10);
+
+  const noProcedure: Step[] = [...lobby, 'H03', 'C01', 'C02', ['C03', 0], 'C11', 'C04', 'C06', 'C07', 'C08'];
+  const pending = walk(noProcedure, 'hard');
+  assert.equal(pending.state.copyRule, false);
+  assert.equal(pending.state.roster, true);
+  assert.equal(pending.state.margin, 15);
+  assert.deepEqual(visibleChoices(pending.page, pending.state).map((choice) => choice.to), ['E10']);
+});
 
 for (const [name, route, trap] of [['solo', solo, 'none'], ['team', team, 'empty']] as const) {
   test(`RTS: ${name} best ending works on all three difficulties`, () => {
@@ -49,6 +91,9 @@ for (const [name, route, trap] of [['solo', solo, 'none'], ['team', team, 'empty
       assert.equal(result.state.copyRule, true);
       assert.equal(result.state.roster, true);
       assert.match(result.text, /No Night Mail clerk remains in confinement/);
+      assert.match(result.texts.get('R03')!, /Twelve postal ghosts[\s\S]*One of them wound a stopped pocket watch/);
+      assert.match(result.texts.get('C11')!, /Edwin Vale[\s\S]*clerk Janine described/);
+      assert.match(result.texts.get('C09')!, /Edwin Vale[\s\S]*Eleven more notices/);
     }
   });
 }
@@ -65,6 +110,8 @@ for (const [trap, route, roll, release] of [
     assert.match(result.texts.get('C11')!, roll);
     assert.match(result.texts.get('C09')!, /Twelve names, twelve acknowledgements/);
     assert.match(result.texts.get('C10')!, release);
+    assert.match(result.texts.get('C09')!, /Edwin Vale[\s\S]*Eleven more notices/);
+    assert.doesNotMatch(result.texts.get('C10')!, /Vale/);
     assert.match(result.text, /No Night Mail clerk remains in confinement/);
   });
 }

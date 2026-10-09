@@ -41,7 +41,7 @@ if (stale.length && !input.stop_hook_active) {
     `Story changed without a continuity review: ${stale.join(', ')}.\n` +
       `Before finishing: run \`npm run check\`, then launch the story-continuity-reviewer agent for each story listed. ` +
       `Fix every issue it reports and re-run it until it passes; it records the pass itself. ` +
-      `Don't quote story text to the user when summarising.`,
+      `Summarise the review findings and any changes made.`,
   );
   process.exit(2);
 }
