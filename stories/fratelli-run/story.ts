@@ -416,7 +416,7 @@ const raw: Page[] = [
         text: `On the far side, Sloth sits with his knees drawn up. When your flashlight finds him, he stands. “You came.” He points back over your shoulder to the narrow passage from the garage hatch, then calls Chunk’s name through the bars. Chunk’s answering shout means he can leave the hatch now and join the others. Sloth points to the grate’s catch, then to you. “Together.”`,
         else: `There’s nobody beyond the bars. One corner of the frame has rusted away, leaving a gap just big enough for you. Higher up, a sliding catch carries most of the grate’s weight.`,
       },
-      `The grate doesn’t need to come out of its frame. It needs to rise a few inches while someone lifts the catch. Alone, you could work from the lower gap, awkwardly. A rope around the crossbar would hold the weight for you.`,
+      `The grate doesn’t need to come out of its frame. It needs to rise a few inches while someone lifts the catch. Alone, you could work from the lower gap, awkwardly. A rope passed over the fixed top of the frame and tied to the crossbar would let you hold it up with one hand while working the catch with the other.`,
       { if: is('visitedCellar'), text: `The council crest matches the one on the inspection panel, and so does the latch. Lift, take the pressure off, then slide. You know exactly where to put your hand.` },
     ],
     choices: [
@@ -589,7 +589,7 @@ const raw: Page[] = [
     ],
     choices: [
       { text: `Signal across the flats before opening the door`, to: 'P07', if: is('teamPlan', 'flats'), set: { signal: 'timed' }, ...cost(5) },
-      { text: `Use the noise to slip straight into the ice house`, to: 'P07' },
+      { text: `Use the noise to slip straight through the iron door`, to: 'P07' },
     ],
   },
   {
@@ -705,7 +705,7 @@ const raw: Page[] = [
     ],
     choices: [
       { text: `Trust Mouth’s grip and carry the plates through the gap`, to: 'E11', if: coordinated },
-      { text: `Let the plates go toward the fire; take the hands reaching for you`, to: 'E10' },
+      { text: `Throw the plates into the bonfire; take the hands reaching for you`, to: 'E10' },
     ],
   },
 
@@ -876,7 +876,9 @@ const raw: Page[] = [
       { if: coordinated, text: `Jake turns from Sloth and lunges, catching your collar just as Mouth pulls you forward.`, else: `Jake pulls at your collar as Mouth drags you forward.` },
       `For an instant the coat holds you between them. Then its old seam tears.`,
       `Sheriff Pruitt is already moving. You’ve never seen a man move so fast. He lays a broad hand on Jake’s shoulder, a deputy takes Francis by the elbow, and the hand on your collar lets go. “Evening, Jake,” says the sheriff. “Quiet night?”`,
-      `Mikey points out Mama before she can get from the grounded boat to the van. The deputies take all three escapees away. At dawn, the plates come out of the ashes warped and blistered, their fine engraving ruined. The sheriff can preserve the remains, but not the intact printing evidence you almost delivered.`,
+      `Mikey points out Mama before she can get from the grounded boat to the van. The deputies take all three escapees away.`,
+      `You tell Pruitt and Chunk about Mama’s threat to take Sloth. Pruitt records it in your statement and has a deputy notify Chunk’s parents before the night is over.`,
+      `At dawn, the plates come out of the ashes warped and blistered, their fine engraving ruined. The sheriff can preserve the remains, but not the intact printing evidence you almost delivered.`,
       `For now the sheriff gives you a hot dog while Data examines the torn seam. Mouth is shaking too hard to put his vampire fangs back in. You thank him for not letting go. “Obviously,” he says, which isn’t an answer until you think about it.`,
       { if: is('slothWith'), text: `Chunk gives Sloth a second hot dog, and nobody in the crowd stares at him for more than a moment.` },
     ],

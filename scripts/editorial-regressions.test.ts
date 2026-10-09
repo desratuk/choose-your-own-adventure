@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import { test } from 'node:test';
-import { choose, getPage, renderText, startState, visibleChoices } from '../src/engine/engine';
+import { choose, evaluate, getPage, renderText, startState, visibleChoices } from '../src/engine/engine';
 import type { Difficulty, Story } from '../src/engine/types';
 import { stories } from '../stories';
 
@@ -24,6 +24,19 @@ const finish = ['S40', 'S41', 'S42', 'S44', 'S45'];
 
 test('rewritten adventures mark their in-progress saves as revision 3', () => {
   for (const story of stories) assert.equal(story.revision, 3, story.id);
+});
+
+test('BTTF: both release actions stop displaying the clamp countdown without changing the remaining time', () => {
+  const route = [...opening, ...past, ...investigation, 'S40', 'S41', 'S42'];
+  const before = walk(future, route);
+  assert.equal(evaluate(future.clock!.visibleWhen, before.state), true);
+  for (const resolution of [['S43', 'E09'], ['S44', 'S45', 'E10']]) {
+    for (let length = 1; length <= resolution.length; length++) {
+      const after = walk(future, [...route, ...resolution.slice(0, length)]);
+      assert.equal(evaluate(future.clock!.visibleWhen, after.state), false, after.page.id);
+      assert.equal(after.state.minutes, before.state.minutes, after.page.id);
+    }
+  }
 });
 
 test('BTTF: the full investigation earns the best ending in either era order', () => {

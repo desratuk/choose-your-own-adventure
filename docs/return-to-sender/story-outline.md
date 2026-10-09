@@ -26,7 +26,7 @@ On the team route, the Ghostbusters return at **10:25 PM (F04)**, discuss the ev
 - C02 identifies a pressure-control handwheel on the pipework near the doorway, distinct from C01’s door wheel. Its prose describes the courier holding it only without the team, and offers the trap in prose only when `trap = empty`. C01/C03 dramatize the selected six-/three-clerk catch before continuing their arrival scenes.
 - Station Nine’s **UP bank receives** carriers into its tray. **DOWN recirculates returns** and physically draws the carrier toward it. The old network’s routine opens at the nightly 11:20 bell. Both route diagrams and witnesses can establish the information; the final choice does not repeat an instruction from Tull.
 - Delivery of the original releases the staff who hear it at the desk. Tull stays while the station acknowledgement remains unsigned. The original receipt may be closed before the absent staff receive separate service, producing an ordinary good ending with unfinished release work.
-- The historical procedure permits **dated, certified copies bearing each absent recipient’s full name**. The player must have copied the procedure and verified the complete shift roll to execute this safely tonight. Janine certifies the copies; Egon and Winston operate the service hatch; the player reads each notice and obtains acknowledgement.
+- The historical procedure permits **dated, certified copies bearing each absent recipient’s full name**. The player must have copied the procedure and verified the complete shift roll before controlled service. C11 verifies the roll on site for five headroom; if missed, C08 can arrange a ten-point telephone relay through Ernie while Tull remains at his desk. The relay checks all forty-seven names and their cohorts, including any trapped staff. Janine certifies the copies; Egon and Winston operate the service hatch; the player reads each notice and obtains acknowledgement. Without the historical procedure, the team postpones unverified separate service rather than experimenting on the captives; this is professional judgment, not a new claim that the original cannot physically travel.
 - A controlled grid discharge needs **10 points of headroom**, equivalent to **90% load or less**. Janine teaches this in the universal R03 call, including that returning to the firehouse costs time. Reaching 100% load trips protective breakers on the isolated postal section: its twelve ghosts escape, while the main vault stays shut. Recapture consumes the remaining opportunity. E06 distinguishes an undelivered original from exhaustion after the original has already released the present staff.
 - Nobody is hurt. Clerks are humane, comic and eerie. They can answer, work and react; Tull is their named spokesperson. Ghostbusters lore needed to understand a route is explained on that route.
 
@@ -35,7 +35,7 @@ On the team route, the Ghostbusters return at **10:25 PM (F04)**, discuss the ev
 | Source | Useful evidence or help |
 |---|---|
 | R02, Pell | Antique carrier, ST. 9, 1898 date, broken pipe and service passage; damaged survey does not identify the destination |
-| R03, street encounter and phone | Live evidence changes the diagnosis; twelve captives, receiver-only tag, universal discharge reserve/90% rule, captive watch detail, legitimate handover still available |
+| R03, street encounter and phone | Live evidence changes the diagnosis; twelve captives, receiver-only tag, universal discharge reserve/90% rule, captive watch detail, legitimate handover still available. The clerks have already asked Ray for company authority and the rules for absent staff: an early reason to investigate procedure, without naming copies or the required format |
 | R05, post office | Park Row/Sedgewick address; receiving/return diagram; certified individual-copy procedure |
 | R06, Engine Nine | Stamped building inspection plan; destination; witnessed 11:20 bell; loading-door catch sketch; optional H01–H03 escorted access saving H02’s negotiation cost |
 | R07–R08, diner | Destination and bell; staff-closure seal; remembered absent colleague; service stair beside coal chute |
@@ -95,17 +95,18 @@ Starting headroom is **80 / 65 / 50** on Easy / Medium / Hard, displaying **20% 
 | E05 rushed hotel access | 10; recovery available |
 | C06 original delivery | 5 |
 | C08 return to serve absent staff | 5 |
+| C08 late verification through Ernie, entering C09 | 10; requires the copy procedure and at least 20 headroom before choosing |
 | C09–C10 controlled discharge and completion | 0; require at least 10 headroom entering C09 |
 
-A direct solo postal/lobby completion costs **40**. A researched team completion costs **40**. A records/tunnel route using the trap at the blockade also costs **40**. All must retain 10 for controlled discharge: Hard has no spare on those routes; Medium has 15, allowing one 10-point mistake and a 5-point detour; Easy has 30. Extra time does not substitute for either evidence flag.
+A direct solo postal/lobby completion costs **40**. A researched team completion costs **40**. A records/tunnel route using the trap at the blockade also costs **40**. All must retain 10 for controlled discharge: Hard has no spare on those routes; Medium has 15, allowing one 10-point mistake and a 5-point detour; Easy has 30. Extra time does not substitute for the copy procedure. Late verification costs five more overall than checking the roll at C11, keeping early attention worthwhile.
 
 An inspected solo route visiting both R05 and R06 also costs **40** if it uses the plan at H01: R06’s five-point visit is offset by avoiding H02. Showing the plan changes no flags beyond H03’s existing `route = lobby`; it does not grant `copyRule` or replace the verified roll. The original H01–H02 route remains available even with the plan. C01 conditionally pays off the earlier catch sketch.
 
 H03’s paperwork check is deliberately generic: it covers direct plan access, ordinary negotiation and apology after a rushed entry without claiming the plan was shown on all three. C08’s opening promises to find a way to reach absent staff, without assuming the copy procedure has been discovered. Its hotel-call report identifies the night manager by role, so tunnel and service-stair routes need no earlier meeting with Voss.
 
-At C08, `copyRule && roster && margin >= 10` permits C09. Positive margin with missing evidence or insufficient discharge reserve leads to a qualified good ending, not an invented successful release. Zero or negative margin goes only to E06.
+At C08, `copyRule && roster && margin >= 10` permits direct C09 service. Alternatively, `copyRule && !roster && margin >= 20` offers a telephone check: it sets `roster`, spends ten headroom and enters C09 with the discharge reserve intact. The ordinary good ending remains available. Without either qualified route, positive margin leads to partial success; zero or negative margin goes only to E06. All flags, page IDs and previous save routes remain compatible, so this correction retains revision 3.
 
-Cost-bearing arrival pages receive positive-margin choice guards and an E06 fallback. Exhaustive analysis proves R03, R05, R06, R07, F01, F03, T01, T03 and T05 cannot expire; they are explicitly excluded from generated unreachable guards. All other costly arrivals allow expired readings only while routing the player to E06. No unbounded state or replay loop exists.
+Cost-bearing arrival pages receive positive-margin choice guards and an E06 fallback. Exhaustive analysis proves R03, R05, R06, R07, F01, F03, T01, T03, T05 and C09 cannot expire; they are explicitly excluded from generated unreachable guards. Both C09 approaches preserve at least ten headroom. All other costly arrivals allow expired readings only while routing the player to E06. No unbounded state or replay loop exists.
 
 ## Page map
 
@@ -158,7 +159,7 @@ Route notation names page IDs, with an action where one destination has multiple
 6. Add C05 C04 before C06 in route 1 on **Medium**: E11 at margin 15. On **Hard**, choose E10 at C07: ordinary success, margin 5.
 7. Add E05 before H03 in route 1 on **Medium**: recover and reach E11 at margin 15.
 8. Replace R05 with R06 in route 1 on **Medium**: C08 → E10 at margin 25 because the copy procedure is absent.
-9. Skip C11 in route 1 on **Medium**: C08 → E10 at margin 30 because the verified roll is absent.
+9. Skip C11 in route 1 on **Medium**: C08 offers the ordinary E10 at margin 30 or an Ernie relay reaching E11 at margin 20. On **Hard**, C08 has only 15 headroom and cannot afford the relay plus discharge; E10 remains available. The relay also handles team, six-captive and three-captive arrivals without losing any cohort.
 10. R01 R02 R03 R04 F01 E02 on **Medium**: safe commissioned handover, margin 55.
 11. R01 R02 R03 R04 F01 F04 F05 E07 on **Medium**: professional isolation, margin 50.
 12. R01 R02 R03 R04 F01 F04 F05 F06 C01 C02 C03(team) C04 E08 on **Medium**: informed full-trap ending, margin 45.

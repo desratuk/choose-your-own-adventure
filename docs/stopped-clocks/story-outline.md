@@ -88,6 +88,8 @@ The story data declares the definitive flags and effects. Important facts:
 
 Countdown starts at Easy 390, Medium 360, Hard 345 minutes. It measures protected field time, not a continuously advancing date in the frozen square.
 
+S43 and S44 clear `clockStarted` when the clamp is released, hiding the active countdown through the resolution and epilogue. The remaining `minutes` value is preserved for the ending thresholds.
+
 | Cost | Minutes |
 |---|---:|
 | Lab/frame preparation, S14 | 45 |

@@ -81,6 +81,7 @@ const raw: Page[] = [
       "All three begin tapping their heels in precisely the same rhythm. Inside your bag the brass carrier answers. The pay phone rings in its empty booth. The dial climbs to {{clock}}; the ringing stops before you reach it.",
       "You wheel the bike to the pay phone on the corner and call the firehouse. Janine Melnitz answers before the second ring. When you describe the tapping, she stops chewing.",
       "“Twelve postal ghosts came in from separate jobs this week,” she says. “They’ve just started doing that inside our containment grid. That’s the electrical vault downstairs. One of them wound a stopped pocket watch through three intake interviews. Eleven-twenty, every time.”",
+      "“Our researcher, Ray Stantz, told them they could go home,” Janine says. “They asked who had authorised it, and whether he had the company’s instructions for absent staff. He came upstairs asking for an employee handbook.”",
       "Janine phones Egon at his current job and calls the booth back. The disturbed tube network is calling the twelve captives to work. Their attempts to leave are straining the grid; the dial only reports the strain. “Egon thought we had one haunted object,” she says. “Apparently we have a conversation.”",
       "“One equipment rule for your notes,” Janine adds. “A controlled release needs ten points of spare capacity. That means ninety percent load or less when we open the hatch. At a hundred, the protective breakers cut out. And keep checking the dial: getting here uses time too.” You write 90 beside her number before the rain can wash the ink away.",
       "“The delivery offer stands,” Janine says. “I can take responsibility for it here. If you find an address or a name on your way, write it down. We need facts more than we need another full box.” When you hang up, the three clerks have drifted off into the rain."
@@ -107,7 +108,7 @@ const raw: Page[] = [
     "imagePrompt": "A rainy Tribeca street corner at night under the awning of a shuttered dry cleaner. The player, seen from behind in the silver helmet and mustard-yellow windbreaker with the messenger bag, stands with a bicycle and looks out at the wet street, where a sodium streetlamp glows orange. Alone, nobody else is here.",
     "text": [
       "Under the dry cleaner’s awning on Staple Street, you check the parcel straps and shake rain from your sleeves. Your bicycle leans against the window beside a sign promising SAME-DAY SERVICE.",
-      "The original address is still North Moore Street. But ST. 9 could also be an old postal station, and the fire crews keep records of buildings the city has forgotten. Across the street, the Blue Plate Diner has a late-shift mail carrier’s cap hanging above the counter. Pell’s pipe offers a more direct, less comfortable lead.",
+      "The original address is still North Moore Street. The fire crews keep records of buildings the city has forgotten. Across the street, the Blue Plate Diner has a late-shift mail carrier’s cap hanging above the counter. Pell’s pipe offers a more direct, less comfortable lead.",
       {
         "if": {
           "flag": "knowsSite",
@@ -1436,7 +1437,7 @@ const raw: Page[] = [
             "is": true
           }
         },
-        "text": "You have the letter, but no authority for separate copies. The original names the station collectively. Egon won’t guess whether individual duplicates will release its staff or make a new obligation. A proper search of the company records will take longer than this delivery window."
+        "text": "The original has done its job at Station Nine. The twelve missed that delivery, and you have no procedure for serving them separately. Egon won’t let them out still waiting for mail, or certify that rereading the station’s sheet at the hatch gives each of them a valid delivery. The company’s rules need checking; that work will continue after tonight’s round."
       },
       {
         "if": {
@@ -1445,7 +1446,17 @@ const raw: Page[] = [
             "is": true
           }
         },
-        "text": "Your papers do not contain a verified roll. The intake photographs identify the grid’s captives by case number; they do not supply all the full names the notice requires. Janine will not put a guessed name on a release."
+        "text": "Your papers do not contain a verified roll. The intake photographs identify the grid’s captives by case number; they do not supply all the full names needed to match them to Tull’s staff. Janine will not put a guessed name on a release."
+      },
+      {
+        "if": {
+          "all": [
+            { "flag": "copyRule", "is": true },
+            { "not": { "flag": "roster", "is": true } },
+            { "flag": "margin", "gte": 20 }
+          ]
+        },
+        "text": "Janine calls the hotel. Its bellhop, Ernie, offers to take a pad downstairs: Tull can check the whole attendance page, separating the twelve searchers from anyone you trapped. Ernie will relay it, and you will read every name back before Janine certifies anything. The extra calls and trips to the cellar will leave the grid straining while you wait."
       },
       {
         "if": {
@@ -1473,7 +1484,7 @@ const raw: Page[] = [
             }
           ]
         },
-        "text": "The copied procedure and Tull’s verified roll agree. Janine dates and certifies a separate notice for each missing employee. The grid has the ten points of capacity Egon needs to separate this group from its other occupants."
+        "text": "The copied procedure and Tull’s verified roll agree. The grid has the ten points of capacity Egon needs to separate this group from its other occupants."
       },
       "Peter puts down the telephone. “The Sedgewick’s night manager is keeping the cellar door open for us. He would like to know if we validate parking.” Janine slides the next form across to you."
     ],
@@ -1497,6 +1508,19 @@ const raw: Page[] = [
             }
           ]
         }
+      },
+      {
+        "text": "Have Ernie relay and check the full roll, then serve the copies",
+        "to": "C09",
+        "if": {
+          "all": [
+            { "flag": "copyRule", "is": true },
+            { "not": { "flag": "roster", "is": true } },
+            { "flag": "margin", "gte": 20 }
+          ]
+        },
+        "set": { "roster": true },
+        "add": { "margin": -10 }
       },
       {
         "text": "Leave the open case with the team for further work",
@@ -1584,6 +1608,7 @@ const raw: Page[] = [
     ],
     "imagePrompt": "Firehouse basement late at night. Egon operates fixed industrial controls beside a small thick-glass shielded service hatch set into metal containment equipment. Winston checks a paper list; player holds a certified paper notice against the glass. One pale postal clerk visible behind glass. Slimer sits quietly on bottom stair. No open main vault, no mass ghost release, no optional portable trap.",
     "text": [
+      "Only when all forty-seven names have been checked does Janine date and certify the separate notices. The receiver now reads {{clock}}. You put the completed roll on Winston’s clipboard and take the notices downstairs.",
       "In the firehouse basement, Egon explains the service hatch before he touches it. It is a shielded opening used to transfer a named group into a separate chamber. The rest of the containment grid will remain closed.",
       "Winston checks the outer door. You check the names against Tull’s list. Egon operates the controls. Each of you can see what the other two are doing.",
       "The first clerk behind the thick window is winding a pocket watch. “Edwin Vale?” you ask. His hand stops. You hold his certified notice against the glass and read it aloud. He checks the date, then nods. Winston records the acknowledgement and Egon opens the small outer chamber.",
@@ -1622,14 +1647,14 @@ const raw: Page[] = [
           "flag": "trap",
           "is": "blockade"
         },
-        "text": "Six names belong to the clerks you caught at the fallen support. Winston docks the full trap to the same shielded service chamber. Each gets a separate certified notice, acknowledges it and leaves. The last clerk pauses to straighten a twisted satchel strap. You keep the exit clear until it is done."
+        "text": "Six names belong to the clerks you caught at the fallen support. You take the full trap and remaining notices back downstairs, where Winston docks the box to the shielded service chamber. Each clerk gets a separate certified notice, acknowledges it and leaves. The last pauses to straighten a twisted satchel strap. You keep the exit clear until it is done, then return to the desk with the empty trap."
       },
       {
         "if": {
           "flag": "trap",
           "is": "watch"
         },
-        "text": "Three names belong to the early arrivals you caught while waiting. Winston docks the full trap to the shielded chamber. Each gets a certified notice and a clear exit. You wait for the third acknowledgement before marking the box empty."
+        "text": "Three names belong to the early arrivals you caught while waiting. You take the full trap and remaining notices back downstairs, where Winston docks the box to the shielded chamber. Each clerk gets a certified notice and a clear exit. You wait for the third acknowledgement before marking the box empty, then carry it back to the desk."
       },
       {
         "if": {
@@ -2003,7 +2028,7 @@ const raw: Page[] = [
           "flag": "followup",
           "is": true
         },
-        "text": "When tonight’s separate deliveries cannot be completed, you return to the hotel to tell Tull. He closes the station receipt with your countersignature, and departs. The open release file goes back to North Moore with the team."
+        "text": "With tonight’s separate deliveries left for another round, you return to the hotel to tell Tull. He closes the station receipt with your countersignature, and departs. The open release file goes back to North Moore with the team."
       },
       "Later, in the firehouse engine bay, Winston puts your bicycle beside the bench. Ray lays the closure notice next to the case record. You made the delivery. The team kept the mechanism steady enough for you to make it.",
       "The twelve clerks in the grid have not received individual release notices. The street shift has settled, so the grid can be held safely while Ray researches the remaining service. That work has a named owner and a written count.",
@@ -2079,7 +2104,7 @@ const raw: Page[] = [
         "text": "You return to Station Nine to tell Tull that serving the missing staff will need more work. He closes the station receipt with you and departs. Back at North Moore, you leave the copied evidence with Janine."
       },
       "At the firehouse desk, Janine signs your original courier slip. “Two addresses,” she says. “One invoice. We’ll fix that.”",
-      "The haunting in the hotel has ended. The twelve clerks in the containment grid still need individual notices; they cannot hear a reading given beneath Park Row. The team can now hold the grid steady while their release is researched.",
+      "The haunting in the hotel has ended. The twelve clerks in the containment grid were absent when Tull read the notice. Their deliveries remain unfinished. The team can now hold the grid steady while the remaining service is arranged.",
       {
         "if": {
           "flag": "trap",
@@ -2159,8 +2184,8 @@ for (const page of raw) {
   if (spends(page.onEnter)) costly.add(page.id);
   for (const choice of page.choices ?? []) if (spends(choice)) costly.add(choice.to);
 }
-// Exhaustive arrival analysis proves these one-use investigation stops cannot exhaust the grid.
-const unguarded = new Set(['R03', 'R05', 'R06', 'R07', 'F01', 'F03', 'T01', 'T03', 'T05']);
+// These early stops cannot exhaust the grid; C09 also reserves ten headroom before either arrival.
+const unguarded = new Set(['R03', 'R05', 'R06', 'R07', 'F01', 'F03', 'T01', 'T03', 'T05', 'C09']);
 const guarded = new Set([...costly].filter((id) => !unguarded.has(id)));
 const pages: Page[] = raw.map((page) =>
   !guarded.has(page.id) || page.ending ? page : {

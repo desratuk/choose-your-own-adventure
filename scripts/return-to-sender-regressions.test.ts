@@ -99,8 +99,8 @@ for (const [name, route, trap] of [['solo', solo, 'none'], ['team', team, 'empty
 }
 
 for (const [trap, route, roll, release] of [
-  ['blockade', [...tunnel, ['C03', 0], 'C11', 'C04', 'C06', 'C07'], /Twenty-nine.*six.*twelve/, /Six names.*Each gets.*acknowledges it and leaves/],
-  ['watch', [...watch, ['C03', 2], 'C11', 'C04', 'C06', 'C07'], /Thirty-two.*three.*twelve/, /Three names.*Each gets.*third acknowledgement/],
+  ['blockade', [...tunnel, ['C03', 0], 'C11', 'C04', 'C06', 'C07'], /Twenty-nine.*six.*twelve/, /Six names.*back downstairs.*Each clerk gets.*acknowledges it and leaves.*return to the desk/],
+  ['watch', [...watch, ['C03', 2], 'C11', 'C04', 'C06', 'C07'], /Thirty-two.*three.*twelve/, /Three names.*back downstairs.*Each clerk gets.*third acknowledgement.*back to the desk/],
 ] as const) {
   test(`RTS: ${trap} captives are counted and released alongside the grid's twelve`, () => {
     const result = walk([...route, ...finish], 'hard');
@@ -116,20 +116,64 @@ for (const [trap, route, roll, release] of [
   });
 }
 
-for (const [missing, route, margin] of [
-  ['copyRule', solo.map((step) => step === 'R05' ? 'R06' : step), 25],
-  ['roster', solo.filter((step) => step !== 'C11'), 30],
-] as const) {
-  test(`RTS: spare capacity cannot replace missing ${missing}`, () => {
-    const pending = walk([...route, 'C08']);
-    assert.equal(pending.state[missing], false);
-    assert.equal(pending.state.margin, margin);
+test('RTS: spare capacity cannot replace missing copy procedure', () => {
+  const route = solo.map((step) => step === 'R05' ? 'R06' : step);
+  for (const investigated of [route, route.filter((step) => step !== 'C11')]) {
+    const pending = walk([...investigated, 'C08']);
+    assert.equal(pending.state.copyRule, false);
+    assert.ok(Number(pending.state.margin) >= 25);
     assert.deepEqual(visibleChoices(pending.page, pending.state).map((choice) => choice.to), ['E10']);
-    const result = walk([...route, 'C08', 'E10']);
+    assert.doesNotMatch(pending.text, /Ernie will relay/);
+    const result = walk([...investigated, 'C08', 'E10']);
     assert.equal(result.page.ending?.kind, 'good');
     assert.equal(result.page.ending?.best, undefined);
-  });
-}
+  }
+});
+
+test('RTS: a late roll check recovers every captive cohort at a real capacity cost', () => {
+  const cases: readonly [string, readonly Step[]][] = [
+    ['none', solo.filter((step) => step !== 'C11')],
+    ['empty', team.filter((step) => step !== 'C11')],
+    ['blockade', [...tunnel, ['C03', 0], 'C04', 'C06', 'C07']],
+    ['watch', [...watch, ['C03', 2], 'C04', 'C06', 'C07']],
+  ];
+  for (const [trap, route] of cases) {
+    const pending = walk([...route, 'C08']);
+    assert.equal(pending.state.roster, false);
+    assert.equal(pending.state.copyRule, true);
+    assert.ok(Number(pending.state.margin) >= 20);
+    assert.equal(pending.state.trap, trap);
+    assert.match(pending.text, /whole attendance page/);
+    assert.ok(visibleChoices(pending.page, pending.state).some((choice) => choice.to === 'C09'));
+    assert.ok(visibleChoices(pending.page, pending.state).some((choice) => choice.to === (pending.state.team ? 'E09' : 'E10')));
+    const deferred = walk([...route, 'C08', pending.state.team ? 'E09' : 'E10']);
+    assert.equal(deferred.page.ending?.kind, 'good');
+    assert.equal(deferred.state.roster, false);
+    assert.doesNotMatch(deferred.text, /deliveries cannot be completed/);
+    const result = walk([...route, ...finish]);
+    assert.equal(result.state.roster, true);
+    assert.equal(result.state.trap, trap);
+    assert.equal(result.state.margin, Number(pending.state.margin) - 10);
+    assert.equal(result.page.ending?.best, true);
+    assert.match(result.text, /forty-seven-name roll/);
+    assert.match(result.text, /No Night Mail clerk remains in confinement/);
+  }
+});
+
+test('RTS: late verification reserves discharge capacity and leaves early verification worthwhile', () => {
+  const late = solo.filter((step) => step !== 'C11');
+  const exact = wrongTube.filter((step) => step !== 'C11');
+  assert.equal(walk([...exact, 'C08']).state.margin, 20);
+  const completed = walk([...exact, ...finish]);
+  assert.equal(completed.state.margin, 10);
+  assert.equal(completed.page.ending?.best, true);
+  const insufficient = walk([...late, 'C08'], 'hard');
+  assert.equal(insufficient.state.margin, 15);
+  assert.deepEqual(visibleChoices(insufficient.page, insufficient.state).map((choice) => choice.to), ['E10']);
+  assert.doesNotMatch(insufficient.text, /Ernie will relay/);
+  assert.equal(walk([...solo, ...finish]).state.margin, 25);
+  assert.equal(walk([...late, ...finish]).state.margin, 20);
+});
 
 test('RTS: complete evidence with a reserve gap gives partial success, not a discharge', () => {
   const route: Step[] = [...recovery.slice(0, -2), 'C05', 'C04', 'C06', 'C07', 'C08'];

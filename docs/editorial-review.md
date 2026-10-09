@@ -4,6 +4,8 @@
 
 **Final outcome:** all three manuscripts are revised, independently continuity-approved and ready to advance to production review on editorial quality. The baseline judgments below explain why changes were needed; the implementation, acceptance reports and final evidence follow.
 
+**Subsequent reader pass:** [Blind reader playtests](blind-reader-playtests.md) records six independent agent first plays of commit `fef0da1`, the resulting corrections, an additional cold read and updated validation. It is the latest follow-up to the assessment below; the original reports and measurements remain evidence of their reviewed versions.
+
 ## Commissioning judgment
 
 All three premises are worth commissioning. None needed a new plot, more endings or a larger cast. At the start of this pass, I would have requested focused revisions before publication: the writing was often vivid and the previous repairs substantial, but some consequences were less convincing than the ideas behind them. The principal weaknesses were overly explicit solutions, incompletely explained costs, uneven detour payoffs and narration that explained a scene's moral meaning after the scene had already demonstrated it.

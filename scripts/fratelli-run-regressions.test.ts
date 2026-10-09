@@ -227,6 +227,32 @@ test('Goonies: a coordinated player can still sacrifice the plates, with the cha
   assert.match(interrupted.text, /pulls at your collar/);
 });
 
+test('Goonies: Fire Night reports Mama’s threat across companion arrivals without repeating the home update', () => {
+  const soloSignal: Route = [
+    ...opening(), 'U01', 'U02', 'U04', ['U05', 'Fire'], ['U06', 'Use the rope'], 'P01',
+    ...wait(), 'P04', 'P05', ['P06', 'Stay hidden'], ['P07', 'Signal across'], 'P08', ...crowd,
+  ];
+  const homeward = (choice: string): Route => [
+    ...prepared, ['P05', 'Keep watching'], ['P06', choice], ['P07', 'Signal across'], 'P08', ...crowd,
+  ];
+  const cases: { route: Route; homeUpdate: boolean; accompanied: boolean }[] = [
+    { route: soloSignal, homeUpdate: false, accompanied: false },
+    { route: [...opening('station', false), ...garage, ...street, ...crowd], homeUpdate: true, accompanied: false },
+    { route: homeward('rather head home'), homeUpdate: true, accompanied: false },
+    { route: homeward('Ask Sloth'), homeUpdate: true, accompanied: false },
+    { route: best, homeUpdate: false, accompanied: true },
+  ];
+  for (const { route, homeUpdate, accompanied } of cases) {
+    const { text, state } = walk([...route, 'E10']);
+    assert.equal(state.slothWith, accompanied);
+    assert.match(text, /You tell Pruitt and Chunk about Mama’s threat to take Sloth/);
+    assert.match(text, /Pruitt records it in your statement and has a deputy notify Chunk’s parents/);
+    assert.equal(text.match(/Sloth got home through the garage hatch/g)?.length ?? 0, homeUpdate ? 1 : 0);
+    assert.equal(text.includes('Chunk gives Sloth a second hot dog'), accompanied);
+    assert.ok(text.indexOf('Pruitt records it') < text.indexOf('For now the sheriff gives you a hot dog'));
+  }
+});
+
 test('Goonies: accepting Mama’s bargain loses the plates but retains Sloth’s refusal', () => {
   const { state, page, text } = ending([...prepared, ...locker()], 'E07', 55);
   assert.equal(page.ending?.kind, 'bad');

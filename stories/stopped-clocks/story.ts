@@ -609,7 +609,6 @@ const story: Story = {
       id: 'S26b',
       title: 'The Swap',
       era: '1885',
-      time: 'AUG 28 1885 11:10 PM',
       onEnter: { set: { escapement: 'spare', lastEra: '1885', swapped: true }, add: { minutes: -15 } },
       cast: ['player', 'bracelet'],
       imagePrompt: `Night on the 1885 railway depot platform, alone (Doc Brown is not here), no courthouse in view: the player, their hands visibly translucent and fading, fits a brass wheel back into the clock mechanism in the straw-filled crate by moonlight, a velvet box open beside them.`,
@@ -993,7 +992,7 @@ const story: Story = {
         `You unhook the stabilizer from the clamp and slide it across the floor to him. Doc says your name once, quietly.`,
         `Rex picks it up, turns it over, and drops it out of the open maintenance hatch in the clock face. You watch it fall out of your field, slow down, and stop, hanging in the air twenty feet below the window, frozen like everything else.`,
         `“Thank you,” he says, and points the cutter at the two of you.`,
-        `The Frozen Moment opens its new wing that spring. It is the most popular exhibit in the history of Tannen Temporal Tours. Rex opens a second attraction the year after, then a third, and then a Tannen Temporal Tours theme park where the old high school used to be.`,
+        `Back in 2085, Rex begins work on a new wing of the Frozen Moment. It opens the following spring and becomes the most popular exhibit in the history of Tannen Temporal Tours. Rex opens a second attraction the year after, then a third, and then a Tannen Temporal Tours theme park where the old high school used to be.`,
         `You’re in all the brochures.`,
       ],
     },
@@ -1001,6 +1000,7 @@ const story: Story = {
       id: 'S43',
       title: 'The Keeper',
       era: '1985',
+      onEnter: { set: { clockStarted: false } },
       cast: ['rex', 'doc', 'player', 'stabilizer', 'clamp', 'bracelet'],
       imagePrompt: `Moonlit clock room at night. The player braces an iron lever beside the large clock gears, seen from behind in the approved teal-and-cream varsity jacket. Rex Tannen has turned toward the open maintenance hatch to look down at the square, his glass cutter lowered. Behind him Doc Brown connects a cable to the brass stabilizer. The player is actively operating the clock mechanism. Exactly these three characters; no officers.`,
       text: [
@@ -1020,7 +1020,7 @@ const story: Story = {
       id: 'S44',
       title: 'Live from Hill Valley',
       era: '1985',
-      onEnter: { set: { rexExposed: true } },
+      onEnter: { set: { rexExposed: true, clockStarted: false } },
       cast: ['player', 'bracelet', 'rex', 'doc', 'stabilizer', 'clamp'],
       imagePrompt: `Inside the moonlit clock room at night, the player speaks firmly toward a small blue projection above Rex Tannen’s raised wrist device, while one hand holds the clock’s large iron setting lever. Rex watches the projection, absorbed. Behind Rex, Doc Brown works on the brass stabilizer next to the clamped clock spindle. Exactly three characters. Crop out optional officers: this moment precedes any arrival. No readable text in projection.`,
       text: [
