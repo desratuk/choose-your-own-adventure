@@ -7,6 +7,7 @@ A web choose-your-own-adventure engine with swappable **story packs**. Each stor
 | *The Stopped Clocks* (Back to the Future) | `stopped-clocks` | Complete and illustrated |
 | *The Fratelli Run* (The Goonies) | `fratelli-run` | Complete and illustrated |
 | *Return to Sender* (Ghostbusters) | `return-to-sender` | Complete and illustrated |
+| *Player Two* (The Last Starfighter) | `player-two` | Written and continuity-reviewed; art not started |
 
 When more than one story is installed, the front page shows a story picker.
 
@@ -171,3 +172,14 @@ A Stop hook (`.claude/settings.json` → `scripts/story-review-gate.mjs`) blocks
 - **Meter:** rising GRID LOAD = 100 minus `margin`. Starts at 20/35/50% on Easy/Medium/Hard. Clean solo, team and trap-assisted records routes cost 40 headroom; Medium leaves 15 beyond the ten-point discharge reserve, Hard none. The DOWN loop and rushed lobby access each cost ten and are recoverable.
 - **UI:** basic header, slime transition, scoped themes. Revision 3. 46 pages, ten endings (three bad, seven good, one best); E05 is a recovery scene, not an ending. Old ending records remain stored but only current endings count.
 - Merged illustrations crop optional team/trap presence. Approved sheets lock faces, wardrobe, courier satchel, canister, trap, paperwork, storage case and service hatch.
+
+---
+
+## Story: *Player Two* (`player-two`)
+
+- **Bible:** `docs/player-two/story-outline.md`. Consult its clue map, route and meter tables before editing.
+- Personal-use Last Starfighter story, summer 1984, the town of Bellwether. An unnamed teenage arcade technician becomes flight engineer to the original pilot Tavi Renn and helps defend the Latchpoint outpost. Original cast: Mica Bell (arcade owner), Tavi Renn, Neve Sorn (outpost keeper), Odo Pike (radio-only tug captain). Centauri and Grig appear; Alex stays offscreen.
+- The player is an engineer, not a chosen-one gamer. The climax is decided by diagnosis and the choice of patch and dark transmission interval, not by aim.
+- Best-ending clue chain: arcade display isolation, measured adapter pins, recorded enemy reply timing, traced outpost socket.
+- **Meter:** JUMP CHARGE, a number shown as %. Starts 100/90/80 on Easy/Medium/Hard. Best costs 70 (45 hops, 15 investigations, 10 final operation). Medium permits one ten-point recovery.
+- **UI:** basic header, fade transition, scoped theme. Revision 1. 50 pages, nine endings (four bad, four good, one best). Arcade header and starfield transition are not yet built.

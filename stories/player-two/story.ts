@@ -19,7 +19,7 @@ const raw: Page[] = [
       `No manufacturer. No return address. Just STARFIGHTER and Mica’s signature, which gets larger when she is annoyed.`,
       `You do the arcade’s repairs after school and through the holidays. You’re old enough to be trusted with its keys and young enough that customers still ask when the repair person is coming. Mica pays you anyway. Sometimes in advance, which is how you know she’s worried.`,
       `“The driver said it finds its own players,” Mica says, pushing her square glasses up. “I asked whether it found its own insurance.”`,
-      `The screen shows a field of stars. A little spacecraft circles a bright border. You reach past the controls for the service latch. The cabinet clicks before you touch it.`
+      `The screen shows a field of stars. A little spacecraft circles a bright border. You reach past the controls for the service door’s catch. The cabinet clicks before you touch it.`
     ],
     choices: [{ text: 'Open the service door', to: 'A02' }],
   },
@@ -53,7 +53,7 @@ const raw: Page[] = [
   {
     id: 'A04', title: 'A Job Description', era: 'earth',
     cast: ['player', 'mica', 'centauri'],
-    imagePrompt: `Dry summer evening inside the arcade by its counter and wall telephone. Player, Mica and Centauri study a small illuminated route card. Closed game cabinet outside the crop, no spacecraft or extra people.`,
+    imagePrompt: `Dry summer evening inside the arcade by its counter and wall telephone. Player, Mica and Centauri stand by the counter; Mica slides an envelope of wages across it beside the telephone. Closed game cabinet outside the crop, no spacecraft or extra people.`,
     text: [
       `At the arcade counter, Centauri stops smiling long enough to answer properly. A flight engineer keeps a League ship’s power, cooling and instruments working. You would travel with a qualified pilot to a service dock, try a supervised placement and choose whether to take an assignment. The League will bring you home if you decline.`,
       `“And if something really goes wrong?” you ask.`,
@@ -76,7 +76,7 @@ const raw: Page[] = [
       `A blue-grey woman with a short white crest opens its boarding hatch. “Tavi Renn. Pilot,” she says. “Gunstar. Ship. Steps. Mind the third.”`,
       `Inside the Gunstar, a League defence spacecraft, two seats face different panels. Tavi takes the flight controls. Your station has power switches, circuit diagrams and a restraint that makes a determined attempt to fold you in half. Tavi adjusts it without laughing.`,
       `JUMP CHARGE reads {{clock}}. Tavi explains that this stored bank powers jumps between distant places and heavy service equipment. Ordinary engines and life support have their own supply. Tonight’s allocation has to last until the assignment ends; the dock’s chargers are reserved for the relief fleet.`,
-      `Centauri closes the hatch from outside after you both give permission. Tavi rests her hand beside the flight lever. “I fly when you say ready.” You check the cooling indicator before answering.`
+      `Mica steps back onto the gravel. “The cabinet will keep. So will your wages,” she says. Centauri closes the hatch from outside after you and Tavi both give permission. Tavi rests her hand beside the flight lever. “I fly when you say ready.” You check the cooling indicator before answering.`
     ],
     choices: [{ text: 'Give Tavi the ready signal', to: 'A06', ...cost(10) }],
   },
@@ -110,13 +110,13 @@ const raw: Page[] = [
   {
     id: 'B02', title: 'Before the Assignment', era: 'league',
     cast: ['player', 'grig'],
-    imagePrompt: `Enclosed League workshop in steady night-shift lamplight, no weather. Player and Grig at a bench with a two-bank power diagram and closed portable test cases. Tavi is not in this crop; optional equipment omitted.`,
+    imagePrompt: `Enclosed League workshop in steady night-shift lamplight, no weather. Player and Grig at a bench with a jump-bank diagram divided into two parts and closed portable test cases. Tavi is not in this crop; optional equipment omitted.`,
     text: [
       { if: { any: [is('latchTest'), is('sleeve'), is('heardTavi')] },
-        text: `Back at Grig’s workshop bench, you set your notes beside the simulator. Tavi is in the berth finishing flight checks. Your bank reads {{clock}}; the remaining equipment is still available.`,
+        text: `Back at Grig’s workshop bench, you set your notes beside the simulator. Tavi is in the berth finishing flight checks. Your bank reads {{clock}}; Grig is waiting at the simulator.`,
         else: `At the workshop bench, Grig connects the portable rig to the Gunstar’s service cable. Tavi returns to the berth for flight checks. Optional live exercises draw from your jump bank, now at {{clock}}.` },
       { if: not({ any: [is('latchTest'), is('sleeve'), is('heardTavi')] }),
-        text: `Grig opens the split-field divider. “Two banks work together. It needs at least {{splitMinimum}}% before you start. Half that reserve drives the operation; the other half holds the separation. Below that, use the single-feed controls.” He has you point to both banks.` },
+        text: `Grig opens the split-field divider. “The divider draws on your one jump bank in two parts while it runs: one drives the operation, the other keeps the two feeds apart. It needs at least {{splitMinimum}}% before you start. Half of that minimum drives the operation; whatever remains holds the separation. Below that, use the single-feed controls.” He has you point to both parts on the gauge.` },
       { if: not({ any: [is('latchTest'), is('sleeve'), is('heardTavi')] }),
         text: `He shows you the coupling release too. Every powered operation must leave charge to open it again; the controls reject a draw that would empty the bank. Then Grig puts his hand on the simulator. “Ready for me to break something? One of the privileges of teaching.”` },
     ],
@@ -151,7 +151,7 @@ const raw: Page[] = [
       `You work the sleeve around the support instead. The contact settles without a restart. Grig makes you repeat it from the other side, where you cannot see your hands.`,
       `“Ships,” Grig says, “are designed by people who assume engineers have spare elbows.”`,
       `The powered exercise draws charge, leaving {{clock}}. Grig puts the tested sleeve in your ship’s tool drawer. It can steady a connector without the careful bracing you would otherwise have to improvise. You return the practice block and shake life back into your fingers.`,
-      `Through the berth window, Tavi gives you a questioning thumbs-up. You return it. Grig checks that the training supply is disconnected before letting you move on.`
+      `Through the berth window, Tavi gives you a questioning thumbs-up. You return it. Grig checks that the Gunstar’s service cable is disconnected before letting you move on.`
     ],
     choices: [{ text: 'Return to the training bench', to: 'B02' }],
   },
@@ -165,7 +165,7 @@ const raw: Page[] = [
       `“I used to fly deliveries,” Tavi says. “First solo trip, I announced every manoeuvre to an empty hold. The cargo was plumbing. Very attentive.”`,
       `You admit that at the arcade you sometimes let customers thank the high-score champion for fixing their game. Explaining takes longer than the repair.`,
       `Tavi chews for a while. “Tell me when I do that.”`,
-      `She finds a crumb floating near her collar, catches it and looks offended by its attempt to escape. Then she points to the two headsets. “One flight channel. Two people who get to say wait.”`,
+      `A crumb falls from her collar; she catches it just above the console and looks offended by its attempt to escape. Then she points to the two headsets. “One flight channel. Two people who get to say wait.”`,
       `You finish supper, stow the wrappers and return through the tube to Grig. Tavi stays to finish the flight checks.`
     ],
     choices: [{ text: 'Rejoin Grig at the bench', to: 'B02' }],
@@ -178,7 +178,7 @@ const raw: Page[] = [
       `Grig brings you to the workshop simulator. It has a cooling fan, a speaker branch and one large green READY lamp. None of it is connected to flight hardware; the exercise runs from the dock’s own teaching supply.`,
       `Grig flips his concealed fault switch. The lamp stays green. The fan stops. From the speaker comes the clicking sound of a relay pulling in and dropping out.`,
       `You trace the visible leads. The lamp has a separate supply. The fan and speaker share a branch. At the arcade you would find the part dragging that branch down before returning a game to the floor. Here, the controls are labelled ISOLATE SPEAKER, RESET RACK and CERTIFY READY.`,
-      `Grig folds his hands. “I am now an impatient customer.” He considers the part. “My ship was working perfectly before I brought it in.”`
+      `Grig folds his hands. “I am now an impatient customer.” He settles into the role. “My ship was working perfectly before I brought it in.”`
     ],
     choices: [
       { text: 'Isolate the speaker branch and check the fan', to: 'B07', set: { localAction: 'isolate' } },
@@ -359,7 +359,7 @@ const raw: Page[] = [
         else: `Neve leads you and Tavi along an enclosed gantry above the freight bay. She shows you the cooling cradle, then goes to the control room. Her voice stays with you through a wall intercom. Tavi checks the cradle’s pressure while you look along the cable cupboards.` },
       { if: not(is('feederTraced')), text: `A faded maintenance plan has two lines ending in a drawing of a kettle. The cooling cradle is labelled; the older cable runs are not. A tracing probe can map them using the Gunstar’s service supply.` },
       { if: not(is('storesSecured')), text: `Below the gantry, freight packs await the winch. They need lashing before a tug can lift them in a hurry.` },
-      { if: is('tugHelp'), text: `Odo calls on the freight channel: his tug has reached the outer waiting mark, with the freed rack ready for a load.` },
+      { if: all(is('tugHelp'), not({ any: [is('feederTraced'), is('storesSecured')] })), text: `Odo calls on the freight channel: his tug has reached the outer waiting mark, with the freed rack ready for a load.` },
       `Your remote charge reading is {{clock}}. Tavi raises a hand beside the cradle to show where she is waiting.`
     ],
     choices: [
@@ -392,7 +392,7 @@ const raw: Page[] = [
       `“Domestic thermal units,” she says, “means kettles. Personal insulation means blankets. Do those first.”`,
       `The normal winch supply is isolated while the shield is being serviced. You connect the Gunstar’s portable lead, raise each pack just far enough to seat its straps, then secure it in the loading rack. The bank reads {{clock}} when you disconnect.`,
       { if: is('tugHelp'), text: `Odo confirms over the radio that he can collect the ready rack on Neve’s release signal. The people, the pilot and the freight now have different jobs instead of one person trying to do all three.`,
-        else: `Neve logs the rack as ready. The regular freighter is still delayed in the corridor; the evacuation boats have room for people, not these loads. A ready rack gives a cargo crew something it can collect if one gets through.` },
+        else: `Neve logs the rack as ready. Odo’s tug is still stuck in the corridor; the evacuation boats have room for people, not these loads. A ready rack gives a cargo crew something it can collect if one gets through.` },
       `You climb back to the gantry with an imprint of the strap buckle in your palm.`
     ],
     choices: [{ text: 'Return to the gantry', to: 'D02' }],
@@ -448,7 +448,7 @@ const raw: Page[] = [
     cast: ['player', 'tavi', 'neve'],
     imagePrompt: `Enclosed Latchpoint control room during shipboard night, no weather. Neve, player and Tavi look through a broad window at shield vanes and distant tiny scout lights. Calm decision scene, no weapons, explosions or extra people.`,
     text: [
-      `You and Tavi walk from the gantry into Neve’s control room. Her evacuation board has a place marked for every person, including the three of you. The scouts are tiny moving lights beyond the glass. Their tender remains farther back, following the freight lane.`,
+      `You and Tavi walk from the gantry into Neve’s control room. Her evacuation board has a place marked for every person, including you, Tavi and Neve herself. The scouts are tiny moving lights beyond the glass. Their tender remains farther back, following the freight lane.`,
       `“The boats can leave behind the rock,” Neve says. “The station cannot.” She checks the shield flow you repaired and draws a firm line through COOLING on her pad.`,
       `A short hop would put the Gunstar above the shield, on the outpost’s remote service link. Staying in the sheltered dock would let you run evacuation lights, but the berth cannot project a supporting field.`,
       `Your bank reads {{clock}}. Neve is already back at the evacuation board, checking her places rather than watching your face.`,
@@ -481,7 +481,7 @@ const raw: Page[] = [
     imagePrompt: `Inside enclosed Gunstar cockpit during defence orbit, weatherless night-side space outside. Player considers closed switch covers at the engineering station; Tavi holds position. Only two people, optional notes and hardware out of frame. Remote lights, no violent action.`,
     text: [
       `Above Latchpoint, your panel receives the outpost’s service controls. The main feeder, a grey diagnostic socket and the bright decoy channel sit beside the Gunstar’s output adapter. Tavi keeps the ship level; Neve waits on the radio from the control room.`,
-      `The main feeder can put the Gunstar behind the habitation shield. Its rated shunt dumps excess load into the freight and navigation equipment outside the shelter ring. Neve has cleared those sections of people.`,
+      `The main feeder can put the Gunstar’s power behind the habitation shield. Its rated shunt dumps excess load into the freight and navigation equipment outside the shelter ring. Neve has cleared those sections of people.`,
       `The decoy channel would make the Gunstar look like a much larger target. Tavi has room to lead a pursuit away from the wheel. Beyond the first scouts, the tender keeps coming.`,
       { if: is('feederTraced'), text: `The remote handwheel is also on your panel, with the travel stops you checked. Moving the shield vanes under attack would put their bearings under a load the station was never built to carry.` },
       `Your bank reads {{clock}}. The first scout passes the far edge of the canopy. Tavi moves one flight lever a fraction and keeps the survey mast centred.`
@@ -503,7 +503,7 @@ const raw: Page[] = [
       `You load the recorded tender reply, preserving its pattern but adding a delay. On the range display, the delayed echo sits in empty space beyond the outpost. The real shield continues to draw power beneath it.`,
       `Tavi looks across. “You’re moving the picture.”`,
       `“The picture,” you confirm. “Keep us here.”`,
-      `Neve reads the shield’s flow from her own instruments. Steady. You lift the adapter’s latch and hold the prepared reply without sending it. The divider’s two bank lamps sit beside the commit switch.`,
+      `Neve reads the shield’s flow from her own instruments. Steady. You lift the adapter’s latch and hold the prepared reply without sending it. The divider’s two lamps, one for each part of the draw, sit beside the commit switch.`,
       `For a moment the cockpit sounds like the arcade after closing: fans, a relay, someone waiting for you to finish. Then a scout light crosses the canopy and the resemblance ends.`
     ],
     choices: [{ text: 'Watch the trace at the commit switch', to: 'F03' }],
@@ -575,7 +575,7 @@ const raw: Page[] = [
     cast: ['player', 'tavi', 'neve'],
     imagePrompt: `Enclosed Latchpoint control room after relief during shipboard night, no weather. Player, Tavi and Neve share a tired pause beside lit habitat windows and dark exterior equipment. Tight interior crop excludes optional freight and tug.`,
     text: [
-      `The relief ships take position between Latchpoint and the tender, driving the raiding detachment back out of the lane. Tavi brings the Gunstar down on ordinary engines. You disconnect the support feed only when Neve confirms that relief power is holding the shield.`,
+      `The relief ships take position between Latchpoint and the tender, driving the raiding detachment back out of the lane. You keep the support feed connected until Neve confirms that relief power is holding the shield, then release it. Tavi brings the Gunstar down to berth two on ordinary engines.`,
       `You return through the boarding tube to Neve’s control room. She pours three fresh mugs. The navigation board behind her is dark. Beyond the door, people put their photographs back above their bunks.`,
       { if: freightSafe, text: `Odo calls from behind the rock. The whole freight rack is safe, lashings intact. Neve draws a line through the stores she had begun listing as lost.`,
         else: `Neve starts a replacement list for the freight stores. The shunt has spoiled the loads outside the shelter ring, along with the navigation gear. Relief has brought food and blankets, but the familiar things will take longer to replace.` },
@@ -594,7 +594,7 @@ const raw: Page[] = [
     text: [
       `You light the decoy, and Tavi turns the Gunstar away from Latchpoint on ordinary thrust. The scouts follow the bright false target. For a few seconds, the empty space opening around the outpost looks like success.`,
       `Then Neve calls from the control room. The tender has kept its own course. It is closing on the wheel while the Gunstar’s remote link stretches out of range.`,
-      `Your bank reads {{clock}}, but the missed position is now the problem. Tavi turns back; the tender is already between your ship and the mast. Neve orders the evacuation boats to leave behind the rock.`,
+      `Your bank reads {{clock}}, but the position you left above the survey mast is now the problem. Tavi turns back; the tender is already between your ship and the mast. Neve orders the evacuation boats to leave behind the rock.`,
       `You switch off the decoy and help Tavi cover the boats’ escape instead. The scouts lose their false target and return to their controller. The outpost’s windows go dark in neat rows as Neve closes the sections.`,
       `She reaches the last boat. Over the radio, she counts every name before answering Tavi’s call.`
     ],
@@ -606,11 +606,11 @@ const raw: Page[] = [
     cast: ['player', 'tavi'],
     imagePrompt: `Close interior view of the enclosed Gunstar cockpit at shipboard night, no weather visible. Player speaks into headset beside Tavi; only seats and a quiet gauge in frame. Windows cropped out so location is not implied. Grig and Neve are not here.`,
     text: [
-      { if: is('station', 'outpost'), text: `You tell Neve that the Gunstar cannot power its deployment hop, then return with Tavi through the boarding tube to the ship. Neve stays to launch the evacuation boats. From the docked cockpit you call Grig at the League service dock.` },
+      { if: is('station', 'outpost'), text: `You tell Neve that the Gunstar cannot power its deployment hop, then return with Tavi through the boarding tube to the ship. Neve stays to launch the evacuation boats. Tavi takes the Gunstar off the berth under ordinary thrust and follows the boats behind the rock. From the cockpit you call Grig at the League service dock.` },
       { if: is('station', 'defence'), text: `In defence orbit above Latchpoint, you tell Tavi that the remaining bank cannot power a useful intervention. She brings the Gunstar behind the rock under ordinary thrust while you call Grig at the League service dock. Neve begins the evacuation.` },
       `The reading is {{clock}}. Radios, air and ordinary thrust are still working; the high-load assignment is over. Grig records your position and dispatches a recovery tug.`,
       `“Stay on the working systems,” Grig says over the radio. “We know where you are.”`,
-      `Tavi checks the separate life-support supply and moves her seat so you can see its gauge too. Neither of you has to pretend the smaller green light means the mission can continue.`
+      `Tavi checks the separate life-support supply and moves her seat so you can see its gauge too. Neither of you has to pretend the life-support gauge’s green light means the mission can continue.`
     ],
     choices: [{ text: 'Wait for the recovery crew', to: 'E04' }],
   },
@@ -624,7 +624,7 @@ const raw: Page[] = [
       `Tavi asks for a roll of labels. Neve hands her one and points to the cupboards. “Start with those.”`,
       { if: is('heardTavi'), text: `Tavi labels the chair CHAIR, sits down and looks at you. “Plumbing never told me when to wait,” she says. You tell her that might have been her problem.` ,
         else: `Tavi tests a chair before sitting. “I am beginning to understand your trade,” she tells you. “Ask the object what it does, even if someone has put a very confident label on it.”` },
-      `You put your notebook down beside the recorder. This time, somebody else makes the tea.`
+      `You put your notebook down beside the recorder. Neve pours you a cup of the drink that smells of oranges and hot metal.`
     ],
     choices: [{ text: 'Send the completion report home', to: 'E09' }],
   },
@@ -637,7 +637,7 @@ const raw: Page[] = [
       { if: is('returnedFromDock'), text: `At the League dock, you decline the assignment. Grig signs your training record anyway. Tavi takes a qualified dock engineer to Latchpoint; you take the promised passenger berth on an Earth-bound supply flight. Two evenings later, you reach Mica’s arcade at closing time.`,
         else: `At the arcade counter, you tell Centauri you are staying in Bellwether. He puts his hat on. “An actual answer,” he says. “I get fewer of those than you might think.” He arranges to collect the cabinet in the morning and leaves Mica his number for the invoice.` },
       `You help Mica close. The last customer says the coin return on another game is sticking. You find a small green button in it, with thread still hanging through its holes.`,
-      `Mica puts the button in the lost-property jar. “Someone will need that,” she says. Then she adds your name to next week’s paid repair hours, leaving space for the day you wanted off.`,
+      `Mica puts the button in the lost-property jar. “Someone will need that,” she says. Then she adds your name to next week’s paid repair hours.`,
       `For now, you have somewhere to go in the morning. When you switch off the big arcade lights, the little lamp above your workbench stays on until you have put the tools away.`
     ],
   },
@@ -672,7 +672,7 @@ const raw: Page[] = [
     cast: ['player', 'tavi', 'grig'],
     imagePrompt: `Enclosed recovery-dock workshop next shipboard morning, no weather. Grig, player and Tavi examine a small charge log under plain work lights. Only these three, no optional equipment or celebratory crowd.`,
     text: [
-      `The recovery crew reaches the Gunstar and connects an external power cradle. You and Tavi ride home with your jump controls locked out. There is no final clever hop, only a tug doing the work it was built for.`,
+      `The recovery crew reaches the Gunstar and connects an external power cradle. You and Tavi ride back to the League dock with your jump controls locked out. There is no final clever hop, only a tug doing the work it was built for.`,
       `By the next shipboard morning you are back at the League dock. Grig meets you in the workshop. Latchpoint’s people have escaped in the evacuation boats, but the relief fleet arrived after the outpost was abandoned. The tender has forced another shelter out of the freight corridor.`,
       `You spread the charge log on Grig’s bench. Each draw looked manageable when you authorised it. Added together, the entries took away the operation you went there to do.`,
       `Tavi puts her flight log beside yours. “Both seats,” she says when you begin explaining it alone.`,
@@ -701,7 +701,7 @@ const raw: Page[] = [
       `By the next shipboard morning, relief crews have brought power and replacement stores into Latchpoint. You and Tavi meet Neve in the entry hall with the repair list. The outpost has lost its navigation array and freight stock, but it is still a working shelter.`,
       `People slept in their own bunks. That keeps interrupting your list: someone brings a mug, someone offers a spare pencil, someone wants you to know which window belonged to them.`,
       { if: is('tugHelp'), text: `Odo helped carry replacement stores in once the lane was clear. The original freight had not been lashed for his lift when the platform failed. You put replacement straps first on the new list.` },
-      { if: all(is('storesSecured'), not(is('tugHelp'))), text: `Your lashed rack could not leave before the platform failed; the regular tug was still delayed in the corridor. Its straps survived better than the goods. You salvage them for the replacement loads.` },
+      { if: all(is('storesSecured'), not(is('tugHelp'))), text: `Your lashed rack could not leave before the platform failed; Odo’s tug was still stuck in the corridor. Its straps survived better than the goods. You salvage them for the replacement loads.` },
       `The relief crews recharge the Gunstar before your later flight home. Mica has your report when you walk into the arcade. She reads “habitation shield maintained” twice, then points to your usual stool.`,
       `“The stool’s still yours,” Mica says. You sit down and start telling her about Tavi. For once, the repair takes longer to describe than it took to do.`
     ],
@@ -729,7 +729,7 @@ const raw: Page[] = [
       `The operating draw leaves {{clock}} in the bank. Bearings seize at the ends of their travel, but you keep enough shield facing the detachment for the relief ships to arrive. They drive the tender back while you lock the surviving vanes in place.`,
       `Tavi lands under ordinary thrust. In the outpost control room, Neve adds up the damage. The shelter stands; its freight and navigation gear have stayed behind the moving shield. The shield mechanism itself will need a long rebuild, with a relief ship guarding the station meanwhile.`,
       `You give the repair crew your traced cable plan. They can begin without stripping every painted cupboard. Tavi puts a finger on the little drawing of a kettle you copied in the margin.`,
-      `“Structural?” Tavi asks. “Essential,” Neve replies. She goes to fill it. You stay to help draw the first replacement bearing, while the relief crew recharges the Gunstar for your eventual trip home.`
+      `“Structural?” Tavi asks. “Essential,” Neve replies. She goes to fill the real one. You stay to help draw the first replacement bearing, while the relief crew recharges the Gunstar for your eventual trip home.`
     ],
   },
   {
@@ -740,9 +740,9 @@ const raw: Page[] = [
     text: [
       `The relief crew recharges the Gunstar at Latchpoint. You send Mica the completion report, sleep through a whole shipboard morning, then let Tavi fly you home. Three days after the cabinet arrived, you unlock the arcade’s side door in ordinary summer sunlight.`,
       `Mica is already there. She has spoken to your family and read the report twice: all Latchpoint’s rooms, stores and machinery intact. The relief engineers have your wiring and timing record ready for the next detachment. The armada is still out there, but this little part of its job has become harder.`,
-      `Tavi follows you inside, having landed at the fairground. She stops at Starfighter. “This is it?”`,
-      `You show her the service latch. Mica gives her the same look she gives customers who lean on repaired controls. Tavi takes her hand away.`,
-      { if: is('heardTavi'), text: `“I told them whose work it was,” Tavi says. You remember the food packets and the promise in the cockpit. “I saw,” you tell her.` ,
+      `Tavi follows you inside, having landed at the fairground. She stops at Starfighter and leans both hands on its control panel. “This is it?”`,
+      `You show her the service latch. Mica gives her the same look she gives customers who lean on repaired controls. Tavi takes her hands away.`,
+      { if: is('heardTavi'), text: `Tavi points to the engineer’s signature on the completion report. “I told them whose work it was.” You remember supper in the cockpit and the customers who thanked the wrong person. “I saw,” you tell her.` ,
         else: `Tavi points to the two signatures on the completion report. Hers names the pilot. Yours names the flight engineer. Mica sets it beside the paid repair invoice.` },
       `There is another League placement available after you have talked it through at home. For now, Tavi puts a coin in the game. You close the service door, sit on the stool beside her and put your notebook on your knee.`,
       `“Ready?” Tavi asks. You listen to the fan before answering.`
