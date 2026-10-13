@@ -7,7 +7,7 @@ A web choose-your-own-adventure engine with swappable **story packs**. Each stor
 | *The Stopped Clocks* (Back to the Future) | `stopped-clocks` | Complete and illustrated |
 | *The Fratelli Run* (The Goonies) | `fratelli-run` | Complete and illustrated |
 | *Return to Sender* (Ghostbusters) | `return-to-sender` | Complete and illustrated |
-| *Player Two* (The Last Starfighter) | `player-two` | Written and continuity-reviewed; art not started |
+| *Player Two* (The Last Starfighter) | `player-two` | Written and continuity-reviewed; 15 reference sheets approved, scene art not started |
 
 When more than one story is installed, the front page shows a story picker.
 

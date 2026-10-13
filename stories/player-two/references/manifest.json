@@ -5,7 +5,8 @@
       "player",
       "mica"
     ],
-    "prompt": "Use case: illustration-story. Production reference sheet, 1536x1024 landscape, warm pale parchment background. Warm 1980s space-adventure illustration, clean ink outlines, painted saturated colour, expressive invented faces, cinematic light, family-friendly with a comic edge. Clear separated design views, not a story event. No real people's likenesses, no copied franchise character designs, no weapons-focused imagery, violence, logos, legible text or captions. Only specified subjects. Earth is dry summer 1984; enclosed interiors have artificial shipboard-night light; space is weatherless vacuum. This board locks design only, never possession, accompaniment, completed work or story outcome. LEFT: same unnamed gender-neutral teenager in rear and three-quarter REAR full-body views, face completely concealed in both; relaxed straight ungendered silhouette, short tousled dark-brown hair, medium neutral skin tone at neck and hands. Clothing verbatim: a teal short-sleeved work shirt, faded blue jeans and cream canvas sneakers. Untucked plain loose shirt, simple collar, no badges, belt tools, bag, notebook or extra costume. No profile face, facial features or gender-signalling styling. RIGHT: MICA BELL, original middle-aged woman with warm brown skin, square black glasses and closely cropped dark hair, in a rust-red cardigan, a cream T-shirt and navy trousers. Plain dark practical shoes. Full-body front and large three-quarter head detail with the same square frames and dry smile. Hands relaxed, five fingers on each visible hand; each figure has two arms and legs. No setting or props."
+    "prompt": "Use case: illustration-story. Production reference sheet, 1536x1024 landscape, warm pale parchment background. Warm 1980s space-adventure illustration, clean ink outlines, painted saturated colour, expressive invented faces, cinematic light, family-friendly with a comic edge. Clear separated design views, not a story event. No real people's likenesses, no copied franchise character designs, no weapons-focused imagery, violence, logos, legible text or captions. Only specified subjects. Earth is dry summer 1984; enclosed interiors have artificial shipboard-night light; space is weatherless vacuum. This board locks design only, never possession, accompaniment, completed work or story outcome. LEFT: same unnamed gender-neutral teenager in rear and three-quarter REAR full-body views, face completely concealed in both; relaxed straight ungendered silhouette, short tousled dark-brown hair, medium neutral skin tone at neck and hands. Clothing verbatim: a teal short-sleeved work shirt, faded blue jeans and cream canvas sneakers. Untucked plain loose shirt, simple collar, no badges, belt tools, bag, notebook or extra costume. No profile face, facial features or gender-signalling styling. RIGHT: MICA BELL, original middle-aged woman with warm brown skin, square black glasses and closely cropped dark hair, in a rust-red cardigan, a cream T-shirt and navy trousers. Plain dark practical shoes. Full-body front and large three-quarter head detail with the same square frames and dry smile. Hands relaxed, five fingers on each visible hand; each figure has two arms and legs. No setting or props.",
+    "reviewedSha256": "37e15ef71ac1d97c67b8ac97f51d6bdd07fefd5f69c3ec91664a37286e103876"
   },
   {
     "id": "centauri",
@@ -15,7 +16,8 @@
     "prompt": "Use case: illustration-story. Production reference sheet, 1536x1024 landscape, warm pale parchment background. Warm 1980s space-adventure illustration, clean ink outlines, painted saturated colour, expressive invented faces, cinematic light, family-friendly with a comic edge. Clear separated design views, not a story event. No real people's likenesses, no copied franchise character designs, no weapons-focused imagery, violence, logos, legible text or captions. Only specified subjects. Earth is dry summer 1984; enclosed interiors have artificial shipboard-night light; space is weatherless vacuum. This board locks design only, never possession, accompaniment, completed work or story outcome. CENTAURI only: entirely invented silver-haired older face, long narrow nose, lively brows, soft lined cheeks and theatrical kindly expression. A maroon frock coat, a pale gold waistcoat, grey trousers and brown shoes, carrying a plain brown felt hat. One full-body front, one full-body rear showing coat tails, and one large head three-quarter detail. Same face in all views, no actor or film-character likeness. Plain calling card separate beside the hat, unprinted. Two ordinary arms, hands and legs; five fingers per hand. Neutral studio board, no arcade. Attached Player Two sources are rendering/material guides unless a specific shared design is requested above; preserve that design only. Do not copy unrelated subjects or the source board layout.",
     "sources": [
       "stories/player-two/references/player-mica.webp"
-    ]
+    ],
+    "reviewedSha256": "5f9ec78fd7b593ae73db832e6e5007a7f26a4d77a112f56dedba2ed3f7679a81"
   },
   {
     "id": "league-cast",
@@ -27,7 +29,8 @@
     "prompt": "Use case: illustration-story. Production reference sheet, 1536x1024 landscape, warm pale parchment background. Warm 1980s space-adventure illustration, clean ink outlines, painted saturated colour, expressive invented faces, cinematic light, family-friendly with a comic edge. Clear separated design views, not a story event. No real people's likenesses, no copied franchise character designs, no weapons-focused imagery, violence, logos, legible text or captions. Only specified subjects. Earth is dry summer 1984; enclosed interiors have artificial shipboard-night light; space is weatherless vacuum. This board locks design only, never possession, accompaniment, completed work or story outcome. Three separated original character designs, each one full-body figure plus a large matching head detail directly above it. LEFT TAVI RENN: adult alien woman, blue-grey skin, short upright WHITE crest along crown, broad nose, expressive dark eyes, no horns; a charcoal flight suit with narrow orange seams and soft black boots. CENTER GRIG: friendly broad reptilian alien with mottled ochre skin, rounded RIDGED head, deep-set kind eyes and wide expressive mouth; a tan flight suit with dark brown cuffs and dark brown boots. RIGHT NEVE SORN: middle-aged alien woman, amber skin, exactly TWO short rounded blunt domed horn nubs, about 2 cm high, never pointed cones, dark close-cropped curls, copper round spectacles; an olive work coat, cream trousers and brown lace-up shoes. Match each head detail to its figure, keep horns, crest and ridges distinct. Each has two ordinary arms and hands, five digits per hand, no tail or wings. No actor likenesses, no hats, gear or props. Attached Player Two sources are rendering/material guides unless a specific shared design is requested above; preserve that design only. Do not copy unrelated subjects or the source board layout.",
     "sources": [
       "stories/player-two/references/player-mica.webp"
-    ]
+    ],
+    "reviewedSha256": "88778fa7f6b37731838cdd1ab157af1724d9d0f484e1bdbfcad02a2da5362968"
   },
   {
     "id": "starfighter-cabinet",
@@ -43,7 +46,8 @@
     ],
     "sources": [
       "stories/player-two/references/player-mica.webp"
-    ]
+    ],
+    "reviewedSha256": "8c2b38cdfcba30e87c04a6dfe7efdc9343265387051a919d661cdc9b9b089b59"
   },
   {
     "id": "gunstar-hull",
@@ -60,7 +64,8 @@
     ],
     "sources": [
       "stories/player-two/references/player-mica.webp"
-    ]
+    ],
+    "reviewedSha256": "318fc4bce56d49f2b1541960cbfed0fe011b1e4463ceecb78ebc63c4487c8920"
   },
   {
     "id": "gunstar-cockpit",
@@ -88,7 +93,8 @@
     ],
     "sources": [
       "stories/player-two/references/gunstar-hull.webp"
-    ]
+    ],
+    "reviewedSha256": "5e38e3a02514352d6ca4a3a01609381fdf63af376d66d0912f437e4c24ed3046"
   },
   {
     "id": "output-adapter",
@@ -105,7 +111,8 @@
     ],
     "sources": [
       "stories/player-two/references/gunstar-cockpit.webp"
-    ]
+    ],
+    "reviewedSha256": "fd3f13cef1d391d177e8da2b1a1ba246ec0b7016e29d25ff836f56603e1857e1"
   },
   {
     "id": "league-workshop",
@@ -125,7 +132,8 @@
     ],
     "sources": [
       "stories/player-two/references/gunstar-cockpit.webp"
-    ]
+    ],
+    "reviewedSha256": "5605a7c9996973d45c9401a391bbdadc13b9148aba77a4ad594ef00bd545b9df"
   },
   {
     "id": "engineering-props",
@@ -163,14 +171,15 @@
     ],
     "sources": [
       "stories/player-two/references/output-adapter.webp"
-    ]
+    ],
+    "reviewedSha256": "af0c175aa40ca6968972e69392465e8886b750173d367a665d28e5b655e7912e"
   },
   {
     "id": "latchpoint-exterior",
     "subjects": [
       "outpost"
     ],
-    "prompt": "Use case: illustration-story. Production reference sheet, 1536x1024 landscape, warm pale parchment background. Warm 1980s space-adventure illustration, clean ink outlines, painted saturated colour, expressive invented faces, cinematic light, family-friendly with a comic edge. Clear separated design views, not a story event. No real people's likenesses, no copied franchise character designs, no weapons-focused imagery, violence, logos, legible text or captions. Only specified subjects. Earth is dry summer 1984; enclosed interiors have artificial shipboard-night light; space is weatherless vacuum. This board locks design only, never possession, accompaniment, completed work or story outcome. LATCHPOINT architectural reference, weatherless vacuum, calm technical views on pale board. ONE large mildly elevated FACE-ON view of silver-grey WHEEL shelter attached by exactly THREE short braces to ONE dark irregular rock. Warm rectangular habitation windows around ring; exactly SIX broad folding shield vanes spaced around rim, one thin survey mast ABOVE ring, modest freight platform BELOW, small port for berth-two boarding tube on lower right ring. Show all six vanes clearly at 12, 2, 4, 6, 8 and 10 o\u2019clock, avoid hidden extra fins and additional whole-station views. Separate one-vane hinge/bearing detail, neutral intact state. Survey mast and shield vanes are separate systems. No planet/city, people, suitless figures, weapons or Gunstar. Two close hinge/vane angle details do not imply defence success; window light and equipment condition are scene states. Attached Player Two sources are rendering/material guides unless a specific shared design is requested above; preserve that design only. Do not copy unrelated subjects or the source board layout.",
+    "prompt": "Use case: illustration-story. Production reference sheet, 1536x1024 landscape, warm pale parchment background. Warm 1980s space-adventure illustration, clean ink outlines, painted saturated colour, expressive invented faces, cinematic light, family-friendly with a comic edge. Clear separated design views, not a story event. No real people's likenesses, no copied franchise character designs, no weapons-focused imagery, violence, logos, legible text or captions. Only specified subjects. Earth is dry summer 1984; enclosed interiors have artificial shipboard-night light; space is weatherless vacuum. This board locks design only, never possession, accompaniment, completed work or story outcome. LATCHPOINT architectural reference, weatherless vacuum, calm technical views on pale board. ONE large mildly elevated FACE-ON view of silver-grey WHEEL shelter attached by exactly THREE short braces to ONE dark irregular rock. Warm rectangular habitation windows around ring; exactly SIX broad folding shield vanes spaced around rim, one thin survey mast ABOVE ring, modest freight platform BELOW, small port for berth-two boarding tube on lower right ring. Show all six vanes clearly at 12, 2, 4, 6, 8 and 10 o’clock, avoid hidden extra fins and additional whole-station views. Separate one-vane hinge/bearing detail, neutral intact state. Survey mast and shield vanes are separate systems. No planet/city, people, suitless figures, weapons or Gunstar. Two close hinge/vane angle details do not imply defence success; window light and equipment condition are scene states. Attached Player Two sources are rendering/material guides unless a specific shared design is requested above; preserve that design only. Do not copy unrelated subjects or the source board layout.",
     "pages": [
       "C05",
       "C06",
@@ -184,7 +193,8 @@
     ],
     "sources": [
       "stories/player-two/references/gunstar-hull.webp"
-    ]
+    ],
+    "reviewedSha256": "3ce6561e305c0e5418061f5fd302ea73c079f459fd72d85c352f8bfe6a75acd2"
   },
   {
     "id": "latchpoint-rooms",
@@ -200,7 +210,8 @@
     ],
     "sources": [
       "stories/player-two/references/latchpoint-exterior.webp"
-    ]
+    ],
+    "reviewedSha256": "6dac1ba65dbdf6697a1e7a306e3937e8ba5b36285567b07d3f96d220843bcb3b"
   },
   {
     "id": "latchpoint-gantry",
@@ -217,7 +228,8 @@
     ],
     "sources": [
       "stories/player-two/references/latchpoint-rooms.webp"
-    ]
+    ],
+    "reviewedSha256": "b3ec0966a9435f9c98e4088edc13a061325812aa58c0ace3bc369c4186e331e5"
   },
   {
     "id": "cooling-connector",
@@ -232,7 +244,8 @@
     "sources": [
       "stories/player-two/references/latchpoint-gantry.webp",
       "stories/player-two/references/engineering-props.webp"
-    ]
+    ],
+    "reviewedSha256": "184a8ba5926314fcc2897782bd2576d35463a69868aec7bd23d0168bbefffedd"
   },
   {
     "id": "freight-and-corridor",
@@ -253,7 +266,8 @@
     "sources": [
       "stories/player-two/references/gunstar-hull.webp",
       "stories/player-two/references/latchpoint-exterior.webp"
-    ]
+    ],
+    "reviewedSha256": "42a426c302ee04c4da4a337c58e1ac10b20a58e2caf6748ebfa4a28c4a431ff7"
   },
   {
     "id": "bellwether",
@@ -271,6 +285,7 @@
     "sources": [
       "stories/player-two/references/player-mica.webp",
       "stories/player-two/references/starfighter-cabinet.webp"
-    ]
+    ],
+    "reviewedSha256": "a0159536057064b2ecbb3beefde0f782136caf14e901c72e07af71cee5622314"
   }
 ]
