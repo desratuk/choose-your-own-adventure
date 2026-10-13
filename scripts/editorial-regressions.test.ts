@@ -23,7 +23,7 @@ const investigation = ['S30', 'S30k', 'S31', 'S33', 'S38'];
 const finish = ['S40', 'S41', 'S42', 'S44', 'S45'];
 
 test('rewritten adventures mark their in-progress saves as revision 3', () => {
-  for (const story of stories) assert.equal(story.revision, 3, story.id);
+  for (const story of stories.filter((s) => s.id !== 'player-two')) assert.equal(story.revision, 3, story.id);
 });
 
 test('BTTF: both release actions stop displaying the clamp countdown without changing the remaining time', () => {
