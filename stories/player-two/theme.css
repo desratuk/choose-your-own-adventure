@@ -1,0 +1,41 @@
+/* Warm arcade light gives way to the Gunstar's blue instruments. */
+[data-story='player-two'] {
+  --bg: #111827;
+  --surface: #1c2940;
+  --ink: #f3f2e9;
+  --muted: #b0bfd2;
+  --accent: #ffc56e;
+  --accent-2: #6ad9ed;
+}
+
+[data-story='player-two'][data-era='earth'] {
+  --bg: #211723;
+  --surface: #322339;
+  --muted: #c9b4ce;
+  --accent: #ffd17d;
+  --accent-2: #82ddcf;
+}
+
+[data-story='player-two'][data-era='league'] {
+  --bg: #15202b;
+  --surface: #223443;
+  --muted: #b3c5cf;
+  --accent: #a8e2d4;
+  --accent-2: #ffd088;
+}
+
+[data-story='player-two'][data-era='outpost'] {
+  --bg: #201c18;
+  --surface: #352c24;
+  --muted: #cabeaa;
+  --accent: #ffd180;
+  --accent-2: #a3d9d0;
+}
+
+[data-story='player-two'][data-era='defence'] {
+  --bg: #101627;
+  --surface: #1b2740;
+  --muted: #b0c0da;
+  --accent: #89e0f3;
+  --accent-2: #ffc576;
+}
