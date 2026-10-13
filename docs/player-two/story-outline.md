@@ -36,7 +36,7 @@ Any other people are unnamed ordinary workers or family heard offstage, not addi
 - The armada's local detachment has unmanned scouts directed by a tender. No biological enemy is shown being harmed. Holding off this detachment does not defeat the entire armada. The relief force, not the player, secures the larger corridor.
 - Scouts acquire targets from returned survey pulses, not eyesight. Their tender samples the reply during the dark interval after its transmitted pulse. C03 provides a recorded signature proving which interval belongs to this detachment; the ship's ordinary radar display alone cannot supply that record.
 - A diagnostic latch can hold a false output while the equipment behind it continues working. The arcade demonstrates the principle. B03 tests and records the Gunstar adapter's pin assignment. D03 physically traces the outpost's grey diagnostic socket to the survey mast, separately from the shield power feeder. These are three distinct facts, not three passwords.
-- Best: patch the identified isolated diagnostic socket to the survey mast and close the switch in the dark interval, using the recorded enemy reply. The scouts receive a false empty-space position while the real shield keeps running. The unchanged outpost equipment records both sides of the successful signal, so the relief engineers can repeat the defence if the detachment returns.
+- Best: put the survey mast's identified grey socket on the adapter's isolated output and close the switch in the dark interval, using the recorded enemy reply. The scouts receive a false empty-space position while the real shield keeps running. The unchanged outpost equipment records both sides of the successful signal, so the relief engineers can repeat the defence if the detachment returns.
 - Ordinary shunt defence holds the habitation shield but burns out the exposed freight/navigation equipment. Optional tug assistance PLUS securing stores preserves the freight through that operation. A feeder-tracing route may instead use the remote handwheel to rotate shield vanes, saving the outpost while accepting a long repair. A bright decoy pulls only scouts away, leaving the tender free to force evacuation; this is a plausible incomplete tactical plan, not a punishment for cowardice.
 - Nobody is graphically hurt. Failure means lost placement, a disabled assignment or an evacuated/lost outpost. Safe refusal is good. Waiting in the berth after accepting the mission fails the defence but permits orderly evacuation.
 
@@ -47,6 +47,7 @@ Any other people are unnamed ordinary workers or family heard offstage, not addi
 | `charge` | Visible numeric JUMP CHARGE, format number, unit %. Defaults to 90. |
 | `difficulty` | easy / medium / hard |
 | `running` | Meter active from A05 until the selected resolution, false in every ending. |
+| `returnedFromDock` | B09 refusal returns home by a League passenger flight; E01 does not replay the Earth invitation. |
 | `splitMinimum` | Fixed taught threshold, 20; interpolated in prose rather than hard-coded current readings. |
 | `latchTest` | B03 adapter pin assignment measured and recorded; one-use visit. |
 | `sleeve` | B04 insulated connector sleeve issued; remains with the ship if fitted. One-use visit. |
@@ -109,19 +110,19 @@ No companion recalls the clue chain at the decisive choice. The qualified patch 
 | Section | Routes |
 |---|---|
 | Earth | A01 cabinet delivery → A02 repair → A03 recruiter → A04 invitation → E01 refusal OR A05 pilot/ship → A06 first hop → B01. |
-| Training | B01 introduction → B02 finite workbench hub. B03 adapter, B04 sleeve, B05 conversation return to B02. B06 simulator → B07 isolated repair OR B08 restart → B07 OR E02 false sign-off. B07 → B09 dispatch. |
+| Training | B01 introduction → B02 finite workbench hub. B03 adapter, B04 sleeve, B05 conversation return to B02. B06 simulator → B07 isolated repair OR B08 restart → B07 OR E02 false sign-off. B07 → B09 dispatch, with the promised optional passage home to E01 before accepting the assignment. |
 | Transit | B09 → C01 hop → C02 finite corridor hub. C03 buoy and C04 tug return to C02. C02 → C05 hop/approach → C06 receiver trim OR C07 automatic dogleg → D01 dock. |
 | Outpost | D01 Neve → D02 finite gantry hub. D03 tracing and D04 freight return to D02. D05 cooling fault → D06 brace/sleeve OR D07 pulled-plug recovery → D06. D06 → D08 defence assignment → D09 deployment OR E03 berth failure. |
 | Defence | D09 → F01. Main cable → F06 shunt → F07 aftermath → E06/E07. Measured adapter-to-grey-socket patch → F02 patch → F03 timing. Bright → F04 recovery → F03; dark with reserve → F05 split → F10 debrief → E09. Bright decoy → F08 → E05. Known feeder remote handwheel → E08. |
 | Recovery | D08/F01/F03 can reach F09 when essential charge is unavailable → E04. F09 bridges location using `station`. |
 
-Representative careful best itinerary: A01 A02 A03 A04 A05 A06 B01 B02 B03 B02 B06 B07 B09 C01 C02 C03 C02 C05 C06 D01 D02 D03 D02 D05 D06 D08 D09 F01 F02 F03 F05 F10 E09. Fast ordinary itinerary skips B03, C03 and D03, then F01 F06 F07 E06. Normal full routes target 15–25 minutes; early refusal and washout deliberately finish sooner. Actual rendered route word counts will be measured after implementation; these are reading estimates, not timed audience evidence.
+Representative careful best itinerary: A01 A02 A03 A04 A05 A06 B01 B02 B03 B02 B06 B07 B09 C01 C02 C03 C02 C05 C06 D01 D02 D03 D02 D05 D06 D08 D09 F01 F02 F03 F05 F10 E09. Fast ordinary itinerary skips B03, C03 and D03, then F01 F06 F07 E06. Normal full routes target 15–25 minutes; early refusal and washout deliberately finish sooner. The final rendered careful route has 33 page visits, 4,618 prose words and 350 offered-choice words; the fast route has 25 visits, 3,600 prose words and 252 offered-choice words. At an illustrative 200–250 words/minute, those totals suggest about 20–25 and 15–19 minutes before deliberation. These are reading estimates, not timed audience evidence; slower careful readers may exceed the target.
 
 ## Endings
 
 | ID | Title | Label and consequence |
 |---|---|---|
-| E01 | The Shop Light | Good: decline freely, continue valued repair work at home. |
+| E01 | The Shop Light | Good: decline on Earth or after training, then continue valued repair work at home. The latter has an explicit two-evening passenger-flight bridge. |
 | E02 | Back to the Bench | Bad: falsely certify the simulator; placement withdrawn, paid passage home, chance to apply later. |
 | E03 | Empty Berth | Bad: remain docked; outpost evacuated and lost, crew safe. |
 | E04 | Towline | Bad: assignment suspended for insufficient charge; ship recovered, outpost lost, no implied unpowered jump. |
@@ -136,3 +137,16 @@ Representative careful best itinerary: A01 A02 A03 A04 A05 A06 B01 B02 B03 B02 B
 Use one fixed clothing description per person in `art.cast`, supplied globally without paraphrased wardrobe in scene prompts. Player is seen from behind, face hidden; same workshop outfit throughout, with cockpit harness as installed seat equipment. Ground and dock environments support that outfit; no unprotected vacuum excursions. Name only visible cast; radio voices, Grig after departure, optional equipment and helpers stay outside merged image crops. Prompts state location, light/time and weather or enclosed/no-weather conditions. Comic machinery mishaps and remote lights replace violent combat imagery. Gunstar and Starfighter cabinet are intentional franchise props; no other famous vehicle or real likeness. Every page has an imagePrompt. No images, references, exported prompts or art-source directories in this writing phase.
 
 Regression tests exercise complete clue gates, timing recovery, each difficulty's exact best reserve, ordinary victory, pilot/radio separation, local action reset and optional freight support. Run `npm run check`, `npm run test:story`, `npm run test:art`, and manually read rendered careful/fast itineraries. The existing wildcard story test command already discovers `scripts/player-two-regressions.test.ts`; it needs no package change. Parent thread owns independent continuity review and its stamp.
+
+
+## Writing-phase validation — 13 October 2026
+
+- `npm run check`: TypeScript passed. All four stories printed **OK: every path is coherent**, with every ending reachable. Existing packs retain 11/11, 11/11 and 10/10 endings. Player Two reaches **9/9 endings**, **20,151 page/state combinations**, **34,250 distinct playthroughs**.
+- `npx tsx --test scripts/player-two-regressions.test.ts`: **19/19 pass**. The existing `test:story` wildcard discovers the file without any package-script change.
+- `npm run test:story`: **82/83 pass**. The sole failure is the pre-existing all-stories revision-3 assertion at `scripts/editorial-regressions.test.ts:26`, which rejects this required revision-1 pack. The user explicitly instructed the writer to **leave that shared test unchanged and report the failure**. All other existing tests and all new tests pass. No other story was revised.
+- `npm run test:art`: **3/4 pass**. The only failure is `player-two: create references/manifest.json before generating art.` References and images are expressly deferred; no gate was bypassed and no reference, prompt export or art-source directory was created.
+- `npx tsx /tmp/player-two-read.ts`: a temporary read-through harness rendered the actual Medium careful and fast routes through the engine, including visible choices and charge. The writer read both from start to ending. It measured the word counts above; it is not an independent blind-reader or timed audience test.
+- Self-read corrections: afternoon cabinet arrival allows the local tracing attempts before dusk; Grig explicitly issues the notebook; optional live exercises are distinguished from the mandatory dock-powered simulator; hub exposition does not repeat after completed visits; speaker shutdown happens before its audible payoff; the removable adapter is explicitly returned to the ship; the ordinary defence does not assume an opened adapter; the promised post-training refusal is playable. Neve does not know a private earlier naming joke she never heard.
+- `git diff --check`: clean. Only the new bible, new pack, new regression test and last-place registration are changed. Shared revision test remains untouched.
+
+Independent continuity review is **pending with the parent thread**. The writer has not created or changed `.continuity-review`. No known unresolved path contradiction remained in the two self-read routes; the main review focus is newcomer comprehension of the signal/power split and the upper end of the careful-route length. This is an implementation handoff, not an independent editorial clearance.

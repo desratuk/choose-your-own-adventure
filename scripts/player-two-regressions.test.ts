@@ -79,7 +79,7 @@ test('Player Two: the complete defence spends 70 and preserves the split reserve
     assert.equal(result.state.tugHelp, false);
     assert.equal(result.state.storesSecured, false);
     assert.match(result.texts.get('F05')!, new RegExp(`remaining ${remaining}%`));
-    assert.match(result.texts.get('B02')!, /at least 20% before you start/);
+    assert.match(walk(opening, difficulty).text, /at least 20% before you start/);
     assert.match(result.text, /relief crew recharges the Gunstar/i);
   }
 });
@@ -249,6 +249,19 @@ test('Player Two: refusal, washout, berth failure and decoy failure have distinc
   assert.equal(decoy.page.ending?.kind, 'bad');
   assert.match(decoy.text, /external supply takes over/);
   for (const result of [declined, washed, berth, decoy]) assert.equal(result.state.running, false);
+});
+
+test('Player Two: the promised post-training refusal returns home without replaying the Earth invitation', () => {
+  const result = walk([...opening, 'B03', 'B02', 'B06', 'B07', 'B09', 'E01']);
+  assert.equal(result.page.ending?.kind, 'good');
+  assert.equal(result.state.returnedFromDock, true);
+  assert.equal(result.state.charge, 75);
+  assert.equal(result.state.running, false);
+  assert.match(result.text, /promised passenger berth on an Earth-bound supply flight/);
+  assert.doesNotMatch(result.text, /tell Centauri you are staying/);
+  const early = walk(['A02', 'A03', 'A04', 'E01']);
+  assert.equal(early.state.returnedFromDock, false);
+  assert.doesNotMatch(early.text, /At the League dock/);
 });
 
 test('Player Two: depleted outpost and deployed recoveries keep pilot and remote instructors in place', () => {
