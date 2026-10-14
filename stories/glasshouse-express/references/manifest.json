@@ -288,7 +288,8 @@
     "prompt": "Use case: illustration-story. Production reference sheet, 1536x1024 landscape, warm pale parchment background. Painterly 1980s fantasy-adventure illustration, gouache and ink line, luminous frost blues and warm glasshouse amber, expressive invented faces, cinematic light, family-friendly and gently comic. Clear separated design views, not a story event. No real people's likenesses, no copied franchise designs, no famous trains, no weapons, no logos, no legible text or captions (maker's plates, signs and cassette labels are blank or unreadable). Only specified subjects. The story's night is clear with hard frost and stars; interiors are lamplit; dawn is clear and golden. This board locks design only, never possession, accompaniment, plant state or story outcome. Landmark board for FERNHALLOW HALT and the incline, no people. TOP: a tiny wooden shelter with one oil lamp, a wooden grit bin with a tin bucket hanging on it, the rails climbing steeply ahead glassy with ice into a stone-arched tunnel mouth cut into a snowy pine-covered hillside, a carved blank keystone over the arch. BOTTOM LEFT: the tunnel interior: sooty wet black stone arch, water glistening, rails disappearing into dark. BOTTOM RIGHT: the summit cut above the tunnel: a shelf of track between snowy rock walls opening onto a wide view, with the dark dome of the Conservatory ahead on the summit. Attached Glasshouse Express sources are rendering/material guides unless a specific shared design is requested above; preserve that design only. Do not copy unrelated subjects or the source board layout.",
     "sources": [
       "stories/glasshouse-express/references/mere-and-beacon.webp"
-    ]
+    ],
+    "reviewedSha256": "4e0bf61591ca66c58bd9cdfd2cef6ad3ba10cb58de126a0556f5f9aa588a7eec"
   },
   {
     "id": "conservatory-exterior",
