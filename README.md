@@ -40,6 +40,25 @@ A *Ghostbusters* adventure. You're a bicycle courier with one last job on a rain
 
 > Unofficial, non-commercial fan project. It is not affiliated with or endorsed by the owners of *Ghostbusters*. See [Licence](#licence).
 
+### Player Two
+
+A *Last Starfighter* adventure. You keep a small-town arcade's machines working, including a new cabinet whose scores travel somewhere nobody can trace. The Star League offers you a flight-engineer placement beside pilot Tavi Renn. An outpost needs your diagnostic skills to hold out until relief arrives.
+
+- **50 pages** with **9 endings** (4 bad, 5 good, one best), each clearly labelled.
+- **No need to have seen the film.**
+- **A visible jump-charge meter.** Tests, detours and recovery work spend the reserve needed to defend the outpost. Measured wiring and recorded signals hold the clues.
+- **A fade transition** between Bellwether, the League service dock, the freight corridor and Latchpoint.
+
+> Unofficial, non-commercial fan project. It is not affiliated with or endorsed by the owners of *The Last Starfighter*. See [Licence](#licence).
+
+### The Last Skyway
+
+An original mountain adventure set in November 1986. As a young maintenance apprentice, you help a tram crew bring a stranded cabin down from an observatory before a snow front closes the rescue window. Wind observations, old wiring records and a mechanical governor decide what you can bring home intact.
+
+- **48 pages** with **10 endings** (4 bad, 6 good, one best), each clearly labelled.
+- **A visible rescue-window countdown.** Investigations and recoverable mistakes use time; careful work preserves a reserve for the final equipment shutdown.
+- **Alternative successes:** shelter the cabin or protect the refuge's heat plant when a full descent is no longer the right job.
+
 ## Running it
 
 Requires Node 20.19+ or 22.12+ (use nvm to switch).
@@ -58,6 +77,7 @@ Open http://localhost:5173.
 | `npm run build` | Runs `check`, then builds a static site into `dist/`, which can be hosted anywhere (GitHub Pages, Netlify and so on). |
 | `npm run prompts` | Regenerates the image-generation prompts for each page. |
 | `npm run images` | Converts new or updated illustrations to the WebP files the game uses. |
+| `npm run test:art` | Checks that every page has a game WebP and that recurring subjects have reviewed reference sheets. |
 | `npm run story-dump -- <id>` | Prints a story as plain text with its branching logic, for review. |
 
 - `?story=<id>` opens a specific story, skipping the picker.

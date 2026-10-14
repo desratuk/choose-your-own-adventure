@@ -1,0 +1,63 @@
+# The Midnight Signal — continuity review
+
+## Round 1 — FINDINGS (not stamped)
+
+- Reviewed: `stories/midnight-signal/story.ts` at merge `d05f36d`, sha256 `f1529fa36be132a9fa834f3292aeb19dc8a70adb5c876c0ee6efc72c783b913d`.
+- Method: `.claude/agents/story-continuity-reviewer.md`. Every page read against every "Possible on arrival" flag set in `npm run -s story-dump -- midnight-signal`, checked against `CLAUDE.md` and `docs/midnight-signal/story-outline.md`.
+- Passed without findings: the reserve arithmetic (clean best leaves 40/25/10; Medium survives exactly one 15-point error; the Hard shelter call blocks best), ending labels (E10 best; E02, E03, E05 and E07 bad), the clue chain (A05, B03, B04 and C03 feed D04/D05; A06 is optional because D03 is a free correction), the A02 spool/lamp event, cassette custody, and the unexplained physics in D08/E10.
+
+Paragraph indexes are zero-based, as in the story dump.
+
+### 1. C08 [0]: evacuation is never narrated on direct arrivals and the wording hedges
+- **Trigger:** C02 "Ask for manual evacuation" or C04 "Leave the gates…" (`drained=false`), including C06→C04→C08 (`wrong=true`).
+- **Defect:** On a direct arrival, the player asks for evacuation and the next sentence says the crew are already safe in the shelter. The rescuers' arrival and the wait in between are covered only by "If the gates were left alone, the rescuers used…", which tells the reader about other routes. That sentence also appears on the C05/C07 route, where the gates were operated. On the C06 route Jo did work the gates, so the "left alone" condition misdescribes what happened.
+- **Fix:** Split [0] on `drained`. If not drained: "Jo leaves the levers locked. Twenty minutes later the road rescue team arrives through the covered passage; you stay in the gallery while they bring Ellis, Nessa and Kit along the upper service connection to the brick shelter. Nobody enters the lower chamber." Otherwise: "With the handover complete, the three Petrel crew are safe in the brick shelter."
+
+### 2. A07 [1]: hill repeater, its acknowledgement and "the little tone" assumed without A06
+- **Trigger:** A04→A07 with `wiring=false`.
+- **Defect:** The text says the repeater's acknowledgement "was already audible on low power" and that "the little tone could have established" it. On this route the player has never heard of the repeater, its two ticks or the tone generator. "Repeater" is defined only in A06, but C10 [2] and D02 [0] rely on it, so a newcomer on a `wiring=false` route never gets a definition.
+- **Fix:** In A07, have Mara say: "The hill repeater (a mast that relays our signal across the valley) answers a low-power test tone with two ticks; this proved nothing that tone couldn't." Also add a short definition to C10 [2], e.g. "the hill repeater, the unattended mast that relays Gull's signal beyond the harbour".
+
+### 3. A04 [1]–[2]: gates, basin and workshop mentioned before they are introduced
+- **Trigger:** All arrivals. A04 always comes before B01.
+- **Defect:** Mara talks about "a remote gate cycle", "the council will close the basin" and "keeping their workshop open". The player knows only that the crew are "checking a pump chamber" (A03). The repair basin, its gates and the workshop first appear in B01 and later.
+- **Fix:** In A04 [1], before the costs, have Mara explain: "The pump chamber Petrel's crew are checking sits beside the harbour's old repair basin. Its water gates and the boat workshop below run from this bank." Then "the basin" and "their workshop" refer to something the reader knows.
+
+### 4. C04 choice / C06 [0]: "Open the sea inlet fully" when the inlet is already open
+- **Trigger:** All C04 arrivals.
+- **Defect:** B10 [3], C01 [0] and C03 [0] all say the inlet is OPEN. Opening it "fully" and C06's "Jo opens the inlet" then changes nothing, yet causes a surge. A careful reader notices the mechanics don't add up.
+- **Fix:** Make B10/C01/C03 say "partly open" or "jammed open a hand's width". Alternatively, change the wrong option to "Open the basin outlet first, then close the sea inlet" and rewrite C06 [0]: the outlet opens while the inlet is still open, and the surge drives through the basin. Either fix keeps the B04 rule as the deciding clue.
+
+### 5. C04 [2]–[3]: return from C06 contradicts the log and the gate history
+- **Trigger:** C06→C04 (`wrong=true`).
+- **Defect:** C06 ends with the failed sequence logged and "You turn to a fresh line". C04 then says "You put your pencil on the first line of the log" and offers an alternative "if you do not want to operate the gates", although the gates have just been operated.
+- **Fix:** Change [2] to "the next line of the log". Add a conditional to [3] when `wrong`: "The failed attempt is already recorded above. You can propose a corrected sequence, or stop operating the gates."
+
+### 6. A08 [0]: "matching" coats are different colours
+- **Trigger:** All arrivals.
+- **Defect:** Jo wears a rust-orange coat and hands the player a "matching plain yellow loan raincoat".
+- **Fix:** Drop "matching": "a plain yellow loan raincoat from the office hook".
+
+### 7. D01 [0], D02 [2], D04 [3]: "the evidence tape" / "the tape" when no copy exists; vague "it"
+- **Trigger:** `copy=false` (A05 skipped).
+- **Defect:** There is no evidence cassette. The call exists only on the logger, which A05 calls continuously running and C08 says is looping over the section, yet D02 has Mara "leave the tape stopped". In D04 [3], "the people it might have trapped" points at "the tape".
+- **Fix:** Make the tape references conditional on `copy`, or use "the report"/"the record" throughout. In D04 [3], write "…and the people tomorrow's message warned about are already safe."
+
+### 8. E01 [1], E02 [1]: "upper lobby" never introduced on these routes
+- **Trigger:** A03→E01 and A03→E02.
+- **Defect:** The upper lobby, and Jo's instruction to wait there, first appear in B01. On these routes the player last heard that the crew were "checking a pump chamber" with no instruction about where to wait.
+- **Fix:** E01: "Jo had told the crew to wait in the upper lobby above the pump chamber, away from the rising water, and they were brought out safely." E02: "Jo keeps the Petrel crew waiting in the upper lobby above the flooding chamber…"
+
+### 9. D08 [2]: comparing against a sealed copy
+- **Trigger:** All arrivals (only from D05).
+- **Defect:** D05 [1] seals the copy with the evidence as an authenticated record. D08 then has Mara compare the new tape with the "sealed earlier copy", which would mean playing the sealed tape.
+- **Fix:** "Mara compares the new message with the earlier call on the logger before it loops. They do not match." Or: "…with her transcript of the sealed copy."
+
+### 10. E04 [0]: "the service shelter" on arrivals that never reached it
+- **Trigger:** A08, B02 or B07 → E04, where B08 is unvisited.
+- **Defect:** "the harbour office, or the service shelter once the relief worker reaches it" names a place this player has never seen. The either/or also reads as if the narrator is covering several routes at once.
+- **Fix:** Use a `shelter` condition (true only via B09): if shelter, "Jo leaves you in the brick shelter until the relief worker arrives"; otherwise, "Jo leaves you at the harbour office desk with the relief worker".
+
+## Verdict
+
+FINDINGS: 10. Not stamped. Re-run the reviewer after fixes and `npm run check`.
