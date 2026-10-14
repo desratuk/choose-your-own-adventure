@@ -188,3 +188,44 @@ Also sound on every arrival state:
 - **Fix:** replace the sentence with "Behind them, out of frame, the lit bed stove casts a faint warm glow across the stone floor; no plants visible." Alternatively, "the Great Bed's stone rim at the frame's lower edge with its contents out of view". Add F04 to the bible's list of pages that hide the bed. Map no new subjects.
 
 **Verdict:** FINDINGS. 1 issue; no `.continuity-review` stamp recorded. Re-review after the fix.
+
+## Round 7 — PASS (stamped)
+
+Reviewer: independent continuity reviewer, Claude Opus 5.5 (`claude-opus-5-5`). Medium reasoning was requested; the effort level can't be seen from inside the run. Manuscript: `stories/glasshouse-express/story.ts` as in `63d7abb` (no story diff to HEAD `178d735`; the only story change since round 6 is the F04 and E07 `imagePrompt`s). Inputs: the full `story-dump` (44 pages, every arrival state), the full bible including all six response tables, rounds 1–6 of this report, project `CLAUDE.md`, all 44 `imagePrompt`s with `stylePrefix`, `art.cast` and page casts, and the reference manifest's page mappings.
+
+The round-6 fix holds. F04 now keeps the Great Bed out of frame, with only its stove glow on the floor and no plants; the page has no `stock` cast, and the manifest's `sunwort` sheet doesn't list F04. The author's same-class audit is correct on arrival states:
+- E07 (plain or over-stoked, never chilled) now keeps its leaves soft and out of focus while showing the half-bloom the prose describes.
+- E03 is always frosted.
+- E05's bed is frosting on every route.
+- E06 is cropped to buds.
+- E08 and E10 are chilled-only.
+- E09 describes no leaves.
+
+Every earlier fix still holds:
+- the planting rule
+- Dov at the token hut through C03, C04 and C05
+- Fenn's three hours and two at the gate
+- E01's five o'clock cause
+- the Hallam introduction at F04
+- sunrise at 7:30
+- C01 with no tram
+- bare ice at D07 and E04
+- the yard-gate and far-gate keys
+- E04's fuel-neutral waiting
+- F01's gate entry in both `wordSent` states
+- the four-vehicle train shown whole or deliberately cropped in every exterior view
+- the stove-lit D04, the B04 crop and B05's train clear of the facing points
+
+Also re-read and sound on every arrival state:
+- brick arithmetic, and the F03 gates (20, or 15 with Fenn's half hod) against A02's twenty/ten rule
+- clue gating of the tunnel chill and the cylinder
+- Sallow met and unmet at B08 and C04
+- the hub returns at A03, B07 and C03
+- Fenn named before C04
+- plant states through C05, D03–D06 and the endings
+- ending labels and the season ladder
+- E10's recall of A04, A05 and B09, all guaranteed on arrival
+
+`npm run check` printed "OK: every path is coherent" for all eight stories; `npm run test:story` passed 145/145.
+
+**Verdict:** PASS. No findings; `stories/glasshouse-express/.continuity-review` stamped with `node scripts/story-review-gate.mjs --stamp glasshouse-express`.
