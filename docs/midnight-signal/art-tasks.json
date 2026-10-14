@@ -10,7 +10,22 @@
     "verifiedRuntimeMode": "full-access",
     "requestedReasoningEffort": "medium",
     "reasoningVerification": "Parent observed t3_thread_configuration for this worker: modelSelection instanceId codex, model gpt-6-astra, options reasoningEffort medium, runtime full-access. Parent also verified t3_thread_read recentRuns records actual running codex/gpt-6-astra. Child runtime report may corroborate; configuration evidence supplied in parent coordination message.",
-    "verifiedConfiguredReasoningEffort": "medium"
+    "verifiedConfiguredReasoningEffort": "medium",
+    "preservedOriginalIds": [
+      "A01",
+      "A02",
+      "A03",
+      "A04",
+      "A05",
+      "A06",
+      "A07",
+      "A08",
+      "B01",
+      "B02"
+    ],
+    "originalsPreserved": "stories/midnight-signal/art-src/preserved-batch-a",
+    "status": "provider-usage-limit-partial-milestone-merged",
+    "mergedCommit": "3bf3853"
   },
   {
     "batch": "b",
@@ -23,7 +38,27 @@
     "verifiedRuntimeMode": "full-access",
     "requestedReasoningEffort": "medium",
     "reasoningVerification": "Parent observed t3_thread_configuration for this worker: modelSelection instanceId codex, model gpt-6-astra, options reasoningEffort medium, runtime full-access. Parent also verified t3_thread_read recentRuns records actual running codex/gpt-6-astra. Child runtime report may corroborate; configuration evidence supplied in parent coordination message.",
-    "verifiedConfiguredReasoningEffort": "medium"
+    "verifiedConfiguredReasoningEffort": "medium",
+    "preservedOriginalIds": [
+      "B08",
+      "B09",
+      "B10",
+      "C01",
+      "C02",
+      "C03",
+      "C04",
+      "C05",
+      "C06",
+      "C07",
+      "C08",
+      "C09",
+      "C10",
+      "D01",
+      "D02"
+    ],
+    "originalsPreserved": "stories/midnight-signal/art-src/preserved-batch-b",
+    "status": "completed-and-merged",
+    "mergedCommit": "4e566b8"
   },
   {
     "batch": "c",
@@ -36,6 +71,26 @@
     "verifiedRuntimeMode": "full-access",
     "requestedReasoningEffort": "medium",
     "reasoningVerification": "Parent observed t3_thread_configuration for this worker: modelSelection instanceId codex, model gpt-6-astra, options reasoningEffort medium, runtime full-access. Parent also verified t3_thread_read recentRuns records actual running codex/gpt-6-astra. Child runtime report may corroborate; configuration evidence supplied in parent coordination message.",
-    "verifiedConfiguredReasoningEffort": "medium"
+    "verifiedConfiguredReasoningEffort": "medium",
+    "preservedOriginalIds": [
+      "D03",
+      "D04",
+      "D05",
+      "D06",
+      "D07",
+      "D08",
+      "E01",
+      "E02",
+      "E03",
+      "E04",
+      "E05",
+      "E06",
+      "E07",
+      "E08",
+      "E09"
+    ],
+    "originalsPreserved": "stories/midnight-signal/art-src/preserved-batch-c",
+    "status": "provider-usage-limit-partial-milestone-merged",
+    "mergedCommit": "25a718f"
   }
 ]

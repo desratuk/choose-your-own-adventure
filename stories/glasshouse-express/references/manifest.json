@@ -224,7 +224,8 @@
     "prompt": "Use case: illustration-story. Production reference sheet, 1536x1024 landscape, warm pale parchment background. Painterly 1980s fantasy-adventure illustration, gouache and ink line, luminous frost blues and warm glasshouse amber, expressive invented faces, cinematic light, family-friendly and gently comic. Clear separated design views, not a story event. No real people's likenesses, no copied franchise designs, no famous trains, no weapons, no logos, no legible text or captions (maker's plates, signs and cassette labels are blank or unreadable). Only specified subjects. The story's night is clear with hard frost and stars; interiors are lamplit; dawn is clear and golden. This board locks design only, never possession, accompaniment, plant state or story outcome. Landmark board for the EMBER WORKS, no people. TOP: the siding entering a yard between high brick walls: tall brick chimneys smoking against stars, glowing kiln mouths, stacks of dark bricks under tarpaulins on pallets, the YARD GATE, a single heavy iron gate between two brick piers with a chain and padlock closed across the rails. BOTTOM LEFT: this single yard gate and its chain in close detail. BOTTOM RIGHT: the DISTINCT FAR GATE on the Mere side of the same works in grey morning light: a taller pair of iron double doors in the outer wall under a brick arch with an unlit lamp above, chained shut across the internal rails. These are two different gates, not two lighting states of one gate. Blank hoardings only; no logos or legible text. Attached Glasshouse Express sources are rendering/material guides unless a specific shared design is requested above; preserve that design only. Do not copy unrelated subjects or the source board layout.",
     "sources": [
       "stories/glasshouse-express/references/winter-terminus.webp"
-    ]
+    ],
+    "reviewedSha256": "1f5f8eb6cb5434709589727c6d6576542d844d709ba832ba5a8b1214b2592b16"
   },
   {
     "id": "tallow-street-and-halt",
@@ -254,7 +255,8 @@
     "prompt": "Use case: illustration-story. Production reference sheet, 1536x1024 landscape, warm pale parchment background. Painterly 1980s fantasy-adventure illustration, gouache and ink line, luminous frost blues and warm glasshouse amber, expressive invented faces, cinematic light, family-friendly and gently comic. Clear separated design views, not a story event. No real people's likenesses, no copied franchise designs, no famous trains, no weapons, no logos, no legible text or captions (maker's plates, signs and cassette labels are blank or unreadable). Only specified subjects. The story's night is clear with hard frost and stars; interiors are lamplit; dawn is clear and golden. This board locks design only, never possession, accompaniment, plant state or story outcome. Interior board, no people. LEFT: Nan Perrow's lean-to glasshouse interior: old mismatched window frames, a paraffin heater glowing, a warm high shelf of bowls with white hyacinth spikes in bud and one sad bowl of leaves only, an open trapdoor to a cold brick cellar with more bowls showing green tips, condensation on panes. RIGHT: the Beacon Cut radio studio cabin interior: egg-crate foam walls, a mixing desk with glowing meters and faders, twin turntables, a cassette deck, a desk microphone on a boom, a telephone, and a window looking steeply down into a rock cutting with rails. Small inset: a tram depot inspection pit with work lamps. Attached Glasshouse Express sources are rendering/material guides unless a specific shared design is requested above; preserve that design only. Do not copy unrelated subjects or the source board layout.",
     "sources": [
       "stories/glasshouse-express/references/tallow-street-and-halt.webp"
-    ]
+    ],
+    "reviewedSha256": "e4395651c482f26cdd95f167d1d06703e22842d6c5e867819f6a6f9b7d74a796"
   },
   {
     "id": "mere-and-beacon",
@@ -288,7 +290,8 @@
     "prompt": "Use case: illustration-story. Production reference sheet, 1536x1024 landscape, warm pale parchment background. Painterly 1980s fantasy-adventure illustration, gouache and ink line, luminous frost blues and warm glasshouse amber, expressive invented faces, cinematic light, family-friendly and gently comic. Clear separated design views, not a story event. No real people's likenesses, no copied franchise designs, no famous trains, no weapons, no logos, no legible text or captions (maker's plates, signs and cassette labels are blank or unreadable). Only specified subjects. The story's night is clear with hard frost and stars; interiors are lamplit; dawn is clear and golden. This board locks design only, never possession, accompaniment, plant state or story outcome. Landmark board for FERNHALLOW HALT and the incline, no people. TOP: a tiny wooden shelter with one oil lamp, a wooden grit bin with a tin bucket hanging on it, the rails climbing steeply ahead glassy with ice into a stone-arched tunnel mouth cut into a snowy pine-covered hillside, a carved blank keystone over the arch. BOTTOM LEFT: the tunnel interior: sooty wet black stone arch, water glistening, rails disappearing into dark. BOTTOM RIGHT: the summit cut above the tunnel: a shelf of track between snowy rock walls opening onto a wide view, with the dark dome of the Conservatory ahead on the summit. Attached Glasshouse Express sources are rendering/material guides unless a specific shared design is requested above; preserve that design only. Do not copy unrelated subjects or the source board layout.",
     "sources": [
       "stories/glasshouse-express/references/mere-and-beacon.webp"
-    ]
+    ],
+    "reviewedSha256": "4e0bf61591ca66c58bd9cdfd2cef6ad3ba10cb58de126a0556f5f9aa588a7eec"
   },
   {
     "id": "conservatory-exterior",
