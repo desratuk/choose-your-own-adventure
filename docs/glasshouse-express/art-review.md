@@ -120,3 +120,13 @@ F05 is NOT yet approved: fully visible closed shutter bank appears to contain fe
 - F06: `9eae01bf24bbf5c5bea33bcd721ffaf8e966305c0816e8e76aca6268092bba88` (approved)
 
 F05 correction `95362a3` normally merged and independently approved after full-size PNG/WebP inspection: twelve separate closed tall shutter leaves now countable, with three identities/wardrobes, unreadable shadowed bed, low open louvres and golden floor light preserved. Supersedes the pending F05 decision above. Selected PNG hash `13d4e37d7a8742690e2d4fc6ca54a1ae796d138ccbee7b788e8fe8b261bb319b`; final WebP `408d2b5ebc307c3af15155303410a558efa7d69c643b839c7c9c5caee5285b36`. Correct dimensions verified; selected/rejected originals retained owner-side. Eight of 44 scenes approved.
+
+## Terminus scenes approved
+
+Normally merged actual town milestone `8878474`. Owner independently inspected full-size selected PNGs and final WebPs for A02–A06 against exported prompts. A02 preserves seated Hesper identity, supported bandaged left ankle/tartan blanket and checklist gesture. A03 has closed copper buds, coherent platform doorway, stove/brick locker/checklist and hanging guarded thaw-lamp. A04 has seated hidden-face player, recorder key gesture, matching cassette tin and healthy closed buds. A05 has roof walkway, closed vents, mounted frost-whitened cylinder/oval plate and blue thaw flame, with two dark trailing cars. A06 has two dark empty trailing carriages, dark signal cabin, player hand on window frame and healthy closed buds. All five approved; originals/rejections preserved owner-side and dimensions verified. Thirteen of 44 scenes now approved; remaining batches continue.
+
+- A02: `fa56f5c668da7b3ffc728412bcfd9d7294d1cf27b2a968f933de9287c07533d1`
+- A03: `d507fa6580de5bae7a2b5ac317012c8fa3d5e30b8152c8a41b800883847d9f03`
+- A04: `5eabc2f9106f1ef198f770f4476016ad25437c10692bad5a67d0d7adbc10fc20`
+- A05: `5e06c8483ff9a76b443fda26655211c0be33feb3322cc2b92da13603cfd96677`
+- A06: `b2d2e3c9285971203b24868161a0bc6b52bdefedeecd99476f46bdc88817c55c`
