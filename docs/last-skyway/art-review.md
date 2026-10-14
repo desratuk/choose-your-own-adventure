@@ -2,7 +2,7 @@
 
 ## Production status
 
-Four of ten reference sheets reviewed; zero of 48 scene illustrations generated.
+Seven of ten reference sheets reviewed; zero of 48 scene illustrations generated.
 Scene generation is held for the parent's independent continuity pass. Round-one
 findings at `96050c1` are being corrected by the manuscript owner. Machinery and
 location references await the exact revised manuscript to avoid freezing stale
@@ -51,3 +51,28 @@ inspection. Full PNG originals and rejected versions remain in ignored
 No scene batch has been delegated yet. After all references and manuscript pass,
 commit approved references and export prompts with the existing reference gate,
 then delegate three disjoint Astra Medium worktree batches of sixteen pages.
+
+## Prop and interior reference review
+
+- **Plate box and wrap:** closed wooden box with brass corners and two silver
+  catches; flat cream wrap, fitted wrap and folded-in-bag variants remain
+  separate. Exactly two orange straps; single slate bag strap matches apprentice.
+  No glass visible. Apprentice sheet attached as identity/style reference.
+- **Refuge and greenhouse:** cream/green room, three closed bunk curtains, kettle,
+  table and separate greenhouse with biscuit-tin seedlings and guarded radiator.
+  Closed plate-box identity matches attached approved prop sheet. Snow is an
+  ending weather variant, not a mandate for D07 or D08.
+- **Gallery and relay:** four distinct interior panels, protected pipe corridor,
+  pendulum-clock landing, stairs/lift and guarded machinery with separate battery
+  rack. Initial tool and key drift required two corrections: exact orange test
+  lamp, insulated probe, square key shoulder/round tip, round lock socket and
+  reset button. Apprentice reference was attached for tool identity.
+
+All three final WebPs were inspected at original 1536×1024 resolution before
+recording their approval hashes. Conversion was q88 without resizing. Generation
+used each manifest brief with explicit reference-role constraints; rejected
+versions remain under art-src/references/corrections.
+
+Validation so far: story-dump completed; eight focused Last Skyway regression
+tests passed on the pre-correction manuscript. These do not replace the pending
+independent continuity pass or final art checks.
