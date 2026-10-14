@@ -141,7 +141,7 @@ test('Last Skyway: wrong governor is safely overridden but cannot be certified a
 
 test('Last Skyway: early and late cancellations preserve locations and movement history', () => {
   assert.equal(walk(['A02', 'A03', 'E01']).state.running, false);
-  assert.match(walk([...opening, 'E02']).text, /follow the enclosed service route back/);
+  assert.match(walk([...opening, 'E02']).text, /cross the lower dispatch room to the workshop bench/);
   const beforeCabin = careful.slice(0, careful.indexOf('D08'));
   assert.match(walk([...beforeCabin, 'E05']).text, /short|level|receiving cradle/);
   const beforeHeat = careful.slice(0, careful.indexOf('D01'));
@@ -187,4 +187,92 @@ test('Last Skyway: every reachable state preserves budgets, complete certificati
       queue.push({ id: c.to, state: next });
     }
   }
+});
+
+
+test('Last Skyway review: equipment certification survives the no-wrap E07 outcome', () => {
+  const noWrap = omitVisit(complete, 'B04');
+  for (const difficulty of DIFFICULTIES) {
+    const result = walk([...noWrap, 'E07'], difficulty);
+    assert.equal(result.state.blankets, false);
+    assert.match(result.texts.get('F08')!, /finish the auxiliary drain-down/);
+    assert.match(result.text, /auxiliary drain-down is complete/);
+    assert.match(result.text, /routine morning inspection/);
+    assert.match(result.text, /coatings fogged/);
+    assert.doesNotMatch(result.text, /winter work|tram needs more work/);
+  }
+  const limited = walk([...omitVisit(noWrap, 'B02'), 'E07']);
+  assert.match(limited.text, /isolated for winter work/);
+  assert.doesNotMatch(limited.text, /drain-down is complete/);
+});
+
+test('Last Skyway review: names are introduced before A03 refusal and every early refuge ending', () => {
+  const declined = walk(['A02', 'A03', 'E01']);
+  assert.match(declined.texts.get('A02')!, /Fen, the observatory cook, and Ellis, a telescope technician/);
+  assert.ok(!declined.texts.has('A06'));
+  assert.match(declined.text, /Mara, Fen and Ellis/);
+  const beforeContact = careful.slice(0, careful.indexOf('D05'));
+  for (const route of [beforeContact, [...beforeContact, 'D05']]) {
+    const result = walk([...route, 'E04']);
+    assert.ok(!result.texts.has('D07'));
+    assert.match(result.texts.get('A02')!, /Fen, the observatory cook/);
+    assert.match(result.text, /follow Mara through the enclosed link into the refuge/);
+  }
+  assert.match(walk(careful).texts.get('D07')!, /meet Fen, the cook, and Ellis, the telescope technician, in person/);
+});
+
+test('Last Skyway review: dispatch aborts stay local and actual gallery arrivals retrace their route', () => {
+  for (const route of [opening, [...opening, 'B05']]) {
+    const result = walk([...route, 'E02']);
+    assert.equal(result.state.enteredGallery, false);
+    assert.match(result.text, /cross the lower dispatch room/);
+    assert.doesNotMatch(result.text, /retrace the enclosed service gallery|door unlatched/);
+  }
+  for (const route of [[...opening, 'B05', 'B07'], careful.slice(0, careful.indexOf('D01'))]) {
+    const result = walk([...route, 'E02']);
+    assert.equal(result.state.enteredGallery, true);
+    assert.match(result.text, /retrace the enclosed service gallery to the lower workshop/);
+    assert.doesNotMatch(result.text, /cross the lower dispatch room/);
+  }
+});
+
+test('Last Skyway review: wrong physical route can recover; limit stop grounds equipment with time still left', () => {
+  const beforeNomination = complete.slice(0, complete.indexOf('D04'));
+  const corrected = [...beforeNomination, 'D03', ...complete.slice(complete.indexOf('D04'))];
+  assert.equal(walk([...corrected, 'E09']).state.window, 16);
+  assert.equal(walk([...corrected, 'E08'], 'hard').state.window, 8);
+  const declined = walk([...beforeNomination, 'D03', 'E03'], 'easy');
+  assert.ok(Number(declined.state.window) >= 60);
+  assert.match(declined.texts.get('D03')!, /recheck the eastern approach/);
+  assert.doesNotMatch(declined.texts.get('D03')!, /would consume the safe preparation window/);
+  assert.match(declined.text, /protected link into the refuge/);
+  assert.match(declined.text, /crossover unselected/);
+  assert.doesNotMatch(declined.text, /crossover pinned/);
+  const stopped = walk([...careful, 'E06'], 'easy');
+  assert.ok(Number(stopped.state.window) >= 50);
+  assert.match(stopped.text, /pointer to the marked limit/);
+  assert.match(stopped.text, /out of service until its unloaded running gear can be inspected/);
+  assert.doesNotMatch(stopped.text, /used the remaining weather opportunity/);
+  assert.match(stopped.texts.get('A04')!, /rigged platform/);
+});
+
+test('Last Skyway review: plates, weather observation, latch, bell and horizontal cradle stay consistent', () => {
+  const result = walk([...complete, 'E09']);
+  assert.match(result.texts.get('B04')!, /exposed, unprocessed coatings/);
+  assert.match(result.texts.get('D07')!, /last night’s telescope calibration/);
+  assert.match(result.texts.get('B02')!, /reading a report from the ridge/);
+  assert.match(result.texts.get('F01')!, /outer mast, visible directly from the cabin window/);
+  assert.match(result.texts.get('B01')!, /door is still locked/);
+  assert.match(result.texts.get('B05')!, /key you took from the dispatch hook/);
+  assert.match(result.texts.get('F07')!, /bell rings when Imani shuts/);
+  const noWrap = walk([...omitVisit(complete, 'B04'), 'E07']);
+  assert.match(noWrap.texts.get('F08')!, /fogged plates will still go to processing/);
+  assert.doesNotMatch(noWrap.texts.get('F08')!, /empty plate box/);
+  const cradle = walk([...careful.slice(0, careful.indexOf('D08')), 'E05']);
+  assert.match(cradle.texts.get('D07')!, /short way sideways/);
+  assert.match(cradle.text, /draw it horizontally/);
+  assert.match(cradle.text, /doorway stays level/);
+  assert.match(getPage(story, 'B02').imagePrompt, /No physical ribbon, observation tube/);
+  assert.match(getPage(story, 'F01').imagePrompt, /outer crossover mast carries one blue wind ribbon/);
+  assert.match(getPage(story, 'E05').imagePrompt, /no vertical lift/);
 });
