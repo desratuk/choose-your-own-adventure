@@ -19,3 +19,17 @@ Inspect original and final WebP at full size for identity, wardrobe, hands, anat
 Critical continuity (read actual full prompts, not only this checklist): player face hidden; Hesper supported left ankle only at Terminus; phone/radio voices not drawn; Dov at token hut throughout Beacon hub; Fenn buttoned coat over pyjamas, cap/uncapped variant as specified. Four coupled train vehicles remain all night; honor each full-train or crop composition. B05 train is wholly clear of facing points on lakeside approach, rear along approach, empty right siding. Yard gate single leaf versus far gate paired doors under brick arch. D07/E04 rails bare ice before grit; D02 no buckets in crop. D04 stove-only silhouette, no readable stock/vents/frost; reference lanterns do not add scene light. F01 engine inside open gates short of fountain. F02/F03/F04/F05/F06 hide route-dependent plant states exactly as exported; E06 crops leaves, E07 leaves unreadable. Sunwort reference sample flowering counts are illustrative: E07 about half across bed, E09 mostly open, E08/E10 full; E03/E05 frost. Twelve shutters and Hallam mechanism must stay consistent; reference variants never imply possession/outcome.
 
 Owner performs final cross-scene review, all 44 coverage/dimension/distinct-hash checks, scoped art/continuity tests, browser decoding and representative mobile route. Global failures in other unfinished packs must be reported accurately, never silenced.
+
+## Verified launches
+
+Release `eb6b25f`: all eighteen approved sheets and stamp validated, full current prompts exported, 125 lossless packs with source hashes/placements and pixel equality audited. Three T3 delegated runs requested explicit `codex` / `gpt-6-astra` / `reasoningEffort: medium`, isolation worktree. Owner durable thread and active-run reads confirm provider/model/full-access; each child independently confirmed injected runtime Medium and live catalog currentValue Medium. Durable run schema does not separately expose effort.
+
+Task prefix: `node:delegated-task:command%3Amcp%3Aa52a3b34-4132-45a3-a172-985b5adbb76c%3Adelegate-task%3A`.
+
+| Batch | Task suffix | Worktree | Branch |
+|---|---|---|---|
+| town | glasshouse-scenes-town-v1 | t3-4f503fd0 | t3/glasshouse-town-scene-imagery |
+| journey | glasshouse-scenes-journey-v1 | t3-3e913e0a | t3/glasshouse-express-final-scene-art |
+| finale | glasshouse-scenes-finale-v1 | t3-ddda0808 | t3/glasshouse-express-finale-art |
+
+Parent independently verified the `eb6b25f` checkpoint: story hash, all 44 exact `referencesForPage` mappings, all 125 packed-file hashes against owner ignored files, all source hashes/native dimensions, and at most four reference attachments per page. Global installed-story reviewed-sheet coverage test passed. Parent also directly queried all three scene thread configurations and verified `codex` / `gpt-6-astra` / `reasoningEffort: medium` / full-access. This supplements owner durable-record and child runtime/catalog verification. Existing batches continue; no duplicate scene work launched.
