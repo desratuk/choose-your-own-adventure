@@ -21,11 +21,16 @@
       "A07",
       "A08",
       "B01",
-      "B02"
+      "B02",
+      "B03",
+      "B04",
+      "B05",
+      "B06",
+      "B07"
     ],
     "originalsPreserved": "stories/midnight-signal/art-src/preserved-batch-a",
-    "status": "resumed-after-user-reported-usage-reset",
-    "mergedCommit": "3bf3853",
+    "status": "completed-and-merged",
+    "mergedCommit": "d73c653",
     "resumeTaskId": "node:delegated-task:command%3Amcp%3A27431919-e6da-46c6-aace-698640ed9e79%3Athread-send%3Amidnight-art-a-reset-resume-1",
     "resumeConfigurationVerification": "Owner directly queried t3_thread_configuration before resume: instanceId codex, model gpt-6-astra, reasoningEffort medium, full-access. After launch task_status confirms running codex/gpt-6-astra. Original task had no pending child runs."
   },

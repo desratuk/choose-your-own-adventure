@@ -1,5 +1,7 @@
 # Midnight Signal illustration review
 
+**Final status: complete.** All 46 unique scenes integrated and owner-reviewed; final QA below supersedes earlier progress notes. Manuscript and independent round-4 stamp unchanged.
+
 Owner: Codex / GPT-6-Astra / medium (runtime and T3 model verified). Built-in image_gen only. Originals stay in ignored `stories/midnight-signal/art-src/`; tracked reference WebPs are quality 88 at original 1536×1024. No scene work before reference approval and independent manuscript clearance.
 
 ## Reference checks
@@ -42,3 +44,22 @@ Mobile browser testing began at 390×844 through the native T3 preview. The real
 ## Batch C completion integrated
 
 Merged 8e7f5c6 (D03–D08/E01–E10 complete), bringing owner coverage to 39/46. All sixteen report original/final hashes and dimensions independently checked after copying the latest child art-src/corrections into the owner preservation directory. E02–E09 are the same originals already reviewed by the owner; E10 additionally inspected full-size: restored spool between dictionaries, repaired shelf, sealed packet and kettle thank-you drawing, pale morning, no people. Ending WebPs compared together on art-src/qa/endings-contact.jpg with consistent identity/style and route-valid states. All 39 integrated images decode in the native browser at1200×800. B01–B07 remain exclusively assigned to live batch A; no duplicate generation.
+
+
+## Final delivery QA
+
+Merged all completed batch histories: A d73c653 (opening milestone 3bf3853), B 4e566b8 (milestone ae19002), C 8e7f5c6 (milestone 25a718f). Every child is completed with no pending run. Requested and verified agent runtime is Codex / GPT-6-Astra / medium; configuration evidence and original/resume task IDs are retained in art-tasks.json. Built-in image-generation backend model is not exposed and is not conflated with the agent runtime.
+
+Owner independently inspected all 46 originals at full 1536×1024. Last five B03–B07 pass: register marks abstract; local sea drum falling and separate basin graph rising; viewing gate spans the protected approach with dark empty launch beyond; crossed route plan and folded plan/handset omit optional evidence. Every final scene is distinct, environmental and without people/hands. All final WebPs had individual worker review; owner additionally reviewed the complete set on three full-resolution contact sheets, art-src/qa/final-contact-1.jpg through final-contact-3.jpg. No inconsistent equipment, premature repair/spool restoration, optional evidence, or incorrect gate/call state found.
+
+All 46 original PNG hashes and 46 final WebP hashes exactly match the batch reports. All originals are 1536×1024; all final WebPs are 1200×800, quality 75, with 46 distinct hashes. Six reviewed reference hashes and first-party subject/page coverage validation pass. All 46 exported scene briefs match story.imagePrompt and contain every mapped reference path. Latest originals and all rejected/corrected versions are preserved in owner art-src and art-src/preserved-batch-a/b/c. These are intentionally ignored, not committed.
+
+Native T3 browser decoded every one of the 46 scene WebPs at 1200×800. Completed the actual Medium best route at 390×844 through real rendered choice buttons, with no state injection, every expected page image loaded and no horizontal overflow on any of 34 visits:
+
+A01 → A02 → A03 → A04 → A05 → A04 → A06 → A04 → A08 → B01 → B02 → B03 → B02 → B04 → B02 → B07 → B08 → B10 → C01 → C02 → C03 → C02 → C04 → C05 → C07 → C08 → C09 → C10 → D01 → D02 → D04 → D05 → D08 → E10.
+
+E10 rendered BEST ENDING, one of ten endings collected, reserve 25%, agreeing with the sixty-point budget. Mobile opening and final ending visually inspected; desktop ending at 1280×800 also visually inspected. No console errors in final snapshot. The long browser evaluation exceeded the tool's 15-second response limit, but continued in-page; the subsequent successful evaluation verified the complete 34-entry log, image dimensions, overflow results and final ending. No duplicate route run or unverified timeout success was assumed.
+
+Final checks: npm run build PASS (includes typecheck and all seven structural checks; existing bundle-size advisory only); npm run test:story PASS 126/126, including Midnight's 15 regressions. npm run test:art 8/11: Midnight coverage PASS; remaining failures are missing Last Skyway/Lantern Archive scenes and Lantern Archive's missing palladian-staff reference in this isolated checkout. Parent owns whole-app checks after integrating other packs. git diff --check PASS. Manuscript SHA-256 remains 24f981199e00e4d77fdf5c2fa650a879c8e5175d32bcd66d5a422576f399ed31, identical to independent round-4 stamp; no new manuscript review or self-stamp.
+
+No remaining Midnight Signal implementation/art work. Parent owns final main integration; no push or main merge performed here. Preserve /Users/carl/.t3/worktrees/create-your-own-adventure-opus/t3-ba5b042b/stories/midnight-signal/art-src/ before removing this worktree.
