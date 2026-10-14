@@ -1,6 +1,6 @@
 # Lantern Archive art review
 
-Production in progress. All 15 reference boards approved; final scene generation cleared by independent round-three PASS. Scene batches are in production and remain subject to owner review.
+Completed: all 15 approved reference boards and all 45 unique game scenes are integrated and visually reviewed. Full-size originals, batch WebPs, owner cross-scene contact sheets, first-party validation, mobile/desktop render sweeps and a real-choice best-route playthrough passed. Earlier sections below are chronological production history; their pending states are superseded by the final delivery section.
 
 Runtime verified via T3 orchestrator capabilities: provider codex, model gpt-6-astra, reasoningEffort medium, full-access; runtime injection confirms Astra medium. All generation uses built-in imagegen.
 
@@ -65,3 +65,36 @@ Continuation task prefix: `node:delegated-task:command%3Amcp%3Ad3687a18-c5e2-47c
 Owner inspected recovered A01–A05 originals at full 1536×1024 resolution. Faces, clothing, Dot's six buttons, left plait, player rear views, covered/unlit/lit Lantern sequence, hatch states and hands are coherent. Final exported WebPs and complete cross-scene continuity still require review after integration.
 
 Owner also inspected recovered C03–C08, D01 and F05–F09 originals at full resolution. Checked resident identities and clothes, indoor pole custody, raincoat-only departure, unlit field lamp and missing pane, distinct real glass versus painted slide, four closed cans, Win outside optional crops, player face hidden, weak lamp at F09 and full white screen at F06. Projected street scenes remain distant and soft, avoiding explicit anchor-state props. All seventeen recovered candidates retained for final exported-image review. T3 preview successfully opened this worktree on port5184; browser QA awaits integrated game assets.
+
+During resumed production owner inspected A06, B01–B03, D02–D05 and E01–E06 originals at full resolution. E05 rejected for its visible empty auditorium/blank screen while the feature has not yet finished at the lamp-death moment; requested a targeted port-content correction through the same active endings worker, preserving all other scene details and full reference attachments. This is an art correction only. Other inspected candidates passed initial review; game exports remain pending.
+
+## Final delivery — 14 October 2026
+
+All three scene continuations completed without further quota errors. Merged opening `b8137ffd3853ba55552cb2c178adfdc8143fc569`, middle `d227e5c96b8f97852cced12f2cfa9071ff354548`, and endings `30e70e3f6b1b01ce48de8549fe9d0aeda2cfa127` through owner merge commits 8ac3e3f, 6041872 and fa2bc38 respectively. git merge-base --is-ancestor confirms all six nested reference/scene branch tips are ancestors of the owner branch. No child work remains unmerged.
+
+Owner independently inspected all 45 selected 1536×1024 originals at full resolution, including every final correction. E05's corrected occupied monochrome feature screening is accepted. Workers individually inspected all game WebPs at full 1200×800. Owner inspected three cross-batch contact sheets built from the integrated final WebPs, checking all45 together for character identity, costumes, hidden player faces, props, landmark geometry, season, light/machine states and distinct compositions. No additional defects found. Win's single left plait, Dot's six buttons, Abel's checked shirt, blue home door versus old green door, real pane versus painted slide, unspliced versus threaded film, optional Win/anchor cropping, monochrome screens and downhill spring ending remain coherent. No duplicate assets, boards used as scenes, or restored buildings/successful states on failure endings.
+
+All45 originals were copied into owner `stories/lantern-archive/art-src/`; rejected variants, reference packs and provenance are preserved under `art-src/child-corrections/{opening,middle,endings}`. Early salvage remains separately retained. Owner QA contact sheets are `art-src/owner-contact-{1,2,3}.png`. All source/QA raster files remain ignored. The three committed batch reports record complete attachment coverage, source hashes, tool outputs and corrections. Only F05/E05 correction calls required lossless full-board packs; their source hashes/order and pack hashes are in the endings report. No references were omitted to meet the five-path limit.
+
+Validation performed on the integrated owner worktree:
+
+- Existing `validateReferences` and `referencesForPage`: all15 approved hashes and all45 attachment sets PASS. Exact sorted game filenames equal the manuscript's45 page IDs.
+- All45 unique game WebPs decode at1200×800; all45 retained originals and15 reference WebPs decode at1536×1024. Game conversion q75; references q88 without resizing. Distinct SHA256 for every scene.
+- `npm run check`: typecheck and all eight story coherence checks PASS. Lantern has82,576 reachable page/state combinations and10/10 endings.
+- `npm run test:story`:145/145 PASS, including16 Lantern regressions.
+- `npm run test:art`:8 pass,4 fail. Lantern exact scene coverage passes. Remaining failures: missing scene assets in last-skyway, midnight-signal and glasshouse-express in this isolated checkout, plus global reference validation stopping at missing `stories/glasshouse-express/references/dov.webp`. No shared tests or gates weakened; global art PASS is not claimed.
+- Manuscript SHA256 and independent reviewer stamp still exactly `e927e74cf19bcdc5a9aa6fcb72800c6b4d7b7b755ee2d4d57e543c5f10b9beb3`. No manuscript/bible/stamp/shared implementation changes by art owner or scene workers. `git diff --check` PASS.
+
+### Native T3 browser QA
+
+Native preview_status then preview_open succeeded against this worktree's Vite server at `http://127.0.0.1:5184/?story=lantern-archive`; no fallback needed. Tab `tab_a_b8034245-e452-4296-b291-6d27b038067b`.
+
+Sample-state render sweeps used first-party checkStory reachable samples and the actual startReader rendering, separately at390×844 mobile CSS viewport and1440×900 desktop. All45 pages at both sizes loaded and decoded actual1200×800 game images; no placeholders, decode failures or horizontal document overflow. These are sample-state render sweeps, not claims of every arrival-state browser traversal. Native mobile and desktop screenshots of E09 were visually inspected: full illustration, readable text, footer and layout intact. Preset changes CSS viewport, not a physical mobile-device engine.
+
+Separately cleared the QA run and clicked Start a new adventure on Medium. Traversed real rendered `.choice` buttons, selecting each index from first-party visibleChoices and the current saved state; no route state was injected. Awaited each updated heading/image decode.27 actual visits:
+
+`A01 → A02 → A03 → A04 → A06 → B01 → B02 → B04 → B05 → C01 → C02 → C03 → C04 → C01 → C05 → C06 → C01 → D01 → D03 → D04 → D05 → F01 → F02 → F03 → F05 → F06 → E09`.
+
+Every visit loaded its correct illustration without horizontal overflow at390×844. Final visible BEST ENDING is Keep the Light, E09; Medium reserve10 minutes (0:10), running false. Full per-visit reserves/decode/overflow results and both45-page sweeps retained in ignored `art-src/owner-browser-qa.json`.
+
+Lantern artwork is complete. Remaining integration responsibility is parent's all-pack/main audit; unrelated missing pack assets above are the only reported validation limitation. No pushes performed.
