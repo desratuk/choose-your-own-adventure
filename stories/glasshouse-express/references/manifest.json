@@ -255,7 +255,8 @@
     "prompt": "Use case: illustration-story. Production reference sheet, 1536x1024 landscape, warm pale parchment background. Painterly 1980s fantasy-adventure illustration, gouache and ink line, luminous frost blues and warm glasshouse amber, expressive invented faces, cinematic light, family-friendly and gently comic. Clear separated design views, not a story event. No real people's likenesses, no copied franchise designs, no famous trains, no weapons, no logos, no legible text or captions (maker's plates, signs and cassette labels are blank or unreadable). Only specified subjects. The story's night is clear with hard frost and stars; interiors are lamplit; dawn is clear and golden. This board locks design only, never possession, accompaniment, plant state or story outcome. Interior board, no people. LEFT: Nan Perrow's lean-to glasshouse interior: old mismatched window frames, a paraffin heater glowing, a warm high shelf of bowls with white hyacinth spikes in bud and one sad bowl of leaves only, an open trapdoor to a cold brick cellar with more bowls showing green tips, condensation on panes. RIGHT: the Beacon Cut radio studio cabin interior: egg-crate foam walls, a mixing desk with glowing meters and faders, twin turntables, a cassette deck, a desk microphone on a boom, a telephone, and a window looking steeply down into a rock cutting with rails. Small inset: a tram depot inspection pit with work lamps. Attached Glasshouse Express sources are rendering/material guides unless a specific shared design is requested above; preserve that design only. Do not copy unrelated subjects or the source board layout.",
     "sources": [
       "stories/glasshouse-express/references/tallow-street-and-halt.webp"
-    ]
+    ],
+    "reviewedSha256": "e4395651c482f26cdd95f167d1d06703e22842d6c5e867819f6a6f9b7d74a796"
   },
   {
     "id": "mere-and-beacon",
