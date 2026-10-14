@@ -51,6 +51,14 @@ A *Last Starfighter* adventure. You keep a small-town arcade's machines working,
 
 > Unofficial, non-commercial fan project. It is not affiliated with or endorsed by the owners of *The Last Starfighter*. See [Licence](#licence).
 
+### The Last Skyway
+
+An original mountain adventure set in November 1986. As a young maintenance apprentice, you help a tram crew bring a stranded cabin down from an observatory before a snow front closes the rescue window. Wind observations, old wiring records and a mechanical governor decide what you can bring home intact.
+
+- **48 pages** with **10 endings** (4 bad, 6 good, one best), each clearly labelled.
+- **A visible rescue-window countdown.** Investigations and recoverable mistakes use time; careful work preserves a reserve for the final equipment shutdown.
+- **Alternative successes:** shelter the cabin or protect the refuge's heat plant when a full descent is no longer the right job.
+
 ## Running it
 
 Requires Node 20.19+ or 22.12+ (use nvm to switch).
