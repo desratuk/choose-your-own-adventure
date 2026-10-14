@@ -149,3 +149,42 @@ The round-4 fix holds: B04 now states the crop behind the glowing carriage, and 
 - **Fix:** replace the clause with "…then the two dark, empty glass carriages (the Fern House and the Orchard Car) trailing away behind along the lakeside approach line, out of focus, clear of the points; the walled siding curves away empty to the right." Map no new subjects.
 
 **Verdict:** FINDINGS. 1 issue; no `.continuity-review` stamp recorded. Re-review after the fix.
+
+## Round 6 — FINDINGS (no stamp)
+
+Reviewer: independent continuity reviewer, Claude Opus 5.5 (`claude-opus-5-5`). Medium reasoning was requested; the effort level can't be seen from inside the run. Manuscript: `stories/glasshouse-express/story.ts` as in `e429aca` (the only story change since round 5 is the B05 `imagePrompt`). Inputs: the full `story-dump` (44 pages, every arrival state), the full bible including all five response tables, rounds 1–5 of this report, project `CLAUDE.md`, all 44 `imagePrompt`s with `stylePrefix`, page casts and the reference manifest's page mappings, and the Candlewick Junction brief.
+
+The round-5 fix holds. The train went into the loop engine first and backs out rear first, so Marigold ends up nearest the points and the lever. The B05 prompt now puts the whole train on the lakeside approach line, clear of the facing points, with the carriages trailing back along the approach and the walled siding empty to the right. That matches B05 [1]–[3], B01's shore line and the Candlewick brief: points approached from the foreground, siding diverging right.
+
+Every earlier fix still holds:
+- the planting rule
+- Dov at the token hut through C03, C04 and C05
+- Fenn's three hours and two at the gate
+- E01's five o'clock cause
+- the Hallam introduction at F04
+- sunrise at 7:30
+- C01 with no tram
+- bare ice at D07 and E04
+- the yard-gate and far-gate keys
+- E04's fuel-neutral waiting
+- F01's gate entry in both `wordSent` states
+- the four-vehicle train shown whole or deliberately cropped in every exterior view
+- the stove-lit D04 and the B04 crop
+
+Also sound on every arrival state:
+- brick arithmetic, and the F03 gates (20, or 15 with Fenn's half hod) against A02's twenty/ten rule
+- clue gating of the chill and the cylinder
+- Sallow met and unmet at B08 and C04
+- the hub returns at A03, B07 and C03
+- Fenn named (C03 broadcast, B08) before C04 calls him "Mr Fenn"
+- plant states through D03–D06 and the endings
+- ending labels and the season ladder
+- E10's recall of A04, A05 and B09, all guaranteed on arrival
+
+### 1. F04's image shows the planted bed in a state that differs between routes
+- **Page:** F04 `imagePrompt` ("The planted Great Bed glows faintly from its lit stove behind them").
+- **Trigger:** every route to F04. Arrival states include `chilled` (D06: "every rosette a dark fist"), `stoked` (D05: leaf edges "crumpled, like paper that has been wet") and neither (broad, firm leaves).
+- **Defect:** The shot looks past the player toward the eastern shutters, so a bed "behind them" falls in the foreground. "Planted" asks the generator to draw the sunwort, and nothing hides the leaf shapes. One static image would then show a single leaf state that contradicts the other routes. That is why the bible's art plan (line 142) hides the bed's contents at F02, F03, F05 and F06, and F04 sits between those pages with the same three arrival states. The page has no `stock` cast and no `sunwort` sheet attached, so the generator would invent the plants without guidance.
+- **Fix:** replace the sentence with "Behind them, out of frame, the lit bed stove casts a faint warm glow across the stone floor; no plants visible." Alternatively, "the Great Bed's stone rim at the frame's lower edge with its contents out of view". Add F04 to the bible's list of pages that hide the bed. Map no new subjects.
+
+**Verdict:** FINDINGS. 1 issue; no `.continuity-review` stamp recorded. Re-review after the fix.
