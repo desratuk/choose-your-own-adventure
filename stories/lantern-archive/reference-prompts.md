@@ -1,10 +1,14 @@
 # Reference art: The Lantern Archive
 
-Generate and visually review references before scenes. Design establishes identity only, never presence, possession or outcome.
+Create and visually review these sheets BEFORE exporting or generating scene illustrations. Existing scene sources below are migration/style anchors, not permission to generate new scenes first.
+
+Lock faces, silhouettes, clothing colours/stripe order, item dimensions/materials and landmark geometry. Keep state variants separate; a reference never grants possession or adds a companion. Correct anatomy and ambiguous details before approval.
+
+Save originals in art-src/references/ (git-ignored). Convert reviewed sheets to references/<id>.webp at quality 88, preserving their resolution. Record the inspected WebP’s SHA-256 as reviewedSha256 in references/manifest.json. A missing or changed sheet blocks scene export.
 
 ## player-win
 
-Subjects: player, win
+Subjects: player, win.
 
 Output: `stories/lantern-archive/references/player-win.webp`
 
@@ -14,7 +18,7 @@ Use case: illustration-story. Production reference sheet, 1536x1024 landscape, w
 
 ## palladian-staff
 
-Subjects: dot, hale
+Subjects: dot, hale.
 
 Output: `stories/lantern-archive/references/palladian-staff.webp`
 
@@ -24,7 +28,7 @@ Use case: illustration-story. Production reference sheet, 1536x1024 landscape, w
 
 ## highfield-residents
 
-Subjects: abel, pellows
+Subjects: abel, pellows.
 
 Output: `stories/lantern-archive/references/highfield-residents.webp`
 
@@ -34,7 +38,7 @@ Use case: illustration-story. Production reference sheet, 1536x1024 landscape, w
 
 ## lantern-projector
 
-Subjects: lantern
+Subjects: lantern.
 
 Output: `stories/lantern-archive/references/lantern-projector.webp`
 
@@ -44,7 +48,7 @@ Use case: illustration-story. Production reference sheet, 1536x1024 landscape, w
 
 ## light-moths
 
-Subjects: moths
+Subjects: moths.
 
 Output: `stories/lantern-archive/references/light-moths.webp`
 
@@ -54,7 +58,7 @@ Use case: illustration-story. Production reference sheet, 1536x1024 landscape, w
 
 ## wicks-cans
 
-Subjects: rolls
+Subjects: rolls.
 
 Output: `stories/lantern-archive/references/wicks-cans.webp`
 
@@ -64,7 +68,7 @@ Use case: illustration-story. Production reference sheet, 1536x1024 landscape, w
 
 ## lamplighter-pole
 
-Subjects: pole
+Subjects: pole.
 
 Output: `stories/lantern-archive/references/lamplighter-pole.webp`
 
@@ -74,7 +78,7 @@ Use case: illustration-story. Production reference sheet, 1536x1024 landscape, w
 
 ## anchors
 
-Subjects: lampglass, slide
+Subjects: lampglass, slide.
 
 Output: `stories/lantern-archive/references/anchors.webp`
 
@@ -84,7 +88,7 @@ Use case: illustration-story. Production reference sheet, 1536x1024 landscape, w
 
 ## projection-box
 
-Subjects: landmark
+Subjects: landmark (page-specific).
 
 Output: `stories/lantern-archive/references/projection-box.webp`
 
@@ -94,7 +98,7 @@ Use case: illustration-story. Production reference sheet, 1536x1024 landscape, w
 
 ## palladian-house
 
-Subjects: landmark
+Subjects: landmark (page-specific).
 
 Output: `stories/lantern-archive/references/palladian-house.webp`
 
@@ -104,7 +108,7 @@ Use case: illustration-story. Production reference sheet, 1536x1024 landscape, w
 
 ## archive-vault
 
-Subjects: landmark
+Subjects: landmark (page-specific).
 
 Output: `stories/lantern-archive/references/archive-vault.webp`
 
@@ -114,7 +118,7 @@ Use case: illustration-story. Production reference sheet, 1536x1024 landscape, w
 
 ## depot-field
 
-Subjects: landmark
+Subjects: landmark (page-specific).
 
 Output: `stories/lantern-archive/references/depot-field.webp`
 
@@ -124,7 +128,7 @@ Use case: illustration-story. Production reference sheet, 1536x1024 landscape, w
 
 ## highfield-house
 
-Subjects: landmark
+Subjects: landmark (page-specific).
 
 Output: `stories/lantern-archive/references/highfield-house.webp`
 
@@ -134,7 +138,7 @@ Use case: illustration-story. Production reference sheet, 1536x1024 landscape, w
 
 ## wicks-streets
 
-Subjects: landmark
+Subjects: landmark (page-specific).
 
 Output: `stories/lantern-archive/references/wicks-streets.webp`
 
@@ -144,7 +148,7 @@ Use case: illustration-story. Production reference sheet, 1536x1024 landscape, w
 
 ## win-home
 
-Subjects: landmark
+Subjects: landmark (page-specific).
 
 Output: `stories/lantern-archive/references/win-home.webp`
 
