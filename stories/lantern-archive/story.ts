@@ -20,9 +20,9 @@ const raw: Page[] = [
     text: [
       `The Palladian’s foyer smells of popcorn, floor polish and rain-soaked coats. It is Saturday the twenty-fifth of October 1986, a wet evening in Saltbeck. The queue for the last show at the town’s old picture palace runs out of the glass doors and down the steps.`,
       `You are seventeen and the Palladian’s second projectionist, which on most nights means you also tear tickets until the box needs you. Tonight you tear them slowly. Everybody wants to tell you what they saw here first.`,
-      `At the kiosk, Dot Pryor, the usherette, is selling the last choc ices from her tray in her red-and-gold uniform. “Last night, last tray,” she tells each customer, as if it were a weather warning.`,
+      `At the kiosk, Dot Pryor, the usherette, is selling the last choc ices from her tray in her red-and-gold uniform. “Last night, last tray,” she tells each customer, as if it were a weather warning. She has roped off Row F in the stalls for the staff, though everybody knows the box never gets to sit down.`,
       `Mr Hale, the owner, comes down the stairs in a bottle-green velvet jacket he usually saves for Christmas. He bought the Palladian in 1959. At midnight he hands the keys to Starlite Video, whose poster is already pasted over the coming-attractions frame. “They’ll rent you three films for the price of one ticket,” he says, without bitterness. “Then you watch them on a television the size of a bread bin.”`,
-      `He lowers his voice. “The scrap man comes for the old Lantern on Monday. If Win wants anything from it, tonight’s the night.” He takes the ticket book from you. “Up you go. She’s been up there since five.”`
+      `He lowers his voice. “The scrap man comes for the old Lantern on Monday. If Win wants anything from it, tonight’s the night.” Win Aldous is the chief projectionist, and your boss since you left school. Mr Hale takes the ticket book from you. “Up you go. She’s been up there since five.”`
     ],
     choices: [{ text: 'Climb to the projection box', to: 'A02' }],
   },
@@ -32,7 +32,7 @@ const raw: Page[] = [
     imagePrompt: `Evening inside a long, warm 1980s cinema projection box, no weather visible. Two large grey modern projectors stand side by side at small square port windows; a dust-sheeted shape waits in the far corner. Win threads film on the nearer projector and holds up an old iron key on a loop of string, frowning at it, while the player watches over her shoulder, seen from behind. Only these two people.`,
     text: [
       `The projection box is a long, warm room above the back of the circle, humming with fans. Two big projectors, number one and number two, stand side by side at their little square windows onto the auditorium. In the far corner, under a dust sheet, is a third machine nobody uses.`,
-      `Win Aldous, the chief projectionist, has worked here for forty-four years. She is seventy, tall, with a long silver plait and half-moon glasses on a cord. Tonight’s film is *The Brass Moon*, a 1958 adventure the regulars voted for. Its six reels wait in their cans.`,
+      `Win has worked in this box for forty-four years. She is seventy, tall, with a long silver plait and half-moon glasses on a cord. Tonight’s film is *The Brass Moon*, a 1958 adventure the regulars voted for. Its six reels wait in their cans.`,
       `“Changeovers,” Win says, though you’ve done hundreds with her. She threads the first reel on number one and the second on number two. “Watch the top right corner of the picture. First little dot: start the other machine’s motor. Second dot, eight seconds later: change over.” She taps the switch between them. “Do it right and nobody downstairs ever knows we exist.”`,
       `She pats her cardigan pocket and brings out an old iron key on a loop of string. She frowns at it. “Forty years I’ve carried this,” she says. “Tonight I can’t think what it opens.” She puts it away a little too quickly.`,
       `Then she nods at the dust sheet. “Come on. Before the scrap man gets her, you should meet the Lantern properly.”`
@@ -48,18 +48,18 @@ const raw: Page[] = [
       `“Ada Merriman’s Lantern,” Win says. “She built the Palladian in 1911. Before that she toured magic-lantern shows: painted glass slides, lit up big on a sheet.” She shows you a narrow slot in front of the lamp. “That’s the gate. A glass slide goes in there. Her painted ones are still in the cabinet underneath.”`,
       `Win lifts a lever beside the crank, marked 16 at one end and 24 at the other. “Old silent pictures were cranked by hand, slower: about sixteen frames a second. Sixteen for walking. When sound came in, everything went to twenty-four. Twenty-four for talking.” She unrolls a strip of the feature and shows you the wavy line printed down one edge, between the pictures and the sprocket holes. “That’s the soundtrack. Silent film doesn’t need one, so its pictures run the whole width.”`,
       `She gives you the sums every projectionist learns: thirty-five-millimetre film runs ninety feet a minute at twenty-four, sixty at sixteen. “Run a silent picture at sound speed and Grandad sprints to the shops,” Win says. “Run it right and he walks there the way he did.”`,
-      `The gauge, she explains, measures the carbons: two rods that make the lamp’s light by burning. Ada left one last pair in the Lantern with a note saying they weren’t for ordinary use. Win never struck them. She nods at a small iron hatch in the floor beside it, painted shut since before her time. “Ada’s coal hatch. Don’t ask me where it goes.”`,
+      `The gauge, she explains, measures the carbons: two rods that make the lamp’s light by burning. Ada left one last pair in the Lantern with a note saying they weren’t for ordinary use. Win never struck them. She nods at a small iron hatch in the floor beside it, painted shut since the spring Ada retired, nearly thirty years ago. “Ada’s coal hatch. Don’t ask me where it goes.”`,
       `Below, the house lights begin to fade.`
     ],
     choices: [{ text: 'Take your place for the first changeover', to: 'A04' }],
   },
   {
-    id: 'A04', title: 'The Lantern Strikes', era: 'palace', time: 'FINAL NIGHT · REEL ONE',
+    id: 'A04', title: 'The Lantern Strikes', era: 'palace', time: 'FINAL NIGHT · END OF REEL ONE',
     onEnter: { set: { running: true } },
     cast: ['player', 'win', 'lantern', 'moths'],
     imagePrompt: `Night inside the dim projection box during the film, no weather. In the foreground the Lantern's lamphouse glows white through its ruby peephole and a stream of small pale-gold light-moths drifts from its chimney down into the now OPEN floor hatch beside it. The player, seen from behind, holds up one hand with a single glowing moth on it. In the background Win stands at the far projector with her back turned, watching the port. Only these two people.`,
     text: [
-      `*The Brass Moon* begins. Through the port glass, eight hundred faces turn silver in the light from number one. Win stands at its side with her hand near the changeover switch, watching the picture as she has for forty-four years.`,
+      `Twenty minutes later, the first reel of *The Brass Moon* is nearly through. Through the port glass, eight hundred faces turn silver in the light from number one. Win stands at its side with her hand near the changeover switch, watching the picture as she has for forty-four years.`,
       `Behind you, something clicks. The Lantern’s lamphouse glows red through its ruby peephole, then white. With a crackle like frying bacon, Ada’s carbons strike by themselves. The brass pointer twitches and starts to creep down the gauge. It reads {{clock}}.`,
       `Out of the lamphouse chimney drift moths, dozens of them, made of pale gold light. One lands on the back of your hand. For a moment you are somewhere else: a steep cobbled lane climbing to a chapel, gas lamps hissing, the smell of warm wax, and a girl with a long dark plait sitting on a doorstep marked 4. Then the moth lifts off, and you are back in the box.`,
       `The moths stream toward Ada’s hatch. It isn’t painted shut any more. It stands open on darkness, and they pour down into it like sand through an hourglass.`,
@@ -109,7 +109,7 @@ const raw: Page[] = [
   },
   {
     id: 'B02', title: 'Ada’s Log', era: 'archive',
-    cast: ['player'],
+    cast: ['player', 'moths'],
     imagePrompt: `Night in the enclosed brick archive vault, dry. Close over the player's shoulder at the desk: an open leather logbook of handwritten pages in looping ink (unreadable at this distance), lit by a torch and the glow of a few pale-gold moths. A small brass splicing block and hand viewer at the edge of frame. Nobody else.`,
     text: [
       `The first pages are dated 1911. Ada Merriman wrote the way she must have talked: briskly, to someone she expected to keep up. Near the front she has set out her rules.`,
@@ -128,7 +128,7 @@ const raw: Page[] = [
   {
     id: 'B03', title: 'Ada’s Last Entry', era: 'archive',
     onEnter: { set: { readAda: true } },
-    cast: ['player'],
+    cast: ['player', 'moths'],
     imagePrompt: `Night in the enclosed brick archive vault, dry. The player, seen from behind, sits at the desk with the leather logbook open near its end; at the bottom of a handwritten page is a tiny ink drawing of a moth. A single pale-gold light-moth rests on the desk edge. Nobody else.`,
     text: [
       `The last entry is dated March 1958, in shakier handwriting.`,
@@ -201,7 +201,7 @@ const raw: Page[] = [
       { if: all(not(is('hubSeen')), not(is('toldWin'))),
         text: `Win turns round, sees the open hatch, the burning Lantern and the cans in your arms, and takes off her glasses. “You’d better tell me,” she says. You tell her everything, as fast as you can, and show her the card. She reads her own name and is quiet for a long moment. “Aldous is me. But I’ve never lived in any Wicks.”` },
       { if: is('hubSeen'),
-        text: `Back in the box, Win is at the machines, keeping *The Brass Moon* running reel by reel. The four cans wait beside the Lantern.` },
+        text: `In the box, Win is at the machines, keeping *The Brass Moon* running reel by reel. The four cans wait beside the Lantern.` },
       { if: not(is('hubSeen')),
         text: `She taps the other names. “Abel Quarry swept the stalls here when I started. The Pellow twins came to every Thursday matinee for thirty years. All three live up at Highfield House now, the care home on Kiln Hill.” She frowns. “Isn’t that odd? I always thought they were from nowhere in particular. Like me.”` },
       { if: not(is('hubSeen')),
@@ -279,7 +279,7 @@ const raw: Page[] = [
   {
     id: 'C06', title: 'The Last Lamp', era: 'town',
     onEnter: { set: { lampGlass: true } },
-    cast: ['player', 'lampglass'],
+    cast: ['player', 'lampglass', 'moths'],
     imagePrompt: `Rainy October night at the top of the overgrown field. A tilted cast-iron gas lamp post rises from brambles, its four-sided lantern head with three cracked panes and one empty frame. The player, seen from behind, holds a whole palm-sized square of clouded glass with a tiny etched flame in one corner, half wrapped in a white cotton cloth. A rusty enamel street sign lies half buried at the post's foot, its letters unreadable. A few pale-gold light-moths drift away toward the distant town lights. Nobody else.`,
     text: [
       `It’s a cast-iron lamp post, tilted like a tired person, its lantern head still on top. Three of its four small glass panes are cracked. The fourth is whole, no bigger than your palm, clouded by decades of weather, with a little flame etched in one corner.`,
@@ -305,7 +305,7 @@ const raw: Page[] = [
   {
     id: 'C08', title: 'The Box Telephone', era: 'palace',
     onEnter: { set: { residentsComing: true } },
-    cast: ['player'],
+    cast: ['player', 'lantern', 'rolls'],
     imagePrompt: `Night inside the projection box during the film, no weather. The player, seen from behind, stands at a heavy black wall telephone by the door with the receiver to their ear. In the soft background, the lit Lantern glows in its corner beside four small round film cans. Win is not in this crop. Nobody else.`,
     text: [
       `The box telephone is a heavy black thing on the wall, meant for ringing the manager’s office. You get an outside line and ask Directory Enquiries for Highfield House.`,
@@ -313,7 +313,7 @@ const raw: Page[] = [
         text: `Mrs Ferris answers on the second ring. “Oh, it’s you again,” she says. “They’re still up. All three.”`,
         else: `A woman answers: Mrs Ferris, the night manager. When you mention Abel Quarry and the Pellow twins, she sighs. “Those three won’t settle tonight. Nobody can say why.”` },
       `You ask whether they could come down to the Palladian’s last night. There’s a muffled conversation away from the receiver, and then Mrs Ferris is back. “They say yes. I’ll bring them in the minibus. Don’t let anybody sit in their seats.”`,
-      `You promise. Then you ring down to the kiosk and ask Dot to keep three seats free in the stalls.`
+      `You promise. Then you ring down to the kiosk and ask Dot to save them three places in Row F.`
     ],
     choices: [{ text: 'Hang up', to: 'C01' }],
   },
@@ -382,22 +382,21 @@ const raw: Page[] = [
     imagePrompt: `Rainy night seen through the glass doors of the Palladian's red-and-gold foyer: a small white minibus at the kerb outside. Inside, Dot in her usherette uniform offers her arm to Abel; the Pellow twins follow arm in arm in their cardigans. The player holds a door open, seen from behind. Win is not in this crop. No other people.`,
     text: [
       `The Highfield House minibus is pulling up outside the glass doors as you reach the foyer. Mrs Ferris helps Abel down the step; Ivy and May come after him, arm in arm. Dot Pryor takes their coats as if they were royalty and offers Abel her arm.`,
-      { if: is('invitedInPerson'),
-        text: `“Our projectionist,” Abel tells Dot, nodding at you, and Ivy waves.`,
-        else: `You’ve never met them, but May knows your voice at once. “You’ll be the one who rang,” she says, and Ivy shakes your hand.` },
+      { if: is('knowsRound'),
+        text: `“The projectionist with the card,” Abel tells Dot, nodding at you, and Ivy waves.`,
+        else: `“You’ll be the one who rang Mrs Ferris,” May says, and Ivy shakes your hand.` },
       { if: stalls,
-        text: `Win comes down the circle stairs, still in her box cardigan. She looks at the three of them, and they look at her. “Have we met?” Ivy asks kindly. “I don’t think so,” Win says. They were neighbours for thirty-five years. None of them knows it.`,
-        else: `Up at the little window at the back, Win is waiting by the port. The three of them don’t look up at it. Nobody ever does.` },
+        text: `Win comes down the circle stairs, still in her box cardigan. She looks at the three of them, and they look at her. “Mr Quarry. You swept these stalls when I started,” Win says. “Did I?” says Abel politely. The twins smile at her the way they would at anyone from the box. They were neighbours for thirty-five years. None of them knows it.` },
       { if: stalls,
         text: `Dot leads them down the aisle by torchlight to the empty seats in Row F, and Win sits down beside them.`,
-        else: `Dot leads them down the aisle by torchlight to the empty seats in Row F.` },
+        else: `Dot leads them down the aisle by torchlight to the empty seats in Row F. Up at the little window at the back, Win is waiting by the port. None of them looks up at it. Nobody ever does.` },
     ],
     choices: [{ text: 'Run back up to the box', to: 'F01' }],
   },
   {
     id: 'F01', title: 'Ada’s Splicing Block', era: 'palace', time: 'FINAL NIGHT · THE LANTERN',
     cast: ['player', 'lantern', 'rolls'],
-    imagePrompt: `Night inside the projection box, no weather. The player, seen from behind, stands at a bench beside the lit Lantern with a small brass splicing block and four short film rolls laid out next to four small round cans. A big modern projector stands threaded nearby, its lamp housing glowing hot. Win is not in this crop. Nobody else.`,
+    imagePrompt: `Night inside the projection box, no weather. The player, seen from behind, stands at a bench beside the lit Lantern with a small brass splicing block and four short film rolls laid out next to four small round cans. A big modern projector stands threaded nearby, its lamp housing glowing hot. Win, wherever she is, is outside the crop. Nobody else.`,
     text: [
       `Back in the box, *The Brass Moon* is running out the last minutes of its reel on number two. The Lantern’s gauge reads {{clock}}.`,
       { if: stalls,
@@ -417,7 +416,7 @@ const raw: Page[] = [
   {
     id: 'F02', title: 'The Gate', era: 'palace',
     cast: ['player', 'lantern'],
-    imagePrompt: `Night inside the projection box, no weather. Close view of the lit Lantern: film laced through its sprockets and gate, and a narrow empty brass slot open in front of the glowing lamphouse. The player's hands, seen from behind, rest on the machine; nothing is in the slot yet. Nobody else.`,
+    imagePrompt: `Night inside the projection box, no weather. Close view of the lit Lantern: film laced through its sprockets and gate, and a narrow empty brass slot open in front of the glowing lamphouse. The player's hands, seen from behind, rest on the machine; nothing is in the slot yet. Win, wherever she is, is outside the crop. Nobody else.`,
     text: [
       `You lace the film through the Lantern: over the top sprocket, down through the picture gate behind the lens, round the lower sprocket and onto the take-up reel. Ada’s machine is simple, the way a bicycle is simple.`,
       `Then you open the slide gate in front of the lamp, a narrow slot of blackened brass made to hold one palm-sized square of glass in the light.`,
@@ -433,7 +432,7 @@ const raw: Page[] = [
   {
     id: 'F03', title: 'The Speed Lever', era: 'palace', time: 'FINAL NIGHT · THE SHORT SUBJECT',
     cast: ['player', 'lantern', 'hale'],
-    imagePrompt: `Night, seen from inside the projection box through the open port glass beside the lit Lantern: far below, in the half-lit red-and-gold auditorium, Mr Hale in his velvet jacket stands alone in front of the closed stage curtain addressing an audience shown only as soft rows of heads. The player's hand, seen from behind, rests on the Lantern's brass speed lever. Nobody else in the box.`,
+    imagePrompt: `Night, seen from inside the projection box through the open port glass beside the lit Lantern: far below, in the half-lit red-and-gold auditorium, Mr Hale in his velvet jacket stands alone in front of the closed stage curtain addressing an audience shown only as soft rows of heads. The player's hand, seen from behind, rests on the Lantern's brass speed lever. Win, wherever she is, is outside the crop; nobody else in the box.`,
     text: [
       `Through the port you watch *The Brass Moon* reach the end of its reel. You close number two’s shutter. The screen goes dark and the house lights come up halfway. Mr Hale walks out in front of the curtain in his green velvet jacket.`,
       `“Ladies and gentlemen. Before we finish, a short subject from the Palladian’s own archive. Our projectionist’s choice.” He walks off, and the lights go down.`,
@@ -454,7 +453,7 @@ const raw: Page[] = [
   {
     id: 'F04', title: 'Running Away', era: 'screen', time: 'FINAL NIGHT · THE SCREEN',
     cast: ['player', 'lantern'],
-    imagePrompt: `Night, seen from the projection box over the player's shoulder past the lit Lantern and through the port: on the distant cinema screen, a silvery black-and-white old street scene smeared with motion blur, figures streaking like clockwork toys. Soft rows of audience heads below. Nobody else in the box.`,
+    imagePrompt: `Night, seen from the projection box over the player's shoulder past the lit Lantern and through the port: far off on the small, distant cinema screen, a soft, indistinct silvery street picture smeared with motion blur, too small to make out detail. Soft rows of audience heads below. Win, wherever she is, is outside the crop; nobody else in the box.`,
     text: [
       `The Lantern’s light reaches the screen, and the Wicks appears. Then it runs. People scurry along the pavements like clockwork toys. Washing lines jerk. A cart whips past and is gone before you can see what it carried. Somebody in the circle laughs, and then lots of people do.`,
       { if: residents, text: `In Row F, nobody is laughing. Ivy Pellow has half risen from her seat, as if to catch a bus she has already missed.` },
@@ -473,7 +472,7 @@ const raw: Page[] = [
   {
     id: 'F05', title: 'The Wicks', era: 'screen',
     cast: ['player', 'lantern'],
-    imagePrompt: `Night, seen from the projection box over the player's shoulder past the lit Lantern and through the open port: on the distant cinema screen, a silvery black-and-white steep cobbled lane of terraced houses climbing to a small chapel, gas lamps along the kerb. Soft rows of audience heads below; no individual faces. Nobody else in the box.`,
+    imagePrompt: `Night, seen from the projection box over the player's shoulder past the lit Lantern and through the open port: far off on the small, distant cinema screen, a soft, indistinct silvery glow showing only the faint shape of a steep lane rising to a chapel, too small to make out detail or colour. Soft rows of audience heads below; no individual faces. Win, wherever she is, is outside the crop; nobody else in the box.`,
     text: [
       { if: all(is('speed', '16'), is('rushed')), text: `The second time through, at sixteen frames a second, the Wicks walks onto the screen at its own pace.` },
       { if: all(is('speed', '16'), not(is('rushed'))), text: `At sixteen frames a second, the Wicks walks onto the screen at its own pace.` },
@@ -499,7 +498,7 @@ const raw: Page[] = [
   {
     id: 'F06', title: 'Ten Minutes of Light', era: 'screen',
     cast: ['player', 'lantern', 'moths'],
-    imagePrompt: `Night, seen from the projection box over the player's shoulder past the lit Lantern and through the port: the distant cinema screen is blank warm white, and hundreds of small pale-gold light-moths pour off it, swirling over soft dark rows of audience heads and rising toward a plaster dome. Nobody else in the box.`,
+    imagePrompt: `Night, seen from the projection box over the player's shoulder past the lit Lantern and through the port: the distant cinema screen is blank warm white, and hundreds of small pale-gold light-moths pour off it, swirling over soft dark rows of audience heads and rising toward a plaster dome. Win, wherever she is, is outside the crop; nobody else in the box.`,
     text: [
       `The last frame of Mould Yard slides through the gate, the tail of the film flaps on the take-up reel, and the screen goes white: only the Lantern’s light, warm through the lamp glass.`,
       `Then the moths come out of it. Hundreds of them pour off the white screen and over the stalls, circling Row F, rising past the circle toward the dome and slipping out through every crack in the old building, into the town.`,
@@ -514,7 +513,7 @@ const raw: Page[] = [
   {
     id: 'F07', title: 'Wrong Turnings', era: 'screen',
     cast: ['player', 'lantern'],
-    imagePrompt: `Night, seen from the projection box over the player's shoulder past the lit Lantern and through the port: on the distant cinema screen, a silvery black-and-white cobbled yard with works gates and a tall square chimney, its edges jumping as if the picture had just cut from somewhere else. Soft rows of audience heads below. Nobody else in the box.`,
+    imagePrompt: `Night, seen from the projection box over the player's shoulder past the lit Lantern and through the port: far off on the small, distant cinema screen, a soft, indistinct silvery picture of a yard and a tall chimney, its edges jumping as if it had just cut from somewhere else, too small to make out detail. Soft rows of audience heads below. Win, wherever she is, is outside the crop; nobody else in the box.`,
     text: [
       { if: all(is('speed', '16'), is('rushed')), text: `The second time through, at sixteen frames a second, the Wicks walks onto the screen at its own pace.` },
       { if: all(is('speed', '16'), not(is('rushed'))), text: `At sixteen frames a second, the Wicks walks onto the screen at its own pace.` },
@@ -531,7 +530,7 @@ const raw: Page[] = [
   {
     id: 'F08', title: 'Tallow Lane Alone', era: 'screen',
     cast: ['player', 'lantern'],
-    imagePrompt: `Night, seen from the projection box over the player's shoulder past the lit Lantern and through the port: on the distant cinema screen, a silvery black-and-white steep cobbled lane of terraced houses climbing to a small chapel, gas lamps along the kerb. Soft rows of audience heads below; no individual faces. Nobody else in the box.`,
+    imagePrompt: `Night, seen from the projection box over the player's shoulder past the lit Lantern and through the port: far off on the small, distant cinema screen, a soft, indistinct silvery glow showing only the faint shape of a steep lane rising to a chapel, too small to make out detail or colour. Soft rows of audience heads below; no individual faces. Win, wherever she is, is outside the crop; nobody else in the box.`,
     text: [
       { if: is('speed', '16'),
         text: `At sixteen frames a second, Tallow Lane walks onto the screen at its own pace.`,
@@ -552,7 +551,7 @@ const raw: Page[] = [
   },
   {
     id: 'F09', title: 'Guttering', era: 'palace',
-    cast: ['player', 'win', 'lantern'],
+    cast: ['player', 'win', 'lantern', 'rolls'],
     imagePrompt: `Night inside the projection box, no weather. The Lantern's lamphouse glows a weak dull orange; its brass gauge needle is near the bottom. Win stands beside the player, seen from behind, and rests her hand over the player's hand on the crank. Four small round film cans wait on the bench, unopened. Only these two people.`,
     text: [
       `You look at the Lantern’s gauge, and your stomach drops. The pointer is nearly at the bottom: {{clock}}. The carbons have burned down to stubs, and their light has turned the colour of weak tea.`,
@@ -566,11 +565,11 @@ const raw: Page[] = [
   {
     id: 'E01', title: 'A Trick of the Light', era: 'palace', ending: { kind: 'bad' },
     cast: ['player', 'win', 'lantern'],
-    imagePrompt: `Just after midnight inside the projection box, no weather. The Lantern stands cold and dark in its corner, its floor hatch bolted shut. Win, in her cardigan, sets an old iron key on a loop of string down on a wooden rewind bench and turns away toward the door. The player, seen from behind, watches. Only these two people.`,
+    imagePrompt: `Just after midnight inside the projection box, no weather. The Lantern stands cold and dark in its corner, its floor hatch bolted shut. Win, in her cardigan and not yet wearing a coat, sets an old iron key on a loop of string down on a wooden rewind bench, about to turn toward the door. The player, seen from behind, watches. Only these two people.`,
     text: [
       `You let the hatch fall shut and shoot its bolt. A projection box is no place for open flames and loose film, and the Lantern is burning by itself in a room full of both.`,
       `There’s no way to put it out. Its carbons burn on behind you through every reel of *The Brass Moon* while you and Win do the changeovers. Some time during the last reel the Lantern goes dark, and the moths stop circling.`,
-      `At midnight Mr Hale hands the keys to Starlite Video. Win puts on her coat, finds the iron key in her pocket, frowns at it and leaves it on the rewind bench. “Can’t think what it opens,” she says. “Can’t think why I kept it.”`,
+      `At midnight Mr Hale hands the keys to Starlite Video. Win finds the iron key in her cardigan pocket, frowns at it and leaves it on the rewind bench. “Can’t think what it opens,” she says. “Can’t think why I kept it.” Then she takes her coat from its hook and goes.`,
       `On Monday the scrap man takes the Lantern. Behind the bus depot, the chimney stands alone in its field. Nobody in Saltbeck can tell you why it’s there.`
     ],
   },
@@ -588,7 +587,7 @@ const raw: Page[] = [
   },
   {
     id: 'E03', title: 'A Muddle of Streets', era: 'palace', ending: { kind: 'bad' },
-    cast: ['player', 'win'],
+    cast: ['player', 'win', 'lantern'],
     imagePrompt: `Late night inside the projection box after the show, no weather. The Lantern is dark. Win sits on the rewind bench with an old iron key on a loop of string in her lap, frowning as she traces invisible lines on her palm with a finger. The player, seen from behind, sits beside her. Only these two people.`,
     text: [
       `When the last splice clatters through the gate, the screen goes white, and the moths pour off it over the stalls. They circle for a moment, then scatter, bumping into one another like moths round a porch light, and drift away into the dark corners of the auditorium.`,
@@ -596,7 +595,9 @@ const raw: Page[] = [
         text: `Win climbs back up to the box when the house lights come on and sits down on the rewind bench. “I remember it,” she says slowly. “I think. There’s a chapel, and a yard with a chimney, and our door. Only I can’t get from one to the other. Every time I try to walk home, I end up somewhere else.”`,
         else: `Win sits down on the rewind bench beside you. “I remember it,” she says slowly. “I think. There’s a chapel, and a yard with a chimney, and our door. Only I can’t get from one to the other. Every time I try to walk home, I end up somewhere else.”` },
       { if: residents, text: `The Pellow twins argue all the way to the minibus about which street the chapel was on. Abel says nothing at all.` },
-      `By morning, Win says it’s like a dream she can’t put in order. By the end of the week she has stopped trying. The Wicks came back as a muddle nobody could walk through, just as Ada warned, and the Lantern will never light again.`
+      { if: is('anchor', 'glass'),
+        text: `By morning, Win says it’s like a dream she can’t put in order. By the end of the week she has stopped trying. The Wicks came back as a muddle nobody could walk through, just as Ada warned, and the Lantern will never light again.`,
+        else: `By morning even the muddle has gone. Nothing that had really been there lit it, just as Ada warned, and the Lantern will never light again.` },
     ],
   },
   {
@@ -617,19 +618,19 @@ const raw: Page[] = [
   },
   {
     id: 'E05', title: 'Cold Lamp', era: 'palace', ending: { kind: 'bad' },
-    cast: ['player', 'win', 'lantern', 'moths'],
+    cast: ['player', 'win', 'lantern', 'moths', 'rolls'],
     imagePrompt: `Night inside the projection box, no weather. The Lantern is dark and cold. A few dim pale-gold light-moths rest on four small closed round film cans on the bench, their glow fading. Win and the player, seen from behind, stand together looking at the dark machine. Only these two people.`,
     text: [
       `The carbons burn down to nothing. The light in the lamphouse goes orange, then red, then out, and the last moths settle on the four cans and fold their wings.`,
       `Win stays beside you until the Lantern is cold to the touch.`,
-      `*The Brass Moon* finishes to warm applause. At midnight Mr Hale hands the keys to Starlite Video. On Monday the scrap man takes the Lantern, and Win’s iron key goes into a drawer with the batteries and the string.`,
-      `A week later you crank the rolls through Ada’s viewer one more time. The pictures are still there, faint and grey: a lane, a street, a row of sheds, a yard. Nobody you show them to has any idea where they are.`
+      `*The Brass Moon* finishes to warm applause. Before Mr Hale locks up, you take the rolls down to the archive and crank them through Ada’s viewer one last time. The pictures are still there, faint and grey: a lane, a street, a row of sheds, a yard. Win looks over your shoulder and shakes her head. She has no idea where any of it is.`,
+      `At midnight Mr Hale hands the keys to Starlite Video. On Monday the scrap man takes the Lantern, and Win’s iron key goes into a drawer with the batteries and the string.`
     ],
   },
   {
     id: 'E06', title: 'One Street', era: 'town', ending: { kind: 'good' },
     cast: ['win'],
-    imagePrompt: `Bright cold November morning outside a modern terraced house in Saltbeck. Win, in her cardigan, hangs an old iron key on a loop of string from a small nail beside her own front door, smiling quietly. Nobody else.`,
+    imagePrompt: `Bright cold late-October morning outside a modern terraced house in Saltbeck. Win, in her cardigan, hangs an old iron key on a loop of string from a small nail beside her own front door, smiling quietly. Nobody else.`,
     text: [
       `Tallow Lane stays.`,
       `Win remembers number 4, the green door and her mother’s voice calling her in when the lamps came on. She remembers the chapel at the top of the lane and the lamplighter coming up it every evening with his pole.`,
@@ -654,7 +655,7 @@ const raw: Page[] = [
   {
     id: 'E08', title: 'At a Run', era: 'town', ending: { kind: 'good' },
     cast: ['win'],
-    imagePrompt: `Dry, bright November morning in the overgrown field behind the bus depot, with the tall square brick chimney rising behind. Win, in her cardigan, stands on a line of old cobbles pointing uphill, her face thoughtful. Nobody else.`,
+    imagePrompt: `Dry, bright late-October Monday morning in the overgrown field behind the bus depot, with the tall square brick chimney rising behind. Win, in her cardigan, stands on a line of old cobbles pointing uphill, her face thoughtful. Nobody else.`,
     text: [
       `The Wicks comes back, but at a run.`,
       `Win remembers the chapel at the top of Tallow Lane, the wax sheds and the chimney, and the order you walked them in. She remembers a green door. She can’t remember her mother’s face on the step, only that someone was always there.`,
@@ -666,7 +667,7 @@ const raw: Page[] = [
   {
     id: 'E09', title: 'Keep the Light', era: 'town', ending: { kind: 'good', best: true },
     cast: ['player', 'win', 'abel', 'pellows'],
-    imagePrompt: `Dry, bright spring morning in the field behind the bus depot, the tall square brick chimney rising behind a new plain wooden sign on the fence (no legible words). Win, Abel and the Pellow twins, in their usual clothes, walk slowly up a line of old cobbles together, Win holding an old iron key on a loop of string. The player, seen from behind, walks a step behind them. The long lamplighter's pole is not here. Nobody else.`,
+    imagePrompt: `Dry, bright spring morning in the field behind the bus depot, the tall square brick chimney rising behind a new plain wooden sign on the fence (no legible words). Win, Abel and the Pellow twins, in their usual clothes, walk slowly DOWN the slope together along a line of old cobbles from the top of the field toward the chimney, Win holding an old iron key on a loop of string. The player, seen from behind, walks a step behind them. The long lamplighter's pole is not here. Nobody else.`,
     text: [
       `You keep the white light on the screen. Mr Hale goes quiet on the speaking tube. Downstairs, nobody moves. For ten minutes, eight hundred people sit in the dark looking at an empty white screen while the moths go out through the dome and the doors into Saltbeck.`,
       { if: le(0),
@@ -750,10 +751,10 @@ const story: Story = {
     stylePrefix: `Warm painterly 1980s storybook illustration with a touch of magic realism, soft ink outlines, rich velvet reds, brass golds and lamplit ambers against deep night blues, gentle film-grain texture, expressive invented faces, 3:2 landscape. Family-friendly, bittersweet and wondrous. Northern English town of Saltbeck, October 1986, unless a scene states otherwise. Only the listed characters appear; Win, Dot, Mr Hale, Abel and the Pellow twins appear only when listed. Crowds are anonymous soft shapes with no distinct faces. No real people's likenesses, no famous films, posters, logos, brand names or legible text. Every scene states location, time of day and weather or that it is indoors. Keep each character's clothing word-for-word identical to the cast description. The player's face is never shown. Pale-gold light-moths are small, gentle and luminous, never insects in close-up and never frightening. Film shown on screens is silvery black and white. Nothing violent or dangerous; mishaps are gentle and comic.`,
     cast: {
       player: `THE PLAYER: an unnamed, gender-neutral seventeen-year-old projectionist, always seen from behind or over the shoulder with the face hidden, with short sandy-brown hair, in a navy wool crew-neck jumper with the sleeves pushed up, charcoal work trousers and black lace-up boots. No bag, badge or name tag.`,
-      win: `WIN ALDOUS: a tall, upright seventy-year-old woman with pale skin, a long single silver plait over one shoulder and half-moon glasses on a black cord, in a mustard-yellow cardigan over a white blouse, a brown tweed skirt and brown brogues.`,
-      dot: `DOT PRYOR: a cheerful, round-faced usherette in her fifties with warm brown skin and short curly black hair, in a red usherette jacket with gold piping and brass buttons, a black skirt and black flat shoes; a sweet tray hangs from a strap round her neck.`,
+      win: `WIN ALDOUS: a tall, upright seventy-year-old woman with pale skin, a long single silver plait over her LEFT shoulder and half-moon glasses on a black cord, in a mustard-yellow cardigan over a white blouse, a brown tweed skirt and brown brogues.`,
+      dot: `DOT PRYOR: a cheerful, round-faced usherette in her fifties with warm brown skin and short curly black hair, in a red usherette jacket with gold piping and exactly six brass buttons, a black skirt and black flat shoes; a sweet tray hangs from a strap round her neck.`,
       hale: `MR HALE: a stout sixty-one-year-old man with light-brown skin, a bald head and a neat grey moustache, in a bottle-green velvet dinner jacket, a white shirt, a black bow tie and black trousers.`,
-      abel: `ABEL QUARRY: a thin ninety-year-old man with pale weathered skin and a short white beard, in a brown cable-knit cardigan over a checked flannel shirt, grey trousers and brown leather shoes.`,
+      abel: `ABEL QUARRY: a thin ninety-year-old man with pale weathered skin and a short white beard, in a brown cable-knit cardigan over a red-and-cream checked flannel shirt, grey trousers and brown leather shoes.`,
       pellows: `IVY AND MAY PELLOW: identical seventy-four-year-old twin sisters with pale skin and short permed white hair. Ivy wears a lilac cardigan; May wears a sage-green cardigan; both wear grey pleated skirts and black shoes.`,
       lantern: `THE LANTERN: Ada Merriman's 1911 projector, a waist-high black-japanned machine with brass fittings and rivets, a tall chimneyed lamphouse with a small round ruby-glass peephole, a narrow brass slide gate in front of the lamp, a side crank handle, a short brass speed lever beside the crank, and a round brass gauge on the lamphouse side with a single pointer. Lit, the lamphouse glows warm white.`,
       moths: `LIGHT-MOTHS: small, gentle moths made of pale-gold light, softly glowing, with faint film-frame patterns on their wings.`,
