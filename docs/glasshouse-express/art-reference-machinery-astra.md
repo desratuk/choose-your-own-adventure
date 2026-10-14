@@ -107,3 +107,62 @@ Remaining: merge owner `513ce8a` with author `16bd8d2` before further boards; ex
 Owner independently approved carriage (8dc03f4) and interior (d4f3333). Interior milestone 1cc80c9 integrated by owner as fa96405. Owner 513ce8a merged as 61f8a89, preserving complete candidate provenance; d4f3333 merged as 3afbdc3. Read exact author 16bd8d2 diff and bible response table: rails pass through gates toward fountain; all four vehicles remain coupled; yard/far gate key roles are distinct; E04 fuel wording is neutral. Physical reference designs remain compatible. Post-merge typecheck and 18/18 focused Glasshouse regressions passed; temporary dependency symlink removed. No independently authored approval hashes.
 
 Only conservatory-exterior and conservatory-interior remain. Required approved fernhallow-incline source is not yet available in this worktree, so no substitute is generated. Exterior will preserve rails through gates toward fountain; interior will attach exterior, carriage-interior and glasshouse-carriage for the same enlarged Hallam lock, plus approved style anchor. All scene work remains held for fresh round-4 PASS/stamp per parent.
+
+## Conservatory exterior candidate (current)
+
+Merged owner de0799d as e726d10, including approved Fernhallow and author8360ab2. Read author diff and bible train-framing/D04 response table: coupled four-vehicle framing and stove-glow wording change no reference geometry. Prior source holds above are resolved. Scenes remain HOLD pending independent round4 PASS/stamp.
+
+Runtime remains verified Codex/gpt-6-astra/medium. Built-in imagegen only; no provider error or substitution.
+
+Selected exterior: 1536×1024, cwebp -q88, no resize. WebP SHA-256 ee65600b44b0fa3e9101d0e4419e4ae459339c40dd925be41d62a19474047823; PNG SHA-256 ca20b621416c95837814b4defb9a204896c2ec14984be179bb37d0eceee35f0d. Full-size generated PNG and final WebP inspected. Twelve closed dark bays (six each side of centre post), twelve open blades in separate sunrise view, dark dome/cupola, rails through open gates ending before frozen fountain, cottage/side path and gate bell chain. No people/faces/hands. No scene presence/stock/outcome implied.
+
+Every call attached FULL approved fernhallow-incline.webp (SHA-256 4e0bf61591ca66c58bd9cdfd2cef6ad3ba10cb58de126a0556f5f9aa588a7eec) and player-hesper.webp style anchor. Each correction also attached preceding complete target. Originals preserved ignored as conservatory-exterior-v1.png through -v6.png. v1 rejected for count and interior trees; v2 removed trees but ambiguous extra edge bay; v3/v4/v5 left eleven clear closed bays; v6 corrected left half from five to six.
+
+Built-in provenance, all under /Users/carl/.codex/generated_images/01a13c47-e351-75d0-bc06-b0d758b4159b/:
+v1 exec-a026bc9a-0c75-40eb-8a20-3e1db05385fc.png;
+v2 exec-ebb075d4-41bd-4825-8089-3800afe160f0.png;
+v3 exec-dbf46307-e3a3-4bea-9f21-f8d48a818df5.png;
+v4 exec-122f863c-99ec-4eef-9cab-18902d259e65.png;
+v5 exec-fae4785c-4c4e-43d4-992e-6b56c031c54e.png;
+v6 exec-cfa53f41-28cc-4050-9a97-d52cf65c213d.png.
+
+Full manifest prompt in EVERY call:
+```text
+Use case: illustration-story. Production reference sheet, 1536x1024 landscape, warm pale parchment background. Painterly 1980s fantasy-adventure illustration, gouache and ink line, luminous frost blues and warm glasshouse amber, expressive invented faces, cinematic light, family-friendly and gently comic. Clear separated design views, not a story event. No real people's likenesses, no copied franchise designs, no famous trains, no weapons, no logos, no legible text or captions (maker's plates, signs and cassette labels are blank or unreadable). Only specified subjects. The story's night is clear with hard frost and stars; interiors are lamplit; dawn is clear and golden. This board locks design only, never possession, accompaniment, plant state or story outcome. THE CONSERVATORY exterior on the summit of Cold Hill, no people. TOP: a great glass dome the size of a cathedral, white-painted iron ribs, a lantern cupola at the crown, a stone base, and on its eastern face a curved row of TWELVE tall vertical iron shutters, shown CLOSED, with a stone-walled forecourt in front: tall iron gates, a frozen fountain, a swept path to a side door, a small caretaker's cottage at one side, the railway ending at the fountain. Night, stars. BOTTOM LEFT: the same eastern face with all twelve shutters swung OPEN at sunrise. BOTTOM RIGHT: close detail of the gates and bell chain. Consistent geometry: the shutters are a continuous curve three times human height. Attached Glasshouse Express sources are rendering/material guides unless a specific shared design is requested above; preserve that design only. Do not copy unrelated subjects or the source board layout.
+```
+
+Supplement in EVERY call:
+```text
+
+Input1 is FULL approved Fernhallow board: preserve the distant Conservatory dome/cupola silhouette in its bottom-right view and snowy summit materials; do not copy its tunnel or halt. Input2 is approved rendering style only, no people. Exactly1536x1024. TOP main view occupies about60% height, an elevated oblique view from outside the forecourt looking toward the eastern face, all TWELVE closed dark iron shutters countable in one gently curved contiguous row below the glass dome, taller than the nearby ordinary side door by three times. No additional shutters on other faces. Two tall wrought iron gate leaves in foreground stone wall, swung open clear of ONE railway track. Two rails pass physically through the gateway, continue across snowy forecourt and END JUST SHORT of the frozen fountain rim; never run through fountain or dome. Fountain is in forecourt outside dome. Enough track between gates/fountain for small engine; no train drawn. Side-door swept path avoids track. Small cottage at side. Dome UNLIT and dark at night, white iron ribs visible in moonlight. Bottom-left same eastern face at sunrise with exactly twelve SAME shutters rotated90 degrees on vertical pivots, showing twelve edge-on blades and open gaps, still attached; not folding doors, not extra wings. Bottom-right gates/bell-chain detail same stonework. Preserve dome scale, cupola and shutter geometry between views. Separate vignettes with parchment gutters. No text, people, plants or locomotives.
+```
+
+Sequential correction supplements (one per edit):
+
+```text
+
+EDIT INPUT3 exterior board, inputs1/2 full approved source/style anchors. Preserve dome/cupola, forecourt, rail, gates, fountain, cottage, all compositions and1536x1024. Two required corrections: BOTH dome facades must have EXACTLY TWELVE iron shutters rather than the current nine. Redivide the same curved eastern frontage into twelve narrower equally spaced bays with slender WHITE IRON vertical supports (not thick stone piers). In TOP NIGHT panel show twelve individually countable CLOSED opaque iron panels, contiguous curve. In BOTTOM LEFT show those exact twelve individual shutters each rotated90degrees about its vertical hinge, twelve visibly separate edge-on projecting blades and eleven intervening bright open gaps. No extra shutter or door amid row. Second: REMOVE ALL tall trees/plants inside bottom-left conservatory: this building contains a low central stone bed, no tropical trees. Through open shutters show empty stone floor and a low round stone bed without plants, sunlit glass/ribs beyond; no foliage whatsoever. Keep unchanged the gate-detail panel, rail ending before fountain, dark unlit top dome, snow and style. No text.
+```
+
+```text
+
+EDIT INPUT3 only. Inputs1 and2 are full approved source/style references. Preserve everything, exact1536x1024, especially bottom sunrise twelve open shutters, gate detail, rails, fountain, cottage and dome. ONE precision correction in TOP panel only: closed shutter frontage currently appears to have thirteen bays, due to an extra tiny shutter sliver at far left. Make EXACTLY TWELVE closed shutters clearly countable. Replace the far-left tiny dark shutter sliver between x455 and x472 with a solid white-painted iron corner return; retain the twelve closed dark shutters extending from x472 through x1056. Do not add any shutters. Preserve all other views and details. No labels or text.
+```
+
+```text
+
+INPUT3 edit target. Inputs1/2 full approved source/style references. Keep exact1536x1024 and everything unchanged EXCEPT the TOP NIGHT panel's leftmost shutter bay at x477..493, y207..301. This bay was accidentally painted white. Paint its louvred panel DARK navy iron matching the adjacent closed shutters; retain narrow white vertical frames on both sides. This restores the twelfth shutter (eleven other dark bays already exist). Do NOT change its dimensions or any other panel. Bottom sunrise already has twelve shutters and MUST remain untouched. No other edits, no labels.
+```
+
+```text
+
+INPUT3 edit target, inputs1/2 approved source/style. Keep all board design and1536x1024. Rebuild ONLY TOP night CLOSED shutter row: twelve equally spaced dark iron shutter panels separated by thirteen slender white vertical posts. Full row from left end to right end must show ALL TWELVE. Current row shows eleven dark panels with an accidental white shutter at its extreme left. Replace that white shutter with dark iron, or redivide full width to create exactly twelve DARK PANELS. Do not alter bottom sunrise twelve open shutters. Keep dome, ribs, cupola, cottage, rail through gates ending before fountain and gate detail identical. No labels.
+```
+
+```text
+
+Edit INPUT3 only, inputs1/2 source/style. Preserve everything except TOP NIGHT facade LEFT HALF. Between leftmost post x472 and central post x762 there are currently FIVE closed shutter panels. Redivide this LEFT HALF into SIX dark shutter panels with FIVE internal white posts: posts at approximately x520,568,616,665,713, plus existing end posts x472 and762. RIGHT HALF x762..1058 already has SIX panels and stays EXACTLY unchanged. Six left plus six right gives12. No other changes anywhere. Bottom view untouched. Exact1536x1024. No text.
+```
+
+
+Owner independent approval pending; no reviewedSha256 authored. Interior awaits that approval and will attach approved exterior, carriage-interior, glasshouse-carriage mechanism and style (plus edit target for corrections). No scene generated.
