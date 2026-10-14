@@ -1,8 +1,8 @@
 # Glasshouse Express attachment audit
 
-Computed from referencesForPage against manuscript 16bd8d2 and manifest 513ce8a. This is a planning audit, not a reference approval or scene-export gate pass. Recompute at validated scene export and include this contract in all three scene-worker briefs.
+Computed from referencesForPage against manuscript 8360ab2 and manifest e7d1d8d. This is a planning audit, not a reference approval or scene-export gate pass. Recompute at validated scene export and include this contract in all three scene-worker briefs.
 
-44 pages; maximum 7 full reference boards (F03, F06). 21 pages exceed five references for initial generation; 35 exceed four references when one target image is attached for editing.
+44 pages; maximum 7 full reference boards (F03, F06). 22 pages exceed five references for initial generation; 36 exceed four references when one target image is attached for editing.
 
 ## Mandatory attachment contract
 
@@ -27,7 +27,7 @@ Computed from referencesForPage against manuscript 16bd8d2 and manifest 513ce8a.
 | B04 | 5 | player-hesper, dov, lower-town-cast, glasshouse-carriage, ember-works |
 | B05 | 6 | player-hesper, dov, marigold, glasshouse-carriage, keeper-props, candlewick-junction |
 | B06 | 4 | player-hesper, marigold, glasshouse-carriage, tallow-street-and-halt |
-| B07 | 4 | player-hesper, dov, marigold, tallow-street-and-halt |
+| B07 | 5 | player-hesper, dov, marigold, glasshouse-carriage, tallow-street-and-halt |
 | B08 | 5 | player-hesper, marigold, glasshouse-carriage, keeper-props, tallow-street-and-halt |
 | B09 | 4 | player-hesper, lower-town-cast, tallow-street-and-halt, lower-town-interiors |
 | B10 | 3 | player-hesper, tallow-street-and-halt, lower-town-interiors |
@@ -36,7 +36,7 @@ Computed from referencesForPage against manuscript 16bd8d2 and manifest 513ce8a.
 | C03 | 6 | player-hesper, dov, marigold, glasshouse-carriage, keeper-props, mere-and-beacon |
 | C04 | 6 | player-hesper, lower-town-cast, marigold, glasshouse-carriage, lower-town-interiors, mere-and-beacon |
 | C05 | 5 | player-hesper, glasshouse-carriage, carriage-interior, sunwort, mere-and-beacon |
-| D01 | 5 | player-hesper, dov, marigold, keeper-props, fernhallow-incline |
+| D01 | 6 | player-hesper, dov, marigold, glasshouse-carriage, keeper-props, fernhallow-incline |
 | D07 | 6 | player-hesper, dov, marigold, glasshouse-carriage, keeper-props, fernhallow-incline |
 | D02 | 5 | player-hesper, marigold, glasshouse-carriage, keeper-props, fernhallow-incline |
 | D03 | 5 | player-hesper, glasshouse-carriage, carriage-interior, sunwort, fernhallow-incline |
