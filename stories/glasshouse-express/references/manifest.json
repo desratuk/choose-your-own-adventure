@@ -129,7 +129,8 @@
     "sources": [
       "stories/glasshouse-express/references/glasshouse-carriage.webp",
       "stories/glasshouse-express/references/keeper-props.webp"
-    ]
+    ],
+    "reviewedSha256": "b7d5d1dbdb1d0a83ab99aa74b3cfe8cb49cdaee391a32c6f4ca39799d4e263ed"
   },
   {
     "id": "sunwort",
