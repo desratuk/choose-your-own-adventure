@@ -54,7 +54,8 @@
       "E09",
       "E10",
       "E03"
-    ]
+    ],
+    "reviewedSha256": "d8c75f727715db880391a5aa5360f7b429c5cf29a78af21259d64da8491ddd74"
   },
   {
     "id": "imani",
@@ -62,7 +63,8 @@
       "imani"
     ],
     "prompt": "Use case: illustration-story. Original 1980s mountain adventure production reference, 1536x1024 landscape, warm neutral board, separate clear identity/detail views, painted gouache and crisp ink. No captions, logos, real likenesses, franchise designs or story action. IMANI VALE: original adult woman with deep brown skin, close-cropped salt-and-pepper curls, round amber glasses, navy boiler suit with cream collar, burgundy knit waistcoat and black work boots. Practical warm expression, no real likeness. Front/three-quarter/rear full-length views, amber round glasses close detail, navy boiler suit cream collar and separate burgundy waistcoat; normal anatomy. Design only: no reference establishes possession, completed work or accompaniment.",
-    "pages": []
+    "pages": [],
+    "reviewedSha256": "f7e1f1cb044414cbec7690052184b57f0c3d359abea440d7f9822d56b627e95d"
   },
   {
     "id": "sol",
@@ -70,7 +72,8 @@
       "sol"
     ],
     "prompt": "Use case: illustration-story. Original 1980s mountain adventure production reference, 1536x1024 landscape, warm neutral board, separate clear identity/detail views, painted gouache and crisp ink. No captions, logos, real likenesses, franchise designs or story action. SOL ANWAR: original middle-aged nonbinary caretaker with medium brown skin, round face, short black curls, plum work jacket over pale blue shirt, charcoal trousers and black lace-up shoes. Small brass key ring when requested. No real likeness. Front/three-quarter/rear views and brass building-key ring detail; jacket is plum, never confused with Mara green. Design only: no reference establishes possession, completed work or accompaniment.",
-    "pages": []
+    "pages": [],
+    "reviewedSha256": "5d3b5e0a365c440af7c0a69e5e51e33cf03567ed55011288dc23204d18ec9d9f"
   },
   {
     "id": "mara",
@@ -78,7 +81,8 @@
       "mara"
     ],
     "prompt": "Use case: illustration-story. Original 1980s mountain adventure production reference, 1536x1024 landscape, warm neutral board, separate clear identity/detail views, painted gouache and crisp ink. No captions, logos, real likenesses, franchise designs or story action. MARA QUILL: original adult woman with light freckled skin, broad shoulders, short copper curls, moss-green cardigan over cream shirt, dark brown corduroy trousers and black ankle boots. Red knitted fingerless gloves when at cabin controller. No real likeness. Front/three-quarter/rear views, exact red fingerless glove geometry in separate detail; cardigan remains green everywhere. Design only: no reference establishes possession, completed work or accompaniment.",
-    "pages": []
+    "pages": [],
+    "reviewedSha256": "72de6a559c1650941c4e80edc9445713c5c0fb86f2ca49703e5fadf43ec339be"
   },
   {
     "id": "valley-workshop",
