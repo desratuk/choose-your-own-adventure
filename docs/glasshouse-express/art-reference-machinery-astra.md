@@ -166,3 +166,60 @@ Edit INPUT3 only, inputs1/2 source/style. Preserve everything except TOP NIGHT f
 
 
 Owner independent approval pending; no reviewedSha256 authored. Interior awaits that approval and will attach approved exterior, carriage-interior, glasshouse-carriage mechanism and style (plus edit target for corrections). No scene generated.
+
+## Final Conservatory interior candidate
+
+Merged owner 7ce65d8 by fast-forward, preserving all three worker histories. Owner exterior approval is now present. Read final story/bible diffs: F04 bed out of frame with stove glow only, E07 leaves soft/out of focus, plus B04 crop and B05 approach-line fixes. No change to reference geometry. Verified story SHA and continuity stamp both ac3eede2367c209657140c9facac60cb4a8db9a4338ff97051039850e2a9e8bf (round7 PASS dd6d252 supplied by owner). Scenes still await owner approval of this eighteenth reference and validated export.
+
+Reverified live orchestrator catalog supports Codex gpt-6-astra reasoningEffort medium; recorded machinery thread and active run provider/model are codex/gpt-6-astra; runtime injection explicitly confirms Medium. No Claude or other model substitution.
+
+Candidate conservatory-interior.webp: 1536×1024, cwebp -q88 without resize, 504002 bytes. WebP SHA-256 500ec0013059404a22a01ac981cd12f9f822b26b8c52804d7bacfda3d719534f; selected PNG SHA-256 e9d15b98f5218337a3ded3f66405c55d365339fe67f4ab1ab251d4dd7016de03.
+
+Built-in imagegen only, four FULL approved sources every call: conservatory-exterior.webp, carriage-interior.webp, glasshouse-carriage.webp, player-hesper.webp. Corrections use previous target as fifth path. Originals preserved ignored: art-src/references/conservatory-interior-v1.png through -v5.png. All generated files under /Users/carl/.codex/generated_images/01a13c47-e351-75d0-bc06-b0d758b4159b/:
+v1 exec-54d8c00d-ddcc-448a-9a37-2e2d761df319.png;
+v2 exec-710a22cc-3bbd-4033-8f2a-80a240c12370.png;
+v3 exec-d9c13cf6-32b6-4039-807e-aa230b8035c2.png;
+v4 exec-90668e47-ca8d-4995-a3f7-4dce2bfd3450.png;
+v5 exec-e797778e-b10a-4996-b0aa-b338bb30c1f4.png.
+
+Full-resolution PNG/WebP inspection compared Hallam to full approved carriage: horizontal brass wax cylinder, blank oval plate, domed attached vertical pin, broad slotted collar around actuator rod and supporting bracket, raised/turned collar inset; no floating exploded pin. Heavy chain/wheel and low hand-lever louvre shown separately. Great Bed has built-in stove door and hod, bare soil is design inventory only. No people/hands/faces or plants. Top closed row has twelve leaves: six left of centre and six right, final two rightmost are narrow and separated by thin white post. Middle contains separate cropped closed/frosted, sagging/sheared-gear/missing-pane/mist, and open/sunrise states. Owner should independently inspect count/widths and broken-pane readability before approval.
+
+v1 rejected for central pillar, insufficient count and torn shutter leaves; v2 removes pillar and makes intact sagging leaves; v3/v4 still had eleven and v3 added stray border; v5 divides rightmost bay to reach twelve and retains corrected border. No reviewedSha256 authored. No scene work.
+
+Full manifest brief in all five calls:
+```text
+Use case: illustration-story. Production reference sheet, 1536x1024 landscape, warm pale parchment background. Painterly 1980s fantasy-adventure illustration, gouache and ink line, luminous frost blues and warm glasshouse amber, expressive invented faces, cinematic light, family-friendly and gently comic. Clear separated design views, not a story event. No real people's likenesses, no copied franchise designs, no famous trains, no weapons, no logos, no legible text or captions (maker's plates, signs and cassette labels are blank or unreadable). Only specified subjects. The story's night is clear with hard frost and stars; interiors are lamplit; dawn is clear and golden. This board locks design only, never possession, accompaniment, plant state or story outcome. Interior board for THE CONSERVATORY, no people. TOP: the vast interior under the dome: white iron ribs rising into dark, a round raised stone planting bed (the Great Bed, as long across as a railway carriage) in the centre with a small iron stove door set in its base and a hod beside it, the curved row of twelve tall iron shutters on the eastern face seen from inside, narrow hand-opened side louvres low in the walls, a wooden stepladder, a stone floor. MIDDLE: shutter states from inside: CLOSED with frost; HALF-OPEN AND SAGGING on sheared gearing with a run of panes missing above and mist pouring in; fully OPEN with sunrise flooding in. BOTTOM: close detail of the high shutter gear: a heavy chain hanging from a large frost-whitened brass wax cylinder the size of a man's leg mounted where the shutter gear meets the ribs, with its pin and collar; and a side louvre open by hand. Lantern light at night, golden light at dawn. Attached Glasshouse Express sources are rendering/material guides unless a specific shared design is requested above; preserve that design only. Do not copy unrelated subjects or the source board layout.
+```
+
+Supplement in all five calls:
+```text
+
+Input1 approved exterior: MATCH dome ribs/cupola, stone base, twelve tall curved eastern shutters, each narrow dark iron louvred leaf, same hinges. Input2 approved carriage interior: material and lantern lighting only; do not import its furniture, recorder, lamp or plants. Input3 approved carriage: EXACT Hallam pin/collar identity from its large right-hand details, enlarged for Conservatory. Input4 style only, no people. Exactly1536x1024.
+Layout: TOP 40percent height wide interior, empty round stone Great Bed with bare soil (no plants, no route outcome), iron stove door built into its near stone wall, hod next to door, wooden A-frame stepladder beside wall, twelve CLOSED shutters across curved eastern wall, SIX to each side of central white post, all countable. Low narrow side louvres distinct from tall eastern shutters. No tracks or fountain inside dome.
+MIDDLE 25percent height THREE separate state closeups of SAME shutter construction: left closed frosted; centre half-open sagging with visibly broken gear teeth and several glass panes absent above, mist through empty frames; right fully90degrees open to golden sunrise. These are cropped representative sections of same twelve-leaf system, not extra shutters.
+BOTTOM 35percent: left TWO THIRDS a LARGE leg-size horizontal brass wax cylinder with blank oval maker plate mounted high to white iron rib, heavy chain on adjacent wheel/gear driving shutter linkage. At cylinder right end show the SAME carriage lock: domed vertical brass pin through broad slotted cylindrical brass collar around horizontal actuator rod, pin remains attached to bracket below. Enlarge lock so pin/collar engagement is unmistakable; not a loose exploded diagram, not a padlock. Frost only thin edges so brass geometry clear. A small adjacent inset of same collar raised and quarter-turned, pin still attached/resting on collar shoulder, matching source3. Bottom right: low side louvre tilted open with simple hand lever, NO hand/person. No labels, letters, arrows, outcomes or unrelated source subjects.
+```
+
+Sequential correction supplements:
+
+```text
+
+INPUT5 edit target. Inputs1 exterior,2 carriage interior,3 Hallam lock,4 style are full approved sources. Preserve exact1536x1024 and entire BOTTOM row (excellent matching attached pin/collar) and LEFT/RIGHT middle state panels. Correct TOP only: REMOVE the tall centre pillar growing from the Great Bed, dome has no central support. Bed remains open bare soil. Across curved rear eastern wall show EXACTLY TWELVE CLOSED shutters, SIX left and SIX right of a thin central WALL post behind bed; redivide full frontage into twelve narrower equal bays, white iron posts. No centre pillar obscuring shutters or bed. Keep stone stove bed, hod, ladder, low side louvres and lanterns.
+MIDDLE CENTRE broken state: three shutter LEAVES themselves must remain intact rectangles but hang tilted HALF-OPEN, sagging on visibly sheared top gearing. Replace torn/broken shutter slats with intact rectangular leaves. Above these shutters show a continuous RUN OF MISSING GLASS PANES in roof (bare empty white frames, a few residual glass shards at edges), with cold mist coming IN through these empty upper panes. Distinct broken teeth on top gear. No text. Do not change bottom machinery geometry.
+```
+
+```text
+
+INPUT5 edit target. Four previous inputs approved sources. Exact1536x1024. Preserve ALL bottom details. TOP currently has TEN closed shutters, five each side. Replace top wall row with TWELVE, six each side. Left half between x320 and x760 needs SIX equal-width dark rectangular shutters and FIVE internal slender posts near x393,466,539,612,685; right half x760..1210 SIX shutters with FIVE internal posts near835,910,985,1060,1135. Retain end/central posts. This is a deliberate change from five to six on EACH side, total12. Keep bed, stove, hod, ladder, lanterns, ceiling, side low louvres untouched.
+MIDDLE CENTRE ONLY: remove ALL glass from the row of rectangular panes immediately ABOVE the damaged shutters at y420..480,x560..960: visible empty white frames with just a few triangular shards caught along edges; mist streams from these empty openings down into room. No other edits.
+```
+
+```text
+
+INPUT5 edit target. Preserve exact1536x1024, all BOTTOM Hallam and middle panels, top bed/stove/ladder etc. TOP has SIX closed shutters LEFT of central post x760, but only FIVE RIGHT. Add ONE additional right shutter bay by redrawing ONLY right section x760..1152 into SIX narrow dark closed panels, separated by FIVE posts at x825,890,955,1020,1085 plus ends760/1152. LEFT SIX remain untouched. Exactly12 in total. Also remove accidental vertical parchment gutter at extreme right x1446..1476 within TOP panel; restore continuous wall/panes there. Do not create any new inset or extra panel. Do not change other details.
+```
+
+```text
+
+INPUT5 edit target. Keep whole image exactly unchanged except ONE clear addition in TOP panel: add a thin white vertical iron post down the middle of the RIGHTMOST dark shutter at x1110,y75..267, dividing that rightmost wide dark panel into TWO narrower separate dark shutter leaves with their own hinges. This raises total shutter count from11 to12. This new white dividing post MUST be visible. No other change. Keep bottom cylinder, attached lock and all middle variants identical. Exact1536x1024.
+```
