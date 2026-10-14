@@ -1,0 +1,86 @@
+/* The Lantern Archive: velvet and brass upstairs, amber vaults below, sodium-lit streets, silver screen. */
+[data-story='lantern-archive'] {
+  --bg: #1a0f12;
+  --surface: #2b171c;
+  --ink: #f6ead8;
+  --muted: #c9ab9a;
+  --accent: #e9b65a; /* brass */
+  --accent-2: #c8414f; /* velvet */
+  --rule: rgb(233 182 90 / 0.18);
+}
+
+[data-story='lantern-archive'][data-era='palace'] {
+  --bg: #1d0d12; /* velvet seats in the dark */
+  --surface: #33161e;
+  --muted: #d1a99e;
+  --accent: #f0be62;
+  --accent-2: #d2475a;
+}
+
+[data-story='lantern-archive'][data-era='archive'] {
+  --bg: #17110a; /* brick vault by moth light */
+  --surface: #2a1f12;
+  --muted: #c8b08a;
+  --accent: #ffd27a;
+  --accent-2: #b98b4e;
+}
+
+[data-story='lantern-archive'][data-era='town'] {
+  --bg: #0f141f; /* wet streets under sodium lamps */
+  --surface: #1a2232;
+  --muted: #a9b4c6;
+  --accent: #ffad4d;
+  --accent-2: #7fa8d6;
+}
+
+[data-story='lantern-archive'][data-era='screen'] {
+  --bg: #111214; /* silver nitrate */
+  --surface: #222428;
+  --ink: #f1f1ee;
+  --muted: #b5b7b8;
+  --accent: #e8e6dc;
+  --accent-2: #f0be62;
+}
+
+/* Illustrations sit in a strip of film, sprocket holes above and below. */
+[data-story='lantern-archive'] .art {
+  position: relative;
+  padding-block: 12px;
+  background: #0b0806;
+}
+
+[data-story='lantern-archive'] .art::before,
+[data-story='lantern-archive'] .art::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 6px;
+  z-index: 1;
+  pointer-events: none;
+  background: repeating-linear-gradient(
+    90deg,
+    transparent 0 9px,
+    color-mix(in srgb, var(--ink) 70%, transparent) 9px 17px,
+    transparent 17px 26px
+  );
+}
+
+[data-story='lantern-archive'] .art::before {
+  top: 3px;
+}
+
+[data-story='lantern-archive'] .art::after {
+  bottom: 3px;
+}
+
+[data-story='lantern-archive'] .page-title {
+  letter-spacing: 0.04em;
+  text-shadow: 0 0 18px color-mix(in srgb, var(--accent) 40%, transparent);
+}
+
+/* Choices read like torn ticket stubs. */
+[data-story='lantern-archive'] .choice {
+  border-radius: 4px;
+  border-left-style: dashed;
+}
