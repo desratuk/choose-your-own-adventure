@@ -212,7 +212,8 @@
     "prompt": "Use case: illustration-story. Production reference sheet, 1536x1024 landscape, warm pale parchment background. Painterly 1980s fantasy-adventure illustration, gouache and ink line, luminous frost blues and warm glasshouse amber, expressive invented faces, cinematic light, family-friendly and gently comic. Clear separated design views, not a story event. No real people's likenesses, no copied franchise designs, no famous trains, no weapons, no logos, no legible text or captions (maker's plates, signs and cassette labels are blank or unreadable). Only specified subjects. The story's night is clear with hard frost and stars; interiors are lamplit; dawn is clear and golden. This board locks design only, never possession, accompaniment, plant state or story outcome. Landmark board for CANDLEWICK JUNCTION at night, no people. LEFT: a tall timber signal post with a red lamp at its top, a dark two-storey timber signal box with an external stair, a set of facing points approached from the foreground where the main line continues ahead and a siding diverges right between high brick walls, a freshly painted blank wooden sign on a post, snow on the ballast, pink neon glow from the town beyond. RIGHT: close detail of the iron ground lever at the foot of the signal box steps: a frost-whitened lever with a wooden handle, its pivot, and a short chain at its side hanging EMPTY where a lock pin should be; a boot print in the snow dusted with dark brick grit beside it. Attached Glasshouse Express sources are rendering/material guides unless a specific shared design is requested above; preserve that design only. Do not copy unrelated subjects or the source board layout.",
     "sources": [
       "stories/glasshouse-express/references/winter-terminus.webp"
-    ]
+    ],
+    "reviewedSha256": "757333ba2a58171bd1c0afc4a7a43c7b36d31bd3a618bb81bb4b5afe4728745d"
   },
   {
     "id": "ember-works",
@@ -306,7 +307,8 @@
     "prompt": "Use case: illustration-story. Production reference sheet, 1536x1024 landscape, warm pale parchment background. Painterly 1980s fantasy-adventure illustration, gouache and ink line, luminous frost blues and warm glasshouse amber, expressive invented faces, cinematic light, family-friendly and gently comic. Clear separated design views, not a story event. No real people's likenesses, no copied franchise designs, no famous trains, no weapons, no logos, no legible text or captions (maker's plates, signs and cassette labels are blank or unreadable). Only specified subjects. The story's night is clear with hard frost and stars; interiors are lamplit; dawn is clear and golden. This board locks design only, never possession, accompaniment, plant state or story outcome. THE CONSERVATORY exterior on the summit of Cold Hill, no people. TOP: a great glass dome the size of a cathedral, white-painted iron ribs, a lantern cupola at the crown, a stone base, and on its eastern face a curved row of TWELVE tall vertical iron shutters, shown CLOSED, with a stone-walled forecourt in front: tall iron gates, a frozen fountain, a swept path to a side door, a small caretaker's cottage at one side, the railway ending at the fountain. Night, stars. BOTTOM LEFT: the same eastern face with all twelve shutters swung OPEN at sunrise. BOTTOM RIGHT: close detail of the gates and bell chain. Consistent geometry: the shutters are a continuous curve three times human height. Attached Glasshouse Express sources are rendering/material guides unless a specific shared design is requested above; preserve that design only. Do not copy unrelated subjects or the source board layout.",
     "sources": [
       "stories/glasshouse-express/references/fernhallow-incline.webp"
-    ]
+    ],
+    "reviewedSha256": "ee65600b44b0fa3e9101d0e4419e4ae459339c40dd925be41d62a19474047823"
   },
   {
     "id": "conservatory-interior",
