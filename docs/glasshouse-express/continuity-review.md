@@ -67,3 +67,35 @@ Checked and found sound: brick arithmetic and gates (best 70; F03 gates match A0
 - **Fix:** Show the wheels on glassy, polished rail with no grit. In E04 the crew's barrow is full and the shovels are clean.
 
 **Verdict:** FINDINGS. 10 issues; no `.continuity-review` stamp recorded. Re-review after fixes.
+
+## Round 2 — FINDINGS (no stamp)
+
+Reviewer: independent continuity reviewer, Claude Opus 5.5 (`claude-opus-5-5`); medium reasoning was requested, but the effort level can't be seen from inside the run. Base: `a7192f1`. Manuscript: `stories/glasshouse-express/story.ts` from `19768a4` (unchanged since). Inputs: the full `story-dump` (44 pages, every arrival state), the bible including the round-1 response table, project `CLAUDE.md`, all 44 `imagePrompt`s and `stylePrefix`, and the round-1 diff (`54b6b3c..19768a4`).
+
+All ten round-1 fixes hold and introduce no new contradictions: A01's planting rule; Dov at the hut through C03/C04/C05; Fenn's three hours and two at the gate (consistent with C03 at two, D01 at three and the sanding time); E05's "should have known better"; E06's neutral cold way; E01's five o'clock broadcast with a concrete cause; F04's introduction of Hallam & Daughters; sunrise at 7:30 in E02 and E04; C01 with no tram; and bare ice in D07/E04. The art-owner locks also hold: Sallow has no hat, D02 has no bucket, D04 is stove-only, F02/F03/F05/F06 hide the plants, E06 is cropped to buds, Fenn wears his coat in E08, Dov is seated in E10, and B01 shows facing points. Brick arithmetic, gates, clue gating, plant-state rendering and ending labels are unchanged and sound.
+
+### 1. Sallow says the yard gate can't be opened, then his men take the train through it
+- **Pages:** B04 [0] ("The day foreman has the key to this yard gate, and the day foreman is asleep. But my night men can walk your train through the yard…"); E02 [1] ("to the single yard gate you entered by, which someone has chained again behind you"); E02 [2] ("arrives with both keys").
+- **Trigger:** B03 → B04 → E02 (every tow route). The B04 line also renders on B04 → B05.
+- **Defect:** The round-1 canon pass made it explicit that the train stops in front of the chained yard gate (B03 [0]) and later passes through it ("entered by… chained again"). Sallow has just said the only key holder is the absent foreman, so nobody could have opened it. The reader can't tell how the night men got the train through, so the trap reads as a plot hole rather than a con.
+- **Fix:** B04 [0]: "My night men have the key to this yard gate. They can walk your train through the yard on the works’ own rails and put you out at the far gate in ten minutes." Leave the foreman to be revealed at the far gate in E02 [0], as now. In E02 [2], change "with both keys" to "with the far gate’s key". If both gates should stay foreman-only, add to E02 [0] that the night men unlocked the yard gate and took that key away with them.
+
+### 2. The Slide says the locker is nearly empty when it may be nearly full
+- **Page:** E04 [0] ("There is nothing else in the locker for it… keeping the stock alive on the last of the bricks").
+- **Trigger:** D07 → E04 with ember ≥ 20 (arrival ember reaches 70). On these routes D07 offered the two-bucket sanding and the player chose to wait.
+- **Defect:** The prose says waiting was forced and the bricks were almost gone, yet the meter can show dozens left. This is the same kind of error as round-1 finding 5 (E06).
+- **Fix:** Use neutral wording, e.g. "You wait. You and Dov sit on the footplate step at Fernhallow Halt with the house stove banked low behind you to make the bricks last, keeping the stock alive, and watch the tunnel mouth…" Alternatively, put the current sentence behind `IF ember < 20`.
+
+### 3. The train is inside the Conservatory yard before the shut gates are unlocked
+- **Page:** F01 [0] ("The line ends in the Conservatory yard, a snowy forecourt behind tall iron gates… Marigold stops with her buffers almost touching the fountain’s rim") and F01 [1] ELSE ("The gates are shut… You pull the bell chain beside the gate… ‘Nobody rang,’ he says, unlocking the gates").
+- **Trigger:** `wordSent = false`.
+- **Defect:** [0] places the engine inside the gated forecourt at the fountain. [1] ELSE then has the gates shut, with the crew ringing outside them and Fenn unlocking them. The train can't have got past gates that are still locked. The F01 image (gates open, Fenn at the gates, Dov by the engine) doesn't settle which side the train is on.
+- **Fix:** [0]: "The line runs up to the tall iron gates of the Conservatory yard, a snowy forecourt with a frozen fountain in the middle and the dome rising over everything like a second sky." wordSent [1]: add "…and Marigold runs in and stops with her buffers almost touching the fountain’s rim." ELSE [1]: after "unlocking the gates", add "Dov draws Marigold in to the fountain." In the imagePrompt, put the stopped engine just inside the open gates.
+
+### 4. The style rule removes the two empty carriages from shots where they must be visible
+- **Pages:** A06 `imagePrompt` above all; also the wide exterior shots B06, C01 and D05.
+- **Trigger:** every route. The `stylePrefix` rule "the empty dark carriages are absent unless explicitly listed for that scene" applies, and none of these prompts lists them.
+- **Defect:** In A06 [1] the player stands at the end window and watches "the Fern House and the Orchard Car follow, dark glass on dark glass". The prompt has the player looking back through that window, with the carriages forced out of frame, so the image contradicts the paragraph. The carriages stay coupled all night (B05 runs from the Orchard Car's end window). The broadside views in B06, C01 and D05 would therefore show a two-vehicle train, unlike A01's four.
+- **Fix:** A06: add "the two dark, empty glass carriages (the Fern House and the Orchard Car) coupled close behind, filling the view through the end window". B06, C01 and D05: either list "two dark empty glass carriages coupled behind" or frame the shot so the rear of the train is out of view (for example, cut at the Glasshouse Carriage's end window).
+
+**Verdict:** FINDINGS. 4 issues; no `.continuity-review` stamp recorded. Re-review after fixes.

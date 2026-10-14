@@ -50,4 +50,54 @@ Built-in source files: /Users/carl/.codex/generated_images/01a13c47-e345-72a1-ae
 
 ## Outstanding
 
-Lower-town-cast and Fenn released by author fix; awaiting Dov owner review for source use. Fenn stays buttoned, with additional uncapped head for E08/E10. Sallow has no hat. Sunwort awaits reviewed carriage-interior source. Independent manuscript review remains pending; no final scenes or affected unconfirmed designs frozen. Full art gate intentionally remains pending reference approvals and absent scenes; not run as a completion claim.
+Dov and keeper-props independently approved by owner commit 4367106 (imported as e76fc37); lower-town-cast and Fenn generated after that approval. Fenn stays buttoned, with additional uncapped head for E08/E10. Sallow has no hat. Sunwort awaits reviewed carriage-interior source. Independent manuscript review remains pending; no final scenes or affected unconfirmed designs frozen. Full art gate intentionally remains pending reference approvals and absent scenes; not run as a completion claim.
+
+## Candidate milestone 2
+
+Both calls attached player-hesper.webp and approved dov.webp, with the complete corresponding manifest brief. Lower-town v1 also added unrequested rear views and copied Hesper glasses/face and a square lantern. Rejected original preserved as art-src/references/lower-town-cast-astra-v1-rejected.png. Built-in correction attached both mandatory anchors plus the rejected candidate, requested only three front figures, a distinct broad-cheeked olive Nan without glasses, apron under coat, and a round globe hurricane lantern for Sallow. Cassia/Sallow faces and costumes preserved. Sallow has no hat. Final v2 inspected at full resolution in PNG and WebP: faces match portraits, costumes and ordinary limb geometry correct; hands pocketed except coherent lantern grip.
+
+Fenn v1 has matching capped/uncapped faces, sparse white hair and moustache; front, side and kneeling figures have buttoned brown wax coat over striped pyjamas and untied brown boots. Round-globe hurricane lantern; held and resting hands inspected, kneeling legs coherent. No coat-off variant. Full-resolution PNG/WebP inspection passed. Both are 1536x1024, cwebp -q 88, no resize, independent owner review pending.
+
+Validation: npm run check passed every story after imported a61acbc, including Glasshouse Express 44 pages, 10/10 endings, 29,401 page/state combinations and 24,575 playthroughs. git diff --check passed.
+
+### lower-town-cast
+
+WebP: stories/glasshouse-express/references/lower-town-cast.webp
+
+SHA-256: a44dc6654985bc79cfd2b772d3c8e01e17dc6cc2cb43eafbb0fbf2873b9e921d
+
+Original: stories/glasshouse-express/art-src/references/lower-town-cast-astra-v2.png
+
+Original SHA-256: aca3c73f606c6ac6b5f7166846ba2a3fa612ded9de7e03f4e4fc38fc820ac0b6
+
+Full manifest brief:
+
+Use case: illustration-story. Production reference sheet, 1536x1024 landscape, warm pale parchment background. Painterly 1980s fantasy-adventure illustration, gouache and ink line, luminous frost blues and warm glasshouse amber, expressive invented faces, cinematic light, family-friendly and gently comic. Clear separated design views, not a story event. No real people's likenesses, no copied franchise designs, no famous trains, no weapons, no logos, no legible text or captions (maker's plates, signs and cassette labels are blank or unreadable). Only specified subjects. The story's night is clear with hard frost and stars; interiors are lamplit; dawn is clear and golden. This board locks design only, never possession, accompaniment, plant state or story outcome. Three separated original character designs, each one full-body front figure plus a large matching head detail directly above it. LEFT NAN PERROW: small woman in her seventies, warm olive skin, silver hair under a purple knitted hat, a padded lilac coat over a floral apron, green wellington boots and brown fingerless mittens; brisk amused face. CENTER CASSIA FLINT: woman in her twenties, deep brown skin, short bleached-blonde curls, big silver headphones worn round her neck, a shiny teal puffer jacket over a black turtleneck, black leggings with acid-yellow leg warmers and white high-top sneakers; quick grin. RIGHT LUCAN SALLOW: man in his forties, pale skin, sleek black hair, a neat black moustache, a camel overcoat with a fur collar, a crimson silk scarf, black leather gloves and polished black shoes, carrying a hurricane lantern; a warm salesman's smile that does not reach the eyes, ordinary clothes, no villain costume. Each has two ordinary arms, hands and legs, five fingers per hand. No settings. Attached Glasshouse Express sources are rendering/material guides unless a specific shared design is requested above; preserve that design only. Do not copy unrelated subjects or the source board layout.
+
+### fenn
+
+WebP: stories/glasshouse-express/references/fenn.webp
+
+SHA-256: af77cc78162b10edf031e5907682e6635e8c9d2be4c7f88b45149f7fe5feb78d
+
+Original: stories/glasshouse-express/art-src/references/fenn-astra-v1.png
+
+Original SHA-256: 55b69ed92061b12f1c9f9dcb2851f3c5b278d2066c3730f6aecedfacf89bfa7c
+
+Full manifest brief:
+
+Use case: illustration-story. Production reference sheet, 1536x1024 landscape, warm pale parchment background. Painterly 1980s fantasy-adventure illustration, gouache and ink line, luminous frost blues and warm glasshouse amber, expressive invented faces, cinematic light, family-friendly and gently comic. Clear separated design views, not a story event. No real people's likenesses, no copied franchise designs, no famous trains, no weapons, no logos, no legible text or captions (maker's plates, signs and cassette labels are blank or unreadable). Only specified subjects. The story's night is clear with hard frost and stars; interiors are lamplit; dawn is clear and golden. This board locks design only, never possession, accompaniment, plant state or story outcome. TOBIAS FENN only: an original tall thin man in his seventies, pale lined skin, white moustache, grumbling devoted face. Clothing verbatim: a brown knitted cap, a long brown waxed coat buttoned over blue-and-white striped pyjamas (pyjama legs and collar visible), unlaced brown boots. One full-body front view holding a hurricane lantern, one full-body side view showing the coat length and unlaced boots, one large head three-quarter detail wearing the cap, plus a small matching uncapped head detail with sparse white hair for the endings where he holds his cap (the coat stays buttoned). Also one small view of him kneeling at nothing (pose only) to lock how the coat falls. Two ordinary arms and legs, five fingers per hand. No conservatory on this board. Attached Glasshouse Express sources are rendering/material guides unless a specific shared design is requested above; preserve that design only. Do not copy unrelated subjects or the source board layout.
+
+Call additions (lower-town initial): style references only, no anchor subjects/clothes/lantern; Sallow NO hat per a61acbc; preserve three distinct faces and exact costume details, three columns, full bodies, portraits above, exactly 1536x1024.
+
+Correction additions: input 3 rejected candidate; inputs 1/2 style only. Preserve Cassia and Sallow faces/clothes; Nan keeps requested clothes but gets distinct broader round cheeks, shorter rounded nose, no spectacles, no copied Hesper freckles, brown fingerless mittens. Sallow lantern becomes ROUND glass globe, round fuel reservoir, curved tubular supports and arched wire handle, not square/X-braced panes. Remove three rear figures. Apron under coat. Exact dimensions, no labels.
+
+Fenn additions: anchors rendering only; distinct tall thin pale elderly man, white moustache, no beard. Conventional ROUND-globe hurricane lantern, round fuel reservoir, curved supports/arched handle, never rectangular. Same BUTTONED coat in front/side/kneeling. Matching capped/uncapped portraits with sparse white hair. No coat-off variant, no implied outcome; full bodies/footwear in frame, exactly 1536x1024.
+
+Built-in output basenames in /Users/carl/.codex/generated_images/01a13c47-e345-72a1-ae2e-69d0cf4230d6/: exec-7b5c7f79-3ddc-4f82-8a3d-14d48e63cd3d.png (rejected lower-town v1); exec-cb311ddf-e05d-4740-ad86-f9cf655d2fc5.png (corrected lower-town v2); exec-0fdeb7f6-2e50-43aa-b6c3-a5c80c5f4373.png (Fenn v1). Sunwort remains pending reviewed carriage-interior.
+
+## Corrected canon checkpoint
+
+Merged owner tip dae9a55 as 1231064, including exact author 19768a4. Read author diff and bible response table: planting-before-dawn rule, Beacon Cut Dov at token hut, Fenn's three-hour estimate, neutral cold planting, five-AM refusal at Fernhallow, Hallam introduction, 7:30 sunrise, facing points and distinct Works gates. Approved bag/Dov/lamp/recorder descriptions match existing boards. No character regeneration required. Merge retained this newer report and owner review notes; no original author content was edited by this worker.
+
+After the merge, npm run check passed all eight stories; npx tsx --test scripts/glasshouse-express-regressions.test.ts passed 18/18; git diff --check passed. Scene generation remains held for independent round-2 PASS. Four assigned boards delivered in 139c1e7 and eaa7f08; sunwort remains blocked solely by its unavailable reviewed carriage-interior source. Do not treat this checkpoint as completion of sunwort or owner approval of lower-town/Fenn.
