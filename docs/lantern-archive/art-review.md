@@ -41,3 +41,15 @@ All 15 references now approved, unresized 1536×1024 q88 WebPs. Current manuscri
 Global npm run prompts blocked before writing on unrelated missing stories/glasshouse-express/references/dov.webp. Used an ignored scoped copy of the existing exporter with only its story input restricted to Lantern Archive and relative imports adjusted; validateReferences, referencesForPage and imagePrompt remain the existing first-party implementations with unchanged gates. Regenerated both reference-prompts.md and image-prompts.md. Validation passed: 15 approved hashes, 45 complete page attachment sets, maximum five reference paths, all declared cast covered, reviewer stamp matching. No packed references needed for initial calls. Edits exceeding five paths must pack complete boards losslessly, retaining source hashes, not omit attachments.
 
 Scene ownership: batch opening A01–A06, B01–B07, C01–C02 (15); batch middle C03–C08, D01–D05, F01–F04 (15); batch endings F05–F09, E01–E10 (15). No overlap. All use isolated Astra Medium T3 worktrees, built-in imagegen only. Every call must include full page prompt and all assigned reference content. Game scenes remain pending, not approved by reference completion.
+
+## Scene launch configuration evidence
+
+All three T3 scene runs launched from d56d1b5 with explicit provider codex, model gpt-6-astra, reasoningEffort medium, isolation worktree. Launch results and durable recentRuns confirm actual provider/model. Each child separately confirmed catalog/currentValue medium plus injected runtime medium. Parent independently read t3_thread_configuration for all three and verified codex/gpt-6-astra, reasoningEffort medium, full-access; actual running recentRuns matched. Requested and recorded settings agree.
+
+| Batch | Branch | Isolated worktree | Task suffix |
+| --- | --- | --- | --- |
+| opening | t3/lantern-archive-opening-art | t3-6ab58bf5 | lantern-scenes-opening-v1 |
+| middle | t3/lantern-archive-middle-scenes | t3-59f23e48 | lantern-scenes-middle-v1 |
+| endings | t3/lantern-archive-scene-art-batch | t3-6c6e3ac7 | lantern-scenes-endings-v1 |
+
+Task prefix for each suffix: node:delegated-task:command%3Amcp%3Ad3687a18-c5e2-47cd-a1ca-04e93d184b42%3Adelegate-task%3A. Worktrees live under /Users/carl/.t3/worktrees/create-your-own-adventure-opus/. Branches must all be merged into the art-owner branch before final delivery. Parent also independently validated all 15 approved references and all 45 attachment sets using the first-party functions.
