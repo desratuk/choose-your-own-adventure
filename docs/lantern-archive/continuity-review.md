@@ -67,3 +67,64 @@
 ### Verdict
 
 **FINDINGS: 11.** No stamp has been recorded. Fix these, run `npm run check`, then start a fresh independent round 2.
+
+## Round 2: FINDINGS (no stamp)
+
+- **Reviewer:** independent `story-continuity-reviewer`, Claude Opus 5.5 (`claude-opus-5-5`). Medium reasoning was requested; the run doesn't expose its effort setting, so that part is unverified.
+- **Manuscript:** 3ffd42a, merged in 5b2b94c. The working tree was clean.
+- **Scope:** everything below was read in full.
+  - The whole `story-dump` for all 45 pages, in every listed arrival state and every conditional rendering.
+  - Every `imagePrompt` and `cast` against its merged arrivals.
+  - The updated bible and its round-1 author response.
+  - `CLAUDE.md`, and the exact diff of 3ffd42a.
+- **Structure:** re-verified, with no change to routes, flags or the meter. `check-story` gives 45 pages, 10/10 endings, 82,576 page/state combinations and 119,805 playthroughs, the same as round 1, and every pack is OK. `scripts/lantern-archive-regressions.test.ts` passes 16/16. The 3ffd42a diff to `story.ts` touches only prose, the A04 `time`, `imagePrompt`s, `cast` lists and cast descriptions.
+
+### Round-1 findings re-checked
+
+All eleven are resolved on every route.
+
+1. **A01/A02:** narration introduces Win after Hale's line, with no duplicate in A02.
+2. **A03:** "since the spring Ada retired, nearly thirty years ago" matches B03's March 1958 entry.
+3. **A04/A05:** the carbon gauge first reads {{clock}} at the strike in A04 [1], after the twenty-minute bridge, so the clock does not start earlier. A05's end-of-reel changeover fits the five-minute choice.
+4. **C01 [3]:** "In the box" is now location-neutral, which is valid after C07 and C08 and after returns from town.
+5. **D05 [1]:** keyed on `knowsRound`. It is correct for in-person, visit-then-phone, phone-then-visit and phone-only routes, and no longer claims a voice nobody heard.
+6. **D05 [2]:** Win recognises Abel as the man who swept the stalls, consistent with C01 [4], and the neighbour irony is intact.
+7. **Row F:** A01 ropes it off on every route. C08 [3] reserves it for the phone route. On the in-person route Dot uses the staff row. Win's fourth seat and "alone in Row F" are now supported.
+8. **D05 [3] ELSE:** the port sentence comes after they enter the auditorium.
+9. **E03 [3]:** glass keeps the week-long muddle, and no glass, or a painted slide, means gone by morning. Both agree with rule 4.
+10. **E05:** the viewer scene now comes before midnight, with Win present (`winPlace` is always box on F09/E05).
+11. **E08/E06 prompts:** both are late October, consistent with "on the Monday" and the midnight handover.
+
+The art-owner changes are valid on every merged arrival:
+- **Cast locks:** Win's plait on her LEFT shoulder, Abel's red-and-cream checked shirt and Dot's six buttons.
+- **E01:** Win is still in her cardigan, which matches the reordered text.
+- **E09:** the four walk DOWN, which matches "from the top of Tallow Lane down to the chimney".
+- **F01–F08:** "Win, wherever she is, is outside the crop" works for both `winPlace` values.
+- **F04/F05/F07/F08:** distant, indistinct screens don't contradict the painted-slide overlay.
+- **Added cast entries:** the moths, Lantern and rolls each match something actually visible.
+
+### Special-scrutiny areas
+
+- **C01:** the first arrival is correct with and without `toldWin`. Returns are correct from every hub page, and the glass, slide and residents lines show only when their flags are set.
+- **`winPlace`:** box and stalls are correct in D05, F01, F03 (all four residents × place combinations), F04, F05, F07, F08, E03, E09 and E10.
+- **Invitations:** D05 renders correctly for both the phone and in-person invitation routes. C02 and C03 handle residents already invited by phone, and C08 handles `knowsRound`.
+- **Ada's five rules against all ten endings:**
+  - Only E09 spreads beyond the watchers.
+  - E07 keeps the restoration within the house.
+  - E10 has a single holder.
+  - E06 restores one part only.
+  - E03 is the muddle.
+  - E04 has no real anchor.
+  - E02 is shown off the Lantern.
+  - E01 and E05 are a single burn, unused.
+  - Every ending has the Palladian closing, no buildings returning and the Lantern never relit.
+- **Meter:** starts 120/105/95. The best route costs 95, ending at 25/10/0. Reel and feet arithmetic (225 ft rolls, 900 ft at 60 or 90 ft/min) agrees with every cost, and zero appears only on E05, the guttering E07 and Hard E09.
+
+### Findings
+
+1. **D05 shows the wrong location in the header.** This affects every D05 arrival (`residentsComing`, from D04). D05 has no `time`, so the header keeps D04's reading, "FINAL NIGHT · THE OFFICE". But D05 takes place at the glass doors, in the foyer and in the auditorium aisle, and the header's when/where reading contradicts the page. F01 resets the reading, so only D05 is affected.
+   *Fix:* give D05 its own reading, e.g. `time: 'FINAL NIGHT · THE FOYER'`. This changes no route, flag or meter, so no revision bump is needed.
+
+### Verdict
+
+**FINDINGS: 1.** No stamp has been recorded. Fix the D05 `time`, run `npm run check`, then start a fresh independent round 3.
