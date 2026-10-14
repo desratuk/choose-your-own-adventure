@@ -128,3 +128,38 @@ The art-owner changes are valid on every merged arrival:
 ### Verdict
 
 **FINDINGS: 1.** No stamp has been recorded. Fix the D05 `time`, run `npm run check`, then start a fresh independent round 3.
+
+## Round 3: PASS
+
+- **Reviewer:** independent `story-continuity-reviewer`, Claude Opus 5.5 (`claude-opus-5-5`). Medium reasoning was requested; the run doesn't expose its effort setting, so that part is unverified.
+- **Manuscript:** 94a0641, merged in e18cf8e. `stories/lantern-archive/story.ts` at HEAD is identical to 94a0641, and the working tree was clean.
+- **Scope:** everything below was read in full.
+  - The whole `story-dump` for all 45 pages, in every listed arrival state and every conditional rendering.
+  - Every `imagePrompt`, page `cast` and `art.cast` description, checked against its merged arrivals.
+  - The bible, including both author responses, `CLAUDE.md` and both earlier rounds.
+- **Structure:** not re-run, as instructed. 94a0641 changes only D05's `time` and the bible, and the author's `npm run check` and 16 focused regressions passed.
+
+### Earlier findings re-checked
+
+- **Round 1:** all eleven fixes still hold on every route. These are Win's introduction, the 1958 hatch, the end-of-reel timing, location-neutral C01 returns, the `knowsRound` greetings, Abel's recognition, Row F, the port after entering, the anchor-dependent E03, E05's viewer before midnight and the October prompts.
+- **Round 2:** D05 now reads `FINAL NIGHT · THE FOYER`. The page opens at the glass doors and only moves into the aisle at its end, and F01 resets the reading to `THE LANTERN` back in the box.
+
+### Whole-story pass
+
+- **Path assumptions:**
+  - C01 is correct on first arrival with and without `toldWin`, and on returns from C03, C04, C06, C07 and C08 with every combination of glass, slide and residents.
+  - The C02, C03 and C08 phone and visit greetings are correct in both orders.
+  - D05 is correct for all four combinations of `knowsRound` and `winPlace`.
+  - F03 is correct for all four combinations of residents and place.
+  - F04–F08, E03, E04 and E06–E10 are correct for both `winPlace` values, with and without residents.
+- **Meter:** starts are 120/105/95. The best route costs 95 and ends at 25/10/0. The 16 and 24 sums (225 ft rolls, 900 ft at 60 or 90 ft/min) and the rerun cost agree with the prose, and only E05, the guttering E07 and Hard E09 reach zero.
+- **Rules and endings:** Ada's five rules hold in all ten endings. The good and bad labels match the outcomes, and E09 is the only best ending. The Palladian closes, no building returns and the Lantern never relights on every route.
+- **Art:** every merged page omits optional people and props, or keeps them outside the crop. That covers Win on C07, C08, D05, E02 and F01–F08; anchors only on their own pages; and screens too small to show the slide overlay. Wardrobe matches the locked cast wording, including Abel's cardigan over the checked shirt in C04. Seasons and days match the text: October for E06 and E08, Sunday for E04, winter for E07 and E10 and spring for E09.
+
+### Findings
+
+None.
+
+### Verdict
+
+**PASS.** The stamp was generated with `node scripts/story-review-gate.mjs --stamp lantern-archive`.
