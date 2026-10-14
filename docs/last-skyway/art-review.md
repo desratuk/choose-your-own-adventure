@@ -114,8 +114,11 @@ Focused Last Skyway regressions PASS, 13/13.
 Reference/export checkpoint: `17b96ce`. Three app-owned isolated worktrees, each
 assigned exactly sixteen disjoint pages, launched with explicit provider `codex`,
 model `gpt-6-astra`, option `reasoningEffort=medium`. Launch responses and durable
-thread/run records independently confirm provider/model; child runtime effort
-confirmation is pending.
+thread/run records independently confirm provider/model. All three workers
+confirmed before generation that live orchestrator_capabilities reports inherited
+provider codex, model gpt-6-astra and reasoningEffort.currentValue medium; ridge
+and return also cite matching runtime injection. These are observed settings,
+not merely the requested configuration.
 
 Task ID prefix for all three: `node:delegated-task:command%3Amcp%3A42411c37-e2a2-4fed-ae24-030de53d05eb%3Adelegate-task%3A`.
 
