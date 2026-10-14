@@ -151,7 +151,7 @@ Critical merged scenes: B01 hides optional wrap; D07 shows closed box without op
 
 ## Review and verification handoff
 
-Run `npm run check`, `npx tsx --test scripts/last-skyway-regressions.test.ts`, `npm run test:story`, and `npm run build`. Shared editorial test currently assumes all non-Player Two packs have revision 3; this new pack is correctly revision 1 and parent owns correction. Art gate is expected to fail until Astra reference production/review; it must not be silenced with fake hashes. Parent must run independent `.claude/agents/story-continuity-reviewer.md` for `last-skyway`, fix actual findings, and allow only the reviewer to stamp after a genuine pass. No manuscript author continuity stamp.
+Run `npm run check`, `npx tsx --test scripts/last-skyway-regressions.test.ts`, `npm run test:story`, and `npm run build`. At the local verification checkpoint, the shared editorial test assumed all non-Player Two packs had revision 3; this new pack is correctly revision 1. Parent has since fixed that assertion on the integration branch. Art gate is expected to fail until Astra reference production/review; it must not be silenced with fake hashes. Parent must run independent `.claude/agents/story-continuity-reviewer.md` for `last-skyway`, fix actual findings, and allow only the reviewer to stamp after a genuine pass. No manuscript author continuity stamp.
 
 Runtime recorded by this implementation: T3 Code, Codex harness, **gpt-6.1-sol, medium reasoning**, supplied by runtime instructions. Provider identity beyond Codex harness was not independently queried. Requested imagery model is GPT-6-Astra; no imagery run was launched and no requested/actual art-model match is claimed.
 
@@ -167,3 +167,9 @@ Runtime recorded by this implementation: T3 Code, Codex harness, **gpt-6.1-sol, 
 - Executed complete route: 36 page visits, 5,553 rendered prose words, Medium remainder 24 minutes. Approximate reading target is 20–25 minutes plus individual decision pace; no human timed playtest has been claimed.
 
 Implementation and art-plan milestone commit: `ecea0a26418e03bf256c72734392f475cab99114`. Independent continuity review remains REQUIRED; no pass or stamp claimed. Final regression/handoff commit follows it. Parent should integrate the commits, arrange reviewer findings/fixes, then Astra references/scenes, art gate and final browser QA before calling the fully illustrated story complete.
+
+## Parent integration update
+
+Parent confirms manuscript `ecea0a2` merged and independently verified: 48 pages, ten endings, 6,877 states, 11,019 playthroughs, zero checker errors/warnings. Independent Opus continuity round 1 and Astra reference production are underway from that exact manuscript. Astra owns all 48 scene images; no imagery work is assigned to this author. No `story.ts` change occurred after `ecea0a2`, and no self-stamp exists. Parent also confirms the shared revision assertion is fixed on its integration branch; the failure recorded above describes this isolated worktree’s verification checkpoint.
+
+Regression/handoff commit ready for integration: `02cbe8f16be5fd909ae0384a48d723c0f48bf85a`. The following documentation-only commit records this parent update. Remaining production work belongs to the parent/reviewer/Astra: resolve independent continuity findings if any, approved references and individual scene production/review, final art gate and illustrated browser QA.
