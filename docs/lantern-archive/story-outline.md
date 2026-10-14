@@ -146,12 +146,36 @@ Representative best itinerary (27 visits): A01 A02 A03 A04 A06 B01 B02 B04 B05 C
 
 `references/manifest.json` plans 15 sheets: player-win, palladian-staff, highfield-residents, lantern-projector, light-moths, wicks-cans, lamplighter-pole, anchors, and landmark sheets projection-box, palladian-house, archive-vault, depot-field, highfield-house, wicks-streets and win-home. Every `art.cast` subject is covered, and every page resolves at least one reference. No `reviewedSha256` values are recorded and no WebPs exist, so `npm run test:art` and `npm run prompts` correctly block this pack until the reference-first workflow is run.
 
-Image rules: the player is never seen from the front. Merged pages omit optional people and props (Win is cropped out of C07, C08, D05 and E02, because she may be in the stalls; the pole stays at Highfield House; the anchors appear only on their own pages). Screen pages show silvery black-and-white film seen from the box, valid for every speed and anchor. Mrs Ferris is never drawn. Win's own front door is plain blue; the green door belongs only to 4 Tallow Lane.
+Image rules: the player is never seen from the front. Merged pages omit optional people and props: Win is cropped out of C07, C08, D05 and E02, and kept outside the crop in F01–F08, because she may be in the stalls or at the port. The pole stays at Highfield House, and the anchors appear only on their own pages. Screen pages F04, F05, F07 and F08 show the screen small, distant and indistinct, so they neither show nor rule out the painted-slide overlay. Locked details from the approved player-win board and the art review: Win's single plait over her LEFT shoulder, Abel's RED-AND-CREAM checked shirt and Dot's SIX brass buttons. E01 shows Win still in her cardigan before she fetches her coat. E09 shows the four walking DOWN from the top of the field toward the chimney. E06 and E08 are late October. Screen pages show silvery black-and-white film seen from the box, valid for every speed and anchor. Mrs Ferris is never drawn. Win's own front door is plain blue; the green door belongs only to 4 Tallow Lane.
 
 ## Validation
 
 - `npm run check`: all stories OK; Lantern Archive 45 pages, 10/10 endings.
 - `npx tsx --test scripts/lantern-archive-regressions.test.ts`: route, gate, meter and exhaustive-state regressions.
-- `npm run test:story`: the existing shared assertion that every non-Player-Two story is revision 3 fails for this revision-1 pack, by instruction left unchanged for the parent.
+- `npm run test:story`: all tests pass after the parent's shared revision-test fix.
 - `npm run test:art`: fails for this pack until reference sheets are generated, reviewed and hashed.
 - Independent continuity review and art generation are pending with the parent thread.
+
+## Round 1 author response
+
+The independent review is recorded in `docs/lantern-archive/continuity-review.md` (owned by the reviewer). All eleven findings were fixed with the smallest coherent change:
+
+1. A01: narration introduces Win Aldous right after Mr Hale's line. A02 no longer re-introduces her.
+2. A03: the hatch has been "painted shut since the spring Ada retired, nearly thirty years ago", which matches the 1958 entry.
+3. A04: the page opens "Twenty minutes later", with reel one nearly through. The time reading is END OF REEL ONE.
+4. C01: the return paragraph now reads "In the box, Win is at the machines…", which is valid after C07 and C08.
+5. D05: the greeting depends on `knowsRound`. Players who visited Highfield House get Abel's line; phone-only players get "the one who rang Mrs Ferris".
+6. D05 (stalls): Win recognises Abel as the man who swept these stalls, and he doesn't remember. They were neighbours, and none of them knows it.
+7. Row F: A01 has Dot rope off Row F for the staff on every route. C08 asks Dot to save the three places there.
+8. D05 (box): the port sentence now comes after the group enters the auditorium.
+9. E03: anchorless muddles are gone by morning. Only the lamp-glass muddle lingers for a week.
+10. E05: the last look through Ada's viewer happens before Mr Hale locks up, with Win, before the midnight handover.
+11. E08 (and, by the same logic, E06): the images are late October.
+
+Art-owner fixes in the same commit:
+- The cast locks listed above.
+- E01 and E09 image corrections.
+- Added `cast` entries so references attach: moths on B02, B03 and C06; the Lantern on C08 and E03; rolls on C08, F09 and E05.
+- Win outside the crop on F01–F08, and distant, indistinct screens on F04, F05, F07 and F08.
+
+No reference or raster files changed. Regressions now also cover the mixed visit-and-phone greeting, the phone-only greeting, Win's stalls recognition, Row F, the anchorless E03 and the order of events in E05. A new independent round is required; no stamp has been recorded.
