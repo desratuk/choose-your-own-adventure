@@ -11,7 +11,7 @@ A web choose-your-own-adventure engine with swappable **story packs**. Each stor
 | *The Last Skyway* (original) | `last-skyway` | Complete and illustrated |
 | *The Midnight Signal* (original) | `midnight-signal` | Complete and illustrated |
 | *The Lantern Archive* (original) | `lantern-archive` | Complete and illustrated |
-| *The Glasshouse Express* (original) | `glasshouse-express` | Written and continuity-reviewed; Astra illustration in progress |
+| *The Glasshouse Express* (original) | `glasshouse-express` | Complete and illustrated |
 
 When more than one story is installed, the front page shows a story picker.
 
@@ -225,4 +225,4 @@ A Stop hook (`.claude/settings.json` → `scripts/story-review-gate.mjs`) blocks
 - Original fantasy in Tallowmere on the longest night. An unnamed teenage apprentice carries the last sunwort stock aboard a greenhouse train. The Keeper's recordings, Hallam vent mechanism and Nan's bulbs establish the best-ending reasoning.
 - **Meter:** EMBER BRICKS, a fuel count, starts 100/90/80. The best route costs 70 and leaves 30/20/10; Medium permits one ten-brick slip and Hard none. Marigold burns coal separately. The depot and radio visits each spend five and save five later.
 - Hesper stays at the Terminus; radio and telephone voices do not add visible cast. Shared tunnel and summit images omit plant-state details that differ after chilling or over-stoking.
-- **Status:** revision 1, 44 pages, ten endings (five good including one best, five bad). Independent continuity review passed; Astra references and scene illustrations are in progress.
+- **Status:** revision 1, 44 pages, ten endings (five good including one best, five bad). Independent continuity review passed; all 18 reference sheets and 44 Astra scene illustrations are approved. Mobile best-route and combined image coverage checks pass.

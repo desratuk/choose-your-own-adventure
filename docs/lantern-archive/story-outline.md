@@ -154,7 +154,7 @@ Image rules: the player is never seen from the front. Merged pages omit optional
 - `npx tsx --test scripts/lantern-archive-regressions.test.ts`: route, gate, meter and exhaustive-state regressions.
 - `npm run test:story`: all tests pass after the parent's shared revision-test fix.
 - Parent scoped art checks: all 45 Lantern scene files and global reviewed-reference coverage pass; all 45 distinct scene hashes match batch reports at 1200×800.
-- Independent continuity round 3 and Astra art review are complete. Owner browser QA passed all-page mobile/desktop render sweeps and a 27-visit real-choice Medium best route. Parent final whole-project checks and main merge remain pending.
+- Independent continuity round 3 and Astra art review are complete. Owner browser QA passed all-page mobile/desktop render sweeps and a 27-visit real-choice Medium best route. Parent combined build, 145 story regressions, 12 art checks and browser decoding of all 375 installed scene images pass.
 
 ## Round 1 author response
 
