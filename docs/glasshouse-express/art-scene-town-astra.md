@@ -797,3 +797,124 @@ Use case: illustration-story. Output one finished 1536x1024 edge-to-edge landsca
 Two people only. Side view of Dov looking up to rear-facing player in open carriage door. Dov exact dark skin, grey beard, orange-grey striped scarf and quilted rust oilskin. Locomotive ahead left, glowing carriage cropped at right edge before any trailing cars. Track ahead forks right toward walled cutting; red signal and dark signalbox, blank sign. No raised vents.
 TINY LOCAL INPAINT ONLY, preserve all pixels except region x480–670,y460–620 in this 1536x1024 target. At (550,495), right siding rail ends abruptly in snow. Extend THAT rail a short distance diagonally DOWN-RIGHT to meet existing main rail at approximately (615,575). It must join tangentially with a smooth short curve and a switch blade. Do not add any rail or track elsewhere. Existing single track under engine remains exactly unchanged. Do not add extra foreground track or X crossing. Preserve all people/train/crop/lighting/architecture.
 ```
+
+## B07
+
+Original PNG and final WebP fullsize accepted. Dov works leather water bag over tank, player rear on wooden platform, exact clothes, two people only, phonebox and small glowing glasshouse across lane, square lantern rests at crane, train cropped after glowing carriage. No corrections.
+
+Original 1536×1024; selected PNG unchanged; final WebP 1200×800, cwebp -q 75.
+
+- `/Users/carl/.codex/generated_images/01a13c80-41da-7510-8e38-c9f7f351fdf4/exec-55f6ac22-d517-4c77-9402-7322fb36787a.png`: SHA-256 `347ae601e29008b8115cfecc8050b9ac61147010c4aef32f1b3ef2c806f99d95`
+- `stories/glasshouse-express/art-src/B07.png`: SHA-256 `347ae601e29008b8115cfecc8050b9ac61147010c4aef32f1b3ef2c806f99d95`
+- `stories/glasshouse-express/images/B07.webp`: SHA-256 `295fb2d995888eac430321b88ac1d92f90da3b632d352ce5ae627270f4eab0cf`
+
+Attached full-resolution packs:
+- `stories/glasshouse-express/art-src/packed/B07-1.png`: `52ec26d424a90c0bd8f57717d04e86878fad501f5c72dd61f5fe5c4a8bc96022`
+- `stories/glasshouse-express/art-src/packed/B07-2.png`: `c91a16ca699acc38422120317d31c28c204b70ff1cafc0e6389b142e16ddc527`
+- `stories/glasshouse-express/art-src/packed/B07-3.png`: `b9e8c3f5b5c2fed0b546beb00c2a8292b4068a5cdb79ba199eb6ad601383a5ba`
+
+Complete generation prompt:
+
+```text
+The attached sheets lock identity, shape, colour, clothing and scale only. Draw ONLY the scene below, not a lineup. Do not add other subjects or equipment from a reference. Match this scene’s possession, costume variant, time, location and object state. Shared-path illustrations must be valid on every arrival route; never interpret an optional companion as required.
+Painterly 1980s fantasy-adventure illustration, gouache and ink line, luminous frost blues and warm glasshouse amber, expressive invented faces, cinematic light, 3:2 landscape. Family-friendly, gently comic. Only the listed characters appear; Hesper appears only at the Terminus, Cassia only inside her studio, Sallow only at the Ember Works, Fenn only at the Conservatory; radio voices and telephone voices are never drawn. No real people's likenesses, no famous trains or film props, no logos, no legible text or captions (signs and plates are blank or unreadable). Every scene states location, weather and time: the night is clear with hard frost and stars, wind only on the Mere viaduct, tunnel interiors enclosed and weatherless, dawn scenes clear and golden. Use 'alone (X is not here)' when specified. Keep every character's clothing word-for-word identical to the cast description; scene prompts never substitute outfits. The player's face is always hidden. Action is machinery, weather and plants, never injury; falling glass lands where nobody stands. Optional companions, props and the empty dark carriages are absent unless explicitly listed for that scene.
+
+THE PLAYER: an unnamed, gender-neutral teenager, always seen from behind or over the shoulder with the face hidden, in a navy wool railway greatcoat with brass buttons, a mustard knitted scarf, grey woollen gloves, dark corduroy trousers and black lace-up boots, with a brown canvas keeper's satchel worn across the body on a strap from the LEFT shoulder to the RIGHT hip, closed by a single brass flap buckle. Short dark hair under no hat. The brass thaw-lamp is carried only when listed.
+
+DOV PELLINGER: an original big man in his fifties, dark brown skin, close-cropped grey beard, a black railway cap with a small round brass badge, a quilted rust-orange oilskin jacket over navy bib overalls, a scarf of alternating orange and grey stripes with an orange fringe, heavy black boots. Carries a square X-braced brass hand lantern when outdoors. Calm, slow-moving, kind.
+
+MARIGOLD: a small squat dark-green tank locomotive with NO tender and an integral rear coal bunker, three driving axles (six red-rimmed wheels), a tall chimney capped in brass, a round brass headlamp on the smokebox front, a red buffer beam with a pair of round buffers, black smokebox, polished brass dome and a short cab with round brass-trimmed windows. Always the same engine; no famous or named real locomotive.
+
+Clear frosty night, one o'clock, at the Allotment Halt at the top of Tallow Street: a short wooden platform, a tall iron water crane with its leather bag swung over Marigold's tank, a wooden telephone box with a small lamp, and snowy allotment plots with sheds beyond. Dov stands at the engine working the crane; the player stands on the platform seen from behind. Across the lane, one small glasshouse glows warm among dark sheds. Only these two people. Stars, hard frost. Framing cuts off just behind the glowing Glasshouse Carriage; the two empty carriages coupled behind it are out of frame.
+
+Use case: illustration-story. Output one finished 1536x1024 edge-to-edge landscape story scene. No panels, sheet layouts, captions or extraneous subjects. All attached boards establish identity/design only. Carriage ridge vents must remain completely CLOSED and FLUSH unless the scene explicitly says otherwise. Preserve exact reference wardrobe and left-shoulder/right-hip satchel. Attachment 1: upper full board player-hesper; lower full board dov. Attachment 2: upper full board marigold; lower full board glasshouse-carriage. Attachment 3: whole full board tallow-street-and-halt
+Exactly two people. Dov works tall iron crane on little wood platform: its leather bag descends into locomotive water tank filler. Player rear on platform. Small wooden telephone box by lamp and lit lean-to across narrow lane. Locomotive then glowing carriage cropped before dark cars. No people inside phonebox or lean-to. No extra tender.
+Carriage windows may be softly glowing without identifiable plant detail; if any plants visible use only low closed-bud rosettes. Dov's square lantern rests safely on platform while he uses hands at water crane. Marigold three equal driving axles, cab behind boiler.
+```
+
+## B08
+
+Original rejected for tall plant stems in background. Built-in edit with all packs and target replaced them with low closed-bud plants and softened background. Selected PNG and WebP fullsize accepted: lone rear-facing player, black handset, sound gloved grip, breath, crane and cropped train, no Hesper or Dov visible.
+
+Original 1536×1024; selected PNG unchanged; final WebP 1200×800, cwebp -q 75.
+
+- `/Users/carl/.codex/generated_images/01a13c80-41da-7510-8e38-c9f7f351fdf4/exec-6489ea4c-3ae2-4c23-8b57-853ea294d2d8.png`: SHA-256 `e1d3b91c8945ae077797602fd97cca11f89fcf50020189f335f31def1a2b458f`
+- `stories/glasshouse-express/art-src/B08.png`: SHA-256 `e1d3b91c8945ae077797602fd97cca11f89fcf50020189f335f31def1a2b458f`
+- `stories/glasshouse-express/images/B08.webp`: SHA-256 `303157d9226514d4d4b53af142390773b32dc8d308d9116684e55b1ec383dac2`
+
+Attached full-resolution packs:
+- `stories/glasshouse-express/art-src/packed/B08-1.png`: `253c646bb0fe7e4c4795b98038a133f0db0638d7092f06081fc91b2b93ef9815`
+- `stories/glasshouse-express/art-src/packed/B08-2.png`: `0d692d04f47c9af772796f3817fbc8f7fee4376bebbf2c12439e89896e275cf7`
+- `stories/glasshouse-express/art-src/packed/B08-3.png`: `b9e8c3f5b5c2fed0b546beb00c2a8292b4068a5cdb79ba199eb6ad601383a5ba`
+
+Complete generation prompt:
+
+```text
+The attached sheets lock identity, shape, colour, clothing and scale only. Draw ONLY the scene below, not a lineup. Do not add other subjects or equipment from a reference. Match this scene’s possession, costume variant, time, location and object state. Shared-path illustrations must be valid on every arrival route; never interpret an optional companion as required.
+Painterly 1980s fantasy-adventure illustration, gouache and ink line, luminous frost blues and warm glasshouse amber, expressive invented faces, cinematic light, 3:2 landscape. Family-friendly, gently comic. Only the listed characters appear; Hesper appears only at the Terminus, Cassia only inside her studio, Sallow only at the Ember Works, Fenn only at the Conservatory; radio voices and telephone voices are never drawn. No real people's likenesses, no famous trains or film props, no logos, no legible text or captions (signs and plates are blank or unreadable). Every scene states location, weather and time: the night is clear with hard frost and stars, wind only on the Mere viaduct, tunnel interiors enclosed and weatherless, dawn scenes clear and golden. Use 'alone (X is not here)' when specified. Keep every character's clothing word-for-word identical to the cast description; scene prompts never substitute outfits. The player's face is always hidden. Action is machinery, weather and plants, never injury; falling glass lands where nobody stands. Optional companions, props and the empty dark carriages are absent unless explicitly listed for that scene.
+
+THE PLAYER: an unnamed, gender-neutral teenager, always seen from behind or over the shoulder with the face hidden, in a navy wool railway greatcoat with brass buttons, a mustard knitted scarf, grey woollen gloves, dark corduroy trousers and black lace-up boots, with a brown canvas keeper's satchel worn across the body on a strap from the LEFT shoulder to the RIGHT hip, closed by a single brass flap buckle. Short dark hair under no hat. The brass thaw-lamp is carried only when listed.
+
+Clear frosty night, one o'clock, at the Allotment Halt: the player stands inside the open wooden telephone box under its small lamp, seen from behind, holding a heavy black handset to one ear, breath steaming. Snowy platform, the water crane and the stopped train out of focus behind. Alone in frame. Framing cuts off just behind the glowing Glasshouse Carriage; the two empty carriages coupled behind it are out of frame.
+
+Use case: illustration-story. Output one finished 1536x1024 edge-to-edge landscape story scene. No panels, sheet layouts, captions or extraneous subjects. All attached boards establish identity/design only. Carriage ridge vents must remain completely CLOSED and FLUSH unless the scene explicitly says otherwise. Preserve exact reference wardrobe and left-shoulder/right-hip satchel. Attachment 1: upper full board player-hesper; lower full board marigold. Attachment 2: upper full board glasshouse-carriage; lower full board keeper-props. Attachment 3: whole full board tallow-street-and-halt
+Player alone, rear view in open small wooden telephone box, black handset held to ear, breath visible. No other person or reflected face. Crane and locomotive plus glowing carriage softly blurred outside, crop trailing cars. Hesper voice never visualized.
+```
+
+Generation/correction history:
+
+Variant 1: `/Users/carl/.codex/generated_images/01a13c80-41da-7510-8e38-c9f7f351fdf4/exec-f2608477-52aa-489f-9161-39054cb80f05.png`; SHA-256 `771888946b7ce2a94c0aec226bbacc612fe0607103477cb1989c58a4fe80727a`
+
+Variant 2: `/Users/carl/.codex/generated_images/01a13c80-41da-7510-8e38-c9f7f351fdf4/exec-6489ea4c-3ae2-4c23-8b57-853ea294d2d8.png`; SHA-256 `e1d3b91c8945ae077797602fd97cca11f89fcf50020189f335f31def1a2b458f`
+
+Complete correction prompt (same mapped packs plus preceding target):
+
+```text
+The attached sheets lock identity, shape, colour, clothing and scale only. Draw ONLY the scene below, not a lineup. Do not add other subjects or equipment from a reference. Match this scene’s possession, costume variant, time, location and object state. Shared-path illustrations must be valid on every arrival route; never interpret an optional companion as required.
+Painterly 1980s fantasy-adventure illustration, gouache and ink line, luminous frost blues and warm glasshouse amber, expressive invented faces, cinematic light, 3:2 landscape. Family-friendly, gently comic. Only the listed characters appear; Hesper appears only at the Terminus, Cassia only inside her studio, Sallow only at the Ember Works, Fenn only at the Conservatory; radio voices and telephone voices are never drawn. No real people's likenesses, no famous trains or film props, no logos, no legible text or captions (signs and plates are blank or unreadable). Every scene states location, weather and time: the night is clear with hard frost and stars, wind only on the Mere viaduct, tunnel interiors enclosed and weatherless, dawn scenes clear and golden. Use 'alone (X is not here)' when specified. Keep every character's clothing word-for-word identical to the cast description; scene prompts never substitute outfits. The player's face is always hidden. Action is machinery, weather and plants, never injury; falling glass lands where nobody stands. Optional companions, props and the empty dark carriages are absent unless explicitly listed for that scene.
+
+THE PLAYER: an unnamed, gender-neutral teenager, always seen from behind or over the shoulder with the face hidden, in a navy wool railway greatcoat with brass buttons, a mustard knitted scarf, grey woollen gloves, dark corduroy trousers and black lace-up boots, with a brown canvas keeper's satchel worn across the body on a strap from the LEFT shoulder to the RIGHT hip, closed by a single brass flap buckle. Short dark hair under no hat. The brass thaw-lamp is carried only when listed.
+
+Clear frosty night, one o'clock, at the Allotment Halt: the player stands inside the open wooden telephone box under its small lamp, seen from behind, holding a heavy black handset to one ear, breath steaming. Snowy platform, the water crane and the stopped train out of focus behind. Alone in frame. Framing cuts off just behind the glowing Glasshouse Carriage; the two empty carriages coupled behind it are out of frame.
+
+Use case: illustration-story. Output one finished 1536x1024 edge-to-edge landscape story scene. No panels, sheet layouts, captions or extraneous subjects. All attached boards establish identity/design only. Carriage ridge vents must remain completely CLOSED and FLUSH unless the scene explicitly says otherwise. Preserve exact reference wardrobe and left-shoulder/right-hip satchel. Attachment 1: upper full board player-hesper; lower full board marigold. Attachment 2: upper full board glasshouse-carriage; lower full board keeper-props. Attachment 3: whole full board tallow-street-and-halt
+Player alone, rear view in open small wooden telephone box, black handset held to ear, breath visible. No other person or reflected face. Crane and locomotive plus glowing carriage softly blurred outside, crop trailing cars. Hesper voice never visualized.
+LOCAL CORRECTION only plants seen through glowing carriage on right: replace tall branched stems with LOW broad dark-green rosette foliage in shallow trays, clusters of tiny tight copper buds nestled within centers. No long stems or open flowers. Keep the entire train softly out of focus as background, especially plant detail. Preserve telephone, player's hidden face and glove/handset, crane, snow and composition unchanged.
+```
+
+## B09
+
+Original PNG and final WebP fullsize accepted. Nan holds exactly two bowls, white spikes still in bud versus green tips; high shelf white buds and open cellar green tips, paraffin heater, condensation, two people only, Nan wardrobe and hands correct, player's face hidden. No corrections.
+
+Original 1536×1024; selected PNG unchanged; final WebP 1200×800, cwebp -q 75.
+
+- `/Users/carl/.codex/generated_images/01a13c80-41da-7510-8e38-c9f7f351fdf4/exec-09b246e9-2642-4911-9907-06ce3f698a3b.png`: SHA-256 `491fd32d8f23adc8285ebc96c06bbb8063edfac12ca4334f259899bad385ffe9`
+- `stories/glasshouse-express/art-src/B09.png`: SHA-256 `491fd32d8f23adc8285ebc96c06bbb8063edfac12ca4334f259899bad385ffe9`
+- `stories/glasshouse-express/images/B09.webp`: SHA-256 `eb9475a901d31d78ab6c259d84e5acec7efcfeb35a840a84e878061e2df6f0b7`
+
+Attached full-resolution packs:
+- `stories/glasshouse-express/art-src/packed/B09-1.png`: `9258db3f5cd2900558f0ee0a11410b597e1e39e92ca0d5a2947b55c3aeaa4e48`
+- `stories/glasshouse-express/art-src/packed/B09-2.png`: `02619a294d9a8319d880ea81d8905209f4248a51d096a47985e93ffafc0a194c`
+
+Complete generation prompt:
+
+```text
+The attached sheets lock identity, shape, colour, clothing and scale only. Draw ONLY the scene below, not a lineup. Do not add other subjects or equipment from a reference. Match this scene’s possession, costume variant, time, location and object state. Shared-path illustrations must be valid on every arrival route; never interpret an optional companion as required.
+Painterly 1980s fantasy-adventure illustration, gouache and ink line, luminous frost blues and warm glasshouse amber, expressive invented faces, cinematic light, 3:2 landscape. Family-friendly, gently comic. Only the listed characters appear; Hesper appears only at the Terminus, Cassia only inside her studio, Sallow only at the Ember Works, Fenn only at the Conservatory; radio voices and telephone voices are never drawn. No real people's likenesses, no famous trains or film props, no logos, no legible text or captions (signs and plates are blank or unreadable). Every scene states location, weather and time: the night is clear with hard frost and stars, wind only on the Mere viaduct, tunnel interiors enclosed and weatherless, dawn scenes clear and golden. Use 'alone (X is not here)' when specified. Keep every character's clothing word-for-word identical to the cast description; scene prompts never substitute outfits. The player's face is always hidden. Action is machinery, weather and plants, never injury; falling glass lands where nobody stands. Optional companions, props and the empty dark carriages are absent unless explicitly listed for that scene.
+
+THE PLAYER: an unnamed, gender-neutral teenager, always seen from behind or over the shoulder with the face hidden, in a navy wool railway greatcoat with brass buttons, a mustard knitted scarf, grey woollen gloves, dark corduroy trousers and black lace-up boots, with a brown canvas keeper's satchel worn across the body on a strap from the LEFT shoulder to the RIGHT hip, closed by a single brass flap buckle. Short dark hair under no hat. The brass thaw-lamp is carried only when listed.
+
+NAN PERROW: an original small woman in her seventies, warm olive skin, silver hair under a purple knitted hat, a padded lilac coat over a floral apron, green wellington boots and brown fingerless mittens. Brisk and amused.
+
+Clear frosty night, one o'clock, inside Nan Perrow's small lean-to glasshouse across the lane from the Allotment Halt: a paraffin heater glowing, a warm high shelf of bowls with white hyacinth spikes in bud, and an open trapdoor to a cold cellar with more bowls showing only green tips. Nan Perrow in her lilac padded coat and purple knitted hat holds up two bowls for comparison; the player, seen from behind, stands in the doorway. Only these two people. Condensation on the panes.
+
+Use case: illustration-story. Output one finished 1536x1024 edge-to-edge landscape story scene. No panels, sheet layouts, captions or extraneous subjects. All attached boards establish identity/design only. Carriage ridge vents must remain completely CLOSED and FLUSH unless the scene explicitly says otherwise. Preserve exact reference wardrobe and left-shoulder/right-hip satchel. Attachment 1: upper full board player-hesper; lower full board lower-town-cast. Attachment 2: upper full board tallow-street-and-halt; lower full board lower-town-interiors
+Exactly two people. Player rear in doorway, Nan faces player holding TWO bowls, one in each hand: taller white hyacinth spikes still in bud versus short green tips. Nan exact purple knitted hat, lilac padded coat, floral apron, green wellies, brown fingerless mittens. High shelf holds white budded hyacinths, open cellar trapdoor reveals green-tipped bowls below. Paraffin heater and condensation; no sunwort substituted, no flowers open.
+```
+## Final assigned-batch validation
+
+- PASS: 15/15 selected PNGs 1536×1024; final WebPs 1200×800; 15 distinct WebP SHA-256 hashes. Every selected original and final WebP visually inspected fullsize.
+- PASS: all mapped pack/source hashes and all 74 source rectangles rechecked pixel-equal to decoded approved reference WebPs. No source resizing, cropping or omission.
+- PASS: story SHA unchanged (`ac3eede2367c209657140c9facac60cb4a8db9a4338ff97051039850e2a9e8bf`); scope against `eb6b25f` contains only assigned images and this report. Originals/packs/corrections ignored.
+- `npm run -s test:art` using owner-installed tsx via PATH: 12 tests, 8 pass, 4 fail. Failures are missing scene coverage in last-skyway, midnight-signal, lantern-archive, and 29 unassigned Glasshouse pages absent from this isolated checkout. All reference validation tests pass. No global pass claimed.
+- Owner independently approved A01–A06/B01–B06 including final B01 rail repair; checkpoint `1972a34`. B07–B09 submitted for review. No self-stamp, push or merge by this worker.
