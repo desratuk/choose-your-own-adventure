@@ -20,3 +20,13 @@ All scene originals must be individually generated at 1536×1024 with the exact 
 ## Continuity round 3 illustration impact
 
 B03/B04 now explicitly crop out inspection-line activity and the remote basin-scale reading. B05 retains the closed safety gate with its lock concealed in the existing frame; B08 omits entry locks. These are the existing reference designs, with no new visible machinery, controls or companions. Approved sheets and SHA-256 hashes unchanged; four per-page briefs regenerated.
+
+## Partial art integration — 14 October 2026
+
+Batch B completed (4e566b8, including ae19002) and merged. Its full original/WebP review and per-page hashes are recorded in art-batch-b.md. A and C ended with the provider usage-limit error, not successful completion; T3 task_status reports no pending child runs. Their clean milestone commits 3bf3853 (A01–A08) and 25a718f (D03–D08/E01) were merged without story changes. There are currently 30 unique 1200×800 game WebPs. This is not final art clearance.
+
+All child art-src trees, including correction history, are preserved in this owner's ignored art-src/preserved-batch-a, preserved-batch-b and preserved-batch-c. Forty named original PNGs are also available directly in art-src. Additional originals B01/B02 and E02–E09 require owner review and conversion; B03–B07 and E10 have no accepted named original. Correction candidates must not be treated as final assets. Final individual owner review, cross-scene contact sheets, complete image coverage and loaded-browser/mobile route checks remain outstanding.
+
+All three workers' configured Codex/gpt-6-astra/medium and full-access settings were independently verified by the parent through t3_thread_configuration, with actual codex/gpt-6-astra confirmed by recentRuns. Evidence and task IDs remain in art-tasks.json. Batch B additionally corroborates medium from injected runtime information. No inference that A/C completed their remaining reviews is made.
+
+Post-integration checks: npm run check passes for all seven installed packs; focused Midnight Signal regressions pass 15/15. All six reference hashes match their reviewed manifest. Manuscript hash still matches the round-4 independent stamp. npm run test:art is 7/11: Midnight Signal correctly fails for its sixteen missing game WebPs; other failures are missing Last Skyway/Lantern Archive scenes and Lantern Archive's palladian-staff sheet in this checkout. No unrelated pack was changed.
