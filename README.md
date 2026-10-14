@@ -75,6 +75,14 @@ An original cinema mystery set in a northern English town in October 1986. On th
 - **A visible carbon-time countdown.** Investigations, splicing and projection spend the Lantern's last light.
 - **A fade transition** between the picture palace, underground archive, town and projected streets.
 
+### The Glasshouse Express
+
+An original fantasy adventure in Tallowmere, a city that makes its own seasons. On the longest night, you take the Keeper's place aboard a greenhouse train carrying the last summer stock up Cold Hill. A forgotten recording, a frozen vent and a gardener's bulbs hold the clues to a warmer year.
+
+- **44 pages** with **10 endings** (5 bad, 5 good, one best), each clearly labelled.
+- **A visible ember-brick reserve.** Investigations, detours and heating compete for the fuel needed at the Conservatory.
+- **A fade transition** between the lakeside terminus, lower town, frozen Mere, hill incline and Conservatory.
+
 ## Running it
 
 Requires Node 20.19+ or 22.12+ (use nvm to switch).

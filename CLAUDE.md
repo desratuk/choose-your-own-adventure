@@ -9,8 +9,9 @@ A web choose-your-own-adventure engine with swappable **story packs**. Each stor
 | *Return to Sender* (Ghostbusters) | `return-to-sender` | Complete and illustrated |
 | *Player Two* (The Last Starfighter) | `player-two` | Complete and illustrated |
 | *The Last Skyway* (original) | `last-skyway` | Written and continuity-reviewed; Astra illustration in progress |
-| *The Midnight Signal* (original) | `midnight-signal` | Written; continuity corrections in progress, six reference boards approved |
+| *The Midnight Signal* (original) | `midnight-signal` | Written and continuity-reviewed; Astra illustration in progress |
 | *The Lantern Archive* (original) | `lantern-archive` | Written; independent review and Astra reference production in progress |
+| *The Glasshouse Express* (original) | `glasshouse-express` | Written; independent review and Astra reference production in progress |
 
 When more than one story is installed, the front page shows a story picker.
 
@@ -204,7 +205,7 @@ A Stop hook (`.claude/settings.json` → `scripts/story-review-gate.mjs`) blocks
 - **Bible:** `docs/midnight-signal/story-outline.md`. Consult its causal model, evidence chain, reserve arithmetic and route table before editing.
 - Original coastal radio mystery, Greyhaven, 17–18 October 1986. An unnamed teenage volunteer investigates a distress call apparently arriving from tomorrow and helps protect a harbour crew.
 - **Meter:** shared electrical RESERVE, a percentage rather than elapsed minutes; starts 100/85/70. The clean best route costs 60, leaving 40/25/10. The evidence upload needs twenty before starting and leaves ten holding power. Medium allows one fifteen-point error; Hard none. The optional shelter call costs five.
-- **Status:** revision 1, 46 pages, ten endings (six good including one best, four bad). Continuity corrections are in progress; six reference boards are approved. Final scene production follows independent clearance.
+- **Status:** revision 1, 46 pages, ten endings (six good including one best, four bad). Independent continuity review passed; six reference boards are approved and Astra illustration is in progress.
 
 ---
 
@@ -215,3 +216,13 @@ A Stop hook (`.claude/settings.json` → `scripts/story-review-gate.mjs`) blocks
 - **Meter:** LANTERN carbon time, displayed H:MM, starts 120/105/95. Best costs 95 and ends with 25/10/0 on Easy/Medium/Hard. Medium allows one ten-minute mistake; Hard requires the clean route. Zero is valid only at designated endings.
 - Win's box/stalls location and the residents' invitation route affect later prose. Static illustrations omit optional companions and anchors; Win's present blue door is distinct from the old green Tallow Lane door.
 - **Status:** revision 1, 45 pages, ten endings (five good including one best, five bad). Independent continuity review and Astra reference production are in progress.
+
+---
+
+## Story: *The Glasshouse Express* (`glasshouse-express`)
+
+- **Bible:** `docs/glasshouse-express/story-outline.md`. Consult the seasonal rules, plant-state variants, clue map and meter arithmetic before editing.
+- Original fantasy in Tallowmere on the longest night. An unnamed teenage apprentice carries the last sunwort stock aboard a greenhouse train. The Keeper's recordings, Hallam vent mechanism and Nan's bulbs establish the best-ending reasoning.
+- **Meter:** EMBER BRICKS, a fuel count, starts 100/90/80. The best route costs 70 and leaves 30/20/10; Medium permits one ten-brick slip and Hard none. Marigold burns coal separately. The depot and radio visits each spend five and save five later.
+- Hesper stays at the Terminus; radio and telephone voices do not add visible cast. Shared tunnel and summit images omit plant-state details that differ after chilling or over-stoking.
+- **Status:** revision 1, 44 pages, ten endings (five good including one best, five bad). Independent continuity review and Astra reference production are in progress.
