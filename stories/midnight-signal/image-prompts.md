@@ -707,7 +707,7 @@ Original 1980s coastal mystery book illustration, gouache texture and fine ink, 
 
 Gull Radio interior: cream analogue receiver with round amber meter above wide horizontal tuning dial, dark teal mixing desk, enclosed charcoal logging tape deck with clear lid, black rotary telephone, patch panel with exactly one black socket on left and one blue socket on right. Use only items explicitly requested.
 
-Grey dawn after storm in studio, freshly labelled black and blue sockets, no legible words needed, quiet warm desk, no people.
+Grey dawn after storm in studio, black and blue patch sockets with a fresh cream label above ONLY the blue socket, black socket unlabelled. No legible words needed, quiet warm desk, no people.
 ```
 
 ## E10
