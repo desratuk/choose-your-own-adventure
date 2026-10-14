@@ -1,6 +1,6 @@
 # Lantern Archive art review
 
-Production in progress. No final scenes cleared or generated yet.
+Production in progress. All 15 reference boards approved; final scene generation cleared by independent round-three PASS. Scene batches are in production and remain subject to owner review.
 
 Runtime verified via T3 orchestrator capabilities: provider codex, model gpt-6-astra, reasoningEffort medium, full-access; runtime injection confirms Astra medium. All generation uses built-in imagegen.
 
@@ -53,3 +53,15 @@ All three T3 scene runs launched from d56d1b5 with explicit provider codex, mode
 | endings | t3/lantern-archive-scene-art-batch | t3-6c6e3ac7 | lantern-scenes-endings-v1 |
 
 Task prefix for each suffix: node:delegated-task:command%3Amcp%3Ad3687a18-c5e2-47cd-a1ca-04e93d184b42%3Adelegate-task%3A. Worktrees live under /Users/carl/.t3/worktrees/create-your-own-adventure-opus/. Branches must all be merged into the art-owner branch before final delivery. Parent also independently validated all 15 approved references and all 45 attachment sets using the first-party functions.
+
+## Usage-reset recovery
+
+The original three scene tasks terminated with a Codex usage-limit error. Before resuming, owner checked authoritative task states and preserved all existing ignored originals and rejected variants in `art-src/salvage-reset/{opening,middle,endings}`. Main candidates recovered: A01–A05 (5), C03–C08 and D01 (7), F05–F09 (5). These are candidates, not a claim of completed game assets. Child branches remained at d56d1b5 with no committed WebPs.
+
+Following the user's explicit usage-reset instruction, owner sent one implementation continuation to each existing isolated child. Immediately before sending, t3_thread_configuration independently confirmed codex/gpt-6-astra, reasoningEffort medium, full-access for all three. task_status confirms each new run is running with providerInstanceId codex and model gpt-6-astra. Workers must reuse completed candidates, finish only missing or flawed scenes, and stop if quota persists.
+
+Continuation task prefix: `node:delegated-task:command%3Amcp%3Ad3687a18-c5e2-47cd-a1ca-04e93d184b42%3Athread-send%3A`; suffixes `lantern-opening-usage-reset-resume-v1`, `lantern-middle-usage-reset-resume-v1`, `lantern-endings-usage-reset-resume-v1`. Original task records remain unchanged.
+
+Owner inspected recovered A01–A05 originals at full 1536×1024 resolution. Faces, clothing, Dot's six buttons, left plait, player rear views, covered/unlit/lit Lantern sequence, hatch states and hands are coherent. Final exported WebPs and complete cross-scene continuity still require review after integration.
+
+Owner also inspected recovered C03–C08, D01 and F05–F09 originals at full resolution. Checked resident identities and clothes, indoor pole custody, raincoat-only departure, unlit field lamp and missing pane, distinct real glass versus painted slide, four closed cans, Win outside optional crops, player face hidden, weak lamp at F09 and full white screen at F06. Projected street scenes remain distant and soft, avoiding explicit anchor-state props. All seventeen recovered candidates retained for final exported-image review. T3 preview successfully opened this worktree on port5184; browser QA awaits integrated game assets.
