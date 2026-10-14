@@ -135,3 +135,17 @@ All prose re-read on every arrival state is sound: the planting rule, Hesper's t
 - **Fix:** append to the B04 prompt: "Framing cuts off just behind the glowing Glasshouse Carriage; the two empty carriages coupled behind it are out of frame." Add B04 to the bible's crop list on line 38. Map no new subjects.
 
 **Verdict:** FINDINGS. 1 issue; no `.continuity-review` stamp recorded. Re-review after the fix.
+
+## Round 5 — FINDINGS (no stamp)
+
+Reviewer: independent continuity reviewer, Claude Opus 5.5 (`claude-opus-5-5`). Medium reasoning was requested; the effort level can't be seen from inside the run. Manuscript: `stories/glasshouse-express/story.ts` as in `f42316d` (the only story change since round 4 is the B04 `imagePrompt`). Inputs: the full `story-dump` (44 pages, every arrival state), the full bible including all four response tables, rounds 1–4 of this report, project `CLAUDE.md`, all 44 `imagePrompt`s with `stylePrefix` and `art.cast`, and the reference manifest's page mappings and Candlewick Junction brief.
+
+The round-4 fix holds: B04 now states the crop behind the glowing carriage, and the bible's crop list includes it. Every earlier fix still holds: the planting rule; Dov at the token hut through C03, C04 and C05; Fenn's three hours and two at the gate; E01's five o'clock cause; the Hallam introduction at F04; sunrise at 7:30; C01 with no tram; bare ice at D07 and E04; the yard-gate and far-gate keys; E04's fuel-neutral waiting; F01's gate entry in both `wordSent` states; the four-vehicle train in or deliberately cropped from every exterior view; and the stove-lit D04. Also sound on every arrival state: brick arithmetic and the F03 gates against A02's twenty/ten rule, clue gating of the chill and cylinder, Sallow met and unmet at B08 and C04, the hub returns, Fenn named before C04, plant-state rendering and crops, ending labels, and the season ladder.
+
+### 1. B05's image puts the reversed train's rear back in the siding
+- **Page:** B05 `imagePrompt` ("Marigold nearest the lever, then the glowing carriage, then the two dark, empty glass carriages … trailing away toward the siding").
+- **Trigger:** every route to B05 (B04 → B05).
+- **Defect:** The train went into the loop engine first, so it backs out rear first. To throw the facing points for the Mere line (B05 [2]–[3]), the whole train must have cleared them onto the approach line. With Marigold nearest the lever, the three carriages must then stretch back along the shore line toward the lake and the Terminus, away from both diverging routes. The Candlewick Junction board has the points approached from the foreground with the siding diverging right. "Trailing away toward the siding" would draw the carriages still standing in the walled siding, which means the train is straddling the points. Nobody could throw the lever under it, and the image contradicts the prose.
+- **Fix:** replace the clause with "…then the two dark, empty glass carriages (the Fern House and the Orchard Car) trailing away behind along the lakeside approach line, out of focus, clear of the points; the walled siding curves away empty to the right." Map no new subjects.
+
+**Verdict:** FINDINGS. 1 issue; no `.continuity-review` stamp recorded. Re-review after the fix.
