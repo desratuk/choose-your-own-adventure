@@ -183,3 +183,9 @@ Art-owner requests folded in: player satchel strap locked left shoulder to right
 | # | Finding | Response |
 |---|---|---|
 | 1 | B04's exterior prompt omitted the crop or trailing carriages. | B04 now states the framing cuts off behind the glowing carriage; bible crop list updated. |
+
+## Independent review, round 5 (f7992c8) — response in this commit
+
+| # | Finding | Response |
+|---|---|---|
+| 1 | B05 image had the reversed train's rear trailing toward the siding, contradicting the prose that it backed out to the junction. | B05 prompt: the train stands on the lakeside approach line wholly clear of the facing points, carriages trailing back along the approach, the walled siding to the right empty. |
