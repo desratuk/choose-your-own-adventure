@@ -1,24 +1,20 @@
 # Reference art: The Lantern Archive
 
-Create and visually review these sheets BEFORE exporting or generating scene illustrations. Existing scene sources below are migration/style anchors, not permission to generate new scenes first.
-
-Lock faces, silhouettes, clothing colours/stripe order, item dimensions/materials and landmark geometry. Keep state variants separate; a reference never grants possession or adds a companion. Correct anatomy and ambiguous details before approval.
-
-Save originals in art-src/references/ (git-ignored). Convert reviewed sheets to references/<id>.webp at quality 88, preserving their resolution. Record the inspected WebP’s SHA-256 as reviewedSha256 in references/manifest.json. A missing or changed sheet blocks scene export.
+Generate and visually review references before scenes. Design establishes identity only, never presence, possession or outcome.
 
 ## player-win
 
-Subjects: player, win.
+Subjects: player, win
 
 Output: `stories/lantern-archive/references/player-win.webp`
 
 ```
-Use case: illustration-story. Production reference sheet, 1536x1024 landscape, warm pale parchment background. Warm painterly 1980s storybook illustration with a touch of magic realism, soft ink outlines, rich velvet reds, brass golds and lamplit ambers against deep night blues, gentle film-grain texture, expressive invented faces. Clear separated design views, not a story event. No real people's likenesses, no famous films, logos, brand names, legible text or captions. Only the specified subjects. This board locks design only, never possession, presence, completed work or story outcome. Each figure has two arms, two legs and five fingers per visible hand. LEFT: the same unnamed, gender-neutral seventeen-year-old projectionist in full-body REAR and three-quarter REAR views only, face completely hidden in both; relaxed straight ungendered silhouette, short sandy-brown hair, light skin at neck and hands. Clothing verbatim: a navy wool crew-neck jumper with the sleeves pushed up, charcoal work trousers and black lace-up boots. No bag, badge, name tag, gloves or extra costume; no profile or facial features. RIGHT: WIN ALDOUS, a tall, upright seventy-year-old woman with pale skin, a long single silver plait over her LEFT shoulder and half-moon glasses on a black cord, in a mustard-yellow cardigan over a white blouse, a brown tweed skirt and brown brogues. Full-body front, full-body rear showing the plait's length to the waist, and a large three-quarter head detail with the same glasses and kind, guarded expression. Separate small detail: her old iron key, plain bow and simple bit, about 9 cm long, on a short loop of brown string. No setting.
+Use case: illustration-story. Production reference sheet, 1536x1024 landscape, warm pale parchment background. Warm painterly 1980s storybook illustration with a touch of magic realism, soft ink outlines, rich velvet reds, brass golds and lamplit ambers against deep night blues, gentle film-grain texture, expressive invented faces. Clear separated design views, not a story event. No real people's likenesses, no famous films, logos, brand names, legible text or captions. Only the specified subjects. This board locks design only, never possession, presence, completed work or story outcome. Each figure has two arms, two legs and five fingers per visible hand. LEFT: the same unnamed, gender-neutral seventeen-year-old projectionist in full-body REAR and three-quarter REAR views only, face completely hidden in both; relaxed straight ungendered silhouette, short sandy-brown hair, light skin at neck and hands. Clothing verbatim: a navy wool crew-neck jumper with the sleeves pushed up, charcoal work trousers and black lace-up boots. No bag, badge, name tag, gloves or extra costume; no profile or facial features. RIGHT: WIN ALDOUS, a tall, upright seventy-year-old woman with pale skin, a long single silver plait over her LEFT shoulder and half-moon glasses on a black cord, in a mustard-yellow cardigan over a white blouse, a brown tweed skirt and brown brogues. Full-body front, full-body rear with the single plait routed over her LEFT shoulder to the front (image-left in rear view), and a large three-quarter head detail with the same glasses and kind, guarded expression. Separate small detail: her old iron key, plain bow and simple bit, about 9 cm long, on a short loop of brown string. No setting.
 ```
 
 ## palladian-staff
 
-Subjects: dot, hale.
+Subjects: dot, hale
 
 Output: `stories/lantern-archive/references/palladian-staff.webp`
 
@@ -28,7 +24,7 @@ Use case: illustration-story. Production reference sheet, 1536x1024 landscape, w
 
 ## highfield-residents
 
-Subjects: abel, pellows.
+Subjects: abel, pellows
 
 Output: `stories/lantern-archive/references/highfield-residents.webp`
 
@@ -38,7 +34,7 @@ Use case: illustration-story. Production reference sheet, 1536x1024 landscape, w
 
 ## lantern-projector
 
-Subjects: lantern.
+Subjects: lantern
 
 Output: `stories/lantern-archive/references/lantern-projector.webp`
 
@@ -48,7 +44,7 @@ Use case: illustration-story. Production reference sheet, 1536x1024 landscape, w
 
 ## light-moths
 
-Subjects: moths.
+Subjects: moths
 
 Output: `stories/lantern-archive/references/light-moths.webp`
 
@@ -58,7 +54,7 @@ Use case: illustration-story. Production reference sheet, 1536x1024 landscape, w
 
 ## wicks-cans
 
-Subjects: rolls.
+Subjects: rolls
 
 Output: `stories/lantern-archive/references/wicks-cans.webp`
 
@@ -68,7 +64,7 @@ Use case: illustration-story. Production reference sheet, 1536x1024 landscape, w
 
 ## lamplighter-pole
 
-Subjects: pole.
+Subjects: pole
 
 Output: `stories/lantern-archive/references/lamplighter-pole.webp`
 
@@ -78,7 +74,7 @@ Use case: illustration-story. Production reference sheet, 1536x1024 landscape, w
 
 ## anchors
 
-Subjects: lampglass, slide.
+Subjects: lampglass, slide
 
 Output: `stories/lantern-archive/references/anchors.webp`
 
@@ -88,7 +84,7 @@ Use case: illustration-story. Production reference sheet, 1536x1024 landscape, w
 
 ## projection-box
 
-Subjects: landmark (page-specific).
+Subjects: landmark
 
 Output: `stories/lantern-archive/references/projection-box.webp`
 
@@ -98,7 +94,7 @@ Use case: illustration-story. Production reference sheet, 1536x1024 landscape, w
 
 ## palladian-house
 
-Subjects: landmark (page-specific).
+Subjects: landmark
 
 Output: `stories/lantern-archive/references/palladian-house.webp`
 
@@ -108,7 +104,7 @@ Use case: illustration-story. Production reference sheet, 1536x1024 landscape, w
 
 ## archive-vault
 
-Subjects: landmark (page-specific).
+Subjects: landmark
 
 Output: `stories/lantern-archive/references/archive-vault.webp`
 
@@ -118,7 +114,7 @@ Use case: illustration-story. Production reference sheet, 1536x1024 landscape, w
 
 ## depot-field
 
-Subjects: landmark (page-specific).
+Subjects: landmark
 
 Output: `stories/lantern-archive/references/depot-field.webp`
 
@@ -128,7 +124,7 @@ Use case: illustration-story. Production reference sheet, 1536x1024 landscape, w
 
 ## highfield-house
 
-Subjects: landmark (page-specific).
+Subjects: landmark
 
 Output: `stories/lantern-archive/references/highfield-house.webp`
 
@@ -138,7 +134,7 @@ Use case: illustration-story. Production reference sheet, 1536x1024 landscape, w
 
 ## wicks-streets
 
-Subjects: landmark (page-specific).
+Subjects: landmark
 
 Output: `stories/lantern-archive/references/wicks-streets.webp`
 
@@ -148,7 +144,7 @@ Use case: illustration-story. Production reference sheet, 1536x1024 landscape, w
 
 ## win-home
 
-Subjects: landmark (page-specific).
+Subjects: landmark
 
 Output: `stories/lantern-archive/references/win-home.webp`
 
