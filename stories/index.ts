@@ -6,6 +6,7 @@ import playerTwo from './player-two/story';
 import lastSkyway from './last-skyway/story';
 import midnightSignal from './midnight-signal/story';
 import lanternArchive from './lantern-archive/story';
+import glasshouseExpress from './glasshouse-express/story';
 
 // Register story packs here. The first one is the default; others are reachable with ?story=<id>.
-export const stories: Story[] = [stoppedClocks, fratelliRun, returnToSender, playerTwo, lastSkyway, midnightSignal, lanternArchive];
+export const stories: Story[] = [stoppedClocks, fratelliRun, returnToSender, playerTwo, lastSkyway, midnightSignal, lanternArchive, glasshouseExpress];

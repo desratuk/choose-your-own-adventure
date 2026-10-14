@@ -1,0 +1,49 @@
+/* The Glasshouse Express: frost outside, lamplight and leaf-green inside. Scoped to this story; the reader sets data-era on <html>. */
+[data-story='glasshouse-express'] {
+  --bg: #0d1626;
+  --surface: #172338;
+  --ink: #f2efe4;
+  --muted: #a7b6c9;
+  --accent: #f0b64a; /* glasshouse amber */
+  --accent-2: #7fd6c2; /* sunwort leaf under lamplight */
+}
+
+[data-story='glasshouse-express'][data-era='terminus'] {
+  --bg: #0f1a2b; /* frozen lake and iron platform lamps */
+  --surface: #1a2a42;
+  --muted: #a9bad0;
+  --accent: #ffc45e;
+  --accent-2: #8ad9c5;
+}
+
+[data-story='glasshouse-express'][data-era='town'] {
+  --bg: #1b1226; /* neon over Tallow Street */
+  --surface: #2b1d3a;
+  --muted: #c1aed2;
+  --accent: #ff7bb8; /* roller-rink pink */
+  --accent-2: #5fd4ff; /* café blue */
+}
+
+[data-story='glasshouse-express'][data-era='mere'] {
+  --bg: #091224; /* moonlit ice, a red mast light */
+  --surface: #122040;
+  --muted: #9fb3d6;
+  --accent: #9fe6ff; /* ice */
+  --accent-2: #ff6b5c; /* beacon */
+}
+
+[data-story='glasshouse-express'][data-era='hill'] {
+  --bg: #0b1511; /* snowy pines and the tunnel */
+  --surface: #15261f;
+  --muted: #9fb8a8;
+  --accent: #ffd27a; /* thaw-lamp and headlamp */
+  --accent-2: #6fcfa6;
+}
+
+[data-story='glasshouse-express'][data-era='conservatory'] {
+  --bg: #16200f; /* dark glass before dawn */
+  --surface: #26341a;
+  --muted: #c3c9a6;
+  --accent: #ffb13b; /* sunrise through the shutters */
+  --accent-2: #ff8c5a; /* sunwort orange */
+}
