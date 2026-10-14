@@ -197,7 +197,7 @@ test('Glasshouse Express: the depot and the studio each cost five and save five 
   const sent = walk([...fast.slice(0, -3), ...studio, ...toTunnel, ...plain, 'F03'], 'hard');
   const unsent = walk([...fast, ...plain, 'F03'], 'hard');
   assert.equal(sent.state.wordSent, true);
-  assert.match(sent.texts.get('F01')!, /Cassia Flint said you’d be an hour/);
+  assert.match(sent.texts.get('F01')!, /Cassia Flint said three hours/);
   assert.match(unsent.texts.get('F01')!, /Nobody rang/);
   assert.match(sent.texts.get('F02')!, /half a hod/);
   assert.match(unsent.texts.get('F02')!, /nothing to light this with/);
