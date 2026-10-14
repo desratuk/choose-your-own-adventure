@@ -140,3 +140,47 @@ Also passed: the reserve arithmetic (clean best 60, leaving 40/25/10; Medium sur
 ## Round 3 verdict
 
 FINDINGS: 3. Not stamped. After fixing these, run `npm run check` and the reviewer again.
+
+## Round 4 — PASS (stamped)
+
+- Reviewed: `stories/midnight-signal/story.ts` from fix commit `88ab842`, unchanged in integration `c66a2fc`, sha256 `24f981199e00e4d77fdf5c2fa650a879c8e5175d32bcd66d5a422576f399ed31` (verified).
+- Reviewer: Claude Opus 5.5 (`claude-opus-5-5`), run as review sub-agent. The model is verified from the runtime. Medium reasoning was requested but cannot be verified from inside the session.
+- Method: `.claude/agents/story-continuity-reviewer.md`. I read the whole story dump, all 46 pages, against every "Possible on arrival" flag set and every conditional rendering. I checked it against `CLAUDE.md`, the bible and its round-1 to round-3 responses, and checked all 46 image briefs against every merged arrival. This worktree has no `node_modules`, so the dump came from the main checkout's `tsx`. `npm run check` was not re-run here; the author reports a pass for all seven packs.
+
+### Round-3 findings: verification
+
+All three are resolved.
+1. A04 [0] lists what the shared bank powers: Gull's equipment, the harbour remote controls, the powered inspection telephone line and the passage entry locks. Ordinary lights and safety radios run on separate batteries, paper records cost nothing, and inside handles open without power. Each paid page now names its draw, and the prose cost matches the choice cost:
+   - B03 [2] uses the desk handset and upper-lobby intercom line (5) to locate the pump sound in the crew's room. The crew are already in the upper lobby on every arrival, since B01 [1] precedes B03.
+   - B04 [1] uses the same line (5) for Ellis's current scale reading alongside the local sea trace.
+   - B08 [0] releases two entry locks (10).
+   - B05 [0]–[1] releases two locks and tests the closed viewing gate (15), and the call to the crew uses the battery handset.
+   - B06 and C09 return through the passage at no cost, which matches the inside-handle rule.
+   - The lights conflict in B05 is gone. B09's powered line agrees with A04, and C02/C03's inspection lamp is unchanged.
+   - Leaving the basin passage unlocked at B08 agrees with the rescue team entering through it at C05 [3], C07, C08 [0] and E04.
+   - The added power steps change no clue gate. They add no new hint at C04.
+2. C08 [2] credits the generator to the relief team, which matches A04, D05, D06, D07 and E09.
+3. E07 [0] has Jo, still on the line, relay "no report was received". This agrees with D03 [2] and E07 [2].
+
+### Earlier findings
+
+All ten round-1 findings and all three round-2 findings remain resolved. I re-read each fix in the current text:
+- C08 is split on `drained`, and A07 and C10 define the repeater.
+- A04 introduces the basin, and the inlet is partly open throughout.
+- C04 uses the next log line and has `wrong` and `charge ≥ 21 / ≤ 20` branches.
+- A08 no longer calls the coat matching, and the D01/D02/D04 references are route-neutral.
+- E01 and E02 introduce the upper lobby, D08 compares against the transcript, and E04 branches on `shelter`.
+- C05 keeps the inlet shut after C06, and E09 labels only the blue socket.
+
+### Briefs
+
+The B03, B04, B05 and B08 briefs crop out the handset, scale and lock mechanisms and add no new machinery. All four are valid on every merged arrival. The reference sheets are unchanged.
+
+Also passed:
+- Reserve arithmetic: clean best costs 60 and leaves 40/25/10. Medium survives exactly one fifteen-point error, and Hard with the shelter call blocks best.
+- The D04/D05 gates, ending labels, cassette custody and the timeline.
+- Speakers, introductions, location bridges and the clue chain.
+
+## Round 4 verdict
+
+PASS. No findings; stamped via `node scripts/story-review-gate.mjs --stamp midnight-signal`.
