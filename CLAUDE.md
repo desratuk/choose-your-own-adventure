@@ -7,7 +7,7 @@ A web choose-your-own-adventure engine with swappable **story packs**. Each stor
 | *The Stopped Clocks* (Back to the Future) | `stopped-clocks` | Complete and illustrated |
 | *The Fratelli Run* (The Goonies) | `fratelli-run` | Complete and illustrated |
 | *Return to Sender* (Ghostbusters) | `return-to-sender` | Complete and illustrated |
-| *Player Two* (The Last Starfighter) | `player-two` | Written and continuity-reviewed; scene illustration in progress |
+| *Player Two* (The Last Starfighter) | `player-two` | Complete and illustrated |
 | *The Last Skyway* (original) | `last-skyway` | Written and continuity-reviewed; Astra illustration in progress |
 | *The Midnight Signal* (original) | `midnight-signal` | Written; continuity corrections in progress, six reference boards approved |
 | *The Lantern Archive* (original) | `lantern-archive` | Written; independent review and Astra reference production in progress |
