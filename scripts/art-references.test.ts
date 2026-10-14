@@ -1,7 +1,21 @@
 import assert from 'node:assert/strict';
+import { existsSync, readFileSync } from 'node:fs';
 import { test } from 'node:test';
 import { stories } from '../stories';
 import { readReferencePlan, referencesForPage, validateReferences } from './art-references';
+
+for (const story of stories) {
+  test(`${story.id}: every page has a game WebP illustration`, () => {
+    const files = story.pages.map((page) => `stories/${story.id}/images/${page.id}.webp`);
+    assert.deepEqual(files.filter((file) => !existsSync(file)), [], 'Missing scene illustrations');
+    for (const file of files) {
+      const image = readFileSync(file);
+      assert.equal(image.toString('ascii', 0, 4), 'RIFF', file);
+      assert.equal(image.toString('ascii', 8, 12), 'WEBP', file);
+      assert.ok(image.length > 12, `Empty WebP: ${file}`);
+    }
+  });
+}
 
 test('all installed stories have reviewed sheets covering every recurring subject', () => {
   for (const story of stories) validateReferences(story, readReferencePlan(story));

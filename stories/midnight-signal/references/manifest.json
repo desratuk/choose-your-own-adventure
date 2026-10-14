@@ -1,0 +1,96 @@
+[
+  {
+    "id": "gull-studio",
+    "subjects": [
+      "radio"
+    ],
+    "prompt": "Original 1980s coastal mystery book illustration, gouache texture and fine ink, deep petrol blue, warm amber lamps, sea-glass green and muted coral. Cinematic 3:2 landscape, 1536x1024. Family-friendly, non-violent. Only listed characters appear; main companions only when described. No famous props or vehicles, no real people likenesses. State weather, time and location. Keep clothing identical in every appearance. Empty environmental compositions deliberately omit optional companions and evidence; do not add people, faces, hands or possessions from narrative context. No readable text, logos or border. Production design reference sheet, separated clear views, not a story event. No people or body parts, no readable text. Neutral cream background, 1536x1024. Lock geometry and material; show variants separately, never imply possession or a completed operation. Empty 1986 coastal radio studio, dark teal desk beneath rain-facing square window, shelf with two dark dictionaries and single red spare tape spool; separate safe enclosed charcoal logging tape deck with clear lid containing two reels, portable charcoal cassette deck and cream analogue receiver (one amber round meter ABOVE one wide horizontal tuning dial). Black rotary telephone. Plain microphone on small stand. Detail: intact shelf bracket and separately sagging bracket alternative; intact desk lamp and unlit alternative. Include small plain cream envelope, single transparent cassette, blue closed notebook and blank operation sheet as detached props, never all assembled on desk by default.",
+    "sources": [],
+    "reviewedSha256": "dc0afaae15933054a35ec437408662e60e6840569963e1a46269218512b409e9"
+  },
+  {
+    "id": "radio-patch",
+    "subjects": [],
+    "pages": [
+      "A01",
+      "A02",
+      "A03",
+      "A04",
+      "A05",
+      "A06",
+      "A07",
+      "C10",
+      "D01",
+      "D02",
+      "D03",
+      "D04",
+      "D05",
+      "D06",
+      "D07",
+      "D08",
+      "E01",
+      "E02",
+      "E07",
+      "E08",
+      "E09",
+      "E10"
+    ],
+    "prompt": "Original 1980s coastal mystery book illustration, gouache texture and fine ink, deep petrol blue, warm amber lamps, sea-glass green and muted coral. Cinematic 3:2 landscape, 1536x1024. Family-friendly, non-violent. Only listed characters appear; main companions only when described. No famous props or vehicles, no real people likenesses. State weather, time and location. Keep clothing identical in every appearance. Empty environmental compositions deliberately omit optional companions and evidence; do not add people, faces, hands or possessions from narrative context. No readable text, logos or border. Production design reference sheet, separated clear views, not a story event. No people or body parts, no readable text. Neutral cream background, 1536x1024. Lock geometry and material; show variants separately, never imply possession or a completed operation. 1986 analog radio equipment: dark teal patch panel with EXACTLY two round sockets, BLACK socket LEFT, BLUE socket RIGHT, single loose grey audio lead detached beneath. Separate alternatives with single lead plugged into only black, then only blue; never bridge the sockets. Cream reserve-bank gauge with one amber needle and no readable numeric value. Tall charcoal transmitter rack with single guarded power switch and round needle meter; black grille desk speaker; plain black over-ear headphones. Small black rotary telephone and single-square cream biscuit on plain white saucer as distinct minor prop details. Warm amber/petrol/sea-glass palette. No people, computers, digital screens or mystery equipment.",
+    "sources": [],
+    "reviewedSha256": "11c783811e99213f3d3e06359388eeedfd496bef876b51bd2be65975dfd81378"
+  },
+  {
+    "id": "harbour-office",
+    "subjects": [
+      "harbour"
+    ],
+    "prompt": "Original 1980s coastal mystery book illustration, gouache texture and fine ink, deep petrol blue, warm amber lamps, sea-glass green and muted coral. Cinematic 3:2 landscape, 1536x1024. Family-friendly, non-violent. Only listed characters appear; main companions only when described. No famous props or vehicles, no real people likenesses. State weather, time and location. Keep clothing identical in every appearance. Empty environmental compositions deliberately omit optional companions and evidence; do not add people, faces, hands or possessions from narrative context. No readable text, logos or border. Production design reference sheet, separated clear views, not a story event. No people or body parts, no readable text. Neutral cream background, 1536x1024. Lock geometry and material; show variants separately, never imply possession or a completed operation. Empty whitewashed brick customs-house harbour office, dark teal door, cream desk lamp and large wood desk, simple black radio handset, paper-drum tide reader (horizontal paper-covered cylinder behind clear cover with single tracing stylus), separate pencilled basin water clipboard, closed dark green sound register, folded harbour plan and dry glove pair. Narrow interior wood stairway leads upstairs to warm studio doorway. Grey storm window faces harbour. Detached paper detail: graph rising and graph falling, no words or numbers; register open/closed alternatives. No people or launch in this interior board.",
+    "sources": [],
+    "reviewedSha256": "fdf68d79dd3d4a88bdfe108add0a5ab60aea0dedcc985c15ea1b9e812ed1063a"
+  },
+  {
+    "id": "pier-launch",
+    "subjects": [],
+    "pages": [
+      "B05",
+      "E03"
+    ],
+    "prompt": "Original 1980s coastal mystery book illustration, gouache texture and fine ink, deep petrol blue, warm amber lamps, sea-glass green and muted coral. Cinematic 3:2 landscape, 1536x1024. Family-friendly, non-violent. Only listed characters appear; main companions only when described. No famous props or vehicles, no real people likenesses. State weather, time and location. Keep clothing identical in every appearance. Empty environmental compositions deliberately omit optional companions and evidence; do not add people, faces, hands or possessions from narrative context. No readable text, logos or border. Production design reference sheet, separated clear views, not a story event. No people or body parts, no readable text. Neutral cream background, 1536x1024. Lock geometry and material; show variants separately, never imply possession or a completed operation. Greyhaven west pier exterior in rain at night, covered whitewashed brick passage ending at CLOSED dark teal metal safety gate overlooking open quay. Beyond gate one small cream maintenance launch Petrel with dark teal enclosed wheelhouse, two black rubber fenders and simple short mast, no occupants or legible boat name. Pier lamp on plain cylindrical post, small bell. Show side silhouette of SAME boat separately to lock geometry, no action, no people or water rescue. Background repair basin is low dark rectangular building across water, no lighthouse.",
+    "sources": [
+      "stories/midnight-signal/references/gull-studio.webp"
+    ],
+    "reviewedSha256": "59adcf522587eeadf72df4a0591bd41d873f8877bd383e9e7c95df5f2be15b87"
+  },
+  {
+    "id": "basin-rooms",
+    "subjects": [
+      "basin"
+    ],
+    "prompt": "Original 1980s coastal mystery book illustration, gouache texture and fine ink, deep petrol blue, warm amber lamps, sea-glass green and muted coral. Cinematic 3:2 landscape, 1536x1024. Family-friendly, non-violent. Only listed characters appear; main companions only when described. No famous props or vehicles, no real people likenesses. State weather, time and location. Keep clothing identical in every appearance. Empty environmental compositions deliberately omit optional companions and evidence; do not add people, faces, hands or possessions from narrative context. No readable text, logos or border. Production design reference sheet, separated clear views, not a story event. No people or body parts, no readable text. Neutral cream background, 1536x1024. Lock geometry and material; show variants separately, never imply possession or a completed operation. Greyhaven repair basin empty architectural reference. Whitewashed brick dry covered service passage with handrail and rectangular inspection window toward dark water; adjacent brick shelter with plain wood bench, black wall telephone, single warm battery lamp and three distinct simple cups. Separate dry upper control gallery interior, small outer window above flood level, inner window looking into upper crew lobby with plain door and simple triangular wooden wedge. Lower inspection landing visible only beneath lobby through separate lower window, never flooded gallery floor. Low flat-roof pump-house silhouette beside basin. Separate wall waterline alternatives high and low, no implication of outcome. No people or controls detailed (separate board).",
+    "sources": [
+      "stories/midnight-signal/references/gull-studio.webp"
+    ],
+    "reviewedSha256": "a3f504e0c8406c696223c71bc1601a199130d06aefbccbd45a5466abd5ecc59a"
+  },
+  {
+    "id": "gate-mechanism",
+    "subjects": [],
+    "pages": [
+      "B10",
+      "C01",
+      "C02",
+      "C03",
+      "C04",
+      "C05",
+      "C06",
+      "C07",
+      "C08",
+      "E05"
+    ],
+    "prompt": "Original 1980s coastal mystery book illustration, gouache texture and fine ink, deep petrol blue, warm amber lamps, sea-glass green and muted coral. Cinematic 3:2 landscape, 1536x1024. Family-friendly, non-violent. Only listed characters appear; main companions only when described. No famous props or vehicles, no real people likenesses. State weather, time and location. Keep clothing identical in every appearance. Empty environmental compositions deliberately omit optional companions and evidence; do not add people, faces, hands or possessions from narrative context. No readable text, logos or border. Production design reference sheet, separated clear views, not a story event. No people or body parts, no readable text. Neutral cream background, 1536x1024. Lock geometry and material; show variants separately, never imply possession or a completed operation. Greyhaven dry control-gallery hardware, charcoal rectangular wall control box with two separate guarded dark grey lever handles, two simple vertical position rods and separate round inlet manual stop wheel on right. Small square inspection hatch beside box: CLOSED neutral baseline and OPEN alternative separately. Open detail shows timer arm linked to gate rod by ONE narrow metal shear pin with pale circumferential crack around its neck. No sparks, no disconnected dangling wire, no people. Fixed compact grey instant camera on separate shelf with small inspection lamp, one plain square photograph with blank wide bottom margin. Show neutral lever positions only, no correct-sequence arrows, no readable labels; alternate state is requested by scene.",
+    "sources": [
+      "stories/midnight-signal/references/gull-studio.webp"
+    ],
+    "reviewedSha256": "71470c0a64650c8a65c327c8879ea5ab5ee81224eebab183ea5e6f5681bd5c4c"
+  }
+]

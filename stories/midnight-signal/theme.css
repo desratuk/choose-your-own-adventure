@@ -1,0 +1,21 @@
+/* Amber equipment lamps against a wet petrol-blue harbour. */
+[data-story='midnight-signal'] {
+  --bg: #091e25;
+  --surface: #16343b;
+  --ink: #f5edda;
+  --muted: #b4cac8;
+  --accent: #ffd28a;
+  --accent-2: #8ddac8;
+}
+[data-story='midnight-signal'][data-era='harbour'] {
+  --bg: #132b31;
+  --surface: #244149;
+  --accent: #f5b49a;
+  --accent-2: #b5e2d8;
+}
+[data-story='midnight-signal'][data-era='basin'] {
+  --bg: #10292b;
+  --surface: #23403f;
+  --accent: #b9e5c8;
+  --accent-2: #ffd28a;
+}
