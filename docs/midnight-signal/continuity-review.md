@@ -102,3 +102,41 @@ Also passed: the reserve arithmetic (clean best costs 60 and leaves 40/25/10; Me
 ## Round 2 verdict
 
 FINDINGS: 3. Not stamped. After fixing these, run `npm run check` and the reviewer again.
+
+## Round 3 — FINDINGS (not stamped)
+
+- Reviewed: `stories/midnight-signal/story.ts` from fix commit `4639043` on integration `7998933`, sha256 `fad60b7f6272a46ee8c0756248c5e1fa5779c50b004b36fe418806f256aa9807` (verified).
+- Reviewer: Claude Opus 5.5 (`claude-opus-5-5`), run as review sub-agent. The model is verified from the runtime; the medium reasoning setting was requested but cannot be independently verified from inside the session.
+- Method: `.claude/agents/story-continuity-reviewer.md`. Read the whole story dump, all 46 pages, against every "Possible on arrival" flag set and every conditional rendering. Checked against `CLAUDE.md`, the bible, and its round-1 and round-2 responses. Checked all 46 image briefs against every merged arrival. This worktree has no `node_modules`, so the dump was produced with the main checkout's `tsx`. `npm run check` was not re-run here; the author reports a pass.
+
+### Round-2 findings: verification
+
+All three are resolved, and the round-1 fixes remain intact.
+1. A04 [1] and C02 [0] state the cut-out (full twenty-point cycle plus one point). Both C04 powered options require 21 or more. C04 [3]–[5] split exhaustively on `charge ≥ 21` / `≤ 20` and on `wrong`, and the low-charge branch says that evacuation is the only choice. At 21 or more, neither option is hinted at. C06 [2] is consistent with both outcomes.
+2. With `wrong` set, C05 [0] keeps the inlet shut and moves only the outlet. The "manual remote drive" wording is gone. The C05 waterline brief is valid on both routes.
+3. E09 [2] and its brief label only the blue socket as HILL REPEATER, which is valid when `wiring=false` and D03 was skipped.
+
+Also passed: the reserve arithmetic (clean best 60, leaving 40/25/10; Medium survives exactly one fifteen-point error, including C06 recovery 55→40→20→10; Hard with the shelter call blocks best), the D04/D05 gates, ending labels, cassette custody, the timeline, speakers, introductions and the clue chain.
+
+### 1. B03, B04, B08 (and B05 [1]): reserve drops with no powered action, against A04's own power rule
+- **Trigger:** Any route taking B02→B03 (−5), B02→B04 (−5) or B07→B08 (−10).
+- **Defect:** A04 [0] says the bank feeds only "the station's portable test socket and the harbour's remote controls", and that "ordinary lights … have separate batteries". On every other paid page the prose names what drew the charge: A05 the powered bench, A07 the transmitter, B09 the powered line, C03 the inspection lamp, D05 the transmission. B03 has the player open a paper register and copy entries, and the visible RESERVE BANK still falls by five. B04 reads a paper drum and a pencil record. B08 is a walk along a passage. None of the three names any equipment on the bank. B05 [1] blames "the passage lights", which A04 [0] has just said run on separate batteries. In a story that tells the player "the reassuring thing about a meter is that it tells the truth", these drops look like bookkeeping errors.
+- **Fix:** Name the draw in each page, and widen A04 [0] to cover it. In A04 [0], write "…the station's portable test socket and the harbour's remote controls, gauges and passage door interlocks." Then:
+  - B03 [2]: "Jo switches on the remote listening line to the pump house; through its speaker the pump gives its uneven little announcement…"
+  - B04 [1]: "Jo powers the remote basin gauge, and you take a fresh pair of readings…"
+  - B08 [0]: "Jo releases the powered flood door at each junction before waving you forward."
+  - B05 [1]: replace "The passage lights and gate check" with "The passage door interlocks and the powered viewing-gate lock".
+
+### 2. C08 [2]: the generator is credited to the "road crew"; everywhere else the relief team brings it
+- **Trigger:** All C08 arrivals.
+- **Defect:** C08 [2] says "The road crew's portable generator can power the station later." The only group arriving by road is the road rescue team (B07 [2], C08 [0]). A04 [1], D05 [1], D06 [2], D07 [2] and E09 [0] all have the relief team bring the generator. The reader is given two different owners, and "road crew" is never defined.
+- **Fix:** Change it to "The relief team's portable generator can power the station later…"
+
+### 3. E07 [0]: the inspector "calls later" although Jo is still holding the line
+- **Trigger:** D01→D03→E07 (every E07 arrival).
+- **Defect:** D03 [0] and [2] have Jo on the telephone with the inspector, who "waits" on the line. E07 [2] repeats that someone "was still waiting at the far end". But E07 [0] says "The inspector's telephone call arrives a little later". That implies the line had closed and the inspector rang back, which contradicts both D03 and E07 [2].
+- **Fix:** In E07 [0], write: "Jo, still on the line, relays the inspector's answer: no report was received."
+
+## Round 3 verdict
+
+FINDINGS: 3. Not stamped. After fixing these, run `npm run check` and the reviewer again.
