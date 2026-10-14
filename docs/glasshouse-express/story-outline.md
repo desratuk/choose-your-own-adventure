@@ -34,7 +34,9 @@ Any other people are unnamed: townsfolk at windows, a boy on a bicycle, a crossi
 - **Cold Hill Incline** (`hill`): Fernhallow Halt (iced incline, grit bin, frozen engine sanders), Fernhallow Tunnel (a mile, the coldest stretch), the summit cut.
 - **The Conservatory** (`conservatory`): gates, frozen fountain, the dome, the Great Bed with its bed stove, twelve tall eastern dawn shutters worked by a chain and a Hallam wax autovent, narrow hand-opened side louvres.
 - **The rule of the night:** the stock must be in the Conservatory bed at *this* sunrise; any other sunrise does not count (A02, repeated in failures as “a tray of plants on a hill”). Sunrise on the morning after the longest night is half past seven (E02, E04). Bloom quality after a timely planting ranges from a thaw to the Long Summer; a late or partial bloom still turns the year.
-- **Ember Works gates (canon):** the loop enters the works through the single **yard gate** between brick piers (B03, B04), and leaves on the Mere side through the **far gate**, a pair of tall iron double doors in the outer wall under a brick arch with a lamp (E02). Both are chained on the tow route. Candlewick Junction's points are facing points where the siding diverges right.
+- **Ember Works gates (canon):** the loop enters the works through the single **yard gate** between brick piers (B03, B04), and leaves on the Mere side through the **far gate**, a pair of tall iron double doors in the outer wall under a brick arch with a lamp (E02). Sallow's night men hold the yard-gate key; only the absent day foreman holds the far-gate key. Both are chained on the tow route.
+- **The train (canon):** all four vehicles stay coupled all night: Marigold, the Glasshouse Carriage, the Fern House and the Orchard Car. Exterior shots show the whole train or deliberately crop behind the glowing carriage; A06, B06, C01 and D05 list the empty carriages explicitly.
+- **Conservatory arrival:** the line runs up to the gates; Marigold enters only after they are open (already open with `wordSent`, unlocked by Fenn otherwise). The F01 image shows the engine just inside the open gates, valid in both states. Candlewick Junction's points are facing points where the siding diverges right.
 - **Beacon Cut:** Dov is at the token hut for the whole hub (C03, C04, C05); the player tends the house stove alone and Dov learns of any vent opening only from the locker count.
 - **Fuel:** Marigold burns coal; the house stove and the bed stove burn ember-bricks from the carriage locker. Every leg, every open door, every stop costs bricks. There is no refill: the Ember Company bought the Conservatory’s brick store in November (B08, F02). Sallow’s free bricks are the only offer and it is a trap.
 - **The bed stove rule** (A02, F03): twenty bricks or don’t light it, ten to light and ten to feed until the sun is on the glass. With fewer, “plant cold”: bank the house stove’s coals under the bed. With fewer than ten the house cannot hold frost off at all.
@@ -159,3 +161,12 @@ Regression tests (`scripts/glasshouse-express-regressions.test.ts`) cover page a
 | 10 | Grit before it was laid at D07/E04. | Fixed in a61acbc: bare polished ice, crew arriving with a loaded barrow. |
 
 Art-owner requests folded in: player satchel strap locked left shoulder to right hip with one brass flap buckle; Marigold locked as three driving axles, six red-rimmed wheels, paired round buffers, integral rear bunker, round brass-trimmed cab windows; B01 points are facing points; E02 depicts the distinct far gate.
+
+## Independent review, round 2 (1658490) — responses in this commit
+
+| # | Finding | Response |
+|---|---|---|
+| 1 | Sallow said only the absent foreman held the yard-gate key, yet his men took the train through it. | B04: the night men hold the yard-gate key; the foreman holds only the far gate's key. E02: foreman arrives with the far gate's key. |
+| 2 | E04 said the locker was nearly empty when it may hold up to 70. | Neutral: the stove is banked low to make the bricks last. |
+| 3 | F01 put Marigold at the fountain inside gates that were still locked on the unrung route. | The line now runs up to the gates; Marigold enters after they are open in both branches. Image shows the engine just inside the open gates. |
+| 4 | Style rule hid the Fern House and Orchard Car from A06 (where the prose watches them) and from the wide shots. | A06, B06, C01 and D05 list the two dark empty carriages explicitly; four-vehicle train is canon. |

@@ -179,3 +179,7 @@ Art-owner fixes in the same commit:
 - Win outside the crop on F01–F08, and distant, indistinct screens on F04, F05, F07 and F08.
 
 No reference or raster files changed. Regressions now also cover the mixed visit-and-phone greeting, the phone-only greeting, Win's stalls recognition, Row F, the anchorless E03 and the order of events in E05. A new independent round is required; no stamp has been recorded.
+
+## Round 2 author response
+
+The single round-2 finding is fixed: D05 now has its own header reading, `FINAL NIGHT · THE FOYER`, instead of inheriting D04's `THE OFFICE`. F01 already sets `THE LANTERN` on returning to the box. No other changes. A fresh independent round is required; no stamp has been recorded.
