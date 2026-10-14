@@ -143,3 +143,5 @@ B01 is pending correction: siding's rightmost rail terminates in snow near nativ
 - B04: `0b789c9ac940045c83399e9562129ab0855a7b5c76ff1644e22b2f6918d02655` (approved)
 - B05: `9b45f3cac533fbd013b2e6f07c41856e641fd305d9dcb33b7dd56861abd9e303` (approved)
 - B06: `28f943b99da0531bed71fefa9a77599eb65810413001ba0ca0feea46f1b23cfa` (approved)
+
+B01 correction `b9fa4b2` normally merged and approved after owner full-size original/WebP reinspection. Previously isolated siding rail now continues into the turnout; right-diverging branch, dark signal box, red signal, blank sign, two identities and train crop preserved. Supersedes pending B01 decision. Correct dimensions verified; all rejected iterations retained owner-side. Final WebP SHA-256 `8e9bcdb896a99a01c8c233a1c5d7bc830686e5fa7782c1ca8e1190d87fb01859`. Nineteen of 44 scenes approved.
