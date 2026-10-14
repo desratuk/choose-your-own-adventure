@@ -99,3 +99,23 @@ All ten round-1 fixes hold and introduce no new contradictions: A01's planting r
 - **Fix:** A06: add "the two dark, empty glass carriages (the Fern House and the Orchard Car) coupled close behind, filling the view through the end window". B06, C01 and D05: either list "two dark empty glass carriages coupled behind" or frame the shot so the rear of the train is out of view (for example, cut at the Glasshouse Carriage's end window).
 
 **Verdict:** FINDINGS. 4 issues; no `.continuity-review` stamp recorded. Re-review after fixes.
+
+## Round 3 — FINDINGS (no stamp)
+
+Reviewer: independent continuity reviewer, Claude Opus 5.5 (`claude-opus-5-5`). Medium reasoning was requested; the effort level can't be seen from inside the run. Manuscript: `stories/glasshouse-express/story.ts` exactly as in `16bd8d2` (no diff to HEAD). Inputs: the full `story-dump` (44 pages, every arrival state), the full bible including both response tables, rounds 1–2 of this report, project `CLAUDE.md`, all 44 `imagePrompt`s with `stylePrefix` and `art.cast`, and the reference manifest including art commit `513ce8a` (engine/carriage sheets now mapped to F01 and the other visible train views; Conservatory interior also sources the carriage board).
+
+All four round-2 fixes hold. B04 and E02 key roles now agree: the night men hold the yard-gate key and the foreman holds only the far gate's. E04's waiting prose is fuel-neutral at every arrival up to 70. F01 has the line reach the gates, with Marigold entering only after they open in both `wordSent` states, and the image works for both. A06, B06, C01 and D05 list the two dark carriages. Round-1 fixes still hold: planting rule, Dov at the hut, Fenn's timing, the E01 cause at 5 AM, the Hallam introduction, sunrise at 7:30, C01 with no tram and bare ice at D07/E04. These are also sound: brick arithmetic and gates, clue gating, Sallow met and unmet variants, the hub returns, Fenn's name known before C04, the plant-state crops, ending labels, the season ladder and reference coverage after `513ce8a`.
+
+### 1. Three train views still drop the two coupled carriages, contradicting the bible's whole-train rule
+- **Pages:** E02 and E04 `imagePrompt`s ("the Glasshouse Express standing…"); also B03 and F01 (Marigold "with the glowing Glasshouse Carriage behind"/"still on the gate line").
+- **Trigger:** every route to these pages. The `stylePrefix` and `art.cast.carriage` keep the empty carriages out unless a scene lists them. None of these prompts lists them, and none deliberately crops behind the glowing carriage.
+- **Defect:** The bible says (line 38): "all four vehicles stay coupled all night… Exterior shots show the whole train or deliberately crop behind the glowing carriage." E02 and E04 are broad views of the standing train in daylight, so the generator will draw a complete two-vehicle Express. That contradicts A01, A06, B06, C01 and D05. This is the same defect round 2 fixed for B06, C01 and D05. In F01 and B03, the train trails back out of the yard or gate, so the rear is in view unless it is cropped.
+- **Fix:** E02 and E04: after "the Glasshouse Express", add "(Marigold, the glowing glass carriage and the two dark, empty glass carriages, the Fern House and the Orchard Car, coupled behind)". F01 and B03: either add "the two dark, empty glass carriages coupled behind, trailing back out of frame through the gate" or state "framing cuts off just behind the glowing carriage". Map no new subjects. The carriage board already covers the dark carriages.
+
+### 2. D04 gives the player a lantern they don't have
+- **Page:** D04 [3] (`not(chilled) and not(stoked)`): "you walk the aisle once with the lantern to be sure".
+- **Trigger:** D03 "Keep the stove as it is and ride the tunnel", on every route that takes it.
+- **Defect:** [0] has just said "The stove's glow is the only light". The only lantern in the story is Dov's hand lantern, and Dov is on the footplate. The player carries the thaw-lamp. In the chilled branch of the same page [1] the player uses the thaw-lamp ("You walk the aisle with the thaw-lamp"). "The lantern" points at nothing the player has.
+- **Fix:** D04 [3]: "you walk the aisle once with the thaw-lamp to be sure".
+
+**Verdict:** FINDINGS. 2 issues; no `.continuity-review` stamp recorded. Re-review after fixes.
