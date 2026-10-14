@@ -30,7 +30,8 @@
     "sources": [
       "stories/glasshouse-express/references/player-hesper.webp",
       "stories/glasshouse-express/references/dov.webp"
-    ]
+    ],
+    "reviewedSha256": "a44dc6654985bc79cfd2b772d3c8e01e17dc6cc2cb43eafbb0fbf2873b9e921d"
   },
   {
     "id": "fenn",
@@ -41,7 +42,8 @@
     "sources": [
       "stories/glasshouse-express/references/player-hesper.webp",
       "stories/glasshouse-express/references/dov.webp"
-    ]
+    ],
+    "reviewedSha256": "af77cc78162b10edf031e5907682e6635e8c9d2be4c7f88b45149f7fe5feb78d"
   },
   {
     "id": "marigold",
@@ -90,7 +92,8 @@
     "sources": [
       "stories/glasshouse-express/references/player-hesper.webp",
       "stories/glasshouse-express/references/marigold.webp"
-    ]
+    ],
+    "reviewedSha256": "8fc132adbe435576dd0ddd7b777be0d1099d973ff933248ba76398990d6d4611"
   },
   {
     "id": "carriage-interior",
