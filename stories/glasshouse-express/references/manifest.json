@@ -90,7 +90,8 @@
     "sources": [
       "stories/glasshouse-express/references/player-hesper.webp",
       "stories/glasshouse-express/references/marigold.webp"
-    ]
+    ],
+    "reviewedSha256": "8fc132adbe435576dd0ddd7b777be0d1099d973ff933248ba76398990d6d4611"
   },
   {
     "id": "carriage-interior",
