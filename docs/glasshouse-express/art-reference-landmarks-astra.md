@@ -1,6 +1,6 @@
 # Glasshouse Express landmark references — Astra
 
-Status: architecture hold **released for references** by the parent after corrected author commit `19768a4cb29d0e3f29bd60e767feade9a25fa4f2`. Owner tips `dae9a55` and `8dc03f4` merged locally. Approved carriage received; Winter Terminus independently approved in owner `7c0b61e`; downstream generation proceeding; scenes remain on hold. No review hashes written to the manifest.
+Status: all seven assigned reference candidates delivered; six independently approved by owner through `3efbbf2`, Candlewick v6 awaiting owner review. Architecture released for references. Scene generation remains held for round-six PASS/stamp and eighteen approved references. No review hashes written by this worker.
 
 ## Runtime and sources
 
@@ -77,7 +77,7 @@ Full-resolution PNG/WebP review: stone-arched viaduct across frozen lake, spindr
 
 Merged owner `e46051f` (Tallow approved) and `e7d1d8d` (author `8360ab2`). Round-three findings and bible responses preserve reference geometry: exterior train visibility/crops and D04 stove-only light corrected. Scenes remain on hold. Candlewick v1 is retained ignored, awaiting correction of lit signal box and invalid turnout geometry before submission.
 
-## Fernhallow Incline candidate — awaiting owner review
+## Fernhallow Incline — owner approved (merged through 3efbbf2)
 
 Built-in image_gen, full manifest brief, approved Mere/Beacon (`e1c743c43c82f8f2b8572e22d82081c5d39d8e7f5c18132e78ce1a8648d24a5b`) and player/Hesper style attached. Generated `exec-66767aad-dbd4-48d7-8cc1-6ab9b4527f82.png` in the same generation directory, preserved ignored as `fernhallow-incline-v1.png`. No correction needed in worker inspection.
 
@@ -88,14 +88,14 @@ Full-resolution PNG/WebP inspected: single track climbs icy grade to stone porta
 
 Owner `aeb6135` merged; Mere release received. Candlewick v2 remains rejected/ignored because a curved branch rail terminates instead of joining the turnout, despite successful signal-box darkening. No provider/model substitution and no usage-limit error encountered in this worker so far.
 
-## Ember Works candidate — awaiting owner review
+## Ember Works — owner approved (merged through 3efbbf2)
 
 Built-in image_gen with full corrected manifest brief, approved Winter Terminus and player/Hesper style anchor. `exec-1edd5563-aa7e-4842-a4a0-10b0688f653b.png` in the shared generation directory copied to ignored `ember-works-v1.png`. No worker correction needed. Full-resolution PNG/WebP inspected: single-leaf barred yard gate between brick piers repeated in close view, one hinge side and chain/padlock; distinct taller double doors under brick arch in morning panel with unlit lamp. Rails pass between piers; kiln glow, tarpaulin-covered brick stacks and smoking chimneys at night. No people, trains, keys or readable text. q88 no resize, 1536×1024.
 
 - Original SHA-256: `8fa8deffca1d71aa64e588dee7fb86cb09f3eb8792b1544eb151d4c94c6fd7d5`.
 - WebP SHA-256: `1f5f8eb6cb5434709589727c6d6576542d844d709ba832ba5a8b1214b2592b16`.
 
-## Lower Town Interiors candidate — awaiting owner review
+## Lower Town Interiors — corrected v2 owner approved at 3efbbf2
 
 Built-in image_gen with full manifest brief, listed approved Tallow source, additional approved Mere/Beacon for the studio-window geography, and player/Hesper style anchor (three complete source paths). Generated `exec-efd9f714-03af-4634-ab1f-96d4fab31f42.png` in the same generation directory; preserved ignored as `lower-town-interiors-v1.png`. Full-resolution original and WebP inspected: shed-backed single-slope lean-to, paraffin heater and warm hyacinth shelf; open trapdoor to brick cellar with short green tips; studio turntables, mixer, cassette decks, telephone and mic, with window overlooking matching cutting banks; matching cream/green tram above inspection pit. Empty gardening gloves are objects, not hands; no people. No correction required. q88 without resize, 1536×1024.
 
@@ -108,3 +108,15 @@ Owner rejected v1's open star-shaped hyacinth florets; the earlier worker accept
 
 - Corrected original SHA-256: `b0262341c6207d5f80448931ec77129d33fd26269b865c354311af005302614d`.
 - Corrected WebP SHA-256: `e4395651c482f26cdd95f167d1d06703e22842d6c5e867819f6a6f9b7d74a796`.
+
+
+## Candlewick Junction v6 candidate — awaiting owner review
+
+Every built-in image_gen call used the complete manifest brief, approved Winter Terminus and player/Hesper style anchor; targeted edits also attached the target. Two source paths for fresh generations, three for edits; no packing required. Retained all five rejected originals ignored. V1 (`exec-fa855906-52d8-4edc-ba2b-e50d6ed3431c.png`) had lit box/invalid turnout; v2 (`exec-a7513a9f-1e42-447f-a66b-1364a75ec2ec.png`) darkened box but left an abruptly terminating rail. V3 (`exec-737a9165-222b-4fb8-a961-5e6c8dde02f4.png`) and v4 (`exec-3f54acf3-f808-4e37-849e-899915aaf7dd.png`) retained invalid connections/extra foreground rails. Fresh elevated composition v5 (`exec-2802aac6-f529-4e53-9590-43445780caf8.png`) corrected rail topology but introduced lit box and freight wagons. Targeted v6 (`exec-da776e4d-d6b8-41d3-83af-c1befb898170.png`) darkened box/nearby lamps, removed all wagons, moved lever to stair foot, preserving track paths and closeup. All generated files are in the shared generation directory documented above; copies use `candlewick-junction-v1-rejected.png` through `-v5-rejected.png`, and selected `candlewick-junction-v6.png`.
+
+Full-resolution selected PNG and q88 WebP inspected: two foreground approach rails; straight main line and right siding with continuous paths through facing turnout; empty walled siding; dark timber box/external stair; lever at stair foot matching closeup, empty chain, grit-dusted bootprint; red signal lamp, blank sign, frosty clear night/pink town glow. No people or trains. Both 1536×1024, no resize.
+
+- Original SHA-256: `f45db19f67274fcc6ab840468ec7da7bdb234f824f0f31cec3947b7fd28e40bf`.
+- WebP SHA-256: `757333ba2a58171bd1c0afc4a7a43c7b36d31bd3a618bb81bb4b5afe4728745d`.
+
+Merged owner `3efbbf2`, including independent Fernhallow, Ember and corrected interior approvals. Read author `e429aca` and round-four/five bible responses: B04 deliberate crop; B05 train wholly clear of points on lakeside approach, rear along approach, empty right siding. No landmark redesign required. All assigned reference files now present; owner must review Candlewick before recording its hash. No usage-limit error or provider/model substitution occurred. No scenes generated.
