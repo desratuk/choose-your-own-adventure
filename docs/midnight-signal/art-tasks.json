@@ -9,7 +9,8 @@
     "verifiedModel": "gpt-6-astra",
     "verifiedRuntimeMode": "full-access",
     "requestedReasoningEffort": "medium",
-    "reasoningVerification": "Awaiting child runtime report; thread read API exposes provider/model/runtime but not reasoning option."
+    "reasoningVerification": "Parent observed t3_thread_configuration for this worker: modelSelection instanceId codex, model gpt-6-astra, options reasoningEffort medium, runtime full-access. Parent also verified t3_thread_read recentRuns records actual running codex/gpt-6-astra. Child runtime report may corroborate; configuration evidence supplied in parent coordination message.",
+    "verifiedConfiguredReasoningEffort": "medium"
   },
   {
     "batch": "b",
@@ -21,7 +22,8 @@
     "verifiedModel": "gpt-6-astra",
     "verifiedRuntimeMode": "full-access",
     "requestedReasoningEffort": "medium",
-    "reasoningVerification": "Awaiting child runtime report; thread read API exposes provider/model/runtime but not reasoning option."
+    "reasoningVerification": "Parent observed t3_thread_configuration for this worker: modelSelection instanceId codex, model gpt-6-astra, options reasoningEffort medium, runtime full-access. Parent also verified t3_thread_read recentRuns records actual running codex/gpt-6-astra. Child runtime report may corroborate; configuration evidence supplied in parent coordination message.",
+    "verifiedConfiguredReasoningEffort": "medium"
   },
   {
     "batch": "c",
@@ -33,6 +35,7 @@
     "verifiedModel": "gpt-6-astra",
     "verifiedRuntimeMode": "full-access",
     "requestedReasoningEffort": "medium",
-    "reasoningVerification": "Awaiting child runtime report; thread read API exposes provider/model/runtime but not reasoning option."
+    "reasoningVerification": "Parent observed t3_thread_configuration for this worker: modelSelection instanceId codex, model gpt-6-astra, options reasoningEffort medium, runtime full-access. Parent also verified t3_thread_read recentRuns records actual running codex/gpt-6-astra. Child runtime report may corroborate; configuration evidence supplied in parent coordination message.",
+    "verifiedConfiguredReasoningEffort": "medium"
   }
 ]
