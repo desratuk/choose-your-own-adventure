@@ -38,3 +38,14 @@ The same limit initially rejected a B04 edit target plus its five references; re
 - git diff --check: clean.
 - Training milestone: f373ced.
 - Parent owns final cross-pack/contact-sheet QA, browser verification, integration and any bible update. No push or merge performed.
+
+## Parent resolution — B09
+
+B09 completed by the parent on GPT-6-Astra/medium with built-in image_gen. The five-path transport limit was resolved by losslessly stacking the complete decoded `league-workshop.webp` above `engineering-props.webp` in ignored `art-src/references/B09-workshop-props.png`; no crop, resize, repaint or reference-content omission. The other four listed files were attached individually. All six approved sheets therefore reached the generator in five attachments. Manifest and approved files remain unchanged.
+
+Source SHA-256 values:
+- league-workshop.webp: `5605a7c9996973d45c9401a391bbdadc13b9148aba77a4ad594ef00bd545b9df`
+- engineering-props.webp: `af0c175aa40ca6968972e69392465e8886b750173d367a665d28e5b655e7912e`
+- packed PNG: `9b26218c08da2b1dce4fc9b17ec3b7bb7964665cbd4ea23fe021e120b55944e8`
+
+Parent inspected B09: Grig at enclosed boarding doorway, player and Tavi inside reviewing the outpost diagram; fixed wardrobe, hidden player face, no optional equipment or extra cast. Original saved as `art-src/B09.png`, converted to 1200×800 quality-75 WebP. Parent also inspected every delivered B/C WebP and the cross-scene contact sheet. This resolves the historical B09 blocker above; batch is now 15/15.
