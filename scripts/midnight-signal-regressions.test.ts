@@ -130,3 +130,54 @@ test('Midnight Signal: skipped wiring and copied-call detours do not create know
   }
   assert.match(walk([...careful,'D05','D08']).text, /transcript of the sealed earlier copy/);
 });
+
+test('Midnight Signal: every reachable gate choice agrees with the full-cycle safety cut-out', () => {
+  const observed = new Set<string>();
+  for (const difficulty of ['easy','medium','hard'] as const) {
+    const pending = [{ page: getPage(story, story.start), state: startState(story, difficulty) }];
+    const seen = new Set<string>();
+    while (pending.length) {
+      const { page, state } = pending.pop()!;
+      const key = `${page.id}:${JSON.stringify(state)}`;
+      if (seen.has(key)) continue;
+      seen.add(key);
+      const choices = visibleChoices(page, state);
+      if (page.id === 'C04') {
+        observed.add(`${state.charge}/${state.wrong}`);
+        const text = renderText(story, page, state).join('\n');
+        if (Number(state.charge) <= 20) {
+          assert.deepEqual(choices.map(c => c.to), ['C08'], key);
+          assert.match(text, /Evacuation is the remaining choice/, key);
+          assert.doesNotMatch(text, /You can propose a corrected sequence|Jo waits for your proposal/, key);
+        } else {
+          assert.ok(choices.some(c => c.to === 'C05'), key);
+          assert.equal(choices.some(c => c.to === 'C06'), !state.wrong, key);
+          assert.doesNotMatch(text, /Evacuation is the remaining choice/, key);
+        }
+      }
+      for (const choice of choices) pending.push({ page: getPage(story, choice.to), state: choose(story, state, choice) });
+    }
+  }
+  assert.ok(observed.has('20/false'));
+  assert.ok(observed.has('20/true'));
+  assert.ok(observed.has('10/true'));
+});
+
+test('Midnight Signal: recovery keeps the manually closed inlet shut and moves only the outlet', () => {
+  const beforeDrain = careful.slice(0, careful.indexOf('C05'));
+  const first = walk([...beforeDrain,'C05']);
+  assert.match(first.text, /closing the inlet before opening the outlet/);
+  const retry = walk([...beforeDrain,'C06','C04','C05']);
+  assert.match(retry.text, /inlet rod stays at shut/);
+  assert.doesNotMatch(retry.text, /closing the inlet before|They move this time|manual remote drive/);
+  assert.equal(retry.state.charge, Number(first.state.charge) - 15);
+});
+
+test('Midnight Signal: blue-first partial handover labels only the destination actually verified', () => {
+  const route = [...opening,'A08','B01','B02','B07','B08','B10','C01','C02','C08','C09','C10','D01','D02','D04','D06','E09'];
+  const result = walk(route);
+  assert.equal(result.state.wiring, false);
+  assert.match(result.text, /HILL REPEATER on a fresh label above the blue socket/);
+  assert.doesNotMatch(result.text, /two patch-socket destinations/);
+  assert.match(result.page.imagePrompt, /ONLY the blue socket, black socket unlabelled/);
+});

@@ -174,7 +174,7 @@ const story: Story = {
       "era": "station",
       "text": [
         "In the studio's dry equipment alcove, Mara switches on the reserve gauge. It reads {{clock}}. The bank feeds the station's portable test socket and the harbour's remote controls. Ordinary lights and rescue-service radios have separate batteries. You cannot make more charge by waiting.",
-        "“The pump chamber Petrel’s crew are checking sits beside the old repair basin,” Mara says. “Water gates control the level beside its boat workshop. We can operate those gates remotely from this bank. A complete gate cycle takes twenty. Sending the inspection record afterward takes another ten, and the recorder needs ten left to keep it intact until the relief generator arrives. We can still get people out by hand if we lose that option.”",
+        "“The pump chamber Petrel’s crew are checking sits beside the old repair basin,” Mara says. “Water gates control the level beside its boat workshop. We can operate those gates remotely from this bank. A complete gate cycle takes twenty, and its safety cut-out requires some charge left afterward. Sending the inspection record afterward takes another ten, and the recorder needs ten left to keep it intact until the relief generator arrives. We can still get people out by hand if we lose that option.”",
         "The record is more than a souvenir. A clear distress recording, a measured tide reading, the harbour sound register and the gate inspection together can prove which fault needs repairing. Without them, the council will close the basin and investigate later. People come first; keeping their workshop open would help too.",
         "Mara lays out blank cassettes and the station patch diagram. Jo will meet you downstairs when you are ready. You have time to choose what to prepare, but the powered bench draws from the same bank."
       ],
@@ -707,9 +707,9 @@ const story: Story = {
       "title": "A Handle and a Record",
       "era": "basin",
       "text": [
-        "Jo opens the control box in the gallery. Two guarded levers operate the sea inlet and the basin outlet. Their labels describe destinations, not which one to pull first. The remote drive can perform one complete gate cycle for twenty reserve points. Once the water moves, Jo can stop it manually.",
+        "Jo opens the control box in the gallery. Two guarded levers operate the sea inlet and the basin outlet. Their labels describe destinations, not which one to pull first. The remote drive uses twenty reserve points for a complete gate cycle. Before any powered gate operation, its safety cut-out requires capacity for that full cycle plus at least one point left afterward. Once the water moves, Jo can stop the drive manually; an aborted cycle may use less, but it still needs the full starting reserve.",
         "Beside the box is a small inspection hatch. A numbered shear pin couples the automatic timer to the inlet linkage. If that pin has cracked, the timer can finish its turn while the gate remains open. Photographing and logging the pin would preserve evidence before any repair changes it. The instant camera's inspection lamp draws five points from the test socket.",
-        "Jo will inspect the pin without disturbing it if you ask. Alternatively, you can begin the gate operation or call for a manual evacuation. You remain behind the marked line while Jo handles all machinery. The teenage volunteer's job is observations and communication, not wrestling a sluice."
+        "Jo will inspect the pin without disturbing it if you ask. Alternatively, you can review the gate controls or call for a manual evacuation. You remain behind the marked line while Jo handles all machinery. The teenage volunteer's job is observations and communication, not wrestling a sluice."
       ],
       "imagePrompt": "Stormy late night gallery control box with two guarded lever handles and small CLOSED adjacent inspection hatch. No people or camera; no completed repair.",
       "cast": [
@@ -781,15 +781,45 @@ const story: Story = {
       "title": "Which Water First",
       "era": "basin",
       "text": [
-        "At the guarded controls, Jo asks you to state a sequence for the operation log. Jo will carry it out and watch the chamber level. Through the inner window, the three waiting torch beams stay above the lower landing.",
+        "At the guarded controls, Jo checks the reserve gauge before accepting any sequence for the operation log. Through the inner window, the three waiting torch beams stay above the lower landing.",
         "A short wave slaps the outside wall. Jo checks the upper lobby through the inner window, then returns to the controls. Ellis has asked whether to bring the tool bag when the rescuers arrive. Jo says to leave it on its hook; nobody will be sent back for a spanner.",
         "You put your pencil on the next line of the log. The recorder needs the order as well as the result. If an inspector arrives tomorrow, a page saying WE DID SOMETHING TO THE GATES will not be much help.",
         {
           "if": {
-            "flag": "wrong"
+            "all": [
+              {
+                "flag": "charge",
+                "gte": 21
+              },
+              {
+                "flag": "wrong"
+              }
+            ]
           },
-          "text": "The failed attempt is already recorded above. You can propose a corrected sequence, or stop operating the gates. Jo waits beside the controls; the crew remain in the upper lobby, and the road rescue team is still coming.",
-          "else": "Jo waits for your proposal. The crew remain in the upper lobby, and the road rescue team is still coming. You have an alternative if you do not want to operate the gates."
+          "text": "The failed attempt is already recorded above. You can propose a corrected sequence, or stop operating the gates. Jo waits beside the controls; the crew remain in the upper lobby, and the road rescue team is still coming."
+        },
+        {
+          "if": {
+            "all": [
+              {
+                "flag": "charge",
+                "gte": 21
+              },
+              {
+                "not": {
+                  "flag": "wrong"
+                }
+              }
+            ]
+          },
+          "text": "Jo waits for your proposal. The crew remain in the upper lobby, and the road rescue team is still coming. You have an alternative if you do not want to operate the gates."
+        },
+        {
+          "if": {
+            "flag": "charge",
+            "lte": 20
+          },
+          "text": "The bank reads {{clock}}. The safety cut-out will not allow a powered gate operation: it needs twenty points for the full cycle and at least one left afterward. Evacuation is the remaining choice. Jo keeps the controls locked while the crew wait in the upper lobby for the road rescue team."
         }
       ],
       "imagePrompt": "Stormy late night close-up of two guarded gallery levers at rest, pencil and operation log with indistinct marks on shelf. No people, readable sequence, visible gate indicator positions or instructional arrows.",
@@ -821,7 +851,7 @@ const story: Story = {
             "all": [
               {
                 "flag": "charge",
-                "gte": 16
+                "gte": 21
               },
               {
                 "not": {
@@ -849,7 +879,13 @@ const story: Story = {
       "title": "A Line Begins to Fall",
       "era": "basin",
       "text": [
-        "Jo works the guarded levers in the dry gallery, closing the inlet before opening the outlet. You read the separate position rods aloud. They move this time; the manual remote drive has bypassed the faulty timer coupling.",
+        {
+          "if": {
+            "flag": "wrong"
+          },
+          "text": "In the dry gallery, Jo checks that the inlet is still shut from the manual-wheel stop, then runs the remote drive to open the outlet. You read the outlet rod aloud as it moves; the inlet rod stays at shut. The drive has bypassed the faulty timer coupling.",
+          "else": "Jo works the guarded levers in the dry gallery, closing the inlet before opening the outlet. You read the separate position rods aloud. They move this time; the remote drive has bypassed the faulty timer coupling."
+        },
         "Below the lobby window, a black line of water hesitates against the wall. Then it slips downward. Ellis reports the same change from the other side. Nobody goes downstairs to celebrate. Jo secures the controls and tells the crew to remain where they are until the rescue team checks the route.",
         "The bank now reads {{clock}}. You log the operation and its result. A falling line looks like almost nothing, which makes it difficult to believe how much trouble a rising one promised.",
         "From the covered passage comes a knock that does not belong to the pump. The rescue team has arrived on foot from its vehicle. Jo opens the gallery door and gives them the crew count and the dry access route."
@@ -1371,10 +1407,10 @@ const story: Story = {
       "text": [
         "The relief generator takes over at Gull, and Mara checks that the recorded acknowledgement is intact. Your partial report has reached the duty inspector. Its gaps are labelled, its observations are usable, and no one has mistaken it for clearance to reopen the basin.",
         "Jo pins the survey appointment to the harbour board downstairs. The Petrel crew have gone home with the rescue team. There will be lost working days and more questions, but there will also be a record that another person can trust.",
-        "You write the two patch-socket destinations on fresh labels before your shift ends. Tomorrow's volunteer should not have to solve every mystery you solved tonight.",
+        "You write HILL REPEATER on a fresh label above the blue socket before your shift ends. Tomorrow’s volunteer should not have to solve every mystery you solved tonight.",
         "Good ending — You sent a truthful record and left the unfinished work visible."
       ],
-      "imagePrompt": "Grey dawn after storm in studio, freshly labelled black and blue sockets, no legible words needed, quiet warm desk, no people.",
+      "imagePrompt": "Grey dawn after storm in studio, black and blue patch sockets with a fresh cream label above ONLY the blue socket, black socket unlabelled. No legible words needed, quiet warm desk, no people.",
       "cast": [
         "radio"
       ],
