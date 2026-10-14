@@ -995,7 +995,7 @@ const story: Story = {
             "is": true
           },
           "text": "You take the cream insulated wrap from your bag. Ellis checks the dry lining, then helps you fasten its two orange straps around the closed plate box. The wrap stays on the box for the journey.",
-          "else": "Ellis has wrapped the plate box in a dry refuge blanket. It will protect the glass from knocks, but it is not the insulated cover needed for controlled cooling. The calibration may have to be repeated."
+          "else": "Ellis folds a dry refuge blanket around the plate box. It will protect the glass from knocks, but it is not the insulated cover needed for controlled cooling. The calibration may have to be repeated."
         },
         "Mara checks the weather reading through the inner window. If the line is no longer worth running, a protected receiving cradle can draw the locked cabin a short way sideways into the refuge bay, already level with its floor. Passengers would remain here tonight; the cradle would secure the tram against overnight ice. It cannot lower anyone down the mountain."
       ],
