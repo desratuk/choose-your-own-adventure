@@ -377,7 +377,7 @@ const raw: Page[] = [
     ],
   },
   {
-    id: 'D05', title: 'Row F', era: 'palace',
+    id: 'D05', title: 'Row F', era: 'palace', time: 'FINAL NIGHT · THE FOYER',
     cast: ['player', 'dot', 'abel', 'pellows'],
     imagePrompt: `Rainy night seen through the glass doors of the Palladian's red-and-gold foyer: a small white minibus at the kerb outside. Inside, Dot in her usherette uniform offers her arm to Abel; the Pellow twins follow arm in arm in their cardigans. The player holds a door open, seen from behind. Win is not in this crop. No other people.`,
     text: [
