@@ -145,3 +145,47 @@ B01 is pending correction: siding's rightmost rail terminates in snow near nativ
 - B06: `28f943b99da0531bed71fefa9a77599eb65810413001ba0ca0feea46f1b23cfa` (approved)
 
 B01 correction `b9fa4b2` normally merged and approved after owner full-size original/WebP reinspection. Previously isolated siding rail now continues into the turnout; right-diverging branch, dark signal box, red signal, blank sign, two identities and train crop preserved. Supersedes pending B01 decision. Correct dimensions verified; all rejected iterations retained owner-side. Final WebP SHA-256 `8e9bcdb896a99a01c8c233a1c5d7bc830686e5fa7782c1ca8e1190d87fb01859`. Nineteen of 44 scenes approved.
+
+## Completed town and ending batches
+
+Read both terminal task results; normally merged actual town `42b6906` and finale `ac2a16f` histories. Owner inspected eleven selected full-resolution originals and final WebPs. B07 water crane/leather bag and warm lean-to; B08 lone telephone user/background train crop; B09 Nan comparison with closed white buds and cellar green tips all approved. Town assignment fully approved.
+
+E03 frost-dark stock/dead coal bucket and closed shutters; E04 four coupled vehicles below tunnel, bare unsanded ice and arriving loaded grit cart; E05 broken glazing/crooked shutters/fallen chain/frosted stock and unharmed cast; E06 orange threads in splitting buds with unreadable foliage and coal bucket beneath bed; E08 full bloom/closed twelve-leaf bank/Fenn dabbing brow; E09 mostly open cups/scattered buds/open shutters; E10 full bloom/meltwater/seated Dov/uncapped Fenn all approved. E07 flowering ratio and unreadable foliage pass, but repeated Hallam cylinders require targeted correction to a single mechanism. E07 candidate is not approved.
+
+Selected/rejected originals copied owner-side, dimensions verified. Twenty-nine of 44 scenes approved. Journey confirms all15 selected with no untouched or in-flight work; no ownership transfer needed. Final coverage/browser and contact-sheet QA remain pending.
+
+- B07: `295fb2d995888eac430321b88ac1d92f90da3b632d352ce5ae627270f4eab0cf` (approved)
+- B08: `303157d9226514d4d4b53af142390773b32dc8d308d9116684e55b1ec383dac2` (approved)
+- B09: `eb9475a901d31d78ab6c259d84e5acec7efcfeb35a840a84e878061e2df6f0b7` (approved)
+- E03: `1c991624b98f5f19022d86195f6dfdec3324c3d723fac219f69e02b14d47a039` (approved)
+- E04: `46c499b6ab8cd311d49ece5e3e668018f1377b254f71bda91260be70d42405f8` (approved)
+- E05: `5a43ed7748f919c8f523fde3c681c1892c49fe6cffe3c4e3505a0945abc0deae` (approved)
+- E06: `995d5ed4390f840b33d18fface23b58cd60cb3f943caa6b91d19b6bda31aba26` (approved)
+- E07: `390f60a20590a39e1f160e6cadaeba2b2cc250a6d957a96b7bf6b59636c48c3b` (pending correction)
+- E08: `8289a87e1e0344806a69d4d0f53e10281fb68db425dfe0debd4c597a8b774e14` (approved)
+- E09: `ef9ed8ee57caceb85a03e23a9ec06635412d4905155f1f13dd3e5e47c733374f` (approved)
+- E10: `9cfc319a49cd196b257ea8bd0b70687b95aaf70fe774bd281608d2d29833febe` (approved)
+
+## Journey and E07 checkpoint
+
+Read Journey terminal result and normally merged `6e8e7e3`; inspected all fourteen original PNGs and ten approvable final WebPs. B10 depot/pit/workers; C01 four-car crossing/no tram; C02 condensation/closed buds/spindrift; C05 sole player/open vents; D01 sander/iced incline; D02 lone player aside/no bucket; D04 stove-only silhouette/no readable route-dependent plants; D06 drawn-in rosettes/stoking/tied vent chain; D07 bare ice/failed-run framing; E02 distinct far double doors/unlit lamp/four-car train all approved.
+
+Four originals pending targeted corrections: C03 and C04 token hut/studio stairs must occupy opposite banks as the approved Beacon reference; D05 raised vents must close (both arrival routes have closed them); E01 exterior platform lights must be unlit per dark-platform prompt. Same Astra worker resumed exclusively for these four, task `node:delegated-task:command%3Amcp%3Aa52a3b34-4132-45a3-a172-985b5adbb76c%3Athread-send%3Aglasshouse-journey-owner-four-corrections`. No duplicate page ownership.
+
+Normally merged E07 correction `fe55303`; owner full-size original/WebP review approves one central Hallam cylinder and ordinary connecting linkage, preserved half-flowering ratio/unreadable foliage/cast/light. Runtime/catalog Astra Medium reverified by worker. Supersedes pending E07 decision. All originals/rejections copied, dimensions verified. Forty of 44 scenes approved; four corrections pending. All44 candidate files now present, not yet a completed-art approval.
+
+- B10: `24c8fc26ad844db1971a7ca282bc32d71208f3ba80eff47c9d7629aa219b8d43` (approved)
+- C01: `5ed4e07a7cbcae4378b49489ef6aac6443ffb6249f0dd03bbf1a967345dadda6` (approved)
+- C02: `4e516e47cac82f4cfc967b46d9694348013203cdad8a6e81a207efbe9ca83d6c` (approved)
+- C03: `df90cbd417e286f2a95cb31f2dbda5b4279b30cd9d1e75bfe01db789cb77fdb7` (pending correction)
+- C04: `e4660cc757542f6a28c22d3ae5ced737f1ee46c48c7038ebe237823bedddd129` (pending correction)
+- C05: `ff4e7beca297e754ee1e6a2338b78e01ddcdd2aa8920424d1fe27829d3db52be` (approved)
+- D01: `3497bd1a970878a9b533555b53754cb53ce8783180c657c9a5a480faf293be9b` (approved)
+- D02: `92b68a9c45b5b24882caa455e8129fbd3173b0518504abede03acd1a8e2d1485` (approved)
+- D04: `138e99c9bc54da0ac46643ee4c2730e6735b4164ad01052359cb575fd5bcbb48` (approved)
+- D05: `439b15fcbe21afb8ba433832943ba2649d293d1d9569fc1b22fbd23ef8cbcc82` (pending correction)
+- D06: `b4107ee2d83302f5e77abea288e4a2ce0ad6842f482f8ad65f0cddd59399f2b9` (approved)
+- D07: `4686e027fb4ab08f19b17818e9ad9063609751ece7ee41ea32ed6c3361f4c2c5` (approved)
+- E01: `e43baaab87adccc0b57d85d88d968da4e3a9d5779f33b9cffd80d1a961eabce5` (pending correction)
+- E02: `e4645cc4fc2710e7adbfc75a4ec0ca1d4451bfc2eff26fcd4c9ae0d9e31b72ba` (approved)
+- E07: `2e5bc59de6299aaa321bce165bb9121aef9d0b5fc568dca36ce485e79de17b36` (approved)
