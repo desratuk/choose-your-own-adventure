@@ -101,3 +101,10 @@ Built-in image_gen with full manifest brief, listed approved Tallow source, addi
 
 - Original SHA-256: `72d1b3dc65d6d231866dc22e98582d4f6cb6918c5e49fa2443b963ef46c458eb`.
 - WebP SHA-256: `8f4fc3af44f7e17c9d7af96c4bcc96f56d0d0417f8e0a0d007a03f1364674210`.
+
+### Owner-requested interior correction
+
+Owner rejected v1's open star-shaped hyacinth florets; the earlier worker acceptance missed the explicit closed-bud requirement. Retained original as `lower-town-interiors-v1-rejected.png`. Built-in edit `exec-31ebf716-7b86-4e88-9754-4d3e5cdd74b7.png` used complete manifest brief plus target, Tallow, Mere/Beacon and Hesper (four paths). Changed only warm-shelf spikes to densely packed closed ivory buds; preserved leaf-only sad bowl, cellar green tips, geometry, props, studio and depot. Inspected full PNG and WebP: no open star petals remain. Saved ignored `lower-town-interiors-v2.png`; q88, no resize, both 1536×1024. Supersedes v1 hashes above; owner review pending.
+
+- Corrected original SHA-256: `b0262341c6207d5f80448931ec77129d33fd26269b865c354311af005302614d`.
+- Corrected WebP SHA-256: `e4395651c482f26cdd95f167d1d06703e22842d6c5e867819f6a6f9b7d74a796`.
