@@ -60,6 +60,9 @@ const story: Story = {
     },
     "moved": {
       "default": false
+    },
+    "enteredGallery": {
+      "default": false
     }
   },
   "difficulties": {
@@ -140,7 +143,7 @@ const story: Story = {
       ],
       "imagePrompt": "Enclosed lower workshop in cloudy late afternoon. Player and Imani beside black corded telephone and a simplified tram plan, no other people.",
       "text": [
-        "At the workshop telephone, Imani repeats the report so you can both hear it. The tram's traction motor stopped during a scheduled brake test. The cabin's roof brake has held it at a service landing, safely above a fenced maintenance balcony. Nobody is hurt.",
+        "At the workshop telephone, Imani repeats the report so you can both hear it. The passengers are Fen, the observatory cook, and Ellis, a telescope technician. The tram's traction motor stopped during a scheduled brake test. The cabin's roof brake has held it at a service landing, safely above a fenced maintenance balcony. Nobody is hurt.",
         "The ridge station has lost its normal electrical supply. A small diesel generator can run the auxiliary drive, but the transfer switch needs operating in person. A crosswind is bringing snow toward the mountain. When its leading edge reaches the exposed span, the tram must stop for the night.",
         "Imani takes the handset away from her ear. “Mara has the cabin. Sol is up at the generator. I need to stay here to operate the lower receiving winch. There is an enclosed service gallery to the ridge. You know the low-voltage test panel; Sol can supervise the switching.”",
         "You ask why she cannot send the winch operator. Imani taps the empty hook where the operator's coat usually hangs. “Dentist. Probably having a much quieter afternoon.” Outside the window, the yellow cabin looks small enough to put in a pocket."
@@ -189,7 +192,7 @@ const story: Story = {
       "imagePrompt": "Overcast afternoon inside workshop. Player and Imani inspect a small bench model of stationary support rope and moving haul rope, no actual tram in room.",
       "text": [
         "At the bench, Imani rolls a wooden model along a taut wire. A heavy stationary rope supports the real cabin's wheels. A separate moving haul rope pulls it. Stopping the haul rope does not make the cabin fall; the independent roof brake grips the support rope.",
-        "The auxiliary drive is slower than the normal motor. Its governor limits speed even if a control sticks. Two settings on the old console govern how the drive responds, not how brave its operator feels. Imani makes you trace the control circuit with your finger rather than memorise the knobs.",
+        "A suspension-limit stop takes the cabin out of service for an unloaded running-gear inspection from a rigged platform. That platform is stored at the valley depot and needs a separate crew; it is not part of today’s cabin checks. The auxiliary drive is slower than the normal motor. Its governor limits speed even if a control sticks. Two settings on the old console govern how the drive responds, not how brave its operator feels. Imani makes you trace the control circuit with your finger rather than memorise the knobs.",
         "The service landing is just below the ridge crossover, a guided section where the cabin can be directed toward either the sheltered return line or the telescope freight spur. The spur ends at an unheated loading shed. The return line leads down here.",
         "“A tram isn't a lift with scenery,” Imani says. “But the paperwork is trying very hard.” You work the model brake twice and leave it holding before following her to the dispatch desk."
       ],
@@ -259,7 +262,7 @@ const story: Story = {
       "imagePrompt": "Enclosed lower dispatch room in cloudy afternoon. Player alone (Imani is outside the crop at the winch); weather chart, brake display and closed store cupboard. Crop omits optional notebook contents and blankets.",
       "text": [
         "In the lower dispatch room, you stand between a weather recorder, a brake demonstration rig and the store cupboard. Imani has moved through the adjoining doorway to the receiving winch; you can still hear her testing its empty drum.",
-        "The service gallery door is unlatched. A notice asks staff to leave their outdoor boots on the rubber mat, then asks them to disregard the earlier notice asking precisely the opposite. Someone has drawn a very tired boot between them.",
+        "The service gallery door is still locked. Imani has left its trapped-lock key on the dispatch hook for you. A notice asks staff to leave their outdoor boots on the rubber mat, then asks them to disregard the earlier notice asking precisely the opposite. Someone has drawn a very tired boot between them.",
         {
           "if": {
             "flag": "weather",
@@ -364,11 +367,11 @@ const story: Story = {
       "cast": [
         "player"
       ],
-      "imagePrompt": "Enclosed weather desk at cloudy afternoon. Player alone studies smoked-paper weather drum and narrow blue ribbon inside a small glazed observation tube; Imani absent.",
+      "imagePrompt": "Enclosed valley weather desk at cloudy afternoon. Player alone studies smoked-paper weather drum beside a paper ridge log with an abstract mast-and-ribbon sketch and copied weather trace. No physical ribbon, observation tube, remote viewing instrument or Imani in this room.",
       "text": [
-        "At the weather desk, you compare the ridge log with a smoked-paper drum. The pen has drawn groups of three short teeth followed by a longer flat section. The written observations call these gust packets, with a predictable lull after each third gust. They are local turbulence from air spilling over the ridge, not the snow front itself.",
-        "A blue ribbon in a little observation tube responds to wind at the exposed crossover. Its tail points downwind. In today's west wind it streams toward the east wall. The ridge log notes that the line tucked behind that east wall is sheltered; the western freight spur faces the gusts.",
-        "You copy the three-and-lull pattern and sketch the ribbon's tail. The next drum record agrees with the last one. It is evidence from today rather than a comforting old instruction.",
+        "At the weather desk, you compare today’s ridge log with older entries kept beside a smoked-paper pressure drum. The ridge observer has copied the crossover anemometer’s trace into the log: groups of three short teeth followed by a longer flat section. The observations call these gust packets, with a predictable lull after each third gust. They are local turbulence from air spilling over the ridge, not the snow front itself.",
+        "Beside the drum, today’s ridge log has a sketch of a blue wind ribbon on the crossover’s outer mast. Its tail points downwind. The ridge observer’s latest entry reports it streaming toward the east wall in today’s west wind. You are reading a report from the ridge, not measuring ridge wind in this valley room. The log notes that the line tucked behind that east wall is sheltered; the western freight spur faces the gusts.",
+        "You copy the three-and-lull pattern and sketch the ribbon's tail. The latest ridge entry agrees with the earlier observations. It is evidence from today rather than a comforting old instruction.",
         "A weather observer has pencilled a tiny hat on the drum's pressure pen. You leave that detail out of your sketch, although it explains why the recorder looks offended."
       ],
       "choices": [
@@ -418,7 +421,7 @@ const story: Story = {
       ],
       "imagePrompt": "Enclosed store cupboard in cloudy afternoon. Player alone folds a cream insulated wrap with two orange straps into a slate shoulder bag; no glass plates here.",
       "text": [
-        "Inside the dispatch store, you find a cream insulated wrap made for the observatory's photographic plate box. Its two orange straps close around the box without touching the glass. Dry padding and controlled cooling will keep warm processed coatings from fogging when they reach the valley cold room.",
+        "Inside the dispatch store, you find a cream insulated wrap made for the observatory's photographic plate box. Its two orange straps close around the box without touching the glass. Dry padding and controlled cooling will keep the exposed, unprocessed coatings from fogging as the box cools on its way to the valley cold room.",
         "The box is already in the cabin, but Mara reported that its normal cover was left drying upstairs. You telephone her from the store extension to check the dimensions before packing the wrap. She reads them off the box. You read yours back. They match.",
         "“Thank you,” Mara says. “I was considering offering it my cardigan. The cardigan has filed an objection.”",
         "You fasten the folded wrap into your plain shoulder bag. It makes the bag bulky, not magical. You will still need to reach the cabin and fit it before the descent. The time spent finding a dry, correctly sized cover has come off your working window."
@@ -446,7 +449,7 @@ const story: Story = {
       "text": [
         "At the gallery entrance, you find a trapped-key lock. The door key cannot turn until the gallery's inspection trolley is parked and its electrical supply isolated. A green lamp shows that isolation has been completed. The key itself has a broad square shoulder and a narrow round tip.",
         "A little flag above the key slot remains halfway between two marks. You recognise the relay: its mechanism must be acknowledged locally after a remote isolation. The nearby reset button belongs to the door latch, not the tram drive.",
-        "The door's thick glass shows an empty, lit corridor beyond. You can hear Imani at the winch through the wall. She is concentrating on a different machine and has left this small one to you. The access card says PUSH TO ACKNOWLEDGE. The polished key is tempting because it is already in your hand."
+        "The door's thick glass shows an empty, lit corridor beyond. You can hear Imani at the winch through the wall. She is concentrating on a different machine and has left this small one to you. The access card says PUSH TO ACKNOWLEDGE. The polished key you took from the dispatch hook is tempting because it is already in your hand."
       ],
       "choices": [
         {
@@ -522,7 +525,12 @@ const story: Story = {
           "text": "Return to the lower dispatch room and call the refuge plan",
           "to": "E02"
         }
-      ]
+      ],
+      "onEnter": {
+        "set": {
+          "enteredGallery": true
+        }
+      }
     },
     {
       "id": "B08",
@@ -838,14 +846,25 @@ const story: Story = {
         "mara",
         "sol"
       ],
-      "imagePrompt": "Enclosed crossover booth at late afternoon with first snow beyond west freight spur. Player, Mara and Sol study the physical route plan; cabin unmoved outside crop.",
+      "imagePrompt": "Enclosed crossover booth in cloudy late afternoon. Player, Mara and Sol compare the unselected west freight spur with the physical route plan; cabin remains unmoved outside crop. No snowfall, pinned tongue or closed permit implied.",
       "text": [
         "In the crossover booth, Mara marks your nominated western spur on the physical route plan before anyone moves a switch. Its line ends at the freight shed. There is no connection onward to the valley receiving station.",
-        "Sol checks the weather instrument. The exposed spur has begun collecting windblown ice. Reconfiguring a route inspection now would consume the safe preparation window for this attempt, so Mara closes the movement permit. The cabin has not left its brake.",
-        "You go with Mara through the protected link to tell the two passengers. The cook makes room at the refuge table. The telescope technician covers the reservation calendar with a blanket and asks for a pencil.",
-        "Everyone is safe, but the homeward journey will wait until the line can be checked after the front. You chose a view instead of a return path. Outside, the western shed gradually disappears behind snow."
+        "Sol checks the weather instrument while you and Mara compare the two physical routes again. The wrong destination is a planning mistake, not a reason to move the cabin or declare the weather window exhausted. You can recheck the eastern approach from the enclosed observation windows and return to the plan before making a fresh nomination. That careful recheck takes working time; the cabin has not left its brake.",
+        "Mara leaves the permit unsigned while you decide. You can still stop here and take the protected link to the refuge. The cook has soup ready, and the telescope technician can postpone the bookings if a return is no longer the job you choose.",
+        "The western shed is an end of the line, not a shortcut home. Beyond its windows the sky is grey. You look back at the eastern retaining wall on the physical plan."
       ],
       "choices": [
+        {
+          "text": "Recheck the eastern approach and nominate the return line",
+          "to": "D04",
+          "add": {
+            "window": -8
+          },
+          "if": {
+            "flag": "window",
+            "gte": 9
+          }
+        },
         {
           "text": "Close the spur permit and stay at the refuge",
           "to": "E03"
@@ -966,10 +985,10 @@ const story: Story = {
         "player",
         "mara"
       ],
-      "imagePrompt": "Inside enclosed heated refuge at late afternoon, cloud beyond glazed bridge. Player and Mara beside closed glass-plate box on table; passengers out of frame, optional wrap not visible.",
+      "imagePrompt": "Inside enclosed heated refuge at late afternoon, cloud beyond glazed bridge. Player and Mara beside closed glass-plate box on table; passengers out of frame, optional wrap not visible. Box holds exposed, unprocessed glass plates from last night; keep box closed with contents unseen.",
       "text": [
-        "Mara leads you through the booth door and along the enclosed bridge into the refuge. Sol stays at the crossover console. The cook and telescope technician introduce themselves as Fen and Ellis, then move their chairs away from the bridge entrance so nobody has to squeeze past the kettle.",
-        "The two passengers have been checked, counted and offered the same choices. They will board if Mara clears the cabin. If she does not, everyone stays in the refuge. Ellis points out the closed wooden plate box on the table; the glass records tonight’s telescope calibration, work that cannot be replaced by taking another photograph tomorrow.",
+        "Mara leads you through the booth door and along the enclosed bridge into the refuge. Sol stays at the crossover console. You meet Fen, the cook, and Ellis, the telescope technician, in person. They move their chairs away from the bridge entrance so nobody has to squeeze past the kettle.",
+        "The two passengers have been checked, counted and offered the same choices. They will board if Mara clears the cabin. If she does not, everyone stays in the refuge. Ellis points out the closed wooden plate box on the table; the glass records last night’s telescope calibration, work that cannot be replaced by taking another photograph tomorrow.",
         {
           "if": {
             "flag": "blankets",
@@ -978,7 +997,7 @@ const story: Story = {
           "text": "You take the cream insulated wrap from your bag. Ellis checks the dry lining, then helps you fasten its two orange straps around the closed plate box. The wrap stays on the box for the journey.",
           "else": "Ellis has wrapped the plate box in a dry refuge blanket. It will protect the glass from knocks, but it is not the insulated cover needed for controlled cooling. The calibration may have to be repeated."
         },
-        "Mara checks the weather reading through the inner window. If the line is no longer worth running, a protected receiving cradle can lift the locked cabin a short distance level with the refuge floor. Passengers would remain here tonight; the cradle would secure the tram against overnight ice. It cannot lower anyone down the mountain."
+        "Mara checks the weather reading through the inner window. If the line is no longer worth running, a protected receiving cradle can draw the locked cabin a short way sideways into the refuge bay, already level with its floor. Passengers would remain here tonight; the cradle would secure the tram against overnight ice. It cannot lower anyone down the mountain."
       ],
       "choices": [
         {
@@ -1032,10 +1051,10 @@ const story: Story = {
         "player",
         "mara"
       ],
-      "imagePrompt": "Interior yellow tram cabin in dim cloudy late afternoon before movement; over-shoulder player and Mara at hand controller, valley outside. Passenger seats and optional cargo out of crop.",
+      "imagePrompt": "Interior yellow tram cabin in dim cloudy late afternoon before movement; over-shoulder player and Mara at hand controller, valley outside. Passenger seats and optional cargo out of crop. Through cabin window a separate outer crossover mast carries one blue wind ribbon; no dispatch-room ribbon or observation tube.",
       "text": [
         "In the stationary cabin, Mara holds the drive controller at neutral. The first section crosses a short exposed gap before the retaining wall shelters the return line. The permission circuit is closed; Sol can cut the auxiliary supply at the ridge, and Imani can stop the receiving operation below.",
-        "The ribbon visible through the booth window snaps sideways, relaxes, snaps again. Mara asks you to choose the departure method and says she will stop if the cabin's suspension exceeds its marked limit. The roof brake can hold safely here as long as it is applied between movements.",
+        "On the crossover’s outer mast, visible directly from the cabin window, a blue wind ribbon snaps sideways, relaxes, snaps again. Mara asks you to choose the departure method and says she will stop if the cabin's suspension reaches its marked limit. The roof brake can hold safely here as long as it is applied between movements.",
         "A continuous run would spend less time exposed. Short movements would spend longer on the gap but could fit the mountain's rhythm. The controller's little white pointer sits exactly at zero.",
         "Fen has gone quiet behind you. Ellis is reading the plate box's transit instructions for something to do. You have a telephone, a notebook and an afternoon's worth of observations. Mara has the lever."
       ],
@@ -1251,7 +1270,7 @@ const story: Story = {
       "text": [
         "At the lower workshop desk, you lay out the notebook for Imani. You record observations as observations, guesses as guesses and the places where another person's check stopped a mistake. It takes more care than writing a triumphant sentence.",
         "Imani telephones Sol with the confirmed docking readings. Together they decide whether the auxiliary brake circuit can be drained before its exposed section freezes. Your log gives them the settings and test coverage they need; it does not turn missing tests into completed ones.",
-        "The tea bell rings when Imani opens the tool cupboard. “Still working,” she says. You cannot tell whether she means your repair or the whole mountain.",
+        "The tea bell rings when Imani shuts the tool cupboard. “Still working,” she says. You cannot tell whether she means your repair or the whole mountain.",
         "Mara returns from the waiting room with the passenger card. She puts it beside the maintenance sheet rather than on top of it. One records the people who are home. The other records what the next shift ought to know. You sign your own part and leave space for theirs."
       ],
       "choices": [
@@ -1279,7 +1298,7 @@ const story: Story = {
             "is": true
           },
           "text": "Ellis sends word that the dry insulated wrap has kept the plates within their cooling limits. The calibration record can go to the cold room intact.",
-          "else": "Ellis reports that the refuge blanket kept the glass whole, but the coatings fogged during cooling. The measurements will need repeating. The empty plate box will come back after processing."
+          "else": "Ellis reports that the refuge blanket kept the glass whole, but the coatings fogged during cooling. The measurements will need repeating. The fogged plates will still go to processing for the record."
         },
         {
           "if": {
@@ -1441,10 +1460,17 @@ const story: Story = {
       "cast": [
         "player"
       ],
-      "imagePrompt": "Enclosed lower workshop at evening after return by protected gallery; snow outside. Player alone at telephone, no other cast or cabin in frame.",
+      "imagePrompt": "Enclosed lower workshop at evening, snow outside. Player alone at telephone after ending the assignment, no other cast or cabin in frame. No return journey or open gallery door implied.",
       "text": [
         "You use the nearest field telephone to end your part of the tram attempt. Sol keeps the auxiliary drive isolated; Mara confirms her passengers will use the heated refuge. Nobody releases the cabin's service-landing brake.",
-        "After the call, you follow the enclosed service route back to the lower workshop. Any colleague with you goes to their own shutdown post. Imani has left the inner door unlatched and a clear place on the bench for your notebook.",
+        {
+          "if": {
+            "flag": "enteredGallery",
+            "is": true
+          },
+          "text": "After the call, you retrace the enclosed service gallery to the lower workshop. Any colleague with you goes to their own shutdown post. Imani has left a clear place on the bench for your notebook.",
+          "else": "After the call, you leave the closed gallery entrance behind and cross the lower dispatch room to the workshop bench. Imani has left a clear place there for your notebook."
+        },
         "The front closes the exposed span before another attempt can be prepared. The refuge telephone reports hot food and three occupied bunks. The cabin, its calibration plates and tomorrow's telescope programme will have to wait for a recovery crew and better weather.",
         "You chose a safe limit, but the Skyway rescue has not been completed. In the incident log, you write where you stopped and why. A later shift will have a better starting point because you did not try to make the ending look tidier."
       ],
@@ -1474,7 +1500,7 @@ const story: Story = {
           },
           "text": "Before cancelling at the cabin controller, Mara reverses the first short movement under Sol’s local permission and checks the cabin back onto its landing hold. The protected boarding bridge can now be secured to its doorway again."
         },
-        "You and Mara close the movement permit. If anyone has boarded, Mara returns them over the protected bridge to the refuge before the cabin is locked again. Sol secures the crossover at the booth and telephones the lower station with the cancelled departure.",
+        "You and Mara close the movement permit. If anyone has boarded, Mara returns them over the protected bridge to the refuge before the cabin is locked again. You follow Mara through the enclosed link into the refuge. Sol secures the crossover at the booth and telephones the lower station with the cancelled departure.",
         "In the refuge, Fen counts the soup bowls and Ellis counts the plate-box catches. You help Mara count bunks. Everybody is warm; nobody has reached the valley as planned. The roof brake holds the cabin beside the landing while ice begins collecting on the unused return line.",
         "Later Sol joins you after shutting down the tram supply. Imani promises a recovery crew after the front. You can hear the disappointment in Ellis's voice when the next morning's telescope work is cancelled, but nobody disputes the stop decision.",
         "The Skyway's last run tonight is a crossed-out line on a permit. You put your notebook beside the bunk and listen to the weather that has replaced it."
@@ -1496,9 +1522,9 @@ const story: Story = {
         "player",
         "mara"
       ],
-      "imagePrompt": "Enclosed refuge receiving bay in snowy evening. Mara and player inspect yellow cabin secured level in stationary cradle through window; no passengers visible.",
+      "imagePrompt": "Enclosed refuge receiving bay in snowy evening. Mara and player inspect yellow cabin secured in a stationary cradle after a short horizontal sideways draw into the bay, doorway always level with refuge floor; no vertical lift or descending winch, no passengers visible.",
       "text": [
-        "At the refuge, Mara calls Sol to operate the stationary receiving cradle. Its slow jaws hold the cabin's docking frame and bring the doorway level with the protected bay. You inspect the catch with Mara, then close and tag the empty cabin.",
+        "At the refuge, Mara calls Sol to operate the stationary receiving cradle. Its slow jaws hold the cabin's docking frame and draw it horizontally into the protected bay. The doorway stays level with the refuge floor throughout. You inspect the catch with Mara, then close and tag the empty cabin.",
         "Fen and Ellis remain inside the refuge with their plate box. With the tram under the bay roof, its doors and landing brake will not be buried in ice before a crew can reach them. Sol reassigns the generator after securing the tram circuit. Imani confirms tomorrow's recovery plan from below.",
         "You have not brought the passengers down, but you have completed a useful, deliberate recovery: everyone is sheltered and the cabin is secured where the next crew can work on it.",
         "Mara lends you the visitor book. Under PURPOSE OF VISIT you write maintenance. After thinking, you add soup. From the kitchen corner, Fen says that is the most accurate report anybody has made today."
@@ -1522,8 +1548,8 @@ const story: Story = {
       ],
       "imagePrompt": "Enclosed refuge in snowy evening. Player and Mara beside a closed movement-permit folder, calm disappointed faces; no dangerous moving tram.",
       "text": [
-        "Mara applies continuous drive at your instruction. Before the cabin clears the service landing, the first gust moves its suspension pointer toward the marked limit. Mara returns the lever to neutral and applies the independent hold. Sol cuts the auxiliary permission when she calls STOP.",
-        "The cabin remains within reach of the boarding bridge. You and Mara repeat its docking checks, then return everyone to the refuge. Nobody has been hurt. The continuous-run trial has used the remaining weather opportunity for another fully checked departure.",
+        "Mara applies continuous drive at your instruction. Before the cabin clears the service landing, the first gust brings its suspension pointer to the marked limit. Mara returns the lever to neutral and applies the independent hold. Sol cuts the auxiliary permission when she calls STOP.",
+        "The cabin remains within reach of the boarding bridge. You and Mara repeat its docking checks, then return everyone to the refuge. Nobody has been hurt. The limit stop takes the cabin out of service until its unloaded running gear can be inspected from the rigged platform. The platform crew is not here; Imani arranges that work after the front. There is still working time on the dispatch clock, but no cleared cabin to run.",
         "Later, with snow against the windows, you write the actual instruction in the log. Mara does not let you turn it into “unexpected weather.” The gusts were there; the method was yours.",
         "Sol secures the drive for the night. The passengers are warm, but their ride home and the tram's recovery must wait. You help Fen wash the soup bowls, giving each one a careful, complete turn beneath the tap."
       ],
@@ -1553,7 +1579,39 @@ const story: Story = {
             "is": true
           },
           "text": "In the lower workshop, you hand Imani the approach-cradle inspection card. The cabin is secured above the enclosed station bridge; a crew will finish its docking when the weather permits.",
-          "else": "In the lower workshop, you hand Imani the docked cabin’s inspection card. The auxiliary mechanism remains isolated for winter work; no new departure will use it tonight."
+          "else": "In the lower workshop, you hand Imani the docked cabin’s inspection card. No new departure will use the cabin tonight."
+        },
+        {
+          "if": {
+            "all": [
+              {
+                "flag": "synced",
+                "is": true
+              },
+              {
+                "flag": "window",
+                "gte": 10
+              },
+              {
+                "flag": "weather",
+                "is": true
+              },
+              {
+                "flag": "governor",
+                "is": true
+              },
+              {
+                "flag": "traced",
+                "is": true
+              },
+              {
+                "flag": "logged",
+                "is": true
+              }
+            ]
+          },
+          "text": "The auxiliary drain-down is complete. The tram is ready for its routine morning inspection; the missing calibration does not undo the work that preserved the machine.",
+          "else": "The auxiliary mechanism remains isolated for winter work. The next crew has its inspection card and the limits of your checks."
         },
         "Fen and Ellis are home in the valley. Mara telephones their arrival to Sol, who completes the ridge shutdown and arranges an overnight stay at the observatory. Nobody is forgotten simply because they worked at the other end of the line.",
         {
@@ -1564,7 +1622,7 @@ const story: Story = {
           "text": "Ellis takes the insulated plate box to the cold-room staff. You leave its detailed calibration report for their handover.",
           "else": "Ellis reports that the glass survived, but its coatings fogged in transit. The observatory will repeat the calibration. You record the loss alongside the safe passenger arrival."
         },
-        "The tram needs more work. The people do not need another rescue. Imani sets a mug beside your notebook and asks you to show her where the next shift should begin. You turn to the first useful page instead of the most flattering one."
+        "The people do not need another rescue. Imani sets a mug beside your notebook and asks you to show her where the next shift should begin. You turn to the first useful page instead of the most flattering one."
       ],
       "ending": {
         "kind": "good"
@@ -1584,9 +1642,9 @@ const story: Story = {
         "imani",
         "mara"
       ],
-      "imagePrompt": "Enclosed cold-room anteroom at snowy evening. Player, Imani and Mara beside closed wrapped plate box, cream wrap two orange straps intact; no technician required in crop.",
+      "imagePrompt": "Enclosed cold-room anteroom at snowy evening. Player, Imani and Mara beside closed wrapped plate box, cream wrap two orange straps intact; no technician required in crop. Closed box contains exposed, unprocessed plates from last night, never visible developed photographs.",
       "text": [
-        "From the lower workshop, you and Mara help Imani wheel the insulated plate box to the cold-room anteroom. Ellis has checked its temperature strip and signed for the intact calibration. The photographs inside will tell tomorrow's astronomers whether their measurements are true.",
+        "From the lower workshop, you and Mara help Imani wheel the insulated plate box to the cold-room anteroom. Ellis has checked its temperature strip and signed for the intact calibration. Once processed, the exposed plates will tell tomorrow's astronomers whether their measurements are true.",
         "The passengers are safely in the valley and the plate record has survived. The auxiliary tram mechanism still needs a winter inspection, so the observatory will use its road service when the front clears. Success can include a repair list without becoming a failure.",
         "Imani leaves the cream wrap fastened for the cold-room staff to open on their schedule. You had thought of it as something soft to put around glass. Now it looks like an afternoon of work that other people will not have to repeat.",
         "Back in the workshop, the tea bell rings. Mara raises her mug toward the ceiling. “A very well-equipped mountain,” she says. You decide the cupboard can keep its extra feature until morning."
@@ -1661,8 +1719,8 @@ const story: Story = {
       ],
       "imagePrompt": "Enclosed heated refuge at snowy evening. Player and Mara file a closed route permit beside a window looking toward obscured west shed; no cabin moving.",
       "text": [
-        "At the refuge table, you and Mara close the western-spur permit. The inspection record says the cabin never moved. It also says the selected physical destination could not deliver its passengers to the valley.",
-        "Sol leaves the crossover pinned and the tram supply isolated. Imani acknowledges the cancellation from the lower station. Outside, the freight shed has disappeared into the front; the view that made it attractive is gone too.",
+        "You follow Mara through the protected link into the refuge. At its table, you close the western-spur permit together. The inspection record says the cabin never moved. It also says the selected physical destination could not deliver its passengers to the valley.",
+        "Sol leaves the crossover unselected and the tram supply isolated. Imani acknowledges the cancellation from the lower station. Outside, the freight shed has disappeared into the front; the view that made it attractive is gone too.",
         "Fen sets soup beside your notebook. Ellis has started moving tomorrow's telescope bookings onto a later page. Nobody blames a new apprentice for not knowing the mountain already, but your report must preserve what you learned about its two lines.",
         "The rescue has become an overnight wait. You draw the eastern retaining wall on the route sketch before putting the pencil away. A future choice ought to have somewhere better to start."
       ],
