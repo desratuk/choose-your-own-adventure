@@ -65,3 +65,39 @@ Edit input 3, the carriage board. Inputs 1/2 are approved style sources only. Ke
 ```
 
 Next: interior attaches this carriage and the full approved keeper-props sheet, preserving guarded brass nozzle/wooden side grip and cream/brown recorder/blue floral round tin. Conservatory exterior still waits for fernhallow-incline source; Conservatory interior waits for exterior.
+
+## Carriage interior milestone
+
+Owner carriage approval `8dc03f4` applied as `9a73012`; approval metadata remains owner-authored. The temporary dependency symlink used for merge checks was removed (it was untracked, not ignored).
+
+`stories/glasshouse-express/references/carriage-interior.webp`: 1536×1024, cwebp -q88 without resize. WebP SHA-256 `b7d5d1dbdb1d0a83ab99aa74b3cfe8cb49cdaee391a32c6f4ca39799d4e263ed`; selected PNG `9c0cbc692df2d0576879ff80e73957059394d1c7fa17b047d390675e273a7469`.
+
+Built-in imagegen only. Generation `exec-259069de-0298-4807-88af-f20aa7a68a5b.png`, corrections `exec-e1cc82f8-44be-4382-9936-d956517771c6.png` and `exec-e5e06bd6-0cea-49db-8dd1-509745c31072.png` in the same generated_images session directory. Preserved ignored originals `art-src/references/carriage-interior-v1.png`, `-v2.png`, `-v3.png`. Every call attached full approved carriage, full keeper-props and player-hesper style anchor; edits additionally attached their preceding target original.
+
+Full-resolution inspection: empty shallow trays on staging along both sides of clear aisle, curved white iron pane roof/green lower body, stove/locker/checklist, separate brass capped speaking tube, wheel/hand chain, unlit guarded nozzle lamp with wooden side grip, matching cream/brown recorder and blue/gold floral round cassette tin, folded sacks, upturned crate, separate condensation/frost detail panels. No people/faces/hands. v1 rejected for omitted guard, missing separate tube and rounded fuel lumps; v2 corrected these; v3 corrected the crate to a seat with slatted underside up. Selected generated image and final WebP inspected. The board is design inventory only; empty trays do not imply any scene stock state. Owner independent approval pending.
+
+Full manifest prompt used in all three calls:
+
+```text
+Use case: illustration-story. Production reference sheet, 1536x1024 landscape, warm pale parchment background. Painterly 1980s fantasy-adventure illustration, gouache and ink line, luminous frost blues and warm glasshouse amber, expressive invented faces, cinematic light, family-friendly and gently comic. Clear separated design views, not a story event. No real people's likenesses, no copied franchise designs, no famous trains, no weapons, no logos, no legible text or captions (maker's plates, signs and cassette labels are blank or unreadable). Only specified subjects. The story's night is clear with hard frost and stars; interiors are lamplit; dawn is clear and golden. This board locks design only, never possession, accompaniment, plant state or story outcome. Interior design board for the Glasshouse Carriage, no people. LEFT: a long view down the aisle: slatted wooden staging on both sides carrying shallow wooden trays, small panes in white iron frames all round and overhead, an end window at the far end, a hanging oil lantern, warm amber light. RIGHT TOP: the stove end: a small black iron house stove with a glowing door, a square wooden brick locker beside it with a chalk-smudged door, a handwritten checklist pinned above the stove (unreadable), the brass thaw-lamp on a wall hook by the sliding door, a brass speaking-tube mouthpiece with a whistle cap on the wall, and the roof-vent hand chain running over a small iron wheel. RIGHT BOTTOM: the keeper's corner: an upturned crate, the cassette recorder and round biscuit tin on a shelf, folded hessian sacks. Also a small inset of the pane surface fogged with condensation and another with frost ferns inside the glass. Attached Glasshouse Express sources are rendering/material guides unless a specific shared design is requested above; preserve that design only. Do not copy unrelated subjects or the source board layout.
+```
+
+Generation supplement:
+
+```text
+Input 1: carriage architecture identity. Input 2: FULL approved keeper-props identity board. Input 3: approved painterly style only, no people copied. Exactly 1536x1024. Preserve the carriage curved pane roof, white iron ribs, dark green wood lower body and sliding doors. Keep the long aisle uncluttered; empty shallow wooden trays only, no invented plants. Warm oil lantern light, readable black iron stove with short flue at one end and brick locker safely beside it, vent chain and wheel securely mounted to frame. THAW-LAMP is the small bulbous brass reservoir with wooden SIDE grip and horizontal flared nozzle inside a wire cage, identical to input2, hanging unlit on its hook: not an oil lantern. Keeper corner inset must clearly show identical chunky cream front/brown lower cassette recorder, black carry handle, cassette window at left, round horizontal-slatted speaker at right, piano keys below, and the round BLUE tin with GOLD floral pattern and blank-labelled tapes. No telephone, token or buckets from props board unless explicitly in manifest brief. The oil lantern is a separate hanging light. No people, hands, text or story event. Maintain prop dimensions and coherent perspective. Frost and condensation shown only in the separated surface insets, not as a claim about a route.
+```
+
+Correction 1:
+
+```text
+Precise-object correction of INPUT4 interior board. INPUT1 carriage identity, INPUT2 full approved props identity, INPUT3 style only. Preserve all layout, aisle geometry, trays, recorder, blue floral tin, materials and 1536x1024 size. Change only TOP RIGHT stove panel: (1) Restore the wire protective cage around the thaw-lamp's horizontal flared nozzle EXACTLY like input2, keep its wood side grip/brass bulbous tank. (2) Add a SEPARATE brass speaking tube wall mouthpiece with a hinged whistle cap on a short tube, visibly distinct from the lamp, on the frame just LEFT of the chain wheel above the stove; do not merge tube and lamp. (3) Replace black rounded coal lumps on the wooden locker with dark rectangular pressed ember-bricks matching input2, and make locker door chalk-smudged rather than bearing a metal label. Keep lamp unlit. No new objects elsewhere, no people, no legible text.
+```
+
+Correction 2:
+
+```text
+INPUT4 is edit target. Inputs1/2/3 are full carriage/props/style references. Preserve EVERYTHING in input4, including corrected guarded lamp, separate speaking tube, bricks, recorder, tin and board layout. Single correction only: the wooden crate below the recorder shelf in the MIDDLE RIGHT panel, around x920-1210 y700-760, must be UPSIDE DOWN as a seat. Replace the visible open hollow top of this crate with its flat slatted wooden underside facing UP so someone can sit on it. Same crate size, wood and position, still partially cropped by panel boundary. No other changes. Exactly1536x1024. Full manifest brief above remains applicable; no text.
+```
+
+Remaining: merge owner `513ce8a` with author `16bd8d2` before further boards; exterior waits for approved fernhallow-incline, interior waits for exterior. Conservatory interior must also attach approved glasshouse-carriage for enlarged matching Hallam mechanism. Scenes remain held for round-3 PASS/stamp.
