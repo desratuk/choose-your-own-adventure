@@ -173,7 +173,7 @@ const story: Story = {
       "title": "The Reserve Bank",
       "era": "station",
       "text": [
-        "In the studio's dry equipment alcove, Mara switches on the reserve gauge. It reads {{clock}}. The bank feeds the station's portable test socket and the harbour's remote controls. Ordinary lights and rescue-service radios have separate batteries. You cannot make more charge by waiting.",
+        "In the studio's dry equipment alcove, Mara switches on the reserve gauge. It reads {{clock}}. The bank feeds Gull's recording, transmission and test equipment, the harbour's remote controls, its powered inspection telephone line and the service-passage entry locks. Ordinary lights and safety radios have separate batteries. The inspection line is switched off between checks; reading paper records costs nothing. Releasing a passage entry lock draws power; its inside handle always permits exit without electricity. You cannot make more charge by waiting.",
         "“The pump chamber Petrel’s crew are checking sits beside the old repair basin,” Mara says. “Water gates control the level beside its boat workshop. We can operate those gates remotely from this bank. A complete gate cycle takes twenty, and its safety cut-out requires some charge left afterward. Sending the inspection record afterward takes another ten, and the recorder needs ten left to keep it intact until the relief generator arrives. We can still get people out by hand if we lose that option.”",
         "The record is more than a souvenir. A clear distress recording, a measured tide reading, the harbour sound register and the gate inspection together can prove which fault needs repairing. Without them, the council will close the basin and investigate later. People come first; keeping their workshop open would help too.",
         "Mara lays out blank cassettes and the station patch diagram. Jo will meet you downstairs when you are ready. You have time to choose what to prepare, but the powered bench draws from the same bank."
@@ -460,10 +460,10 @@ const story: Story = {
       "text": [
         "You open the sound register at the harbour desk while Jo checks its date. Greyhaven once warned workers with mechanical bells because motors drowned out shouted instructions. The west pier bell gives two strokes. The basin pump makes three hard knocks when its loose coupling turns.",
         "A note says the pump's noise carries through the chamber ceiling. Its repair is scheduled for Monday. Jo grimaces at that word; Monday is where cheap repairs go to become expensive ones.",
-        "You copy the entries and their maintenance numbers into your notebook. Then, from across the water, the pump gives its uneven little announcement: knock, knock, knock. You tick the observation beside the entry rather than merely copying what ought to happen.",
+        "You copy the entries and their maintenance numbers into your notebook. Jo switches on the powered inspection line at the desk handset and asks Ellis to open the upper lobby intercom. Through the handset, the pump gives its uneven little announcement: knock, knock, knock. The five-point line check confirms that the sound is reaching the crew’s actual room. Jo switches the line off, and you tick the observation beside the register entry.",
         "It is not a code meant to keep strangers out. It is a record made by people who expected somebody else to need it. For once, you are that somebody."
       ],
-      "imagePrompt": "Stormy late night office, open maintenance register with abstract marks, pencil resting beside it, dark harbour window beyond. No people.",
+      "imagePrompt": "Stormy late night office, close crop of open maintenance register with abstract marks, pencil resting beside it, dark harbour window beyond. Desk handset and listening-line operation outside crop. No people.",
       "cast": [
         "harbour"
       ],
@@ -485,11 +485,11 @@ const story: Story = {
       "era": "harbour",
       "text": [
         "At the tide reader, Jo shows you the paper drum. The sea outside the harbour has passed high water and is falling. The basin's pencilled observations climb in the opposite direction. Rainwater is collecting behind a gate that ought to let it drain.",
-        "You take a fresh pair of readings, write the receipt time from the office clock and sign the observation as the station volunteer. Jo countersigns. This is a measurement someone else can check, not just a hunch about a wet night.",
+        "Jo switches on the powered inspection line at the desk handset for a fresh basin reading. Ellis reads the fixed water-level scale from the dry upper lobby while you take the sea reading from the office paper drum. You read both numbers back, write the receipt time and sign the observation; Jo countersigns. Then Jo switches the line off. The five points bought a checked current reading from the crew, not merely another look at the old pencil record.",
         "The old drainage diagram shows the safe order when the sea is lower: shut the sea inlet first, then open the basin outlet. Opening the inlet instead would let storm surges push back into the chamber, even while the average sea level falls.",
         "Jo folds the diagram into its wall sleeve. “We check the actual gate positions when we get there,” Jo says. Paper can tell you what to look for; it cannot turn a wheel."
       ],
-      "imagePrompt": "Stormy late night harbour office, close-up of paper drum tide reader and separate pencilled graph on clipboard, lines rising and falling, no text or people.",
+      "imagePrompt": "Stormy late night harbour office, close-up of paper drum tide reader and separate pencilled graph on clipboard, lines rising and falling. Desk handset and remote water-level scale outside crop. No text or people.",
       "cast": [
         "harbour"
       ],
@@ -510,12 +510,12 @@ const story: Story = {
       "title": "The Boat Is Not the Crew",
       "era": "harbour",
       "text": [
-        "Jo escorts you along the covered pier passage to its locked viewing gate. Rain lashes the open quay beyond it. Petrel rocks against its fenders, cabin dark. You stay behind the gate while Jo calls the crew on the handset.",
-        "Ellis answers from the basin's upper lobby. All three are still together. You have inspected the place where the boat belongs rather than the place where its people are. The passage lights and gate check have cost reserve charge without moving the investigation forward.",
+        "Jo escorts you along the covered pier passage, releasing its two powered entry locks. At the viewing gate, Jo tests the electrical lock without opening the gate onto the exposed quay. Rain lashes the paving beyond it. Petrel rocks against its fenders, cabin dark. You stay behind the gate while Jo calls the crew on the battery-powered harbour handset.",
+        "Ellis answers from the basin's upper lobby. All three are still together. You have inspected the place where the boat belongs rather than the place where its people are. The two entry releases and powered viewing-gate lock test have cost fifteen reserve points without moving the investigation forward. The inside passage handles will let you return without spending more.",
         "Then the pier bell sounds twice. Across the harbour comes a thinner, uneven set of three knocks. The difference is clear out here, though you have no register entry to authenticate it unless you copied one earlier.",
         "Jo turns the handset down. “We can put this down as ruling something out,” Jo says. “Provided we actually rule it out.” The sheltered route back remains open."
       ],
-      "imagePrompt": "Stormy late night covered pier passage looking through closed safety gate toward a small dark maintenance launch moored outside. No people aboard or on quay.",
+      "imagePrompt": "Stormy late night covered pier passage looking through closed safety gate toward a small dark maintenance launch moored outside. Lock mechanism concealed inside the existing gate frame; no added control cabinet. No people aboard or on quay.",
       "cast": [
         "harbour"
       ],
@@ -593,12 +593,12 @@ const story: Story = {
       "title": "Under the Quay",
       "era": "basin",
       "text": [
-        "You and Jo walk the enclosed service passage beneath the high quay. Your yellow coat brushes whitewashed brick. Rain drains in channels on the other side of the wall; the floor under your boots remains dry. Jo checks each junction before waving you forward.",
+        "You and Jo walk the enclosed service passage beneath the high quay. Jo releases two powered entry locks on the way, spending ten reserve points, and leaves the passage unlocked for the arriving rescue team. Their ordinary inside handles will let you return without another powered release. Your yellow coat brushes whitewashed brick. Rain drains in channels on the other side of the wall; the floor under your boots remains dry. Jo checks each junction before waving you forward.",
         "An inspection window reveals the basin beyond. The water looks black, except where lamplight lies across it in broken strips. A pump on the roof of the low chamber makes three uneven knocks. Its vibration comes through the handrail into your fingers.",
         "Jo stops at a brick shelter just short of the control gallery. There is a bench, a battery lamp and a telephone connected to the harbour office. If the route ahead is unsafe, this is where you will wait for the rescue crew.",
         "You can see the gallery door from here. It stands above the waterline, but its observation window is fogged. Jo takes out a cloth to clear it before trying the handle."
       ],
-      "imagePrompt": "Stormy late night enclosed whitewashed service passage, dry floor, inspection window showing black basin water and pump-house silhouette. No people.",
+      "imagePrompt": "Stormy late night enclosed whitewashed service passage, dry floor, inspection window showing black basin water and pump-house silhouette. Entry locks outside crop, no new control cabinets. No people.",
       "cast": [
         "basin"
       ],
@@ -960,7 +960,7 @@ const story: Story = {
           "else": "In the dry gallery, Jo locks the levers and calls for the evacuation. After a wait, the road rescue team arrives through the covered passage. You stay with Jo in the gallery while the rescuers bring Ellis, Nessa and Kit along the upper service connection to the brick shelter. Jo checks in with the team: all three are safe. Nobody enters the lower chamber."
         },
         "The workshop's future is a separate question. With a controlled drain and a complete authenticated record, the morning inspector can authorise a targeted coupling repair. Without both, the basin will stay closed pending a full survey. Jo will not invent readings just to get a quicker reopening.",
-        "Mara asks by handset whether you are returning to Gull. Her logger contains the strange call, but the original tape will soon loop over that section unless a copy was made. The road crew's portable generator can power the station later; it cannot restore an overwritten recording.",
+        "Mara asks by handset whether you are returning to Gull. Her logger contains the strange call, but the original tape will soon loop over that section unless a copy was made. The relief team's portable generator can power the station later; it cannot restore an overwritten recording.",
         "You can leave the remaining paperwork to Jo or return to help Mara send what you actually have."
       ],
       "imagePrompt": "Stormy late night dry gallery shelf with closed notebook and unoccupied intercom, empty upper lobby beyond window. No optional photograph visible.",
@@ -1369,7 +1369,7 @@ const story: Story = {
       "title": "Only Gull Heard Gull",
       "era": "station",
       "text": [
-        "In the studio, you play the material into the black return socket and close the transmission log without an acknowledgement. The needle moves, and your own speaker sounds clear. The inspector's telephone call arrives a little later: no report was received.",
+        "In the studio, you play the material into the black return socket and close the transmission log without an acknowledgement. The needle moves, and your own speaker sounds clear. Jo, still on the line, relays the inspector’s answer: no report was received.",
         "Mara reopens the log and marks the failed transmission. The crew remain safe, but the evidence has not reached the inspector in the promised form. Jo makes a closure report by telephone. The workshop will await a full survey, and the next shift must untangle a record that says SENT when it means PLAYED.",
         "You unplug the black lead. It is a small action compared with everything tonight, and the one you should have taken while someone was still waiting at the far end.",
         "Bad ending — A working monitor was mistaken for a completed handover."

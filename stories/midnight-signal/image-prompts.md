@@ -171,7 +171,7 @@ Original 1980s coastal mystery book illustration, gouache texture and fine ink, 
 
 Greyhaven customs-house harbour office and pier: whitewashed brick, dark teal doors, cream desk lamp, simple black handset, paper drum tide reader; small cream maintenance launch Petrel with teal wheelhouse at west pier. Use only items explicitly requested.
 
-Stormy late night office, open maintenance register with abstract marks, pencil resting beside it, dark harbour window beyond. No people.
+Stormy late night office, close crop of open maintenance register with abstract marks, pencil resting beside it, dark harbour window beyond. Desk handset and listening-line operation outside crop. No people.
 ```
 
 ## B04
@@ -186,7 +186,7 @@ Original 1980s coastal mystery book illustration, gouache texture and fine ink, 
 
 Greyhaven customs-house harbour office and pier: whitewashed brick, dark teal doors, cream desk lamp, simple black handset, paper drum tide reader; small cream maintenance launch Petrel with teal wheelhouse at west pier. Use only items explicitly requested.
 
-Stormy late night harbour office, close-up of paper drum tide reader and separate pencilled graph on clipboard, lines rising and falling, no text or people.
+Stormy late night harbour office, close-up of paper drum tide reader and separate pencilled graph on clipboard, lines rising and falling. Desk handset and remote water-level scale outside crop. No text or people.
 ```
 
 ## B05
@@ -202,7 +202,7 @@ Original 1980s coastal mystery book illustration, gouache texture and fine ink, 
 
 Greyhaven customs-house harbour office and pier: whitewashed brick, dark teal doors, cream desk lamp, simple black handset, paper drum tide reader; small cream maintenance launch Petrel with teal wheelhouse at west pier. Use only items explicitly requested.
 
-Stormy late night covered pier passage looking through closed safety gate toward a small dark maintenance launch moored outside. No people aboard or on quay.
+Stormy late night covered pier passage looking through closed safety gate toward a small dark maintenance launch moored outside. Lock mechanism concealed inside the existing gate frame; no added control cabinet. No people aboard or on quay.
 ```
 
 ## B06
@@ -247,7 +247,7 @@ Original 1980s coastal mystery book illustration, gouache texture and fine ink, 
 
 Greyhaven repair-basin service spaces: whitewashed brick dry covered passage, brick shelter with wooden bench and wall telephone, dry control gallery with two guarded dark grey levers, separate indicator rods, inlet stop wheel and small square inspection hatch. Inner window looks into upper lobby above lower flood landing. Use only requested items.
 
-Stormy late night enclosed whitewashed service passage, dry floor, inspection window showing black basin water and pump-house silhouette. No people.
+Stormy late night enclosed whitewashed service passage, dry floor, inspection window showing black basin water and pump-house silhouette. Entry locks outside crop, no new control cabinets. No people.
 ```
 
 ## B09
