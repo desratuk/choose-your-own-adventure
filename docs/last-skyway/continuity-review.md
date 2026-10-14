@@ -108,3 +108,25 @@ New mechanics checked: the D03 recovery fits the bible's meter table (Easy/Mediu
 
 ## Next round
 Fix finding 1, run `npm run check`, then start a fresh reviewer round with this report as prior findings. Stamp only after a clean review.
+
+---
+
+# The Last Skyway: continuity review, round 3
+
+- **Verdict: PASS (stamped).** `stories/last-skyway/.continuity-review` was written by `node scripts/story-review-gate.mjs --stamp last-skyway`.
+- Manuscript reviewed: `stories/last-skyway/story.ts` at commit `175677f`, SHA-256 `6314fe086b617078cea496aac6bd8fe961cbc516f3b085c2e8d7c38e2c9e29c6`. Since the round-2 review (`13246db`), the only change in this file is D07 [2] ELSE: "Ellis has wrapped" became "Ellis folds … around".
+- Scope: the whole story, all 48 pages of the story dump, read for every arrival route and listed flag combination, plus every page's `imagePrompt` and the `stylePrefix`, against `CLAUDE.md`, the bible (including its round-2 response) and both earlier rounds of this report. Structural checks were not repeated (parent reports `npm run check` PASS for all six packs: Last Skyway 48 pages, 10/10 endings, 7,401 states, 19,795 paths; 13/13 focused tests).
+- Reviewer runtime: Claude Code, model `claude-opus-5-5` (verified from the session's system information). Medium reasoning was requested; the reasoning level can't be verified from inside the session.
+
+## Earlier findings: verification
+
+- Round 1, findings 1–10: still resolved. Their text is unchanged since round 2 confirmed them, and I re-read each one in context: the E07/F08 certification condition, the A02 introductions, E02 `enteredGallery`, the D03 recheck and voluntary E03, the E06 suspension-limit grounding, the plate timeline, the mast ribbon and written dispatch report, the B01/B05 key, the F07 bell, the unselected crossover in E03 and the horizontal cradle.
+- Round 2, finding 1 (D07 illustration): **resolved.** On both D05→D07 arrivals the box now starts bare and closed, which matches the unchanged prompt ("closed glass-plate box on table … optional wrap not visible"). The wrap or blanket is put on during the scene. The ELSE wording agrees with F08 [1] ELSE ("the refuge blanket kept the glass whole") and E07 [3] ELSE. Nothing on any page or in any prompt assumes the box was already covered before D07.
+
+## Findings
+
+None.
+
+## Notes (not blocking)
+
+- The round-2 notes about B07's choice label wording and `enteredGallery` on pre-existing revision-1 saves still apply. Neither one is a defect.
