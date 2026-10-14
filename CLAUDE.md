@@ -9,7 +9,7 @@ A web choose-your-own-adventure engine with swappable **story packs**. Each stor
 | *Return to Sender* (Ghostbusters) | `return-to-sender` | Complete and illustrated |
 | *Player Two* (The Last Starfighter) | `player-two` | Complete and illustrated |
 | *The Last Skyway* (original) | `last-skyway` | Complete and illustrated |
-| *The Midnight Signal* (original) | `midnight-signal` | Written and continuity-reviewed; Astra illustration in progress |
+| *The Midnight Signal* (original) | `midnight-signal` | Complete and illustrated |
 | *The Lantern Archive* (original) | `lantern-archive` | Written and continuity-reviewed; Astra illustration in progress |
 | *The Glasshouse Express* (original) | `glasshouse-express` | Written and continuity-reviewed; Astra illustration in progress |
 
@@ -205,7 +205,7 @@ A Stop hook (`.claude/settings.json` → `scripts/story-review-gate.mjs`) blocks
 - **Bible:** `docs/midnight-signal/story-outline.md`. Consult its causal model, evidence chain, reserve arithmetic and route table before editing.
 - Original coastal radio mystery, Greyhaven, 17–18 October 1986. An unnamed teenage volunteer investigates a distress call apparently arriving from tomorrow and helps protect a harbour crew.
 - **Meter:** shared electrical RESERVE, a percentage rather than elapsed minutes; starts 100/85/70. The clean best route costs 60, leaving 40/25/10. The evidence upload needs twenty before starting and leaves ten holding power. Medium allows one fifteen-point error; Hard none. The optional shelter call costs five.
-- **Status:** revision 1, 46 pages, ten endings (six good including one best, four bad). Independent continuity review passed; six reference boards are approved and Astra illustration is in progress.
+- **Status:** revision 1, 46 pages, ten endings (six good including one best, four bad). Independent continuity review passed; all 46 Astra illustrations and six reference sheets are reviewed and integrated.
 
 ---
 
