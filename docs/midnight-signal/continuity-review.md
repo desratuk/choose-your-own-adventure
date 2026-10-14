@@ -61,3 +61,44 @@ Paragraph indexes are zero-based, as in the story dump.
 ## Verdict
 
 FINDINGS: 10. Not stamped. Re-run the reviewer after fixes and `npm run check`.
+
+## Round 2 — FINDINGS (not stamped)
+
+- Reviewed: `stories/midnight-signal/story.ts` from fix commit `e4a1fae` on integration `50d33d0`, sha256 `c1db3825e489ba9b14e4a659793e8e3e85e4570bef6915e653831c91c4ba28b3` (verified).
+- Reviewer: Claude Opus 5.5 (`claude-opus-5-5`), run as review sub-agent. The model is verified from the runtime; the medium reasoning setting was requested but cannot be independently verified from inside the session.
+- Method: `.claude/agents/story-continuity-reviewer.md`. Read the whole story dump, all 46 pages, against every "Possible on arrival" flag set. Checked against `CLAUDE.md`, the bible and its round-1 response. Checked the reader's choice rendering in `src/engine/engine.ts` (`visibleChoices` hides any choice whose condition fails). Scanned the image briefs for mechanical and route validity. `npm run check` was not re-run here; this worktree has no `node_modules`, so the dump was produced with the main checkout's `tsx`.
+
+### Round-1 findings: verification
+
+All ten are resolved.
+1. C08 [0] now branches on `drained`. The undrained text narrates locking the levers, the wait, the rescuers' arrival and the evacuation, and it is valid after C02, C04 and C06→C04. The drained text follows C07 cleanly.
+2. A07 [1] defines the repeater, its two ticks and the low-power tone. C10 [2] defines the repeater again for routes that skipped A06 and A07.
+3. A04 [1] introduces the pump chamber, repair basin, water gates and workshop before the costs.
+4. B10 [3], C01 [0] and C03 [0] all give the inlet as partly open, and C06 [0] widens it while the outlet stays shut. The C04 and C06 briefs agree. See new finding 2 for the state after C06.
+5. C04 [2] now uses "the next line". [3] acknowledges the failed attempt when `wrong` is set.
+6. A08 [0] no longer calls the yellow coat "matching".
+7. D01 [0], D02 [2] and D04 [3] are route-neutral, and D04 [3] has a clear referent.
+8. E01 [1] and E02 [1] introduce the upper lobby spatially.
+9. D08 [2] compares against Mara's transcript, which A02 [1] establishes.
+10. E04 [0] branches on `shelter`; the ELSE branch names only the harbour office.
+
+Also passed: the reserve arithmetic (clean best costs 60 and leaves 40/25/10; Medium survives exactly one fifteen-point error, including C06 recovery: 55→40→20→10 at D05; Hard shelter blocks best), D04/D05 gating against the bible, ending labels and outcomes, cassette custody, the timeline (late 17 October to 00:12 on the 18th to morning), speaker clarity, introductions, and the clue chain with no back-pointing at C04.
+
+### 1. C04 [3] (with C02 [0] and A04 [1]): stated gate-cycle cost disagrees with the hidden-choice threshold
+- **Trigger:** C04 reached with charge 16–20. For example, Hard with A05+A07+B03+B04+B08+B09+C03 arrives at 20, and Medium with A07+B05+A05+B03+B04+B08+B09+C03 arrives at 20; in both cases `wrong=false`. Also C06→C04 with charge ≤20 (`wrong=true`; C06 arrivals include 20, 15, 10 and 5).
+- **Defect:** A04 [1] and C02 [0] say a complete gate cycle costs twenty, and the gauge can read 20. But C05 requires `charge ≥ 21`, and the reader hides unmet choices. With `wrong=false`, the player sees only the wrong sequence (C06) and evacuation, although the prose says they can afford the correct cycle. With `wrong=true`, C04 [3] says "You can propose a corrected sequence" while only evacuation is shown.
+- **Fix:** In C02 [0], state the cut-out: "…for twenty reserve points; its safety cut-out won't start a cycle that would leave the bank empty." In C04 [3], add a `charge < 21` branch for both `wrong` states, e.g. "The bank no longer covers a full cycle with its safety margin. Evacuation is the remaining choice." Also consider hiding C06 when C05 is unaffordable, so the only gate option offered is never the wrong one. Otherwise, at 20 the wrong order is the only gate operation available.
+
+### 2. C05 [0]: after C06, the inlet is already shut by hand, but C05 closes it again
+- **Trigger:** C06→C04→C05 (`wrong=true`).
+- **Defect:** C06 [0] says Jo "shuts the inlet by its manual wheel", and E05 [0] confirms "the inlet has been shut manually". C05 [0] then has Jo "closing the inlet before opening the outlet" and says "They move this time". On this route the inlet rod should not move. "The manual remote drive" also contradicts C02's "remote drive" and the manual stop wheel, which reads as if Jo used the manual mechanism.
+- **Fix:** Make C05 [0] conditional on `wrong`. If wrong: "Jo checks that the inlet is still locked shut from the manual wheel, then runs the remote drive to open the outlet. You read the outlet rod aloud as it moves; the drive has bypassed the faulty timer coupling." Otherwise keep the current text, changing "the manual remote drive" to "the remote drive" in both branches.
+
+### 3. E09 [2] and its image brief: labels for both socket destinations when the black socket's destination was never learned
+- **Trigger:** `wiring=false` and D01→D02 directly (blue chosen first, D03 not visited), then D04→D06→E09.
+- **Defect:** "You write the two patch-socket destinations on fresh labels" assumes the player knows where the black socket goes. That is established only in A06 [0] or D03 [0]. On this route the player has learned only that blue reaches the hill repeater. The brief at story.ts:1377 also asks for "freshly labelled black and blue sockets".
+- **Fix:** Write a statement valid on every route: "You write HILL REPEATER on a fresh label above the blue socket before your shift ends." Change the brief to "freshly labelled blue socket".
+
+## Round 2 verdict
+
+FINDINGS: 3. Not stamped. After fixing these, run `npm run check` and the reviewer again.
