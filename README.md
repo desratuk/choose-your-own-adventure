@@ -67,6 +67,14 @@ An original coastal mystery set in Greyhaven in October 1986. During your volunt
 - **A visible electrical-reserve meter.** Recording evidence, testing equipment and operating the basin gates compete for the same supply.
 - **A VHS transition** between Gull Radio, the harbour office and the repair basin.
 
+### The Lantern Archive
+
+An original cinema mystery set in a northern English town in October 1986. On the Palladian's final night, you work as its second projectionist while an old magic lantern reveals an archive of forgotten places. Recover four streets through film, physical evidence and the people who once knew them.
+
+- **45 pages** with **10 endings** (5 bad, 5 good, one best), each clearly labelled.
+- **A visible carbon-time countdown.** Investigations, splicing and projection spend the Lantern's last light.
+- **A fade transition** between the picture palace, underground archive, town and projected streets.
+
 ## Running it
 
 Requires Node 20.19+ or 22.12+ (use nvm to switch).
