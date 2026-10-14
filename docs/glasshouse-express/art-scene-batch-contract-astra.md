@@ -31,3 +31,5 @@ Task prefix: `node:delegated-task:command%3Amcp%3Aa52a3b34-4132-45a3-a172-985b5a
 | town | glasshouse-scenes-town-v1 | t3-4f503fd0 | t3/glasshouse-town-scene-imagery |
 | journey | glasshouse-scenes-journey-v1 | t3-3e913e0a | t3/glasshouse-express-final-scene-art |
 | finale | glasshouse-scenes-finale-v1 | t3-ddda0808 | t3/glasshouse-express-finale-art |
+
+Parent independently verified the `eb6b25f` checkpoint: story hash, all 44 exact `referencesForPage` mappings, all 125 packed-file hashes against owner ignored files, all source hashes/native dimensions, and at most four reference attachments per page. Global installed-story reviewed-sheet coverage test passed. Parent also directly queried all three scene thread configurations and verified `codex` / `gpt-6-astra` / `reasoningEffort: medium` / full-access. This supplements owner durable-record and child runtime/catalog verification. Existing batches continue; no duplicate scene work launched.
