@@ -1,6 +1,6 @@
 # Glasshouse Express landmark references — Astra
 
-Status: architecture hold **released for references** by the parent after corrected author commit `19768a4cb29d0e3f29bd60e767feade9a25fa4f2`. Owner tips `dae9a55` and `8dc03f4` merged locally. Approved carriage received; Winter Terminus candidate ready for independent owner review. Downstream generation awaits its release; scenes remain on hold. No review hashes written to the manifest.
+Status: architecture hold **released for references** by the parent after corrected author commit `19768a4cb29d0e3f29bd60e767feade9a25fa4f2`. Owner tips `dae9a55` and `8dc03f4` merged locally. Approved carriage received; Winter Terminus independently approved in owner `7c0b61e`; downstream generation proceeding; scenes remain on hold. No review hashes written to the manifest.
 
 ## Runtime and sources
 
@@ -19,7 +19,7 @@ Inspected parent-supplied dependency metadata commit `b6e279e`: keeper-props now
 - `lower-town-interiors` and `mere-and-beacon` require `tallow-street-and-halt`.
 - `fernhallow-incline` requires `mere-and-beacon`.
 
-Carriage received; downstream boards await independent owner release of Winter Terminus. No substitute sources used. The Conservatory worker subsequently needs fernhallow-incline; send a milestone commit as soon as it is ready for owner review.
+Carriage and Winter Terminus received and independently approved. No substitute sources used. The Conservatory worker subsequently needs fernhallow-incline; send a milestone commit as soon as it is ready for owner review.
 
 Own only these seven reference WebPs, ignored originals/corrections prefixed with their IDs under art-src/references/, and this report. Story, theme, bible, stamps, shared code, manifests, generated prompt files and art-review.md remain untouched.
 
@@ -43,7 +43,7 @@ Use built-in image_gen only, one board at a time. Every generation/correction re
 
 Validation performed: the initial story-dump failed because this isolated worktree lacked tsx. `npm ci --ignore-scripts` installed lockfile dependencies successfully, then story-dump passed. `cwebp` is available at `/opt/homebrew/bin/cwebp`. No story edits were made; no story/build/art test pass is claimed. No final scenes generated.
 
-## Winter Terminus candidate — awaiting owner review
+## Winter Terminus — owner approved at 7c0b61e
 
 Built-in image_gen only, full manifest brief attached on both calls with the approved carriage and player/Hesper anchor; correction also attached the rejected candidate. Source generation: `/Users/carl/.codex/generated_images/01a13c47-e304-7480-9c59-42ceb065593a/exec-81836238-416e-47c4-b85c-87c69c7d6422.png`. Rejected v1 for an extra raised right platform and unrequested water crane; retained as ignored `art-src/references/winter-terminus-v1-rejected.png`. Targeted correction removed both while preserving the other panels. Final generation: same directory, `exec-5840dad4-3b32-4d35-8501-3b13d454709b.png`; copied to ignored `art-src/references/winter-terminus-v2.png`.
 
@@ -51,6 +51,39 @@ Inspected full 1536×1024 original and converted WebP: one raised platform by th
 
 - Original SHA-256: `09f499465cb0372cc847f3bccbf96ea8dc048041bb1749487776b97cf2e19346`.
 - `references/winter-terminus.webp` SHA-256: `e22b66d12c2d56023025d734083bebba262209e78df381abb3a6e486dfc6e25c` (487,898 bytes).
-- Original ignore rule verified; `git diff --check` passed. Independent owner approval remains required before downstream use.
+- Original ignore rule verified; `git diff --check` passed. Owner independently approved PNG/WebP and recorded the hash at `7c0b61e`; downstream use released. Cabin illumination is a design-board variant: A06 scene must darken it.
 
 Read round-two findings at `1658490`: key ownership, fuel wording, Conservatory scene approach and trailing-car visibility do not alter these landmark reference designs. Scenes remain held.
+
+## Tallow Street and Halt — owner approved at e46051f
+
+Built-in image_gen calls attach the full current manifest brief, approved Winter Terminus (`e22b66d12c2d56023025d734083bebba262209e78df381abb3a6e486dfc6e25c`) and player/Hesper style anchor. Correction also attaches its target. Original v1 `exec-888a4761-05d0-402a-be45-325850009f93.png` retained as ignored `tallow-street-and-halt-v1-rejected.png`: rejected lit parked trams, detached glasshouse and daylight/disconnected crossing viaduct. Corrected `exec-97ebe4b9-0e86-46f5-b910-9c3b37b3882a.png` copied to ignored `tallow-street-and-halt-v2.png`. Both originate in `/Users/carl/.codex/generated_images/01a13c47-e304-7480-9c59-42ceb065593a/`.
+
+Full-resolution original and WebP inspected: four distinct views; dark street trams; matching cream/green depot tram over pit; wooden halt, water crane/leather bag and telephone box; lit single-slope lean-to against shed; starry crossing with continuous rails onto stone viaduct and white gates/red lamps beside road. No people, faces or hands. Shop neon is pictorial, without text. `cwebp -q 88`, no resize; 1536×1024.
+
+- Original SHA-256: `0a6c840d70fe7c688ea2e3819465b2a6d270f02b1ca3a2d42dc62f6bb0004ac5`.
+- WebP SHA-256: `853adfb0ef1c0bfd244e466b3e91bdf1bccf400b3d8b216d0710c1ec31db14cf`.
+
+Merged `513ce8a` and read full author `16bd8d2` diff/bible responses. Four-vehicle train, gate-key ownership and arrival sequencing retained; no reference redesign needed. Read attachment audit `d62cfee`: all full source boards must be attached, losslessly packed at native resolution only if required to remain within five paths, with hashes/placements and pixel verification. Current landmark generation uses two paths, corrections three; no packing required or source content omitted.
+
+## Mere and Beacon — owner approved at aeb6135
+
+Built-in image_gen with full manifest brief, approved Tallow board (`853adfb0ef1c0bfd244e466b3e91bdf1bccf400b3d8b216d0710c1ec31db14cf`) and player/Hesper style anchor on both calls, plus target on correction. V1 `exec-0591ea1d-e6dc-429e-bad8-366e49e609da.png` retained as ignored `mere-and-beacon-v1-rejected.png`: inconsistent hut/stair banks and lit dome cupola. V2 `exec-33fb0dc9-3b8e-4f98-b008-ecb42de61491.png` corrected those and removed unrequested foreground props; saved as ignored `mere-and-beacon-v2.png`. Generated directory is the same as prior boards.
+
+Full-resolution PNG/WebP review: stone-arched viaduct across frozen lake, spindrift, dark upper town/dome, red mast light; cutting has single track, token hut opposite cabin/stair bank in both views, timber cabin on ledge, connected iron stair. No people or trains. 1536×1024; q88 without resize.
+
+- Original SHA-256: `411bf2a0a88b04e6069bc1e0ae6ea521a6c96f94042cecc67b8f5328c2adc3f9`.
+- WebP SHA-256: `e1c743c43c82f8f2b8572e22d82081c5d39d8e7f5c18132e78ce1a8648d24a5b`.
+
+Merged owner `e46051f` (Tallow approved) and `e7d1d8d` (author `8360ab2`). Round-three findings and bible responses preserve reference geometry: exterior train visibility/crops and D04 stove-only light corrected. Scenes remain on hold. Candlewick v1 is retained ignored, awaiting correction of lit signal box and invalid turnout geometry before submission.
+
+## Fernhallow Incline candidate — awaiting owner review
+
+Built-in image_gen, full manifest brief, approved Mere/Beacon (`e1c743c43c82f8f2b8572e22d82081c5d39d8e7f5c18132e78ce1a8648d24a5b`) and player/Hesper style attached. Generated `exec-66767aad-dbd4-48d7-8cc1-6ab9b4527f82.png` in the same generation directory, preserved ignored as `fernhallow-incline-v1.png`. No correction needed in worker inspection.
+
+Full-resolution PNG/WebP inspected: single track climbs icy grade to stone portal with blank keystone; tiny wooden shelter with one hanging oil lamp, wooden bin and hanging tin bucket; wet dark enclosed tunnel without outdoor snowfall or ice blanket; summit cut leads toward dark glass dome/cupola. No people, anatomy, trains or lettering. q88 no resize, 1536×1024.
+
+- Original SHA-256: `cf07ac296afa6111b080da64fd2abeac0570739d4548328e93072bd81ebdbb69`.
+- WebP SHA-256: `4e0bf61591ca66c58bd9cdfd2cef6ad3ba10cb58de126a0556f5f9aa588a7eec`.
+
+Owner `aeb6135` merged; Mere release received. Candlewick v2 remains rejected/ignored because a curved branch rail terminates instead of joining the turnout, despite successful signal-box darkening. No provider/model substitution and no usage-limit error encountered in this worker so far.
