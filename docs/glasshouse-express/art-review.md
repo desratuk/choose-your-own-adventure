@@ -118,3 +118,5 @@ F05 is NOT yet approved: fully visible closed shutter bank appears to contain fe
 - F03: `77266799fc8f5568144f83e78503c1f8ed67c6a24aea275eb20524be2502c6d3` (approved)
 - F05: `bea1806db2fd7f83e84bec69e399bfa273f32616bbced02838d35956725a0ce0` (pending correction)
 - F06: `9eae01bf24bbf5c5bea33bcd721ffaf8e966305c0816e8e76aca6268092bba88` (approved)
+
+F05 correction `95362a3` normally merged and independently approved after full-size PNG/WebP inspection: twelve separate closed tall shutter leaves now countable, with three identities/wardrobes, unreadable shadowed bed, low open louvres and golden floor light preserved. Supersedes the pending F05 decision above. Selected PNG hash `13d4e37d7a8742690e2d4fc6ca54a1ae796d138ccbee7b788e8fe8b261bb319b`; final WebP `408d2b5ebc307c3af15155303410a558efa7d69c643b839c7c9c5caee5285b36`. Correct dimensions verified; selected/rejected originals retained owner-side. Eight of 44 scenes approved.
