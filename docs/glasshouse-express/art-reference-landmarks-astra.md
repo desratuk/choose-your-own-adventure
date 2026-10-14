@@ -94,3 +94,17 @@ Built-in image_gen with full corrected manifest brief, approved Winter Terminus 
 
 - Original SHA-256: `8fa8deffca1d71aa64e588dee7fb86cb09f3eb8792b1544eb151d4c94c6fd7d5`.
 - WebP SHA-256: `1f5f8eb6cb5434709589727c6d6576542d844d709ba832ba5a8b1214b2592b16`.
+
+## Lower Town Interiors candidate — awaiting owner review
+
+Built-in image_gen with full manifest brief, listed approved Tallow source, additional approved Mere/Beacon for the studio-window geography, and player/Hesper style anchor (three complete source paths). Generated `exec-efd9f714-03af-4634-ab1f-96d4fab31f42.png` in the same generation directory; preserved ignored as `lower-town-interiors-v1.png`. Full-resolution original and WebP inspected: shed-backed single-slope lean-to, paraffin heater and warm hyacinth shelf; open trapdoor to brick cellar with short green tips; studio turntables, mixer, cassette decks, telephone and mic, with window overlooking matching cutting banks; matching cream/green tram above inspection pit. Empty gardening gloves are objects, not hands; no people. No correction required. q88 without resize, 1536×1024.
+
+- Original SHA-256: `72d1b3dc65d6d231866dc22e98582d4f6cb6918c5e49fa2443b963ef46c458eb`.
+- WebP SHA-256: `8f4fc3af44f7e17c9d7af96c4bcc96f56d0d0417f8e0a0d007a03f1364674210`.
+
+### Owner-requested interior correction
+
+Owner rejected v1's open star-shaped hyacinth florets; the earlier worker acceptance missed the explicit closed-bud requirement. Retained original as `lower-town-interiors-v1-rejected.png`. Built-in edit `exec-31ebf716-7b86-4e88-9754-4d3e5cdd74b7.png` used complete manifest brief plus target, Tallow, Mere/Beacon and Hesper (four paths). Changed only warm-shelf spikes to densely packed closed ivory buds; preserved leaf-only sad bowl, cellar green tips, geometry, props, studio and depot. Inspected full PNG and WebP: no open star petals remain. Saved ignored `lower-town-interiors-v2.png`; q88, no resize, both 1536×1024. Supersedes v1 hashes above; owner review pending.
+
+- Corrected original SHA-256: `b0262341c6207d5f80448931ec77129d33fd26269b865c354311af005302614d`.
+- Corrected WebP SHA-256: `e4395651c482f26cdd95f167d1d06703e22842d6c5e867819f6a6f9b7d74a796`.
