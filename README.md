@@ -44,7 +44,7 @@ A *Ghostbusters* adventure. You're a bicycle courier with one last job on a rain
 
 A *Last Starfighter* adventure. You keep a small-town arcade's machines working, including a new cabinet whose scores travel somewhere nobody can trace. The Star League offers you a flight-engineer placement beside pilot Tavi Renn. An outpost needs your diagnostic skills to hold out until relief arrives.
 
-- **50 pages** with **9 endings** (4 bad, 5 good, one best), each clearly labelled.
+- **50 illustrated pages** with **9 endings** (4 bad, 5 good, one best), each clearly labelled.
 - **No need to have seen the film.**
 - **A visible jump-charge meter.** Tests, detours and recovery work spend the reserve needed to defend the outpost. Measured wiring and recorded signals hold the clues.
 - **A fade transition** between Bellwether, the League service dock, the freight corridor and Latchpoint.
@@ -66,6 +66,14 @@ An original coastal mystery set in Greyhaven in October 1986. During your volunt
 - **46 pages** with **10 endings** (4 bad, 6 good, one best), each clearly labelled.
 - **A visible electrical-reserve meter.** Recording evidence, testing equipment and operating the basin gates compete for the same supply.
 - **A VHS transition** between Gull Radio, the harbour office and the repair basin.
+
+### The Lantern Archive
+
+An original cinema mystery set in a northern English town in October 1986. On the Palladian's final night, you work as its second projectionist while an old magic lantern reveals an archive of forgotten places. Recover four streets through film, physical evidence and the people who once knew them.
+
+- **45 pages** with **10 endings** (5 bad, 5 good, one best), each clearly labelled.
+- **A visible carbon-time countdown.** Investigations, splicing and projection spend the Lantern's last light.
+- **A fade transition** between the picture palace, underground archive, town and projected streets.
 
 ## Running it
 
