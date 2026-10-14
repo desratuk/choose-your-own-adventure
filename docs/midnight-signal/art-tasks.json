@@ -1,0 +1,38 @@
+[
+  {
+    "batch": "a",
+    "taskId": "node:delegated-task:command%3Amcp%3A27431919-e6da-46c6-aace-698640ed9e79%3Adelegate-task%3Amidnight-art-a-v1",
+    "childThreadId": "thread:delegated-task:command%3Amcp%3A27431919-e6da-46c6-aace-698640ed9e79%3Adelegate-task%3Amidnight-art-a-v1",
+    "branch": "t3/midnight-signal-astra-batch-a",
+    "worktree": "/Users/carl/.t3/worktrees/create-your-own-adventure-opus/t3-ab2d8940",
+    "verifiedProvider": "codex",
+    "verifiedModel": "gpt-6-astra",
+    "verifiedRuntimeMode": "full-access",
+    "requestedReasoningEffort": "medium",
+    "reasoningVerification": "Awaiting child runtime report; thread read API exposes provider/model/runtime but not reasoning option."
+  },
+  {
+    "batch": "b",
+    "taskId": "node:delegated-task:command%3Amcp%3A27431919-e6da-46c6-aace-698640ed9e79%3Adelegate-task%3Amidnight-art-b-v1",
+    "childThreadId": "thread:delegated-task:command%3Amcp%3A27431919-e6da-46c6-aace-698640ed9e79%3Adelegate-task%3Amidnight-art-b-v1",
+    "branch": "t3/midnight-signal-astra-art-batch-b",
+    "worktree": "/Users/carl/.t3/worktrees/create-your-own-adventure-opus/t3-338a60ca",
+    "verifiedProvider": "codex",
+    "verifiedModel": "gpt-6-astra",
+    "verifiedRuntimeMode": "full-access",
+    "requestedReasoningEffort": "medium",
+    "reasoningVerification": "Awaiting child runtime report; thread read API exposes provider/model/runtime but not reasoning option."
+  },
+  {
+    "batch": "c",
+    "taskId": "node:delegated-task:command%3Amcp%3A27431919-e6da-46c6-aace-698640ed9e79%3Adelegate-task%3Amidnight-art-c-v1",
+    "childThreadId": "thread:delegated-task:command%3Amcp%3A27431919-e6da-46c6-aace-698640ed9e79%3Adelegate-task%3Amidnight-art-c-v1",
+    "branch": "t3/midnight-signal-astra-batch-c",
+    "worktree": "/Users/carl/.t3/worktrees/create-your-own-adventure-opus/t3-3a14610a",
+    "verifiedProvider": "codex",
+    "verifiedModel": "gpt-6-astra",
+    "verifiedRuntimeMode": "full-access",
+    "requestedReasoningEffort": "medium",
+    "reasoningVerification": "Awaiting child runtime report; thread read API exposes provider/model/runtime but not reasoning option."
+  }
+]
