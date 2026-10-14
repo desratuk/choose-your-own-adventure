@@ -108,3 +108,23 @@ referencesForPage and imagePrompt semantics are unchanged.
 Checks after manuscript corrections: npm run check PASS across all six packs;
 Last Skyway 48 pages, ten reachable endings, 7,401 states and zero errors/warnings.
 Focused Last Skyway regressions PASS, 13/13.
+
+## Active scene batches
+
+Reference/export checkpoint: `17b96ce`. Three app-owned isolated worktrees, each
+assigned exactly sixteen disjoint pages, launched with explicit provider `codex`,
+model `gpt-6-astra`, option `reasoningEffort=medium`. Launch responses and durable
+thread/run records independently confirm provider/model; child runtime effort
+confirmation is pending.
+
+Task ID prefix for all three: `node:delegated-task:command%3Amcp%3A42411c37-e2a2-4fed-ae24-030de53d05eb%3Adelegate-task%3A`.
+
+| Batch / task suffix | Assigned pages | Worktree | Branch |
+|---|---|---|---|
+| opening / last-skyway-scenes-opening-v1 | A01–A06, B01–B08, C01–C02 | t3-879c949f | t3/skyway-opening-scene-art |
+| ridge / last-skyway-scenes-ridge-v1 | C03–C08, D01–D08, F01–F02 | t3-7056ed79 | t3/last-skyway-ridge-scene-art |
+| return / last-skyway-scenes-return-v1 | F03–F08, E01–E10 | t3-f4e1ab51 | t3/last-skyway-art-batch-return |
+
+Every call must attach the page's complete reference set. Each worker owns only
+assigned assets and its batch report, inspects originals before q75 conversion,
+and commits those assets. Parent retains cross-batch visual QA and merge work.
