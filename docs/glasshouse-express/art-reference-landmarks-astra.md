@@ -66,7 +66,7 @@ Full-resolution original and WebP inspected: four distinct views; dark street tr
 
 Merged `513ce8a` and read full author `16bd8d2` diff/bible responses. Four-vehicle train, gate-key ownership and arrival sequencing retained; no reference redesign needed. Read attachment audit `d62cfee`: all full source boards must be attached, losslessly packed at native resolution only if required to remain within five paths, with hashes/placements and pixel verification. Current landmark generation uses two paths, corrections three; no packing required or source content omitted.
 
-## Mere and Beacon candidate — awaiting owner review
+## Mere and Beacon — owner approved at aeb6135
 
 Built-in image_gen with full manifest brief, approved Tallow board (`853adfb0ef1c0bfd244e466b3e91bdf1bccf400b3d8b216d0710c1ec31db14cf`) and player/Hesper style anchor on both calls, plus target on correction. V1 `exec-0591ea1d-e6dc-429e-bad8-366e49e609da.png` retained as ignored `mere-and-beacon-v1-rejected.png`: inconsistent hut/stair banks and lit dome cupola. V2 `exec-33fb0dc9-3b8e-4f98-b008-ecb42de61491.png` corrected those and removed unrequested foreground props; saved as ignored `mere-and-beacon-v2.png`. Generated directory is the same as prior boards.
 
@@ -76,3 +76,14 @@ Full-resolution PNG/WebP review: stone-arched viaduct across frozen lake, spindr
 - WebP SHA-256: `e1c743c43c82f8f2b8572e22d82081c5d39d8e7f5c18132e78ce1a8648d24a5b`.
 
 Merged owner `e46051f` (Tallow approved) and `e7d1d8d` (author `8360ab2`). Round-three findings and bible responses preserve reference geometry: exterior train visibility/crops and D04 stove-only light corrected. Scenes remain on hold. Candlewick v1 is retained ignored, awaiting correction of lit signal box and invalid turnout geometry before submission.
+
+## Fernhallow Incline candidate — awaiting owner review
+
+Built-in image_gen, full manifest brief, approved Mere/Beacon (`e1c743c43c82f8f2b8572e22d82081c5d39d8e7f5c18132e78ce1a8648d24a5b`) and player/Hesper style attached. Generated `exec-66767aad-dbd4-48d7-8cc1-6ab9b4527f82.png` in the same generation directory, preserved ignored as `fernhallow-incline-v1.png`. No correction needed in worker inspection.
+
+Full-resolution PNG/WebP inspected: single track climbs icy grade to stone portal with blank keystone; tiny wooden shelter with one hanging oil lamp, wooden bin and hanging tin bucket; wet dark enclosed tunnel without outdoor snowfall or ice blanket; summit cut leads toward dark glass dome/cupola. No people, anatomy, trains or lettering. q88 no resize, 1536×1024.
+
+- Original SHA-256: `cf07ac296afa6111b080da64fd2abeac0570739d4548328e93072bd81ebdbb69`.
+- WebP SHA-256: `4e0bf61591ca66c58bd9cdfd2cef6ad3ba10cb58de126a0556f5f9aa588a7eec`.
+
+Owner `aeb6135` merged; Mere release received. Candlewick v2 remains rejected/ignored because a curved branch rail terminates instead of joining the turnout, despite successful signal-box darkening. No provider/model substitution and no usage-limit error encountered in this worker so far.
