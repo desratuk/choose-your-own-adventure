@@ -10,7 +10,7 @@ A web choose-your-own-adventure engine with swappable **story packs**. Each stor
 | *Player Two* (The Last Starfighter) | `player-two` | Complete and illustrated |
 | *The Last Skyway* (original) | `last-skyway` | Complete and illustrated |
 | *The Midnight Signal* (original) | `midnight-signal` | Complete and illustrated |
-| *The Lantern Archive* (original) | `lantern-archive` | Written and continuity-reviewed; Astra illustration in progress |
+| *The Lantern Archive* (original) | `lantern-archive` | Complete and illustrated |
 | *The Glasshouse Express* (original) | `glasshouse-express` | Written and continuity-reviewed; Astra illustration in progress |
 
 When more than one story is installed, the front page shows a story picker.
@@ -215,7 +215,7 @@ A Stop hook (`.claude/settings.json` → `scripts/story-review-gate.mjs`) blocks
 - Original mystery in Saltbeck, 25 October 1986. An unnamed seventeen-year-old projectionist helps restore memories of the Wicks on the Palladian's last night. Memory returns; physical buildings do not. The cinema still closes and the Lantern never lights again.
 - **Meter:** LANTERN carbon time, displayed H:MM, starts 120/105/95. Best costs 95 and ends with 25/10/0 on Easy/Medium/Hard. Medium allows one ten-minute mistake; Hard requires the clean route. Zero is valid only at designated endings.
 - Win's box/stalls location and the residents' invitation route affect later prose. Static illustrations omit optional companions and anchors; Win's present blue door is distinct from the old green Tallow Lane door.
-- **Status:** revision 1, 45 pages, ten endings (five good including one best, five bad). Independent continuity round 3 passed; Astra reference and illustration production is in progress.
+- **Status:** revision 1, 45 pages, ten endings (five good including one best, five bad). Independent continuity round 3 passed; all 45 Astra illustrations and fifteen reference sheets are reviewed and integrated.
 
 ---
 

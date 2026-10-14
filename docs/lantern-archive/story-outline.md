@@ -1,6 +1,6 @@
 # The Lantern Archive — story bible
 
-Id: `lantern-archive`. Revision **1**. Original 1980s mystery/fantasy, not based on a franchise. **45 pages: 35 scenes and 10 endings**, five good (exactly one best) and five bad. Original unnamed, gender-neutral seventeen-year-old projectionist. Basic header, fade transition, scoped theme; no engine features. Art is planned in `stories/lantern-archive/references/manifest.json` without reviewed hashes; no images exist yet. No continuity stamp until independent review.
+Id: `lantern-archive`. Revision **1**. Original 1980s mystery/fantasy, not based on a franchise. **45 pages: 35 scenes and 10 endings**, five good (exactly one best) and five bad. Original unnamed, gender-neutral seventeen-year-old projectionist. Basic header, fade transition, scoped theme; no engine features. Independent continuity round 3 passed with a matching manuscript stamp. All fifteen reference sheets and 45 Astra illustrations are approved and integrated; see `art-review.md` for final checks and browser QA.
 
 ## Premise and emotional contract
 
@@ -144,7 +144,7 @@ Representative best itinerary (27 visits): A01 A02 A03 A04 A06 B01 B02 B04 B05 C
 
 ## Art plan
 
-`references/manifest.json` plans 15 sheets: player-win, palladian-staff, highfield-residents, lantern-projector, light-moths, wicks-cans, lamplighter-pole, anchors, and landmark sheets projection-box, palladian-house, archive-vault, depot-field, highfield-house, wicks-streets and win-home. Every `art.cast` subject is covered, and every page resolves at least one reference. No `reviewedSha256` values are recorded and no WebPs exist, so `npm run test:art` and `npm run prompts` correctly block this pack until the reference-first workflow is run.
+`references/manifest.json` plans 15 sheets: player-win, palladian-staff, highfield-residents, lantern-projector, light-moths, wicks-cans, lamplighter-pole, anchors, and landmark sheets projection-box, palladian-house, archive-vault, depot-field, highfield-house, wicks-streets and win-home. Every `art.cast` subject is covered, and every page resolves at least one reference. All fifteen reviewed hashes are recorded, all reference WebPs and 45 scene WebPs are present, and the first-party reference/page coverage validation passes. Full prompts were exported after reference approval and independent continuity clearance.
 
 Image rules: the player is never seen from the front. Merged pages omit optional people and props: Win is cropped out of C07, C08, D05 and E02, and kept outside the crop in F01–F08, because she may be in the stalls or at the port. The pole stays at Highfield House, and the anchors appear only on their own pages. Screen pages F04, F05, F07 and F08 show the screen small, distant and indistinct, so they neither show nor rule out the painted-slide overlay. Locked details from the approved player-win board and the art review: Win's single plait over her LEFT shoulder, Abel's RED-AND-CREAM checked shirt and Dot's SIX brass buttons. E01 shows Win still in her cardigan before she fetches her coat. E09 shows the four walking DOWN from the top of the field toward the chimney. E06 and E08 are late October. Screen pages show silvery black-and-white film seen from the box, valid for every speed and anchor. Mrs Ferris is never drawn. Win's own front door is plain blue; the green door belongs only to 4 Tallow Lane.
 
@@ -153,8 +153,8 @@ Image rules: the player is never seen from the front. Merged pages omit optional
 - `npm run check`: all stories OK; Lantern Archive 45 pages, 10/10 endings.
 - `npx tsx --test scripts/lantern-archive-regressions.test.ts`: route, gate, meter and exhaustive-state regressions.
 - `npm run test:story`: all tests pass after the parent's shared revision-test fix.
-- `npm run test:art`: fails for this pack until reference sheets are generated, reviewed and hashed.
-- Independent continuity review and art generation are pending with the parent thread.
+- Parent scoped art checks: all 45 Lantern scene files and global reviewed-reference coverage pass; all 45 distinct scene hashes match batch reports at 1200×800.
+- Independent continuity round 3 and Astra art review are complete. Owner browser QA passed all-page mobile/desktop render sweeps and a 27-visit real-choice Medium best route. Parent final whole-project checks and main merge remain pending.
 
 ## Round 1 author response
 
