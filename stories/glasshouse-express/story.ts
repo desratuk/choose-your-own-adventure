@@ -151,7 +151,7 @@ const raw: Page[] = [
   {
     id: 'B04', title: 'Sallow’s Offer', era: 'town',
     cast: ['player', 'dov', 'sallow'],
-    imagePrompt: `Clear frosty night, after midnight, in the Ember Works yard beside the stopped Glasshouse Carriage: Lucan Sallow gestures expansively with his lantern toward a pallet of dark ember-bricks, while Dov stands with folded arms in his rust oilskin and the player, seen from behind, stands between them at the carriage step. Kilns glowing orange in the background, chained gate across the rails. Only these three people.`,
+    imagePrompt: `Clear frosty night, after midnight, in the Ember Works yard beside the stopped Glasshouse Carriage: Lucan Sallow gestures expansively with his lantern toward a pallet of dark ember-bricks, while Dov stands with folded arms in his rust oilskin and the player, seen from behind, stands between them at the carriage step. Kilns glowing orange in the background, chained gate across the rails. Only these three people. Framing cuts off just behind the glowing Glasshouse Carriage; the two empty carriages coupled behind it are out of frame.`,
     text: [
       `Sallow walks you both to the gate as if showing off a garden. “The loop does rejoin the Mere line,” he says, “on the far side of the works. My night men have the key to this yard gate. They can walk your train through the yard on the works’ own rails and put you out at the far gate in ten minutes. And since you’re here,” he pats a pallet of bricks under its tarpaulin, “a full locker, with the Company’s compliments. No one need know you came through at all.”`,
       `Dov says nothing. He has folded his arms, which he does instead of swearing.`,
