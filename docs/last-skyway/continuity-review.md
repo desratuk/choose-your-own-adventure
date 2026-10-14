@@ -1,5 +1,7 @@
 # The Last Skyway: continuity review, round 1
 
+(Round 2 follows below. This round-1 section is kept unchanged as the audit record.)
+
 - **Verdict: FINDINGS (not stamped).** `stories/last-skyway/.continuity-review` was not written.
 - Manuscript reviewed: `stories/last-skyway/story.ts` at commit `b5327f4` (merge of `ecea0a2`), SHA-256 `87cf1aad7d74f47a9a75593622c475dbb450d1b3448946921b89b604f5acae82`.
 - Scope: all 48 pages of `npm run -s story-dump -- last-skyway`, read for every arrival route and listed flag combination, against `CLAUDE.md` and `docs/last-skyway/story-outline.md`. Checked per `.claude/agents/story-continuity-reviewer.md`: path assumptions, contradictions, location/time bridges, scene-setting, speakers, newcomer clarity, meter prose, ending labels, purposeful travel, consistent facts. Structural checks were not repeated.
@@ -64,3 +66,45 @@ They are introduced only at D07 [0]. These pages name them on routes that don't 
 
 ## Next round
 Fix findings 1–10 in `story.ts`, run `npm run check`, then start a fresh reviewer round with this report as prior findings. Stamp only after a clean review.
+
+---
+
+# The Last Skyway: continuity review, round 2
+
+- **Verdict: FINDINGS (not stamped).** `stories/last-skyway/.continuity-review` was not written.
+- Manuscript reviewed: `stories/last-skyway/story.ts` at commit `1ba892e` (round-one corrections; unchanged at `0f51272`), SHA-256 `431e4c4eb422916aa435ae7a88a1b44d95ba10bc24a35423e9b5d6d9e3778408`.
+- Scope: the whole revised story, all 48 pages of `npm run -s story-dump -- last-skyway`, read for every arrival route and listed flag combination, plus every page's `imagePrompt`, against `CLAUDE.md`, the updated bible and the round-1 findings. Structural checks were not repeated (parent reports `npm run check` PASS: 48 pages, 10 endings, 7,401 states, 19,795 playthroughs).
+- Reviewer runtime: Claude Code, model `claude-opus-5-5` (verified from the session's system information). Medium reasoning was requested; the reasoning level can't be verified from inside the session.
+
+## Round-1 findings: verification
+
+| # | Result | Evidence |
+|---|---|---|
+| 1 | Resolved | E07 [1] branches on the same certification condition as F08 [2]. The bridge route always renders ELSE because `logged` is false on every F05 arrival. The old "tram needs more work" line is gone. |
+| 2 | Resolved | A02 [0] names Fen (cook) and Ellis (telescope technician) before the A03→E01 branch. Mara (A02/A03) and Sol (A02) also have antecedents on E01. D07 [0] is now an in-person meeting. |
+| 3 | Resolved | `enteredGallery` is set only at B07 and never reset. E02's ELSE branch covers B01 and B05 (gallery never entered); the IF branch covers B07, C01, C05 and C08, and "any colleague with you" covers both alone (B07) and with Sol (C01+). |
+| 4 | Resolved | D03 offers an eight-minute recheck to D04 (no loop, D03 is visited at most once) and E03 is a voluntary stop. D03 no longer claims the window is exhausted. E06 grounds the cabin through the A04 suspension-limit rule and states that working time remains. The F03 FOUR recovery stops before the limit, so it doesn't conflict. |
+| 5 | Resolved | A03, B04, D07, F08, E07, E08 and E09 agree: exposed, unprocessed plates from last night; fogged plates still go to processing. |
+| 6 | Resolved | B02 is a written ridge observer report with a copied trace and sketch. F01 introduces the physical mast ribbon from the cabin and works when `weather = false`. The B02 and F01 prompts match. |
+| 7 | Resolved | B01 [1] says the door is locked and the key is on the hook; B05 [2] takes it from the hook. |
+| 8 | Resolved | F07 [2] rings the bell when the cupboard shuts. |
+| 9 | Resolved | E03 [1] leaves the crossover unselected. |
+| 10 | Resolved | D07 [3], E05 [0], the E05 prompt and the bible all describe a horizontal draw with the doorway level. |
+
+New mechanics checked: the D03 recovery fits the bible's meter table (Easy/Medium keep best after one eight-minute mistake, Hard drops to ordinary). D04 [0] reads correctly from both D02 and D03 arrivals. No later page assumes a clean first nomination. Every changed prompt (B02, D03, D07, F01, E02, E05, E08) was checked against every arrival.
+
+## Findings
+
+### 1. D07 illustration contradicts D07 [2] ELSE on the no-wrap route (low)
+- **Route:** any D05→D07 arrival with `blankets = false`.
+- **Problem:** D07 [2] ELSE says that on arrival "Ellis has wrapped the plate box in a dry refuge blanket", so the box is already blanket-covered. The D07 `imagePrompt` asks for a bare "closed glass-plate box on table" with no covering. That fits the `blankets = true` route, where the box is bare until you fit the wrap, but not this one. CLAUDE.md requires a merged-page illustration that is valid on every route.
+- **Fix (either one):**
+  - (a) Make the box bare on arrival on both routes. Change the ELSE to say that Ellis has a dry refuge blanket ready and wraps the box with it now, for example: "Ellis folds a dry refuge blanket around the plate box. It will protect the glass from knocks, but…". Keep the prompt as it is.
+  - (b) Crop the box out of the D07 prompt, the same way D08 and F01–F05 already do, and update the bible's "D07 shows closed box without optional wrap" note to match.
+
+## Notes (not blocking)
+- B07's choice label reads "Return to the lower dispatch room and call the refuge plan", but E02 [0]–[1] makes the call from the nearest field telephone and then walks back. The difference is minor; consider "Call the refuge plan and return to the lower dispatch room".
+- `enteredGallery` is a new flag at revision 1. If any revision-1 save made before this change exists past B07, it would render E02's ELSE. That only matters if the pack has already been played; otherwise ignore it.
+
+## Next round
+Fix finding 1, run `npm run check`, then start a fresh reviewer round with this report as prior findings. Stamp only after a clean review.
