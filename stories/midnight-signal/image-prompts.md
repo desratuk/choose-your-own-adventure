@@ -342,7 +342,7 @@ Original 1980s coastal mystery book illustration, gouache texture and fine ink, 
 
 Greyhaven repair-basin service spaces: whitewashed brick dry covered passage, brick shelter with wooden bench and wall telephone, dry control gallery with two guarded dark grey levers, separate indicator rods, inlet stop wheel and small square inspection hatch. Inner window looks into upper lobby above lower flood landing. Use only requested items.
 
-Stormy late night close-up of two guarded gallery levers in neutral untouched position, pencil and blank operation log on shelf. No people or instructional arrows.
+Stormy late night close-up of two guarded gallery levers at rest, pencil and operation log with indistinct marks on shelf. No people, readable sequence, visible gate indicator positions or instructional arrows.
 ```
 
 ## C05
@@ -501,7 +501,7 @@ Original 1980s coastal mystery book illustration, gouache texture and fine ink, 
 
 Gull Radio interior: cream analogue receiver with round amber meter above wide horizontal tuning dial, dark teal mixing desk, enclosed charcoal logging tape deck with clear lid, black rotary telephone, patch panel with exactly one black socket on left and one blue socket on right. Use only items explicitly requested.
 
-Stormy late night studio reserve gauge beside stopped tape transport and closed notebook. No people, no visible optional evidence, no readable meter number.
+Stormy late night studio reserve gauge beside closed blue notebook on the dark teal desk. No people, cassette, photograph, visible optional evidence or readable meter number.
 ```
 
 ## D05

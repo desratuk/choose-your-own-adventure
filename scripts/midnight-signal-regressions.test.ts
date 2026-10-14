@@ -90,3 +90,43 @@ test('Midnight Signal: repeated drain mistake is unavailable and safety exits su
   assert.deepEqual(r.choices.map(c => c.to), ['C08']);
   assert.equal(walk([...route,'C08','E06'],'hard').page.ending?.kind, 'good');
 });
+
+test('Midnight Signal: evacuation is narrated on direct and corrected-gate arrivals, not replayed after rescue', () => {
+  const toControls = [...opening,'A08','B01','B02','B07','B08','B10','C01','C02'];
+  for (const route of [[...toControls,'C08'], [...toControls,'C04','C06','C04','C08']]) {
+    const result = walk(route);
+    assert.equal(result.state.drained, false);
+    assert.match(result.text, /After a wait, the road rescue team arrives/);
+    assert.match(result.text, /all three are safe/);
+    assert.doesNotMatch(result.text, /If the gates were left alone/);
+  }
+  const completed = walk([...toControls,'C04','C05','C07','C08']);
+  assert.match(completed.text, /With the handover complete/);
+  assert.doesNotMatch(completed.text, /After a wait/);
+  const corrected = walk([...toControls,'C04','C06','C04']);
+  assert.match(corrected.text, /failed attempt is already recorded/);
+  assert.doesNotMatch(corrected.text, /first line of the log/);
+});
+
+test('Midnight Signal: early supporting exits stay in the visited location', () => {
+  for (const route of [[...opening,'A08','E04'], [...opening,'A08','B01','B02','E04']]) {
+    const result = walk(route);
+    assert.match(result.text, /harbour office desk/);
+    assert.doesNotMatch(result.text, /shelter/);
+  }
+  const sheltered = walk([...opening,'A08','B01','B02','B07','B08','B09','E04']);
+  assert.match(sheltered.text, /waits with you in the dry brick shelter until the relief worker arrives/);
+  assert.doesNotMatch(sheltered.text, /harbour office desk/);
+});
+
+test('Midnight Signal: skipped wiring and copied-call detours do not create knowledge or a cassette', () => {
+  assert.match(walk([...opening,'A07']).text, /repeater is a mast that relays/);
+  const route = [...opening,'A08','B01','B02','B07','B08','B10','C01','C02','C08','C09','C10'];
+  assert.match(walk(route).text, /unattended mast that relays/);
+  for (const tail of [['D01'],['D01','D02'],['D01','D02','D04']]) {
+    const result = walk([...route,...tail]);
+    assert.equal(result.state.copy, false);
+    assert.doesNotMatch(result.text, /evidence tape|leaves the tape stopped|The tape waits/);
+  }
+  assert.match(walk([...careful,'D05','D08']).text, /transcript of the sealed earlier copy/);
+});

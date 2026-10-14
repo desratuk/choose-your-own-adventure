@@ -174,7 +174,7 @@ const story: Story = {
       "era": "station",
       "text": [
         "In the studio's dry equipment alcove, Mara switches on the reserve gauge. It reads {{clock}}. The bank feeds the station's portable test socket and the harbour's remote controls. Ordinary lights and rescue-service radios have separate batteries. You cannot make more charge by waiting.",
-        "“A remote gate cycle takes twenty,” Mara says. “Sending the inspection record afterward takes another ten, and the recorder needs ten left to keep it intact until the relief generator arrives. We can still get people out by hand if we lose that option.”",
+        "“The pump chamber Petrel’s crew are checking sits beside the old repair basin,” Mara says. “Water gates control the level beside its boat workshop. We can operate those gates remotely from this bank. A complete gate cycle takes twenty. Sending the inspection record afterward takes another ten, and the recorder needs ten left to keep it intact until the relief generator arrives. We can still get people out by hand if we lose that option.”",
         "The record is more than a souvenir. A clear distress recording, a measured tide reading, the harbour sound register and the gate inspection together can prove which fault needs repairing. Without them, the council will close the basin and investigate later. People come first; keeping their workshop open would help too.",
         "Mara lays out blank cassettes and the station patch diagram. Jo will meet you downstairs when you are ready. You have time to choose what to prepare, but the powered bench draws from the same bank."
       ],
@@ -299,7 +299,7 @@ const story: Story = {
       "era": "station",
       "text": [
         "At the transmitter rack, you ask Mara for a full-power check. The needle swings magnificently. For a moment the room feels less helpless.",
-        "Then Mara lowers the switch. The hill repeater's acknowledgement was already audible on low power; this test has used fifteen reserve points to prove something the little tone could have established. The rack warms your palms through its cover.",
+        "Then Mara lowers the switch. “The hill repeater is a mast that relays our signal across the valley,” she says. “It answers a low-power test tone with two ticks. Full power proves nothing that little tone couldn’t.” This test has used fifteen reserve points. The rack warms your palms through its cover.",
         "You write the expenditure in the log. Mara doesn't take the pencil away or deliver a speech. She puts a square around the remaining charge instead. “Now we work with that,” she says.",
         "The reassuring thing about a meter is that it tells the truth. The awkward thing about a meter is exactly the same. Outside, rain rattles against the receiver's aerial cable, and Jo's footsteps sound on the stairs below."
       ],
@@ -324,7 +324,7 @@ const story: Story = {
       "title": "The Stairs Between",
       "era": "harbour",
       "text": [
-        "You leave Mara at the studio desk and descend the customs house's narrow interior stairs. Jo Fen waits in the harbour office, wearing a rust-orange waterproof coat over work clothes. Jo hands you a matching plain yellow loan raincoat and checks that its sleeves leave your hands free.",
+        "You leave Mara at the studio desk and descend the customs house's narrow interior stairs. Jo Fen waits in the harbour office, wearing a rust-orange waterproof coat over work clothes. Jo hands you a plain yellow loan raincoat from the office hook and checks that its sleeves leave your hands free.",
         "“I won't take you onto an exposed quay,” Jo says. “There are covered service passages between here and the basin. If I say stop, we stop.” You agree. Being helpful does not require becoming the fourth person someone must fetch.",
         "Jo gives Mara a final update by telephone, then clips a small harbour handset to their coat. You carry only a pencil and a dry notebook in your pocket. Any cassette you prepared stays upstairs with Mara.",
         "Through the office window, the west pier light sweeps the rain. Across the harbour, the old pump house answers with a noise like a hammer inside a biscuit tin."
@@ -668,7 +668,7 @@ const story: Story = {
         "At the control gallery door, Jo wipes a clear circle in the window. Inside, the floor is dry and the wall controls are intact. Jo opens the door from the sheltered side, tests the threshold with a boot and lets you follow.",
         "Through a second window across the gallery you can see the upper lobby. Three torch beams answer Jo's wave. The Petrel crew are staying together beyond that glass, with their own door propped open. You will not need to cross the lower landing to reach them.",
         "Jo calls their names, and Ellis answers for the group, then asks each of the others to speak. Three voices, three people. You note that too.",
-        "The noise overhead has become louder in here. It is a loose mechanical coupling, not somebody knocking to be let out. Beneath it, an indicator says the sea inlet is open. Another says the basin outlet is shut."
+        "The noise overhead has become louder in here. It is a loose mechanical coupling, not somebody knocking to be let out. Beneath it, an indicator says the sea inlet is partly open. Another says the basin outlet is shut."
       ],
       "imagePrompt": "Stormy late night dry control-gallery doorway, small fogged observation window and separate distant lobby window with three abstract torch glows, no visible faces or figures.",
       "cast": [
@@ -686,7 +686,7 @@ const story: Story = {
       "title": "What the Future Left Out",
       "era": "basin",
       "text": [
-        "Inside the dry control gallery, Jo checks the gate indicator rods against their mechanical stops. They agree with the lamps: inlet open, outlet closed. Water below the lobby is rising, but the three crew are staying out of it.",
+        "Inside the dry control gallery, Jo checks the gate indicator rods against their mechanical stops. They agree with the lamps: inlet partly open, outlet closed. Water below the lobby is rising, but the three crew are staying out of it.",
         "Ellis speaks through the wall intercom. “The lower door was sticking when we arrived. We nearly all went down to shove it.” The engineer pauses. “Glad you called.”",
         "You can imagine the other version of tonight: three people below, the warped door closing behind them, a radio message nobody hears until too late. That version is on a tape at Gull, whether or not you made a separate copy. It is not yet happening in this room.",
         "Jo places the gate key in the control box but does not turn it. The reserve gauge repeats {{clock}}. Manual evacuation is possible from the upper lobby once rescuers arrive. A controlled drain could save the flooded workshop below as well."
@@ -755,7 +755,7 @@ const story: Story = {
       "title": "The Crack in Monday",
       "era": "basin",
       "text": [
-        "At the gallery inspection hatch, Jo opens the dry cover while you aim the fixed inspection camera from behind the safety line. The coupling pin has a pale crack around its neck. Jo points without touching it. The timer's arm is resting at CLOSED; the separate inlet rod is still at OPEN.",
+        "At the gallery inspection hatch, Jo opens the dry cover while you aim the fixed inspection camera from behind the safety line. The coupling pin has a pale crack around its neck. Jo points without touching it. The timer's arm is resting at CLOSED; the separate inlet rod is still in its partly open position.",
         "You make an instant photograph, then write the pin number and both positions on its blank lower margin. Jo signs alongside your observation. The flash leaves a blue square floating in your vision. When it clears, the two positions still disagree.",
         "No saboteur has climbed in through the rain. A cheap replaceable part has failed, and a maintenance schedule has treated its warning as tomorrow's problem. That is a mystery a town can actually fix.",
         "Jo closes the hatch without removing the pin. You put the developing photograph flat inside your dry notebook. It belongs with the tide readings and sound register, if you collected those."
@@ -783,10 +783,16 @@ const story: Story = {
       "text": [
         "At the guarded controls, Jo asks you to state a sequence for the operation log. Jo will carry it out and watch the chamber level. Through the inner window, the three waiting torch beams stay above the lower landing.",
         "A short wave slaps the outside wall. Jo checks the upper lobby through the inner window, then returns to the controls. Ellis has asked whether to bring the tool bag when the rescuers arrive. Jo says to leave it on its hook; nobody will be sent back for a spanner.",
-        "You put your pencil on the first line of the log. The recorder needs the order as well as the result. If an inspector arrives tomorrow, a page saying WE DID SOMETHING TO THE GATES will not be much help.",
-        "Jo waits for your proposal. The crew remain in the upper lobby, and the road rescue team is still coming. You have an alternative if you do not want to operate the gates."
+        "You put your pencil on the next line of the log. The recorder needs the order as well as the result. If an inspector arrives tomorrow, a page saying WE DID SOMETHING TO THE GATES will not be much help.",
+        {
+          "if": {
+            "flag": "wrong"
+          },
+          "text": "The failed attempt is already recorded above. You can propose a corrected sequence, or stop operating the gates. Jo waits beside the controls; the crew remain in the upper lobby, and the road rescue team is still coming.",
+          "else": "Jo waits for your proposal. The crew remain in the upper lobby, and the road rescue team is still coming. You have an alternative if you do not want to operate the gates."
+        }
       ],
-      "imagePrompt": "Stormy late night close-up of two guarded gallery levers in neutral untouched position, pencil and blank operation log on shelf. No people or instructional arrows.",
+      "imagePrompt": "Stormy late night close-up of two guarded gallery levers at rest, pencil and operation log with indistinct marks on shelf. No people, readable sequence, visible gate indicator positions or instructional arrows.",
       "cast": [
         "basin"
       ],
@@ -864,7 +870,7 @@ const story: Story = {
       "title": "The Wrong Direction",
       "era": "basin",
       "text": [
-        "Jo opens the inlet in the gallery. The next surge comes through faster than the basin outlet can relieve it. Water rises against the lower landing window. Jo immediately stops the drive and shuts the inlet by its manual wheel.",
+        "In the gallery, Jo opens the inlet fully from its partly open position. The next surge pushes through the widened inlet while the basin outlet is still shut. Water rises against the lower landing window. Jo immediately stops the drive and shuts the inlet by its manual wheel.",
         "The three crew are still in the upper lobby. Ellis reports that nobody has moved below. Your mistake has cost fifteen reserve points, not a person, but Jo has no intention of repeating it.",
         "You write the failed sequence and the stop in the log. The remote drive can still perform the proper full cycle if the bank has enough charge. Otherwise, the rescue team can evacuate the crew and leave the workshop closed.",
         "Jo keeps a hand beside the stop wheel. “An honest correction goes in the record,” Jo says. “An erased mistake doesn't become a success.” Rain thuds against the gallery roof. You turn to a fresh line."
@@ -910,7 +916,13 @@ const story: Story = {
       "title": "People Before Paper",
       "era": "basin",
       "text": [
-        "In the dry gallery, Jo checks in with the rescue team. The three Petrel crew are now safe in the brick shelter. If the gates were left alone, the rescuers used the upper service connection to evacuate them while you stayed here with Jo. Nobody had to enter the lower chamber.",
+        {
+          "if": {
+            "flag": "drained"
+          },
+          "text": "In the dry gallery, Jo checks in with the rescue team. With the handover complete, the three Petrel crew are safe in the brick shelter. Nobody had to enter the lower chamber.",
+          "else": "In the dry gallery, Jo locks the levers and calls for the evacuation. After a wait, the road rescue team arrives through the covered passage. You stay with Jo in the gallery while the rescuers bring Ellis, Nessa and Kit along the upper service connection to the brick shelter. Jo checks in with the team: all three are safe. Nobody enters the lower chamber."
+        },
         "The workshop's future is a separate question. With a controlled drain and a complete authenticated record, the morning inspector can authorise a targeted coupling repair. Without both, the basin will stay closed pending a full survey. Jo will not invent readings just to get a quicker reopening.",
         "Mara asks by handset whether you are returning to Gull. Her logger contains the strange call, but the original tape will soon loop over that section unless a copy was made. The road crew's portable generator can power the station later; it cannot restore an overwritten recording.",
         "You can leave the remaining paperwork to Jo or return to help Mara send what you actually have."
@@ -958,7 +970,7 @@ const story: Story = {
       "text": [
         "Back in Gull's studio, you put your notebook and Jo's operation log on the desk. Mara remains at the receiver; Jo stands by the telephone. Rain continues at the window, but somebody downstairs has found a biscuit tin that is not being used to catch drips.",
         "Mara inventories only material you actually gathered. A copied distress cassette, observed sound-register entry, signed paired water readings and coupling photograph would make the complete evidence packet. Missing pieces stay missing. The current operation log and crew report remain useful on their own.",
-        "The council's duty inspector is reachable through the hill repeater's data receiver. Gull can send a slow audio copy and spoken readings for ten reserve points. To preserve that upload until the generator arrives, ten points must remain afterward. Mara's tape deck needs that holding power.",
+        "The council's duty inspector is reachable through the data receiver on the hill repeater, an unattended mast that relays Gull’s signal beyond the harbour. Gull can send a slow audio copy and spoken readings for ten reserve points. To preserve that upload until the generator arrives, ten points must remain afterward. Mara's tape deck needs that holding power.",
         "A telephone report can secure a closure and another inspection without spending the bank. It cannot carry the station's authenticated audio record tonight."
       ],
       "imagePrompt": "Stormy late night studio desk with CLOSED notebook and separate plain operation log, telephone and enclosed tape deck. Optional cassette and photograph absent from view. No people.",
@@ -981,7 +993,7 @@ const story: Story = {
       "title": "The Needle Is Listening",
       "era": "station",
       "text": [
-        "At the studio patch panel, Mara hands you the loose audio lead. Jo has called the duty inspector to arrange a receiver check. The inspector will acknowledge over the telephone after hearing Gull's identification, so you can test the route before committing the evidence tape.",
+        "At the studio patch panel, Mara hands you the loose audio lead. Jo has called the duty inspector to arrange a receiver check. The inspector will acknowledge over the telephone after hearing Gull's identification, so you can test the route before sending the report.",
         "The black and blue sockets sit beside one another. The panel needle responds to either because it measures the desk's output, not the far end of the wire. You remember how often an impressive display can stand in for a useful result.",
         "Mara cues the identification tone at a level that does not spend the transmission reserve. “Give me a destination,” she says. Jo holds the telephone away from the desk speaker to avoid feedback.",
         "The decision is yours. You have come back with a report about real people; it deserves to travel farther than this room."
@@ -1008,7 +1020,7 @@ const story: Story = {
       "text": [
         "In the studio, you connect the lead to the blue socket. Mara sends Gull's identification tone. Two ticks return from the hill repeater; then Jo nods at something the inspector says over the telephone.",
         "“Gull received,” Jo reports. “The inspector has your station identifier.” It is a small sentence, but it establishes a whole stretch of invisible wire and air. The panel needle alone could not have done that.",
-        "Mara leaves the tape stopped. She asks you to check the material and the reserve before sending. The holding requirement is still ten points after the ten-point transmission. You can choose a truthful partial report if the physical evidence is incomplete, or leave the matter with the telephone call.",
+        "Mara holds off on the transmission. She asks you to check the material and the reserve before sending. The holding requirement is still ten points after the ten-point transmission. You can choose a truthful partial report if the physical evidence is incomplete, or leave the matter with the telephone call.",
         "The studio clock is nearly at the time Ellis gave in the impossible message. Outside the window, no one is calling for help. That silence is allowed to be good news."
       ],
       "imagePrompt": "Stormy late night studio patch panel, single audio lead connected to BLUE socket, black socket empty, steady amber meter, no people.",
@@ -1055,9 +1067,9 @@ const story: Story = {
         "At the studio desk, Mara checks your inventory against Jo's report. The transmitter route has been acknowledged. Now the question is what you can honestly send and preserve.",
         "A full packet needs the copied early call, your observed sound-register entry, the signed comparison of sea and basin levels, and the photograph linking the closed timer arm to the still-open gate. A successful drain must also be in Jo's operation log. Together those establish the location, the direction of the water and the failed part.",
         "If anything is absent, the inspector will still accept a partial report and keep the basin closed for a survey. If the reserve cannot cover transmission plus holding power, Jo's telephone report will do. Mara has no special switch that turns missing observations into facts.",
-        "You check the bank: {{clock}}. The tape waits, and the people it might have trapped are already safe."
+        "You check the bank: {{clock}}. The report waits, and the people tomorrow’s message warned about are already safe."
       ],
-      "imagePrompt": "Stormy late night studio reserve gauge beside stopped tape transport and closed notebook. No people, no visible optional evidence, no readable meter number.",
+      "imagePrompt": "Stormy late night studio reserve gauge beside closed blue notebook on the dark teal desk. No people, cassette, photograph, visible optional evidence or readable meter number.",
       "cast": [
         "radio"
       ],
@@ -1188,7 +1200,7 @@ const story: Story = {
       "text": [
         "At twelve minutes past midnight on 18 October, you stand with Mara and Jo beside Gull's receiver. Tomorrow has become an ordinary date on a wall calendar. Somewhere downstairs, the generator coughs, catches and settles.",
         "The receiver clicks. Ellis's voice says, “Petrel crew, all three ashore and safe. Thanks, Gull.” No climbing water. No jammed door. The signal is on the normal harbour channel, and Jo answers it normally.",
-        "Mara compares the new tape with the sealed earlier copy. They do not match. You have preserved the difference, but that does not explain it. A storm, an old aerial and a voice arriving early remain a question for someone with better instruments and a very open mind.",
+        "Mara compares the new message with her transcript of the sealed earlier copy. They do not match. You have preserved the difference, but that does not explain it. A storm, an old aerial and a voice arriving early remain a question for someone with better instruments and a very open mind.",
         "For now, the dangerous future has failed to keep its appointment. You did not defeat it by being certain. You checked a sound, a wire, a waterline and a broken pin, and let other people help."
       ],
       "imagePrompt": "Rain easing after midnight in radio studio, warm receiver beside sealed cream envelope, window beginning to reflect steady generator-powered lamplight, no people.",
@@ -1208,7 +1220,7 @@ const story: Story = {
       "era": "station",
       "text": [
         "You hand Mara your notes in the studio and explain every word you heard. A relief driver takes you home by the inland road while Mara and Jo continue the investigation. You have not secretly erased the call or decided that it cannot matter because it is strange.",
-        "In the morning, Mara telephones. The crew stayed in the upper lobby after Jo's warning and were brought out safely. The basin will remain shut for a survey. There are things nobody measured in time, and the impossible broadcast remains an unanswered question.",
+        "In the morning, Mara telephones. Jo had told the crew to wait in the upper lobby above the pump chamber, away from the rising water, and they were brought out safely. The basin will remain shut for a survey. There are things nobody measured in time, and the impossible broadcast remains an unanswered question.",
         "Your next volunteer shift is still on the rota. Mara has added one instruction beside your name: CHECK THE SHELF BRACKETS. You can accept that assignment without a discussion of the nature of time.",
         "Good ending — You passed on a serious warning and let the duty team take responsibility."
       ],
@@ -1226,7 +1238,7 @@ const story: Story = {
       "era": "station",
       "text": [
         "From Gull's studio, you put the unverified message on air as a disaster already happening. Within moments the telephone fills with questions. People drive toward the closed harbour to look for relatives who are not there. Mara cuts the broadcast and gives a correction.",
-        "Jo keeps the Petrel crew in the upper lobby and the rescue service eventually brings them out. Nobody is lost, but volunteers spend the rest of the night turning cars around instead of checking the sluice. The basin stays shut and the station must explain why it presented a prediction as a fact.",
+        "Jo keeps the Petrel crew waiting in the upper lobby above the flooding chamber and the rescue service eventually brings them out. Nobody is lost, but volunteers spend the rest of the night turning cars around instead of checking the sluice. The basin stays shut and the station must explain why it presented a prediction as a fact.",
         "By morning, your weather slot has become supervised training. The strange voice deserved attention. Your listeners deserved the difference between what you heard and what you knew.",
         "Bad ending — The warning became a rumour, and useful work disappeared beneath it."
       ],
@@ -1261,7 +1273,13 @@ const story: Story = {
       "title": "A Useful Pair of Hands",
       "era": "harbour",
       "text": [
-        "You tell Jo you are stopping the investigation. Jo makes sure you remain in a dry staffed place: the harbour office, or the service shelter once the relief worker reaches it. You help record names and pass on messages while Jo continues with the rescue team.",
+        {
+          "if": {
+            "flag": "shelter"
+          },
+          "text": "You tell Jo you are stopping the investigation. Jo waits with you in the dry brick shelter until the relief worker arrives, then continues with the rescue team. You help the relief worker record names and pass on messages.",
+          "else": "You tell Jo you are stopping the investigation. Jo makes sure the relief worker is at the harbour office desk before leaving you there to continue with the rescue team. You stay dry and help the relief worker record names and pass on messages."
+        },
         "By the time everyone returns to the customs house, the Petrel crew are safe. The basin must close for a survey; there was no complete controlled-drain evidence packet to clear a quick repair. That is work for tomorrow, with daylight and more people.",
         "Mara finds you downstairs sorting dry gloves into actual pairs. She thanks you for saying where you were and what you could do. You have helped without pretending that help only counts at the dangerous end of a corridor.",
         "Good ending — You chose a safe supporting role and stayed useful."
