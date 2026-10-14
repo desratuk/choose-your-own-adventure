@@ -40,7 +40,7 @@ No global art gate claimed: references remain intentionally incomplete/unreviewe
 
 ## Carriage milestone, corrected manuscript
 
-Owner tip `dae9a55` merged as `7268e48`, including exact author commit `19768a4cb29d0e3f29bd60e767feade9a25fa4f2`. Read full manuscript diff and bible response table. Owner approval metadata won both merge conflicts; no independent review hashes written. Initial check lacked local type packages; an ignored node_modules symlink to the existing main checkout installation resolved that prerequisite. `npm run -s check` passed for all eight stories and the focused Glasshouse regression suite passed 18/18. Hallam/architecture reference holds released by parent; scenes still held. Marigold and keeper-props are owner-approved.
+Owner tip `dae9a55` merged as `7268e48`, including exact author commit `19768a4cb29d0e3f29bd60e767feade9a25fa4f2`. Read full manuscript diff and bible response table. Owner approval metadata won both merge conflicts; no independent review hashes written. Initial check lacked local type packages; a temporary untracked node_modules symlink to the existing main checkout installation resolved that prerequisite. `npm run -s check` passed for all eight stories and the focused Glasshouse regression suite passed 18/18. Hallam/architecture reference holds released by parent; scenes still held. Marigold and keeper-props are owner-approved.
 
 Carriage candidate: `stories/glasshouse-express/references/glasshouse-carriage.webp`, 1536×1024, cwebp quality 88 with no resizing. SHA-256 `8fc132adbe435576dd0ddd7b777be0d1099d973ff933248ba76398990d6d4611`; selected PNG `52a34b8b286513e3f5c487bf29182ad5d22d688692b2346d9cc000e05b589830`.
 
@@ -101,3 +101,9 @@ INPUT4 is edit target. Inputs1/2/3 are full carriage/props/style references. Pre
 ```
 
 Remaining: merge owner `513ce8a` with author `16bd8d2` before further boards; exterior waits for approved fernhallow-incline, interior waits for exterior. Conservatory interior must also attach approved glasshouse-carriage for enlarged matching Hallam mechanism. Scenes remain held for round-3 PASS/stamp.
+
+## Current handoff checkpoint
+
+Owner independently approved carriage (8dc03f4) and interior (d4f3333). Interior milestone 1cc80c9 integrated by owner as fa96405. Owner 513ce8a merged as 61f8a89, preserving complete candidate provenance; d4f3333 merged as 3afbdc3. Read exact author 16bd8d2 diff and bible response table: rails pass through gates toward fountain; all four vehicles remain coupled; yard/far gate key roles are distinct; E04 fuel wording is neutral. Physical reference designs remain compatible. Post-merge typecheck and 18/18 focused Glasshouse regressions passed; temporary dependency symlink removed. No independently authored approval hashes.
+
+Only conservatory-exterior and conservatory-interior remain. Required approved fernhallow-incline source is not yet available in this worktree, so no substitute is generated. Exterior will preserve rails through gates toward fountain; interior will attach exterior, carriage-interior and glasshouse-carriage for the same enlarged Hallam lock, plus approved style anchor. All scene work remains held for fresh round-4 PASS/stamp per parent.
