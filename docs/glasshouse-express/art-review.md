@@ -130,3 +130,16 @@ Normally merged actual town milestone `8878474`. Owner independently inspected f
 - A04: `5eabc2f9106f1ef198f770f4476016ad25437c10692bad5a67d0d7adbc10fc20`
 - A05: `5e06c8483ff9a76b443fda26655211c0be33feb3322cc2b92da13603cfd96677`
 - A06: `b2d2e3c9285971203b24868161a0bc6b52bdefedeecd99476f46bdc88817c55c`
+
+## Junction, Works and street checkpoint
+
+Normally merged candidate history `061ac08`. Owner inspected all six full-size selected PNGs and final WebPs against exported prompts. B02 preserves lever/pinless chain/brick-dusted print and blue thaw flame with Dov's lantern; dark signal box. B03 points engine toward single chained yard gate, Sallow without hat and correct three-person crop. B04 shows brick offer/gestures and crop excluding rear cars. B05 shows four vehicles on lakeside approach clear of points, empty right siding, lever/print/chain and dark cabin. B06 shows four coupled vehicles, hidden player at end window, dark tram, bicycle child, neon/iced wires and window spectators. These five approved.
+
+B01 is pending correction: siding's rightmost rail terminates in snow near native x550,y495 instead of connecting into the turnout. Targeted geometry correction requested; presence in merged candidate history is not approval. All selected/rejected originals copied owner-side, dimensions verified. Eighteen of 44 scenes approved.
+
+- B01: `46eb552163bfaca83405244a5038d9d07b19503f6d6317e525f264711b87b84f` (pending correction)
+- B02: `2dd7e37619589733e6ca05e854b25640f08a416dfdf45ddc55e358319fc80b17` (approved)
+- B03: `33a860e633183f7761a91591453a8e666cdbf8edcbbb1c44b44981a723a2da24` (approved)
+- B04: `0b789c9ac940045c83399e9562129ab0855a7b5c76ff1644e22b2f6918d02655` (approved)
+- B05: `9b45f3cac533fbd013b2e6f07c41856e641fd305d9dcb33b7dd56861abd9e303` (approved)
+- B06: `28f943b99da0531bed71fefa9a77599eb65810413001ba0ca0feea46f1b23cfa` (approved)
