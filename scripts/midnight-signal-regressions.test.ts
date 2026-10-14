@@ -181,3 +181,43 @@ test('Midnight Signal: blue-first partial handover labels only the destination a
   assert.doesNotMatch(result.text, /two patch-socket destinations/);
   assert.match(result.page.imagePrompt, /ONLY the blue socket, black socket unlabelled/);
 });
+
+test('Midnight Signal: charged harbour investigations perform powered verification, with free paper and battery lights', () => {
+  const desk = [...opening,'A08','B01','B02'];
+  const arrival = walk(desk);
+  assert.match(walk(opening).text, /powered inspection telephone line and the service-passage entry locks/);
+  assert.match(walk(opening).text, /reading paper records costs nothing/);
+  assert.match(walk(opening).text, /Ordinary lights and safety radios have separate batteries/);
+  const sound = walk([...desk,'B03']);
+  assert.equal(sound.state.charge, Number(arrival.state.charge) - 5);
+  assert.match(sound.text, /powered inspection line at the desk handset/);
+  assert.match(sound.text, /upper lobby intercom/);
+  assert.match(sound.text, /switches the line off/);
+  const tide = walk([...desk,'B04']);
+  assert.equal(tide.state.charge, Number(arrival.state.charge) - 5);
+  assert.match(tide.text, /Ellis reads the fixed water-level scale from the dry upper lobby/);
+  assert.match(tide.text, /Jo switches the line off/);
+  const basinArrival = walk([...desk,'B07','B08']);
+  assert.equal(basinArrival.state.charge, Number(arrival.state.charge) - 10);
+  assert.match(basinArrival.text, /two powered entry locks/);
+  assert.match(basinArrival.text, /return without another powered release/);
+  const pier = walk([...desk,'B05']);
+  assert.equal(pier.state.charge, Number(arrival.state.charge) - 15);
+  assert.match(pier.text, /lock without opening the gate/);
+  assert.doesNotMatch(pier.text, /passage lights/);
+  assert.equal(walk([...desk,'B05','B06','B02']).state.charge, pier.state.charge);
+});
+
+test('Midnight Signal: rescue routes use the relief generator and the failed transmission keeps its live call', () => {
+  const beforeDrain = careful.slice(0, careful.indexOf('C05'));
+  for (const tail of [['C08'],['C06','C04','C08'],['C05','C07','C08']]) {
+    const result = walk([...beforeDrain,...tail]);
+    assert.match(result.text, /relief team's portable generator/);
+    assert.doesNotMatch(result.text, /road crew's/);
+  }
+  const beforeSocket = careful.slice(0, careful.indexOf('D02'));
+  assert.match(walk([...beforeSocket,'D03']).text, /Jo stays on the line/);
+  const ending = walk([...beforeSocket,'D03','E07']);
+  assert.match(ending.text, /Jo, still on the line, relays/);
+  assert.doesNotMatch(ending.text, /call arrives|rings back/);
+});

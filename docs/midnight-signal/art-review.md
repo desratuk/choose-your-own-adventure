@@ -16,3 +16,7 @@ Owner: Codex / GPT-6-Astra / medium (runtime and T3 model verified). Built-in im
 Every page is a unique environmental first-person composition. No visible characters, hands or bodies. Listed references establish identities and geometry only; never copy an entire board into a scene. Keep optional notebook contents, cassette, photograph and companions out of merged-page crops unless explicitly guaranteed. Paper writing stays abstract. Do not add smartphones, digital screens, famous props or modern equipment. Keep exterior weather/time per page and gallery floors dry. The logging deck's transparent cover is closed in scenes. The red spool remains in its fallen box after A02 until the repaired shelf at E01/E10; do not restore it prematurely in studio backgrounds. Scene E01 is an early handover followed by next-morning news; repaired shelf is valid then. Do not draw basin repaired/reopened before E10.
 
 All scene originals must be individually generated at 1536×1024 with the exact mapped reference images attached, visually inspected, then converted to 1200×800 quality-75 WebPs. Final contact-sheet and loaded-browser checks remain pending.
+
+## Continuity round 3 illustration impact
+
+B03/B04 now explicitly crop out inspection-line activity and the remote basin-scale reading. B05 retains the closed safety gate with its lock concealed in the existing frame; B08 omits entry locks. These are the existing reference designs, with no new visible machinery, controls or companions. Approved sheets and SHA-256 hashes unchanged; four per-page briefs regenerated.
