@@ -154,3 +154,16 @@ Critical merged scenes: B01 hides optional wrap; D07 shows closed box without op
 Run `npm run check`, `npx tsx --test scripts/last-skyway-regressions.test.ts`, `npm run test:story`, and `npm run build`. Shared editorial test currently assumes all non-Player Two packs have revision 3; this new pack is correctly revision 1 and parent owns correction. Art gate is expected to fail until Astra reference production/review; it must not be silenced with fake hashes. Parent must run independent `.claude/agents/story-continuity-reviewer.md` for `last-skyway`, fix actual findings, and allow only the reviewer to stamp after a genuine pass. No manuscript author continuity stamp.
 
 Runtime recorded by this implementation: T3 Code, Codex harness, **gpt-6.1-sol, medium reasoning**, supplied by runtime instructions. Provider identity beyond Codex harness was not independently queried. Requested imagery model is GPT-6-Astra; no imagery run was launched and no requested/actual art-model match is claimed.
+
+## Verified manuscript milestone
+
+- `npm run check`: PASS for all five installed stories. Last Skyway: 48 pages; 10/10 endings; 6,877 reachable page/state combinations; 11,019 playthroughs; no warnings/errors.
+- `npm run typecheck`: PASS, including new regression file.
+- `npx tsx --test scripts/last-skyway-regressions.test.ts`: PASS, 8/8 tests. Includes exhaustive reachable-state invariants, independent clue omissions, actual successful route budgets, each Medium/Hard recovery, wrap transfer, wrong governor outcome, bridge fallback and pre/post-movement cancellation.
+- `npm run test:story`: 90/91 PASS. Sole failure is known `scripts/editorial-regressions.test.ts:26`, revision assertion `last-skyway: 1 !== 3`; left to parent as instructed.
+- `npm run build`: PASS, including fresh all-story checker and Vite output.
+- `npm run test:art`: 3/4 PASS; installed-story reference check fails on missing `stories/last-skyway/references/apprentice.webp`, expected until Astra production. No approved hashes or scene images supplied.
+- T3 collaborative browser smoke: title/difficulty screen renders with scoped warm lower-station theme; start opens A01; no horizontal overflow at 1280px; author map reports the same 48 pages, ten reachable endings and 6,877 states. This was a manuscript smoke check, not final illustrated/mobile visual QA.
+- Executed complete route: 36 page visits, 5,553 rendered prose words, Medium remainder 24 minutes. Approximate reading target is 20–25 minutes plus individual decision pace; no human timed playtest has been claimed.
+
+Implementation and art-plan milestone commit: `ecea0a26418e03bf256c72734392f475cab99114`. Independent continuity review remains REQUIRED; no pass or stamp claimed. Final regression/handoff commit follows it. Parent should integrate the commits, arrange reviewer findings/fixes, then Astra references/scenes, art gate and final browser QA before calling the fully illustrated story complete.
