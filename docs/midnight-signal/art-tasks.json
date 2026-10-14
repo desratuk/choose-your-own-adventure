@@ -1,0 +1,41 @@
+[
+  {
+    "batch": "a",
+    "taskId": "node:delegated-task:command%3Amcp%3A27431919-e6da-46c6-aace-698640ed9e79%3Adelegate-task%3Amidnight-art-a-v1",
+    "childThreadId": "thread:delegated-task:command%3Amcp%3A27431919-e6da-46c6-aace-698640ed9e79%3Adelegate-task%3Amidnight-art-a-v1",
+    "branch": "t3/midnight-signal-astra-batch-a",
+    "worktree": "/Users/carl/.t3/worktrees/create-your-own-adventure-opus/t3-ab2d8940",
+    "verifiedProvider": "codex",
+    "verifiedModel": "gpt-6-astra",
+    "verifiedRuntimeMode": "full-access",
+    "requestedReasoningEffort": "medium",
+    "reasoningVerification": "Parent observed t3_thread_configuration for this worker: modelSelection instanceId codex, model gpt-6-astra, options reasoningEffort medium, runtime full-access. Parent also verified t3_thread_read recentRuns records actual running codex/gpt-6-astra. Child runtime report may corroborate; configuration evidence supplied in parent coordination message.",
+    "verifiedConfiguredReasoningEffort": "medium"
+  },
+  {
+    "batch": "b",
+    "taskId": "node:delegated-task:command%3Amcp%3A27431919-e6da-46c6-aace-698640ed9e79%3Adelegate-task%3Amidnight-art-b-v1",
+    "childThreadId": "thread:delegated-task:command%3Amcp%3A27431919-e6da-46c6-aace-698640ed9e79%3Adelegate-task%3Amidnight-art-b-v1",
+    "branch": "t3/midnight-signal-astra-art-batch-b",
+    "worktree": "/Users/carl/.t3/worktrees/create-your-own-adventure-opus/t3-338a60ca",
+    "verifiedProvider": "codex",
+    "verifiedModel": "gpt-6-astra",
+    "verifiedRuntimeMode": "full-access",
+    "requestedReasoningEffort": "medium",
+    "reasoningVerification": "Parent observed t3_thread_configuration for this worker: modelSelection instanceId codex, model gpt-6-astra, options reasoningEffort medium, runtime full-access. Parent also verified t3_thread_read recentRuns records actual running codex/gpt-6-astra. Child runtime report may corroborate; configuration evidence supplied in parent coordination message.",
+    "verifiedConfiguredReasoningEffort": "medium"
+  },
+  {
+    "batch": "c",
+    "taskId": "node:delegated-task:command%3Amcp%3A27431919-e6da-46c6-aace-698640ed9e79%3Adelegate-task%3Amidnight-art-c-v1",
+    "childThreadId": "thread:delegated-task:command%3Amcp%3A27431919-e6da-46c6-aace-698640ed9e79%3Adelegate-task%3Amidnight-art-c-v1",
+    "branch": "t3/midnight-signal-astra-batch-c",
+    "worktree": "/Users/carl/.t3/worktrees/create-your-own-adventure-opus/t3-3a14610a",
+    "verifiedProvider": "codex",
+    "verifiedModel": "gpt-6-astra",
+    "verifiedRuntimeMode": "full-access",
+    "requestedReasoningEffort": "medium",
+    "reasoningVerification": "Parent observed t3_thread_configuration for this worker: modelSelection instanceId codex, model gpt-6-astra, options reasoningEffort medium, runtime full-access. Parent also verified t3_thread_read recentRuns records actual running codex/gpt-6-astra. Child runtime report may corroborate; configuration evidence supplied in parent coordination message.",
+    "verifiedConfiguredReasoningEffort": "medium"
+  }
+]
