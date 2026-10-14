@@ -119,3 +119,19 @@ All four round-2 fixes hold. B04 and E02 key roles now agree: the night men hold
 - **Fix:** D04 [3]: "you walk the aisle once with the thaw-lamp to be sure".
 
 **Verdict:** FINDINGS. 2 issues; no `.continuity-review` stamp recorded. Re-review after fixes.
+
+## Round 4 — FINDINGS (no stamp)
+
+Reviewer: independent continuity reviewer, Claude Opus 5.5 (`claude-opus-5-5`). Medium reasoning was requested; the effort level can't be seen from inside the run. Manuscript: `stories/glasshouse-express/story.ts` exactly as in `8360ab2` (no story diff to HEAD `03c989a`; later commits touch only art docs, the manifest and reference WebPs). Inputs: the full `story-dump` (44 pages, every arrival state), the full bible including all three response tables, rounds 1–3 of this report, project `CLAUDE.md`, the `dd043f0..8360ab2` diff, all 44 `imagePrompt`s with `stylePrefix` and `art.cast`, and the reference manifest's page mappings.
+
+Both round-3 fixes hold. E02 and E04 name the whole four-vehicle train. B03 and F01 show the empty carriages trailing out of frame. B01, B02, B07, B08, C03, D01 and D07 state a crop behind the glowing carriage. B05 and D02 show the carriages trailing. C04 shows the whole train from above. In D04's plain branch the player walks the aisle by the stove's glow, which agrees with [0] and with the stove-only image. The chilled branch keeps the thaw-lamp after the opening moment, and the stoked branch carries no light reference. No new contradiction was introduced.
+
+All prose re-read on every arrival state is sound: the planting rule, Hesper's twenty/ten rule against the F03 gates, the yard-gate and far-gate keys, Dov at the hut through the C03 hub, the clock from 11 PM through sunrise at 7:30, Fenn's three hours and two at the gate, Sallow met and unmet at B08 and C04, F01's gate entry in both `wordSent` states, the Hallam introduction at F04, ending labels, and the season ladder (E07 August, E09 end of August, E08 September, E10 October). E10's recall depends on A04, A05 and B09, and all three are guaranteed on arrival.
+
+### 1. B04 still shows the carriage from outside with no crop or trailing carriages
+- **Page:** B04 `imagePrompt` ("in the Ember Works yard beside the stopped Glasshouse Carriage … chained gate across the rails").
+- **Trigger:** every route to B04 (B03 → B04).
+- **Defect:** This is an exterior view of the train, the same class as round-3 finding 1. The prompt neither lists the Fern House and Orchard Car nor states that the framing cuts off behind the glowing carriage. The `stylePrefix` ("the empty dark carriages are absent unless explicitly listed") will therefore draw the Glasshouse Carriage as the last vehicle, one page after B03 shows them coupled behind it. The bible's train canon (line 38) claims every exterior train prompt now says one or the other, but B04 is absent from both of its lists. The manifest attaches `glasshouse-carriage` to B04, so the board is available but the prompt gives no instruction.
+- **Fix:** append to the B04 prompt: "Framing cuts off just behind the glowing Glasshouse Carriage; the two empty carriages coupled behind it are out of frame." Add B04 to the bible's crop list on line 38. Map no new subjects.
+
+**Verdict:** FINDINGS. 1 issue; no `.continuity-review` stamp recorded. Re-review after the fix.
