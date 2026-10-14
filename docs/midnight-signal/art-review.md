@@ -30,3 +30,11 @@ All child art-src trees, including correction history, are preserved in this own
 All three workers' configured Codex/gpt-6-astra/medium and full-access settings were independently verified by the parent through t3_thread_configuration, with actual codex/gpt-6-astra confirmed by recentRuns. Evidence and task IDs remain in art-tasks.json. Batch B additionally corroborates medium from injected runtime information. No inference that A/C completed their remaining reviews is made.
 
 Post-integration checks: npm run check passes for all seven installed packs; focused Midnight Signal regressions pass 15/15. All six reference hashes match their reviewed manifest. Manuscript hash still matches the round-4 independent stamp. npm run test:art is 7/11: Midnight Signal correctly fails for its sixteen missing game WebPs; other failures are missing Last Skyway/Lantern Archive scenes and Lantern Archive's palladian-staff sheet in this checkout. No unrelated pack was changed.
+
+## Authorized reset resume and owner review
+
+User reported quota reset and authorized one continuation. Both original tasks were terminal with no pending runs before follow-up. Existing A/C threads retained verified codex/gpt-6-astra/medium configuration; new follow-up task IDs and direct verification evidence are recorded in art-tasks.json. B remains completed and is not duplicated.
+
+Owner independently inspected all 40 preserved named originals at full 1536×1024, including all 30 currently integrated scenes and saved B01/B02/E02–E09. No correction required in those versions: spool fall/restoration, empty patch sockets/blue/black selections, logger covers, evidence crops, dry gallery/lobby, and high/receding water states agree with their scene briefs. The 30 integrated WebPs were additionally compared on two cross-scene contact sheets in ignored art-src/qa; style, palette and recurring equipment remain consistent. This does not clear future child revisions or the six missing originals.
+
+Mobile browser testing began at 390×844 through the native T3 preview. The real Medium route A01→A02→A03→A04→A05→A04→A06→A04→A08 loaded each expected 1200×800 scene without horizontal overflow. Full route and final image coverage remain pending until integration.
