@@ -95,3 +95,9 @@ Correction additions: input 3 rejected candidate; inputs 1/2 style only. Preserv
 Fenn additions: anchors rendering only; distinct tall thin pale elderly man, white moustache, no beard. Conventional ROUND-globe hurricane lantern, round fuel reservoir, curved supports/arched handle, never rectangular. Same BUTTONED coat in front/side/kneeling. Matching capped/uncapped portraits with sparse white hair. No coat-off variant, no implied outcome; full bodies/footwear in frame, exactly 1536x1024.
 
 Built-in output basenames in /Users/carl/.codex/generated_images/01a13c47-e345-72a1-ae2e-69d0cf4230d6/: exec-7b5c7f79-3ddc-4f82-8a3d-14d48e63cd3d.png (rejected lower-town v1); exec-cb311ddf-e05d-4740-ad86-f9cf655d2fc5.png (corrected lower-town v2); exec-0fdeb7f6-2e50-43aa-b6c3-a5c80c5f4373.png (Fenn v1). Sunwort remains pending reviewed carriage-interior.
+
+## Corrected canon checkpoint
+
+Merged owner tip dae9a55 as 1231064, including exact author 19768a4. Read author diff and bible response table: planting-before-dawn rule, Beacon Cut Dov at token hut, Fenn's three-hour estimate, neutral cold planting, five-AM refusal at Fernhallow, Hallam introduction, 7:30 sunrise, facing points and distinct Works gates. Approved bag/Dov/lamp/recorder descriptions match existing boards. No character regeneration required. Merge retained this newer report and owner review notes; no original author content was edited by this worker.
+
+After the merge, npm run check passed all eight stories; npx tsx --test scripts/glasshouse-express-regressions.test.ts passed 18/18; git diff --check passed. Scene generation remains held for independent round-2 PASS. Four assigned boards delivered in 139c1e7 and eaa7f08; sunwort remains blocked solely by its unavailable reviewed carriage-interior source. Do not treat this checkpoint as completion of sunwort or owner approval of lower-town/Fenn.
