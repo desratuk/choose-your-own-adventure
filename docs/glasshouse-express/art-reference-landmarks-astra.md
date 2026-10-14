@@ -1,6 +1,6 @@
 # Glasshouse Express landmark references — Astra
 
-Status: architecture hold **released for references** by the parent after corrected author commit `19768a4cb29d0e3f29bd60e767feade9a25fa4f2`. Owner tip `dae9a55` merged locally. All seven boards still await the owner-reviewed carriage dependency; scenes remain on hold. No images generated or review hashes recorded.
+Status: architecture hold **released for references** by the parent after corrected author commit `19768a4cb29d0e3f29bd60e767feade9a25fa4f2`. Owner tips `dae9a55` and `8dc03f4` merged locally. Approved carriage received; Winter Terminus candidate ready for independent owner review. Downstream generation awaits its release; scenes remain on hold. No review hashes written to the manifest.
 
 ## Runtime and sources
 
@@ -14,12 +14,12 @@ Inspected parent-supplied dependency metadata commit `b6e279e`: keeper-props now
 
 ## Dependencies and ownership
 
-- `winter-terminus` requires `glasshouse-carriage`, pending machinery production and owner review.
+- `winter-terminus` uses owner-approved `glasshouse-carriage` from `8dc03f4` (SHA-256 `8fc132adbe435576dd0ddd7b777be0d1099d973ff933248ba76398990d6d4611`).
 - `candlewick-junction`, `ember-works`, and `tallow-street-and-halt` require `winter-terminus`.
 - `lower-town-interiors` and `mere-and-beacon` require `tallow-street-and-halt`.
 - `fernhallow-incline` requires `mere-and-beacon`.
 
-All seven remain blocked transitively by the carriage dependency. The parent released the architecture hold and supplied the fixed manuscript; the reviewed carriage will follow. No substitute sources used. The Conservatory worker subsequently needs fernhallow-incline; send a milestone commit as soon as it is ready for owner review.
+Carriage received; downstream boards await independent owner release of Winter Terminus. No substitute sources used. The Conservatory worker subsequently needs fernhallow-incline; send a milestone commit as soon as it is ready for owner review.
 
 Own only these seven reference WebPs, ignored originals/corrections prefixed with their IDs under art-src/references/, and this report. Story, theme, bible, stamps, shared code, manifests, generated prompt files and art-review.md remain untouched.
 
@@ -37,8 +37,20 @@ Own only these seven reference WebPs, ignored originals/corrections prefixed wit
 
 Read the complete `19768a4` author diff and the bible's round-one responses, along with the merged art corrections and updated landmark briefs. The planting deadline, rather than a bloom deadline, is now explicit. Dov stays at the Beacon Cut hut throughout the hub. E01 is five in the morning, still fully dark, with the train held at Fernhallow; sunrise is half past seven. Fenn's timing, Hallam introduction and cold-planting wording are corrected. These changes do not authorize people, possession or outcomes on landmark boards. The historical source hash above records the first preparation pass, not the corrected manuscript.
 
-## Production and validation awaiting carriage source
+## Production and validation
 
 Use built-in image_gen only, one board at a time. Every generation/correction receives the full current manifest brief, all listed source images, and the approved player/Hesper style anchor. Inspect originals at full resolution for geometry, perspective, variants, and accidental people/faces/hands; correct defects with built-in image_gen while retaining rejected originals in the ignored assigned paths. Convert accepted candidates with `cwebp -q 88` and no resize, checking both original and WebP are 1536×1024. Record each original/output hash, generation provenance and inspection result here. Independent owner review and `reviewedSha256` recording remain pending and belong to the owner.
 
-Validation performed: the initial story-dump failed because this isolated worktree lacked tsx. `npm ci --ignore-scripts` installed lockfile dependencies successfully, then story-dump passed. `cwebp` is available at `/opt/homebrew/bin/cwebp`. No story edits or image assets exist in this milestone, so no story/build/art test pass is claimed. No final scenes generated.
+Validation performed: the initial story-dump failed because this isolated worktree lacked tsx. `npm ci --ignore-scripts` installed lockfile dependencies successfully, then story-dump passed. `cwebp` is available at `/opt/homebrew/bin/cwebp`. No story edits were made; no story/build/art test pass is claimed. No final scenes generated.
+
+## Winter Terminus candidate — awaiting owner review
+
+Built-in image_gen only, full manifest brief attached on both calls with the approved carriage and player/Hesper anchor; correction also attached the rejected candidate. Source generation: `/Users/carl/.codex/generated_images/01a13c47-e304-7480-9c59-42ceb065593a/exec-81836238-416e-47c4-b85c-87c69c7d6422.png`. Rejected v1 for an extra raised right platform and unrequested water crane; retained as ignored `art-src/references/winter-terminus-v1-rejected.png`. Targeted correction removed both while preserving the other panels. Final generation: same directory, `exec-5840dad4-3b32-4d35-8501-3b13d454709b.png`; copied to ignored `art-src/references/winter-terminus-v2.png`.
+
+Inspected full 1536×1024 original and converted WebP: one raised platform by the brick building, frosted glass canopy, ground-level yard and signal cabin, frozen lake; office fire/desk/telephone/chair/stool; matching green carriage sliding door and pane framing, station wall bell. No people, faces or hands. Separate panels establish design, not presence or an event. Converted `cwebp -q 88` without resize; both files verified 1536×1024.
+
+- Original SHA-256: `09f499465cb0372cc847f3bccbf96ea8dc048041bb1749487776b97cf2e19346`.
+- `references/winter-terminus.webp` SHA-256: `e22b66d12c2d56023025d734083bebba262209e78df381abb3a6e486dfc6e25c` (487,898 bytes).
+- Original ignore rule verified; `git diff --check` passed. Independent owner approval remains required before downstream use.
+
+Read round-two findings at `1658490`: key ownership, fuel wording, Conservatory scene approach and trailing-car visibility do not alter these landmark reference designs. Scenes remain held.

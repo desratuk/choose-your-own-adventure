@@ -129,7 +129,8 @@
     "sources": [
       "stories/glasshouse-express/references/glasshouse-carriage.webp",
       "stories/glasshouse-express/references/keeper-props.webp"
-    ]
+    ],
+    "reviewedSha256": "b7d5d1dbdb1d0a83ab99aa74b3cfe8cb49cdaee391a32c6f4ca39799d4e263ed"
   },
   {
     "id": "sunwort",
@@ -194,7 +195,8 @@
     "prompt": "Use case: illustration-story. Production reference sheet, 1536x1024 landscape, warm pale parchment background. Painterly 1980s fantasy-adventure illustration, gouache and ink line, luminous frost blues and warm glasshouse amber, expressive invented faces, cinematic light, family-friendly and gently comic. Clear separated design views, not a story event. No real people's likenesses, no copied franchise designs, no famous trains, no weapons, no logos, no legible text or captions (maker's plates, signs and cassette labels are blank or unreadable). Only specified subjects. The story's night is clear with hard frost and stars; interiors are lamplit; dawn is clear and golden. This board locks design only, never possession, accompaniment, plant state or story outcome. Landmark board for WINTER TERMINUS, no people. TOP: the small lakeside station at night: a single long platform with iron lamp posts, a frost-rimed glass canopy on iron columns, a low brick station building with a lit office window, a small timber signal cabin beyond, a railway yard under snow and the frozen lake with stars beyond a low fence. BOTTOM LEFT: the stationmaster's office interior: a coal fire, a cluttered desk with a brass desk lamp and a black telephone, timetables on the wall, a wooden office chair and a low stool. BOTTOM RIGHT: the platform face and sliding carriage doors seen from the platform with a brass bell on the office wall. Consistent architecture across all views. Attached Glasshouse Express sources are rendering/material guides unless a specific shared design is requested above; preserve that design only. Do not copy unrelated subjects or the source board layout.",
     "sources": [
       "stories/glasshouse-express/references/glasshouse-carriage.webp"
-    ]
+    ],
+    "reviewedSha256": "e22b66d12c2d56023025d734083bebba262209e78df381abb3a6e486dfc6e25c"
   },
   {
     "id": "candlewick-junction",
