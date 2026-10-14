@@ -1,0 +1,33 @@
+/* Warm enamel panels and safety-orange detail in a blue mountain evening. */
+[data-story='last-skyway'] {
+  --bg: #142b30;
+  --surface: #203c40;
+  --ink: #fff2d7;
+  --muted: #b7d0cb;
+  --accent: #ffb36c;
+  --accent-2: #b9e2c8;
+}
+
+[data-story='last-skyway'][data-era='base'] {
+  --bg: #30251d;
+  --surface: #46382a;
+  --muted: #d6c8ac;
+  --accent: #ffc17f;
+  --accent-2: #b8ded0;
+}
+
+[data-story='last-skyway'][data-era='ridge'] {
+  --bg: #202937;
+  --surface: #303c4d;
+  --muted: #c0ccdc;
+  --accent: #ffc381;
+  --accent-2: #b9e0e1;
+}
+
+[data-story='last-skyway'][data-era='transit'] {
+  --bg: #172f38;
+  --surface: #29434d;
+  --muted: #b8d0d9;
+  --accent: #ffd18b;
+  --accent-2: #b7e4d0;
+}
