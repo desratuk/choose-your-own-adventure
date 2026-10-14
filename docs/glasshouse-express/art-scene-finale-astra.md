@@ -194,11 +194,11 @@ Each upper/lower image is an entire approved reference board. Use identity/desig
 
 Original generated path: `/Users/carl/.codex/generated_images/01a13c80-41e2-7741-adff-74d7d67b8fcd/exec-18221327-854d-4fd8-8a3e-d179a2f7d404.png`; SHA-256 `c3f8a8b37ead918c4d4f22ae979eccf123abf876aefcbb5bc4376192f8f7b4bd`.
 
-Selected PNG: `/Users/carl/.t3/worktrees/create-your-own-adventure-opus/t3-ddda0808/stories/glasshouse-express/art-src/F05.png`; SHA-256 `c3f8a8b37ead918c4d4f22ae979eccf123abf876aefcbb5bc4376192f8f7b4bd`; 1536×1024.
+Selected PNG: `/Users/carl/.t3/worktrees/create-your-own-adventure-opus/t3-ddda0808/stories/glasshouse-express/art-src/F05.png`; SHA-256 `13d4e37d7a8742690e2d4fc6ca54a1ae796d138ccbee7b788e8fe8b261bb319b`; 1536×1024.
 
-Final WebP: `stories/glasshouse-express/images/F05.webp`; SHA-256 `bea1806db2fd7f83e84bec69e399bfa273f32616bbced02838d35956725a0ce0`; 1200×800; cwebp -q 75 -resize 1200 800.
+Final WebP: `stories/glasshouse-express/images/F05.webp`; SHA-256 `408d2b5ebc307c3af15155303410a558efa7d69c643b839c7c9c5caee5285b36`; 1200×800; cwebp -q 75 -resize 1200 800.
 
-QA: Original inspected: closed tall shutters, open side louvres and low golden light, bed contents completely lost in shadow, three correct figures and lanterns. No correction. Final WebP inspected at native size; identity, hands/anatomy, route state and geometry preserved.
+QA: Owner requested exact twelve leaves because full bank endpoints were visible. Built-in edit subdivided bank into twelve distinct closed leaves (six plus six); counted at original and final size. Bed contents remain unreadable, cast and hands unchanged.
 
 Actual reference attachments on every call:
 
@@ -228,6 +228,30 @@ Image 2: upper = fenn; lower = sunwort
 Image 3: upper = conservatory-exterior; lower = conservatory-interior
 References establish identities only. Medium wide view across circular bed: interior of bed is deep uniform blue-black shadow, absolutely no discernible leaves, buds or plant silhouettes. Narrow side louvres admit low stripes of golden light strictly on floor and boots, never on bed contents. Tall eastern shutters remain fully CLOSED. Three people looking down, rear-facing player, Fenn in buttoned coat and cap holding hurricane lantern. Preserve lamp identity and natural hands. No extra subjects.
 ```
+Correction generated original: `/Users/carl/.codex/generated_images/01a13c80-41e2-7741-adff-74d7d67b8fcd/exec-e287db97-d135-48c1-80e7-98dc8b3f2327.png`, SHA same as selected PNG. Rejected first variant retained at `art-src/corrections/F05-v1.png`. All three reference packs plus target attached.
+
+Exact correction prompt:
+
+```text
+The attached sheets lock identity, shape, colour, clothing and scale only. Draw ONLY the scene below, not a lineup. Do not add other subjects or equipment from a reference. Match this scene’s possession, costume variant, time, location and object state. Shared-path illustrations must be valid on every arrival route; never interpret an optional companion as required.
+Painterly 1980s fantasy-adventure illustration, gouache and ink line, luminous frost blues and warm glasshouse amber, expressive invented faces, cinematic light, 3:2 landscape. Family-friendly, gently comic. Only the listed characters appear; Hesper appears only at the Terminus, Cassia only inside her studio, Sallow only at the Ember Works, Fenn only at the Conservatory; radio voices and telephone voices are never drawn. No real people's likenesses, no famous trains or film props, no logos, no legible text or captions (signs and plates are blank or unreadable). Every scene states location, weather and time: the night is clear with hard frost and stars, wind only on the Mere viaduct, tunnel interiors enclosed and weatherless, dawn scenes clear and golden. Use 'alone (X is not here)' when specified. Keep every character's clothing word-for-word identical to the cast description; scene prompts never substitute outfits. The player's face is always hidden. Action is machinery, weather and plants, never injury; falling glass lands where nobody stands. Optional companions, props and the empty dark carriages are absent unless explicitly listed for that scene.
+
+THE PLAYER: an unnamed, gender-neutral teenager, always seen from behind or over the shoulder with the face hidden, in a navy wool railway greatcoat with brass buttons, a mustard knitted scarf, grey woollen gloves, dark corduroy trousers and black lace-up boots, with a brown canvas keeper's satchel worn across the body on a strap from the LEFT shoulder to the RIGHT hip, closed by a single brass flap buckle. Short dark hair under no hat. The brass thaw-lamp is carried only when listed.
+
+DOV PELLINGER: an original big man in his fifties, dark brown skin, close-cropped grey beard, a black railway cap with a small round brass badge, a quilted rust-orange oilskin jacket over navy bib overalls, a scarf of alternating orange and grey stripes with an orange fringe, heavy black boots. Carries a square X-braced brass hand lantern when outdoors. Calm, slow-moving, kind.
+
+TOBIAS FENN: an original tall thin man in his seventies, pale lined skin, white moustache, a brown knitted cap, a long brown waxed coat buttoned over blue-and-white striped pyjamas, unlaced brown boots. Carries a hurricane lantern. Grumbling but devoted.
+
+THE CONSERVATORY: a great glass dome on the summit of Cold Hill, white-painted iron ribs, a lantern cupola at the crown, a stone base, and on its eastern face a curved row of twelve tall vertical iron shutters with a heavy chain and a large brass wax cylinder mounted high where their gear meets the ribs. Inside, a round raised stone planting bed (the Great Bed) with a small iron stove door in its base, and narrow hand-opened side louvres low in the walls. Outside, iron gates in a stone wall and a frozen fountain.
+
+Sunrise inside the Conservatory on Cold Hill: low golden light slanting in through narrow open side louvres near the floor, lighting the stone floor and the lower glass but leaving the round Great Bed in the centre in deep cool shadow under the still-closed tall eastern shutters. The player, Dov and Fenn stand at the bed's rim looking down into the shadowed bed, the player seen from behind; the bed's contents are lost in shadow, no leaf shapes readable. Only these three people.
+
+Image 1: upper = player-hesper; lower = dov
+Image 2: upper = fenn; lower = sunwort
+Image 3: upper = conservatory-exterior; lower = conservatory-interior
+Image 4 is edit target. Targeted correction ONLY: the target displays the entire closed shutter bank between clear side glazing but has too few tall shutter leaves. Rebuild this closed curved bank as EXACTLY TWELVE distinct tall iron shutter leaves, six left of the central dividing rib and six right, each separated by a narrow white iron stile and its own visible hinge hardware. Count six plus six = twelve. Keep same overall width/height of shutter bank, using narrower leaves. Every one remains fully closed. Preserve all other image details, especially the three characters' faces, clothes, hands, player rear view and satchel, lantern identities, stone bed with entirely unreadable shadowed contents, warm stove, OPEN low side louvres and low golden floor lighting, camera/framing. No additional plants or people. Full-bleed 1536x1024.
+```
+
 ## F06
 
 Original generated path: `/Users/carl/.codex/generated_images/01a13c80-41e2-7741-adff-74d7d67b8fcd/exec-83ba05af-f303-44d2-9738-776433503d6a.png`; SHA-256 `2622d74bd743279be5d86a57f0b44207ee4a4f3d73f0a1087c7328f394c6225e`.
