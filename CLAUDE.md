@@ -7,7 +7,9 @@ A web choose-your-own-adventure engine with swappable **story packs**. Each stor
 | *The Stopped Clocks* (Back to the Future) | `stopped-clocks` | Complete and illustrated |
 | *The Fratelli Run* (The Goonies) | `fratelli-run` | Complete and illustrated |
 | *Return to Sender* (Ghostbusters) | `return-to-sender` | Complete and illustrated |
-| *Player Two* (The Last Starfighter) | `player-two` | Written and continuity-reviewed; 15 reference sheets approved, scene art not started |
+| *Player Two* (The Last Starfighter) | `player-two` | Written and continuity-reviewed; scene illustration in progress |
+| *The Last Skyway* (original) | `last-skyway` | Written; continuity review and reference production in progress |
+| *The Midnight Signal* (original) | `midnight-signal` | Written; continuity corrections in progress, six reference boards approved |
 
 When more than one story is installed, the front page shows a story picker.
 
@@ -53,7 +55,7 @@ When more than one story is installed, the front page shows a story picker.
 - `npm run build`: runs `check`, then builds the static site into `dist/`.
 - `npm run prompts -- --references`: exports the reference-art briefs before scene generation.
 - `npm run prompts`: regenerates scene prompts only after all reference sheets pass the review gate.
-- `npm run test:art`: checks reference coverage, review hashes and key continuity regressions.
+- `npm run test:art`: checks reference coverage, review hashes, per-page WebP coverage and key continuity regressions.
 - `npm run test:story`: focused editorial route regressions, including clue gates and companion state.
 - `npm run images`: converts `stories/<id>/art-src/*.png` into the game's `images/*.webp`.
 - `npm run story-dump -- <id>`: prints a story as plain text with its logic, for review.
@@ -183,3 +185,22 @@ A Stop hook (`.claude/settings.json` → `scripts/story-review-gate.mjs`) blocks
 - Best-ending clue chain: arcade display isolation, measured adapter pins, recorded enemy reply timing, traced outpost socket.
 - **Meter:** JUMP CHARGE, a number shown as %. Starts 100/90/80 on Easy/Medium/Hard. Best costs 70 (45 hops, 15 investigations, 10 final operation). Medium permits one ten-point recovery.
 - **UI:** basic header, fade transition, scoped theme. Revision 1. 50 pages, nine endings (four bad, four good, one best). Arcade header and starfield transition are not yet built.
+
+---
+
+## Story: *The Last Skyway* (`last-skyway`)
+
+- **Bible:** `docs/last-skyway/story-outline.md`. Consult its route, meter and arrival invariants before editing.
+- Original mountain maintenance adventure, November 1986. An unnamed apprentice helps qualified staff rescue stranded observatory passengers. Machinery and supervised diagnosis drive the choices.
+- The wind ribbon is on the crossover mast, visible from the cabin. Valley dispatch uses the ridge observer's written report, copied anemometer trace and mast sketch. The refuge cradle travels horizontally. The closed plate box contains last night's exposed, unprocessed plates.
+- **Meter:** RESCUE WINDOW, working minutes displayed H:MM; starts 110/94/86. The complete best route costs 70 and leaves 40/24/16. Eight-minute recoveries allow one Medium slip; Hard needs the clean route for best. Consult the bible for certification and handover requirements.
+- **Status:** revision 1, 48 pages, ten endings (six good including one best, four bad). Independent continuity review and Astra illustration are in progress.
+
+---
+
+## Story: *The Midnight Signal* (`midnight-signal`)
+
+- **Bible:** `docs/midnight-signal/story-outline.md`. Consult its causal model, evidence chain, reserve arithmetic and route table before editing.
+- Original coastal radio mystery, Greyhaven, 17–18 October 1986. An unnamed teenage volunteer investigates a distress call apparently arriving from tomorrow and helps protect a harbour crew.
+- **Meter:** shared electrical RESERVE, a percentage rather than elapsed minutes; starts 100/85/70. The clean best route costs 60, leaving 40/25/10. The evidence upload needs twenty before starting and leaves ten holding power. Medium allows one fifteen-point error; Hard none. The optional shelter call costs five.
+- **Status:** revision 1, 46 pages, ten endings (six good including one best, four bad). Continuity corrections are in progress; six reference boards are approved. Final scene production follows independent clearance.

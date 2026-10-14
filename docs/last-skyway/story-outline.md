@@ -198,3 +198,7 @@ Focused regressions now cover all three no-wrap equipment-certified difficulties
 
 
 Round-1 fix verification: `npm run check` PASS for all installed packs, with Last Skyway 48 pages, 10/10 reachable endings, 7,401 page/state combinations, 19,795 playthroughs, zero errors/warnings. Focused regressions: 13/13 PASS. Full `npm run test:story`: 95/96 PASS in this isolated worktree; only the pre-existing shared revision assertion fails (`last-skyway: 1 !== 3`). Parent reports that assertion already fixed on integration branch; no out-of-scope shared edit made here. No scene art generated and no continuity stamp written. Prose-only clarifications also explicitly bridge D03→E03 into the refuge and identify the pressure drum as separate from the ridge observer’s copied gust trace.
+
+## Independent continuity round 2 — arrival illustration correction
+
+Round 2 confirmed all ten earlier findings resolved and found one D07 arrival mismatch. The no-wrap paragraph now narrates Ellis folding the refuge blanket around the box during this scene, rather than asserting it was already covered before arrival. Both routes therefore begin with the same bare, closed box shown by the unchanged D07 prompt; wrapping follows in the text. No route, flag, meter, cast, reference or scene-prompt change. A fresh independent review remains required.

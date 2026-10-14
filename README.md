@@ -51,6 +51,22 @@ A *Last Starfighter* adventure. You keep a small-town arcade's machines working,
 
 > Unofficial, non-commercial fan project. It is not affiliated with or endorsed by the owners of *The Last Starfighter*. See [Licence](#licence).
 
+### The Last Skyway
+
+An original mountain adventure set in November 1986. As a young maintenance apprentice, you help a tram crew bring a stranded cabin down from an observatory before a snow front closes the rescue window. Wind observations, old wiring records and a mechanical governor decide what you can bring home intact.
+
+- **48 pages** with **10 endings** (4 bad, 6 good, one best), each clearly labelled.
+- **A visible rescue-window countdown.** Investigations and recoverable mistakes use time; careful work preserves a reserve for the final equipment shutdown.
+- **Alternative successes:** shelter the cabin or protect the refuge's heat plant when a full descent is no longer the right job.
+
+### The Midnight Signal
+
+An original coastal mystery set in Greyhaven in October 1986. During your volunteer shift at a community radio station, a distress call arrives before the events it describes. Work with the harbour keeper to locate the crew, understand the rising water and preserve the evidence behind the warning.
+
+- **46 pages** with **10 endings** (4 bad, 6 good, one best), each clearly labelled.
+- **A visible electrical-reserve meter.** Recording evidence, testing equipment and operating the basin gates compete for the same supply.
+- **A VHS transition** between Gull Radio, the harbour office and the repair basin.
+
 ## Running it
 
 Requires Node 20.19+ or 22.12+ (use nvm to switch).
