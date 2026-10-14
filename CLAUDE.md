@@ -8,7 +8,7 @@ A web choose-your-own-adventure engine with swappable **story packs**. Each stor
 | *The Fratelli Run* (The Goonies) | `fratelli-run` | Complete and illustrated |
 | *Return to Sender* (Ghostbusters) | `return-to-sender` | Complete and illustrated |
 | *Player Two* (The Last Starfighter) | `player-two` | Complete and illustrated |
-| *The Last Skyway* (original) | `last-skyway` | Written and continuity-reviewed; Astra illustration in progress |
+| *The Last Skyway* (original) | `last-skyway` | Complete and illustrated |
 | *The Midnight Signal* (original) | `midnight-signal` | Written and continuity-reviewed; Astra illustration in progress |
 | *The Lantern Archive* (original) | `lantern-archive` | Written and continuity-reviewed; Astra illustration in progress |
 | *The Glasshouse Express* (original) | `glasshouse-express` | Written and continuity-reviewed; Astra illustration in progress |
@@ -196,7 +196,7 @@ A Stop hook (`.claude/settings.json` → `scripts/story-review-gate.mjs`) blocks
 - Original mountain maintenance adventure, November 1986. An unnamed apprentice helps qualified staff rescue stranded observatory passengers. Machinery and supervised diagnosis drive the choices.
 - The wind ribbon is on the crossover mast, visible from the cabin. Valley dispatch uses the ridge observer's written report, copied anemometer trace and mast sketch. The refuge cradle travels horizontally. The closed plate box contains last night's exposed, unprocessed plates.
 - **Meter:** RESCUE WINDOW, working minutes displayed H:MM; starts 110/94/86. The complete best route costs 70 and leaves 40/24/16. Eight-minute recoveries allow one Medium slip; Hard needs the clean route for best. Consult the bible for certification and handover requirements.
-- **Status:** revision 1, 48 pages, ten endings (six good including one best, four bad). Independent continuity review passed; Astra illustration is in progress.
+- **Status:** revision 1, 48 pages, ten endings (six good including one best, four bad). Independent continuity review passed; all 48 Astra illustrations and ten reference sheets are reviewed and integrated.
 
 ---
 

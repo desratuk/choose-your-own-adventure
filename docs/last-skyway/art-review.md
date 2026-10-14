@@ -217,6 +217,12 @@ issue identified in final owner review.
 - Originals remain ignored. No shared code, story, registration or other pack
   edited by this art integration. No push or main merge.
 
+## Parent integration verification
+
+Integrated owner commit `91cd0eb` into the eight-story checkout. All 48 final WebP hashes match the table below; each decodes at 1200×800, and all hashes are distinct. The existing per-page illustration coverage test passes.
+
+The integrated app's actual Medium reader route was driven through 36 page visits at 390×844, including the preparation detours, ridge work, return and E09 best ending. Every displayed image decoded at 1200×800, no page overflowed horizontally, and the final reserve was 24. The final manuscript map also renders all 48 pages and ten endings. Native preview snapshot/evaluate each timed out after 15000ms in the parent session, so this route used the existing Playwright browser fallback. Owner-native image decoding remains separately recorded above.
+
 ## Final accepted asset hashes
 
 | Page | Original PNG SHA-256 | Game WebP SHA-256 |

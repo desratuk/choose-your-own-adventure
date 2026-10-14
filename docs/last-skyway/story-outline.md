@@ -2,7 +2,7 @@
 
 Original family-friendly mountain maintenance adventure, November 1986. Revision 1. 48 pages, 10 endings: 6 good (one best), 4 bad. The unnamed, gender-neutral young apprentice is never assigned a name, age or gender. The player solves practical problems under qualified supervision; there is no combat, sabotage or supernatural mechanism.
 
-Manuscript/theme/routes implemented; independent continuity review and all illustration production remain pending. No continuity stamp exists. Parent owns integration, shared documentation/revision assertion, independent review and Astra artwork.
+Manuscript, theme and routes are complete. Independent continuity round 3 passed; its stamp matches the current manuscript. All 48 Astra scene illustrations and ten reference sheets are reviewed and integrated. The final art record is in `art-review.md`; earlier review-stage notes below are historical. The overall five-story delivery still awaits remaining packs and the final merge to main.
 
 ## Cast and geography
 
