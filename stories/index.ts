@@ -4,5 +4,7 @@ import returnToSender from './return-to-sender/story';
 import stoppedClocks from './stopped-clocks/story';
 import playerTwo from './player-two/story';
 
+import midnightSignal from './midnight-signal/story';
+
 // Register story packs here. The first one is the default; others are reachable with ?story=<id>.
-export const stories: Story[] = [stoppedClocks, fratelliRun, returnToSender, playerTwo];
+export const stories: Story[] = [stoppedClocks, fratelliRun, returnToSender, playerTwo, midnightSignal];
