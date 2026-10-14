@@ -2,6 +2,10 @@
 
 Revision 1. Original family-friendly coastal mystery, Greyhaven, 17–18 October 1986. Unnamed gender-neutral teenage radio volunteer. 46 pages, ten endings (six good, four bad), exactly one best (E10). A complete evidence route reads about 4,600 words: approximately 18–23 minutes at 200–250 words/minute, plus choices. Short safe exits intentionally finish sooner.
 
+## Delivery status
+
+Complete on owner branch: 46 unique illustrated pages, six reviewed reference sheets, independent round-4 continuity PASS, route regressions and final art/browser QA. All three Astra batch branches merged locally; parent owns integration to main and shared documentation. See art-review.md and art-batch-a/b/c.md for delivery evidence. Full-size originals and rejects remain in ignored art-src; preserve them before worktree cleanup.
+
 ## Canon and causal model
 
 Gull Radio occupies the upper floor of the old customs house; the harbour office is downstairs. Mara Vale remains at Gull. Harbour keeper Jo Fen escorts the player on dry covered routes. Petrel is a maintenance launch at the west pier; its three crew (Ellis Ward, Nessa, Kit) are ashore at the repair basin. The early voice identifies a boat, not its physical position. Characters are introduced before naming; no player name or gender is assigned. Player borrows a yellow raincoat at A08, carries a pencil/notebook, never carries the copied cassette (Mara keeps it).
@@ -104,7 +108,7 @@ Reference inventory must cover radio hardware/room, ordinary paper props and red
 
 ## Validation and ownership
 
-Owned: stories/midnight-signal/, docs/midnight-signal/, scripts/midnight-signal-regressions.test.ts and minimal stories/index.ts registration. Parent integrates main and shared documentation/revision assertion. Known shared editorial test assumes non-Player-Two revision 3; new story correctly remains revision 1. Run npm run check, focused regression, npm run test:story, npm run test:art after reference approval, build and browser image QA when art is complete. No main merge or push by this owner.
+Owned: stories/midnight-signal/, docs/midnight-signal/, scripts/midnight-signal-regressions.test.ts and minimal stories/index.ts registration. Parent integrates main and shared documentation/revision assertion. The former shared revision assertion was corrected by the parent; this story correctly remains revision 1. Run npm run check, focused regression, npm run test:story, npm run test:art after reference approval, build and browser image QA when art is complete. No main merge or push by this owner.
 
 Runtime verified through T3: provider codex, model gpt-6-astra. Runtime instruction reports medium reasoning; model catalog also exposes medium as current for Astra. This is manuscript/illustration implementation, not an independent continuity pass.
 
