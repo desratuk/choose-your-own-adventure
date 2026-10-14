@@ -1,6 +1,6 @@
 # Glasshouse Express art review
 
-Status: reference production; final scenes held for independent manuscript PASS and stamp.
+Status: complete. All 18 reference sheets and 44 scenes approved; see the final owner approval and delivery below. Earlier sections retain the production history.
 
 ## Provenance
 
