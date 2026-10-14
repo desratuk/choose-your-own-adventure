@@ -1,6 +1,6 @@
 # Glasshouse Express — finale art production
 
-Status: all fourteen assigned scenes delivered; owner independently approved F01–F06. E03–E10 await owner review. Exclusive assignment: F01 F02 F03 F04 F05 F06 E03 E04 E05 E06 E07 E08 E09 E10.
+Status: all fourteen assigned scenes delivered; owner independently approved F01–F06. Owner approved E03,E04,E05,E06,E08,E09,E10; corrected E07 awaits owner review. Exclusive assignment: F01 F02 F03 F04 F05 F06 E03 E04 E05 E06 E07 E08 E09 E10.
 
 Runtime: injected Codex / gpt-6-astra / medium. Live orchestrator_capabilities confirms inherited provider `codex`, model `gpt-6-astra`, and matching catalog `reasoningEffort.currentValue=medium`. Durable record verification belongs to owner. No subagents or alternate image providers used.
 
@@ -822,3 +822,47 @@ All 14 assigned final WebPs exist, decode at 1200×800, and have 14 distinct SHA
 `git diff --check` passed. Changed tracked scope is the fourteen assigned images and this unique report only. No story, bible, stamp, reference, shared code or other batch changes. Owner has independently approved and merged F01–F06, including corrected F05; E03–E10 are ready for independent owner review. No self-stamp.
 
 Global `npm run -s test:art` was run using the owner's installed tsx through PATH; result: 8 passed, 4 failed. Coverage tests also fail for unrelated existing stories last-skyway, midnight-signal and lantern-archive. Glasshouse Express coverage fails because 30 other-batch scene files (A01–A06, B01–B10, C01–C05, D01–D07, E01–E02) are absent in this isolated checkout. None of the missing files belongs to this assignment. Raw output is retained in ignored `art-src/finale-art-test.txt`. The owner must run combined global validation after merging all batches.
+
+## E07 owner-requested mechanism correction — 2026-10-15
+
+This supersedes the prior E07 selected PNG/WebP above; prior entries remain as generation history. Owner approved every other assigned scene. Follow-up injected runtime: Codex / gpt-6-astra / medium; live orchestrator_capabilities inherited codex/gpt-6-astra and catalog reasoningEffort.currentValue=medium reverified. Durable records remain owner responsibility.
+
+One built-in image_gen edit call; all three mapped packs plus target (four paths total). All pack/source hashes and complete decoded source rectangles reverified against tracked packing audit.
+
+- `stories/glasshouse-express/art-src/packed/E07-1.png` SHA-256 `52ec26d424a90c0bd8f57717d04e86878fad501f5c72dd61f5fe5c4a8bc96022`.
+- `stories/glasshouse-express/art-src/packed/E07-2.png` SHA-256 `2325da2befce654c65e5edd19ada20739555a04d4c3dca8c5db79ddd0a97b0b4`.
+- `stories/glasshouse-express/art-src/packed/E07-3.png` SHA-256 `4c8e4304ca38652312d98fab950b4d37670f4d2338549f98a82048eca8a4a659`.
+
+Target: `/Users/carl/.t3/worktrees/create-your-own-adventure-opus/t3-ddda0808/stories/glasshouse-express/art-src/E07.png` before replacement; SHA-256 `2729ae9016dd1a7268bbb72092850f24bacb6e919eab6445d01d290fbd18865c`. Retained rejected original: `stories/glasshouse-express/art-src/corrections/E07-v2.png`.
+
+Generated original: `/Users/carl/.codex/generated_images/01a13c80-41e2-7741-adff-74d7d67b8fcd/exec-024c384c-2e8a-4af1-b50d-8e0723964102.png`; SHA-256 `d17f6479559b039ea9d09a98de1a6c86f5f4a17513641b274e4498e3114eaaca`.
+
+Current selected PNG: `/Users/carl/.t3/worktrees/create-your-own-adventure-opus/t3-ddda0808/stories/glasshouse-express/art-src/E07.png`; SHA-256 `d17f6479559b039ea9d09a98de1a6c86f5f4a17513641b274e4498e3114eaaca`; 1536×1024.
+
+Current final WebP: `stories/glasshouse-express/images/E07.webp`; SHA-256 `2e5bc59de6299aaa321bce165bb9121aef9d0b5fc568dca36ce485e79de17b36`; 1200×800, cwebp -q 75 -resize 1200 800.
+
+QA: full-size generated PNG and final WebP inspected. Exactly one central brass cylinder with pin/collar and attached gear/axle linkage; other bodies replaced by thin rods/structure. Half cups/half closed buds, fully unreadable blurred foliage, three identities, hands, hidden player face, high sunlight, closed shutters and open low louvres preserved. Scope only E07 WebP and this report; ignored original/rejection/provenance retained. Dimension/hash checks and git diff --check pass. No repeat global test: previous missing-file failures are unrelated to this correction. Owner review pending; no self-stamp.
+
+Exact complete correction prompt:
+
+```text
+The attached sheets lock identity, shape, colour, clothing and scale only. Draw ONLY the scene below, not a lineup. Do not add other subjects or equipment from a reference. Match this scene’s possession, costume variant, time, location and object state. Shared-path illustrations must be valid on every arrival route; never interpret an optional companion as required.
+Painterly 1980s fantasy-adventure illustration, gouache and ink line, luminous frost blues and warm glasshouse amber, expressive invented faces, cinematic light, 3:2 landscape. Family-friendly, gently comic. Only the listed characters appear; Hesper appears only at the Terminus, Cassia only inside her studio, Sallow only at the Ember Works, Fenn only at the Conservatory; radio voices and telephone voices are never drawn. No real people's likenesses, no famous trains or film props, no logos, no legible text or captions (signs and plates are blank or unreadable). Every scene states location, weather and time: the night is clear with hard frost and stars, wind only on the Mere viaduct, tunnel interiors enclosed and weatherless, dawn scenes clear and golden. Use 'alone (X is not here)' when specified. Keep every character's clothing word-for-word identical to the cast description; scene prompts never substitute outfits. The player's face is always hidden. Action is machinery, weather and plants, never injury; falling glass lands where nobody stands. Optional companions, props and the empty dark carriages are absent unless explicitly listed for that scene.
+
+THE PLAYER: an unnamed, gender-neutral teenager, always seen from behind or over the shoulder with the face hidden, in a navy wool railway greatcoat with brass buttons, a mustard knitted scarf, grey woollen gloves, dark corduroy trousers and black lace-up boots, with a brown canvas keeper's satchel worn across the body on a strap from the LEFT shoulder to the RIGHT hip, closed by a single brass flap buckle. Short dark hair under no hat. The brass thaw-lamp is carried only when listed.
+
+DOV PELLINGER: an original big man in his fifties, dark brown skin, close-cropped grey beard, a black railway cap with a small round brass badge, a quilted rust-orange oilskin jacket over navy bib overalls, a scarf of alternating orange and grey stripes with an orange fringe, heavy black boots. Carries a square X-braced brass hand lantern when outdoors. Calm, slow-moving, kind.
+
+TOBIAS FENN: an original tall thin man in his seventies, pale lined skin, white moustache, a brown knitted cap, a long brown waxed coat buttoned over blue-and-white striped pyjamas, unlaced brown boots. Carries a hurricane lantern. Grumbling but devoted.
+
+SUNWORT TRAYS: shallow wooden trays of broad dark-green rosette plants, each rosette with a cluster of tight copper-coloured buds at its heart, on slatted wooden staging. Closed buds throughout the journey; open flowers are broad warm orange cups, shown only in the endings that describe them. When planted, the rosettes sit in dark soil in the round stone bed.
+
+THE CONSERVATORY: a great glass dome on the summit of Cold Hill, white-painted iron ribs, a lantern cupola at the crown, a stone base, and on its eastern face a curved row of twelve tall vertical iron shutters with a heavy chain and a large brass wax cylinder mounted high where their gear meets the ribs. Inside, a round raised stone planting bed (the Great Bed) with a small iron stove door in its base, and narrow hand-opened side louvres low in the walls. Outside, iron gates in a stone wall and a frozen fountain.
+
+Mid-morning inside the Conservatory on Cold Hill: high sun now clearing the top of the still-closed eastern shutters and falling on the round Great Bed, where about half the sunwort buds have opened into warm orange cup flowers, the rest still closed, the leaves beneath them soft and out of focus so no leaf shape is readable. The player, Dov and Fenn stand at the rim in bright light, the player seen from behind. Only these three people. Open side louvres along the walls.
+
+Image 1: upper = player-hesper; lower = dov
+Image 2: upper = fenn; lower = sunwort
+Image 3: upper = conservatory-exterior; lower = conservatory-interior
+Image 4: edit target E07. Use case: precise-object-edit. Output1536x1024. Correct ONLY the repeated Hallam wax cylinder bodies along the top of the shutter arc. There must be exactly ONE horizontal brass wax cylinder, matching the conservatory-interior reference's lower-left mechanism: cylindrical brass body, end collars, attached vertical pin/collar, axle and gear linkage. Keep that single mechanism high above the central shutters, visibly attached to the structure. Replace ALL other repeated thick brass cylinder bodies with ordinary thin dark iron linkage rods and white structural framing. Gear wheels and thin shared axle can remain; no other wax cylinders anywhere. Preserve all remaining target details: three exact people and wardrobes, hands/anatomy, hidden player face and satchel, approximately half open orange cup flowers and half closed copper buds, foliage entirely defocused with NO readable leaf shapes, high midmorning sunlight above fully CLOSED shutters, OPEN low louvres, camera framing and stone bed. Do not copy reference sheet layout or add objects/people.
+```
