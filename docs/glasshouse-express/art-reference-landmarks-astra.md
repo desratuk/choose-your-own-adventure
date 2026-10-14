@@ -87,3 +87,10 @@ Full-resolution PNG/WebP inspected: single track climbs icy grade to stone porta
 - WebP SHA-256: `4e0bf61591ca66c58bd9cdfd2cef6ad3ba10cb58de126a0556f5f9aa588a7eec`.
 
 Owner `aeb6135` merged; Mere release received. Candlewick v2 remains rejected/ignored because a curved branch rail terminates instead of joining the turnout, despite successful signal-box darkening. No provider/model substitution and no usage-limit error encountered in this worker so far.
+
+## Ember Works candidate — awaiting owner review
+
+Built-in image_gen with full corrected manifest brief, approved Winter Terminus and player/Hesper style anchor. `exec-1edd5563-aa7e-4842-a4a0-10b0688f653b.png` in the shared generation directory copied to ignored `ember-works-v1.png`. No worker correction needed. Full-resolution PNG/WebP inspected: single-leaf barred yard gate between brick piers repeated in close view, one hinge side and chain/padlock; distinct taller double doors under brick arch in morning panel with unlit lamp. Rails pass between piers; kiln glow, tarpaulin-covered brick stacks and smoking chimneys at night. No people, trains, keys or readable text. q88 no resize, 1536×1024.
+
+- Original SHA-256: `8fa8deffca1d71aa64e588dee7fb86cb09f3eb8792b1544eb151d4c94c6fd7d5`.
+- WebP SHA-256: `1f5f8eb6cb5434709589727c6d6576542d844d709ba832ba5a8b1214b2592b16`.
