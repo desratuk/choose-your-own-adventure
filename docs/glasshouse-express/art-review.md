@@ -106,3 +106,17 @@ Owner checks: npm run check passed all eight stories/typecheck; 18/18 focused Gl
 Owner independently inspected selected 1536×1024 PNGs and final 1200×800 q75 WebPs for A01, D03 and F04. A01 correction closes all ridge vents while preserving the four coupled vehicles and hidden player face. D03 correction removes the unlisted wall thaw-lamp and places the gloved hand beside the vent chain clear of the flue; healthy tight copper buds, open brick locker and closed vents remain coherent. F04 preserves player/Dov/Fenn identities and wardrobes, frozen mechanism/closed shutters, and hides the Great Bed and all plants; cropping the outer shutter arc does not imply a different shutter count. All three approved. Selected and rejected originals copied into owner ignored art-src.
 
 Actual worker milestone histories normally merged: town `09003b5`, journey `565934b`, finale `0a4e0f4`. Final SHA-256: A01 `2bce4a0455911027013ea0ad584ae25f30435d2b36d91a039819f37f4d2aeb69`; D03 `7fb1a2a0be03a3685ad9a24e1a56e6ae2df86669e5338eee9af08eb48ea5f3ba`; F04 `9ffe9194e066e43ec0f45cdca148346781fa48ff309c91d573155490581da855`. Three of 44 scenes approved; remaining batches continue. Full scene coverage/browser checks remain pending.
+
+## Conservatory scene checkpoint
+
+Normally merged candidate history `5628c1e`. Owner inspected all five selected full-resolution PNGs and all five final WebPs against exported prompts. F01 corrected gateway places engine inside before fountain, glowing carriage at gate line and rear outside/cropped; three identities and closed night dome preserved. F02 tray contents and bed contents hidden; F03 open dark stove, brick hod, kneeling/crouching poses and plant crop correct. F06 open shutters, frost-free mechanism, ladder support and glare-obscured bed correct. These four approved. Originals/rejections copied ignored and dimensions verified.
+
+F05 is NOT yet approved: fully visible closed shutter bank appears to contain fewer than twelve distinct leaves, with clear glazing at both ends. Requested targeted twelve-leaf correction with all references, preserving shadowed bed and open low louvres. Candidate retained pending replacement; inclusion in this merge is not approval. Seven of 44 scenes approved.
+
+- F01: `e8962a35c20c575a6e047e9adead0bb66da8e23512bba2913abd802b95f5dab6` (approved)
+- F02: `7e240d51affbd858607e83e0976663b04826b52b4960b30854be2e6420d1cdbe` (approved)
+- F03: `77266799fc8f5568144f83e78503c1f8ed67c6a24aea275eb20524be2502c6d3` (approved)
+- F05: `bea1806db2fd7f83e84bec69e399bfa273f32616bbced02838d35956725a0ce0` (pending correction)
+- F06: `9eae01bf24bbf5c5bea33bcd721ffaf8e966305c0816e8e76aca6268092bba88` (approved)
+
+F05 correction `95362a3` normally merged and independently approved after full-size PNG/WebP inspection: twelve separate closed tall shutter leaves now countable, with three identities/wardrobes, unreadable shadowed bed, low open louvres and golden floor light preserved. Supersedes the pending F05 decision above. Selected PNG hash `13d4e37d7a8742690e2d4fc6ca54a1ae796d138ccbee7b788e8fe8b261bb319b`; final WebP `408d2b5ebc307c3af15155303410a558efa7d69c643b839c7c9c5caee5285b36`. Correct dimensions verified; selected/rejected originals retained owner-side. Eight of 44 scenes approved.
