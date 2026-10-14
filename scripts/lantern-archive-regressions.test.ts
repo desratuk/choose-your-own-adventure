@@ -199,17 +199,19 @@ test('Lantern Archive: refusal, the modern lamp and a cold Lantern are distinct 
   assert.equal(cold.page.ending?.kind, 'bad');
   assert.equal(cold.state.lantern, 0);
   assert.match(cold.texts.get('F09')!, /0:05/);
+  assert.ok(cold.text.indexOf('Before Mr Hale locks up') < cold.text.indexOf('At midnight'));
+  assert.doesNotMatch(cold.text, /A week later/);
 });
 
 test('Lantern Archive: hub arrival text, local changeover and Win’s seat render correctly', () => {
   const first = walk(opening);
   assert.match(first.text, /You’d better tell me/);
-  assert.doesNotMatch(first.text, /Back in the box/);
+  assert.doesNotMatch(first.text, /In the box, Win is at the machines/);
   const told = walk(replace(opening, 'A06', ['A05', 'A06']));
   assert.match(told.text, /Win turns at once/);
   assert.doesNotMatch(told.text, /You’d better tell me/);
   const back = walk([...opening, ...field]);
-  assert.match(back.text, /Back in the box/);
+  assert.match(back.text, /In the box, Win is at the machines/);
   assert.match(back.text, /lamp glass from Depot Field/);
   assert.doesNotMatch(back.text, /She taps the other names/);
   const clean = walk([...prepared]);
@@ -255,4 +257,18 @@ test('Lantern Archive: exhaustive states keep the Lantern lit, gates honest and 
     for (const choice of choices) queue.push({ id: choice.to, state: choose(story, state, choice) });
   }
   assert.equal(endings.size, 10);
+});
+
+test('Lantern Archive: round-one continuity fixes hold on their awkward routes', () => {
+  const mixed = walk([...opening, 'C02', 'C03', 'C01', 'C08', 'C01', ...field, 'D01', 'D03', ['D04', 1], 'D05']);
+  assert.equal(mixed.state.invitedInPerson, false);
+  assert.match(mixed.text, /projectionist with the card/);
+  const phoned = walk([...opening, 'C08', 'C01', 'D01', 'D03', ['D04', 0], 'D05']);
+  assert.match(phoned.text, /rang Mrs Ferris/);
+  assert.match(phoned.text, /You swept these stalls/);
+  assert.doesNotMatch(phoned.text, /Have we met/);
+  assert.match(walk(['A02']).texts.get('A01')!, /Row F/);
+  const unlit = walk([...prepared, ['F02', 0], ['F03', 2], ['F07', 1], 'E03']);
+  assert.match(unlit.text, /even the muddle has gone/);
+  assert.doesNotMatch(unlit.text, /end of the week/);
 });
