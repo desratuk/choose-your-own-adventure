@@ -1,6 +1,6 @@
 # Glasshouse Express attachment audit
 
-Computed from referencesForPage against manuscript 8360ab2 and manifest e7d1d8d. This is a planning audit, not a reference approval or scene-export gate pass. Recompute at validated scene export and include this contract in all three scene-worker briefs.
+Computed from referencesForPage against independently stamped manuscript dd6d252 (SHA ac3eede2367c209657140c9facac60cb4a8db9a4338ff97051039850e2a9e8bf) and the eighteen owner-approved reference manifest. Recomputed at validated scoped scene export after all eighteen sheets passed validateReferences. Include this contract in all three scene-worker briefs.
 
 44 pages; maximum 7 full reference boards (F03, F06). 22 pages exceed five references for initial generation; 36 exceed four references when one target image is attached for editing.
 

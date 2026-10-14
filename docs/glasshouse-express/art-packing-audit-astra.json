@@ -1,0 +1,3590 @@
+{
+  "storySha256": "ac3eede2367c209657140c9facac60cb4a8db9a4338ff97051039850e2a9e8bf",
+  "method": "Complete decoded RGB boards paired vertically at native resolution in lossless PNG. Pixel equality verified against each decoded WebP source. No resizing/cropping/omission. At most four reference paths leaves one edit target slot.",
+  "pages": [
+    {
+      "page": "A01",
+      "referenceCount": 4,
+      "attachments": [
+        {
+          "path": "stories/glasshouse-express/art-src/packed/A01-1.png",
+          "sha256": "253c646bb0fe7e4c4795b98038a133f0db0638d7092f06081fc91b2b93ef9815",
+          "width": 1536,
+          "height": 2048,
+          "sources": [
+            {
+              "id": "player-hesper",
+              "path": "stories/glasshouse-express/references/player-hesper.webp",
+              "sha256": "50511aac7b66cfef5f5cb038927c3a5d8a22b815c974c87584fdb9b1db5a6a30",
+              "x": 0,
+              "y": 0,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            },
+            {
+              "id": "marigold",
+              "path": "stories/glasshouse-express/references/marigold.webp",
+              "sha256": "af1e473d6708070843aa8b36670d94f10cbcb4be7de60a422cbdf7c0f3beae0b",
+              "x": 0,
+              "y": 1024,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            }
+          ]
+        },
+        {
+          "path": "stories/glasshouse-express/art-src/packed/A01-2.png",
+          "sha256": "b439023eda34287cf2f5aa7dc7047ff94c61057075b259e57456c0fb5ddddcd2",
+          "width": 1536,
+          "height": 2048,
+          "sources": [
+            {
+              "id": "glasshouse-carriage",
+              "path": "stories/glasshouse-express/references/glasshouse-carriage.webp",
+              "sha256": "8fc132adbe435576dd0ddd7b777be0d1099d973ff933248ba76398990d6d4611",
+              "x": 0,
+              "y": 0,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            },
+            {
+              "id": "winter-terminus",
+              "path": "stories/glasshouse-express/references/winter-terminus.webp",
+              "sha256": "e22b66d12c2d56023025d734083bebba262209e78df381abb3a6e486dfc6e25c",
+              "x": 0,
+              "y": 1024,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page": "A02",
+      "referenceCount": 4,
+      "attachments": [
+        {
+          "path": "stories/glasshouse-express/art-src/packed/A02-1.png",
+          "sha256": "35e8a27a5b96d81756fbea8f8433e215e4586c7dad64ba6da5f101ae2989a3a3",
+          "width": 1536,
+          "height": 2048,
+          "sources": [
+            {
+              "id": "player-hesper",
+              "path": "stories/glasshouse-express/references/player-hesper.webp",
+              "sha256": "50511aac7b66cfef5f5cb038927c3a5d8a22b815c974c87584fdb9b1db5a6a30",
+              "x": 0,
+              "y": 0,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            },
+            {
+              "id": "glasshouse-carriage",
+              "path": "stories/glasshouse-express/references/glasshouse-carriage.webp",
+              "sha256": "8fc132adbe435576dd0ddd7b777be0d1099d973ff933248ba76398990d6d4611",
+              "x": 0,
+              "y": 1024,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            }
+          ]
+        },
+        {
+          "path": "stories/glasshouse-express/art-src/packed/A02-2.png",
+          "sha256": "c63e43a592bf847a2c9c029cad1d96fa4f93918185c3187824da6792176ab1b6",
+          "width": 1536,
+          "height": 2048,
+          "sources": [
+            {
+              "id": "keeper-props",
+              "path": "stories/glasshouse-express/references/keeper-props.webp",
+              "sha256": "7dd5472750a2c6205763d3cee1d42f0997819511e0dfbcb40cc30df96a7deb34",
+              "x": 0,
+              "y": 0,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            },
+            {
+              "id": "winter-terminus",
+              "path": "stories/glasshouse-express/references/winter-terminus.webp",
+              "sha256": "e22b66d12c2d56023025d734083bebba262209e78df381abb3a6e486dfc6e25c",
+              "x": 0,
+              "y": 1024,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page": "A03",
+      "referenceCount": 6,
+      "attachments": [
+        {
+          "path": "stories/glasshouse-express/art-src/packed/A03-1.png",
+          "sha256": "35e8a27a5b96d81756fbea8f8433e215e4586c7dad64ba6da5f101ae2989a3a3",
+          "width": 1536,
+          "height": 2048,
+          "sources": [
+            {
+              "id": "player-hesper",
+              "path": "stories/glasshouse-express/references/player-hesper.webp",
+              "sha256": "50511aac7b66cfef5f5cb038927c3a5d8a22b815c974c87584fdb9b1db5a6a30",
+              "x": 0,
+              "y": 0,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            },
+            {
+              "id": "glasshouse-carriage",
+              "path": "stories/glasshouse-express/references/glasshouse-carriage.webp",
+              "sha256": "8fc132adbe435576dd0ddd7b777be0d1099d973ff933248ba76398990d6d4611",
+              "x": 0,
+              "y": 1024,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            }
+          ]
+        },
+        {
+          "path": "stories/glasshouse-express/art-src/packed/A03-2.png",
+          "sha256": "5cf78072e88e35604c5573828e33e097ea8ef6d68de0ed565a81b4cf210ed111",
+          "width": 1536,
+          "height": 2048,
+          "sources": [
+            {
+              "id": "carriage-interior",
+              "path": "stories/glasshouse-express/references/carriage-interior.webp",
+              "sha256": "b7d5d1dbdb1d0a83ab99aa74b3cfe8cb49cdaee391a32c6f4ca39799d4e263ed",
+              "x": 0,
+              "y": 0,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            },
+            {
+              "id": "sunwort",
+              "path": "stories/glasshouse-express/references/sunwort.webp",
+              "sha256": "f7157dfa913c4b7f9b19af02fbdde09e3c4a56512fe6891cd81425d1e541e915",
+              "x": 0,
+              "y": 1024,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            }
+          ]
+        },
+        {
+          "path": "stories/glasshouse-express/art-src/packed/A03-3.png",
+          "sha256": "c63e43a592bf847a2c9c029cad1d96fa4f93918185c3187824da6792176ab1b6",
+          "width": 1536,
+          "height": 2048,
+          "sources": [
+            {
+              "id": "keeper-props",
+              "path": "stories/glasshouse-express/references/keeper-props.webp",
+              "sha256": "7dd5472750a2c6205763d3cee1d42f0997819511e0dfbcb40cc30df96a7deb34",
+              "x": 0,
+              "y": 0,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            },
+            {
+              "id": "winter-terminus",
+              "path": "stories/glasshouse-express/references/winter-terminus.webp",
+              "sha256": "e22b66d12c2d56023025d734083bebba262209e78df381abb3a6e486dfc6e25c",
+              "x": 0,
+              "y": 1024,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page": "A04",
+      "referenceCount": 5,
+      "attachments": [
+        {
+          "path": "stories/glasshouse-express/art-src/packed/A04-1.png",
+          "sha256": "b62d4e15f047770232f4e25e1c6c73e968064abede73e5bda3c0e8534d38bd06",
+          "width": 1536,
+          "height": 2048,
+          "sources": [
+            {
+              "id": "player-hesper",
+              "path": "stories/glasshouse-express/references/player-hesper.webp",
+              "sha256": "50511aac7b66cfef5f5cb038927c3a5d8a22b815c974c87584fdb9b1db5a6a30",
+              "x": 0,
+              "y": 0,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            },
+            {
+              "id": "carriage-interior",
+              "path": "stories/glasshouse-express/references/carriage-interior.webp",
+              "sha256": "b7d5d1dbdb1d0a83ab99aa74b3cfe8cb49cdaee391a32c6f4ca39799d4e263ed",
+              "x": 0,
+              "y": 1024,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            }
+          ]
+        },
+        {
+          "path": "stories/glasshouse-express/art-src/packed/A04-2.png",
+          "sha256": "93549122a6a2c8db6da5e2d06703bda20fdaa601f853607549d378df4b012ba0",
+          "width": 1536,
+          "height": 2048,
+          "sources": [
+            {
+              "id": "sunwort",
+              "path": "stories/glasshouse-express/references/sunwort.webp",
+              "sha256": "f7157dfa913c4b7f9b19af02fbdde09e3c4a56512fe6891cd81425d1e541e915",
+              "x": 0,
+              "y": 0,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            },
+            {
+              "id": "keeper-props",
+              "path": "stories/glasshouse-express/references/keeper-props.webp",
+              "sha256": "7dd5472750a2c6205763d3cee1d42f0997819511e0dfbcb40cc30df96a7deb34",
+              "x": 0,
+              "y": 1024,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            }
+          ]
+        },
+        {
+          "path": "stories/glasshouse-express/art-src/packed/A04-3.png",
+          "sha256": "a92bf6d814d6c78400019aeff1bd964a7760978c36885050b347d0f3b0a69687",
+          "width": 1536,
+          "height": 1024,
+          "sources": [
+            {
+              "id": "winter-terminus",
+              "path": "stories/glasshouse-express/references/winter-terminus.webp",
+              "sha256": "e22b66d12c2d56023025d734083bebba262209e78df381abb3a6e486dfc6e25c",
+              "x": 0,
+              "y": 0,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page": "A05",
+      "referenceCount": 4,
+      "attachments": [
+        {
+          "path": "stories/glasshouse-express/art-src/packed/A05-1.png",
+          "sha256": "35e8a27a5b96d81756fbea8f8433e215e4586c7dad64ba6da5f101ae2989a3a3",
+          "width": 1536,
+          "height": 2048,
+          "sources": [
+            {
+              "id": "player-hesper",
+              "path": "stories/glasshouse-express/references/player-hesper.webp",
+              "sha256": "50511aac7b66cfef5f5cb038927c3a5d8a22b815c974c87584fdb9b1db5a6a30",
+              "x": 0,
+              "y": 0,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            },
+            {
+              "id": "glasshouse-carriage",
+              "path": "stories/glasshouse-express/references/glasshouse-carriage.webp",
+              "sha256": "8fc132adbe435576dd0ddd7b777be0d1099d973ff933248ba76398990d6d4611",
+              "x": 0,
+              "y": 1024,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            }
+          ]
+        },
+        {
+          "path": "stories/glasshouse-express/art-src/packed/A05-2.png",
+          "sha256": "c63e43a592bf847a2c9c029cad1d96fa4f93918185c3187824da6792176ab1b6",
+          "width": 1536,
+          "height": 2048,
+          "sources": [
+            {
+              "id": "keeper-props",
+              "path": "stories/glasshouse-express/references/keeper-props.webp",
+              "sha256": "7dd5472750a2c6205763d3cee1d42f0997819511e0dfbcb40cc30df96a7deb34",
+              "x": 0,
+              "y": 0,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            },
+            {
+              "id": "winter-terminus",
+              "path": "stories/glasshouse-express/references/winter-terminus.webp",
+              "sha256": "e22b66d12c2d56023025d734083bebba262209e78df381abb3a6e486dfc6e25c",
+              "x": 0,
+              "y": 1024,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page": "A06",
+      "referenceCount": 5,
+      "attachments": [
+        {
+          "path": "stories/glasshouse-express/art-src/packed/A06-1.png",
+          "sha256": "35e8a27a5b96d81756fbea8f8433e215e4586c7dad64ba6da5f101ae2989a3a3",
+          "width": 1536,
+          "height": 2048,
+          "sources": [
+            {
+              "id": "player-hesper",
+              "path": "stories/glasshouse-express/references/player-hesper.webp",
+              "sha256": "50511aac7b66cfef5f5cb038927c3a5d8a22b815c974c87584fdb9b1db5a6a30",
+              "x": 0,
+              "y": 0,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            },
+            {
+              "id": "glasshouse-carriage",
+              "path": "stories/glasshouse-express/references/glasshouse-carriage.webp",
+              "sha256": "8fc132adbe435576dd0ddd7b777be0d1099d973ff933248ba76398990d6d4611",
+              "x": 0,
+              "y": 1024,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            }
+          ]
+        },
+        {
+          "path": "stories/glasshouse-express/art-src/packed/A06-2.png",
+          "sha256": "5cf78072e88e35604c5573828e33e097ea8ef6d68de0ed565a81b4cf210ed111",
+          "width": 1536,
+          "height": 2048,
+          "sources": [
+            {
+              "id": "carriage-interior",
+              "path": "stories/glasshouse-express/references/carriage-interior.webp",
+              "sha256": "b7d5d1dbdb1d0a83ab99aa74b3cfe8cb49cdaee391a32c6f4ca39799d4e263ed",
+              "x": 0,
+              "y": 0,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            },
+            {
+              "id": "sunwort",
+              "path": "stories/glasshouse-express/references/sunwort.webp",
+              "sha256": "f7157dfa913c4b7f9b19af02fbdde09e3c4a56512fe6891cd81425d1e541e915",
+              "x": 0,
+              "y": 1024,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            }
+          ]
+        },
+        {
+          "path": "stories/glasshouse-express/art-src/packed/A06-3.png",
+          "sha256": "a92bf6d814d6c78400019aeff1bd964a7760978c36885050b347d0f3b0a69687",
+          "width": 1536,
+          "height": 1024,
+          "sources": [
+            {
+              "id": "winter-terminus",
+              "path": "stories/glasshouse-express/references/winter-terminus.webp",
+              "sha256": "e22b66d12c2d56023025d734083bebba262209e78df381abb3a6e486dfc6e25c",
+              "x": 0,
+              "y": 0,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page": "B01",
+      "referenceCount": 5,
+      "attachments": [
+        {
+          "path": "stories/glasshouse-express/art-src/packed/B01-1.png",
+          "sha256": "52ec26d424a90c0bd8f57717d04e86878fad501f5c72dd61f5fe5c4a8bc96022",
+          "width": 1536,
+          "height": 2048,
+          "sources": [
+            {
+              "id": "player-hesper",
+              "path": "stories/glasshouse-express/references/player-hesper.webp",
+              "sha256": "50511aac7b66cfef5f5cb038927c3a5d8a22b815c974c87584fdb9b1db5a6a30",
+              "x": 0,
+              "y": 0,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            },
+            {
+              "id": "dov",
+              "path": "stories/glasshouse-express/references/dov.webp",
+              "sha256": "dc705854ecd63bd9a5a1d3f4a84c8fab5a4cd891d30fa63bbc08ff773fe57f39",
+              "x": 0,
+              "y": 1024,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            }
+          ]
+        },
+        {
+          "path": "stories/glasshouse-express/art-src/packed/B01-2.png",
+          "sha256": "c91a16ca699acc38422120317d31c28c204b70ff1cafc0e6389b142e16ddc527",
+          "width": 1536,
+          "height": 2048,
+          "sources": [
+            {
+              "id": "marigold",
+              "path": "stories/glasshouse-express/references/marigold.webp",
+              "sha256": "af1e473d6708070843aa8b36670d94f10cbcb4be7de60a422cbdf7c0f3beae0b",
+              "x": 0,
+              "y": 0,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            },
+            {
+              "id": "glasshouse-carriage",
+              "path": "stories/glasshouse-express/references/glasshouse-carriage.webp",
+              "sha256": "8fc132adbe435576dd0ddd7b777be0d1099d973ff933248ba76398990d6d4611",
+              "x": 0,
+              "y": 1024,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            }
+          ]
+        },
+        {
+          "path": "stories/glasshouse-express/art-src/packed/B01-3.png",
+          "sha256": "7c367b539c8fe09bce595e9b55adb9ce6fc9604554f488d1eee307a492c953a8",
+          "width": 1536,
+          "height": 1024,
+          "sources": [
+            {
+              "id": "candlewick-junction",
+              "path": "stories/glasshouse-express/references/candlewick-junction.webp",
+              "sha256": "757333ba2a58171bd1c0afc4a7a43c7b36d31bd3a618bb81bb4b5afe4728745d",
+              "x": 0,
+              "y": 0,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page": "B02",
+      "referenceCount": 6,
+      "attachments": [
+        {
+          "path": "stories/glasshouse-express/art-src/packed/B02-1.png",
+          "sha256": "52ec26d424a90c0bd8f57717d04e86878fad501f5c72dd61f5fe5c4a8bc96022",
+          "width": 1536,
+          "height": 2048,
+          "sources": [
+            {
+              "id": "player-hesper",
+              "path": "stories/glasshouse-express/references/player-hesper.webp",
+              "sha256": "50511aac7b66cfef5f5cb038927c3a5d8a22b815c974c87584fdb9b1db5a6a30",
+              "x": 0,
+              "y": 0,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            },
+            {
+              "id": "dov",
+              "path": "stories/glasshouse-express/references/dov.webp",
+              "sha256": "dc705854ecd63bd9a5a1d3f4a84c8fab5a4cd891d30fa63bbc08ff773fe57f39",
+              "x": 0,
+              "y": 1024,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            }
+          ]
+        },
+        {
+          "path": "stories/glasshouse-express/art-src/packed/B02-2.png",
+          "sha256": "c91a16ca699acc38422120317d31c28c204b70ff1cafc0e6389b142e16ddc527",
+          "width": 1536,
+          "height": 2048,
+          "sources": [
+            {
+              "id": "marigold",
+              "path": "stories/glasshouse-express/references/marigold.webp",
+              "sha256": "af1e473d6708070843aa8b36670d94f10cbcb4be7de60a422cbdf7c0f3beae0b",
+              "x": 0,
+              "y": 0,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            },
+            {
+              "id": "glasshouse-carriage",
+              "path": "stories/glasshouse-express/references/glasshouse-carriage.webp",
+              "sha256": "8fc132adbe435576dd0ddd7b777be0d1099d973ff933248ba76398990d6d4611",
+              "x": 0,
+              "y": 1024,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            }
+          ]
+        },
+        {
+          "path": "stories/glasshouse-express/art-src/packed/B02-3.png",
+          "sha256": "bf5fead3f315247acb26f5f69ef03b844b3237c088984be53d896ee966b98e01",
+          "width": 1536,
+          "height": 2048,
+          "sources": [
+            {
+              "id": "keeper-props",
+              "path": "stories/glasshouse-express/references/keeper-props.webp",
+              "sha256": "7dd5472750a2c6205763d3cee1d42f0997819511e0dfbcb40cc30df96a7deb34",
+              "x": 0,
+              "y": 0,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            },
+            {
+              "id": "candlewick-junction",
+              "path": "stories/glasshouse-express/references/candlewick-junction.webp",
+              "sha256": "757333ba2a58171bd1c0afc4a7a43c7b36d31bd3a618bb81bb4b5afe4728745d",
+              "x": 0,
+              "y": 1024,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page": "B03",
+      "referenceCount": 6,
+      "attachments": [
+        {
+          "path": "stories/glasshouse-express/art-src/packed/B03-1.png",
+          "sha256": "52ec26d424a90c0bd8f57717d04e86878fad501f5c72dd61f5fe5c4a8bc96022",
+          "width": 1536,
+          "height": 2048,
+          "sources": [
+            {
+              "id": "player-hesper",
+              "path": "stories/glasshouse-express/references/player-hesper.webp",
+              "sha256": "50511aac7b66cfef5f5cb038927c3a5d8a22b815c974c87584fdb9b1db5a6a30",
+              "x": 0,
+              "y": 0,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            },
+            {
+              "id": "dov",
+              "path": "stories/glasshouse-express/references/dov.webp",
+              "sha256": "dc705854ecd63bd9a5a1d3f4a84c8fab5a4cd891d30fa63bbc08ff773fe57f39",
+              "x": 0,
+              "y": 1024,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            }
+          ]
+        },
+        {
+          "path": "stories/glasshouse-express/art-src/packed/B03-2.png",
+          "sha256": "b240dddc8ecc11ee48ccf884bd28f3a52c02b17929863635914a68e62f2d5012",
+          "width": 1536,
+          "height": 2048,
+          "sources": [
+            {
+              "id": "lower-town-cast",
+              "path": "stories/glasshouse-express/references/lower-town-cast.webp",
+              "sha256": "a44dc6654985bc79cfd2b772d3c8e01e17dc6cc2cb43eafbb0fbf2873b9e921d",
+              "x": 0,
+              "y": 0,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            },
+            {
+              "id": "marigold",
+              "path": "stories/glasshouse-express/references/marigold.webp",
+              "sha256": "af1e473d6708070843aa8b36670d94f10cbcb4be7de60a422cbdf7c0f3beae0b",
+              "x": 0,
+              "y": 1024,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            }
+          ]
+        },
+        {
+          "path": "stories/glasshouse-express/art-src/packed/B03-3.png",
+          "sha256": "f4c3510c1dedf3c9c0b976d7c70b9845ec6bfcd4e22e9db9cbda7faabb91f58d",
+          "width": 1536,
+          "height": 2048,
+          "sources": [
+            {
+              "id": "glasshouse-carriage",
+              "path": "stories/glasshouse-express/references/glasshouse-carriage.webp",
+              "sha256": "8fc132adbe435576dd0ddd7b777be0d1099d973ff933248ba76398990d6d4611",
+              "x": 0,
+              "y": 0,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            },
+            {
+              "id": "ember-works",
+              "path": "stories/glasshouse-express/references/ember-works.webp",
+              "sha256": "1f5f8eb6cb5434709589727c6d6576542d844d709ba832ba5a8b1214b2592b16",
+              "x": 0,
+              "y": 1024,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page": "B04",
+      "referenceCount": 5,
+      "attachments": [
+        {
+          "path": "stories/glasshouse-express/art-src/packed/B04-1.png",
+          "sha256": "52ec26d424a90c0bd8f57717d04e86878fad501f5c72dd61f5fe5c4a8bc96022",
+          "width": 1536,
+          "height": 2048,
+          "sources": [
+            {
+              "id": "player-hesper",
+              "path": "stories/glasshouse-express/references/player-hesper.webp",
+              "sha256": "50511aac7b66cfef5f5cb038927c3a5d8a22b815c974c87584fdb9b1db5a6a30",
+              "x": 0,
+              "y": 0,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            },
+            {
+              "id": "dov",
+              "path": "stories/glasshouse-express/references/dov.webp",
+              "sha256": "dc705854ecd63bd9a5a1d3f4a84c8fab5a4cd891d30fa63bbc08ff773fe57f39",
+              "x": 0,
+              "y": 1024,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            }
+          ]
+        },
+        {
+          "path": "stories/glasshouse-express/art-src/packed/B04-2.png",
+          "sha256": "9b31e53de0ede9bb7adc8a2e8456da01247e16004b774b047f01b7affd146959",
+          "width": 1536,
+          "height": 2048,
+          "sources": [
+            {
+              "id": "lower-town-cast",
+              "path": "stories/glasshouse-express/references/lower-town-cast.webp",
+              "sha256": "a44dc6654985bc79cfd2b772d3c8e01e17dc6cc2cb43eafbb0fbf2873b9e921d",
+              "x": 0,
+              "y": 0,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            },
+            {
+              "id": "glasshouse-carriage",
+              "path": "stories/glasshouse-express/references/glasshouse-carriage.webp",
+              "sha256": "8fc132adbe435576dd0ddd7b777be0d1099d973ff933248ba76398990d6d4611",
+              "x": 0,
+              "y": 1024,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            }
+          ]
+        },
+        {
+          "path": "stories/glasshouse-express/art-src/packed/B04-3.png",
+          "sha256": "da28e3df4bc959d69f57d969eb1a56e1ad66a8fe92bfebfed3f962426480b536",
+          "width": 1536,
+          "height": 1024,
+          "sources": [
+            {
+              "id": "ember-works",
+              "path": "stories/glasshouse-express/references/ember-works.webp",
+              "sha256": "1f5f8eb6cb5434709589727c6d6576542d844d709ba832ba5a8b1214b2592b16",
+              "x": 0,
+              "y": 0,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page": "B05",
+      "referenceCount": 6,
+      "attachments": [
+        {
+          "path": "stories/glasshouse-express/art-src/packed/B05-1.png",
+          "sha256": "52ec26d424a90c0bd8f57717d04e86878fad501f5c72dd61f5fe5c4a8bc96022",
+          "width": 1536,
+          "height": 2048,
+          "sources": [
+            {
+              "id": "player-hesper",
+              "path": "stories/glasshouse-express/references/player-hesper.webp",
+              "sha256": "50511aac7b66cfef5f5cb038927c3a5d8a22b815c974c87584fdb9b1db5a6a30",
+              "x": 0,
+              "y": 0,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            },
+            {
+              "id": "dov",
+              "path": "stories/glasshouse-express/references/dov.webp",
+              "sha256": "dc705854ecd63bd9a5a1d3f4a84c8fab5a4cd891d30fa63bbc08ff773fe57f39",
+              "x": 0,
+              "y": 1024,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            }
+          ]
+        },
+        {
+          "path": "stories/glasshouse-express/art-src/packed/B05-2.png",
+          "sha256": "c91a16ca699acc38422120317d31c28c204b70ff1cafc0e6389b142e16ddc527",
+          "width": 1536,
+          "height": 2048,
+          "sources": [
+            {
+              "id": "marigold",
+              "path": "stories/glasshouse-express/references/marigold.webp",
+              "sha256": "af1e473d6708070843aa8b36670d94f10cbcb4be7de60a422cbdf7c0f3beae0b",
+              "x": 0,
+              "y": 0,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            },
+            {
+              "id": "glasshouse-carriage",
+              "path": "stories/glasshouse-express/references/glasshouse-carriage.webp",
+              "sha256": "8fc132adbe435576dd0ddd7b777be0d1099d973ff933248ba76398990d6d4611",
+              "x": 0,
+              "y": 1024,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            }
+          ]
+        },
+        {
+          "path": "stories/glasshouse-express/art-src/packed/B05-3.png",
+          "sha256": "bf5fead3f315247acb26f5f69ef03b844b3237c088984be53d896ee966b98e01",
+          "width": 1536,
+          "height": 2048,
+          "sources": [
+            {
+              "id": "keeper-props",
+              "path": "stories/glasshouse-express/references/keeper-props.webp",
+              "sha256": "7dd5472750a2c6205763d3cee1d42f0997819511e0dfbcb40cc30df96a7deb34",
+              "x": 0,
+              "y": 0,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            },
+            {
+              "id": "candlewick-junction",
+              "path": "stories/glasshouse-express/references/candlewick-junction.webp",
+              "sha256": "757333ba2a58171bd1c0afc4a7a43c7b36d31bd3a618bb81bb4b5afe4728745d",
+              "x": 0,
+              "y": 1024,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page": "B06",
+      "referenceCount": 4,
+      "attachments": [
+        {
+          "path": "stories/glasshouse-express/art-src/packed/B06-1.png",
+          "sha256": "253c646bb0fe7e4c4795b98038a133f0db0638d7092f06081fc91b2b93ef9815",
+          "width": 1536,
+          "height": 2048,
+          "sources": [
+            {
+              "id": "player-hesper",
+              "path": "stories/glasshouse-express/references/player-hesper.webp",
+              "sha256": "50511aac7b66cfef5f5cb038927c3a5d8a22b815c974c87584fdb9b1db5a6a30",
+              "x": 0,
+              "y": 0,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            },
+            {
+              "id": "marigold",
+              "path": "stories/glasshouse-express/references/marigold.webp",
+              "sha256": "af1e473d6708070843aa8b36670d94f10cbcb4be7de60a422cbdf7c0f3beae0b",
+              "x": 0,
+              "y": 1024,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            }
+          ]
+        },
+        {
+          "path": "stories/glasshouse-express/art-src/packed/B06-2.png",
+          "sha256": "7d8e511c097d8ff01caab0a3d07f2db689629c6f8ab1d14b5a95617ab5bb855c",
+          "width": 1536,
+          "height": 2048,
+          "sources": [
+            {
+              "id": "glasshouse-carriage",
+              "path": "stories/glasshouse-express/references/glasshouse-carriage.webp",
+              "sha256": "8fc132adbe435576dd0ddd7b777be0d1099d973ff933248ba76398990d6d4611",
+              "x": 0,
+              "y": 0,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            },
+            {
+              "id": "tallow-street-and-halt",
+              "path": "stories/glasshouse-express/references/tallow-street-and-halt.webp",
+              "sha256": "853adfb0ef1c0bfd244e466b3e91bdf1bccf400b3d8b216d0710c1ec31db14cf",
+              "x": 0,
+              "y": 1024,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page": "B07",
+      "referenceCount": 5,
+      "attachments": [
+        {
+          "path": "stories/glasshouse-express/art-src/packed/B07-1.png",
+          "sha256": "52ec26d424a90c0bd8f57717d04e86878fad501f5c72dd61f5fe5c4a8bc96022",
+          "width": 1536,
+          "height": 2048,
+          "sources": [
+            {
+              "id": "player-hesper",
+              "path": "stories/glasshouse-express/references/player-hesper.webp",
+              "sha256": "50511aac7b66cfef5f5cb038927c3a5d8a22b815c974c87584fdb9b1db5a6a30",
+              "x": 0,
+              "y": 0,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            },
+            {
+              "id": "dov",
+              "path": "stories/glasshouse-express/references/dov.webp",
+              "sha256": "dc705854ecd63bd9a5a1d3f4a84c8fab5a4cd891d30fa63bbc08ff773fe57f39",
+              "x": 0,
+              "y": 1024,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            }
+          ]
+        },
+        {
+          "path": "stories/glasshouse-express/art-src/packed/B07-2.png",
+          "sha256": "c91a16ca699acc38422120317d31c28c204b70ff1cafc0e6389b142e16ddc527",
+          "width": 1536,
+          "height": 2048,
+          "sources": [
+            {
+              "id": "marigold",
+              "path": "stories/glasshouse-express/references/marigold.webp",
+              "sha256": "af1e473d6708070843aa8b36670d94f10cbcb4be7de60a422cbdf7c0f3beae0b",
+              "x": 0,
+              "y": 0,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            },
+            {
+              "id": "glasshouse-carriage",
+              "path": "stories/glasshouse-express/references/glasshouse-carriage.webp",
+              "sha256": "8fc132adbe435576dd0ddd7b777be0d1099d973ff933248ba76398990d6d4611",
+              "x": 0,
+              "y": 1024,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            }
+          ]
+        },
+        {
+          "path": "stories/glasshouse-express/art-src/packed/B07-3.png",
+          "sha256": "b9e8c3f5b5c2fed0b546beb00c2a8292b4068a5cdb79ba199eb6ad601383a5ba",
+          "width": 1536,
+          "height": 1024,
+          "sources": [
+            {
+              "id": "tallow-street-and-halt",
+              "path": "stories/glasshouse-express/references/tallow-street-and-halt.webp",
+              "sha256": "853adfb0ef1c0bfd244e466b3e91bdf1bccf400b3d8b216d0710c1ec31db14cf",
+              "x": 0,
+              "y": 0,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page": "B08",
+      "referenceCount": 5,
+      "attachments": [
+        {
+          "path": "stories/glasshouse-express/art-src/packed/B08-1.png",
+          "sha256": "253c646bb0fe7e4c4795b98038a133f0db0638d7092f06081fc91b2b93ef9815",
+          "width": 1536,
+          "height": 2048,
+          "sources": [
+            {
+              "id": "player-hesper",
+              "path": "stories/glasshouse-express/references/player-hesper.webp",
+              "sha256": "50511aac7b66cfef5f5cb038927c3a5d8a22b815c974c87584fdb9b1db5a6a30",
+              "x": 0,
+              "y": 0,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            },
+            {
+              "id": "marigold",
+              "path": "stories/glasshouse-express/references/marigold.webp",
+              "sha256": "af1e473d6708070843aa8b36670d94f10cbcb4be7de60a422cbdf7c0f3beae0b",
+              "x": 0,
+              "y": 1024,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            }
+          ]
+        },
+        {
+          "path": "stories/glasshouse-express/art-src/packed/B08-2.png",
+          "sha256": "0d692d04f47c9af772796f3817fbc8f7fee4376bebbf2c12439e89896e275cf7",
+          "width": 1536,
+          "height": 2048,
+          "sources": [
+            {
+              "id": "glasshouse-carriage",
+              "path": "stories/glasshouse-express/references/glasshouse-carriage.webp",
+              "sha256": "8fc132adbe435576dd0ddd7b777be0d1099d973ff933248ba76398990d6d4611",
+              "x": 0,
+              "y": 0,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            },
+            {
+              "id": "keeper-props",
+              "path": "stories/glasshouse-express/references/keeper-props.webp",
+              "sha256": "7dd5472750a2c6205763d3cee1d42f0997819511e0dfbcb40cc30df96a7deb34",
+              "x": 0,
+              "y": 1024,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            }
+          ]
+        },
+        {
+          "path": "stories/glasshouse-express/art-src/packed/B08-3.png",
+          "sha256": "b9e8c3f5b5c2fed0b546beb00c2a8292b4068a5cdb79ba199eb6ad601383a5ba",
+          "width": 1536,
+          "height": 1024,
+          "sources": [
+            {
+              "id": "tallow-street-and-halt",
+              "path": "stories/glasshouse-express/references/tallow-street-and-halt.webp",
+              "sha256": "853adfb0ef1c0bfd244e466b3e91bdf1bccf400b3d8b216d0710c1ec31db14cf",
+              "x": 0,
+              "y": 0,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page": "B09",
+      "referenceCount": 4,
+      "attachments": [
+        {
+          "path": "stories/glasshouse-express/art-src/packed/B09-1.png",
+          "sha256": "9258db3f5cd2900558f0ee0a11410b597e1e39e92ca0d5a2947b55c3aeaa4e48",
+          "width": 1536,
+          "height": 2048,
+          "sources": [
+            {
+              "id": "player-hesper",
+              "path": "stories/glasshouse-express/references/player-hesper.webp",
+              "sha256": "50511aac7b66cfef5f5cb038927c3a5d8a22b815c974c87584fdb9b1db5a6a30",
+              "x": 0,
+              "y": 0,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            },
+            {
+              "id": "lower-town-cast",
+              "path": "stories/glasshouse-express/references/lower-town-cast.webp",
+              "sha256": "a44dc6654985bc79cfd2b772d3c8e01e17dc6cc2cb43eafbb0fbf2873b9e921d",
+              "x": 0,
+              "y": 1024,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            }
+          ]
+        },
+        {
+          "path": "stories/glasshouse-express/art-src/packed/B09-2.png",
+          "sha256": "02619a294d9a8319d880ea81d8905209f4248a51d096a47985e93ffafc0a194c",
+          "width": 1536,
+          "height": 2048,
+          "sources": [
+            {
+              "id": "tallow-street-and-halt",
+              "path": "stories/glasshouse-express/references/tallow-street-and-halt.webp",
+              "sha256": "853adfb0ef1c0bfd244e466b3e91bdf1bccf400b3d8b216d0710c1ec31db14cf",
+              "x": 0,
+              "y": 0,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            },
+            {
+              "id": "lower-town-interiors",
+              "path": "stories/glasshouse-express/references/lower-town-interiors.webp",
+              "sha256": "e4395651c482f26cdd95f167d1d06703e22842d6c5e867819f6a6f9b7d74a796",
+              "x": 0,
+              "y": 1024,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page": "B10",
+      "referenceCount": 3,
+      "attachments": [
+        {
+          "path": "stories/glasshouse-express/art-src/packed/B10-1.png",
+          "sha256": "015b72de18b3db4ff6af240a9befe5f2364a0c107de9f4b79856982caac684ac",
+          "width": 1536,
+          "height": 2048,
+          "sources": [
+            {
+              "id": "player-hesper",
+              "path": "stories/glasshouse-express/references/player-hesper.webp",
+              "sha256": "50511aac7b66cfef5f5cb038927c3a5d8a22b815c974c87584fdb9b1db5a6a30",
+              "x": 0,
+              "y": 0,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            },
+            {
+              "id": "tallow-street-and-halt",
+              "path": "stories/glasshouse-express/references/tallow-street-and-halt.webp",
+              "sha256": "853adfb0ef1c0bfd244e466b3e91bdf1bccf400b3d8b216d0710c1ec31db14cf",
+              "x": 0,
+              "y": 1024,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            }
+          ]
+        },
+        {
+          "path": "stories/glasshouse-express/art-src/packed/B10-2.png",
+          "sha256": "f4c29ee7b1a89be4eeff891fdbd3c354589fd82c571c7474b8843e021bc48ef7",
+          "width": 1536,
+          "height": 1024,
+          "sources": [
+            {
+              "id": "lower-town-interiors",
+              "path": "stories/glasshouse-express/references/lower-town-interiors.webp",
+              "sha256": "e4395651c482f26cdd95f167d1d06703e22842d6c5e867819f6a6f9b7d74a796",
+              "x": 0,
+              "y": 0,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page": "C01",
+      "referenceCount": 5,
+      "attachments": [
+        {
+          "path": "stories/glasshouse-express/art-src/packed/C01-1.png",
+          "sha256": "253c646bb0fe7e4c4795b98038a133f0db0638d7092f06081fc91b2b93ef9815",
+          "width": 1536,
+          "height": 2048,
+          "sources": [
+            {
+              "id": "player-hesper",
+              "path": "stories/glasshouse-express/references/player-hesper.webp",
+              "sha256": "50511aac7b66cfef5f5cb038927c3a5d8a22b815c974c87584fdb9b1db5a6a30",
+              "x": 0,
+              "y": 0,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            },
+            {
+              "id": "marigold",
+              "path": "stories/glasshouse-express/references/marigold.webp",
+              "sha256": "af1e473d6708070843aa8b36670d94f10cbcb4be7de60a422cbdf7c0f3beae0b",
+              "x": 0,
+              "y": 1024,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            }
+          ]
+        },
+        {
+          "path": "stories/glasshouse-express/art-src/packed/C01-2.png",
+          "sha256": "7d8e511c097d8ff01caab0a3d07f2db689629c6f8ab1d14b5a95617ab5bb855c",
+          "width": 1536,
+          "height": 2048,
+          "sources": [
+            {
+              "id": "glasshouse-carriage",
+              "path": "stories/glasshouse-express/references/glasshouse-carriage.webp",
+              "sha256": "8fc132adbe435576dd0ddd7b777be0d1099d973ff933248ba76398990d6d4611",
+              "x": 0,
+              "y": 0,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            },
+            {
+              "id": "tallow-street-and-halt",
+              "path": "stories/glasshouse-express/references/tallow-street-and-halt.webp",
+              "sha256": "853adfb0ef1c0bfd244e466b3e91bdf1bccf400b3d8b216d0710c1ec31db14cf",
+              "x": 0,
+              "y": 1024,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            }
+          ]
+        },
+        {
+          "path": "stories/glasshouse-express/art-src/packed/C01-3.png",
+          "sha256": "44d620acc2e76aee667c14f357d6d41967b830f03f073be551b0037958ad0e5d",
+          "width": 1536,
+          "height": 1024,
+          "sources": [
+            {
+              "id": "mere-and-beacon",
+              "path": "stories/glasshouse-express/references/mere-and-beacon.webp",
+              "sha256": "e1c743c43c82f8f2b8572e22d82081c5d39d8e7f5c18132e78ce1a8648d24a5b",
+              "x": 0,
+              "y": 0,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page": "C02",
+      "referenceCount": 5,
+      "attachments": [
+        {
+          "path": "stories/glasshouse-express/art-src/packed/C02-1.png",
+          "sha256": "35e8a27a5b96d81756fbea8f8433e215e4586c7dad64ba6da5f101ae2989a3a3",
+          "width": 1536,
+          "height": 2048,
+          "sources": [
+            {
+              "id": "player-hesper",
+              "path": "stories/glasshouse-express/references/player-hesper.webp",
+              "sha256": "50511aac7b66cfef5f5cb038927c3a5d8a22b815c974c87584fdb9b1db5a6a30",
+              "x": 0,
+              "y": 0,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            },
+            {
+              "id": "glasshouse-carriage",
+              "path": "stories/glasshouse-express/references/glasshouse-carriage.webp",
+              "sha256": "8fc132adbe435576dd0ddd7b777be0d1099d973ff933248ba76398990d6d4611",
+              "x": 0,
+              "y": 1024,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            }
+          ]
+        },
+        {
+          "path": "stories/glasshouse-express/art-src/packed/C02-2.png",
+          "sha256": "5cf78072e88e35604c5573828e33e097ea8ef6d68de0ed565a81b4cf210ed111",
+          "width": 1536,
+          "height": 2048,
+          "sources": [
+            {
+              "id": "carriage-interior",
+              "path": "stories/glasshouse-express/references/carriage-interior.webp",
+              "sha256": "b7d5d1dbdb1d0a83ab99aa74b3cfe8cb49cdaee391a32c6f4ca39799d4e263ed",
+              "x": 0,
+              "y": 0,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            },
+            {
+              "id": "sunwort",
+              "path": "stories/glasshouse-express/references/sunwort.webp",
+              "sha256": "f7157dfa913c4b7f9b19af02fbdde09e3c4a56512fe6891cd81425d1e541e915",
+              "x": 0,
+              "y": 1024,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            }
+          ]
+        },
+        {
+          "path": "stories/glasshouse-express/art-src/packed/C02-3.png",
+          "sha256": "44d620acc2e76aee667c14f357d6d41967b830f03f073be551b0037958ad0e5d",
+          "width": 1536,
+          "height": 1024,
+          "sources": [
+            {
+              "id": "mere-and-beacon",
+              "path": "stories/glasshouse-express/references/mere-and-beacon.webp",
+              "sha256": "e1c743c43c82f8f2b8572e22d82081c5d39d8e7f5c18132e78ce1a8648d24a5b",
+              "x": 0,
+              "y": 0,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page": "C03",
+      "referenceCount": 6,
+      "attachments": [
+        {
+          "path": "stories/glasshouse-express/art-src/packed/C03-1.png",
+          "sha256": "52ec26d424a90c0bd8f57717d04e86878fad501f5c72dd61f5fe5c4a8bc96022",
+          "width": 1536,
+          "height": 2048,
+          "sources": [
+            {
+              "id": "player-hesper",
+              "path": "stories/glasshouse-express/references/player-hesper.webp",
+              "sha256": "50511aac7b66cfef5f5cb038927c3a5d8a22b815c974c87584fdb9b1db5a6a30",
+              "x": 0,
+              "y": 0,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            },
+            {
+              "id": "dov",
+              "path": "stories/glasshouse-express/references/dov.webp",
+              "sha256": "dc705854ecd63bd9a5a1d3f4a84c8fab5a4cd891d30fa63bbc08ff773fe57f39",
+              "x": 0,
+              "y": 1024,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            }
+          ]
+        },
+        {
+          "path": "stories/glasshouse-express/art-src/packed/C03-2.png",
+          "sha256": "c91a16ca699acc38422120317d31c28c204b70ff1cafc0e6389b142e16ddc527",
+          "width": 1536,
+          "height": 2048,
+          "sources": [
+            {
+              "id": "marigold",
+              "path": "stories/glasshouse-express/references/marigold.webp",
+              "sha256": "af1e473d6708070843aa8b36670d94f10cbcb4be7de60a422cbdf7c0f3beae0b",
+              "x": 0,
+              "y": 0,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            },
+            {
+              "id": "glasshouse-carriage",
+              "path": "stories/glasshouse-express/references/glasshouse-carriage.webp",
+              "sha256": "8fc132adbe435576dd0ddd7b777be0d1099d973ff933248ba76398990d6d4611",
+              "x": 0,
+              "y": 1024,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            }
+          ]
+        },
+        {
+          "path": "stories/glasshouse-express/art-src/packed/C03-3.png",
+          "sha256": "76af86017281893924726e013c9a9c71af354a3c12780ff3d502fd6a261cfa38",
+          "width": 1536,
+          "height": 2048,
+          "sources": [
+            {
+              "id": "keeper-props",
+              "path": "stories/glasshouse-express/references/keeper-props.webp",
+              "sha256": "7dd5472750a2c6205763d3cee1d42f0997819511e0dfbcb40cc30df96a7deb34",
+              "x": 0,
+              "y": 0,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            },
+            {
+              "id": "mere-and-beacon",
+              "path": "stories/glasshouse-express/references/mere-and-beacon.webp",
+              "sha256": "e1c743c43c82f8f2b8572e22d82081c5d39d8e7f5c18132e78ce1a8648d24a5b",
+              "x": 0,
+              "y": 1024,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page": "C04",
+      "referenceCount": 6,
+      "attachments": [
+        {
+          "path": "stories/glasshouse-express/art-src/packed/C04-1.png",
+          "sha256": "9258db3f5cd2900558f0ee0a11410b597e1e39e92ca0d5a2947b55c3aeaa4e48",
+          "width": 1536,
+          "height": 2048,
+          "sources": [
+            {
+              "id": "player-hesper",
+              "path": "stories/glasshouse-express/references/player-hesper.webp",
+              "sha256": "50511aac7b66cfef5f5cb038927c3a5d8a22b815c974c87584fdb9b1db5a6a30",
+              "x": 0,
+              "y": 0,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            },
+            {
+              "id": "lower-town-cast",
+              "path": "stories/glasshouse-express/references/lower-town-cast.webp",
+              "sha256": "a44dc6654985bc79cfd2b772d3c8e01e17dc6cc2cb43eafbb0fbf2873b9e921d",
+              "x": 0,
+              "y": 1024,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            }
+          ]
+        },
+        {
+          "path": "stories/glasshouse-express/art-src/packed/C04-2.png",
+          "sha256": "c91a16ca699acc38422120317d31c28c204b70ff1cafc0e6389b142e16ddc527",
+          "width": 1536,
+          "height": 2048,
+          "sources": [
+            {
+              "id": "marigold",
+              "path": "stories/glasshouse-express/references/marigold.webp",
+              "sha256": "af1e473d6708070843aa8b36670d94f10cbcb4be7de60a422cbdf7c0f3beae0b",
+              "x": 0,
+              "y": 0,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            },
+            {
+              "id": "glasshouse-carriage",
+              "path": "stories/glasshouse-express/references/glasshouse-carriage.webp",
+              "sha256": "8fc132adbe435576dd0ddd7b777be0d1099d973ff933248ba76398990d6d4611",
+              "x": 0,
+              "y": 1024,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            }
+          ]
+        },
+        {
+          "path": "stories/glasshouse-express/art-src/packed/C04-3.png",
+          "sha256": "9f216e2d442de9375457fac7eecaceebbf73d6d8cf656b93b790808b317121af",
+          "width": 1536,
+          "height": 2048,
+          "sources": [
+            {
+              "id": "lower-town-interiors",
+              "path": "stories/glasshouse-express/references/lower-town-interiors.webp",
+              "sha256": "e4395651c482f26cdd95f167d1d06703e22842d6c5e867819f6a6f9b7d74a796",
+              "x": 0,
+              "y": 0,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            },
+            {
+              "id": "mere-and-beacon",
+              "path": "stories/glasshouse-express/references/mere-and-beacon.webp",
+              "sha256": "e1c743c43c82f8f2b8572e22d82081c5d39d8e7f5c18132e78ce1a8648d24a5b",
+              "x": 0,
+              "y": 1024,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page": "C05",
+      "referenceCount": 5,
+      "attachments": [
+        {
+          "path": "stories/glasshouse-express/art-src/packed/C05-1.png",
+          "sha256": "35e8a27a5b96d81756fbea8f8433e215e4586c7dad64ba6da5f101ae2989a3a3",
+          "width": 1536,
+          "height": 2048,
+          "sources": [
+            {
+              "id": "player-hesper",
+              "path": "stories/glasshouse-express/references/player-hesper.webp",
+              "sha256": "50511aac7b66cfef5f5cb038927c3a5d8a22b815c974c87584fdb9b1db5a6a30",
+              "x": 0,
+              "y": 0,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            },
+            {
+              "id": "glasshouse-carriage",
+              "path": "stories/glasshouse-express/references/glasshouse-carriage.webp",
+              "sha256": "8fc132adbe435576dd0ddd7b777be0d1099d973ff933248ba76398990d6d4611",
+              "x": 0,
+              "y": 1024,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            }
+          ]
+        },
+        {
+          "path": "stories/glasshouse-express/art-src/packed/C05-2.png",
+          "sha256": "5cf78072e88e35604c5573828e33e097ea8ef6d68de0ed565a81b4cf210ed111",
+          "width": 1536,
+          "height": 2048,
+          "sources": [
+            {
+              "id": "carriage-interior",
+              "path": "stories/glasshouse-express/references/carriage-interior.webp",
+              "sha256": "b7d5d1dbdb1d0a83ab99aa74b3cfe8cb49cdaee391a32c6f4ca39799d4e263ed",
+              "x": 0,
+              "y": 0,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            },
+            {
+              "id": "sunwort",
+              "path": "stories/glasshouse-express/references/sunwort.webp",
+              "sha256": "f7157dfa913c4b7f9b19af02fbdde09e3c4a56512fe6891cd81425d1e541e915",
+              "x": 0,
+              "y": 1024,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            }
+          ]
+        },
+        {
+          "path": "stories/glasshouse-express/art-src/packed/C05-3.png",
+          "sha256": "44d620acc2e76aee667c14f357d6d41967b830f03f073be551b0037958ad0e5d",
+          "width": 1536,
+          "height": 1024,
+          "sources": [
+            {
+              "id": "mere-and-beacon",
+              "path": "stories/glasshouse-express/references/mere-and-beacon.webp",
+              "sha256": "e1c743c43c82f8f2b8572e22d82081c5d39d8e7f5c18132e78ce1a8648d24a5b",
+              "x": 0,
+              "y": 0,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page": "D01",
+      "referenceCount": 6,
+      "attachments": [
+        {
+          "path": "stories/glasshouse-express/art-src/packed/D01-1.png",
+          "sha256": "52ec26d424a90c0bd8f57717d04e86878fad501f5c72dd61f5fe5c4a8bc96022",
+          "width": 1536,
+          "height": 2048,
+          "sources": [
+            {
+              "id": "player-hesper",
+              "path": "stories/glasshouse-express/references/player-hesper.webp",
+              "sha256": "50511aac7b66cfef5f5cb038927c3a5d8a22b815c974c87584fdb9b1db5a6a30",
+              "x": 0,
+              "y": 0,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            },
+            {
+              "id": "dov",
+              "path": "stories/glasshouse-express/references/dov.webp",
+              "sha256": "dc705854ecd63bd9a5a1d3f4a84c8fab5a4cd891d30fa63bbc08ff773fe57f39",
+              "x": 0,
+              "y": 1024,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            }
+          ]
+        },
+        {
+          "path": "stories/glasshouse-express/art-src/packed/D01-2.png",
+          "sha256": "c91a16ca699acc38422120317d31c28c204b70ff1cafc0e6389b142e16ddc527",
+          "width": 1536,
+          "height": 2048,
+          "sources": [
+            {
+              "id": "marigold",
+              "path": "stories/glasshouse-express/references/marigold.webp",
+              "sha256": "af1e473d6708070843aa8b36670d94f10cbcb4be7de60a422cbdf7c0f3beae0b",
+              "x": 0,
+              "y": 0,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            },
+            {
+              "id": "glasshouse-carriage",
+              "path": "stories/glasshouse-express/references/glasshouse-carriage.webp",
+              "sha256": "8fc132adbe435576dd0ddd7b777be0d1099d973ff933248ba76398990d6d4611",
+              "x": 0,
+              "y": 1024,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            }
+          ]
+        },
+        {
+          "path": "stories/glasshouse-express/art-src/packed/D01-3.png",
+          "sha256": "cf99aacfd4a97e57e4cc502faa22d5631dd420c2653962aa57b37381bc6c2fb3",
+          "width": 1536,
+          "height": 2048,
+          "sources": [
+            {
+              "id": "keeper-props",
+              "path": "stories/glasshouse-express/references/keeper-props.webp",
+              "sha256": "7dd5472750a2c6205763d3cee1d42f0997819511e0dfbcb40cc30df96a7deb34",
+              "x": 0,
+              "y": 0,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            },
+            {
+              "id": "fernhallow-incline",
+              "path": "stories/glasshouse-express/references/fernhallow-incline.webp",
+              "sha256": "4e0bf61591ca66c58bd9cdfd2cef6ad3ba10cb58de126a0556f5f9aa588a7eec",
+              "x": 0,
+              "y": 1024,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page": "D07",
+      "referenceCount": 6,
+      "attachments": [
+        {
+          "path": "stories/glasshouse-express/art-src/packed/D07-1.png",
+          "sha256": "52ec26d424a90c0bd8f57717d04e86878fad501f5c72dd61f5fe5c4a8bc96022",
+          "width": 1536,
+          "height": 2048,
+          "sources": [
+            {
+              "id": "player-hesper",
+              "path": "stories/glasshouse-express/references/player-hesper.webp",
+              "sha256": "50511aac7b66cfef5f5cb038927c3a5d8a22b815c974c87584fdb9b1db5a6a30",
+              "x": 0,
+              "y": 0,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            },
+            {
+              "id": "dov",
+              "path": "stories/glasshouse-express/references/dov.webp",
+              "sha256": "dc705854ecd63bd9a5a1d3f4a84c8fab5a4cd891d30fa63bbc08ff773fe57f39",
+              "x": 0,
+              "y": 1024,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            }
+          ]
+        },
+        {
+          "path": "stories/glasshouse-express/art-src/packed/D07-2.png",
+          "sha256": "c91a16ca699acc38422120317d31c28c204b70ff1cafc0e6389b142e16ddc527",
+          "width": 1536,
+          "height": 2048,
+          "sources": [
+            {
+              "id": "marigold",
+              "path": "stories/glasshouse-express/references/marigold.webp",
+              "sha256": "af1e473d6708070843aa8b36670d94f10cbcb4be7de60a422cbdf7c0f3beae0b",
+              "x": 0,
+              "y": 0,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            },
+            {
+              "id": "glasshouse-carriage",
+              "path": "stories/glasshouse-express/references/glasshouse-carriage.webp",
+              "sha256": "8fc132adbe435576dd0ddd7b777be0d1099d973ff933248ba76398990d6d4611",
+              "x": 0,
+              "y": 1024,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            }
+          ]
+        },
+        {
+          "path": "stories/glasshouse-express/art-src/packed/D07-3.png",
+          "sha256": "cf99aacfd4a97e57e4cc502faa22d5631dd420c2653962aa57b37381bc6c2fb3",
+          "width": 1536,
+          "height": 2048,
+          "sources": [
+            {
+              "id": "keeper-props",
+              "path": "stories/glasshouse-express/references/keeper-props.webp",
+              "sha256": "7dd5472750a2c6205763d3cee1d42f0997819511e0dfbcb40cc30df96a7deb34",
+              "x": 0,
+              "y": 0,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            },
+            {
+              "id": "fernhallow-incline",
+              "path": "stories/glasshouse-express/references/fernhallow-incline.webp",
+              "sha256": "4e0bf61591ca66c58bd9cdfd2cef6ad3ba10cb58de126a0556f5f9aa588a7eec",
+              "x": 0,
+              "y": 1024,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page": "D02",
+      "referenceCount": 5,
+      "attachments": [
+        {
+          "path": "stories/glasshouse-express/art-src/packed/D02-1.png",
+          "sha256": "253c646bb0fe7e4c4795b98038a133f0db0638d7092f06081fc91b2b93ef9815",
+          "width": 1536,
+          "height": 2048,
+          "sources": [
+            {
+              "id": "player-hesper",
+              "path": "stories/glasshouse-express/references/player-hesper.webp",
+              "sha256": "50511aac7b66cfef5f5cb038927c3a5d8a22b815c974c87584fdb9b1db5a6a30",
+              "x": 0,
+              "y": 0,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            },
+            {
+              "id": "marigold",
+              "path": "stories/glasshouse-express/references/marigold.webp",
+              "sha256": "af1e473d6708070843aa8b36670d94f10cbcb4be7de60a422cbdf7c0f3beae0b",
+              "x": 0,
+              "y": 1024,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            }
+          ]
+        },
+        {
+          "path": "stories/glasshouse-express/art-src/packed/D02-2.png",
+          "sha256": "0d692d04f47c9af772796f3817fbc8f7fee4376bebbf2c12439e89896e275cf7",
+          "width": 1536,
+          "height": 2048,
+          "sources": [
+            {
+              "id": "glasshouse-carriage",
+              "path": "stories/glasshouse-express/references/glasshouse-carriage.webp",
+              "sha256": "8fc132adbe435576dd0ddd7b777be0d1099d973ff933248ba76398990d6d4611",
+              "x": 0,
+              "y": 0,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            },
+            {
+              "id": "keeper-props",
+              "path": "stories/glasshouse-express/references/keeper-props.webp",
+              "sha256": "7dd5472750a2c6205763d3cee1d42f0997819511e0dfbcb40cc30df96a7deb34",
+              "x": 0,
+              "y": 1024,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            }
+          ]
+        },
+        {
+          "path": "stories/glasshouse-express/art-src/packed/D02-3.png",
+          "sha256": "9ece3cc4a6f1e7b6828e07439f663cd07548aa55c5720d9d91a619aceca19d19",
+          "width": 1536,
+          "height": 1024,
+          "sources": [
+            {
+              "id": "fernhallow-incline",
+              "path": "stories/glasshouse-express/references/fernhallow-incline.webp",
+              "sha256": "4e0bf61591ca66c58bd9cdfd2cef6ad3ba10cb58de126a0556f5f9aa588a7eec",
+              "x": 0,
+              "y": 0,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page": "D03",
+      "referenceCount": 5,
+      "attachments": [
+        {
+          "path": "stories/glasshouse-express/art-src/packed/D03-1.png",
+          "sha256": "35e8a27a5b96d81756fbea8f8433e215e4586c7dad64ba6da5f101ae2989a3a3",
+          "width": 1536,
+          "height": 2048,
+          "sources": [
+            {
+              "id": "player-hesper",
+              "path": "stories/glasshouse-express/references/player-hesper.webp",
+              "sha256": "50511aac7b66cfef5f5cb038927c3a5d8a22b815c974c87584fdb9b1db5a6a30",
+              "x": 0,
+              "y": 0,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            },
+            {
+              "id": "glasshouse-carriage",
+              "path": "stories/glasshouse-express/references/glasshouse-carriage.webp",
+              "sha256": "8fc132adbe435576dd0ddd7b777be0d1099d973ff933248ba76398990d6d4611",
+              "x": 0,
+              "y": 1024,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            }
+          ]
+        },
+        {
+          "path": "stories/glasshouse-express/art-src/packed/D03-2.png",
+          "sha256": "5cf78072e88e35604c5573828e33e097ea8ef6d68de0ed565a81b4cf210ed111",
+          "width": 1536,
+          "height": 2048,
+          "sources": [
+            {
+              "id": "carriage-interior",
+              "path": "stories/glasshouse-express/references/carriage-interior.webp",
+              "sha256": "b7d5d1dbdb1d0a83ab99aa74b3cfe8cb49cdaee391a32c6f4ca39799d4e263ed",
+              "x": 0,
+              "y": 0,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            },
+            {
+              "id": "sunwort",
+              "path": "stories/glasshouse-express/references/sunwort.webp",
+              "sha256": "f7157dfa913c4b7f9b19af02fbdde09e3c4a56512fe6891cd81425d1e541e915",
+              "x": 0,
+              "y": 1024,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            }
+          ]
+        },
+        {
+          "path": "stories/glasshouse-express/art-src/packed/D03-3.png",
+          "sha256": "9ece3cc4a6f1e7b6828e07439f663cd07548aa55c5720d9d91a619aceca19d19",
+          "width": 1536,
+          "height": 1024,
+          "sources": [
+            {
+              "id": "fernhallow-incline",
+              "path": "stories/glasshouse-express/references/fernhallow-incline.webp",
+              "sha256": "4e0bf61591ca66c58bd9cdfd2cef6ad3ba10cb58de126a0556f5f9aa588a7eec",
+              "x": 0,
+              "y": 0,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page": "D04",
+      "referenceCount": 3,
+      "attachments": [
+        {
+          "path": "stories/glasshouse-express/art-src/packed/D04-1.png",
+          "sha256": "b62d4e15f047770232f4e25e1c6c73e968064abede73e5bda3c0e8534d38bd06",
+          "width": 1536,
+          "height": 2048,
+          "sources": [
+            {
+              "id": "player-hesper",
+              "path": "stories/glasshouse-express/references/player-hesper.webp",
+              "sha256": "50511aac7b66cfef5f5cb038927c3a5d8a22b815c974c87584fdb9b1db5a6a30",
+              "x": 0,
+              "y": 0,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            },
+            {
+              "id": "carriage-interior",
+              "path": "stories/glasshouse-express/references/carriage-interior.webp",
+              "sha256": "b7d5d1dbdb1d0a83ab99aa74b3cfe8cb49cdaee391a32c6f4ca39799d4e263ed",
+              "x": 0,
+              "y": 1024,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            }
+          ]
+        },
+        {
+          "path": "stories/glasshouse-express/art-src/packed/D04-2.png",
+          "sha256": "9ece3cc4a6f1e7b6828e07439f663cd07548aa55c5720d9d91a619aceca19d19",
+          "width": 1536,
+          "height": 1024,
+          "sources": [
+            {
+              "id": "fernhallow-incline",
+              "path": "stories/glasshouse-express/references/fernhallow-incline.webp",
+              "sha256": "4e0bf61591ca66c58bd9cdfd2cef6ad3ba10cb58de126a0556f5f9aa588a7eec",
+              "x": 0,
+              "y": 0,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page": "D06",
+      "referenceCount": 5,
+      "attachments": [
+        {
+          "path": "stories/glasshouse-express/art-src/packed/D06-1.png",
+          "sha256": "35e8a27a5b96d81756fbea8f8433e215e4586c7dad64ba6da5f101ae2989a3a3",
+          "width": 1536,
+          "height": 2048,
+          "sources": [
+            {
+              "id": "player-hesper",
+              "path": "stories/glasshouse-express/references/player-hesper.webp",
+              "sha256": "50511aac7b66cfef5f5cb038927c3a5d8a22b815c974c87584fdb9b1db5a6a30",
+              "x": 0,
+              "y": 0,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            },
+            {
+              "id": "glasshouse-carriage",
+              "path": "stories/glasshouse-express/references/glasshouse-carriage.webp",
+              "sha256": "8fc132adbe435576dd0ddd7b777be0d1099d973ff933248ba76398990d6d4611",
+              "x": 0,
+              "y": 1024,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            }
+          ]
+        },
+        {
+          "path": "stories/glasshouse-express/art-src/packed/D06-2.png",
+          "sha256": "5cf78072e88e35604c5573828e33e097ea8ef6d68de0ed565a81b4cf210ed111",
+          "width": 1536,
+          "height": 2048,
+          "sources": [
+            {
+              "id": "carriage-interior",
+              "path": "stories/glasshouse-express/references/carriage-interior.webp",
+              "sha256": "b7d5d1dbdb1d0a83ab99aa74b3cfe8cb49cdaee391a32c6f4ca39799d4e263ed",
+              "x": 0,
+              "y": 0,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            },
+            {
+              "id": "sunwort",
+              "path": "stories/glasshouse-express/references/sunwort.webp",
+              "sha256": "f7157dfa913c4b7f9b19af02fbdde09e3c4a56512fe6891cd81425d1e541e915",
+              "x": 0,
+              "y": 1024,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            }
+          ]
+        },
+        {
+          "path": "stories/glasshouse-express/art-src/packed/D06-3.png",
+          "sha256": "9ece3cc4a6f1e7b6828e07439f663cd07548aa55c5720d9d91a619aceca19d19",
+          "width": 1536,
+          "height": 1024,
+          "sources": [
+            {
+              "id": "fernhallow-incline",
+              "path": "stories/glasshouse-express/references/fernhallow-incline.webp",
+              "sha256": "4e0bf61591ca66c58bd9cdfd2cef6ad3ba10cb58de126a0556f5f9aa588a7eec",
+              "x": 0,
+              "y": 0,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page": "D05",
+      "referenceCount": 5,
+      "attachments": [
+        {
+          "path": "stories/glasshouse-express/art-src/packed/D05-1.png",
+          "sha256": "253c646bb0fe7e4c4795b98038a133f0db0638d7092f06081fc91b2b93ef9815",
+          "width": 1536,
+          "height": 2048,
+          "sources": [
+            {
+              "id": "player-hesper",
+              "path": "stories/glasshouse-express/references/player-hesper.webp",
+              "sha256": "50511aac7b66cfef5f5cb038927c3a5d8a22b815c974c87584fdb9b1db5a6a30",
+              "x": 0,
+              "y": 0,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            },
+            {
+              "id": "marigold",
+              "path": "stories/glasshouse-express/references/marigold.webp",
+              "sha256": "af1e473d6708070843aa8b36670d94f10cbcb4be7de60a422cbdf7c0f3beae0b",
+              "x": 0,
+              "y": 1024,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            }
+          ]
+        },
+        {
+          "path": "stories/glasshouse-express/art-src/packed/D05-2.png",
+          "sha256": "c9a801cae8e657d6ae584aec74734674d927b1aa1f572a3b7432d54d6163a3f1",
+          "width": 1536,
+          "height": 2048,
+          "sources": [
+            {
+              "id": "glasshouse-carriage",
+              "path": "stories/glasshouse-express/references/glasshouse-carriage.webp",
+              "sha256": "8fc132adbe435576dd0ddd7b777be0d1099d973ff933248ba76398990d6d4611",
+              "x": 0,
+              "y": 0,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            },
+            {
+              "id": "mere-and-beacon",
+              "path": "stories/glasshouse-express/references/mere-and-beacon.webp",
+              "sha256": "e1c743c43c82f8f2b8572e22d82081c5d39d8e7f5c18132e78ce1a8648d24a5b",
+              "x": 0,
+              "y": 1024,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            }
+          ]
+        },
+        {
+          "path": "stories/glasshouse-express/art-src/packed/D05-3.png",
+          "sha256": "e1b2aae8a0f17fd40c5633011955b7f33b8f3c9ec4169182be7956fbdf3f6d76",
+          "width": 1536,
+          "height": 1024,
+          "sources": [
+            {
+              "id": "conservatory-exterior",
+              "path": "stories/glasshouse-express/references/conservatory-exterior.webp",
+              "sha256": "ee65600b44b0fa3e9101d0e4419e4ae459339c40dd925be41d62a19474047823",
+              "x": 0,
+              "y": 0,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page": "F01",
+      "referenceCount": 6,
+      "attachments": [
+        {
+          "path": "stories/glasshouse-express/art-src/packed/F01-1.png",
+          "sha256": "52ec26d424a90c0bd8f57717d04e86878fad501f5c72dd61f5fe5c4a8bc96022",
+          "width": 1536,
+          "height": 2048,
+          "sources": [
+            {
+              "id": "player-hesper",
+              "path": "stories/glasshouse-express/references/player-hesper.webp",
+              "sha256": "50511aac7b66cfef5f5cb038927c3a5d8a22b815c974c87584fdb9b1db5a6a30",
+              "x": 0,
+              "y": 0,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            },
+            {
+              "id": "dov",
+              "path": "stories/glasshouse-express/references/dov.webp",
+              "sha256": "dc705854ecd63bd9a5a1d3f4a84c8fab5a4cd891d30fa63bbc08ff773fe57f39",
+              "x": 0,
+              "y": 1024,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            }
+          ]
+        },
+        {
+          "path": "stories/glasshouse-express/art-src/packed/F01-2.png",
+          "sha256": "3e594964b7fc6b2d3d6d554030507f11c62d4d68b5bf3ce78a4989ce903eeab6",
+          "width": 1536,
+          "height": 2048,
+          "sources": [
+            {
+              "id": "fenn",
+              "path": "stories/glasshouse-express/references/fenn.webp",
+              "sha256": "af77cc78162b10edf031e5907682e6635e8c9d2be4c7f88b45149f7fe5feb78d",
+              "x": 0,
+              "y": 0,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            },
+            {
+              "id": "marigold",
+              "path": "stories/glasshouse-express/references/marigold.webp",
+              "sha256": "af1e473d6708070843aa8b36670d94f10cbcb4be7de60a422cbdf7c0f3beae0b",
+              "x": 0,
+              "y": 1024,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            }
+          ]
+        },
+        {
+          "path": "stories/glasshouse-express/art-src/packed/F01-3.png",
+          "sha256": "311b16e880088b7c0771e26c88a2caf0ba01ba0c519c81baba20ecf4ddf83632",
+          "width": 1536,
+          "height": 2048,
+          "sources": [
+            {
+              "id": "glasshouse-carriage",
+              "path": "stories/glasshouse-express/references/glasshouse-carriage.webp",
+              "sha256": "8fc132adbe435576dd0ddd7b777be0d1099d973ff933248ba76398990d6d4611",
+              "x": 0,
+              "y": 0,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            },
+            {
+              "id": "conservatory-exterior",
+              "path": "stories/glasshouse-express/references/conservatory-exterior.webp",
+              "sha256": "ee65600b44b0fa3e9101d0e4419e4ae459339c40dd925be41d62a19474047823",
+              "x": 0,
+              "y": 1024,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page": "F02",
+      "referenceCount": 6,
+      "attachments": [
+        {
+          "path": "stories/glasshouse-express/art-src/packed/F02-1.png",
+          "sha256": "52ec26d424a90c0bd8f57717d04e86878fad501f5c72dd61f5fe5c4a8bc96022",
+          "width": 1536,
+          "height": 2048,
+          "sources": [
+            {
+              "id": "player-hesper",
+              "path": "stories/glasshouse-express/references/player-hesper.webp",
+              "sha256": "50511aac7b66cfef5f5cb038927c3a5d8a22b815c974c87584fdb9b1db5a6a30",
+              "x": 0,
+              "y": 0,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            },
+            {
+              "id": "dov",
+              "path": "stories/glasshouse-express/references/dov.webp",
+              "sha256": "dc705854ecd63bd9a5a1d3f4a84c8fab5a4cd891d30fa63bbc08ff773fe57f39",
+              "x": 0,
+              "y": 1024,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            }
+          ]
+        },
+        {
+          "path": "stories/glasshouse-express/art-src/packed/F02-2.png",
+          "sha256": "2325da2befce654c65e5edd19ada20739555a04d4c3dca8c5db79ddd0a97b0b4",
+          "width": 1536,
+          "height": 2048,
+          "sources": [
+            {
+              "id": "fenn",
+              "path": "stories/glasshouse-express/references/fenn.webp",
+              "sha256": "af77cc78162b10edf031e5907682e6635e8c9d2be4c7f88b45149f7fe5feb78d",
+              "x": 0,
+              "y": 0,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            },
+            {
+              "id": "sunwort",
+              "path": "stories/glasshouse-express/references/sunwort.webp",
+              "sha256": "f7157dfa913c4b7f9b19af02fbdde09e3c4a56512fe6891cd81425d1e541e915",
+              "x": 0,
+              "y": 1024,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            }
+          ]
+        },
+        {
+          "path": "stories/glasshouse-express/art-src/packed/F02-3.png",
+          "sha256": "4c8e4304ca38652312d98fab950b4d37670f4d2338549f98a82048eca8a4a659",
+          "width": 1536,
+          "height": 2048,
+          "sources": [
+            {
+              "id": "conservatory-exterior",
+              "path": "stories/glasshouse-express/references/conservatory-exterior.webp",
+              "sha256": "ee65600b44b0fa3e9101d0e4419e4ae459339c40dd925be41d62a19474047823",
+              "x": 0,
+              "y": 0,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            },
+            {
+              "id": "conservatory-interior",
+              "path": "stories/glasshouse-express/references/conservatory-interior.webp",
+              "sha256": "500ec0013059404a22a01ac981cd12f9f822b26b8c52804d7bacfda3d719534f",
+              "x": 0,
+              "y": 1024,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page": "F03",
+      "referenceCount": 7,
+      "attachments": [
+        {
+          "path": "stories/glasshouse-express/art-src/packed/F03-1.png",
+          "sha256": "52ec26d424a90c0bd8f57717d04e86878fad501f5c72dd61f5fe5c4a8bc96022",
+          "width": 1536,
+          "height": 2048,
+          "sources": [
+            {
+              "id": "player-hesper",
+              "path": "stories/glasshouse-express/references/player-hesper.webp",
+              "sha256": "50511aac7b66cfef5f5cb038927c3a5d8a22b815c974c87584fdb9b1db5a6a30",
+              "x": 0,
+              "y": 0,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            },
+            {
+              "id": "dov",
+              "path": "stories/glasshouse-express/references/dov.webp",
+              "sha256": "dc705854ecd63bd9a5a1d3f4a84c8fab5a4cd891d30fa63bbc08ff773fe57f39",
+              "x": 0,
+              "y": 1024,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            }
+          ]
+        },
+        {
+          "path": "stories/glasshouse-express/art-src/packed/F03-2.png",
+          "sha256": "2325da2befce654c65e5edd19ada20739555a04d4c3dca8c5db79ddd0a97b0b4",
+          "width": 1536,
+          "height": 2048,
+          "sources": [
+            {
+              "id": "fenn",
+              "path": "stories/glasshouse-express/references/fenn.webp",
+              "sha256": "af77cc78162b10edf031e5907682e6635e8c9d2be4c7f88b45149f7fe5feb78d",
+              "x": 0,
+              "y": 0,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            },
+            {
+              "id": "sunwort",
+              "path": "stories/glasshouse-express/references/sunwort.webp",
+              "sha256": "f7157dfa913c4b7f9b19af02fbdde09e3c4a56512fe6891cd81425d1e541e915",
+              "x": 0,
+              "y": 1024,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            }
+          ]
+        },
+        {
+          "path": "stories/glasshouse-express/art-src/packed/F03-3.png",
+          "sha256": "853302d54f41535a14b63e53bbe3b8a15bfc271c4b1e85ef84c9185f26a1a40d",
+          "width": 1536,
+          "height": 2048,
+          "sources": [
+            {
+              "id": "keeper-props",
+              "path": "stories/glasshouse-express/references/keeper-props.webp",
+              "sha256": "7dd5472750a2c6205763d3cee1d42f0997819511e0dfbcb40cc30df96a7deb34",
+              "x": 0,
+              "y": 0,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            },
+            {
+              "id": "conservatory-exterior",
+              "path": "stories/glasshouse-express/references/conservatory-exterior.webp",
+              "sha256": "ee65600b44b0fa3e9101d0e4419e4ae459339c40dd925be41d62a19474047823",
+              "x": 0,
+              "y": 1024,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            }
+          ]
+        },
+        {
+          "path": "stories/glasshouse-express/art-src/packed/F03-4.png",
+          "sha256": "5299fe6086fd3f7e380fe51e5143dc7813a73f89870807c7f3567164e40098f0",
+          "width": 1536,
+          "height": 1024,
+          "sources": [
+            {
+              "id": "conservatory-interior",
+              "path": "stories/glasshouse-express/references/conservatory-interior.webp",
+              "sha256": "500ec0013059404a22a01ac981cd12f9f822b26b8c52804d7bacfda3d719534f",
+              "x": 0,
+              "y": 0,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page": "F04",
+      "referenceCount": 6,
+      "attachments": [
+        {
+          "path": "stories/glasshouse-express/art-src/packed/F04-1.png",
+          "sha256": "52ec26d424a90c0bd8f57717d04e86878fad501f5c72dd61f5fe5c4a8bc96022",
+          "width": 1536,
+          "height": 2048,
+          "sources": [
+            {
+              "id": "player-hesper",
+              "path": "stories/glasshouse-express/references/player-hesper.webp",
+              "sha256": "50511aac7b66cfef5f5cb038927c3a5d8a22b815c974c87584fdb9b1db5a6a30",
+              "x": 0,
+              "y": 0,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            },
+            {
+              "id": "dov",
+              "path": "stories/glasshouse-express/references/dov.webp",
+              "sha256": "dc705854ecd63bd9a5a1d3f4a84c8fab5a4cd891d30fa63bbc08ff773fe57f39",
+              "x": 0,
+              "y": 1024,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            }
+          ]
+        },
+        {
+          "path": "stories/glasshouse-express/art-src/packed/F04-2.png",
+          "sha256": "594dfcc626149e4f54c4ea3cbd67bfd85239e4d2d71049cfaef78927dddfe1c7",
+          "width": 1536,
+          "height": 2048,
+          "sources": [
+            {
+              "id": "fenn",
+              "path": "stories/glasshouse-express/references/fenn.webp",
+              "sha256": "af77cc78162b10edf031e5907682e6635e8c9d2be4c7f88b45149f7fe5feb78d",
+              "x": 0,
+              "y": 0,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            },
+            {
+              "id": "keeper-props",
+              "path": "stories/glasshouse-express/references/keeper-props.webp",
+              "sha256": "7dd5472750a2c6205763d3cee1d42f0997819511e0dfbcb40cc30df96a7deb34",
+              "x": 0,
+              "y": 1024,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            }
+          ]
+        },
+        {
+          "path": "stories/glasshouse-express/art-src/packed/F04-3.png",
+          "sha256": "4c8e4304ca38652312d98fab950b4d37670f4d2338549f98a82048eca8a4a659",
+          "width": 1536,
+          "height": 2048,
+          "sources": [
+            {
+              "id": "conservatory-exterior",
+              "path": "stories/glasshouse-express/references/conservatory-exterior.webp",
+              "sha256": "ee65600b44b0fa3e9101d0e4419e4ae459339c40dd925be41d62a19474047823",
+              "x": 0,
+              "y": 0,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            },
+            {
+              "id": "conservatory-interior",
+              "path": "stories/glasshouse-express/references/conservatory-interior.webp",
+              "sha256": "500ec0013059404a22a01ac981cd12f9f822b26b8c52804d7bacfda3d719534f",
+              "x": 0,
+              "y": 1024,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page": "F05",
+      "referenceCount": 6,
+      "attachments": [
+        {
+          "path": "stories/glasshouse-express/art-src/packed/F05-1.png",
+          "sha256": "52ec26d424a90c0bd8f57717d04e86878fad501f5c72dd61f5fe5c4a8bc96022",
+          "width": 1536,
+          "height": 2048,
+          "sources": [
+            {
+              "id": "player-hesper",
+              "path": "stories/glasshouse-express/references/player-hesper.webp",
+              "sha256": "50511aac7b66cfef5f5cb038927c3a5d8a22b815c974c87584fdb9b1db5a6a30",
+              "x": 0,
+              "y": 0,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            },
+            {
+              "id": "dov",
+              "path": "stories/glasshouse-express/references/dov.webp",
+              "sha256": "dc705854ecd63bd9a5a1d3f4a84c8fab5a4cd891d30fa63bbc08ff773fe57f39",
+              "x": 0,
+              "y": 1024,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            }
+          ]
+        },
+        {
+          "path": "stories/glasshouse-express/art-src/packed/F05-2.png",
+          "sha256": "2325da2befce654c65e5edd19ada20739555a04d4c3dca8c5db79ddd0a97b0b4",
+          "width": 1536,
+          "height": 2048,
+          "sources": [
+            {
+              "id": "fenn",
+              "path": "stories/glasshouse-express/references/fenn.webp",
+              "sha256": "af77cc78162b10edf031e5907682e6635e8c9d2be4c7f88b45149f7fe5feb78d",
+              "x": 0,
+              "y": 0,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            },
+            {
+              "id": "sunwort",
+              "path": "stories/glasshouse-express/references/sunwort.webp",
+              "sha256": "f7157dfa913c4b7f9b19af02fbdde09e3c4a56512fe6891cd81425d1e541e915",
+              "x": 0,
+              "y": 1024,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            }
+          ]
+        },
+        {
+          "path": "stories/glasshouse-express/art-src/packed/F05-3.png",
+          "sha256": "4c8e4304ca38652312d98fab950b4d37670f4d2338549f98a82048eca8a4a659",
+          "width": 1536,
+          "height": 2048,
+          "sources": [
+            {
+              "id": "conservatory-exterior",
+              "path": "stories/glasshouse-express/references/conservatory-exterior.webp",
+              "sha256": "ee65600b44b0fa3e9101d0e4419e4ae459339c40dd925be41d62a19474047823",
+              "x": 0,
+              "y": 0,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            },
+            {
+              "id": "conservatory-interior",
+              "path": "stories/glasshouse-express/references/conservatory-interior.webp",
+              "sha256": "500ec0013059404a22a01ac981cd12f9f822b26b8c52804d7bacfda3d719534f",
+              "x": 0,
+              "y": 1024,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page": "F06",
+      "referenceCount": 7,
+      "attachments": [
+        {
+          "path": "stories/glasshouse-express/art-src/packed/F06-1.png",
+          "sha256": "52ec26d424a90c0bd8f57717d04e86878fad501f5c72dd61f5fe5c4a8bc96022",
+          "width": 1536,
+          "height": 2048,
+          "sources": [
+            {
+              "id": "player-hesper",
+              "path": "stories/glasshouse-express/references/player-hesper.webp",
+              "sha256": "50511aac7b66cfef5f5cb038927c3a5d8a22b815c974c87584fdb9b1db5a6a30",
+              "x": 0,
+              "y": 0,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            },
+            {
+              "id": "dov",
+              "path": "stories/glasshouse-express/references/dov.webp",
+              "sha256": "dc705854ecd63bd9a5a1d3f4a84c8fab5a4cd891d30fa63bbc08ff773fe57f39",
+              "x": 0,
+              "y": 1024,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            }
+          ]
+        },
+        {
+          "path": "stories/glasshouse-express/art-src/packed/F06-2.png",
+          "sha256": "2325da2befce654c65e5edd19ada20739555a04d4c3dca8c5db79ddd0a97b0b4",
+          "width": 1536,
+          "height": 2048,
+          "sources": [
+            {
+              "id": "fenn",
+              "path": "stories/glasshouse-express/references/fenn.webp",
+              "sha256": "af77cc78162b10edf031e5907682e6635e8c9d2be4c7f88b45149f7fe5feb78d",
+              "x": 0,
+              "y": 0,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            },
+            {
+              "id": "sunwort",
+              "path": "stories/glasshouse-express/references/sunwort.webp",
+              "sha256": "f7157dfa913c4b7f9b19af02fbdde09e3c4a56512fe6891cd81425d1e541e915",
+              "x": 0,
+              "y": 1024,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            }
+          ]
+        },
+        {
+          "path": "stories/glasshouse-express/art-src/packed/F06-3.png",
+          "sha256": "853302d54f41535a14b63e53bbe3b8a15bfc271c4b1e85ef84c9185f26a1a40d",
+          "width": 1536,
+          "height": 2048,
+          "sources": [
+            {
+              "id": "keeper-props",
+              "path": "stories/glasshouse-express/references/keeper-props.webp",
+              "sha256": "7dd5472750a2c6205763d3cee1d42f0997819511e0dfbcb40cc30df96a7deb34",
+              "x": 0,
+              "y": 0,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            },
+            {
+              "id": "conservatory-exterior",
+              "path": "stories/glasshouse-express/references/conservatory-exterior.webp",
+              "sha256": "ee65600b44b0fa3e9101d0e4419e4ae459339c40dd925be41d62a19474047823",
+              "x": 0,
+              "y": 1024,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            }
+          ]
+        },
+        {
+          "path": "stories/glasshouse-express/art-src/packed/F06-4.png",
+          "sha256": "5299fe6086fd3f7e380fe51e5143dc7813a73f89870807c7f3567164e40098f0",
+          "width": 1536,
+          "height": 1024,
+          "sources": [
+            {
+              "id": "conservatory-interior",
+              "path": "stories/glasshouse-express/references/conservatory-interior.webp",
+              "sha256": "500ec0013059404a22a01ac981cd12f9f822b26b8c52804d7bacfda3d719534f",
+              "x": 0,
+              "y": 0,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page": "E01",
+      "referenceCount": 2,
+      "attachments": [
+        {
+          "path": "stories/glasshouse-express/art-src/packed/E01-1.png",
+          "sha256": "7e7a0bd9217cd2f3f190ff61350ea77934d61c9a42950d1115470047f413e74f",
+          "width": 1536,
+          "height": 2048,
+          "sources": [
+            {
+              "id": "player-hesper",
+              "path": "stories/glasshouse-express/references/player-hesper.webp",
+              "sha256": "50511aac7b66cfef5f5cb038927c3a5d8a22b815c974c87584fdb9b1db5a6a30",
+              "x": 0,
+              "y": 0,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            },
+            {
+              "id": "winter-terminus",
+              "path": "stories/glasshouse-express/references/winter-terminus.webp",
+              "sha256": "e22b66d12c2d56023025d734083bebba262209e78df381abb3a6e486dfc6e25c",
+              "x": 0,
+              "y": 1024,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page": "E02",
+      "referenceCount": 6,
+      "attachments": [
+        {
+          "path": "stories/glasshouse-express/art-src/packed/E02-1.png",
+          "sha256": "52ec26d424a90c0bd8f57717d04e86878fad501f5c72dd61f5fe5c4a8bc96022",
+          "width": 1536,
+          "height": 2048,
+          "sources": [
+            {
+              "id": "player-hesper",
+              "path": "stories/glasshouse-express/references/player-hesper.webp",
+              "sha256": "50511aac7b66cfef5f5cb038927c3a5d8a22b815c974c87584fdb9b1db5a6a30",
+              "x": 0,
+              "y": 0,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            },
+            {
+              "id": "dov",
+              "path": "stories/glasshouse-express/references/dov.webp",
+              "sha256": "dc705854ecd63bd9a5a1d3f4a84c8fab5a4cd891d30fa63bbc08ff773fe57f39",
+              "x": 0,
+              "y": 1024,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            }
+          ]
+        },
+        {
+          "path": "stories/glasshouse-express/art-src/packed/E02-2.png",
+          "sha256": "b240dddc8ecc11ee48ccf884bd28f3a52c02b17929863635914a68e62f2d5012",
+          "width": 1536,
+          "height": 2048,
+          "sources": [
+            {
+              "id": "lower-town-cast",
+              "path": "stories/glasshouse-express/references/lower-town-cast.webp",
+              "sha256": "a44dc6654985bc79cfd2b772d3c8e01e17dc6cc2cb43eafbb0fbf2873b9e921d",
+              "x": 0,
+              "y": 0,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            },
+            {
+              "id": "marigold",
+              "path": "stories/glasshouse-express/references/marigold.webp",
+              "sha256": "af1e473d6708070843aa8b36670d94f10cbcb4be7de60a422cbdf7c0f3beae0b",
+              "x": 0,
+              "y": 1024,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            }
+          ]
+        },
+        {
+          "path": "stories/glasshouse-express/art-src/packed/E02-3.png",
+          "sha256": "f4c3510c1dedf3c9c0b976d7c70b9845ec6bfcd4e22e9db9cbda7faabb91f58d",
+          "width": 1536,
+          "height": 2048,
+          "sources": [
+            {
+              "id": "glasshouse-carriage",
+              "path": "stories/glasshouse-express/references/glasshouse-carriage.webp",
+              "sha256": "8fc132adbe435576dd0ddd7b777be0d1099d973ff933248ba76398990d6d4611",
+              "x": 0,
+              "y": 0,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            },
+            {
+              "id": "ember-works",
+              "path": "stories/glasshouse-express/references/ember-works.webp",
+              "sha256": "1f5f8eb6cb5434709589727c6d6576542d844d709ba832ba5a8b1214b2592b16",
+              "x": 0,
+              "y": 1024,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page": "E03",
+      "referenceCount": 6,
+      "attachments": [
+        {
+          "path": "stories/glasshouse-express/art-src/packed/E03-1.png",
+          "sha256": "52ec26d424a90c0bd8f57717d04e86878fad501f5c72dd61f5fe5c4a8bc96022",
+          "width": 1536,
+          "height": 2048,
+          "sources": [
+            {
+              "id": "player-hesper",
+              "path": "stories/glasshouse-express/references/player-hesper.webp",
+              "sha256": "50511aac7b66cfef5f5cb038927c3a5d8a22b815c974c87584fdb9b1db5a6a30",
+              "x": 0,
+              "y": 0,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            },
+            {
+              "id": "dov",
+              "path": "stories/glasshouse-express/references/dov.webp",
+              "sha256": "dc705854ecd63bd9a5a1d3f4a84c8fab5a4cd891d30fa63bbc08ff773fe57f39",
+              "x": 0,
+              "y": 1024,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            }
+          ]
+        },
+        {
+          "path": "stories/glasshouse-express/art-src/packed/E03-2.png",
+          "sha256": "2325da2befce654c65e5edd19ada20739555a04d4c3dca8c5db79ddd0a97b0b4",
+          "width": 1536,
+          "height": 2048,
+          "sources": [
+            {
+              "id": "fenn",
+              "path": "stories/glasshouse-express/references/fenn.webp",
+              "sha256": "af77cc78162b10edf031e5907682e6635e8c9d2be4c7f88b45149f7fe5feb78d",
+              "x": 0,
+              "y": 0,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            },
+            {
+              "id": "sunwort",
+              "path": "stories/glasshouse-express/references/sunwort.webp",
+              "sha256": "f7157dfa913c4b7f9b19af02fbdde09e3c4a56512fe6891cd81425d1e541e915",
+              "x": 0,
+              "y": 1024,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            }
+          ]
+        },
+        {
+          "path": "stories/glasshouse-express/art-src/packed/E03-3.png",
+          "sha256": "4c8e4304ca38652312d98fab950b4d37670f4d2338549f98a82048eca8a4a659",
+          "width": 1536,
+          "height": 2048,
+          "sources": [
+            {
+              "id": "conservatory-exterior",
+              "path": "stories/glasshouse-express/references/conservatory-exterior.webp",
+              "sha256": "ee65600b44b0fa3e9101d0e4419e4ae459339c40dd925be41d62a19474047823",
+              "x": 0,
+              "y": 0,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            },
+            {
+              "id": "conservatory-interior",
+              "path": "stories/glasshouse-express/references/conservatory-interior.webp",
+              "sha256": "500ec0013059404a22a01ac981cd12f9f822b26b8c52804d7bacfda3d719534f",
+              "x": 0,
+              "y": 1024,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page": "E04",
+      "referenceCount": 5,
+      "attachments": [
+        {
+          "path": "stories/glasshouse-express/art-src/packed/E04-1.png",
+          "sha256": "52ec26d424a90c0bd8f57717d04e86878fad501f5c72dd61f5fe5c4a8bc96022",
+          "width": 1536,
+          "height": 2048,
+          "sources": [
+            {
+              "id": "player-hesper",
+              "path": "stories/glasshouse-express/references/player-hesper.webp",
+              "sha256": "50511aac7b66cfef5f5cb038927c3a5d8a22b815c974c87584fdb9b1db5a6a30",
+              "x": 0,
+              "y": 0,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            },
+            {
+              "id": "dov",
+              "path": "stories/glasshouse-express/references/dov.webp",
+              "sha256": "dc705854ecd63bd9a5a1d3f4a84c8fab5a4cd891d30fa63bbc08ff773fe57f39",
+              "x": 0,
+              "y": 1024,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            }
+          ]
+        },
+        {
+          "path": "stories/glasshouse-express/art-src/packed/E04-2.png",
+          "sha256": "c91a16ca699acc38422120317d31c28c204b70ff1cafc0e6389b142e16ddc527",
+          "width": 1536,
+          "height": 2048,
+          "sources": [
+            {
+              "id": "marigold",
+              "path": "stories/glasshouse-express/references/marigold.webp",
+              "sha256": "af1e473d6708070843aa8b36670d94f10cbcb4be7de60a422cbdf7c0f3beae0b",
+              "x": 0,
+              "y": 0,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            },
+            {
+              "id": "glasshouse-carriage",
+              "path": "stories/glasshouse-express/references/glasshouse-carriage.webp",
+              "sha256": "8fc132adbe435576dd0ddd7b777be0d1099d973ff933248ba76398990d6d4611",
+              "x": 0,
+              "y": 1024,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            }
+          ]
+        },
+        {
+          "path": "stories/glasshouse-express/art-src/packed/E04-3.png",
+          "sha256": "9ece3cc4a6f1e7b6828e07439f663cd07548aa55c5720d9d91a619aceca19d19",
+          "width": 1536,
+          "height": 1024,
+          "sources": [
+            {
+              "id": "fernhallow-incline",
+              "path": "stories/glasshouse-express/references/fernhallow-incline.webp",
+              "sha256": "4e0bf61591ca66c58bd9cdfd2cef6ad3ba10cb58de126a0556f5f9aa588a7eec",
+              "x": 0,
+              "y": 0,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page": "E05",
+      "referenceCount": 6,
+      "attachments": [
+        {
+          "path": "stories/glasshouse-express/art-src/packed/E05-1.png",
+          "sha256": "52ec26d424a90c0bd8f57717d04e86878fad501f5c72dd61f5fe5c4a8bc96022",
+          "width": 1536,
+          "height": 2048,
+          "sources": [
+            {
+              "id": "player-hesper",
+              "path": "stories/glasshouse-express/references/player-hesper.webp",
+              "sha256": "50511aac7b66cfef5f5cb038927c3a5d8a22b815c974c87584fdb9b1db5a6a30",
+              "x": 0,
+              "y": 0,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            },
+            {
+              "id": "dov",
+              "path": "stories/glasshouse-express/references/dov.webp",
+              "sha256": "dc705854ecd63bd9a5a1d3f4a84c8fab5a4cd891d30fa63bbc08ff773fe57f39",
+              "x": 0,
+              "y": 1024,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            }
+          ]
+        },
+        {
+          "path": "stories/glasshouse-express/art-src/packed/E05-2.png",
+          "sha256": "2325da2befce654c65e5edd19ada20739555a04d4c3dca8c5db79ddd0a97b0b4",
+          "width": 1536,
+          "height": 2048,
+          "sources": [
+            {
+              "id": "fenn",
+              "path": "stories/glasshouse-express/references/fenn.webp",
+              "sha256": "af77cc78162b10edf031e5907682e6635e8c9d2be4c7f88b45149f7fe5feb78d",
+              "x": 0,
+              "y": 0,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            },
+            {
+              "id": "sunwort",
+              "path": "stories/glasshouse-express/references/sunwort.webp",
+              "sha256": "f7157dfa913c4b7f9b19af02fbdde09e3c4a56512fe6891cd81425d1e541e915",
+              "x": 0,
+              "y": 1024,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            }
+          ]
+        },
+        {
+          "path": "stories/glasshouse-express/art-src/packed/E05-3.png",
+          "sha256": "4c8e4304ca38652312d98fab950b4d37670f4d2338549f98a82048eca8a4a659",
+          "width": 1536,
+          "height": 2048,
+          "sources": [
+            {
+              "id": "conservatory-exterior",
+              "path": "stories/glasshouse-express/references/conservatory-exterior.webp",
+              "sha256": "ee65600b44b0fa3e9101d0e4419e4ae459339c40dd925be41d62a19474047823",
+              "x": 0,
+              "y": 0,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            },
+            {
+              "id": "conservatory-interior",
+              "path": "stories/glasshouse-express/references/conservatory-interior.webp",
+              "sha256": "500ec0013059404a22a01ac981cd12f9f822b26b8c52804d7bacfda3d719534f",
+              "x": 0,
+              "y": 1024,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page": "E06",
+      "referenceCount": 6,
+      "attachments": [
+        {
+          "path": "stories/glasshouse-express/art-src/packed/E06-1.png",
+          "sha256": "52ec26d424a90c0bd8f57717d04e86878fad501f5c72dd61f5fe5c4a8bc96022",
+          "width": 1536,
+          "height": 2048,
+          "sources": [
+            {
+              "id": "player-hesper",
+              "path": "stories/glasshouse-express/references/player-hesper.webp",
+              "sha256": "50511aac7b66cfef5f5cb038927c3a5d8a22b815c974c87584fdb9b1db5a6a30",
+              "x": 0,
+              "y": 0,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            },
+            {
+              "id": "dov",
+              "path": "stories/glasshouse-express/references/dov.webp",
+              "sha256": "dc705854ecd63bd9a5a1d3f4a84c8fab5a4cd891d30fa63bbc08ff773fe57f39",
+              "x": 0,
+              "y": 1024,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            }
+          ]
+        },
+        {
+          "path": "stories/glasshouse-express/art-src/packed/E06-2.png",
+          "sha256": "2325da2befce654c65e5edd19ada20739555a04d4c3dca8c5db79ddd0a97b0b4",
+          "width": 1536,
+          "height": 2048,
+          "sources": [
+            {
+              "id": "fenn",
+              "path": "stories/glasshouse-express/references/fenn.webp",
+              "sha256": "af77cc78162b10edf031e5907682e6635e8c9d2be4c7f88b45149f7fe5feb78d",
+              "x": 0,
+              "y": 0,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            },
+            {
+              "id": "sunwort",
+              "path": "stories/glasshouse-express/references/sunwort.webp",
+              "sha256": "f7157dfa913c4b7f9b19af02fbdde09e3c4a56512fe6891cd81425d1e541e915",
+              "x": 0,
+              "y": 1024,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            }
+          ]
+        },
+        {
+          "path": "stories/glasshouse-express/art-src/packed/E06-3.png",
+          "sha256": "4c8e4304ca38652312d98fab950b4d37670f4d2338549f98a82048eca8a4a659",
+          "width": 1536,
+          "height": 2048,
+          "sources": [
+            {
+              "id": "conservatory-exterior",
+              "path": "stories/glasshouse-express/references/conservatory-exterior.webp",
+              "sha256": "ee65600b44b0fa3e9101d0e4419e4ae459339c40dd925be41d62a19474047823",
+              "x": 0,
+              "y": 0,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            },
+            {
+              "id": "conservatory-interior",
+              "path": "stories/glasshouse-express/references/conservatory-interior.webp",
+              "sha256": "500ec0013059404a22a01ac981cd12f9f822b26b8c52804d7bacfda3d719534f",
+              "x": 0,
+              "y": 1024,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page": "E07",
+      "referenceCount": 6,
+      "attachments": [
+        {
+          "path": "stories/glasshouse-express/art-src/packed/E07-1.png",
+          "sha256": "52ec26d424a90c0bd8f57717d04e86878fad501f5c72dd61f5fe5c4a8bc96022",
+          "width": 1536,
+          "height": 2048,
+          "sources": [
+            {
+              "id": "player-hesper",
+              "path": "stories/glasshouse-express/references/player-hesper.webp",
+              "sha256": "50511aac7b66cfef5f5cb038927c3a5d8a22b815c974c87584fdb9b1db5a6a30",
+              "x": 0,
+              "y": 0,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            },
+            {
+              "id": "dov",
+              "path": "stories/glasshouse-express/references/dov.webp",
+              "sha256": "dc705854ecd63bd9a5a1d3f4a84c8fab5a4cd891d30fa63bbc08ff773fe57f39",
+              "x": 0,
+              "y": 1024,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            }
+          ]
+        },
+        {
+          "path": "stories/glasshouse-express/art-src/packed/E07-2.png",
+          "sha256": "2325da2befce654c65e5edd19ada20739555a04d4c3dca8c5db79ddd0a97b0b4",
+          "width": 1536,
+          "height": 2048,
+          "sources": [
+            {
+              "id": "fenn",
+              "path": "stories/glasshouse-express/references/fenn.webp",
+              "sha256": "af77cc78162b10edf031e5907682e6635e8c9d2be4c7f88b45149f7fe5feb78d",
+              "x": 0,
+              "y": 0,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            },
+            {
+              "id": "sunwort",
+              "path": "stories/glasshouse-express/references/sunwort.webp",
+              "sha256": "f7157dfa913c4b7f9b19af02fbdde09e3c4a56512fe6891cd81425d1e541e915",
+              "x": 0,
+              "y": 1024,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            }
+          ]
+        },
+        {
+          "path": "stories/glasshouse-express/art-src/packed/E07-3.png",
+          "sha256": "4c8e4304ca38652312d98fab950b4d37670f4d2338549f98a82048eca8a4a659",
+          "width": 1536,
+          "height": 2048,
+          "sources": [
+            {
+              "id": "conservatory-exterior",
+              "path": "stories/glasshouse-express/references/conservatory-exterior.webp",
+              "sha256": "ee65600b44b0fa3e9101d0e4419e4ae459339c40dd925be41d62a19474047823",
+              "x": 0,
+              "y": 0,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            },
+            {
+              "id": "conservatory-interior",
+              "path": "stories/glasshouse-express/references/conservatory-interior.webp",
+              "sha256": "500ec0013059404a22a01ac981cd12f9f822b26b8c52804d7bacfda3d719534f",
+              "x": 0,
+              "y": 1024,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page": "E08",
+      "referenceCount": 6,
+      "attachments": [
+        {
+          "path": "stories/glasshouse-express/art-src/packed/E08-1.png",
+          "sha256": "52ec26d424a90c0bd8f57717d04e86878fad501f5c72dd61f5fe5c4a8bc96022",
+          "width": 1536,
+          "height": 2048,
+          "sources": [
+            {
+              "id": "player-hesper",
+              "path": "stories/glasshouse-express/references/player-hesper.webp",
+              "sha256": "50511aac7b66cfef5f5cb038927c3a5d8a22b815c974c87584fdb9b1db5a6a30",
+              "x": 0,
+              "y": 0,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            },
+            {
+              "id": "dov",
+              "path": "stories/glasshouse-express/references/dov.webp",
+              "sha256": "dc705854ecd63bd9a5a1d3f4a84c8fab5a4cd891d30fa63bbc08ff773fe57f39",
+              "x": 0,
+              "y": 1024,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            }
+          ]
+        },
+        {
+          "path": "stories/glasshouse-express/art-src/packed/E08-2.png",
+          "sha256": "2325da2befce654c65e5edd19ada20739555a04d4c3dca8c5db79ddd0a97b0b4",
+          "width": 1536,
+          "height": 2048,
+          "sources": [
+            {
+              "id": "fenn",
+              "path": "stories/glasshouse-express/references/fenn.webp",
+              "sha256": "af77cc78162b10edf031e5907682e6635e8c9d2be4c7f88b45149f7fe5feb78d",
+              "x": 0,
+              "y": 0,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            },
+            {
+              "id": "sunwort",
+              "path": "stories/glasshouse-express/references/sunwort.webp",
+              "sha256": "f7157dfa913c4b7f9b19af02fbdde09e3c4a56512fe6891cd81425d1e541e915",
+              "x": 0,
+              "y": 1024,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            }
+          ]
+        },
+        {
+          "path": "stories/glasshouse-express/art-src/packed/E08-3.png",
+          "sha256": "4c8e4304ca38652312d98fab950b4d37670f4d2338549f98a82048eca8a4a659",
+          "width": 1536,
+          "height": 2048,
+          "sources": [
+            {
+              "id": "conservatory-exterior",
+              "path": "stories/glasshouse-express/references/conservatory-exterior.webp",
+              "sha256": "ee65600b44b0fa3e9101d0e4419e4ae459339c40dd925be41d62a19474047823",
+              "x": 0,
+              "y": 0,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            },
+            {
+              "id": "conservatory-interior",
+              "path": "stories/glasshouse-express/references/conservatory-interior.webp",
+              "sha256": "500ec0013059404a22a01ac981cd12f9f822b26b8c52804d7bacfda3d719534f",
+              "x": 0,
+              "y": 1024,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page": "E09",
+      "referenceCount": 6,
+      "attachments": [
+        {
+          "path": "stories/glasshouse-express/art-src/packed/E09-1.png",
+          "sha256": "52ec26d424a90c0bd8f57717d04e86878fad501f5c72dd61f5fe5c4a8bc96022",
+          "width": 1536,
+          "height": 2048,
+          "sources": [
+            {
+              "id": "player-hesper",
+              "path": "stories/glasshouse-express/references/player-hesper.webp",
+              "sha256": "50511aac7b66cfef5f5cb038927c3a5d8a22b815c974c87584fdb9b1db5a6a30",
+              "x": 0,
+              "y": 0,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            },
+            {
+              "id": "dov",
+              "path": "stories/glasshouse-express/references/dov.webp",
+              "sha256": "dc705854ecd63bd9a5a1d3f4a84c8fab5a4cd891d30fa63bbc08ff773fe57f39",
+              "x": 0,
+              "y": 1024,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            }
+          ]
+        },
+        {
+          "path": "stories/glasshouse-express/art-src/packed/E09-2.png",
+          "sha256": "2325da2befce654c65e5edd19ada20739555a04d4c3dca8c5db79ddd0a97b0b4",
+          "width": 1536,
+          "height": 2048,
+          "sources": [
+            {
+              "id": "fenn",
+              "path": "stories/glasshouse-express/references/fenn.webp",
+              "sha256": "af77cc78162b10edf031e5907682e6635e8c9d2be4c7f88b45149f7fe5feb78d",
+              "x": 0,
+              "y": 0,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            },
+            {
+              "id": "sunwort",
+              "path": "stories/glasshouse-express/references/sunwort.webp",
+              "sha256": "f7157dfa913c4b7f9b19af02fbdde09e3c4a56512fe6891cd81425d1e541e915",
+              "x": 0,
+              "y": 1024,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            }
+          ]
+        },
+        {
+          "path": "stories/glasshouse-express/art-src/packed/E09-3.png",
+          "sha256": "4c8e4304ca38652312d98fab950b4d37670f4d2338549f98a82048eca8a4a659",
+          "width": 1536,
+          "height": 2048,
+          "sources": [
+            {
+              "id": "conservatory-exterior",
+              "path": "stories/glasshouse-express/references/conservatory-exterior.webp",
+              "sha256": "ee65600b44b0fa3e9101d0e4419e4ae459339c40dd925be41d62a19474047823",
+              "x": 0,
+              "y": 0,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            },
+            {
+              "id": "conservatory-interior",
+              "path": "stories/glasshouse-express/references/conservatory-interior.webp",
+              "sha256": "500ec0013059404a22a01ac981cd12f9f822b26b8c52804d7bacfda3d719534f",
+              "x": 0,
+              "y": 1024,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page": "E10",
+      "referenceCount": 6,
+      "attachments": [
+        {
+          "path": "stories/glasshouse-express/art-src/packed/E10-1.png",
+          "sha256": "52ec26d424a90c0bd8f57717d04e86878fad501f5c72dd61f5fe5c4a8bc96022",
+          "width": 1536,
+          "height": 2048,
+          "sources": [
+            {
+              "id": "player-hesper",
+              "path": "stories/glasshouse-express/references/player-hesper.webp",
+              "sha256": "50511aac7b66cfef5f5cb038927c3a5d8a22b815c974c87584fdb9b1db5a6a30",
+              "x": 0,
+              "y": 0,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            },
+            {
+              "id": "dov",
+              "path": "stories/glasshouse-express/references/dov.webp",
+              "sha256": "dc705854ecd63bd9a5a1d3f4a84c8fab5a4cd891d30fa63bbc08ff773fe57f39",
+              "x": 0,
+              "y": 1024,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            }
+          ]
+        },
+        {
+          "path": "stories/glasshouse-express/art-src/packed/E10-2.png",
+          "sha256": "2325da2befce654c65e5edd19ada20739555a04d4c3dca8c5db79ddd0a97b0b4",
+          "width": 1536,
+          "height": 2048,
+          "sources": [
+            {
+              "id": "fenn",
+              "path": "stories/glasshouse-express/references/fenn.webp",
+              "sha256": "af77cc78162b10edf031e5907682e6635e8c9d2be4c7f88b45149f7fe5feb78d",
+              "x": 0,
+              "y": 0,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            },
+            {
+              "id": "sunwort",
+              "path": "stories/glasshouse-express/references/sunwort.webp",
+              "sha256": "f7157dfa913c4b7f9b19af02fbdde09e3c4a56512fe6891cd81425d1e541e915",
+              "x": 0,
+              "y": 1024,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            }
+          ]
+        },
+        {
+          "path": "stories/glasshouse-express/art-src/packed/E10-3.png",
+          "sha256": "4c8e4304ca38652312d98fab950b4d37670f4d2338549f98a82048eca8a4a659",
+          "width": 1536,
+          "height": 2048,
+          "sources": [
+            {
+              "id": "conservatory-exterior",
+              "path": "stories/glasshouse-express/references/conservatory-exterior.webp",
+              "sha256": "ee65600b44b0fa3e9101d0e4419e4ae459339c40dd925be41d62a19474047823",
+              "x": 0,
+              "y": 0,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            },
+            {
+              "id": "conservatory-interior",
+              "path": "stories/glasshouse-express/references/conservatory-interior.webp",
+              "sha256": "500ec0013059404a22a01ac981cd12f9f822b26b8c52804d7bacfda3d719534f",
+              "x": 0,
+              "y": 1024,
+              "width": 1536,
+              "height": 1024,
+              "pixelEquality": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
